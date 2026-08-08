@@ -91,7 +91,41 @@ unter „WAS ALS NÄCHSTES ZU TUN IST".
 > **Erst prüfen, ob überhaupt ein Veröffentlicher läuft; nur dann töten.** Hier
 > lief keiner, der Schritt war überflüssig und hat allein Schaden angerichtet.
 
-### DIE ERSTE ZAHL DER ABNAHME: 1350 ist wiederholbar
+### DIE ABNAHME DER WELLE 13 — Stand 15:30 UTC, zehn von fünfzehn Läufen
+
+Eingefrorener Stand `b098fc6`, Hafen 8933, jeder Lauf 400 Wochen, **einzeln
+nacheinander**. Drei Schnitte nach `MESSLATTE.md` §2.
+
+| Epoche | Läufe | Prüfsummen | ρ 12 / 13 / 14 J | Jahre < 1× | Kasse |
+|---|---|---|---|---|---|
+| **1350** | **6** | **1** (`bb96459e`) | −0,259 / −0,236 / **−0,389** | **0/14** | 34 – 524 |
+| **1600** | **3** | **1** (`334efdb1`) | +0,406 / +0,489 / **+0,538** | 1/14 | 302 – 2 851 |
+| **1884** | 1 *(2 laufen)* | — | +0,343 / +0,484 / **+0,495** | **2/14** | 1 084 – 28 911 |
+| 1970 | in der Schlange | — | — | — | — |
+
+**Die Latte hält in allen bisher gemessenen Epochen** — 0 von 10 Läufen über
+0,700 —, und die sechs 1350-Läufe geben **eine** Prüfsumme.
+
+> **Zwei Epochen reproduzieren die Welle 12 ziffernweise, eine ist gewandert.**
+> 1350 (−0,259/−0,236/−0,389) und 1600 (+0,406/+0,489/+0,538) sind **Ziffer für
+> Ziffer** die Zahlen vom 7. August. Weil dasselbe Gerät sie unverändert
+> wiedergibt, ist die Abweichung der dritten Epoche **keine Frage der Methode**:
+> **1884 ist von +0,161/+0,330/+0,169 auf +0,343/+0,484/+0,495 gewandert**, die
+> Kasse von 2 907–25 557 auf 1 084–28 911, und die Jahre unter 1× von **0 auf 2
+> von 14** (0,45× und 0,61× im fünften und sechsten Braujahr).
+>
+> **Beide Bedingungen halten trotzdem**: 0,495 liegt unter 0,700, und 2 von 14
+> sind weniger als eines von sechs. Aber die Reserve ist von 0,531 auf **0,205**
+> geschrumpft, und 1884 war bis heute die entspannteste Epoche. **Wer als
+> nächstes an 1884 arbeitet, arbeitet an einer Epoche mit halber Reserve** —
+> derselbe Satz, der seit Welle 12 über 1600 steht.
+>
+> Welches Stück sie bewegt hat, ist **nicht** gemessen. DER GEGENZUG hat für
+> seine Änderung acht Läufe vorher/nachher mit gleicher Prüfsumme vorgelegt,
+> also bleiben DIE JAHRESTAFEL (die Tafel liegt jetzt an jedem Jahreswechsel
+> von selbst auf — die messende Hand greift dort Angebote, die sie vorher nie
+> sah) und DIE WOCHE. **Das ist eine Frage für die Trennprobe, nicht für eine
+> Vermutung**, und sie wird erst gestellt, wenn eine Latte reißt.
 
 **Sechs Läufe zu 400 Wochen, eine einzige Prüfsumme** (`bb96459e6ac5`), einzeln
 nacheinander bei stiller Maschine, 272 s je Lauf. Sechs, nicht drei — bei einem
