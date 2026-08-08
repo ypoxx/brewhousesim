@@ -51,9 +51,15 @@
      „Anfangen" drueckt.
      ---------------------------------------------------------------------- */
 
-  var LICHTHOF = 'text-shadow:0 0 calc(var(--s)*10) rgba(255,248,230,.99),'
-    + '0 0 calc(var(--s)*5) rgba(255,248,230,.99),'
-    + '0 0 calc(var(--s)*2) rgba(255,248,230,.99);';
+  /* DER LICHTHOF MUSS TRAGEN, WEIL ES KEIN PAPIER GIBT.  Der erste Entwurf
+     hatte drei Schatten wie die Hauszeile — auf der Aufnahme 2752x1536 war
+     der Anschlag ueber dem Hofboden nur noch zu erahnen. Ein Anschlag, den
+     man nicht liest, ist kein Anschlag. Also mehr Schatten, enger gesetzt:
+     das ergibt einen dichten hellen Saum um jeden Buchstaben, ohne dass ein
+     Kasten entsteht (kern/haushalt.js sieht nur Grund, Verlauf und Rand). */
+  var LICHTHOF = 'text-shadow:'
+    + '0 0 calc(var(--s)*3) rgba(255,250,236,1),0 0 calc(var(--s)*3) rgba(255,250,236,1),'
+    + '0 0 calc(var(--s)*7) rgba(255,250,236,1),0 0 calc(var(--s)*14) rgba(255,250,236,.95);';
 
   function zettelWeg() {
     var fach = document.getElementById('fach-kopf-kern-start');
@@ -78,15 +84,24 @@
     var fach = B.ebene('kopf', 'kern-start');
     B.leere(fach);
 
+    /* WARUM ER LINKS UNTEN STEHT UND NUR 36 % BREIT IST.
+       Der untere Rand traegt seit Welle 13 ZWEI Zeilen des Rahmens, beide
+       rechtsbuendig bei 93 %: „Ziel: …" bei 86,6 % und „naechster Zug: …"
+       bei 90 %. Im ersten Entwurf war der Anschlag 47 % breit und begann bei
+       74,4 % — auf der Aufnahme 2752x1536 lief die Zeile „JEDE EPOCHE IST EIN
+       EIGENES SZENARIO …" mitten durch den Zielsatz. Die Zielzeile ist auf
+       53 % Breite begrenzt (also nie weiter links als 40 %), der Anschlag auf
+       36 % — damit koennen sie sich nicht mehr treffen, egal wie lang der
+       Satz wird, den ein Stueck meldet. */
     var zettel = B.el('div', 'startzettel');
-    zettel.style.cssText = 'position:absolute;left:2.4%;top:74.4%;width:47%;'
-      + 'pointer-events:none;color:#2b1d10;font-family:var(--serif);'
-      + 'font-size:max(12px,calc(var(--s)*21));line-height:1.38;' + LICHTHOF;
+    zettel.style.cssText = 'position:absolute;left:2.2%;top:69.5%;width:36%;'
+      + 'pointer-events:none;color:#1a0f05;font-family:var(--serif);font-weight:600;'
+      + 'font-size:max(12px,calc(var(--s)*22));line-height:1.4;' + LICHTHOF;
 
     var kopf = B.el('div', null,
       B.welt.haus.name.toUpperCase() + ' · ' + z.jahr + ' · ' + e.name.toUpperCase());
     kopf.style.cssText = 'font-weight:700;letter-spacing:calc(var(--s)*3);'
-      + 'font-size:max(13px,calc(var(--s)*24));';
+      + 'font-size:max(13px,calc(var(--s)*26));';
     zettel.appendChild(kopf);
 
     /* Die Saetze halten in allen vier Epochen. Kein „Schenke", kein „Fass",
@@ -98,20 +113,19 @@
       + 'Abgaben zahlen. ' + e.sagt));
 
     zettel.appendChild(absatz('DAS ZIEL —',
-      'das Haus so weit bringen, dass es übergeben werden kann: an die nächste '
-      + 'Hand, vor dem Rat. Gewinnen heißt hier nicht groß werden, sondern '
-      + 'übergeben können — und die meisten Jahre geht es zuerst ums Überleben.'));
+      'das Haus übergeben können, an die nächste Hand, vor dem Rat. Gewinnen '
+      + 'heißt hier nicht groß werden, sondern übergeben können — und die '
+      + 'meisten Jahre geht es zuerst ums Überleben.'));
 
     zettel.appendChild(absatz('SO ENDET ES SCHLECHT —',
       'wenn niemand in der Stadt mehr abnimmt, ist das Haus zu. Nicht die '
-      + 'leere Kasse macht es zu, sondern das leere Auftragsbuch. Auch eine '
-      + 'Pfanne, die drei Jahre kalt bleibt, und ein leerer Hof mit Schulden '
-      + 'beenden die Partie.'));
+      + 'leere Kasse macht es zu, sondern das leere Auftragsbuch. Eine Pfanne, '
+      + 'die drei Jahre kalt bleibt, tut es auch.'));
 
     zettel.appendChild(absatz('JEDE EPOCHE IST EIN EIGENES SZENARIO —',
-      '1350, 1600, 1884, 1970, jede mit eigenem Anfang und eigenem Ende. Sie '
-      + 'zeigen denselben Ort, aber man spielt sie einzeln; keine wächst in '
-      + 'die nächste hinüber.'));
+      '1350, 1600, 1884, 1970, jede mit eigenem Anfang und eigenem Ende. '
+      + 'Derselbe Ort, aber man spielt sie einzeln; keine wächst in die '
+      + 'nächste hinüber.'));
 
     /* DER STREIFEN DARF KEINE KLICKS NEHMEN, NUR DER KNOPF.  Gemessen mit
        `werkbank/schuss/rahmen-w13/griffprobe.mjs`: hier stand

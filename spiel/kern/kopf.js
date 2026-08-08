@@ -268,7 +268,7 @@
        steht im `title`. */
     w.style.cssText = 'position:absolute;left:93%;top:86.6%;transform:translate(-100%,-50%);'
       + 'font-family:var(--mono);font-size:max(11px,calc(var(--s)*18));color:#3a2a16;'
-      + 'white-space:nowrap;max-width:58%;overflow:hidden;text-overflow:ellipsis;' + LICHTHOF;
+      + 'white-space:nowrap;max-width:53%;overflow:hidden;text-overflow:ellipsis;' + LICHTHOF;
     w.setAttribute('data-ziel', '1');
     w.title = ziel.satz;
     if (ziel.naehe !== null && ziel.naehe !== undefined) {

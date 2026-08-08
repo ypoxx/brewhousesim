@@ -82,71 +82,87 @@ async function greif(muster, s) {
 
 const michaeli = [];      /* je Braujahr: lag die Tafel von selbst? */
 const r10 = [];           /* je Probe: greifbare Zuege vor/nach dem Reiterklick */
-let klicks = 0, reiterInWoche1 = 0, luegt = 0, abgelesen = 0;
+let klicks = 0, luegt = 0, abgelesen = 0;
 const startJahr = (await schirm()).jahr;
 let jahrGemerkt = null;
 
-for (let i = 0; i < JAHRE * 34 + 60; i++) {
+/* NACH JEDEM EINZELNEN KLICK nachsehen. Grund, gemessen: `fuhre:abschicken`
+   schliesst die Woche selbst ("DIE FUHRE ABSCHICKEN — und damit die Woche
+   schliessen", fuhre.js). Eine Probe, die nur einmal je Schleifendurchgang
+   liest, laeuft an jedem zweiten Michaeli vorbei, ohne ihn gesehen zu haben —
+   das ist ein Fehler der PROBE und nicht des Spiels. */
+async function michaeliPruefen() {
   let s = await schirm();
-  if (s.ende) break;
   abgelesen++;
   if (!s.tafelDa && /schließen/i.test(s.kText || '')) luegt++;
   if (s.tafelDa && !/schließen/i.test(s.kText || '')) luegt++;
+  if (s.woche !== 1 || s.jahr === jahrGemerkt) return s;
 
-  /* ---- MICHAELI: keine Hand am Reiter, nur ablesen -------------------- */
-  if (s.woche === 1 && s.jahr !== jahrGemerkt) {
-    jahrGemerkt = s.jahr;
-    michaeli.push({ jahr: s.jahr, vonSelbst: s.tafelDa, kText: s.kText, klar: s.klar });
+  jahrGemerkt = s.jahr;
+  michaeli.push({ jahr: s.jahr, vonSelbst: s.tafelDa, kText: s.kText, klar: s.klar });
 
-    if (s.tafelDa) {
-      /* R10 — ein fremder Reiter unter liegendem Blatt. */
-      const reiter = s.zuege.find(z => z.hit && !z.aus && /^stadt:reiter:/.test(z.zug));
-      if (reiter) {
-        const vor = s.greifbar;
-        await klick(reiter); klicks++; reiterInWoche1++;
-        const n = await schirm();
-        r10.push({ jahr: s.jahr, reiter: reiter.zug, text: reiter.text,
-          greifbarVor: vor, greifbarNach: n.greifbar, blattWeg: !n.tafelDa,
-          kText: n.kText });
-        s = n;
-      }
+  if (s.tafelDa) {
+    /* R10 — ein fremder Reiter unter liegendem Blatt. */
+    const reiter = s.zuege.find(z => z.hit && !z.aus && /^stadt:reiter:/.test(z.zug));
+    if (reiter) {
+      const vor = s.greifbar;
+      await klick(reiter); klicks++;
+      const n = await schirm();
+      r10.push({ jahr: s.jahr, reiter: reiter.zug, text: reiter.text,
+        greifbarVor: vor, greifbarNach: n.greifbar, blattWeg: !n.tafelDa, kText: n.kText });
+      s = n;
     }
-    if (s.tafelDa) { await greif(/^preis:tafel-zu$/, s); klicks++; s = await schirm(); }
   }
+  if (s.tafelDa) { await greif(/^preis:tafel-zu$/, s); klicks++; s = await schirm(); }
+  return s;
+}
+
+async function tu(z) {
+  if (!z || !z.hit || z.aus) return null;
+  await klick(z); klicks++;
+  return await michaeliPruefen();
+}
+
+for (let i = 0; i < JAHRE * 40 + 80; i++) {
+  let s = await michaeliPruefen();
+  if (s.ende) break;
 
   /* ---- am Leben bleiben. Reiter nur ausserhalb von Woche 1. ----------- */
-  const darfReiter = s.woche !== 1;
-  if (await greif(/^fuhre:sommer-zu$/, s)) { klicks++; s = await schirm(); }
-  if (darfReiter) {
+  const r1 = s.zuege.find(x => x.hit && !x.aus && /^fuhre:sommer-zu$/.test(x.zug));
+  if (r1) s = (await tu(r1)) || s;
+  if (s.woche !== 1) {
     for (const muster of [/^fuhre:wie-vorige$/, /^fuhre:fuellen$/, /^fuhre:abschicken$/]) {
+      if (s.woche === 1) break;
       let z = s.zuege.find(x => x.hit && !x.aus && muster.test(x.zug));
       if (!z) {
         const rr = s.zuege.filter(x => x.hit && !x.aus && /^stadt:reiter:fuhre/.test(x.zug));
-        for (const r of rr) { await klick(r); klicks++; s = await schirm();
-          z = s.zuege.find(x => x.hit && !x.aus && muster.test(x.zug)); if (z) break; }
+        for (const r of rr) {
+          s = (await tu(r)) || s;
+          if (s.woche === 1) break;
+          z = s.zuege.find(x => x.hit && !x.aus && muster.test(x.zug)); if (z) break;
+        }
       }
-      if (z) { await klick(z); klicks++; s = await schirm(); }
+      if (z && s.woche !== 1) s = (await tu(z)) || s;
     }
-    if (s.rohstoff < 45) {
-      const roh = s.zuege.find(x => x.hit && !x.aus && /kauf:rohstoff/.test(x.zug)
-        && x.preis && Math.abs(x.preis) <= s.kasse);
-      if (roh) { await klick(roh); klicks++; s = await schirm(); }
-      else {
-        const rr = s.zuege.filter(x => x.hit && !x.aus && /^stadt:reiter:sud/.test(x.zug));
-        for (const r of rr) { await klick(r); klicks++; s = await schirm();
-          const r2 = s.zuege.find(x => x.hit && !x.aus && /kauf:rohstoff/.test(x.zug)
-            && x.preis && Math.abs(x.preis) <= s.kasse);
-          if (r2) { await klick(r2); klicks++; s = await schirm(); break; } }
+  }
+  if (s.woche !== 1 && s.rohstoff < 45) {
+    let roh = s.zuege.find(x => x.hit && !x.aus && /kauf:rohstoff/.test(x.zug)
+      && x.preis && Math.abs(x.preis) <= s.kasse);
+    if (!roh) {
+      const rr = s.zuege.filter(x => x.hit && !x.aus && /^stadt:reiter:sud/.test(x.zug));
+      for (const r of rr) {
+        s = (await tu(r)) || s;
+        roh = s.zuege.find(x => x.hit && !x.aus && /kauf:rohstoff/.test(x.zug)
+          && x.preis && Math.abs(x.preis) <= s.kasse);
+        if (roh) break;
       }
     }
-    const sud = s.zuege.find(x => x.hit && !x.aus && /^sud:(sud-an|sudpfanne|anstellen|brauen)/.test(x.zug));
-    if (sud) { await klick(sud); klicks++; s = await schirm(); }
+    if (roh && s.woche !== 1) s = (await tu(roh)) || s;
   }
 
   const w = s.zuege.find(x => x.zug === 'weiter' && x.hit && !x.aus);
-  if (w) { await klick(w); klicks++; }
-  const n2 = await schirm();
-  if (n2.jahr - startJahr >= JAHRE) break;
+  if (w) s = (await tu(w)) || s;
+  if (s.jahr - startJahr >= JAHRE) break;
 }
 
 await seite.screenshot({ path: `${WURZ}/schuesse/${MARKE}-e${ep}.png` });
@@ -161,7 +177,7 @@ const erg = {
   r10MehrZuege: r10.filter(x => x.greifbarNach > x.greifbarVor).length,
   r10,
   abgeleseneZustaende: abgelesen, knopfLuegt: luegt, klicks,
-  reiterklicksInWoche1: reiterInWoche1 - r10.length < 0 ? 0 : reiterInWoche1 - r10.length,
+  reiterklicksInWoche1NurR10: r10.length,
   seitenfehler: fehler.length, lage: s.lage, fehlerTexte: fehler.slice(0, 5)
 };
 fs.writeFileSync(`${WURZ}/protokoll/${MARKE}-e${ep}.json`, JSON.stringify(erg, null, 1));

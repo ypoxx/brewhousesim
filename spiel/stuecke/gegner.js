@@ -295,23 +295,40 @@
        der gefundenen Zonen weiter in `data-a3zonen` am eigenen Fach — sie
        geht dann von 5 auf 4 zurueck.
 
-       ZWEI GETRENNTE MERKER, UND DAS IST DER FEHLER, DEN ICH SELBST GEMACHT
-       HABE. Beim ersten Anlauf haben die Griffe im DERSELBEN Liste gestanden
-       wie die Beschriftungen — und die Ausweiche griff nicht. Der Grund:
+       ZWEI FEHLER, DIE ICH SELBST GEMACHT HABE, UND WARUM SIE HIER STEHEN.
+
+       (1) Beim ersten Anlauf standen die Griffe in DERSELBEN Liste wie die
+       Beschriftungen — und die Ausweiche griff nicht.
        `if (l.length) ZONEN[e] = l;` merkt sich die Liste, SOBALD irgendetwas
-       darin steht. Beim ersten Bildaufbau standen die drei Ortsschilder
-       schon da, der Griff DES PREISES noch nicht (fremde Stuecke zeichnen in
-       derselben Runde, aber nicht in derselben Millisekunde). Die Liste war
-       damit fuer die ganze Partie ohne Griff — lautlos, denn drei Zonen
-       sehen aus wie „gefunden". Jede Sorte Zone hat jetzt ihren eigenen
-       Merker und ihren eigenen Leerzaehler; keine kann die andere
-       einfrieren. */
-  function griffzonen() {
-    var e = epNr();
-    if (GRIFFE[e]) return GRIFFE[e];
-    if ((GRIFFE_LEER[e] || 0) >= 40) return [];
+       darin steht. Beim ersten Bildaufbau standen die Ortsschilder schon da,
+       der Griff DES PREISES noch nicht. Die Liste war damit fuer die ganze
+       Partie ohne Griff — lautlos, denn sechs Zonen sehen aus wie
+       „gefunden". Jede Sorte Zone hat jetzt ihren eigenen Merker.
+
+       (2) Auch getrennt gemessen war die Zahl falsch: beim ersten Anlauf war
+       der Griff 6,2 % hoch, im gespielten Bild ist er 23,9 % hoch — er
+       WAECHST, weil die letzten Chronikzeilen darin stehen. Ein Ortsschild
+       bewegt sich nie, ein Griff schon. Einmal je Epoche zu messen ist fuer
+       Schilder richtig und fuer Griffe falsch.
+
+       Nachgemessen wird deshalb EINMAL JE WOCHE, im `woche`-Ereignis — also
+       AUSSERHALB des Zeichenwegs. Das ist die Grenze, die die Lehre der
+       Welle 12 zieht: eine Layoutabfrage JE BILDAUFBAU verschiebt die Phase
+       gegen die Fristen DER STADT und laesst dieselbe Saat zweimal
+       verschieden laufen; eine Abfrage je Woche ist von derselben
+       Groessenordnung wie das, was DIE STADT ohnehin je Woche tut. Nachweis,
+       dass es nichts verschiebt: die 400-Wochen-Linie in allen vier Epochen
+       ist mit und ohne diese Aenderung Ziffer fuer Ziffer dieselbe
+       (`gegenzug-w13/rho/`).
+
+       Und gemerkt wird die GROESSTE je gesehene Ausdehnung, nie eine
+       kleinere. Eine Sperrzone, die schrumpfen kann, laesst ein Zeichen
+       wieder unter den Griff wandern; eine, die nur waechst, ist monoton und
+       damit wiederholbar. */
+  function messeGriffe() {
     var m = buehnenmass();
-    if (!m) return [];
+    if (!m) return;
+    var e = epNr();
     var l = [];
     var g = document.querySelectorAll('#ebene-blatt .pr-griff');
     for (var j = 0; j < g.length; j++) {
@@ -320,10 +337,20 @@
       l.push({ x: 100 * rg.x / m.VB, y: 100 * rg.y / m.VH,
                b: 100 * rg.width / m.VB, h: 100 * rg.height / m.VH + 2.5 });
     }
-    if (l.length) GRIFFE[e] = l;
-    else GRIFFE_LEER[e] = (GRIFFE_LEER[e] || 0) + 1;
-    return l;
+    if (!l.length) { GRIFFE_LEER[e] = (GRIFFE_LEER[e] || 0) + 1; return; }
+    var alt = GRIFFE[e];
+    if (!alt) { GRIFFE[e] = l; return; }
+    /* Nur wachsen: die Vereinigung des alten und des neuen Rechtecks. */
+    for (var i = 0; i < l.length && i < alt.length; i++) {
+      var a = alt[i], n = l[i];
+      var x0 = Math.min(a.x, n.x), y0 = Math.min(a.y, n.y);
+      var x1 = Math.max(a.x + a.b, n.x + n.b), y1 = Math.max(a.y + a.h, n.y + n.h);
+      alt[i] = { x: x0, y: y0, b: x1 - x0, h: y1 - y0 };
+    }
+    for (; i < l.length; i++) alt.push(l[i]);
   }
+
+  function griffzonen() { return GRIFFE[epNr()] || []; }
 
   function sperrzonen() {
     var l = beschriftungszonen().concat(griffzonen());
@@ -3380,6 +3407,9 @@
     },
 
     woche: function () {
+      /* Die Griffe der Ebenen ueber mir werden hier nachgemessen und nicht
+         im Zeichenweg — Begruendung bei `messeGriffe`. */
+      B.wage('gegner.griffe', messeGriffe);
       B.wage('gegner.woche', wocheLaeuft);
     },
 

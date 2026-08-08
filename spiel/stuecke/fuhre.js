@@ -1535,6 +1535,19 @@
         fuelleNachRang(function (a) { return inNot(a) * 100 + durst(a) - a.km; }, true);
       }
     },
+    umkaempft: {
+      wort: 'wo der Adler wirbt',
+      satz: 'Zuerst die Adressen, um die ein anderer wirbt. Wer beliefert wird, bleibt gebunden — '
+          + 'das ist der billigste Zug gegen den Gegner, den dieses Haus hat.',
+      da: function () {
+        return haeuser().some(function (a) { return !!fremdGebunden(a); });
+      },
+      baue: function () {
+        fuelleNachRang(function (a) {
+          return (fremdGebunden(a) ? 1000 : 0) + durst(a) - a.km;
+        }, true);
+      }
+    },
     probe: {
       wort: 'ohne Rechnung',
       satz: 'Ein reifes Fass an einen Wirt, der nichts mehr nimmt — kein Preis, kein Ungeld. '
@@ -1593,7 +1606,7 @@
      zusammengefasst. Wer eine einzelne Woche genau wie die vorige fahren
      will, hat dafuer unveraendert `fuhre:wie-vorige` auf dem Brett DER
      WAGEN. */
-  var PLAN_REIHE = ['probe', 'mager', 'durst', 'rechnung', 'nah'];
+  var PLAN_REIHE = ['probe', 'mager', 'umkaempft', 'durst', 'rechnung', 'nah', 'vorige'];
   var PLAN_HOECHSTENS = 4;
 
   function planListe() {
@@ -1651,7 +1664,13 @@
     }
     var not = null;
     haeuser().forEach(function (a) { if (!not || inNot(a) > inNot(not)) not = a; });
-    if (not && inNot(not) >= 10) {
+    /* MAGER HEISST NICHT „EIN MAGERES JAHR". In 1350 traegt vom ersten Tag
+       an fast jedes Haus eine Mahnung — waere das schon die Frage der Woche,
+       stuende sie in 100 von 100 Wochen da und saegte damit den Sprung ab.
+       Gefragt wird, wenn es wirklich um die Adresse geht: zwei magere Jahre,
+       oder eines und seit fuenf Wochen kein Fass. */
+    if (not && (Z.mahnung[not.schluessel] || 0) >= 2
+        || (not && (Z.mahnung[not.schluessel] || 0) >= 1 && (Z.leer[not.schluessel] || 0) >= 5)) {
       var m = Z.mahnung[not.schluessel] || 0;
       return { art: 'mager', dringend: true,
         satz: not.name + ': ' + m + (m === 1 ? ' mageres Jahr' : ' magere Jahre') + ', seit '
@@ -1715,7 +1734,7 @@
     if (B.welt.zeit.ende) return 0;
     if (sommerLiegtOben() || schlussLiegtOben() || Z.antrag || Z.uebergabe) return 0;
     if (Z.frist !== null && Z.frist !== undefined) return 0;
-    if (probeKandidat()) return 0;
+    if (wochenLage()) return 0;
     if (!planRechne('vorige')) return 0;
     var bisJahresende = B.uhr.WOCHEN_IM_JAHR - B.welt.zeit.woche;
     return B.grenze(Math.min(SPRUNG_HOECHSTENS, bisJahresende), 0, SPRUNG_HOECHSTENS);

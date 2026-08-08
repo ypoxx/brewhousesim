@@ -1,0 +1,89 @@
+{
+ "epoche": 1,
+ "marke": "jahrzehnt",
+ "startJahr": 1350,
+ "endeBei": "1360/2",
+ "ende": false,
+ "braujahreMitMichaeli": 5,
+ "tafelVonSelbst": 4,
+ "michaeli": [
+  {
+   "jahr": 1350,
+   "vonSelbst": false,
+   "kText": "Michaelitafel 1350 · 5 Angebote — heute ist Michaeli",
+   "klar": null
+  },
+  {
+   "jahr": 1352,
+   "vonSelbst": true,
+   "kText": "Michaelitafel schließen",
+   "klar": 1
+  },
+  {
+   "jahr": 1355,
+   "vonSelbst": true,
+   "kText": "Michaelitafel schließen",
+   "klar": 1
+  },
+  {
+   "jahr": 1357,
+   "vonSelbst": true,
+   "kText": "Michaelitafel schließen",
+   "klar": 1
+  },
+  {
+   "jahr": 1359,
+   "vonSelbst": true,
+   "kText": "Michaelitafel schließen",
+   "klar": 1
+  }
+ ],
+ "r10Proben": 4,
+ "r10BlattWeg": 4,
+ "r10MehrZuege": 4,
+ "r10": [
+  {
+   "jahr": 1352,
+   "reiter": "stadt:reiter:gegner-amort-gg-band",
+   "text": "OHNE DICH GESCHEHEN · 34 ZÜGE",
+   "greifbarVor": 28,
+   "greifbarNach": 46,
+   "blattWeg": true,
+   "kText": "Michaelitafel 1352 · 5 Angebote"
+  },
+  {
+   "jahr": 1355,
+   "reiter": "stadt:reiter:gegner-amort-gg-band",
+   "text": "OHNE DICH GESCHEHEN · 83 ZÜGE",
+   "greifbarVor": 28,
+   "greifbarNach": 43,
+   "blattWeg": true,
+   "kText": "Michaelitafel 1355 · 5 Angebote"
+  },
+  {
+   "jahr": 1357,
+   "reiter": "stadt:reiter:gegner-amort-gg-band",
+   "text": "OHNE DICH GESCHEHEN · 124 ZÜGE",
+   "greifbarVor": 28,
+   "greifbarNach": 43,
+   "blattWeg": true,
+   "kText": "Michaelitafel 1357 · 5 Angebote"
+  },
+  {
+   "jahr": 1359,
+   "reiter": "stadt:reiter:gegner-amort-gg-band",
+   "text": "OHNE DICH GESCHEHEN · 152 ZÜGE",
+   "greifbarVor": 28,
+   "greifbarNach": 42,
+   "blattWeg": true,
+   "kText": "Michaelitafel 1359 · 5 Angebote"
+  }
+ ],
+ "abgeleseneZustaende": 197,
+ "knopfLuegt": 0,
+ "klicks": 2064,
+ "reiterklicksInWoche1": 0,
+ "seitenfehler": 0,
+ "lage": 0,
+ "fehlerTexte": []
+}

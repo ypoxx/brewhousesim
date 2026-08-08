@@ -569,6 +569,50 @@
   .pr-tafel .knopf,
   .pr-griff .knopf { white-space: normal; }
 
+  /* 3b — ABER NIE MITTEN IM WORT.  (Auflage R9, Welle 13)
+
+     Der blinde Kritiker der Welle 12, wörtlich: „die Knopfaufschrift
+     ‚Nehmen −110 Pf' bricht mitten im Wort (‚Nehme n −110 P f')".
+
+     Die Ursache ist eine Kette aus drei Regeln, die einzeln alle richtig
+     sind. `.pr-tafel .pr-karte { overflow-wrap: anywhere }` (Punkt 2 oben)
+     ist für lange Komposita im Kartentext gedacht — „Getränkefachgroßhandel"
+     —, wird aber vererbt und gilt damit auch für das Wort im Knopf. Der
+     Knopf selbst ist ein `inline-flex` aus zwei Kindern (`.wort`, `.preis`,
+     kern/buehne.js), und in einem Flexkasten schrumpfen beide Kinder unter
+     ihre eigene Breite, wenn der Platz knapp wird. Mit `white-space: normal`
+     aus Punkt 3 und `overflow-wrap: anywhere` aus Punkt 2 bricht das Wort
+     dann an jeder beliebigen Stelle.
+
+     Gemessen mit `werkbank/schuss/tafel-w13/ueberlauf.mjs` (Zeilenzahl über
+     `Range.getClientRects`, nicht über Höhe geteilt durch Zeilenhöhe): am
+     Michaelitag der neunten Braujahre standen **51 Knopfwörter über 16
+     Blätter** auf mehr Zeilen, als sie Wörter haben — „Nehmen" auf zwei
+     Zeilen, bei 1366×768 auch „+11.000 M" auf drei.
+
+     Die Abhilfe in einer Zeile Absicht: die beiden Kinder eines Knopfes
+     schrumpfen nicht unter ihren Inhalt, und in ihnen gilt der normale
+     Wortumbruch. Der Knopf darf dafür ZWISCHEN Wort und Preisschild
+     umbrechen (`flex-wrap: wrap`) — dann steht die Zahl unter dem Wort und
+     beide sind ganz zu lesen. Der Kartentext behält `anywhere`; er ist es,
+     der es braucht. */
+  .pr-tafel .knopf,
+  .pr-griff .knopf { flex-wrap: wrap; }
+  .pr-tafel .knopf > .wort,
+  .pr-tafel .knopf > .preis,
+  .pr-griff .knopf > .wort,
+  .pr-griff .knopf > .preis {
+    flex: 0 0 auto;
+    min-width: 0;
+    overflow-wrap: normal;
+    word-break: normal;
+    hyphens: none;
+  }
+  /* Das Preisschild sitzt sonst mit `margin-left: auto` rechts außen; in der
+     zweiten Zeile hat es keinen Nachbarn mehr, den es wegschieben müsste. */
+  .pr-tafel .knopf > .preis,
+  .pr-griff .knopf > .preis { padding-left: 0; }
+
   /* 4 — kein Text mit drei Punkten weggekuerzt. */
   .pr-tafel .pr-last-name,
   .pr-tafel .pr-bestand-name,

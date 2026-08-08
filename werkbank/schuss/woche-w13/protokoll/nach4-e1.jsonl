@@ -417,3 +417,7 @@
 {"t":150,"was":"klick","nr":113,"zug":"fuhre:plan:durst","grund":"Fuhrplan","knopf":{"text":"Fahren: nach Durst · 3 Fass +4 Pf","preis":4,"w":199,"h":24},"vor":{"jahr":1356,"woche":7,"kasse":58},"nach":{"jahr":1356,"woche":8,"kasse":53},"dkasse":-5,"lage":0}
 {"t":150,"was":"abgeschaltet","zug":"fuhre:abschicken","text":"FUHRE ABSCHICKEN"}
 {"t":150.1,"was":"woche","n":100,"jahr":1356,"woche":8,"kasse":53,"greifbar":46,"mitPreis":10,"deckung":0.6309523809523809,"nenner":"Ablösung Klosterschenke Obernberg","ziel":null,"uebergabeImText":0}
+{"t":150.3,"was":"wahl-der-woche","plaene":2,"sprung":false,"liste":[{"zug":"fuhre:plan:probe","preis":2,"text":"Fahren: ohne Rechnung · 3 Fass +2 Pf"},{"zug":"fuhre:plan:durst","preis":5,"text":"Fahren: nach Durst · 3 Fass +5 Pf"}]}
+{"t":151.1,"was":"klick","nr":114,"zug":"fuhre:plan:durst","grund":"Fuhrplan","knopf":{"text":"Fahren: nach Durst · 3 Fass +5 Pf","preis":5,"w":199,"h":24},"vor":{"jahr":1356,"woche":8,"kasse":53},"nach":{"jahr":1356,"woche":9,"kasse":48},"dkasse":-5,"lage":0}
+{"t":151.2,"was":"abgeschaltet","zug":"fuhre:abschicken","text":"FUHRE ABSCHICKEN"}
+{"t":152.1,"was":"schluss","jahr":1356,"woche":9,"kasse":48,"klicks":114,"danebengegriffen":6,"lage":0,"fehler":[],"abbruch":null,"gespielt":100,"sprungWochen":108}
