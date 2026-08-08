@@ -335,3 +335,89 @@
 {"t":154.9,"was":"abgeschaltet","zug":"fuhre:abschicken","text":"FUHRE ABSCHICKEN"}
 {"t":154.9,"was":"woche","n":80,"jahr":1355,"woche":18,"kasse":8,"greifbar":46,"mitPreis":11,"deckung":0.16666666666666666,"nenner":"Ablösung Pfarrschenke St. Michael","ziel":null,"uebergabeImText":0}
 {"t":155.1,"was":"wahl-der-woche","plaene":2,"sprung":false,"liste":[{"zug":"fuhre:plan:probe","preis":2,"text":"Fahren: ohne Rechnung · 3 Fass +2 Pf"},{"zug":"fuhre:plan:umkaempft","preis":5,"text":"Fahren: wo der Adler wirbt · 3 Fass +5 Pf"}]}
+{"t":155.8,"was":"klick","nr":92,"zug":"fuhre:plan:umkaempft","grund":"Fuhrplan","knopf":{"text":"Fahren: wo der Adler wirbt · 3 Fass +5 Pf","preis":5,"w":239,"h":24},"vor":{"jahr":1355,"woche":18,"kasse":8},"nach":{"jahr":1355,"woche":19,"kasse":6},"dkasse":-2,"lage":0}
+{"t":155.8,"was":"abgeschaltet","zug":"fuhre:abschicken","text":"FUHRE ABSCHICKEN"}
+{"t":155.9,"was":"woche","n":81,"jahr":1355,"woche":19,"kasse":6,"greifbar":44,"mitPreis":10,"deckung":0.125,"nenner":"Ablösung Pfarrschenke St. Michael","ziel":null,"uebergabeImText":0}
+{"t":156.1,"was":"wahl-der-woche","plaene":2,"sprung":false,"liste":[{"zug":"fuhre:plan:probe","preis":3,"text":"Fahren: ohne Rechnung · 3 Fass +3 Pf"},{"zug":"fuhre:plan:umkaempft","preis":6,"text":"Fahren: wo der Adler wirbt · 3 Fass +6 Pf"}]}
+{"t":157,"was":"klick","nr":93,"zug":"fuhre:plan:umkaempft","grund":"Fuhrplan","knopf":{"text":"Fahren: wo der Adler wirbt · 3 Fass +6 Pf","preis":6,"w":239,"h":24},"vor":{"jahr":1355,"woche":19,"kasse":6},"nach":{"jahr":1355,"woche":20,"kasse":6},"dkasse":0,"lage":0}
+{"t":157,"was":"abgeschaltet","zug":"fuhre:abschicken","text":"FUHRE ABSCHICKEN"}
+{"t":157.1,"was":"woche","n":82,"jahr":1355,"woche":20,"kasse":6,"greifbar":43,"mitPreis":8,"deckung":0.07142857142857142,"nenner":"Ablösung Schenke am Tor","ziel":null,"uebergabeImText":0}
+{"t":157.3,"was":"wahl-der-woche","plaene":2,"sprung":false,"liste":[{"zug":"fuhre:plan:probe","preis":2,"text":"Fahren: ohne Rechnung · 3 Fass +2 Pf"},{"zug":"fuhre:plan:umkaempft","preis":5,"text":"Fahren: wo der Adler wirbt · 3 Fass +5 Pf"}]}
+{"t":158.1,"was":"klick","nr":94,"zug":"fuhre:plan:umkaempft","grund":"Fuhrplan","knopf":{"text":"Fahren: wo der Adler wirbt · 3 Fass +5 Pf","preis":5,"w":239,"h":24},"vor":{"jahr":1355,"woche":20,"kasse":6},"nach":{"jahr":1355,"woche":21,"kasse":3},"dkasse":-3,"lage":0}
+{"t":158.1,"was":"abgeschaltet","zug":"fuhre:abschicken","text":"FUHRE ABSCHICKEN"}
+{"t":158.2,"was":"woche","n":83,"jahr":1355,"woche":21,"kasse":3,"greifbar":42,"mitPreis":7,"deckung":0.03571428571428571,"nenner":"Ablösung Schenke am Tor","ziel":null,"uebergabeImText":0}
+{"t":158.3,"was":"wahl-der-woche","plaene":2,"sprung":false,"liste":[{"zug":"fuhre:plan:probe","preis":3,"text":"Fahren: ohne Rechnung · 3 Fass +3 Pf"},{"zug":"fuhre:plan:umkaempft","preis":6,"text":"Fahren: wo der Adler wirbt · 3 Fass +6 Pf"}]}
+{"t":159.1,"was":"klick","nr":95,"zug":"fuhre:plan:umkaempft","grund":"Fuhrplan","knopf":{"text":"Fahren: wo der Adler wirbt · 3 Fass +6 Pf","preis":6,"w":239,"h":24},"vor":{"jahr":1355,"woche":21,"kasse":3},"nach":{"jahr":1355,"woche":22,"kasse":3},"dkasse":0,"lage":0}
+{"t":159.2,"was":"abgeschaltet","zug":"fuhre:abschicken","text":"FUHRE ABSCHICKEN"}
+{"t":159.2,"was":"woche","n":84,"jahr":1355,"woche":22,"kasse":3,"greifbar":42,"mitPreis":7,"deckung":0.03571428571428571,"nenner":"Ablösung Schenke am Tor","ziel":null,"uebergabeImText":0}
+{"t":159.3,"was":"wahl-der-woche","plaene":2,"sprung":false,"liste":[{"zug":"fuhre:plan:probe","preis":2,"text":"Fahren: ohne Rechnung · 3 Fass +2 Pf"},{"zug":"fuhre:plan:umkaempft","preis":5,"text":"Fahren: wo der Adler wirbt · 3 Fass +5 Pf"}]}
+{"t":160,"was":"klick","nr":96,"zug":"fuhre:plan:umkaempft","grund":"Fuhrplan","knopf":{"text":"Fahren: wo der Adler wirbt · 3 Fass +5 Pf","preis":5,"w":239,"h":24},"vor":{"jahr":1355,"woche":22,"kasse":3},"nach":{"jahr":1355,"woche":23,"kasse":0},"dkasse":-3,"lage":0}
+{"t":160,"was":"abgeschaltet","zug":"fuhre:abschicken","text":"FUHRE ABSCHICKEN"}
+{"t":160.4,"was":"woche","n":85,"jahr":1355,"woche":23,"kasse":0,"greifbar":42,"mitPreis":7,"deckung":0,"nenner":"Ablösung Schenke am Tor","ziel":null,"uebergabeImText":0}
+{"t":160.6,"was":"wahl-der-woche","plaene":2,"sprung":false,"liste":[{"zug":"fuhre:plan:probe","preis":3,"text":"Fahren: ohne Rechnung · 3 Fass +3 Pf"},{"zug":"fuhre:plan:umkaempft","preis":6,"text":"Fahren: wo der Adler wirbt · 3 Fass +6 Pf"}]}
+{"t":161.5,"was":"klick","nr":97,"zug":"fuhre:plan:umkaempft","grund":"Fuhrplan","knopf":{"text":"Fahren: wo der Adler wirbt · 3 Fass +6 Pf","preis":6,"w":239,"h":24},"vor":{"jahr":1355,"woche":23,"kasse":0},"nach":{"jahr":1355,"woche":24,"kasse":0},"dkasse":0,"lage":0}
+{"t":161.5,"was":"abgeschaltet","zug":"fuhre:abschicken","text":"FUHRE ABSCHICKEN"}
+{"t":161.5,"was":"woche","n":86,"jahr":1355,"woche":24,"kasse":0,"greifbar":41,"mitPreis":7,"deckung":0,"nenner":"Ablösung Schenke am Tor","ziel":null,"uebergabeImText":0}
+{"t":161.7,"was":"wahl-der-woche","plaene":2,"sprung":false,"liste":[{"zug":"fuhre:plan:probe","preis":2,"text":"Fahren: ohne Rechnung · 3 Fass +2 Pf"},{"zug":"fuhre:plan:umkaempft","preis":5,"text":"Fahren: wo der Adler wirbt · 3 Fass +5 Pf"}]}
+{"t":162.3,"was":"klick","nr":98,"zug":"fuhre:plan:umkaempft","grund":"Fuhrplan","knopf":{"text":"Fahren: wo der Adler wirbt · 3 Fass +5 Pf","preis":5,"w":239,"h":24},"vor":{"jahr":1355,"woche":24,"kasse":0},"nach":{"jahr":1355,"woche":25,"kasse":0},"dkasse":0,"lage":0}
+{"t":162.4,"was":"abgeschaltet","zug":"fuhre:abschicken","text":"FUHRE ABSCHICKEN"}
+{"t":162.4,"was":"woche","n":87,"jahr":1355,"woche":25,"kasse":0,"greifbar":41,"mitPreis":7,"deckung":0,"nenner":"Ablösung Schenke am Tor","ziel":null,"uebergabeImText":0}
+{"t":162.5,"was":"wahl-der-woche","plaene":2,"sprung":false,"liste":[{"zug":"fuhre:plan:probe","preis":2,"text":"Fahren: ohne Rechnung · 3 Fass +2 Pf"},{"zug":"fuhre:plan:umkaempft","preis":6,"text":"Fahren: wo der Adler wirbt · 3 Fass +6 Pf"}]}
+{"t":163.2,"was":"klick","nr":99,"zug":"fuhre:plan:umkaempft","grund":"Fuhrplan","knopf":{"text":"Fahren: wo der Adler wirbt · 3 Fass +6 Pf","preis":6,"w":239,"h":24},"vor":{"jahr":1355,"woche":25,"kasse":0},"nach":{"jahr":1355,"woche":26,"kasse":0},"dkasse":0,"lage":0}
+{"t":163.2,"was":"abgeschaltet","zug":"fuhre:abschicken","text":"FUHRE ABSCHICKEN"}
+{"t":163.2,"was":"woche","n":88,"jahr":1355,"woche":26,"kasse":0,"greifbar":41,"mitPreis":7,"deckung":0,"nenner":"Ablösung Schenke am Tor","ziel":null,"uebergabeImText":0}
+{"t":163.4,"was":"wahl-der-woche","plaene":2,"sprung":false,"liste":[{"zug":"fuhre:plan:probe","preis":2,"text":"Fahren: ohne Rechnung · 3 Fass +2 Pf"},{"zug":"fuhre:plan:umkaempft","preis":6,"text":"Fahren: wo der Adler wirbt · 3 Fass +6 Pf"}]}
+{"t":164,"was":"klick","nr":100,"zug":"fuhre:plan:umkaempft","grund":"Fuhrplan","knopf":{"text":"Fahren: wo der Adler wirbt · 3 Fass +6 Pf","preis":6,"w":239,"h":24},"vor":{"jahr":1355,"woche":26,"kasse":0},"nach":{"jahr":1355,"woche":27,"kasse":0},"dkasse":0,"lage":0}
+{"t":164,"was":"abgeschaltet","zug":"fuhre:abschicken","text":"FUHRE ABSCHICKEN"}
+{"t":164.1,"was":"woche","n":89,"jahr":1355,"woche":27,"kasse":0,"greifbar":41,"mitPreis":7,"deckung":0,"nenner":"Ablösung Schenke am Tor","ziel":null,"uebergabeImText":0}
+{"t":164.2,"was":"wahl-der-woche","plaene":2,"sprung":false,"liste":[{"zug":"fuhre:plan:probe","preis":2,"text":"Fahren: ohne Rechnung · 3 Fass +2 Pf"},{"zug":"fuhre:plan:umkaempft","preis":5,"text":"Fahren: wo der Adler wirbt · 3 Fass +5 Pf"}]}
+{"t":164.8,"was":"klick","nr":101,"zug":"fuhre:plan:umkaempft","grund":"Fuhrplan","knopf":{"text":"Fahren: wo der Adler wirbt · 3 Fass +5 Pf","preis":5,"w":239,"h":24},"vor":{"jahr":1355,"woche":27,"kasse":0},"nach":{"jahr":1355,"woche":28,"kasse":0},"dkasse":0,"lage":0}
+{"t":164.8,"was":"abgeschaltet","zug":"fuhre:abschicken","text":"FUHRE ABSCHICKEN"}
+{"t":164.9,"was":"woche","n":90,"jahr":1355,"woche":28,"kasse":0,"greifbar":41,"mitPreis":7,"deckung":0,"nenner":"Ablösung Schenke am Tor","ziel":null,"uebergabeImText":0}
+{"t":164.9,"was":"wahl-der-woche","plaene":2,"sprung":false,"liste":[{"zug":"fuhre:plan:probe","preis":2,"text":"Fahren: ohne Rechnung · 3 Fass +2 Pf"},{"zug":"fuhre:plan:umkaempft","preis":5,"text":"Fahren: wo der Adler wirbt · 3 Fass +5 Pf"}]}
+{"t":165.7,"was":"klick","nr":102,"zug":"fuhre:plan:umkaempft","grund":"Fuhrplan","knopf":{"text":"Fahren: wo der Adler wirbt · 3 Fass +5 Pf","preis":5,"w":239,"h":24},"vor":{"jahr":1355,"woche":28,"kasse":0},"nach":{"jahr":1355,"woche":29,"kasse":0},"dkasse":0,"lage":0}
+{"t":165.7,"was":"abgeschaltet","zug":"fuhre:abschicken","text":"FUHRE ABSCHICKEN"}
+{"t":165.7,"was":"woche","n":91,"jahr":1355,"woche":29,"kasse":0,"greifbar":43,"mitPreis":8,"deckung":0,"nenner":"Zuvorkommen Pfarrschenke St. Michael","ziel":null,"uebergabeImText":0}
+{"t":165.9,"was":"wahl-der-woche","plaene":2,"sprung":false,"liste":[{"zug":"fuhre:plan:probe","preis":2,"text":"Fahren: ohne Rechnung · 3 Fass +2 Pf"},{"zug":"fuhre:plan:umkaempft","preis":6,"text":"Fahren: wo der Adler wirbt · 3 Fass +6 Pf"}]}
+{"t":166.6,"was":"klick","nr":103,"zug":"fuhre:plan:umkaempft","grund":"Fuhrplan","knopf":{"text":"Fahren: wo der Adler wirbt · 3 Fass +6 Pf","preis":6,"w":239,"h":24},"vor":{"jahr":1355,"woche":29,"kasse":0},"nach":{"jahr":1355,"woche":30,"kasse":0},"dkasse":0,"lage":0}
+{"t":166.6,"was":"abgeschaltet","zug":"fuhre:abschicken","text":"FUHRE ABSCHICKEN"}
+{"t":166.7,"was":"woche","n":92,"jahr":1355,"woche":30,"kasse":0,"greifbar":41,"mitPreis":7,"deckung":0,"nenner":"Zuvorkommen Pfarrschenke St. Michael","ziel":null,"uebergabeImText":0}
+{"t":166.8,"was":"wahl-der-woche","plaene":2,"sprung":false,"liste":[{"zug":"fuhre:plan:probe","preis":2,"text":"Fahren: ohne Rechnung · 3 Fass +2 Pf"},{"zug":"fuhre:plan:umkaempft","preis":5,"text":"Fahren: wo der Adler wirbt · 3 Fass +5 Pf"}]}
+{"t":168.8,"was":"klick","nr":104,"zug":"fuhre:plan:umkaempft","grund":"Fuhrplan","knopf":{"text":"Fahren: wo der Adler wirbt · 3 Fass +5 Pf","preis":5,"w":239,"h":24},"vor":{"jahr":1355,"woche":30,"kasse":0},"nach":{"jahr":1356,"woche":1,"kasse":124},"dkasse":124,"lage":0}
+{"t":169,"was":"abgeschaltet","zug":"fuhre:abschicken","text":"FUHRE ABSCHICKEN"}
+{"t":169.2,"was":"woche","n":93,"jahr":1356,"woche":1,"kasse":124,"greifbar":27,"mitPreis":4,"deckung":2.7555555555555555,"nenner":"Zuvorkommen Pfarrschenke St. Michael","ziel":null,"uebergabeImText":3}
+{"t":170.2,"was":"nicht-zu-greifen","zug":"fuhre:sommer-zu"}
+{"t":171.2,"was":"klick","nr":105,"zug":"preis:nimm:bottich","grund":"Michaeli: billigstes bezahlbare","knopf":{"text":"Nehmen −54 Pf","preis":-54,"w":122,"h":25},"vor":{"jahr":1356,"woche":1,"kasse":124},"nach":{"jahr":1356,"woche":1,"kasse":70},"dkasse":-54,"lage":0}
+{"t":172.1,"was":"klick","nr":106,"zug":"preis:tafel-zu","grund":"Das Jahr beginnen","knopf":{"text":"Das Jahr beginnen","preis":null,"w":149,"h":56},"vor":{"jahr":1356,"woche":1,"kasse":70},"nach":{"jahr":1356,"woche":1,"kasse":70},"dkasse":0,"lage":0}
+{"t":172.2,"was":"wahl-der-woche","plaene":0,"sprung":false,"liste":[]}
+{"t":172.2,"was":"abgeschaltet","zug":"fuhre:abschicken","text":"FUHRE ABSCHICKEN"}
+{"t":173.3,"was":"klick","nr":107,"zug":"weiter","grund":"naechste Woche","knopf":{"text":"WEITER","preis":null,"w":147,"h":42},"vor":{"jahr":1356,"woche":1,"kasse":70},"nach":{"jahr":1356,"woche":2,"kasse":69},"dkasse":-1,"lage":0}
+{"t":173.4,"was":"woche","n":94,"jahr":1356,"woche":2,"kasse":69,"greifbar":38,"mitPreis":6,"deckung":0.9583333333333334,"nenner":"Ablösung Pfarrschenke St. Michael","ziel":null,"uebergabeImText":6}
+{"t":173.6,"was":"wahl-der-woche","plaene":2,"sprung":false,"liste":[{"zug":"fuhre:plan:probe","preis":1,"text":"Fahren: ohne Rechnung · 3 Fass +1 Pf"},{"zug":"fuhre:plan:umkaempft","preis":4,"text":"Fahren: wo der Adler wirbt · 3 Fass +4 Pf"}]}
+{"t":175.1,"was":"klick","nr":108,"zug":"fuhre:plan:umkaempft","grund":"Fuhrplan","knopf":{"text":"Fahren: wo der Adler wirbt · 3 Fass +4 Pf","preis":4,"w":239,"h":24},"vor":{"jahr":1356,"woche":2,"kasse":69},"nach":{"jahr":1356,"woche":3,"kasse":65},"dkasse":-4,"lage":0}
+{"t":175.1,"was":"abgeschaltet","zug":"fuhre:abschicken","text":"FUHRE ABSCHICKEN"}
+{"t":175.3,"was":"woche","n":95,"jahr":1356,"woche":3,"kasse":65,"greifbar":38,"mitPreis":6,"deckung":0.9027777777777778,"nenner":"Ablösung Pfarrschenke St. Michael","ziel":null,"uebergabeImText":6}
+{"t":175.4,"was":"wahl-der-woche","plaene":2,"sprung":false,"liste":[{"zug":"fuhre:plan:probe","preis":2,"text":"Fahren: ohne Rechnung · 3 Fass +2 Pf"},{"zug":"fuhre:plan:umkaempft","preis":5,"text":"Fahren: wo der Adler wirbt · 3 Fass +5 Pf"}]}
+{"t":176.6,"was":"klick","nr":109,"zug":"fuhre:plan:umkaempft","grund":"Fuhrplan","knopf":{"text":"Fahren: wo der Adler wirbt · 3 Fass +5 Pf","preis":5,"w":239,"h":24},"vor":{"jahr":1356,"woche":3,"kasse":65},"nach":{"jahr":1356,"woche":4,"kasse":64},"dkasse":-1,"lage":0}
+{"t":176.6,"was":"abgeschaltet","zug":"fuhre:abschicken","text":"FUHRE ABSCHICKEN"}
+{"t":176.7,"was":"woche","n":96,"jahr":1356,"woche":4,"kasse":64,"greifbar":38,"mitPreis":6,"deckung":0.8888888888888888,"nenner":"Ablösung Pfarrschenke St. Michael","ziel":null,"uebergabeImText":6}
+{"t":176.8,"was":"wahl-der-woche","plaene":2,"sprung":false,"liste":[{"zug":"fuhre:plan:probe","preis":2,"text":"Fahren: ohne Rechnung · 3 Fass +2 Pf"},{"zug":"fuhre:plan:umkaempft","preis":5,"text":"Fahren: wo der Adler wirbt · 3 Fass +5 Pf"}]}
+{"t":177.7,"was":"klick","nr":110,"zug":"fuhre:plan:umkaempft","grund":"Fuhrplan","knopf":{"text":"Fahren: wo der Adler wirbt · 3 Fass +5 Pf","preis":5,"w":239,"h":24},"vor":{"jahr":1356,"woche":4,"kasse":64},"nach":{"jahr":1356,"woche":5,"kasse":61},"dkasse":-3,"lage":0}
+{"t":177.8,"was":"abgeschaltet","zug":"fuhre:abschicken","text":"FUHRE ABSCHICKEN"}
+{"t":177.8,"was":"woche","n":97,"jahr":1356,"woche":5,"kasse":61,"greifbar":39,"mitPreis":8,"deckung":0.8472222222222222,"nenner":"Ablösung Pfarrschenke St. Michael","ziel":null,"uebergabeImText":0}
+{"t":177.9,"was":"wahl-der-woche","plaene":2,"sprung":false,"liste":[{"zug":"fuhre:plan:probe","preis":2,"text":"Fahren: ohne Rechnung · 3 Fass +2 Pf"},{"zug":"fuhre:plan:umkaempft","preis":5,"text":"Fahren: wo der Adler wirbt · 3 Fass +5 Pf"}]}
+{"t":178.8,"was":"klick","nr":111,"zug":"fuhre:plan:umkaempft","grund":"Fuhrplan","knopf":{"text":"Fahren: wo der Adler wirbt · 3 Fass +5 Pf","preis":5,"w":239,"h":24},"vor":{"jahr":1356,"woche":5,"kasse":61},"nach":{"jahr":1356,"woche":6,"kasse":60},"dkasse":-1,"lage":0}
+{"t":178.8,"was":"abgeschaltet","zug":"fuhre:abschicken","text":"FUHRE ABSCHICKEN"}
+{"t":178.8,"was":"woche","n":98,"jahr":1356,"woche":6,"kasse":60,"greifbar":39,"mitPreis":8,"deckung":0.8333333333333334,"nenner":"Ablösung Pfarrschenke St. Michael","ziel":null,"uebergabeImText":0}
+{"t":179,"was":"wahl-der-woche","plaene":2,"sprung":false,"liste":[{"zug":"fuhre:plan:probe","preis":1,"text":"Fahren: ohne Rechnung · 3 Fass +1 Pf"},{"zug":"fuhre:plan:umkaempft","preis":4,"text":"Fahren: wo der Adler wirbt · 3 Fass +4 Pf"}]}
+{"t":179.6,"was":"klick","nr":112,"zug":"fuhre:plan:umkaempft","grund":"Fuhrplan","knopf":{"text":"Fahren: wo der Adler wirbt · 3 Fass +4 Pf","preis":4,"w":239,"h":24},"vor":{"jahr":1356,"woche":6,"kasse":60},"nach":{"jahr":1356,"woche":7,"kasse":56},"dkasse":-4,"lage":0}
+{"t":179.7,"was":"abgeschaltet","zug":"fuhre:abschicken","text":"FUHRE ABSCHICKEN"}
+{"t":179.7,"was":"woche","n":99,"jahr":1356,"woche":7,"kasse":56,"greifbar":41,"mitPreis":9,"deckung":0.9333333333333333,"nenner":"Zuvorkommen Mühlschenke","ziel":null,"uebergabeImText":0}
+{"t":179.8,"was":"wahl-der-woche","plaene":2,"sprung":false,"liste":[{"zug":"fuhre:plan:probe","preis":2,"text":"Fahren: ohne Rechnung · 3 Fass +2 Pf"},{"zug":"fuhre:plan:umkaempft","preis":5,"text":"Fahren: wo der Adler wirbt · 3 Fass +5 Pf"}]}
+{"t":180.7,"was":"klick","nr":113,"zug":"fuhre:plan:umkaempft","grund":"Fuhrplan","knopf":{"text":"Fahren: wo der Adler wirbt · 3 Fass +5 Pf","preis":5,"w":239,"h":24},"vor":{"jahr":1356,"woche":7,"kasse":56},"nach":{"jahr":1356,"woche":8,"kasse":55},"dkasse":-1,"lage":0}
+{"t":180.8,"was":"abgeschaltet","zug":"fuhre:abschicken","text":"FUHRE ABSCHICKEN"}
+{"t":180.9,"was":"woche","n":100,"jahr":1356,"woche":8,"kasse":55,"greifbar":41,"mitPreis":9,"deckung":0.9166666666666666,"nenner":"Zuvorkommen Mühlschenke","ziel":null,"uebergabeImText":0}
+{"t":181,"was":"wahl-der-woche","plaene":2,"sprung":false,"liste":[{"zug":"fuhre:plan:probe","preis":2,"text":"Fahren: ohne Rechnung · 3 Fass +2 Pf"},{"zug":"fuhre:plan:umkaempft","preis":5,"text":"Fahren: wo der Adler wirbt · 3 Fass +5 Pf"}]}
+{"t":181.7,"was":"klick","nr":114,"zug":"fuhre:plan:umkaempft","grund":"Fuhrplan","knopf":{"text":"Fahren: wo der Adler wirbt · 3 Fass +5 Pf","preis":5,"w":239,"h":24},"vor":{"jahr":1356,"woche":8,"kasse":55},"nach":{"jahr":1356,"woche":9,"kasse":52},"dkasse":-3,"lage":0}
+{"t":181.9,"was":"abgeschaltet","zug":"fuhre:abschicken","text":"FUHRE ABSCHICKEN"}
+{"t":182.8,"was":"schluss","jahr":1356,"woche":9,"kasse":52,"klicks":114,"danebengegriffen":6,"lage":0,"fehler":[],"abbruch":null,"gespielt":100,"sprungWochen":108}

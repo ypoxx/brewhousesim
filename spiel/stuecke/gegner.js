@@ -1720,26 +1720,30 @@
      Fass geht auf den Karren oder zum Wirt — beides geht nicht, und das ist
      die Wahl, die neben dem teuren Preisschild steht.
      -------------------------------------------------------------------- */
-  function hinhalten(k) {
+  function hinhalten(k, mitGeld) {
     var a = adresse(k), hh = ep().hinhalten;
     if (!a || !hh || !hinhaltMoeglich(k)) return;
     var n = hinhaltFass();
-    /* WELLE 13, R15: was im Keller liegt, geht aus dem Keller; was fehlt,
-       wird zugekauft. Erst wenn auch die Lade das nicht traegt, ist der Zug
-       heute nicht zu haben — und DANN sagt die Meldung eine Zahl statt eines
-       Achselzuckens. */
-    var ausKeller = Math.min(n, fassImKeller());
-    var fehlt = n - ausKeller;
-    var zu = fehlt ? zukaufPreis(n) : 0;
-    if (fehlt && !B.welt.zahle(zu, hh.name + ' an ' + a.name + ' — ' + B.welt.menge(fehlt)
-                               + ' zugekauft', 'spieler')) {
-      Z.meldung = hh.name + ' beim ' + a.name + ': im '
-        + (B.welt.epoche().lager || 'Keller') + ' liegen ' + B.welt.menge(ausKeller)
-        + ', gebraucht werden ' + B.welt.menge(n) + '. Zukaufen kostet '
-        + B.welt.geld(zu) + ', in der Lade liegen ' + B.welt.geld(B.welt.haus.kasse) + '.';
-      return neuZeichnen('gegner-leer');
+    var zu = zukaufPreis();
+
+    if (mitGeld) {
+      if (!B.welt.zahle(zu, hh.name + ' an ' + a.name + ' — ' + B.welt.menge(n)
+                        + ' zugekauft', 'spieler')) {
+        Z.meldung = hh.name + ' beim ' + a.name + ': ' + B.welt.menge(n)
+          + ' zukaufen kostet ' + B.welt.geld(zu) + '. In der Lade liegen '
+          + B.welt.geld(B.welt.haus.kasse) + '.';
+        return neuZeichnen('gegner-knapp');
+      }
+    } else {
+      if (!hinhaltAusKeller()) {
+        Z.meldung = hh.name + ' beim ' + a.name + ': dafür müssten ' + B.welt.menge(n)
+          + ' im ' + (B.welt.epoche().lager || 'Keller') + ' liegen. Es liegen '
+          + B.welt.menge(fassImKeller()) + ' da — zukaufen kostet ' + B.welt.geld(zu) + '.';
+        return neuZeichnen('gegner-leer');
+      }
+      B.welt.nimmHeraus(n);
     }
-    if (ausKeller) B.welt.nimmHeraus(ausKeller);
+
     Z.hinhalt[k] = jahr();
     /* Ohne 'menge': DIE FUHRE liest das Protokoll und zaehlt jeden Eintrag mit
        Adresse UND Menge als Lieferung. Ein Fass, das der Wirt geschenkt
@@ -1749,8 +1753,8 @@
        ausgegeben hat, und Geld gehoert in die Buchfuehrung. */
     B.welt.protokolliere({ wer: 'spieler',
       was: hh.name + ' an ' + a.name + ' · ' + B.welt.menge(n)
-         + (fehlt ? ' (' + B.welt.menge(fehlt) + ' zugekauft)' : ''),
-      preis: fehlt ? -zu : 0, adresse: k });
+         + (mitGeld ? ' (zugekauft)' : ''),
+      preis: mitGeld ? -zu : 0, adresse: k });
 
     var folge = [];
     if (Z.absicht[k]) { Z.absicht[k].bis += (hh.wochen || 3); folge.push('er vertagt'); }
@@ -1759,17 +1763,15 @@
 
     B.welt.schreibe(hh.name + ' an ' + a.name + ': ' + hh.satz
       + ' Es kostet ' + B.welt.menge(n)
-      + (fehlt
-         ? (ausKeller ? ' — ' + B.welt.menge(ausKeller) + ' aus dem eigenen Vorrat, '
-                      : ' — nichts davon aus dem eigenen Vorrat, ')
-           + B.welt.menge(fehlt) + ' auf die Schnelle zugekauft für ' + B.welt.geld(zu) + '.'
+      + (mitGeld
+         ? ' — nicht aus dem eigenen Vorrat, sondern auf die Schnelle zugekauft für '
+           + B.welt.geld(zu) + '. Der ' + (B.welt.epoche().lager || 'Keller')
+           + ' bleibt, wie er ist.'
          : ' aus dem eigenen Vorrat und keinen ' + B.welt.waehrung().name + '.'), 'gegner');
     B.ton.spiele('gegner:hinhalten', { ort: a.ort });
     Z.wechsel[k] = { takt: takt(), an: null, von: null, hinhalt: true };
     Z.meldung = a.name + ': ' + hh.marke + ' — ' + B.welt.menge(n)
-      + (fehlt
-         ? (ausKeller ? ', davon ' + B.welt.menge(fehlt) : '') + ' zugekauft für ' + B.welt.geld(zu)
-         : ' aus dem Vorrat')
+      + (mitGeld ? ' zugekauft für ' + B.welt.geld(zu) : ' aus dem Vorrat')
       + ', ' + (folge.length ? folge.join(', ') + '.' : 'der Wirt lässt ihn warten.')
       + ' Einmal im Braujahr je Adresse.';
     neuZeichnen('gegner-hinhalt');
@@ -2394,60 +2396,103 @@
      und man kann nur eine von beiden haben.
      --------------------------------------------------------------------- */
 
-  /* Der Knopf, der Bier kostet statt Geld — und, wenn kein Bier da ist, den
-     Bruchteil eines Geldes, das die Lade traegt.
+  /* Die billige Antwort, in zwei Waehrungen — ein Knopf je Waehrung.
 
-     WELLE 13, R15. Bis hierher hiess der Knopf bei leerem Keller „Vorrat
-     reicht nicht" und war abgeschaltet. Das war ehrlich und trotzdem falsch:
-     ein abgeschalteter Knopf ist die Aussage „heute gibt es gegen ihn
-     nichts", und diese Aussage stand in fast jeder Woche des Kritikers da.
-     Jetzt sagt derselbe Knopf, WAS es kostet, das Fehlende auf die Schnelle
-     zu bekommen — und schaltet sich erst ab, wenn auch das nicht geht.
+     WELLE 13, R15. Bis hierher gab es EINEN Knopf, und er kostete Bier. Bei
+     leerem Keller hiess er „Vorrat reicht nicht" und war abgeschaltet; das
+     war ehrlich und trotzdem falsch, denn ein abgeschalteter Knopf ist die
+     Aussage „heute gibt es gegen ihn nichts", und diese Aussage stand in
+     fast jeder Woche des Kritikers da. Und weil er kein Preisschild trug,
+     zaehlte er unter der engen Lesart der Aufsicht ueberhaupt nicht mit.
 
-     Der Preis steht als `data-preis` am Knopf. Das ist keine Zierde: die
-     zweite Messlatte zaehlt Optionen mit Preisschild, die NEBENEINANDER
-     stehen und einander ausschliessen, und hier stehen sie jetzt wirklich
-     nebeneinander — oben „abloesen 66 Pf" (endgueltig, teuer), unten
-     „1 Fass zukaufen · 12 Pf" (vertagt drei Wochen, billig). Aus einer Kasse,
-     an einem Giebel, und man bekommt nur eine von beiden. */
-  function fassKnopf(a) {
+     Jetzt stehen zwei Knoepfe untereinander, und sie schliessen einander
+     aus:
+       „Fass an den Wirt · 1 Fass statt Geld"  — aus dem Keller, kostet den
+                                                 Verkauf, kein Geld
+       „lieber zukaufen · 12 Pf"               — beim Nachbarn, kostet Geld,
+                                                 laesst den Keller in Ruhe
+     Der zweite traegt ein `data-preis`, weil er wirklich Geld kostet. Der
+     erste traegt keines, weil er wirklich keines kostet. Wer die Zahlen
+     nachzaehlt, zaehlt damit nichts, was nicht dasteht.
+
+     Zusammen mit dem Zeichen darueber („abloesen 66 Pf") haengen an einem
+     Giebel jetzt drei Preise in zwei Waehrungen, aus einer Lade, und man
+     bekommt genau einen davon. Das ist Punkt 1 der Latte des Kritikers,
+     buchstaeblich. */
+  function fassKnoepfe(a) {
     var k = a.schluessel, hh = ep().hinhalten;
-    if (!hh) return null;
+    if (!hh) return [];
     var n = hinhaltFass();
     var geht = hinhaltMoeglich(k);
     var getan = Z.hinhalt[k] === jahr();
-    var ausKeller = Math.min(n, fassImKeller());
-    var fehlt = n - ausKeller;
-    var zu = fehlt ? zukaufPreis(n) : 0;
-    var traegt = !fehlt || B.welt.kann(zu);
+    var zu = zukaufPreis();
+    var lager = B.welt.epoche().lager || 'Keller';
+    var raus = [];
+
+    /* Schon geschehen: EIN Zeichen, kein Knopfpaar. Zwei abgeschaltete
+       Knoepfe nebeneinander waeren zweimal dieselbe Absage. */
+    if (getan) {
+      var m = document.createElement('button');
+      m.type = 'button';
+      m.className = 'gg-fass zuteuer';
+      m.setAttribute('data-zug', 'gegner:hinhalten:' + k);
+      m.setAttribute('data-adr', k);
+      m.setAttribute('data-fass', String(n));
+      m.disabled = true;
+      m.title = hh.name + ' beim ' + a.name + ': in diesem Braujahr schon geschehen. '
+        + 'Bis Michaeli drückt er an dieser Adresse den Preis nicht.';
+      var mt = B.el('span', 'gg-fasstext');
+      mt.appendChild(B.el('b', null, hh.marke));
+      mt.appendChild(B.el('i', null, 'läuft bis Michaeli'));
+      m.appendChild(mt);
+      return [m];
+    }
+
+    /* 1 — die Waehrung aus dem eigenen Keller. */
+    var ausKeller = hinhaltAusKeller();
     var b = document.createElement('button');
     b.type = 'button';
-    b.className = 'gg-fass' + (geht && traegt ? '' : ' zuteuer') + (fehlt ? ' zukauf' : '');
+    b.className = 'gg-fass' + (geht && ausKeller ? '' : ' zuteuer');
     b.setAttribute('data-zug', 'gegner:hinhalten:' + k);
     b.setAttribute('data-adr', k);
     b.setAttribute('data-fass', String(n));
-    if (fehlt) b.setAttribute('data-preis', String(-zu));
-    b.disabled = !geht || !traegt;
+    b.disabled = !geht || !ausKeller;
     b.title = hh.name + ' beim ' + a.name + '. ' + hh.satz
-      + ' Kostet ' + B.welt.menge(n)
-      + (fehlt
-         ? (ausKeller ? ' — ' + B.welt.menge(ausKeller) + ' aus dem eigenen Vorrat, '
-                      : ' — nichts davon liegt im ' + (B.welt.epoche().lager || 'Keller') + ', ')
-           + B.welt.menge(fehlt) + ' auf die Schnelle zugekauft für ' + B.welt.geld(zu)
-           + ' (ein Drittel über dem laufenden Satz).'
-         : ' aus dem eigenen Vorrat und keinen ' + B.welt.waehrung().name + '.')
-      + ' Einmal im Braujahr je Adresse.'
-      + (getan ? ' In diesem Braujahr schon geschehen.' : '')
-      + (traegt ? '' : ' In der Lade liegen ' + B.welt.geld(B.welt.haus.kasse) + '.');
+      + ' Kostet ' + B.welt.menge(n) + ' aus dem eigenen Vorrat und keinen '
+      + B.welt.waehrung().name + ' — dieses Fass kann auf den Karren oder zum Wirt, '
+      + 'nicht beides. Einmal im Braujahr je Adresse.'
+      + (ausKeller ? '' : ' Im ' + lager + ' liegen nur ' + B.welt.menge(fassImKeller()) + '.');
     var t = B.el('span', 'gg-fasstext');
-    t.appendChild(B.el('b', null, getan ? hh.marke : hh.kurz));
-    t.appendChild(B.el('i', null, getan
-      ? 'läuft bis Michaeli'
-      : (fehlt ? B.welt.menge(fehlt) + ' zukaufen · ' + B.welt.geld(zu)
-               : B.welt.menge(n) + ' statt Geld')));
+    t.appendChild(B.el('b', null, hh.kurz));
+    t.appendChild(B.el('i', null, ausKeller ? B.welt.menge(n) + ' statt Geld'
+                                            : 'Vorrat reicht nicht'));
     b.appendChild(t);
-    b.addEventListener('click', function () { hinhalten(k); });
-    return b;
+    b.addEventListener('click', function () { hinhalten(k, false); });
+    raus.push(b);
+
+    /* 2 — dieselbe Wirkung, in Geld. Der Weg, den die Lade traegt. */
+    var mitGeld = hinhaltMitGeld();
+    var g = document.createElement('button');
+    g.type = 'button';
+    g.className = 'gg-fass zukauf' + (geht && mitGeld ? '' : ' zuteuer');
+    g.setAttribute('data-zug', 'gegner:zukaufen:' + k);
+    g.setAttribute('data-adr', k);
+    g.setAttribute('data-fass', String(n));
+    g.setAttribute('data-preis', String(-zu));
+    g.disabled = !geht || !mitGeld;
+    g.title = hh.name + ' beim ' + a.name + ', aber nicht aus dem eigenen ' + lager + ': '
+      + B.welt.menge(n) + ' auf die Schnelle beim Nachbarn gekauft, ein Drittel über dem '
+      + 'laufenden Satz — ' + B.welt.geld(zu) + '. Dieselbe Wirkung wie das eigene Fass, '
+      + 'nur zahlt es die Lade statt der Fuhre. Einmal im Braujahr je Adresse.'
+      + (mitGeld ? '' : ' In der Lade liegen ' + B.welt.geld(B.welt.haus.kasse) + '.');
+    var gt = B.el('span', 'gg-fasstext');
+    gt.appendChild(B.el('b', null, 'lieber zukaufen'));
+    gt.appendChild(B.el('i', null, B.welt.menge(n) + ' · ' + B.welt.geld(zu)));
+    g.appendChild(gt);
+    g.addEventListener('click', function () { hinhalten(k, true); });
+    raus.push(g);
+
+    return raus;
   }
 
   function zeichneAdressen(fach) {
@@ -2547,10 +2592,10 @@
         reihen.push(p);
       }
 
-      /* 4 — Die Antwort, die Bier kostet. Sie steht unter der teuren. */
+      /* 4 — Die billigen Antworten. Sie stehen unter der teuren, und es sind
+         seit Welle 13 zwei: eine in Bier, eine in Geld. */
       if (reihen.length) {
-        var fk = fassKnopf(a);
-        if (fk) reihen.push(fk);
+        fassKnoepfe(a).forEach(function (fk) { reihen.push(fk); });
       }
 
       /* 5 — WELLE 11, Auflage 6: die Zahl der zweiten Messlatte steht an
@@ -3225,21 +3270,25 @@
           tu: function () { loeseAb(a.schluessel); }
         }));
       }
-      /* Die billige Antwort daneben, in der anderen Waehrung — und, wenn der
-         Keller sie nicht hergibt, mit dem Preis des Zukaufs am Knopf (R15). */
+      /* Die billigen Antworten daneben, in beiden Waehrungen (R15). */
       if (ep().hinhalten) {
         kk.appendChild(B.knopf({
           text: ep().hinhalten.name + ' · ' + B.welt.menge(hinhaltFass()),
           zug: 'gegner:hinhalten-blatt:' + a.schluessel,
-          preis: zukaufPreis(hinhaltFass()) ? -zukaufPreis(hinhaltFass()) : 0,
-          aus: !hinhaltMoeglich(a.schluessel) || !hinhaltBezahlbar(),
+          aus: !hinhaltMoeglich(a.schluessel) || !hinhaltAusKeller(),
           titel: ep().hinhalten.satz + ' Kostet Bier, kein Geld — und bis Michaeli '
-               + 'drückt er an dieser Adresse den Preis nicht mehr.'
-               + (zukaufPreis(hinhaltFass())
-                  ? ' Im ' + (B.welt.epoche().lager || 'Keller') + ' liegt zu wenig: '
-                    + B.welt.menge(fassFehlt(hinhaltFass())) + ' werden für '
-                    + B.welt.geld(zukaufPreis(hinhaltFass())) + ' zugekauft.' : ''),
-          tu: function () { hinhalten(a.schluessel); }
+               + 'drückt er an dieser Adresse den Preis nicht mehr.',
+          tu: function () { hinhalten(a.schluessel, false); }
+        }));
+        kk.appendChild(B.knopf({
+          text: 'lieber zukaufen · ' + B.welt.menge(hinhaltFass()),
+          zug: 'gegner:zukaufen-blatt:' + a.schluessel,
+          preis: -zukaufPreis(),
+          aus: !hinhaltMoeglich(a.schluessel) || !hinhaltMitGeld(),
+          titel: 'Dieselbe Wirkung, nur zahlt sie die Lade statt der Fuhre: '
+               + B.welt.menge(hinhaltFass()) + ' auf die Schnelle beim Nachbarn, '
+               + 'ein Drittel über dem laufenden Satz.',
+          tu: function () { hinhalten(a.schluessel, true); }
         }));
       }
       reihe.appendChild(kk);
@@ -3335,15 +3384,20 @@
           ka.appendChild(B.knopf({
             text: ep().hinhalten.name + ' · ' + B.welt.menge(hinhaltFass()),
             zug: 'gegner:hinhalten-blatt:' + kk,
-            preis: zukaufPreis(hinhaltFass()) ? -zukaufPreis(hinhaltFass()) : 0,
-            aus: !hinhaltMoeglich(kk) || !hinhaltBezahlbar(),
+            aus: !hinhaltMoeglich(kk) || !hinhaltAusKeller(),
             titel: ep().hinhalten.satz + ' Kostet Bier, kein Geld — und schiebt ihn '
-                 + (ep().hinhalten.wochen || 3) + ' Wochen hinaus.'
-                 + (zukaufPreis(hinhaltFass())
-                    ? ' Im ' + (B.welt.epoche().lager || 'Keller') + ' liegt zu wenig: '
-                      + B.welt.menge(fassFehlt(hinhaltFass())) + ' werden für '
-                      + B.welt.geld(zukaufPreis(hinhaltFass())) + ' zugekauft.' : ''),
-            tu: function () { hinhalten(kk); }
+                 + (ep().hinhalten.wochen || 3) + ' Wochen hinaus.',
+            tu: function () { hinhalten(kk, false); }
+          }));
+          ka.appendChild(B.knopf({
+            text: 'lieber zukaufen · ' + B.welt.menge(hinhaltFass()),
+            zug: 'gegner:zukaufen-blatt:' + kk,
+            preis: -zukaufPreis(),
+            aus: !hinhaltMoeglich(kk) || !hinhaltMitGeld(),
+            titel: 'Dieselbe Wirkung, nur zahlt sie die Lade statt der Fuhre: '
+                 + B.welt.menge(hinhaltFass()) + ' auf die Schnelle beim Nachbarn, '
+                 + 'ein Drittel über dem laufenden Satz.',
+            tu: function () { hinhalten(kk, true); }
           }));
         }
         zr.appendChild(ka);
@@ -3466,9 +3520,61 @@
       Z.takt = takt();
       B.welt.gegner.forEach(function (g) { bauePartei(g); });
       uebernehmeAusgangslage();
+
+      /* ------------------------------------------------------------------
+         WELLE 13 — DER SPIELSTAND, UND WARUM ER GERADE DIESES STUECK ANGEHT.
+
+         DER RAHMEN sichert den Weltzustand; den Eigenzustand `Z` sichert er
+         nicht, und dafuer hat er zwei Handgriffe gebaut (`spiel/LIESMICH.md`).
+         Bei mir haengt daran mehr als Bequemlichkeit: die Zahl „OHNE DICH
+         GESCHEHEN · 27 Züge" steht in `Z.zaehler` und in `Z.haeuser[*].zuege`
+         — sie ist die Zahl, um die die Auflage A8 ueberhaupt geht. Ein Stand,
+         der sie beim Fortsetzen auf null zurueckspringen laesst, macht aus
+         der Auflage einen Witz: der Zaehler wandert dann nicht mehr an einen
+         anderen Ort, sondern in die Vergangenheit.
+
+         GESICHERT WIRD NUR, WAS SPIELSTAND IST — reine Daten, JSON-faehig,
+         ohne DOM und ohne Messwerte. Nicht mitgesichert werden absichtlich:
+           · `bereit`, `offen`, `seite`, `zeigt`, `wahl`  — Ansichtssachen;
+             ein aufgeschlagenes Blatt gehoert nicht in einen Spielstand.
+           · `umkaempft`                                  — wird in jedem
+             Bildaufbau frisch gerechnet (`meldeZug`); gespeichert waere es
+             eine Woche alt und wuerde die zweite Messlatte anluegen.
+           · `epoche`, `takt`                             — kommen aus der
+             Welt, und die sichert der Rahmen selbst.
+         Alles andere ist Lage: was er haelt, um was er wirbt, worauf er
+         zielt, wo ein Fass steht, was geschehen ist und wie oft.
+         ------------------------------------------------------------------ */
+      var FELDER = ['haeuser', 'bindung', 'werbung', 'absicht', 'hinhalt', 'schutz',
+        'wagen', 'zuege', 'zaehler', 'wechsel', 'wirkung', 'gegenzugGetan',
+        'angebot', 'gebot', 'gebotSperre', 'gebotAusgang', 'abschlag', 'abschlagJe',
+        'abschlagJahr', 'umsatzJahr', 'abschlagVorjahr', 'abschlagJeVorjahr',
+        'beschwerdeJahr', 'beschwerdeAusgang', 'zorn', 'wocheZuege', 'wagenTakt'];
+      if (B.stand && B.stand.melde) {
+        B.stand.melde('gegner', function () {
+          var d = {};
+          FELDER.forEach(function (f) { d[f] = Z[f]; });
+          return d;
+        });
+        var alt = B.stand.geladen ? B.stand.geladen('gegner') : null;
+        if (alt) {
+          FELDER.forEach(function (f) {
+            if (alt[f] !== undefined) Z[f] = alt[f];
+          });
+        }
+        /* Nichts nachzubauen: eine Bindung haelt den SCHLUESSEL ihres Mittels
+           ('zunftbrief'), nicht das Mittel selbst — `mittelVon()` schlaegt in
+           der stehenden Tabelle nach, die aus den Daten kommt und keinen
+           Spielstand braucht. Alles, was gesichert wird, ist Zahl oder Wort. */
+      }
+
       /* Sein erster Zug faellt, ehe der Spieler das erste Mal hinsieht.
-         Von der ersten Sekunde an laeuft irgendwo eine Uhr, die ihm gehoert. */
-      B.wage('gegner.ersterZug', function () {
+         Von der ersten Sekunde an laeuft irgendwo eine Uhr, die ihm gehoert.
+         NUR IN EINER FRISCHEN PARTIE: eine fortgesetzte hat ihn schon getan,
+         und ein zusaetzlicher Zug beim Neuladen waere ein Zug, den die
+         Wiederkehrprobe als Abweichung zaehlt — zu Recht. */
+      var fortgesetzt = !!(B.stand && B.stand.geladen && B.stand.geladen('gegner'));
+      if (!fortgesetzt) B.wage('gegner.ersterZug', function () {
         Z.takt = takt();
         var a = haus('adler');
         /* Wirbt er schon so viel, wie er halten kann, wirbt er nicht — dann
@@ -3481,7 +3587,9 @@
       B.auf('protokoll', function (p) {
         B.wage('gegner.buch', function () { hoereBuch(p); });
       });
-      Z.beschwerdeJahr = 0;
+      /* Eine frische Partie hat noch nicht geklagt; eine fortgesetzte weiss,
+         ob sie es in diesem Braujahr schon getan hat, und behaelt das. */
+      if (!fortgesetzt) Z.beschwerdeJahr = 0;
       Z.bereit = true;
       B.welt.schreibe('Gegenüber steht ' + nameVon(haus('adler')) + '. '
         + haus('adler').erbe.name + ' führt es. Gebunden wird in dieser Zeit mit '
@@ -3595,11 +3703,11 @@
     zonen: function () {
       return { beschriftungen: beschriftungszonen().slice(), griffe: griffzonen().slice() };
     },
-    /* Was das Hinhalten in dieser Woche kostet: 0 heisst „aus dem Keller". */
+    /* Was das Hinhalten in dieser Woche kostet — in beiden Waehrungen. */
     fasspreis: function () {
-      var n = hinhaltFass();
-      return { fass: n, imKeller: fassImKeller(), fehlt: fassFehlt(n),
-               zukauf: zukaufPreis(n), traegtDieLade: hinhaltBezahlbar() };
+      return { fass: hinhaltFass(), imKeller: fassImKeller(),
+               ausKeller: hinhaltAusKeller(),
+               zukauf: zukaufPreis(), mitGeld: hinhaltMitGeld() };
     }
   };
 

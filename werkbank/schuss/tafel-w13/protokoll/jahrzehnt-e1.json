@@ -4,8 +4,8 @@
  "startJahr": 1350,
  "endeBei": "1360/2",
  "ende": false,
- "braujahreMitMichaeli": 5,
- "tafelVonSelbst": 4,
+ "braujahreMitMichaeli": 11,
+ "tafelVonSelbst": 10,
  "michaeli": [
   {
    "jahr": 1350,
@@ -14,7 +14,25 @@
    "klar": null
   },
   {
+   "jahr": 1351,
+   "vonSelbst": true,
+   "kText": "Michaelitafel schließen",
+   "klar": 1
+  },
+  {
    "jahr": 1352,
+   "vonSelbst": true,
+   "kText": "Michaelitafel schließen",
+   "klar": 1
+  },
+  {
+   "jahr": 1353,
+   "vonSelbst": true,
+   "kText": "Michaelitafel schließen",
+   "klar": 1
+  },
+  {
+   "jahr": 1354,
    "vonSelbst": true,
    "kText": "Michaelitafel schließen",
    "klar": 1
@@ -26,7 +44,19 @@
    "klar": 1
   },
   {
+   "jahr": 1356,
+   "vonSelbst": true,
+   "kText": "Michaelitafel schließen",
+   "klar": 1
+  },
+  {
    "jahr": 1357,
+   "vonSelbst": true,
+   "kText": "Michaelitafel schließen",
+   "klar": 1
+  },
+  {
+   "jahr": 1358,
    "vonSelbst": true,
    "kText": "Michaelitafel schließen",
    "klar": 1
@@ -36,53 +66,113 @@
    "vonSelbst": true,
    "kText": "Michaelitafel schließen",
    "klar": 1
+  },
+  {
+   "jahr": 1360,
+   "vonSelbst": true,
+   "kText": "Michaelitafel schließen",
+   "klar": 1
   }
  ],
- "r10Proben": 4,
- "r10BlattWeg": 4,
- "r10MehrZuege": 4,
+ "r10Proben": 10,
+ "r10BlattWeg": 10,
+ "r10MehrZuege": 10,
  "r10": [
+  {
+   "jahr": 1351,
+   "reiter": "stadt:reiter:gegner-amort-gg-band",
+   "text": "OHNE DICH GESCHEHEN · 15 ZÜGE",
+   "greifbarVor": 26,
+   "greifbarNach": 41,
+   "blattWeg": true,
+   "kText": "Michaelitafel 1351 · 5 Angebote"
+  },
   {
    "jahr": 1352,
    "reiter": "stadt:reiter:gegner-amort-gg-band",
-   "text": "OHNE DICH GESCHEHEN · 34 ZÜGE",
+   "text": "OHNE DICH GESCHEHEN · 31 ZÜGE",
    "greifbarVor": 28,
-   "greifbarNach": 46,
+   "greifbarNach": 41,
    "blattWeg": true,
    "kText": "Michaelitafel 1352 · 5 Angebote"
   },
   {
+   "jahr": 1353,
+   "reiter": "stadt:reiter:gegner-amort-gg-band",
+   "text": "OHNE DICH GESCHEHEN · 44 ZÜGE",
+   "greifbarVor": 25,
+   "greifbarNach": 40,
+   "blattWeg": true,
+   "kText": "Michaelitafel 1353 · 5 Angebote"
+  },
+  {
+   "jahr": 1354,
+   "reiter": "stadt:reiter:gegner-amort-gg-band",
+   "text": "OHNE DICH GESCHEHEN · 55 ZÜGE",
+   "greifbarVor": 24,
+   "greifbarNach": 40,
+   "blattWeg": true,
+   "kText": "Michaelitafel 1354 · 5 Angebote"
+  },
+  {
    "jahr": 1355,
    "reiter": "stadt:reiter:gegner-amort-gg-band",
-   "text": "OHNE DICH GESCHEHEN · 83 ZÜGE",
-   "greifbarVor": 28,
-   "greifbarNach": 43,
+   "text": "OHNE DICH GESCHEHEN · 64 ZÜGE",
+   "greifbarVor": 24,
+   "greifbarNach": 39,
    "blattWeg": true,
    "kText": "Michaelitafel 1355 · 5 Angebote"
   },
   {
+   "jahr": 1356,
+   "reiter": "stadt:reiter:gegner-amort-gg-band",
+   "text": "OHNE DICH GESCHEHEN · 85 ZÜGE",
+   "greifbarVor": 28,
+   "greifbarNach": 44,
+   "blattWeg": true,
+   "kText": "Michaelitafel 1356 · 5 Angebote"
+  },
+  {
    "jahr": 1357,
    "reiter": "stadt:reiter:gegner-amort-gg-band",
-   "text": "OHNE DICH GESCHEHEN · 124 ZÜGE",
+   "text": "OHNE DICH GESCHEHEN · 98 ZÜGE",
    "greifbarVor": 28,
-   "greifbarNach": 43,
+   "greifbarNach": 40,
    "blattWeg": true,
    "kText": "Michaelitafel 1357 · 5 Angebote"
   },
   {
+   "jahr": 1358,
+   "reiter": "stadt:reiter:gegner-amort-gg-band",
+   "text": "OHNE DICH GESCHEHEN · 109 ZÜGE",
+   "greifbarVor": 24,
+   "greifbarNach": 36,
+   "blattWeg": true,
+   "kText": "Michaelitafel 1358 · 5 Angebote"
+  },
+  {
    "jahr": 1359,
    "reiter": "stadt:reiter:gegner-amort-gg-band",
-   "text": "OHNE DICH GESCHEHEN · 152 ZÜGE",
+   "text": "OHNE DICH GESCHEHEN · 121 ZÜGE",
    "greifbarVor": 28,
    "greifbarNach": 42,
    "blattWeg": true,
    "kText": "Michaelitafel 1359 · 5 Angebote"
+  },
+  {
+   "jahr": 1360,
+   "reiter": "stadt:reiter:gegner-amort-gg-band",
+   "text": "OHNE DICH GESCHEHEN · 127 ZÜGE",
+   "greifbarVor": 27,
+   "greifbarNach": 42,
+   "blattWeg": true,
+   "kText": "Michaelitafel 1360 · 5 Angebote"
   }
  ],
- "abgeleseneZustaende": 197,
+ "abgeleseneZustaende": 1139,
  "knopfLuegt": 0,
- "klicks": 2064,
- "reiterklicksInWoche1": 0,
+ "klicks": 997,
+ "reiterklicksInWoche1NurR10": 10,
  "seitenfehler": 0,
  "lage": 0,
  "fehlerTexte": []
