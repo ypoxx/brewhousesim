@@ -202,11 +202,11 @@
    den Hinweis „Über der Kasse: es fehlen …", die Dauerzeile und den Knopf.
    Bei 1366×768 sind das zusammen rund 150 px; eine Reihe von 137 px hat drei
    von fünf Karten waagerecht abgeschnitten (gemessen, armes Michaeli 1351 und
-   1602). 330 × `--s` sind 164 px dort, 192 px bei 1600×900 und 330 px auf der
+   1602). 370 × `--s` sind 184 px dort, 215 px bei 1600×900 und 370 px auf der
    Entwurfsleinwand, wo die Reihe ohnehin 373 px hoch ist. */
 .pr-tafel .pr-mitte > .pr-reihe {
   flex: 1 1 0;
-  min-height: calc(var(--s) * 330);
+  min-height: calc(var(--s) * 370);
 }
 .pr-tafel .pr-mitte > .pr-reihe-fest {
   flex: 0 1 38%;

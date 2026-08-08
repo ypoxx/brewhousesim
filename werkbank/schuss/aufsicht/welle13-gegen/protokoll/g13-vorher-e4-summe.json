@@ -1,0 +1,40 @@
+{
+ "epoche": 4,
+ "url": "http://127.0.0.1:8933/spiel/?epoche=4&saat=1350&neu=1",
+ "gespielteWochen": 99,
+ "jahre": "1970–1973",
+ "lageMax": 0,
+ "seitenfehler": 0,
+ "fehler": [],
+ "ersterSchirm": {
+  "textzeilen": 651,
+  "zielZeilen": 1,
+  "zielBeispiel": [
+   "Lastschrift mit dem Lieferschein, kein Ziel."
+  ],
+  "knopf": "Michaelitafel schließen",
+  "tafelLiegt": false,
+  "speicherSchluessel": 0
+ },
+ "wochenMitTafel": 3,
+ "knopfDa": 99,
+ "luegtZu": 96,
+ "luegtAuf": 0,
+ "aufschriften": [
+  "Michaelitafel schließen"
+ ],
+ "jahresanfaenge": 4,
+ "davonMitTafel": 3,
+ "wochenOhneGegenzugEng": 22,
+ "wochenOhneGegenzugWeit": 1,
+ "wochenOhneGegenzugEngJe100": 22.2,
+ "wochenOhneGegenzugWeitJe100": 1,
+ "wochenMitZielwort": 99,
+ "wochenMitUebergabe": 0,
+ "davonNurAmReiter": 0,
+ "wochenOhneBezahlbares": 22,
+ "deckungUnter1": 1,
+ "kasseAnfang": 86000,
+ "kasseEnde": 61776,
+ "speicherSchluesselEnde": 0
+}

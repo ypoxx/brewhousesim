@@ -217,3 +217,82 @@ Zwei Feinheiten, beide Absicht:
 ## 3 · Die Abnahme, selbst gemessen
 
 *(wird unten laufend ergänzt)*
+
+### R13 — der Klickanteil, die Zahl, an der ich gemessen werde
+
+Gerät: `werkbank/schuss/woche-w13/hand-w13.mjs` (dieselbe Mausmechanik wie
+`spiel-w12/hand3.mjs` — `mouse.move`/`down`/65 ms/`up`, vorher
+`elementFromPoint` auf der Knopfmitte), Fenster **1600×900**, Saat 1350,
+je **100 gespielte Wochen**, **kein Reiterklick**. Ausgewertet mit
+`werkbank/schuss/woche-w13/klickanteil.py`.
+
+**Die Regeln der Hand, vollständig** — sie gelten unverändert vor und nach dem
+Umbau, damit „vorher" und „nachher" dasselbe messen:
+
+1. Georgi-Blatt: einen Jahresplan nehmen, Blatt schließen.
+2. Michaelitafel, **wenn sie von selbst daliegt**: das billigste bezahlbare
+   Angebot nehmen, „Das Jahr beginnen".
+3. Rohstoff unter 45 und bezahlbar: kaufen.
+4. Alle drei Wochen ein bezahlbarer Zug gegen den Gegner, alle zehn Wochen
+   einer für den Namen (wörtlich aus `hand3.mjs`).
+5. **Einen Fuhrplan nehmen: den mit dem besten Preisschild.** Hat keiner
+   eines, „Wie vorige Woche", sonst den ersten.
+6. **Wäre das derselbe Plan wie vorige Woche und steht ein Sprung da: den
+   Sprung nehmen.** Das ist keine Regel des Messgeräts, sondern die, zu der
+   die Karte selbst auffordert.
+7. `weiter`, wenn die Woche danach noch dieselbe ist.
+
+| | **vorher** (E1) | **E1** | **E2** | **E3** | **E4** |
+|---|---|---|---|---|---|
+| gespielte Wochen | 100 | 100 | 100 | 100 | 100 |
+| zusätzlich **erzählte** Wochen | 0 | **108** | 42 | 61 | 61 |
+| echte Klicks | 106 | 114 | 114 | 127 | 135 |
+| **häufigster Knopf** (Latte ≤ 35 %) | **94,3 %** `weiter` | **32,5 %** ✓ | 36,8 % ✗ | **26,8 %** ✓ | **17,0 %** ✓ |
+| **drei häufigste** (Latte ≤ 60 %) | 98,1 % | 82,5 % ✗ | 72,8 % ✗ | **56,7 %** ✓ | **43,7 %** ✓ |
+| Klicks ins Leere | 3 | 6 | 4 | 4 | 4 |
+| `BRAUHAUS.lage` · Seitenfehler | 0 · 0 | 0 · 0 | 0 · 0 | 0 · 0 | 0 · 0 |
+
+**Die Rangliste je Epoche** (nachher):
+
+| E1 | E2 | E3 | E4 |
+|---|---|---|---|
+| `plan:mager` 32,5 % | `plan:mager` 36,8 % | `plan:rechnung` 26,8 % | `plan:umkaempft` 17,0 % |
+| `plan:umkaempft` 32,5 % | `plan:umkaempft` 28,9 % | `plan:mager` 15,7 % | `weiter` 15,6 % |
+| `sprung` 17,5 % | `plan:durst` 7,0 % | `sprung` 14,2 % | `plan:durst` 11,1 % |
+| `preis:tafel-zu` 6,1 % | `sprung` 6,1 % | `plan:umkaempft` 14,2 % | `sprung` 8,1 % |
+| `weiter` 5,3 % | `plan:rechnung` 5,3 % | `plan:durst` 4,7 % | `plan:probe` 7,4 % |
+
+**Zwei von vier Epochen bestehen beide Latten, drei von vier die erste.**
+1350 und 1600 reißen die Zweite. Ich schreibe die Ursache hin, statt sie
+wegzurunden, weil sie ein Befund ist und kein Versehen:
+
+> **Wo wenig Bier ist, gibt es wenig zu verteilen.** Ein Fuhrplan
+> unterscheidet sich vom nächsten nur, wenn der Wagen mehr Fässer tragen kann,
+> als der Keller hergibt, oder mehr Adressen anfahren kann, als er beladen
+> kann. In 1350 fährt der Ochsenkarren **5 Fass an 4 Halte**, und im Keller
+> liegen im Median **4 reife Fass** — sechs Regeln erzeugen dann zwei bis drei
+> verschiedene Ladungen, und die Entdopplung fasst den Rest zusammen (was
+> gleich ist, ist keine Wahl). Gemessen über 100 Wochen in 1350:
+> **2 Ladungen in 50 Wochen, 3 in 39, 4 in 8, keine in 3.**
+> Damit können höchstens drei Knöpfe den Verkehr tragen — und drei Knöpfe, die
+> allen Verkehr tragen, sind per Definition 100 % der drei häufigsten.
+> In 1884 und 1970, wo der Keller voller ist, stehen vier bis fünf Ladungen
+> nebeneinander, und **beide Latten fallen von selbst**.
+>
+> Die Latte misst an dieser Stelle also nicht mehr die Woche, sondern die
+> Knappheit — dieselbe, die der Kritiker als *„ein interessantes Spiel, das
+> man nicht spielen darf"* beschrieben hat, nur in Fässern statt in Pfennigen.
+> Wer sie in 1350 und 1600 reißen will, muss an Sudmenge, Wagengröße oder
+> Fassplätzen drehen. **Das habe ich nicht getan**, weil 1600 bei ρ +0,538
+> gegen eine Grenze von 0,700 keine Reserve hat und die Aufsicht verlangt, dass
+> jede Änderung an Erträgen 1600 zuerst misst.
+
+**Was sich unabhängig von jeder Hand geändert hat** — die Zahl, die der
+Kritiker als Punkt 1 der zweiten Messlatte zählt:
+
+| | vorher | nachher |
+|---|---|---|
+| Wochen mit **Optionen mit Preisschild nebeneinander, die einander ausschließen**, außerhalb der Michaelitafel | 0 von 100 | **97 von 100** (E1) |
+| davon mit 3 oder mehr | 0 | 47 von 100 (E1) |
+| Züge der FUHRE, die **ohne Reiterklick** greifbar sind, Woche 1 | 0 | 2–4 Fuhrpläne + Sprung |
+

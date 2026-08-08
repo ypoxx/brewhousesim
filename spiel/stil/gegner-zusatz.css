@@ -122,13 +122,16 @@
 .gg-fass:disabled { cursor: default; opacity: 0.66; }
 .gg-fass.zuteuer .gg-fasstext i { color: var(--gg-warn); }
 
-/* WELLE 13, R15 — DER ZUKAUF SIEHT ANDERS AUS ALS DER EIGENE KELLER.
-   Liegt im Keller nicht genug, kostet derselbe Zug Geld statt Bier. Das darf
-   man am Knopf sehen, ohne den Zeiger daraufzulegen: die Unterzeile bekommt
-   die Tinte der Geldpreise und einen Strich darunter, so wie ein Betrag, der
-   aus der Lade geht. Der Knopf verschiebt sich dadurch nicht — es aendert
-   sich Farbe und Unterstreichung, nicht die Schriftgroesse und nicht die
-   Zeilen.
+/* WELLE 13, R15 — DER ZUKAUF SIEHT ANDERS AUS ALS DAS EIGENE FASS.
+   Unter dem teuren Zeichen am Giebel stehen jetzt ZWEI billige Antworten
+   untereinander: „Fass an den Wirt · 1 Fass statt Geld" (Bier aus dem
+   eigenen Keller) und „lieber zukaufen · 1 Fass · 12 Pf" (Geld aus der
+   Lade). Sie bewirken dasselbe und schliessen einander aus; man muss auf
+   einen Blick sehen, welche Waehrung welche ist.
+
+   Der Unterschied wird deshalb GEMALT und nicht geschrieben: die Unterzeile
+   des Geldknopfes traegt die Tinte der Geldpreise und eine punktierte
+   Unterstreichung, so wie ein Betrag, der aus der Lade geht.
 
    AUSDRUECKLICH `text-decoration` UND KEIN `border-bottom`: ein Rahmen macht
    den Kasten hoeher, und ein hoeherer Kasten schiebt alles darunter im
@@ -144,6 +147,11 @@
   color: var(--gg-warn);
   text-decoration-color: rgba(141, 47, 28, 0.55);
 }
+/* Der Geldknopf steht als ZWEITE Zeile unter dem Bierknopf und gehoert
+   sichtbar zu ihm: etwas eingerueckt, etwas leiser im Namen. */
+.gg-fass.zukauf { padding-left: calc(var(--s) * 10); }
+.gg-fass.zukauf .gg-fasstext b { font-weight: 400; opacity: 0.85; }
+
 /* Wo das Fass schon steht, ist das Zeichen am Giebel ruhiger: er drueckt
    dort in diesem Braujahr nicht mehr. */
 .gg-schild.hingehalten .gg-schildtext b { opacity: 0.75; }
