@@ -67,3 +67,356 @@
          B [19,70,736,142]
     reiterN  A 8
          B 7
+1600x900 E4 1970/1 (1 Züge, 8 Reiter, breit)  ABWEICHUNG: zeile,werkbank,reiterN,knoepfe
+    zeile  A [19,70,528,167]
+         B [19,70,528,142]
+    werkbank  A [19,70,736,167]
+         B [19,70,736,142]
+    reiterN  A 8
+         B 7
+    knoepfe  A {"weiter":[1341,843,147,42],"fuhre:abschicken":[829,736,414,32],"fuhre:wie-vorige":[942,709,112,24],"fuhre:fuellen":[829,709,109,24],"preis:tafel":[1374,31,204,24]}
+         B {"weiter":[1341,843,147,42],"fuhre:abschicken":[829,736,414,32],"fuhre:wie-vorige":[942,709,112,24],"fuhre:fuellen":[829,709,109,24],"preis:tafel":[1374,31,204,37]}
+1600x900 E4 1973/10 (1 Züge, 8 Reiter, breit)  ABWEICHUNG: zeile,werkbank,reiterN
+    zeile  A [19,70,528,167]
+         B [19,70,528,142]
+    werkbank  A [19,70,736,167]
+         B [19,70,736,142]
+    reiterN  A 8
+         B 7
+1600x900 E4 1978/22 (1 Züge, 8 Reiter, breit)  ABWEICHUNG: zeile,werkbank,reiterN
+    zeile  A [19,70,528,167]
+         B [19,70,528,142]
+    werkbank  A [19,70,736,167]
+         B [19,70,736,142]
+    reiterN  A 8
+         B 7
+1920x1080 E1 1350/1 (1 Züge, 8 Reiter, breit)  ABWEICHUNG: zeile,werkbank,reiterN,meiner,knoepfe
+    zeile  A [23,84,633,146]
+         B [23,84,633,121]
+    werkbank  A [23,84,883,146]
+         B [23,84,883,121]
+    reiterN  A 8
+         B 7
+    meiner  A [91,84,166,78]
+         B [91,84,183,78]
+    knoepfe  A {"weiter":[1607,1011,178,52],"fuhre:abschicken":[995,883,496,38],"fuhre:wie-vorige":[1113,855,116,24],"fuhre:fuellen":[995,855,114,24],"preis:tafel":[1650,39,243,24]}
+         B {"weiter":[1607,1011,178,52],"fuhre:abschicken":[995,883,496,38],"fuhre:wie-vorige":[1113,855,116,24],"fuhre:fuellen":[995,855,114,24],"preis:tafel":[1650,39,243,38]}
+1920x1080 E1 1353/10 (1 Züge, 8 Reiter, breit)  ABWEICHUNG: zeile,werkbank,reiterN,meiner
+    zeile  A [23,84,633,146]
+         B [23,84,633,121]
+    werkbank  A [23,84,883,146]
+         B [23,84,883,121]
+    reiterN  A 8
+         B 7
+    meiner  A [91,84,166,78]
+         B [91,84,183,78]
+1920x1080 E1 1358/22 (1 Züge, 8 Reiter, breit)  ABWEICHUNG: zeile,werkbank,reiterN,meiner
+    zeile  A [23,84,633,146]
+         B [23,84,633,121]
+    werkbank  A [23,84,883,146]
+         B [23,84,883,121]
+    reiterN  A 8
+         B 7
+    meiner  A [91,84,166,78]
+         B [91,84,183,78]
+1920x1080 E2 1600/1 (1 Züge, 8 Reiter, breit)  ABWEICHUNG: zeile,werkbank,reiterN,meiner,knoepfe
+    zeile  A [23,84,633,158]
+         B [23,84,633,121]
+    werkbank  A [23,84,883,158]
+         B [23,84,883,121]
+    reiterN  A 8
+         B 7
+    meiner  A [91,84,166,78]
+         B [91,84,183,78]
+    knoepfe  A {"weiter":[1607,1011,178,52],"fuhre:abschicken":[995,883,496,38],"fuhre:wie-vorige":[1113,855,116,24],"fuhre:fuellen":[995,855,114,24],"preis:tafel":[1650,39,243,24]}
+         B {"weiter":[1607,1011,178,52],"fuhre:abschicken":[995,883,496,38],"fuhre:wie-vorige":[1113,855,116,24],"fuhre:fuellen":[995,855,114,24],"preis:tafel":[1650,39,243,38]}
+1920x1080 E2 1603/10 (1 Züge, 8 Reiter, breit)  ABWEICHUNG: zeile,werkbank,reiterN,meiner
+    zeile  A [23,84,633,158]
+         B [23,84,633,121]
+    werkbank  A [23,84,883,158]
+         B [23,84,883,121]
+    reiterN  A 8
+         B 7
+    meiner  A [91,84,166,78]
+         B [91,84,183,78]
+1920x1080 E2 1608/22 (1 Züge, 8 Reiter, breit)  ABWEICHUNG: zeile,werkbank,reiterN,meiner
+    zeile  A [23,84,633,158]
+         B [23,84,633,121]
+    werkbank  A [23,84,883,158]
+         B [23,84,883,121]
+    reiterN  A 8
+         B 7
+    meiner  A [91,84,166,78]
+         B [91,84,183,78]
+1920x1080 E3 1884/1 (1 Züge, 8 Reiter, breit)  ABWEICHUNG: zeile,werkbank,reiterN,meiner,knoepfe
+    zeile  A [23,84,633,171]
+         B [23,84,633,146]
+    werkbank  A [23,84,883,171]
+         B [23,84,883,146]
+    reiterN  A 8
+         B 7
+    meiner  A [91,84,166,91]
+         B [91,84,183,91]
+    knoepfe  A {"weiter":[1607,1011,178,52],"fuhre:abschicken":[995,883,496,38],"fuhre:wie-vorige":[1113,855,116,24],"fuhre:fuellen":[995,855,114,24],"preis:tafel":[1650,39,243,24]}
+         B {"weiter":[1607,1011,178,52],"fuhre:abschicken":[995,883,496,38],"fuhre:wie-vorige":[1113,855,116,24],"fuhre:fuellen":[995,855,114,24],"preis:tafel":[1650,39,243,38]}
+1920x1080 E3 1887/10 (1 Züge, 8 Reiter, breit)  ABWEICHUNG: zeile,werkbank,reiterN,meiner
+    zeile  A [23,84,633,171]
+         B [23,84,633,146]
+    werkbank  A [23,84,883,171]
+         B [23,84,883,146]
+    reiterN  A 8
+         B 7
+    meiner  A [91,84,166,91]
+         B [91,84,183,91]
+1920x1080 E3 1892/22 (1 Züge, 8 Reiter, breit)  ABWEICHUNG: zeile,werkbank,reiterN,meiner
+    zeile  A [23,84,633,171]
+         B [23,84,633,146]
+    werkbank  A [23,84,883,171]
+         B [23,84,883,146]
+    reiterN  A 8
+         B 7
+    meiner  A [91,84,166,91]
+         B [91,84,183,91]
+1920x1080 E4 1970/1 (1 Züge, 8 Reiter, breit)  ABWEICHUNG: zeile,werkbank,reiterN,meiner,knoepfe
+    zeile  A [23,84,633,171]
+         B [23,84,633,146]
+    werkbank  A [23,84,883,171]
+         B [23,84,883,146]
+    reiterN  A 8
+         B 7
+    meiner  A [91,84,166,91]
+         B [91,84,183,91]
+    knoepfe  A {"weiter":[1607,1011,178,52],"fuhre:abschicken":[995,883,496,38],"fuhre:wie-vorige":[1113,855,116,24],"fuhre:fuellen":[995,855,114,24],"preis:tafel":[1650,39,243,24]}
+         B {"weiter":[1607,1011,178,52],"fuhre:abschicken":[995,883,496,38],"fuhre:wie-vorige":[1113,855,116,24],"fuhre:fuellen":[995,855,114,24],"preis:tafel":[1650,39,243,38]}
+1920x1080 E4 1973/10 (1 Züge, 8 Reiter, breit)  ABWEICHUNG: zeile,werkbank,reiterN,meiner
+    zeile  A [23,84,633,171]
+         B [23,84,633,146]
+    werkbank  A [23,84,883,171]
+         B [23,84,883,146]
+    reiterN  A 8
+         B 7
+    meiner  A [91,84,166,91]
+         B [91,84,183,91]
+1920x1080 E4 1978/22 (1 Züge, 8 Reiter, breit)  ABWEICHUNG: zeile,werkbank,reiterN,meiner
+    zeile  A [23,84,633,171]
+         B [23,84,633,146]
+    werkbank  A [23,84,883,171]
+         B [23,84,883,146]
+    reiterN  A 8
+         B 7
+    meiner  A [91,84,166,91]
+         B [91,84,183,91]
+1366x768 E1 1350/1 (1 Züge, 8 Reiter, breit)  ABWEICHUNG: zeile,werkbank,reiterN,knoepfe
+    zeile  A [16,60,451,207]
+         B [16,60,451,170]
+    werkbank  A [16,60,628,207]
+         B [16,60,628,170]
+    reiterN  A 8
+         B 7
+    knoepfe  A {"weiter":[1144,719,126,36],"fuhre:abschicken":[708,628,354,28],"fuhre:wie-vorige":[817,601,109,24],"fuhre:fuellen":[708,601,106,24],"preis:tafel":[1173,27,174,24]}
+         B {"weiter":[1144,719,126,36],"fuhre:abschicken":[708,628,354,28],"fuhre:wie-vorige":[817,601,109,24],"fuhre:fuellen":[708,601,106,24],"preis:tafel":[1173,27,174,51]}
+1366x768 E1 1353/10 (1 Züge, 8 Reiter, breit)  ABWEICHUNG: zeile,werkbank,reiterN,knoepfe
+    zeile  A [16,60,451,207]
+         B [16,60,451,170]
+    werkbank  A [16,60,628,207]
+         B [16,60,628,170]
+    reiterN  A 8
+         B 7
+    knoepfe  A {"weiter":[1144,719,126,36],"fuhre:abschicken":[708,628,354,28],"fuhre:wie-vorige":[817,601,109,24],"fuhre:fuellen":[708,601,106,24],"preis:tafel":[1173,27,174,24]}
+         B {"weiter":[1144,719,126,36],"fuhre:abschicken":[708,628,354,28],"fuhre:wie-vorige":[817,601,109,24],"fuhre:fuellen":[708,601,106,24],"preis:tafel":[1173,27,174,36]}
+1366x768 E1 1358/22 (1 Züge, 8 Reiter, breit)  ABWEICHUNG: zeile,werkbank,reiterN,knoepfe
+    zeile  A [16,60,451,207]
+         B [16,60,451,170]
+    werkbank  A [16,60,628,207]
+         B [16,60,628,170]
+    reiterN  A 8
+         B 7
+    knoepfe  A {"weiter":[1144,719,126,36],"fuhre:abschicken":[708,628,354,28],"fuhre:wie-vorige":[817,601,109,24],"fuhre:fuellen":[708,601,106,24],"preis:tafel":[1173,27,174,24]}
+         B {"weiter":[1144,719,126,36],"fuhre:abschicken":[708,628,354,28],"fuhre:wie-vorige":[817,601,109,24],"fuhre:fuellen":[708,601,106,24],"preis:tafel":[1173,27,174,36]}
+1366x768 E2 1600/1 (1 Züge, 8 Reiter, breit)  ABWEICHUNG: zeile,werkbank,reiterN,knoepfe
+    zeile  A [16,60,451,207]
+         B [16,60,451,195]
+    werkbank  A [16,60,628,207]
+         B [16,60,628,195]
+    reiterN  A 8
+         B 7
+    knoepfe  A {"weiter":[1144,719,126,36],"fuhre:abschicken":[708,628,354,28],"fuhre:wie-vorige":[817,601,109,24],"fuhre:fuellen":[708,601,106,24],"preis:tafel":[1173,27,174,24]}
+         B {"weiter":[1144,719,126,36],"fuhre:abschicken":[708,628,354,28],"fuhre:wie-vorige":[817,601,109,24],"fuhre:fuellen":[708,601,106,24],"preis:tafel":[1173,27,174,51]}
+1366x768 E2 1603/10 (1 Züge, 8 Reiter, breit)  ABWEICHUNG: zeile,werkbank,reiterN,knoepfe
+    zeile  A [16,60,451,207]
+         B [16,60,451,195]
+    werkbank  A [16,60,628,207]
+         B [16,60,628,195]
+    reiterN  A 8
+         B 7
+    knoepfe  A {"weiter":[1144,719,126,36],"fuhre:abschicken":[708,628,354,28],"fuhre:wie-vorige":[817,601,109,24],"fuhre:fuellen":[708,601,106,24],"preis:tafel":[1173,27,174,24]}
+         B {"weiter":[1144,719,126,36],"fuhre:abschicken":[708,628,354,28],"fuhre:wie-vorige":[817,601,109,24],"fuhre:fuellen":[708,601,106,24],"preis:tafel":[1173,27,174,36]}
+1366x768 E2 1608/22 (1 Züge, 8 Reiter, breit)  ABWEICHUNG: zeile,werkbank,reiterN,knoepfe
+    zeile  A [16,60,451,207]
+         B [16,60,451,195]
+    werkbank  A [16,60,628,207]
+         B [16,60,628,195]
+    reiterN  A 8
+         B 7
+    knoepfe  A {"weiter":[1144,719,126,36],"fuhre:abschicken":[708,628,354,28],"fuhre:wie-vorige":[817,601,109,24],"fuhre:fuellen":[708,601,106,24],"preis:tafel":[1173,27,174,24]}
+         B {"weiter":[1144,719,126,36],"fuhre:abschicken":[708,628,354,28],"fuhre:wie-vorige":[817,601,109,24],"fuhre:fuellen":[708,601,106,24],"preis:tafel":[1173,27,174,36]}
+1366x768 E3 1884/1 (1 Züge, 8 Reiter, breit)  ABWEICHUNG: zeile,werkbank,reiterN,knoepfe
+    zeile  A [16,60,451,207]
+         B [16,60,451,142]
+    werkbank  A [16,60,628,207]
+         B [16,60,628,142]
+    reiterN  A 8
+         B 7
+    knoepfe  A {"weiter":[1144,719,126,36],"fuhre:abschicken":[708,628,354,28],"fuhre:wie-vorige":[817,601,109,24],"fuhre:fuellen":[708,601,106,24],"preis:tafel":[1173,27,174,24]}
+         B {"weiter":[1144,719,126,36],"fuhre:abschicken":[708,628,354,28],"fuhre:wie-vorige":[817,601,109,24],"fuhre:fuellen":[708,601,106,24],"preis:tafel":[1173,27,174,51]}
+1366x768 E3 1887/10 (1 Züge, 8 Reiter, breit)  ABWEICHUNG: zeile,werkbank,reiterN,knoepfe
+    zeile  A [16,60,451,207]
+         B [16,60,451,142]
+    werkbank  A [16,60,628,207]
+         B [16,60,628,142]
+    reiterN  A 8
+         B 7
+    knoepfe  A {"weiter":[1144,719,126,36],"fuhre:abschicken":[708,628,354,28],"fuhre:wie-vorige":[817,601,109,24],"fuhre:fuellen":[708,601,106,24],"preis:tafel":[1173,27,174,24]}
+         B {"weiter":[1144,719,126,36],"fuhre:abschicken":[708,628,354,28],"fuhre:wie-vorige":[817,601,109,24],"fuhre:fuellen":[708,601,106,24],"preis:tafel":[1173,27,174,36]}
+1366x768 E3 1892/22 (1 Züge, 8 Reiter, breit)  ABWEICHUNG: zeile,werkbank,reiterN,knoepfe
+    zeile  A [16,60,451,207]
+         B [16,60,451,142]
+    werkbank  A [16,60,628,207]
+         B [16,60,628,142]
+    reiterN  A 8
+         B 7
+    knoepfe  A {"weiter":[1144,719,126,36],"fuhre:abschicken":[708,628,354,28],"fuhre:wie-vorige":[817,601,109,24],"fuhre:fuellen":[708,601,106,24],"preis:tafel":[1173,27,174,24]}
+         B {"weiter":[1144,719,126,36],"fuhre:abschicken":[708,628,354,28],"fuhre:wie-vorige":[817,601,109,24],"fuhre:fuellen":[708,601,106,24],"preis:tafel":[1173,27,174,36]}
+1366x768 E4 1970/1 (1 Züge, 8 Reiter, breit)  ABWEICHUNG: zeile,werkbank,reiterN,knoepfe
+    zeile  A [16,60,451,207]
+         B [16,60,451,155]
+    werkbank  A [16,60,628,207]
+         B [16,60,628,155]
+    reiterN  A 8
+         B 7
+    knoepfe  A {"weiter":[1144,719,126,36],"fuhre:abschicken":[708,628,354,28],"fuhre:wie-vorige":[817,601,109,24],"fuhre:fuellen":[708,601,106,24],"preis:tafel":[1173,27,174,24]}
+         B {"weiter":[1144,719,126,36],"fuhre:abschicken":[708,628,354,28],"fuhre:wie-vorige":[817,601,109,24],"fuhre:fuellen":[708,601,106,24],"preis:tafel":[1173,27,174,51]}
+1366x768 E4 1973/10 (1 Züge, 8 Reiter, breit)  ABWEICHUNG: zeile,werkbank,reiterN,knoepfe
+    zeile  A [16,60,451,207]
+         B [16,60,451,155]
+    werkbank  A [16,60,628,207]
+         B [16,60,628,155]
+    reiterN  A 8
+         B 7
+    knoepfe  A {"weiter":[1144,719,126,36],"fuhre:abschicken":[708,628,354,28],"fuhre:wie-vorige":[817,601,109,24],"fuhre:fuellen":[708,601,106,24],"preis:tafel":[1173,27,174,24]}
+         B {"weiter":[1144,719,126,36],"fuhre:abschicken":[708,628,354,28],"fuhre:wie-vorige":[817,601,109,24],"fuhre:fuellen":[708,601,106,24],"preis:tafel":[1173,27,174,36]}
+1366x768 E4 1978/22 (1 Züge, 8 Reiter, breit)  ABWEICHUNG: zeile,werkbank,reiterN,knoepfe
+    zeile  A [16,60,451,207]
+         B [16,60,451,155]
+    werkbank  A [16,60,628,207]
+         B [16,60,628,155]
+    reiterN  A 8
+         B 7
+    knoepfe  A {"weiter":[1144,719,126,36],"fuhre:abschicken":[708,628,354,28],"fuhre:wie-vorige":[817,601,109,24],"fuhre:fuellen":[708,601,106,24],"preis:tafel":[1173,27,174,24]}
+         B {"weiter":[1144,719,126,36],"fuhre:abschicken":[708,628,354,28],"fuhre:wie-vorige":[817,601,109,24],"fuhre:fuellen":[708,601,106,24],"preis:tafel":[1173,27,174,36]}
+2752x1536 E1 1350/1 (1 Züge, 8 Reiter, breit)  ABWEICHUNG: zeile,werkbank,reiterN,meiner,knoepfe
+    zeile  A [33,120,908,129]
+         B [33,120,908,116]
+    werkbank  A [33,120,1266,129]
+         B [33,120,1266,116]
+    reiterN  A 8
+         B 7
+    meiner  A [190,120,224,63]
+         B [190,120,262,63]
+    knoepfe  A {"weiter":[2303,1437,257,75],"fuhre:abschicken":[1427,1252,710,59],"fuhre:wie-vorige":[1596,1212,166,33],"fuhre:fuellen":[1427,1212,163,33],"preis:tafel":[2365,55,348,31]}
+         B {"weiter":[2303,1437,257,75],"fuhre:abschicken":[1427,1252,710,59],"fuhre:wie-vorige":[1596,1212,166,33],"fuhre:fuellen":[1427,1212,163,33],"preis:tafel":[2365,55,348,50]}
+2752x1536 E1 1353/10 (1 Züge, 8 Reiter, breit)  ABWEICHUNG: zeile,werkbank,reiterN,meiner
+    zeile  A [33,120,908,129]
+         B [33,120,908,116]
+    werkbank  A [33,120,1266,129]
+         B [33,120,1266,116]
+    reiterN  A 8
+         B 7
+    meiner  A [190,120,224,63]
+         B [190,120,262,63]
+2752x1536 E1 1358/22 (1 Züge, 8 Reiter, breit)  ABWEICHUNG: zeile,werkbank,reiterN,meiner
+    zeile  A [33,120,908,129]
+         B [33,120,908,116]
+    werkbank  A [33,120,1266,129]
+         B [33,120,1266,116]
+    reiterN  A 8
+         B 7
+    meiner  A [190,120,224,63]
+         B [190,120,262,63]
+2752x1536 E2 1600/1 (1 Züge, 8 Reiter, breit)  ABWEICHUNG: zeile,werkbank,reiterN,meiner,knoepfe
+    zeile  A [33,120,908,129]
+         B [33,120,908,116]
+    werkbank  A [33,120,1266,129]
+         B [33,120,1266,116]
+    reiterN  A 8
+         B 7
+    meiner  A [190,120,224,63]
+         B [190,120,262,63]
+    knoepfe  A {"weiter":[2303,1437,257,75],"fuhre:abschicken":[1427,1252,710,59],"fuhre:wie-vorige":[1596,1212,166,33],"fuhre:fuellen":[1427,1212,163,33],"preis:tafel":[2365,55,348,31]}
+         B {"weiter":[2303,1437,257,75],"fuhre:abschicken":[1427,1252,710,59],"fuhre:wie-vorige":[1596,1212,166,33],"fuhre:fuellen":[1427,1212,163,33],"preis:tafel":[2365,55,348,50]}
+2752x1536 E2 1603/10 (1 Züge, 8 Reiter, breit)  ABWEICHUNG: zeile,werkbank,reiterN,meiner
+    zeile  A [33,120,908,129]
+         B [33,120,908,116]
+    werkbank  A [33,120,1266,129]
+         B [33,120,1266,116]
+    reiterN  A 8
+         B 7
+    meiner  A [190,120,224,63]
+         B [190,120,262,63]
+2752x1536 E2 1608/22 (1 Züge, 8 Reiter, breit)  ABWEICHUNG: zeile,werkbank,reiterN,meiner
+    zeile  A [33,120,908,129]
+         B [33,120,908,116]
+    werkbank  A [33,120,1266,129]
+         B [33,120,1266,116]
+    reiterN  A 8
+         B 7
+    meiner  A [190,120,224,63]
+         B [190,120,262,63]
+2752x1536 E3 1884/1 (1 Züge, 8 Reiter, breit)  ABWEICHUNG: zeile,werkbank,reiterN,meiner,knoepfe
+    zeile  A [33,120,908,129]
+         B [33,120,908,116]
+    werkbank  A [33,120,1266,129]
+         B [33,120,1266,116]
+    reiterN  A 8
+         B 7
+    meiner  A [190,120,224,63]
+         B [190,120,262,63]
+    knoepfe  A {"weiter":[2303,1437,257,75],"fuhre:abschicken":[1427,1252,710,59],"fuhre:wie-vorige":[1596,1212,166,33],"fuhre:fuellen":[1427,1212,163,33],"preis:tafel":[2365,55,348,31]}
+         B {"weiter":[2303,1437,257,75],"fuhre:abschicken":[1427,1252,710,59],"fuhre:wie-vorige":[1596,1212,166,33],"fuhre:fuellen":[1427,1212,163,33],"preis:tafel":[2365,55,348,50]}
+2752x1536 E3 1887/10 (1 Züge, 8 Reiter, breit)  ABWEICHUNG: zeile,werkbank,reiterN,meiner
+    zeile  A [33,120,908,129]
+         B [33,120,908,116]
+    werkbank  A [33,120,1266,129]
+         B [33,120,1266,116]
+    reiterN  A 8
+         B 7
+    meiner  A [190,120,224,63]
+         B [190,120,262,63]
+2752x1536 E3 1892/22 (1 Züge, 8 Reiter, breit)  ABWEICHUNG: zeile,werkbank,reiterN,meiner
+    zeile  A [33,120,908,129]
+         B [33,120,908,116]
+    werkbank  A [33,120,1266,129]
+         B [33,120,1266,116]
+    reiterN  A 8
+         B 7
+    meiner  A [190,120,224,63]
+         B [190,120,262,63]
+2752x1536 E4 1970/1 (1 Züge, 8 Reiter, breit)  ABWEICHUNG: reiterN,meiner,knoepfe
+    reiterN  A 8
+         B 7
+    meiner  A [190,120,224,63]
+         B [190,120,262,63]
+    knoepfe  A {"weiter":[2303,1437,257,75],"fuhre:abschicken":[1427,1252,710,59],"fuhre:wie-vorige":[1596,1212,166,33],"fuhre:fuellen":[1427,1212,163,33],"preis:tafel":[2365,55,348,31]}
+         B {"weiter":[2303,1437,257,75],"fuhre:abschicken":[1427,1252,710,59],"fuhre:wie-vorige":[1596,1212,166,33],"fuhre:fuellen":[1427,1212,163,33],"preis:tafel":[2365,55,348,50]}
+2752x1536 E4 1973/10 (1 Züge, 8 Reiter, breit)  ABWEICHUNG: reiterN,meiner
+    reiterN  A 8
+         B 7
+    meiner  A [190,120,224,63]
+         B [190,120,262,63]
+2752x1536 E4 1978/22 (1 Züge, 8 Reiter, breit)  ABWEICHUNG: reiterN,meiner
+    reiterN  A 8
+         B 7
+    meiner  A [190,120,224,63]
+         B [190,120,262,63]
+
+48 Abweichungen in 48 Lagen (4 Fenster x 4 Epochen x 3 Zeitpunkte).
