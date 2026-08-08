@@ -417,6 +417,64 @@
     return !!(Z.werbung[k] || Z.absicht[k] || Z.bindung[k]);
   }
 
+  /* ----------------------------------------------------------------------
+     WELLE 13, AUFLAGE R15 — „VORRAT REICHT NICHT" IST KEINE ANTWORT MEHR.
+
+     Der Befund des Spielkritikers ist eine Verhaeltniszahl: 457 Zuege des
+     Gegners gegen 5 des Spielers. Seine Begruendung, woertlich: „Nicht weil
+     ich nicht wollte — meine Hand hat es jede dritte Woche versucht —,
+     sondern weil ‚abloesen 76 Pf' bei einer Kasse von 14 Pf kein Zug ist."
+     Der Fassknopf ist genau dafuer gebaut und stand in seinen Sitzungen fast
+     immer mit „Vorrat reicht nicht" abgeschaltet da, WEIL DER KELLER LEER
+     WAR — und der Keller ist am Michaeli jedes Braujahres leer, also
+     ausgerechnet in der Woche, in der der Adler seine Vertraege schliesst.
+
+     Die Aufsicht laesst drei Wege offen (WELLE-13.md, R15): den Fasspreis,
+     einen dritten billigeren Weg, oder DIE BEDINGUNG von „Vorrat reicht
+     nicht". Gewaehlt ist die dritte, weil sie die kleinste ist und nichts
+     Neues erfindet: der Zug bleibt derselbe Zug, er bleibt einmal im
+     Braujahr je Adresse, er nimmt dem Adler weiterhin keine Adresse weg —
+     nur SCHALTET ER SICH NICHT MEHR AB. Liegt zu wenig im Keller, kauft das
+     Haus zu, was fehlt, und zwar auf die Schnelle beim Nachbarn: ein Drittel
+     ueber dem laufenden Satz.
+
+     Warum das billig BLEIBT und nicht bloss billig aussieht: `preisJeFass()`
+     ist der Mittelpreis der Epoche fuer EIN Fass. Eine Bindung kostet das
+     Vielfache davon (`grundwert` = Jahresmenge der Adresse mal Satz des
+     Mittels, in 1350 also 20 bis 80 Fass mal 3 bis 12). Der Zukauf ist damit
+     um ein bis zwei Groessenordnungen billiger als die endgueltige Antwort —
+     und das ist die Wahl, die neben dem teuren Preisschild stehen soll.
+
+     GEKAUFT WIRD NUR, WAS FEHLT. Liegen zwei von drei Faessern im Keller,
+     kostet der Zug zwei Faesser Bier UND ein Fass Geld. Sonst waere er in
+     1970 (drei Faesser) dreimal so teuer wie noetig.
+
+     WAS DABEI AUSDRUECKLICH NICHT GESCHIEHT: `meldeZug()` wird nicht
+     angefasst. Der Nenner der zweiten Messlatte bleibt der billigste Zug,
+     der den Streit BEENDET. Das Hinhalten beendet ihn nicht — es vertagt
+     ihn um drei Wochen und nimmt dem Adler bis Michaeli den Preisdruck an
+     dieser einen Adresse. Ein Zug, der nichts entscheidet, gehoert nicht in
+     den Nenner einer Kennzahl, die misst, ob das Haus sich Entscheidungen
+     leisten kann. (Dieselbe Begruendung stand schon vor dieser Welle im
+     Titel der Kennzahl: „Das ist der billigste Zug, um den gegenueber jemand
+     mitbietet — nicht der billigste Posten auf dem Brett.")
+     ---------------------------------------------------------------------- */
+  function fassFehlt(n) { return Math.max(0, n - fassImKeller()); }
+
+  /* Was der Zukauf des Fehlenden kostet — 0, wenn nichts fehlt. */
+  function zukaufPreis(n) {
+    var fehlt = fassFehlt(n);
+    if (!fehlt) return 0;
+    return Math.max(1, Math.round(fehlt * preisJeFass() * 4 / 3));
+  }
+
+  /* Traegt die Lade den Zug in dieser Woche? Ohne Zukauf immer. */
+  function hinhaltBezahlbar(k) {
+    var n = hinhaltFass();
+    var fehlt = fassFehlt(n);
+    return !fehlt || B.welt.kann(zukaufPreis(n));
+  }
+
   /* Was der Abschlag kostet: solange er die Adresse haelt, druckt er den
      Preis, den das Haus dort noch bekommt. Je Fass, das das Haus liefert.
      Steht sein Preis unter dem Satz des Rats, druckt er staerker — das ist

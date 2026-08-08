@@ -2831,9 +2831,28 @@
      als vom Spieler geholt und bleibt aufgeschlagen (`handZeit`, HANDFRIST).
      Kein Zeitgeber, keine Frist, keine Klasse an fremdem DOM.
 
-     Zwei Klicks sind ausgenommen:
-       · WEITER — wer weitergeht, hat entschieden, heute nichts zu nehmen.
-       · die Reiter DER STADT — die fallen unter R10 und schliessen.
+     DER EINE HALT — und warum er genau EINEN Klick im ganzen Spiel kostet.
+     WEITER ist der Klick, mit dem der Spieler den Michaelistag verlaesst.
+     Solange die Tafel nur deshalb nicht liegt, weil der Rahmen sie beim
+     Laden weggeklappt hat, geht dieser eine Druck nicht in die naechste
+     Woche, sondern legt die Tafel auf den Tisch — genau wie DIE FUHRE es zu
+     Georgi haelt (`fuhre.js` weiterHorcher, ZUSTAENDIGKEIT 23). Er ist auf
+     EINMAL JE BRAUJAHR verriegelt (`Z.gehalten`): schlaegt die Tafel danach
+     immer noch nicht auf, laeuft der naechste Druck durch. Eine Sackgasse
+     kann daraus nicht werden, und sie ist die teuerste Sorte Fehler
+     (`fuhre.js`: „ein schwarzes Fenster ohne Knopf darin").
+
+     Warum der Halt ueberhaupt noetig ist: genommen wird nur in Woche 1
+     (`nimm()` beginnt mit `if (B.welt.zeit.woche !== 1) return;`). Eine
+     Tafel, die erst in Woche 2 kaeme, waere die Vitrine, die das Urteil
+     zu Recht verwirft.
+
+     `stopPropagation` haelt hier nur den Knopf des Kerns auf, NICHT den
+     Horcher DER STADT: der haengt am selben Knoten (`#buehne`), und
+     `stopPropagation` beruehrt Horcher desselben Knotens nicht. Genau das
+     ist der Grund, aus dem dieser Horcher an `#buehne` haengt und nicht an
+     `document` — DIE STADT muss ihr `handZeit` bekommen, sonst klappt sie
+     die eben geholte Tafel sofort wieder weg.
      ====================================================================== */
   var REITER = ['stadt:reiter:', 'stadt:bauhof', 'stadt:ortsmarken', 'stadt:alles-zuklappen'];
   var VERSUCHE = 3;            /* Rueckholungen je Braujahr, Riegel gegen Flackern */
@@ -2841,6 +2860,29 @@
   function istReiter(zug) {
     for (var i = 0; i < REITER.length; i++) if (zug.indexOf(REITER[i]) === 0) return true;
     return false;
+  }
+
+  /* Darf sich die Tafel den Tisch zurueckholen? Genau dann, wenn heute
+     Michaeli ist, sie nicht weggelegt wurde, kein Sommerzettel oben liegt
+     und der Rahmen sie weggeklappt hat. */
+  function darfZurueck() {
+    if (B.welt.zeit.ende) return false;
+    if (B.welt.zeit.woche !== 1) return false;
+    if (!Z.offen || !Z.geklemmt || sommerLaeuft()) return false;
+    /* `Z.gesehen` steht hier absichtlich NICHT als Bedingung. Es wird aus
+       Klassennamen gelesen und kann in der Runde unmittelbar nach dem
+       Aufschlagen schon `true` sein, bevor DIE STADT im 240-ms-Takt
+       ueberhaupt geurteilt hat — als Riegel waere es ein Rennen. Der Riegel
+       ist `Z.offen` (der Spieler hat die Tafel selbst weggelegt) und die
+       Zahl der Versuche. */
+    return (Z.rueckholung || 0) < VERSUCHE;
+  }
+
+  function holeZurueck() {
+    Z.rueckholung = (Z.rueckholung || 0) + 1;
+    Z.geklemmt = false;
+    Z.seite = 'tafel';
+    B.sende('zeichne', { grund: 'preis-michaeli-zurueck' });
   }
 
   function handHorcher(ereignis) {
@@ -2859,27 +2901,28 @@
       return;
     }
 
-    if (zug === 'weiter') return;
-    if (B.welt.zeit.woche !== 1) return;
-    if (!Z.offen || !Z.geklemmt || sommerLaeuft()) return;
-    /* `Z.gesehen` steht hier absichtlich NICHT als Bedingung. Es wird aus
-       Klassennamen gelesen und kann in der Runde unmittelbar nach dem
-       Aufschlagen schon `true` sein, bevor DIE STADT im 240-ms-Takt
-       ueberhaupt geurteilt hat — als Riegel waere es ein Rennen. Der Riegel
-       ist `Z.offen` (der Spieler hat die Tafel selbst weggelegt) und die
-       Zahl der Versuche. */
-    if ((Z.rueckholung || 0) >= VERSUCHE) return;
-    Z.rueckholung = (Z.rueckholung || 0) + 1;
-    Z.geklemmt = false;
-    Z.seite = 'tafel';
-    B.sende('zeichne', { grund: 'preis-michaeli-zurueck' });
+    if (zug === 'weiter') {
+      if (ziel.disabled) return;
+      if (Z.gehalten === Z.tafelJahr) return;           /* einmal je Braujahr */
+      if (!darfZurueck()) return;
+      Z.gehalten = Z.tafelJahr;
+      ereignis.preventDefault();
+      ereignis.stopPropagation();
+      B.ton.spiele('preis:blatt');
+      holeZurueck();
+      return;
+    }
+
+    if (darfZurueck()) holeZurueck();
   }
 
   var horchtSchon = false;
   function horcheAufDieHand() {
     if (horchtSchon || typeof document === 'undefined') return;
+    var buehne = document.getElementById('buehne');
+    if (!buehne) return;
     horchtSchon = true;
-    document.addEventListener('click', function (e) {
+    buehne.addEventListener('click', function (e) {
       B.wage('preis.hand', function () { handHorcher(e); });
     }, true);
   }

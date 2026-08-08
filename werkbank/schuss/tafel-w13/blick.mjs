@@ -93,27 +93,40 @@ async function klick(zug) {
 
 const reihe = [];
 const jahreMitTafel = new Set();
+const michaeliTage = new Set();      /* Braujahre, deren Woche 1 wir erlebt haben */
 const jahreGesehen = new Set();
-let klicks = 0, reiterklicks = 0;
+let klicks = 0, reiterklicks = 0, nr = 0;
 const startJahr = await seite.evaluate(() => window.BRAUHAUS.welt.zeit.jahr);
 
-for (let w = 0; w < JAHRE * 30 + 8; w++) {
+/* Nach JEDEM Klick nachsehen — sonst misst die Probe nur jede vierte Lage
+   und uebersieht eine Tafel, die zwischen zwei Klicks aufschlaegt. */
+async function nachsehen(grund) {
   const s = await lese();
   jahreGesehen.add(s.jahr);
+  if (s.woche === 1) michaeliTage.add(s.jahr);
   const luegtZu = !s.tafelDa && /schließen|schliessen/i.test(s.kText || '');
   const luegtAuf = s.tafelDa && !/schließen|schliessen/i.test(s.kText || '');
-  reihe.push({ n: w + 1, ...s, luegtZu, luegtAuf });
+  reihe.push({ n: ++nr, grund, ...s, luegtZu, luegtAuf });
   if (s.tafelDa) jahreMitTafel.add(s.jahr);
+  return s;
+}
 
+for (let w = 0; w < JAHRE * 30 + 40; w++) {
+  let s = await nachsehen('woche');
   if (s.tafelDa && s.zuGreifbar) {           /* nur der Tafelknopf, kein Reiter */
     if (await klick('preis:tafel-zu')) klicks++;
-    continue;                                 /* danach den Zustand neu lesen  */
+    continue;
   }
-  if (await klick('fuhre:wie-vorige')) klicks++; else if (await klick('fuhre:fuellen')) klicks++;
-  if (await klick('fuhre:abschicken')) klicks++;
-  if (await klick('weiter')) klicks++;
+  if (await klick('fuhre:wie-vorige')) { klicks++; s = await nachsehen('nach-wie-vorige'); }
+  else if (await klick('fuhre:fuellen')) { klicks++; s = await nachsehen('nach-fuellen'); }
+  if (s.tafelDa && s.zuGreifbar) { if (await klick('preis:tafel-zu')) klicks++; continue; }
+  if (await klick('fuhre:abschicken')) { klicks++; s = await nachsehen('nach-abschicken'); }
+  if (s.tafelDa && s.zuGreifbar) { if (await klick('preis:tafel-zu')) klicks++; continue; }
+  if (await klick('weiter')) { klicks++; s = await nachsehen('nach-weiter'); }
+  if (s.tafelDa && s.zuGreifbar) { if (await klick('preis:tafel-zu')) klicks++; continue; }
   const j = await seite.evaluate(() => window.BRAUHAUS.welt.zeit.jahr);
   if (j - startJahr >= JAHRE) break;
+  if (await seite.evaluate(() => !!window.BRAUHAUS.welt.zeit.ende)) break;
 }
 
 await seite.screenshot({ path: `${WURZ}/schuesse/${MARKE}-e${ep}.png` });
@@ -122,6 +135,8 @@ const abgelesen = reihe.length;
 const erg = {
   epoche: ep, marke: MARKE, startJahr, braujahre: [...jahreGesehen].length,
   abgeleseneZustaende: abgelesen, klicks, reiterklicks,
+  michaeliTageErlebt: [...michaeliTage].sort(),
+  michaeliTageErlebtN: michaeliTage.size,
   jahreMitLiegenderTafel: [...jahreMitTafel].sort(),
   jahreMitLiegenderTafelN: jahreMitTafel.size,
   zustaendeMitLiegenderTafel: reihe.filter(r => r.tafelDa).length,

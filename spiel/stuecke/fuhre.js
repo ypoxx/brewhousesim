@@ -1060,6 +1060,9 @@
       verladen: Z.verladenVorjahr,
       mass: uebergabeMass()
     };
+    /* Ein neues Angebot liegt aufgeschlagen da, auch wenn das vorige
+       weggeklappt war (R14). */
+    Z.uebergabeZu = false;
     /* In die Chronik, damit das gute Ende nicht nur auf einem Blatt steht,
        das die Platzordnung eine Woche spaeter in einen Reiter klappen kann.
        Wer die Chronik liest, findet den Tag wieder. */
@@ -1359,6 +1362,351 @@
       while (geladenFuer(k) < soll && !kannLaden(a) && sicherung++ < 200) lade(a);
     }
     B.sende('zeichne', { grund: 'fuhre-wie-vorige' });
+  }
+
+  /* ======================================================================
+     DIE FUHRPLAENE — WELLE 13, R13
+
+     DER BEFUND, gegen den hier gebaut wird (Spielprobe Welle 12, §8):
+     „Die Woche besteht aus zwei Knoepfen — Wie vorige Woche, FUHRE
+     ABSCHICKEN. In den drei unversehrten Protokollen entfielen auf sie
+     1.256 von 1.760 Klicks (71 %)." Und beim Nachmessen am 8. August kam
+     noch etwas Schlimmeres heraus: eine Hand, die KEINEN Reiter anfasst,
+     erreicht diese beiden Knoepfe ueberhaupt nicht — alle vier Bretter der
+     FUHRE liegen beim Laden zugeklappt (Platzordnung der STADT: „was beim
+     Laden schon dalag, liegt als Reiter"). Gemessen mit
+     werkbank/schuss/woche-w13/hand-w13.mjs, Epoche 1, 100 Wochen:
+     100 von 106 Klicks (94 %) auf WEITER, kein einziger auf die Fuhre,
+     `fuhre:abschicken` 100-mal abgeschaltet, weil der Wagen leer blieb.
+
+     ZWEI ANTWORTEN, und sie gehoeren zusammen:
+
+     1. DIE WOCHENKARTE (`.fu-woche`, siehe zeichneWoche) liegt IM BILD und
+        nicht in einem Reiter. Sie bleibt dafuer unter der Schwelle, ab der
+        die Platzordnung ein Brett sieht (stadt.js GRENZE = 3,5 % der
+        Buehne) — sie ist eine Karte im Bild, kein Brett, und sie
+        beansprucht keine Ausnahme (kein .amort, kein data-frei). Sie traegt
+        keinen Kasten, nur Schrift im Lichthof und die Knoepfe selbst; das
+        ist dieselbe Loesung, mit der Welle 10 das Band der Kennzahl
+        losgeworden ist („die ZAHL bleibt, das PAPIER geht").
+
+     2. DIE WOCHE TRAEGT EINE ENTSCHEIDUNG. Ein Fuhrplan ist kein Knopf,
+        sondern eine WAHL: drei bis vier Ladungen nebeneinander, jede mit
+        eigenem Preisschild, jede schliesst die anderen aus — der Platz auf
+        dem Wagen hat kein zweites Mal. Wer faehrt, hat die Woche gefahren;
+        deshalb schickt der Plan die Fuhre gleich mit ab. Der Weg von Hand
+        (Haus fuer Haus laden, dann FUHRE ABSCHICKEN) bleibt unveraendert
+        auf dem Brett DER WAGEN — kein Zugschluessel ist umbenannt oder
+        weggefallen.
+
+     UND: EIN PLAN, DER IMMER DER BESTE IST, IST KEINE WAHL. Deshalb steht
+     unten in `planListe` eine Entdopplung: zwei Plaene, die dieselbe Ladung
+     ergeben, erscheinen als EIN Knopf. Was gleich ist, ist keine Wahl.
+     ====================================================================== */
+
+  /* Laedt still — ohne Ton, ohne `zeichne`. Der Unterschied zu lade() ist
+     genau der: hier wird gerechnet, dort gespielt. */
+  function ladeStill(a) {
+    var schritt = ep().wagen.schritt, gelegt = 0, eintrag = null;
+    for (var i = 0; i < Z.ladung.length; i++) {
+      if (Z.ladung[i].adr === a.schluessel) eintrag = Z.ladung[i];
+    }
+    for (var n = 0; n < schritt; n++) {
+      if (geladen() >= wagenPlaetze()) break;
+      var f = waehleFass(a);
+      if (!f) break;
+      if (!eintrag) { eintrag = { adr: a.schluessel, faesser: [] }; Z.ladung.push(eintrag); }
+      eintrag.faesser.push(f);
+      gelegt++;
+    }
+    return gelegt;
+  }
+
+  /* Der gemeinsame Fuellvorgang aller Plaene. `rang` sagt, wer zuerst
+     drankommt; die Regel „ein ZUSAETZLICHER Halt muss sich tragen" ist
+     woertlich die des Fuhrmanns aus fuelleNachDurst und gilt fuer alle. */
+  function fuelleNachRang(rang, mitLeeren) {
+    var l = haeuser().slice().sort(function (x, y) { return rang(y) - rang(x); });
+    var sicherung = 0;
+    while (geladen() < wagenPlaetze() && sicherung++ < 600) {
+      var gelegt = false;
+      for (var i = 0; i < l.length; i++) {
+        var a = l[i];
+        if (!mitLeeren && durst(a) - geladenFuer(a.schluessel) < 1) continue;
+        if (rang(a) <= -9e8) continue;
+        if (kannLaden(a)) continue;
+        var neuerHalt = geladenFuer(a.schluessel) === 0 && Z.ladung.length > 0;
+        var vorher = geladen(), vorherLohn = fuhrlohn(), vorherErloes = fuhrerloes();
+        if (!ladeStill(a)) continue;
+        if (neuerHalt && fuhrerloes() - vorherErloes < fuhrlohn() - vorherLohn) {
+          entladeStill(a, geladen() - vorher);
+          continue;
+        }
+        gelegt = true;
+        if (geladen() >= wagenPlaetze()) break;
+      }
+      if (!gelegt) break;
+    }
+  }
+
+  /* Wer diese Woche wirklich in Not ist: magere Jahre auf dem Buckel und
+     lange kein Fass gesehen. Das ist die Zahl, an der eine Adresse in drei
+     Jahren verlorengeht (mahnenUndVerlieren). */
+  function inNot(a) {
+    return (Z.mahnung[a.schluessel] || 0) * 10 + Math.min(9, Z.leer[a.schluessel] || 0);
+  }
+
+  /* Eine aufgegebene Adresse, die diese Woche ein Fass auf Probe bekommen
+     koennte — der Weg zurueck, und er kostet kein Geld. */
+  function probeKandidat() {
+    var beste = null;
+    alleHaeuser().forEach(function (a) {
+      if (!Z.verloren[a.schluessel]) return;
+      if (kannProbe(a)) return;
+      var s = probeStand(a);
+      if (!beste || s > probeStand(beste)) beste = a;
+    });
+    return beste;
+  }
+
+  function ladeProbeStill(a) {
+    var eintrag = { adr: a.schluessel, faesser: [], probe: true };
+    var schritt = ep().wagen.schritt;
+    for (var n = 0; n < schritt; n++) {
+      if (geladen() >= wagenPlaetze()) break;
+      var f = waehleProbeFass(a);
+      if (!f) break;
+      if (!eintrag.faesser.length) Z.ladung.push(eintrag);
+      eintrag.faesser.push(f);
+    }
+    return eintrag.faesser.length;
+  }
+
+  /* Die Plaene selbst. Jeder baut NUR `Z.ladung` — nichts sonst. */
+  var PLAN = {
+    vorige: {
+      wort: 'Wie vorige Woche',
+      satz: 'Dieselbe Verteilung wie bei der letzten Fuhre.',
+      da: function () { return !!Z.vorige; },
+      baue: function () {
+        for (var k in Z.vorige) {
+          var a = B.welt.adresse(k);
+          if (!a || Z.verloren[k]) continue;
+          var soll = Z.vorige[k], sicherung = 0;
+          while (geladenFuer(k) < soll && !kannLaden(a) && sicherung++ < 200) ladeStill(a);
+        }
+      }
+    },
+    durst: {
+      wort: 'Den Durstigen zuerst',
+      satz: 'Die Faustregel des Fuhrmanns: wer am längsten wartet, wird zuerst beliefert.',
+      da: function () { return true; },
+      baue: function () {
+        fuelleNachRang(function (a) {
+          return (durst(a) - geladenFuer(a.schluessel)) / (1 + a.km * 0.45);
+        });
+      }
+    },
+    rechnung: {
+      wort: 'Den Zahlern zuerst',
+      satz: 'Der Wagen fährt dorthin, wo das Fass am meisten bringt — der Durst der anderen wächst weiter.',
+      da: function () { return haeuser().length > 1; },
+      baue: function () {
+        fuelleNachRang(function (a) {
+          var f = waehleFass(a);
+          var p = f ? preisJeFass(sorteFass(f), a) : 0;
+          return p - a.km * 0.8;
+        });
+      }
+    },
+    nah: {
+      wort: 'Nur die kurzen Wege',
+      satz: 'Wenig Fuhrlohn, wenig Weg. Was weiter weg wohnt, wartet.',
+      da: function () { return haeuser().length > 1; },
+      baue: function () { fuelleNachRang(function (a) { return -a.km * 10 + Math.min(3, durst(a)); }); }
+    },
+    mager: {
+      wort: 'Den mageren Häusern zuerst',
+      satz: 'Wer drei magere Jahre hat, ist weg. Diese Fuhre hält die Adresse — sie bringt dafür weniger.',
+      da: function () {
+        return haeuser().some(function (a) { return inNot(a) >= 10; });
+      },
+      baue: function () {
+        fuelleNachRang(function (a) { return inNot(a) * 100 + durst(a) - a.km; }, true);
+      }
+    },
+    probe: {
+      wort: 'Ein Fass ohne Rechnung',
+      satz: 'Ein reifes Fass an einen Wirt, der nichts mehr nimmt — kein Preis, kein Ungeld. '
+          + 'Vier davon holen ihn zurück.',
+      da: function () { return !!probeKandidat(); },
+      baue: function () {
+        var a = probeKandidat();
+        if (a) ladeProbeStill(a);
+        fuelleNachRang(function (x) {
+          return (durst(x) - geladenFuer(x.schluessel)) / (1 + x.km * 0.45);
+        });
+      }
+    }
+  };
+
+  /* Rechnet einen Plan durch, OHNE ihn zu fahren. Der Wagen wird dafuer
+     geliehen und danach Fass fuer Fass zurueckgegeben. */
+  function planRechne(k) {
+    var def = PLAN[k];
+    if (!def || !def.da()) return null;
+    var sicher = Z.ladung;
+    Z.ladung = [];
+    var erg = null;
+    try {
+      def.baue();
+      erg = {
+        k: k, wort: def.wort, satz: def.satz,
+        ladung: Z.ladung, fass: geladen(), halte: Z.ladung.length,
+        erloes: fuhrerloes(), lohn: fuhrlohn(), probe: probenAufDemWagen(),
+        haeuser: Z.ladung.map(function (l) { return l.adr + ':' + l.faesser.length + (l.probe ? 'p' : ''); })
+                         .sort().join('|')
+      };
+      erg.netto = erg.erloes - erg.lohn;
+    } finally {
+      Z.ladung = sicher;
+    }
+    return (erg && erg.fass) ? erg : null;
+  }
+
+  /* Welche Plaene stehen diese Woche nebeneinander? Die Reihenfolge ist
+     fest (sonst waere die Partie nicht wiederholbar), die Dringenden zuerst,
+     und was dieselbe Ladung ergibt, erscheint nur einmal. */
+  var PLAN_REIHE = ['probe', 'mager', 'vorige', 'durst', 'rechnung', 'nah'];
+  var PLAN_HOECHSTENS = 4;
+
+  function planListe() {
+    var raus = [], gesehen = {};
+    for (var i = 0; i < PLAN_REIHE.length && raus.length < PLAN_HOECHSTENS; i++) {
+      var p = planRechne(PLAN_REIHE[i]);
+      if (!p) continue;
+      if (gesehen[p.haeuser]) continue;      /* gleiche Ladung ist keine Wahl */
+      gesehen[p.haeuser] = true;
+      raus.push(p);
+    }
+    return raus;
+  }
+
+  function fahrePlan(k) {
+    var p = planRechne(k);
+    if (!p) return false;
+    Z.ladung = p.ladung;
+    Z.letzterPlan = k;
+    Z.sprungBericht = null;
+    schicke();
+    return true;
+  }
+
+  /* ----------------------------------------------------------------------
+     DIE LAGE DER WOCHE — der Satz ueber den Plaenen.
+
+     Er sagt, WARUM diese Woche eine Entscheidung traegt. Traegt sie keine,
+     gibt er null zurueck — und genau dann bietet die Karte den Sprung an.
+     ---------------------------------------------------------------------- */
+  function wochenLage() {
+    if (B.welt.zeit.ende) return null;
+    if (Z.uebergabe) {
+      var r = Z.uebergabe.frist === undefined ? UEBERGABE_WOCHEN : Z.uebergabe.frist;
+      return { art: 'uebergabe', dringend: true,
+        satz: uebergabeDef().wort.toUpperCase() + ' liegt — noch ' + Math.max(1, r)
+            + (Math.max(1, r) === 1 ? ' Woche' : ' Wochen') + '. Das ist das gute Ende.' };
+    }
+    if (Z.antrag) {
+      var ga = ausgangDef();
+      return { art: 'antrag', dringend: true,
+        satz: (ga && ga.antrag ? ga.antrag.name.toUpperCase() : 'DER ANTRAG') + ' liegt — noch '
+            + Z.frist + (Z.frist === 1 ? ' Woche' : ' Wochen') + '.' };
+    }
+    if (Z.frist !== null && Z.frist !== undefined) {
+      return { art: 'frist', dringend: true,
+        satz: 'Kein Haus der Stadt nimmt mehr ab. ' + fristDef().wer + ' gibt noch '
+            + Z.frist + (Z.frist === 1 ? ' Woche' : ' Wochen') + '.' };
+    }
+    var pk = probeKandidat();
+    if (pk) {
+      return { art: 'probe', dringend: true,
+        satz: pk.name + ' führt kein Bier des Hauses mehr — ' + probeStand(pk) + ' von '
+            + probeZiel(pk) + ' Proben überzeugt.' };
+    }
+    var not = null;
+    haeuser().forEach(function (a) { if (!not || inNot(a) > inNot(not)) not = a; });
+    if (not && inNot(not) >= 10) {
+      var m = Z.mahnung[not.schluessel] || 0;
+      return { art: 'mager', dringend: true,
+        satz: not.name + ': ' + m + (m === 1 ? ' mageres Jahr' : ' magere Jahre') + ', seit '
+            + (Z.leer[not.schluessel] || 0) + ' Wochen kein Fass. Bei drei ist die Adresse weg.' };
+    }
+    if (keller().length && fassplaetzeFrei() <= 0) {
+      return { art: 'voll', dringend: true,
+        satz: 'Der Keller ist voll — ' + B.welt.menge(keller().length)
+            + '. Was nicht hinausgeht, verdirbt.' };
+    }
+    return null;
+  }
+
+  /* ----------------------------------------------------------------------
+     DER SPRUNG — ruhige Wochen werden erzaehlt, nicht geklickt.
+
+     WARUM NICHT `B.uhr.springe()`: die Uhr springt in JAHREN
+     (`z.woche = 30; schliesseJahr()`) und sendet dabei kein einziges
+     `woche`-Ereignis. Fuer dieses Stueck heisst das: kein Sud, keine Fuhre,
+     kein Umlauf, kein Unterhalt, keine Frist — dafuer aber die volle
+     Jahresabrechnung samt `mahnenUndVerlieren`. Nachgemessen am 8. August
+     (werkbank/schuss/woche-w13/springeprobe.mjs): EIN gesprungenes Jahr in
+     1350 nimmt dem Haus alle zwölf Adressen auf einmal. Ein Werkzeug, das
+     die Partie beendet, ist kein Werkzeug fuer eine ruhige Woche.
+
+     Hier wird deshalb in WOCHEN gesprungen, und jede gesprungene Woche ist
+     eine wirklich gespielte: derselbe Fuhrplan, `schicke()`, dieselbe
+     `naechsteWoche()`. Der Unterschied ist nur, dass sie nicht geklickt
+     wird. Angehalten wird, sobald etwas zu entscheiden ist.
+     ---------------------------------------------------------------------- */
+  var SPRUNG_HOECHSTENS = 6;
+
+  /* Wie viele Wochen sind ruhig? Nie ueber den Jahreswechsel — Michaeli ist
+     eine Entscheidung und wird nicht uebersprungen. */
+  function sprungWeite() {
+    if (B.welt.zeit.ende) return 0;
+    if (sommerLiegtOben() || schlussLiegtOben() || Z.antrag || Z.uebergabe) return 0;
+    if (wochenLage()) return 0;
+    var bisJahresende = B.uhr.WOCHEN_IM_JAHR - B.welt.zeit.woche;
+    return B.grenze(Math.min(SPRUNG_HOECHSTENS, bisJahresende), 0, SPRUNG_HOECHSTENS);
+  }
+
+  function springeWochen(n) {
+    var fass = 0, geld = 0, gefahren = 0, wochen = 0;
+    var vonJahr = B.welt.zeit.jahr, vonWoche = B.welt.zeit.woche;
+    for (var i = 0; i < n; i++) {
+      if (B.welt.zeit.ende) break;
+      var plan = planRechne(Z.letzterPlan) || planRechne('durst') || planRechne('vorige');
+      var vorKasse = B.welt.haus.kasse;
+      if (plan) {
+        Z.ladung = plan.ladung;
+        fass += plan.fass;
+        gefahren++;
+        schicke();
+        geld += Math.max(0, B.welt.haus.kasse - vorKasse);
+      } else {
+        B.uhr.naechsteWoche();
+      }
+      wochen++;
+      /* Angehalten wird, sobald wieder etwas zu entscheiden ist — oder der
+         Jahreswechsel vor der Tuer steht. */
+      if (B.welt.zeit.woche === 1 || wochenLage() || sommerLiegtOben() || schlussLiegtOben()) break;
+    }
+    if (wochen) {
+      Z.sprungBericht = wochen + (wochen === 1 ? ' Woche' : ' Wochen') + ' ohne Frage: '
+        + (gefahren ? gefahren + (gefahren === 1 ? ' Fuhre, ' : ' Fuhren, ')
+            + B.welt.menge(fass) + ' hinaus, ' + B.welt.geld(Math.round(geld)) + ' eingenommen'
+          : 'keine Fuhre — es lag kein reifes Fass im Keller');
+      B.welt.schreibe('Vom ' + vonJahr + '/' + vonWoche + ' an ' + Z.sprungBericht + '.', 'fuhre');
+    }
+    B.sende('zeichne', { grund: 'fuhre-sprung' });
   }
 
   /* ----------------------------------------------------------------------
@@ -2234,6 +2582,11 @@
     var best = null;
     fach.querySelectorAll('button[data-zug][data-preis]').forEach(function (k) {
       if (k.disabled) return;
+      /* Die Wochenkarte traegt Preisschilder, aber keinen Nenner: der
+         naechste sinnvolle Zug ist nie „heute fahren", sondern die
+         Knappheit. Wer das nicht ausnimmt, ersetzt die beste Zeile des
+         Spiels durch die Fuhre dieser Woche. */
+      if (k.closest && k.closest('.fu-woche')) return;
       var p = Number(k.getAttribute('data-preis'));
       if (!p || p >= 0) return;                 /* nur was Geld kostet */
       var r = k.getBoundingClientRect();
@@ -2339,6 +2692,48 @@
        stand: welt.zugDeckung nimmt nur den beim Wort, der seinen
        Zugschluessel mitschickt (ZUSTAENDIGKEIT 24). */
     B.welt.meldeZug(zugName(b), b.preis, art, b.zug);
+  }
+
+  /* ----------------------------------------------------------------------
+     DER ZIELSATZ — WELLE 13, R11 (Auflage A2)
+
+     Gemessen: die Woerter Ziel, gewinnen, ueberleben kommen auf dem ersten
+     Schirm NULL Mal vor, bei 613 sichtbaren Textzeilen; das gute Ende
+     erfaehrt nur, wer ein zugeklapptes Brett aufschlaegt, das drei Wochen im
+     Jahr existiert. Der Satz liegt in `uebergabeFehlt()` seit Welle 6 fertig
+     im Klartext — er hat nur nie den unteren Rand erreicht.
+
+     Er tritt NEBEN die Zeile „naechster Zug: …" und nicht an ihre Stelle:
+     der Rahmen zeichnet ihn eine Zeile hoeher (kern/kopf.js, zeichneZiel).
+     Gemeldet wird in JEDER Woche, wie meldeZug — vor jedem Durchgang wird
+     vergessen. Ist der Rahmen aelter als dieses Stueck, faellt der Aufruf
+     lautlos aus; die Zeile bleibt dann leer statt zu luegen.
+     ---------------------------------------------------------------------- */
+  function zielNaehe() {
+    var m = uebergabeMass();
+    var jahre = B.welt.zeit.jahr - Z.startJahr;
+    var a = B.grenze(jahre / Math.max(1, m.jahre), 0, 1);
+    var b = B.grenze(haeuser().length / Math.max(1, m.haeuser), 0, 1);
+    var c = m.ausstoss ? B.grenze(Z.verladenVorjahr / m.ausstoss, 0, 1) : 1;
+    return (a + b + c) / 3;
+  }
+
+  function meldeZiel() {
+    if (!B.welt.meldeZiel) return;          /* Rahmen ohne R3 — dann keine Zeile */
+    if (B.welt.zeit.ende) return;           /* nach dem Ende luegt jedes Ziel */
+    var u = uebergabeDef();
+    if (Z.uebergabe) {
+      var rest = Math.max(1, Z.uebergabe.frist === undefined ? UEBERGABE_WOCHEN : Z.uebergabe.frist);
+      B.welt.meldeZiel(u.wort + ' liegt auf dem Tisch — noch ' + rest
+        + (rest === 1 ? ' Woche' : ' Wochen') + '. Das ist das gute Ende.', 1);
+      return;
+    }
+    var fehlt = uebergabeFehlt();
+    if (!fehlt) {
+      B.welt.meldeZiel('das Haus weitergeben, solange es steht — zu Michaeli liegt das Angebot.', 0.95);
+      return;
+    }
+    B.welt.meldeZiel('das Haus weitergeben, solange es steht. ' + fehlt, zielNaehe());
   }
 
   /* ======================================================================
@@ -3214,6 +3609,101 @@
     fach.appendChild(b);
   }
 
+  /* ======================================================================
+     DIE WOCHENKARTE — was jede Woche im Bild liegt, ohne einen Reiter.
+
+     GROESSE IST HIER EINE REGEL, KEIN GESCHMACK. stadt.js behandelt jedes
+     Kind eines fremden Fachs, das groesser ist als GRENZE (3,5 % der
+     Buehne), als BRETT und gibt ihm einen Reiter — beim Laden zugeklappt.
+     Was darunter bleibt und keine Ausnahme beansprucht (kein .amort, kein
+     data-frei), ist eine KARTE IM BILD und bleibt liegen. Die Karte misst
+     31,8 x 10,2 Prozent = 3,24 % (stil/fuhre-zusatz.css) und traegt keinen
+     Kasten: Schrift im Lichthof, Knoepfe als Chips. Wer hier die Hoehe
+     aendert, misst zuerst nach, ob sie noch unter 3,5 % liegt —
+     werkbank/schuss/woche-w13/freiflaeche.mjs sagt es in einer Zeile.
+     ====================================================================== */
+  function zeichneWoche(fach) {
+    /* Liegt ein grosses Blatt dieses Stuecks oben, hat die Karte nichts zu
+       sagen: das Blatt traegt dann die Entscheidung. */
+    if (sommerLiegtOben() || schlussLiegtOben()) return;
+
+    var k = B.el('div', 'fu-woche');
+    var lage = wochenLage();
+    var kopf = B.el('div', 'fu-wochenkopf');
+    kopf.appendChild(B.el('b', null, 'DIE WOCHE ' + B.welt.zeit.woche + '/' + B.uhr.WOCHEN_IM_JAHR));
+    kopf.appendChild(B.el('span', 'fu-wochensatz' + (lage ? ' dringend' : ''),
+      lage ? lage.satz
+           : (Z.sprungBericht ? Z.sprungBericht + '.'
+              : 'Nichts steht an. Der Wagen fährt, wie er zuletzt gefahren ist.')));
+    k.appendChild(kopf);
+
+    /* DAS GUTE ENDE, wenn es liegt — als erstes und in eigener Farbe.
+       Auflage A3: „Solange das Angebot liegt, wird es nicht als einer von elf
+       gleich aussehenden Reitern gezeigt." */
+    if (Z.uebergabe && !B.welt.zeit.ende) {
+      var u = uebergabeDef();
+      var rest = Math.max(1, Z.uebergabe.frist === undefined ? UEBERGABE_WOCHEN : Z.uebergabe.frist);
+      var band = B.el('div', 'fu-wochenuebergabe');
+      band.appendChild(B.el('b', null, u.wort.toUpperCase()));
+      band.appendChild(B.el('span', null, 'Das Haus steht gut genug, um es weiterzugeben — noch '
+        + rest + (rest === 1 ? ' Woche' : ' Wochen') + '.'));
+      band.appendChild(B.knopf({
+        text: Z.uebergabeZu ? 'Das Angebot aufschlagen' : 'Das Angebot lesen',
+        zug: 'fuhre:uebergabe-auf', klasse: 'fu-chip fu-gut',
+        titel: 'Das einzige Ende, nach dem am nächsten Morgen wieder Feuer unter der Pfanne brennt.',
+        tu: function () {
+          Z.uebergabeZu = false;
+          Z.sommerOffen = false;
+          B.sende('zeichne', { grund: 'fuhre-uebergabe-auf' });
+        }
+      }));
+      k.appendChild(band);
+    }
+
+    var reihe = B.el('div', 'fu-wochenwahl');
+    var plaene = planListe();
+
+    plaene.forEach(function (p) {
+      reihe.appendChild(B.knopf({
+        text: 'Fahren: ' + p.wort.toLowerCase() + ' · ' + B.welt.menge(p.fass) + ' · '
+            + p.halte + (p.halte === 1 ? ' Halt' : ' Halte'),
+        zug: 'fuhre:plan:' + p.k, preis: p.netto,
+        klasse: 'fu-chip' + (lage && lage.art === p.k ? ' fu-rat' : ''),
+        titel: p.satz + ' — ' + B.welt.menge(p.fass) + ' an ' + p.halte
+             + (p.halte === 1 ? ' Adresse' : ' Adressen') + ', Erlös '
+             + B.welt.geld(p.erloes) + ', Fuhrlohn ' + B.welt.geld(p.lohn)
+             + (p.probe ? ', davon ' + B.welt.menge(p.probe) + ' ohne Rechnung' : '')
+             + '. Der Wagen fährt, liefert und kommt zurück — damit ist die Woche vorbei.',
+        tu: function () { fahrePlan(p.k); }
+      }));
+    });
+
+    /* Keine Ladung moeglich UND nichts zu entscheiden: dann wird die Zeit
+       erzaehlt statt geklickt. */
+    var weite = plaene.length ? (lage ? 0 : sprungWeite()) : sprungWeite();
+    if (weite >= 2) {
+      reihe.appendChild(B.knopf({
+        text: (plaene.length ? 'Ruhige Wochen fahren lassen · bis zu ' : 'Warten, bis ein Fass reif ist · bis zu ')
+            + weite + ' Wochen',
+        zug: 'fuhre:sprung', klasse: 'fu-chip fu-sprung',
+        titel: 'Der Fuhrmann fährt weiter wie zuletzt, ohne dass jemand hinsieht. '
+             + 'Angehalten wird, sobald wieder etwas zu entscheiden ist — '
+             + 'spätestens zu Michaeli. Was dabei geschah, steht danach hier und in der Chronik.',
+        tu: function () { springeWochen(weite); }
+      }));
+    }
+
+    if (!plaene.length && weite < 2) {
+      reihe.appendChild(B.el('div', 'fu-wochenleer',
+        freieFaesser().length
+          ? 'Kein Haus nimmt diese Woche ein Fass. Was zu tun ist, steht auf DIE HÄUSER.'
+          : 'Kein reifes Fass im Keller. Der Sud fällt von selbst — WEITER schaltet die Woche.'));
+    }
+
+    k.appendChild(reihe);
+    fach.appendChild(k);
+  }
+
   /* --- ZEICHEN AUF DEM BILD ------------------------------------------- */
   function zeichneMarken(fach) {
     alleHaeuser().forEach(function (a) {
@@ -3365,11 +3855,18 @@
 
   function zeichneUebergabe(fach) {
     if (!Z.uebergabe || Z.antrag || B.welt.zeit.ende || sommerLiegtOben()) return;
+    if (Z.uebergabeZu) return;              /* weggelegt, nicht abgelehnt — R14 */
     var u = uebergabeDef();
 
+    var rest0 = Math.max(1, Z.uebergabe.frist === undefined ? UEBERGABE_WOCHEN : Z.uebergabe.frist);
     var bl = B.el('div', {
+      /* WELLE 13, R12 — DER REITER TRAEGT DIE FRIST.
+         Klappt die Platzordnung das Blatt doch einmal weg, steht wenigstens
+         auf dem Reiter, was auf dem Spiel steht und wie lange noch. stadt.js
+         nimmt `data-reiter` woertlich und schneidet es nicht. */
       klasse: 'blatt fu-ausgangblatt fu-uebergabe',
-      daten: { frei: '1', reiter: u.wort }
+      daten: { frei: '1', reiter: u.wort.toUpperCase() + ' · noch ' + rest0
+                 + (rest0 === 1 ? ' Woche' : ' Wochen') }
     });
     var rest = Z.uebergabe.frist === undefined ? UEBERGABE_WOCHEN : Z.uebergabe.frist;
     bl.appendChild(B.el('h2', null, u.wort + ' · ' + Z.uebergabe.jahr));
@@ -3501,6 +3998,47 @@
     if (!tafelImBild()) return;          /* dann haelt hier nichts mehr auf */
     B.ton.spiele('tafel:kreide');
     raeumeSommerAb();
+  }
+
+  /* ======================================================================
+     WELLE 13, R14 — WER EIN GROSSES BLATT AUFLEGT, NIMMT ES BEIM KLICK AUF
+     EINEN FREMDEN REITER SELBST WIEDER WEG.  (Entscheidung ③ der Aufsicht,
+     Auflage A6.)
+
+     Gemessen wurde, was das heute kostet: acht Reiterklicks unter einem
+     liegenden Blatt, achtmal identisch 30 greifbare Zuege — erst der neunte
+     brachte 53. „Ein Knopf, der sich anfassen laesst und nichts tut, ist die
+     teuerste Sorte Luege in einem Spiel, das nach Klicks bewertet wird."
+
+     Gewaehlt hat die Aufsicht das SCHLIESSEN und nicht das Abschalten der
+     Reiter, weil die Reiterleiste DER STADT gehoert und diese Welle DIE
+     STADT nicht oeffnet. Also fasst dieses Stueck kein fremdes DOM an: es
+     horcht in der Fangphase auf den Klick und nimmt SEIN EIGENES Blatt weg.
+
+     ZWEI FEINHEITEN, die hier Absicht sind:
+     · Das UEBERGABEBLATT wird weggelegt, das ANGEBOT nicht. Wer einen Reiter
+       anfasst, hat nicht abgelehnt — `Z.uebergabeZu` versteckt nur das
+       Blatt, und die Wochenkarte traegt es weiter samt Frist und Knopf, der
+       es zurueckholt.
+     · DAS SCHLUSSBLATT bleibt liegen. Es ist nach dem Urteil des Kritikers
+       das beste Blatt des Spiels, und hinter ihm ist die Partie zu Ende;
+       ein Reiter darf es nicht wegwischen. Es hat seinen eigenen Weg (die
+       Escape-Taste, siehe tastenSperre).
+     ====================================================================== */
+  function reiterHorcher(ereignis) {
+    var t = ereignis.target && ereignis.target.closest
+      ? ereignis.target.closest('[data-zug]') : null;
+    if (!t) return;
+    var zug = t.getAttribute('data-zug') || '';
+    if (zug.indexOf('stadt:reiter:') !== 0) return;
+    var etwas = false;
+    if (Z.sommerOffen) { Z.sommerOffen = false; Z.berichtOffen = false; etwas = true; }
+    if (Z.uebergabe && !Z.uebergabeZu) { Z.uebergabeZu = true; etwas = true; }
+    if (!etwas) return;
+    /* Wer den Zustand eines Bretts aendert, sendet `zeichne` — die erste der
+       beiden Regeln aus dem Kasten „KEIN WUERFEL, ABER TROTZDEM ZUFALL".
+       Kein setTimeout: was zu dieser Runde gehoert, gehoert IN die Runde. */
+    B.sende('zeichne', { grund: 'fuhre-reiter-blatt-zu' });
   }
 
   /* Die Tafel verschwindet, der Klick laeuft weiter. Neu gezeichnet wird
@@ -4438,6 +4976,9 @@
       /* Fangphase: laeuft vor dem Klickhorcher am WEITER-Knopf selbst.
          Siehe weiterHorcher — ZUSTAENDIGKEIT 23. */
       document.addEventListener('click', weiterHorcher, true);
+      /* Fangphase, damit dieses Stueck sein Blatt weggenommen hat, bevor die
+         Platzordnung der STADT ihren eigenen Klick verarbeitet. R14. */
+      document.addEventListener('click', reiterHorcher, true);
       /* DIE VERSIEGELUNG, Schloss 1 und 2. Der Horcher steht VOR
          weiterHorcher in der Wirkung: er laeuft spaeter, greift aber nur
          nach dem Ende, und 'weiter' ist dann ohnehin freigegeben. */
@@ -4653,6 +5194,7 @@
       zeichneTafel(fach);
       zeichneKeller(fach);
       zeichneWagen(fach);
+      zeichneWoche(fach);
 
       markiereHof();
 
@@ -4664,6 +5206,7 @@
       legeSommer(blatt);
 
       meldeZug();
+      meldeZiel();
     }
   });
 
