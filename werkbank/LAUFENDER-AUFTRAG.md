@@ -46,6 +46,51 @@ nächsten Reset weg — am 2. August hat genau das vier Stunden gekostet: die
 Fortschrittsseite stand auf einem widerlegten Befund, und der Veröffentlicher lief nicht,
 während vier Builder arbeiteten, die selbst kein `git` dürfen.
 
+## WELLE 13 LÄUFT — DIE ERSTE VOLLVERSION
+
+*Angesetzt am 8. August 2026, 07:5x UTC. Brief:
+[`../gauntlet/WELLE-13.md`](../gauntlet/WELLE-13.md). Vier Builder laufen
+gleichzeitig, jeder auf eigenem Hafen.*
+
+**Warum diese Welle so heißt.** Der Auftraggeber hat gefragt, ob aus dem Stand
+jetzt eine erste Vollversion wird, die man spielen kann. Sie baut kein neues
+Spiel — sie macht das vorhandene bedienbar. Die dreizehn Auflagen der
+Spielprobe sind die Liste; zehn davon sind hier verteilt, drei ausdrücklich
+zurückgestellt.
+
+| Stück | Hafen | Auflagen | Berichtsdatei |
+|---|---|---|---|
+| **DER RAHMEN** — Spielstand, Zielsatz, Startschirm | 8921 | A1 A2(Platz) A12(Entscheidung) | `urteile/welle13-der-rahmen-bau.md` |
+| **DIE JAHRESTAFEL** — der lügende Knopf, die Tafel, die nie aufliegt | 8922 | A4 A5 A6 A10 A13 | `urteile/welle13-die-jahrestafel-bau.md` |
+| **DIE WOCHE** — 71 % der Klicks sind zwei Knöpfe | 8923 | A2(Satz) A3 A6 A7 | `urteile/welle13-die-woche-bau.md` |
+| **DER GEGENZUG** — 457 zu 5 | 8924 | A8 A9 | `urteile/welle13-der-gegenzug-bau.md` |
+
+**Drei Entscheidungen der Aufsicht stehen im Brief**, damit kein Builder rät:
+
+1. **A12, der Epochenwechsel, wird NICHT eingelöst.** Sechs Stunden für Epoche I,
+   vierundzwanzig bis 2025. Für die erste Vollversion gilt: jede Epoche ist ein
+   eigenes Szenario, und der Startschirm sagt das. Eigene Welle, sobald der
+   Spielstand steht.
+2. **Der Spielstand darf die Wiederholbarkeit nicht anfassen.** Jede Zahl seit
+   Welle 7 steht auf „dieselbe Saat, dieselbe Partie". Darum ist `?neu=1` Teil
+   der Abnahme, nicht Beiwerk. *(Playwright öffnet je Lauf einen frischen
+   Kontext mit leerem `localStorage` — die Messhand ist dadurch von sich aus
+   geschützt. Glücklicher Umstand, kein Entwurf.)*
+3. **Wer ein großes Blatt auflegt, nimmt es beim Klick auf einen fremden Reiter
+   selbst wieder weg.** A6 ließ zwei Wege offen; gewählt ist das Schließen, weil
+   die Reiterleiste DER STADT gehört und diese Welle DIE STADT nicht öffnet.
+
+**Zurückgestellt:** A11 (37 von 43–46 Verben in allen vier Epochen gleich —
+Arbeit für DEN SUD und DIE STADT, macht das Spiel reicher, nicht spielbar) und
+A12. **Zu bleiben: DIE STADT, DAS ERBE, DER NAME, DER SUD, DER KLANG.** Vier
+gleichzeitige Schreiber sind das Maß, das getragen hat.
+
+> **Die Zahl, die diese Welle am ehesten zerbricht:** 1600 steht bei ρ **+0,538**
+> bei einer Grenze von 0,700. DER GEGENZUG macht Züge billiger — das ist genau
+> die Richtung, die ρ bewegt. Er hat den Auftrag, alle vier Epochen nachzumessen.
+
+---
+
 ## DIE SPIELPROBE — der Kritiker, der spielt statt misst, und sein Satz
 
 *7. August, blind am Stand `3d9f5c2`. `werkbank/urteile/welle12-spielprobe.md`,
