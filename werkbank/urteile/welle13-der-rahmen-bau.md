@@ -8,7 +8,19 @@ gemessen; wo etwas nicht gemessen ist, steht es ausdrücklich dabei.*
 `spiel/index.html` bekommt `<script src="kern/stand.js"></script>` (Zeile 85).
 **Nicht angefasst:** `spiel/stuecke/**`, `spiel/stil/**` — kein Zeichen.
 
-Hafen dieses Laufs: **8921**. Meßgeräte: `werkbank/schuss/rahmen-w13/`.
+Hafen dieses Laufs: **8921**. Meßgeräte: `werkbank/schuss/rahmen-w13/`,
+Sammellauf `sh werkbank/schuss/rahmen-w13/alles.sh`.
+
+> **Eine Vorbemerkung, ohne die man meine Zahlen falsch liest.** Drei andere
+> Builder — DIE JAHRESTAFEL, DIE WOCHE, DER GEGENZUG — schreiben zur selben
+> Stunde in `spiel/stuecke/**`, und ein Veröffentlicher sichert alle 180 s.
+> **Das Spiel bewegt sich unter meinen Messungen.** Zwischen meinem ersten
+> und meinem letzten 1350-Lauf ist die Kasse nach zwölf Wochen von 60 Pf auf
+> 1 Pf gefallen, ohne daß ich eine Zeile daran geändert hätte. Was ich messe,
+> ist deshalb immer ein **Vergleich innerhalb desselben Laufs** — derselbe
+> Stand vor und nach dem Neuladen, dieselbe Adresse dreimal hintereinander.
+> Absolutwerte aus zwei verschiedenen Stunden gehören nicht nebeneinander,
+> und wo ich zwei nebeneinanderstelle, steht die Stunde dabei.
 
 ---
 
@@ -193,26 +205,30 @@ Wochen. Prüfsumme = SHA-256 über die Wochenreihe (Jahr, Woche, Kasse,
 Rohstoff, Ansehen, Fässer, Chronik, Buch, Würfelzählerstand, Bindungslage
 aller zwölf Adressen), erste 16 Stellen.
 
-**Epoche 1, `?epoche=1&saat=1350&neu=1`, dreimal hintereinander:**
+**Mit `&neu=1`, dreimal hintereinander, in allen vier Epochen:**
 
-| Lauf | Prüfsumme | Schluß | `localStorage` | `sichere()` gerufen |
+| Epoche | Prüfsummen der drei Läufe | Schluß (alle drei) | `localStorage` | `sichere()` gerufen |
 |---|---|---|---|---|
-| 1 | `d71923b8a80abf5c` | 1351/1 · Kasse 48 | **leer** | 0× |
-| 2 | `d71923b8a80abf5c` | 1351/1 · Kasse 48 | **leer** | 0× |
-| 3 | `d71923b8a80abf5c` | 1351/1 · Kasse 48 | **leer** | 0× |
+| **1350** | `d71923b8a80abf5c` ×3 | 1351/1 · Kasse 48 | **leer** | 0× |
+| **1600** | `e5cf4213fbb98ebd` ×3 | 1601/1 · Kasse 291 | **leer** | 0× |
+| **1884** | `11b8ad938e51f69f` ×3 | 1884/30 · Kasse 2.562 | **leer** | 0× |
+| **1970** | `1f1d3ba7345a49b4` ×3 | 1970/30 · Kasse 340 | **leer** | 0× |
 
-**Eine Prüfsumme. Speicher leer. Null Schreibvorgänge.** ✔
+**Je eine Prüfsumme. Speicher leer. Null Schreibvorgänge.** ✔
 
 **Der Gegenbeweis — dieselbe Adresse ohne den Schalter, im selben Kontext:**
 
-| Lauf | Prüfsumme | Anfang | Schluß | Stand im Speicher |
-|---|---|---|---|---|
-| 1 | `d71923b8a80abf5c` | 1350/1 · 112 | 1351/1 · 48 | 22.083 Zeichen |
-| 2 | **`2d7688463ca134c4`** | **1351/1 · 48** | 1352/1 · 48 | 36.079 Zeichen |
-| 3 | **`612bd20beea9d238`** | **1352/1 · 48** | 1353/1 · 48 | 49.790 Zeichen |
+| Epoche | Prüfsummen der drei Läufe | Anfang der drei Läufe |
+|---|---|---|
+| **1350** | `d71923b8a80abf5c` · **`2d7688463ca134c4`** · **`612bd20beea9d238`** | 1350/1 · **1351/1** · **1352/1** |
+| **1600** | `e5cf4213fbb98ebd` · **`02cc10f84655a0eb`** · **`7e4a6ad6c9b31a80`** | 1600/1 · **1601/1** · **1602/1** |
+| **1884** | `11b8ad938e51f69f` · **`03e914ffdf43b237`** · **`6e7f00c002174fe4`** | 1884/1 · **1884/30** · **1885/30** |
+| **1970** | `1f1d3ba7345a49b4` · **`f61c288bde4b23b9`** · **`61d1d589696a54e5`** | 1970/1 · **1970/30** · **1971/30** |
 
 Das ist genau die Gefahr aus Entscheidung ② der Aufsicht, und sie ist echt:
 ohne `?neu=1` ist ab Lauf zwei jede Zahl einer Meßreihe eine andere Partie.
+Der Stand im Speicher wuchs dabei von 22.083 auf 49.790 Zeichen (1350) bzw.
+von 60.501 auf 70.524 (1970).
 
 **Zwei Befunde, die dabei mitkommen und beide zählen:**
 
@@ -224,10 +240,22 @@ ohne `?neu=1` ist ab Lauf zwei jede Zahl einer Meßreihe eine andere Partie.
    Stand weg (`localStorage` danach **leer**) und ergibt wieder
    `d71923b8a80abf5c` — dieselbe Partie wie ganz am Anfang.
 
-`BRAUHAUS.lage.length` in allen sieben Läufen: **0**. Seitenfehler: **0**.
-Rohdaten: `…/protokoll/neuprobe-e1.json`.
+`BRAUHAUS.lage.length` in allen sieben Läufen jeder Epoche: **0**.
+Seitenfehler: **0**. Rohdaten: `…/protokoll/neuprobe-e{1..4}.json`.
 
-*(E2–E4 laufen zur Stunde; Ergebnis unten unter „Nachtrag".)*
+### Eine Empfehlung an die Aufsicht, die nicht mir gehört
+
+Die vorhandenen Meßgeräte benutzen `?neu=1` **nicht** —
+`werkbank/schuss/rueckkopplung-r3/linie.mjs:66`,
+`werkbank/schuss/spiel-w12/hand3.mjs`, `…/gegnerblick.mjs`,
+`werkbank/schuss/aufsicht/messfenster.sh` und `werkbank/schuss.mjs` laden
+alle ohne den Schalter. Heute schützt sie allein, daß Playwright je Lauf
+einen frischen Kontext öffnet. **Das ist ein glücklicher Umstand, kein
+Entwurf** (Entscheidung ② der Aufsicht). Am fremden Meßgerät wird nicht
+gedreht (ZUSTAENDIGKEIT 16), also steht es hier statt in deren Dateien: wer
+zwei Läufe im selben Kontext fährt oder einen Browser mit Profil benutzt,
+mißt ab Lauf zwei eine andere Partie. Der Schalter kostet acht Zeichen in
+der Adresse.
 
 ---
 

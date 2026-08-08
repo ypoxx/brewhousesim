@@ -246,3 +246,71 @@
 {"t":113.2,"was":"klick","nr":87,"zug":"fuhre:plan:mager","grund":"Fuhrplan","knopf":{"text":"Fahren: die mageren Häuser · 3 Fass +5 Pf","preis":5,"w":243,"h":24},"vor":{"jahr":1352,"woche":18,"kasse":28},"nach":{"jahr":1352,"woche":19,"kasse":26},"dkasse":-2,"lage":0}
 {"t":113.2,"was":"abgeschaltet","zug":"fuhre:abschicken","text":"FUHRE ABSCHICKEN"}
 {"t":113.3,"was":"woche","n":79,"jahr":1352,"woche":19,"kasse":26,"greifbar":44,"mitPreis":10,"deckung":1.1818181818181819,"nenner":"Zuvorkommen Pfarrschenke St. Michael","ziel":null,"uebergabeImText":1}
+{"t":114.3,"was":"klick","nr":88,"zug":"fuhre:plan:mager","grund":"Fuhrplan","knopf":{"text":"Fahren: die mageren Häuser · 3 Fass +5 Pf","preis":5,"w":243,"h":24},"vor":{"jahr":1352,"woche":19,"kasse":26},"nach":{"jahr":1352,"woche":20,"kasse":23},"dkasse":-3,"lage":0}
+{"t":114.3,"was":"abgeschaltet","zug":"fuhre:abschicken","text":"FUHRE ABSCHICKEN"}
+{"t":114.4,"was":"woche","n":80,"jahr":1352,"woche":20,"kasse":23,"greifbar":44,"mitPreis":10,"deckung":0.6388888888888888,"nenner":"Ablösung Pfarrschenke St. Michael","ziel":null,"uebergabeImText":1}
+{"t":115.5,"was":"klick","nr":89,"zug":"fuhre:plan:mager","grund":"Fuhrplan","knopf":{"text":"Fahren: die mageren Häuser · 3 Fass +5 Pf","preis":5,"w":243,"h":24},"vor":{"jahr":1352,"woche":20,"kasse":23},"nach":{"jahr":1352,"woche":21,"kasse":21},"dkasse":-2,"lage":0}
+{"t":115.5,"was":"abgeschaltet","zug":"fuhre:abschicken","text":"FUHRE ABSCHICKEN"}
+{"t":115.6,"was":"woche","n":81,"jahr":1352,"woche":21,"kasse":21,"greifbar":43,"mitPreis":9,"deckung":0.5833333333333334,"nenner":"Ablösung Pfarrschenke St. Michael","ziel":null,"uebergabeImText":1}
+{"t":116.5,"was":"klick","nr":90,"zug":"fuhre:plan:mager","grund":"Fuhrplan","knopf":{"text":"Fahren: die mageren Häuser · 3 Fass +5 Pf","preis":5,"w":243,"h":24},"vor":{"jahr":1352,"woche":21,"kasse":21},"nach":{"jahr":1352,"woche":22,"kasse":18},"dkasse":-3,"lage":0}
+{"t":116.6,"was":"abgeschaltet","zug":"fuhre:abschicken","text":"FUHRE ABSCHICKEN"}
+{"t":116.6,"was":"woche","n":82,"jahr":1352,"woche":22,"kasse":18,"greifbar":43,"mitPreis":9,"deckung":0.5,"nenner":"Ablösung Pfarrschenke St. Michael","ziel":null,"uebergabeImText":1}
+{"t":117.6,"was":"klick","nr":91,"zug":"fuhre:plan:mager","grund":"Fuhrplan","knopf":{"text":"Fahren: die mageren Häuser · 3 Fass +5 Pf","preis":5,"w":243,"h":24},"vor":{"jahr":1352,"woche":22,"kasse":18},"nach":{"jahr":1352,"woche":23,"kasse":16},"dkasse":-2,"lage":0}
+{"t":117.6,"was":"abgeschaltet","zug":"fuhre:abschicken","text":"FUHRE ABSCHICKEN"}
+{"t":117.7,"was":"woche","n":83,"jahr":1352,"woche":23,"kasse":16,"greifbar":44,"mitPreis":9,"deckung":0.6153846153846154,"nenner":"Zuvorkommen Schenke am Tor","ziel":null,"uebergabeImText":1}
+{"t":118.7,"was":"klick","nr":92,"zug":"fuhre:plan:mager","grund":"Fuhrplan","knopf":{"text":"Fahren: die mageren Häuser · 3 Fass +5 Pf","preis":5,"w":243,"h":24},"vor":{"jahr":1352,"woche":23,"kasse":16},"nach":{"jahr":1352,"woche":24,"kasse":13},"dkasse":-3,"lage":0}
+{"t":118.7,"was":"abgeschaltet","zug":"fuhre:abschicken","text":"FUHRE ABSCHICKEN"}
+{"t":118.8,"was":"woche","n":84,"jahr":1352,"woche":24,"kasse":13,"greifbar":43,"mitPreis":8,"deckung":0.5,"nenner":"Zuvorkommen Schenke am Tor","ziel":null,"uebergabeImText":1}
+{"t":119.7,"was":"klick","nr":93,"zug":"fuhre:plan:mager","grund":"Fuhrplan","knopf":{"text":"Fahren: die mageren Häuser · 3 Fass +5 Pf","preis":5,"w":243,"h":24},"vor":{"jahr":1352,"woche":24,"kasse":13},"nach":{"jahr":1352,"woche":25,"kasse":11},"dkasse":-2,"lage":0}
+{"t":119.8,"was":"abgeschaltet","zug":"fuhre:abschicken","text":"FUHRE ABSCHICKEN"}
+{"t":119.9,"was":"woche","n":85,"jahr":1352,"woche":25,"kasse":11,"greifbar":42,"mitPreis":7,"deckung":0.4230769230769231,"nenner":"Zuvorkommen Schenke am Tor","ziel":null,"uebergabeImText":1}
+{"t":120.9,"was":"klick","nr":94,"zug":"fuhre:plan:mager","grund":"Fuhrplan","knopf":{"text":"Fahren: die mageren Häuser · 3 Fass +5 Pf","preis":5,"w":243,"h":24},"vor":{"jahr":1352,"woche":25,"kasse":11},"nach":{"jahr":1352,"woche":26,"kasse":8},"dkasse":-3,"lage":0}
+{"t":120.9,"was":"abgeschaltet","zug":"fuhre:abschicken","text":"FUHRE ABSCHICKEN"}
+{"t":121,"was":"woche","n":86,"jahr":1352,"woche":26,"kasse":8,"greifbar":44,"mitPreis":9,"deckung":0.2222222222222222,"nenner":"Ablösung Pfarrschenke St. Michael","ziel":null,"uebergabeImText":1}
+{"t":121.8,"was":"klick","nr":95,"zug":"fuhre:plan:mager","grund":"Fuhrplan","knopf":{"text":"Fahren: die mageren Häuser · 3 Fass +5 Pf","preis":5,"w":243,"h":24},"vor":{"jahr":1352,"woche":26,"kasse":8},"nach":{"jahr":1352,"woche":27,"kasse":5},"dkasse":-3,"lage":0}
+{"t":121.9,"was":"abgeschaltet","zug":"fuhre:abschicken","text":"FUHRE ABSCHICKEN"}
+{"t":121.9,"was":"woche","n":87,"jahr":1352,"woche":27,"kasse":5,"greifbar":42,"mitPreis":7,"deckung":0.1388888888888889,"nenner":"Ablösung Pfarrschenke St. Michael","ziel":null,"uebergabeImText":1}
+{"t":123,"was":"klick","nr":96,"zug":"fuhre:plan:mager","grund":"Fuhrplan","knopf":{"text":"Fahren: die mageren Häuser · 3 Fass +5 Pf","preis":5,"w":243,"h":24},"vor":{"jahr":1352,"woche":27,"kasse":5},"nach":{"jahr":1352,"woche":28,"kasse":2},"dkasse":-3,"lage":0}
+{"t":123.1,"was":"abgeschaltet","zug":"fuhre:abschicken","text":"FUHRE ABSCHICKEN"}
+{"t":123.2,"was":"woche","n":88,"jahr":1352,"woche":28,"kasse":2,"greifbar":43,"mitPreis":8,"deckung":0.05555555555555555,"nenner":"Ablösung Pfarrschenke St. Michael","ziel":null,"uebergabeImText":1}
+{"t":124.4,"was":"klick","nr":97,"zug":"fuhre:plan:mager","grund":"Fuhrplan","knopf":{"text":"Fahren: die mageren Häuser · 3 Fass +5 Pf","preis":5,"w":243,"h":24},"vor":{"jahr":1352,"woche":28,"kasse":2},"nach":{"jahr":1352,"woche":29,"kasse":0},"dkasse":-2,"lage":0}
+{"t":124.5,"was":"abgeschaltet","zug":"fuhre:abschicken","text":"FUHRE ABSCHICKEN"}
+{"t":124.6,"was":"woche","n":89,"jahr":1352,"woche":29,"kasse":0,"greifbar":41,"mitPreis":7,"deckung":0,"nenner":"Ablösung Pfarrschenke St. Michael","ziel":null,"uebergabeImText":1}
+{"t":125.4,"was":"klick","nr":98,"zug":"fuhre:plan:mager","grund":"Fuhrplan","knopf":{"text":"Fahren: die mageren Häuser · 3 Fass +5 Pf","preis":5,"w":243,"h":24},"vor":{"jahr":1352,"woche":29,"kasse":0},"nach":{"jahr":1352,"woche":30,"kasse":0},"dkasse":0,"lage":0}
+{"t":125.4,"was":"abgeschaltet","zug":"fuhre:abschicken","text":"FUHRE ABSCHICKEN"}
+{"t":125.5,"was":"woche","n":90,"jahr":1352,"woche":30,"kasse":0,"greifbar":42,"mitPreis":8,"deckung":0,"nenner":"Ablösung Pfarrschenke St. Michael","ziel":null,"uebergabeImText":1}
+{"t":127.7,"was":"klick","nr":99,"zug":"fuhre:plan:mager","grund":"Fuhrplan","knopf":{"text":"Fahren: die mageren Häuser · 3 Fass +5 Pf","preis":5,"w":243,"h":24},"vor":{"jahr":1352,"woche":30,"kasse":0},"nach":{"jahr":1353,"woche":1,"kasse":48},"dkasse":48,"lage":0}
+{"t":128.1,"was":"abgeschaltet","zug":"fuhre:abschicken","text":"FUHRE ABSCHICKEN"}
+{"t":128.4,"was":"woche","n":91,"jahr":1353,"woche":1,"kasse":48,"greifbar":26,"mitPreis":3,"deckung":1.3333333333333333,"nenner":"Ablösung Pfarrschenke St. Michael","ziel":null,"uebergabeImText":1}
+{"t":128.8,"was":"nicht-zu-greifen","zug":"fuhre:sommer-zu"}
+{"t":129.9,"was":"klick","nr":100,"zug":"preis:tafel-zu","grund":"Das Jahr beginnen","knopf":{"text":"Das Jahr beginnen","preis":null,"w":149,"h":56},"vor":{"jahr":1353,"woche":1,"kasse":48},"nach":{"jahr":1353,"woche":1,"kasse":48},"dkasse":0,"lage":0}
+{"t":130,"was":"abgeschaltet","zug":"fuhre:abschicken","text":"FUHRE ABSCHICKEN"}
+{"t":131,"was":"klick","nr":101,"zug":"weiter","grund":"naechste Woche","knopf":{"text":"WEITER","preis":null,"w":147,"h":42},"vor":{"jahr":1353,"woche":1,"kasse":48},"nach":{"jahr":1353,"woche":2,"kasse":47},"dkasse":-1,"lage":0}
+{"t":131.1,"was":"woche","n":92,"jahr":1353,"woche":2,"kasse":47,"greifbar":45,"mitPreis":11,"deckung":1.3055555555555556,"nenner":"Ablösung Pfarrschenke St. Michael","ziel":null,"uebergabeImText":1}
+{"t":132.1,"was":"klick","nr":102,"zug":"fuhre:plan:mager","grund":"Fuhrplan","knopf":{"text":"Fahren: die mageren Häuser · 3 Fass +5 Pf","preis":5,"w":243,"h":24},"vor":{"jahr":1353,"woche":2,"kasse":47},"nach":{"jahr":1353,"woche":3,"kasse":44},"dkasse":-3,"lage":0}
+{"t":132.1,"was":"abgeschaltet","zug":"fuhre:abschicken","text":"FUHRE ABSCHICKEN"}
+{"t":132.1,"was":"woche","n":93,"jahr":1353,"woche":3,"kasse":44,"greifbar":46,"mitPreis":12,"deckung":1.2222222222222223,"nenner":"Ablösung Pfarrschenke St. Michael","ziel":null,"uebergabeImText":1}
+{"t":132.9,"was":"klick","nr":103,"zug":"fuhre:plan:mager","grund":"Fuhrplan","knopf":{"text":"Fahren: die mageren Häuser · 3 Fass +5 Pf","preis":5,"w":243,"h":24},"vor":{"jahr":1353,"woche":3,"kasse":44},"nach":{"jahr":1353,"woche":4,"kasse":42},"dkasse":-2,"lage":0}
+{"t":132.9,"was":"abgeschaltet","zug":"fuhre:abschicken","text":"FUHRE ABSCHICKEN"}
+{"t":132.9,"was":"woche","n":94,"jahr":1353,"woche":4,"kasse":42,"greifbar":45,"mitPreis":11,"deckung":1.1666666666666667,"nenner":"Ablösung Pfarrschenke St. Michael","ziel":null,"uebergabeImText":1}
+{"t":133.8,"was":"klick","nr":104,"zug":"fuhre:plan:mager","grund":"Fuhrplan","knopf":{"text":"Fahren: die mageren Häuser · 3 Fass +5 Pf","preis":5,"w":243,"h":24},"vor":{"jahr":1353,"woche":4,"kasse":42},"nach":{"jahr":1353,"woche":5,"kasse":39},"dkasse":-3,"lage":0}
+{"t":133.8,"was":"abgeschaltet","zug":"fuhre:abschicken","text":"FUHRE ABSCHICKEN"}
+{"t":133.8,"was":"woche","n":95,"jahr":1353,"woche":5,"kasse":39,"greifbar":47,"mitPreis":12,"deckung":2.2941176470588234,"nenner":"Zuvorkommen Ausschank am Markt","ziel":null,"uebergabeImText":1}
+{"t":134.7,"was":"klick","nr":105,"zug":"fuhre:plan:mager","grund":"Fuhrplan","knopf":{"text":"Fahren: die mageren Häuser · 3 Fass +5 Pf","preis":5,"w":243,"h":24},"vor":{"jahr":1353,"woche":5,"kasse":39},"nach":{"jahr":1353,"woche":6,"kasse":37},"dkasse":-2,"lage":0}
+{"t":134.7,"was":"abgeschaltet","zug":"fuhre:abschicken","text":"FUHRE ABSCHICKEN"}
+{"t":134.8,"was":"woche","n":96,"jahr":1353,"woche":6,"kasse":37,"greifbar":47,"mitPreis":12,"deckung":2.176470588235294,"nenner":"Zuvorkommen Ausschank am Markt","ziel":null,"uebergabeImText":1}
+{"t":135.7,"was":"klick","nr":106,"zug":"fuhre:plan:mager","grund":"Fuhrplan","knopf":{"text":"Fahren: die mageren Häuser · 3 Fass +5 Pf","preis":5,"w":243,"h":24},"vor":{"jahr":1353,"woche":6,"kasse":37},"nach":{"jahr":1353,"woche":7,"kasse":34},"dkasse":-3,"lage":0}
+{"t":135.8,"was":"abgeschaltet","zug":"fuhre:abschicken","text":"FUHRE ABSCHICKEN"}
+{"t":135.9,"was":"woche","n":97,"jahr":1353,"woche":7,"kasse":34,"greifbar":45,"mitPreis":10,"deckung":1.2592592592592593,"nenner":"Ablösung Ausschank am Markt","ziel":null,"uebergabeImText":1}
+{"t":137,"was":"klick","nr":107,"zug":"fuhre:plan:mager","grund":"Fuhrplan","knopf":{"text":"Fahren: die mageren Häuser · 3 Fass +5 Pf","preis":5,"w":243,"h":24},"vor":{"jahr":1353,"woche":7,"kasse":34},"nach":{"jahr":1353,"woche":8,"kasse":32},"dkasse":-2,"lage":0}
+{"t":137,"was":"abgeschaltet","zug":"fuhre:abschicken","text":"FUHRE ABSCHICKEN"}
+{"t":137.1,"was":"woche","n":98,"jahr":1353,"woche":8,"kasse":32,"greifbar":46,"mitPreis":11,"deckung":1.1851851851851851,"nenner":"Ablösung Ausschank am Markt","ziel":null,"uebergabeImText":1}
+{"t":138.2,"was":"klick","nr":108,"zug":"fuhre:plan:mager","grund":"Fuhrplan","knopf":{"text":"Fahren: die mageren Häuser · 3 Fass +5 Pf","preis":5,"w":243,"h":24},"vor":{"jahr":1353,"woche":8,"kasse":32},"nach":{"jahr":1353,"woche":9,"kasse":29},"dkasse":-3,"lage":0}
+{"t":138.2,"was":"abgeschaltet","zug":"fuhre:abschicken","text":"FUHRE ABSCHICKEN"}
+{"t":138.3,"was":"woche","n":99,"jahr":1353,"woche":9,"kasse":29,"greifbar":46,"mitPreis":10,"deckung":1.0740740740740742,"nenner":"Ablösung Ausschank am Markt","ziel":null,"uebergabeImText":1}
+{"t":139.2,"was":"klick","nr":109,"zug":"fuhre:plan:mager","grund":"Fuhrplan","knopf":{"text":"Fahren: die mageren Häuser · 3 Fass +5 Pf","preis":5,"w":243,"h":24},"vor":{"jahr":1353,"woche":9,"kasse":29},"nach":{"jahr":1353,"woche":10,"kasse":27},"dkasse":-2,"lage":0}
+{"t":139.2,"was":"abgeschaltet","zug":"fuhre:abschicken","text":"FUHRE ABSCHICKEN"}
+{"t":139.3,"was":"woche","n":100,"jahr":1353,"woche":10,"kasse":27,"greifbar":46,"mitPreis":10,"deckung":1,"nenner":"Ablösung Ausschank am Markt","ziel":null,"uebergabeImText":1}
+{"t":140.4,"was":"klick","nr":110,"zug":"fuhre:plan:mager","grund":"Fuhrplan","knopf":{"text":"Fahren: die mageren Häuser · 3 Fass +5 Pf","preis":5,"w":243,"h":24},"vor":{"jahr":1353,"woche":10,"kasse":27},"nach":{"jahr":1353,"woche":11,"kasse":24},"dkasse":-3,"lage":0}
+{"t":140.4,"was":"abgeschaltet","zug":"fuhre:abschicken","text":"FUHRE ABSCHICKEN"}
+{"t":141.1,"was":"schluss","jahr":1353,"woche":11,"kasse":24,"klicks":110,"danebengegriffen":3,"lage":0,"fehler":[],"abbruch":null,"gespielt":100,"sprungWochen":0}

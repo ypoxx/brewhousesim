@@ -254,11 +254,16 @@ while (gespielt < ZIELWOCHEN) {
     await greif(fragen[0].zug, { grund: 'Wochenfrage beantworten', warte: 260 });
   }
 
-  /* 5 · Der Sprung */
+  /* 5 · Der Sprung — nur, wenn die Woche keine Wahl traegt */
   s = await schirm();
   const sprung = s.zuege.find(z => z.hit && !z.aus && /^fuhre:sprung/.test(z.zug));
+  const planZahl = s.zuege.filter(z => z.hit && !z.aus &&
+    (/^fuhre:plan:/.test(z.zug) || z.zug === 'fuhre:wie-vorige' || z.zug === 'fuhre:fuellen')).length;
+  schreib({ was: 'wahl-der-woche', plaene: planZahl, sprung: !!sprung,
+    liste: s.zuege.filter(z => z.hit && !z.aus && /^fuhre:plan:/.test(z.zug))
+      .map(z => ({ zug: z.zug, preis: z.preis, text: z.text })) });
   let gesprungen = false;
-  if (!fragen.length && sprung) {
+  if (!fragen.length && sprung && planZahl <= 1) {
     const vorSpr = await schirm();
     if (await greif(sprung.zug, { grund: 'ruhige Wochen zusammenfassen', warte: 340 })) {
       const nachSpr = await schirm();

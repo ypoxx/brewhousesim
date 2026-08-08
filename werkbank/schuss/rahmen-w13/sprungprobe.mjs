@@ -53,25 +53,43 @@ const lesen = (s) => s.evaluate(() => {
   };
 });
 
-/* --- A: klicken ------------------------------------------------------- */
+/* --- A: klicken -------------------------------------------------------
+   GEZAEHLT WIRD, WIE OFT DIE WOCHE WIRKLICH WEITERGERUECKT IST, nicht wie
+   oft geklickt wurde. Ein Klick, der ein aufliegendes Blatt trifft statt
+   den Knopf, ruecht die Woche nicht — und dann verglichen man 29 gespielte
+   gegen 30 gesprungene Wochen und nennt den Unterschied einen Fehler.
+   (Genau das ist mir im ersten Anlauf passiert.) */
 let s = await frischeSeite();
 const anfang = await lesen(s);
-for (let i = 0; i < N; i++) {
+let gerueckt = 0;
+for (let i = 0; i < N * 2 && gerueckt < N; i++) {
+  const vor = await lesen(s);
   const l = await s.evaluate(() => {
     const el = document.querySelector('[data-zug="weiter"]'); if (!el || el.disabled) return null;
     const r = el.getBoundingClientRect();
-    return { x: r.left + r.width / 2, y: r.top + r.height / 2 };
+    if (!r.width || !r.height) return null;
+    const cx = r.left + r.width / 2, cy = r.top + r.height / 2;
+    const t = document.elementFromPoint(cx, cy);
+    return { x: cx, y: cy, hit: !!(t && (t === el || el.contains(t))) };
   });
   if (!l) break;
+  if (!l.hit) {                       /* etwas liegt darueber — Escape raeumt den Tisch */
+    await s.keyboard.press('Escape');
+    await s.waitForTimeout(400);
+    continue;
+  }
   await s.mouse.click(l.x, l.y);
-  await s.waitForTimeout(260);
+  await s.waitForTimeout(280);
+  const nach = await lesen(s);
+  if (nach.jahr !== vor.jahr || nach.woche !== vor.woche) gerueckt++;
+  if (nach.ende) break;
 }
 const A = await lesen(s);
 await s.context().close();
 
-/* --- B: springen ------------------------------------------------------ */
+/* --- B: springen — GENAU SO VIELE WOCHEN, wie A wirklich gelaufen ist -- */
 s = await frischeSeite();
-const sprung = await s.evaluate((n) => window.BRAUHAUS.uhr.springeWochen(n), N);
+const sprung = await s.evaluate((n) => window.BRAUHAUS.uhr.springeWochen(n), gerueckt);
 await s.waitForTimeout(900);
 const B1 = await lesen(s);
 const standNachSprung = await s.evaluate(() => window.BRAUHAUS.stand.zeile());

@@ -1577,7 +1577,14 @@
   /* Welche Plaene stehen diese Woche nebeneinander? Die Reihenfolge ist
      fest (sonst waere die Partie nicht wiederholbar), die Dringenden zuerst,
      und was dieselbe Ladung ergibt, erscheint nur einmal. */
-  var PLAN_REIHE = ['probe', 'mager', 'vorige', 'durst', 'rechnung', 'nah'];
+  /* DIE REIHENFOLGE IST EINE AUSSAGE. Zuerst, was diese Woche wirklich
+     ansteht (Probefass, magere Haeuser), dann die Regeln des Fuhrmanns —
+     und ZULETZT „wie zuletzt". Das ist der Unterschied zwischen einem Plan
+     und einer Gewohnheit: die Wiederholung erscheint nur dann als eigener
+     Knopf, wenn sie sich von jeder Regel unterscheidet. Beim ersten Anlauf
+     stand sie vorn, verschluckte durch die Entdopplung „nach Durst" und kam
+     damit auf 59 % aller Klicks — gemessen, siehe Bericht. */
+  var PLAN_REIHE = ['probe', 'mager', 'durst', 'rechnung', 'nah', 'vorige'];
   var PLAN_HOECHSTENS = 4;
 
   function planListe() {
@@ -1668,12 +1675,24 @@
      ---------------------------------------------------------------------- */
   var SPRUNG_HOECHSTENS = 6;
 
-  /* Wie viele Wochen sind ruhig? Nie ueber den Jahreswechsel — Michaeli ist
-     eine Entscheidung und wird nicht uebersprungen. */
-  function sprungWeite() {
+  /* WANN IST EINE WOCHE RUHIG? Wenn sie keine Wahl traegt.
+
+     Das ist keine Stimmung, sondern eine Zaehlung: `planListe()` gibt nach
+     der Entdopplung genau die Ladungen zurueck, die sich voneinander
+     unterscheiden. Steht dort nur EINE, dann gibt es diese Woche nichts zu
+     entscheiden — der Wagen faehrt so oder so dasselbe. Stehen zwei da, ist
+     es eine Wahl, und eine Wahl wird nicht uebersprungen.
+
+     Dazu die drei Dinge, die immer aufhalten: ein liegendes Angebot, eine
+     laufende Frist und ein Wirt, der auf ein Probefass wartet. Und der
+     Jahreswechsel: Michaeli ist eine Entscheidung. */
+  function sprungWeite(plaene) {
     if (B.welt.zeit.ende) return 0;
     if (sommerLiegtOben() || schlussLiegtOben() || Z.antrag || Z.uebergabe) return 0;
-    if (wochenLage()) return 0;
+    if (Z.frist !== null && Z.frist !== undefined) return 0;
+    if (probeKandidat()) return 0;
+    var l = plaene || planListe();
+    if (l.length >= 2) return 0;
     var bisJahresende = B.uhr.WOCHEN_IM_JAHR - B.welt.zeit.woche;
     return B.grenze(Math.min(SPRUNG_HOECHSTENS, bisJahresende), 0, SPRUNG_HOECHSTENS);
   }
@@ -1695,9 +1714,10 @@
         B.uhr.naechsteWoche();
       }
       wochen++;
-      /* Angehalten wird, sobald wieder etwas zu entscheiden ist — oder der
-         Jahreswechsel vor der Tuer steht. */
-      if (B.welt.zeit.woche === 1 || wochenLage() || sommerLiegtOben() || schlussLiegtOben()) break;
+      /* Angehalten wird, sobald wieder etwas zu entscheiden ist — dieselbe
+         Zaehlung wie in sprungWeite, damit Anfahren und Anhalten derselben
+         Regel folgen. */
+      if (B.welt.zeit.woche === 1 || !sprungWeite()) break;
     }
     if (wochen) {
       Z.sprungBericht = wochen + (wochen === 1 ? ' Woche' : ' Wochen') + ' ohne Frage: '
@@ -3650,7 +3670,8 @@
        Ende zuerst, dann der Sprung, dann so viele Fuhrplaene, wie noch
        hineingehen. */
     var frei = 4;
-    var weite = sprungWeite();
+    var alle = planListe();
+    var weite = sprungWeite(alle);
 
     /* DAS GUTE ENDE, wenn es liegt — zuerst und in eigener Farbe.
        Auflage A3: „Solange das Angebot liegt, wird es nicht als einer von elf
@@ -3684,7 +3705,7 @@
       frei--;
     }
 
-    var plaene = planListe().slice(0, Math.max(0, frei));
+    var plaene = alle.slice(0, Math.max(0, frei));
     plaene.forEach(function (p) {
       reihe.appendChild(B.knopf({
         text: 'Fahren: ' + p.wort + ' · ' + B.welt.menge(p.fass),
