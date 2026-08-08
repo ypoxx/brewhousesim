@@ -4,7 +4,14 @@
 halben Bericht — das ist Absicht: Agenten sterben mitten im Lauf.*
 
 Angefasst habe ich **nur**: `spiel/stuecke/gegner.js` · `spiel/stil/gegner-zusatz.css`.
-Gebaut habe ich `werkbank/schuss/gegenzug-w13/**`.
+Gebaut habe ich `werkbank/schuss/gegenzug-w13/**`:
+`gegenzug.mjs` (R15 mit der einfachen Hand) · `gegenzug-linie.mjs` (R15 mit der
+kompetenten Hand aus `rueckkopplung-r3/linie.mjs`) · `diagnose-reiter.mjs`
+(R16, die Ursache) · `mass.mjs` und `mass-laden.mjs` (was die Änderungen an der
+Geometrie anrichten) · `haushalt.mjs` (Lage, Tafeln, Rand, Zonen) ·
+`verdeckt.mjs` (wer welchen Knopf deckt) · `zweiwaehrungen.mjs` (die beiden
+Preise, beide Kellerlagen, vier Epochen) · `klageblick.mjs` (warum der
+Klageknopf fehlt).
 **Nichts unter `spiel/kern/`, nichts von fremden Stücken, kein fremdes DOM.**
 
 ---
@@ -93,6 +100,28 @@ aus derselben Lade. **Und der Gegner wird dadurch nicht abräumbar:** das
 Hinhalten nimmt ihm keine Adresse, es vertagt ihn um drei Wochen und nimmt ihm
 bis Michaeli den Preisdruck an *einer* Adresse — einmal im Braujahr je
 Adresse, wie vorher.
+
+### 1.2b Ist der neue Zug zu stark? Die Rechnung, offen hingelegt
+
+Der Brief warnt ausdrücklich: *„Ein Gegner, den man mühelos abräumt, ist
+schlechter als einer, den man nicht bezahlen kann."* Also die Zahlen:
+
+* **Er verliert nichts.** Weder das Fass noch der Zukauf nimmt ihm eine
+  Adresse, eine Bindung oder einen Zug. Sie vertagen seine Werbung und seine
+  Absicht um drei Wochen und setzen den Preisabschlag an *einer* Adresse bis
+  Michaeli aus. Danach ist alles wie vorher.
+* **Einmal im Braujahr je Adresse.** Das war so und bleibt so — der Deckel,
+  der aus einem Zug keinen Hahn macht.
+* **Der Ertrag, gerechnet in 1350:** eine Adresse nimmt im Jahr rund 20 Fass,
+  der Abschlag steht bei 10 bis 24 % des Fasspreises. Ausgesetzt spart das
+  etwa 20 × 9 × 0,13 ≈ **23 Pf**; der Zukauf kostet **12 Pf**, das eigene Fass
+  einen verlorenen Verkauf von **9 Pf**. Der Zug lohnt sich also — knapp, und
+  nur, wenn man ihn bezahlen kann. Das ist gewollt: ein Gegenzug, der sich nie
+  lohnt, wird nicht gedrückt, und ein Kritiker, der ihn nicht drückt, zählt
+  wieder 457 zu 5.
+* **Was er kostet, wenn man ihn nicht hat:** in 1350 sind das 12 Pf bei einer
+  Kasse, die in dieser Messreihe im Median bei 30 Pf steht. Er ist billig, aber
+  nicht umsonst, und in den ärmsten Wochen ist er es nicht.
 
 ### 1.3 Der zweite Fund: ein Knopf, den die Maus nicht trifft
 
@@ -405,7 +434,7 @@ ausgewertet mit `auswerten.py`. Ablage: `werkbank/schuss/gegenzug-w13/rho/`.
 
 ### 4.5 Haushalt, Lesbarkeit, Seitenfehler
 
-`/tmp/haushalt.mjs` (12 gespielte Wochen), **vier Epochen × zwei Fenster**:
+`gegenzug-w13/haushalt.mjs` (12 gespielte Wochen), **vier Epochen × zwei Fenster**:
 
 | | 1600×900 | 2752×1536 |
 |---|---|---|
