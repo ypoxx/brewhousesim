@@ -1228,3 +1228,15 @@ html[data-hof-zu] #fach-blatt-fuhre { z-index: 200; }
   min-height: calc(var(--s) * 40);
   background: linear-gradient(180deg, #e2dac6 0%, #cec1a3 100%);
 }
+
+/* Unterhalb der Entwurfsleinwand wird die Karte enger, nicht groesser: der
+   Knopfboden des Rahmens (24 px) gilt dort und macht vier Chips in zwei
+   Zeilen hoeher, als der Kasten ist. Gemessen bei 1366x768, Epoche 1970, vier
+   Chips: der oberste stand 27 px ueber der Kastenkante — sichtbar, nichts
+   abgeschnitten, aber unnoetig. Mit engeren Fugen passt es. */
+@media (max-width: 2751px), (max-height: 1535px) {
+  .fu-woche { gap: calc(var(--s) * 3); }
+  .fu-wochenwahl { gap: calc(var(--s) * 4); }
+  .knopf.fu-chip { padding: calc(var(--s) * 2) calc(var(--s) * 8); gap: calc(var(--s) * 5); }
+  .fu-wochenkopf { gap: calc(var(--s) * 6); }
+}

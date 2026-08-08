@@ -3732,7 +3732,13 @@
        eigenen Kasten. Der Platz wird deshalb von oben verteilt: das gute
        Ende zuerst, dann der Sprung, dann so viele Fuhrplaene, wie noch
        hineingehen. */
-    var frei = 4;
+    /* VIER CHIPS AUF DER ENTWURFSLEINWAND, DREI AUF EINEM NOTEBOOKSCHIRM.
+       Unterhalb von 820 Bezugspunkten Hoehe gilt der Knopfboden des Rahmens
+       (24 px statt calc(var(--s)*40)); vier Chips in zwei Zeilen sind dann
+       hoeher als der Kasten. Gemessen bei 1366x768, Epoche 1970: der oberste
+       Chip stand 24 px ueber der Kastenkante. Lieber eine Wahl weniger als
+       ein Knopf, der ueber seinem eigenen Rand haengt. */
+    var frei = (B.buehne && B.buehne.masse && B.buehne.masse().hoehe < 820) ? 3 : 4;
     var alle = planListe();
     var weite = sprungWeite();
 

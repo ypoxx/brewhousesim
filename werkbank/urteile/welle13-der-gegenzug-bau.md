@@ -181,7 +181,7 @@ Saat 1350, `?neu=1`, **ohne einen Reiter anzufassen**. Gemessen an zwei
 eingefrorenen Bäumen, die sich **nur** in meinen beiden Dateien unterscheiden:
 `git archive 1bb28ce` (Ende Welle 12) ohne und mit meiner Arbeit.
 
-*(Zahlen folgen, sobald die Läufe durch sind — Abschnitt 4.)*
+**Die Zahlen stehen in Abschnitt 4.2: 55 · 60 · 0 · 19 vorher, 9 · 0 · 0 · 1 nachher.**
 
 ---
 

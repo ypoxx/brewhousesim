@@ -1,0 +1,82 @@
+[
+ {
+  "fenster": "1600x900",
+  "epoche": 1,
+  "bei": "1351/1",
+  "fehler": [],
+  "ab": [],
+  "karten": 5,
+  "reiheHoch": 215,
+  "nimmGanz": 5,
+  "nimmFrei": 1,
+  "raus": 0
+ },
+ {
+  "fenster": "1600x900",
+  "epoche": 2,
+  "bei": "1602/1",
+  "fehler": [],
+  "ab": [],
+  "karten": 5,
+  "reiheHoch": 215,
+  "nimmGanz": 5,
+  "nimmFrei": 1,
+  "raus": 0
+ },
+ {
+  "fenster": "1600x900",
+  "epoche": 3,
+  "bei": null,
+  "fehler": [],
+  "ab": [],
+  "fehlt": true
+ },
+ {
+  "fenster": "1600x900",
+  "epoche": 4,
+  "bei": null,
+  "fehler": [],
+  "ab": [],
+  "fehlt": true
+ },
+ {
+  "fenster": "1366x768",
+  "epoche": 1,
+  "bei": "1351/1",
+  "fehler": [],
+  "ab": [],
+  "karten": 5,
+  "reiheHoch": 184,
+  "nimmGanz": 5,
+  "nimmFrei": 1,
+  "raus": 0
+ },
+ {
+  "fenster": "1366x768",
+  "epoche": 2,
+  "bei": "1602/1",
+  "fehler": [],
+  "ab": [],
+  "karten": 5,
+  "reiheHoch": 184,
+  "nimmGanz": 5,
+  "nimmFrei": 1,
+  "raus": 0
+ },
+ {
+  "fenster": "1366x768",
+  "epoche": 3,
+  "bei": null,
+  "fehler": [],
+  "ab": [],
+  "fehlt": true
+ },
+ {
+  "fenster": "1366x768",
+  "epoche": 4,
+  "bei": null,
+  "fehler": [],
+  "ab": [],
+  "fehlt": true
+ }
+]
