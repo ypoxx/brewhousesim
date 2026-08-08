@@ -1,6 +1,6 @@
 {
  "epoche": 4,
- "url": "http://127.0.0.1:8921/spiel/?epoche=4&saat=1350",
+ "url": "http://127.0.0.1:8924/spiel/?epoche=4&saat=1350",
  "wochen": 12,
  "fehler": [],
  "anfang": {
@@ -50,7 +50,7 @@
   "speicher": [
    "brauhaus:4:1350"
   ],
-  "standZeile": "STAND  spiel · brauhaus:4:1350 · liegt vor · 11× geschrieben, zuletzt 42712 Zeichen",
+  "standZeile": "STAND  spiel · brauhaus:4:1350 · liegt vor · 11× geschrieben, zuletzt 50111 Zeichen",
   "fortgesetztImKopf": null,
   "fortgesetztText": null,
   "neuKnopf": true
@@ -67,7 +67,7 @@
   "amtszeit": 2,
   "amtsname": "Sabine Bruckner",
   "gebunden": "lindenhof:adler,ochse:konzern,torschenke:-,pfarrhof:adler,muehlwirt:-,brueckenwirt:-,faehrhaus:-,hirsch:konzern,markt:-,obernberg:-,bahnhofswirt:konzern,neustadt:-",
-  "gegnerzuege": "adler:1,konzern:8",
+  "gegnerzuege": "adler:10,konzern:8",
   "wuerfel": 131214541,
   "saat": 1350,
   "letzteChronik": "1970/12 Das Haus geht auf Sabine Bruckner über. Vorher hafteten 0 Bi",
@@ -90,28 +90,26 @@
   "ansehen": 40,
   "faesser": 200,
   "chronik": 15,
-  "protokoll": 60,
+  "protokoll": 59,
   "amtszeit": 2,
   "amtsname": "Sabine Bruckner",
   "gebunden": "lindenhof:adler,ochse:konzern,torschenke:-,pfarrhof:adler,muehlwirt:-,brueckenwirt:-,faehrhaus:-,hirsch:konzern,markt:-,obernberg:-,bahnhofswirt:konzern,neustadt:-",
-  "gegnerzuege": "adler:2,konzern:1",
-  "wuerfel": 571226620,
+  "gegnerzuege": "adler:10,konzern:9",
+  "wuerfel": -1260339193,
   "saat": 1350,
   "letzteChronik": "1970/12 Das Haus geht auf Sabine Bruckner über. Vorher hafteten 0 Bi",
-  "letztesBuch": "60 Sein Außendienst sitzt beim Einkauf des Gasthof Li 0",
+  "letztesBuch": "59 Die Gruppe legt beim Zum Goldenen Ochsen 16.759 DM 0",
   "lage": 0,
   "lageTexte": [],
   "speicher": [
    "brauhaus:4:1350"
   ],
-  "standZeile": "STAND  spiel · brauhaus:4:1350 · liegt vor · fortgesetzt 1970/12 · 1× geschrieben, zuletzt 43407 Zeichen",
+  "standZeile": "STAND  spiel · brauhaus:4:1350 · liegt vor · fortgesetzt 1970/12 · 1× geschrieben, zuletzt 50842 Zeichen",
   "fortgesetztImKopf": "1970/12",
   "fortgesetztText": "fortgesetzt · 1970/12",
   "neuKnopf": true
  },
- "abweichung": [
-  "gegnerzuege"
- ],
- "bestanden": false,
+ "abweichung": [],
+ "bestanden": true,
  "laeuftWeiter": true
 }

@@ -1,0 +1,38 @@
+{
+ "epoche": 1,
+ "url": "http://127.0.0.1:8933/spiel/?epoche=1&saat=1350&neu=1",
+ "gespielteWochen": 100,
+ "jahre": "1350–1353",
+ "lageMax": 0,
+ "seitenfehler": 0,
+ "fehler": [],
+ "ersterSchirm": {
+  "textzeilen": 613,
+  "zielZeilen": 0,
+  "zielBeispiel": [],
+  "knopf": "Michaelitafel schließen",
+  "tafelLiegt": false,
+  "speicherSchluessel": 0
+ },
+ "wochenMitTafel": 3,
+ "knopfDa": 100,
+ "luegtZu": 97,
+ "luegtAuf": 0,
+ "aufschriften": [
+  "Michaelitafel schließen"
+ ],
+ "jahresanfaenge": 4,
+ "davonMitTafel": 3,
+ "wochenOhneGegenzugEng": 55,
+ "wochenOhneGegenzugWeit": 0,
+ "wochenOhneGegenzugEngJe100": 55,
+ "wochenOhneGegenzugWeitJe100": 0,
+ "wochenMitZielwort": 0,
+ "wochenMitUebergabe": 0,
+ "davonNurAmReiter": 0,
+ "wochenOhneBezahlbares": 55,
+ "deckungUnter1": 57,
+ "kasseAnfang": 112,
+ "kasseEnde": 39,
+ "speicherSchluesselEnde": 0
+}

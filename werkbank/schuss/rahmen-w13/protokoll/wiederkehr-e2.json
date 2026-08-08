@@ -1,6 +1,6 @@
 {
  "epoche": 2,
- "url": "http://127.0.0.1:8921/spiel/?epoche=2&saat=1350",
+ "url": "http://127.0.0.1:8924/spiel/?epoche=2&saat=1350",
  "wochen": 12,
  "fehler": [],
  "anfang": {
@@ -50,7 +50,7 @@
   "speicher": [
    "brauhaus:2:1350"
   ],
-  "standZeile": "STAND  spiel · brauhaus:2:1350 · liegt vor · 11× geschrieben, zuletzt 14318 Zeichen",
+  "standZeile": "STAND  spiel · brauhaus:2:1350 · liegt vor · 11× geschrieben, zuletzt 19726 Zeichen",
   "fortgesetztImKopf": null,
   "fortgesetztText": null,
   "neuKnopf": true
@@ -67,7 +67,7 @@
   "amtszeit": 1,
   "amtsname": "Barbara Bruckner",
   "gebunden": "lindenhof:haus,ochse:adler,torschenke:haus,pfarrhof:-,muehlwirt:adler,brueckenwirt:-,faehrhaus:haus,hirsch:adler,markt:adler,obernberg:-,bahnhofswirt:haus,neustadt:-",
-  "gegnerzuege": "adler:1,konzern:0",
+  "gegnerzuege": "adler:12,konzern:0",
   "wuerfel": -605774623,
   "saat": 1350,
   "letzteChronik": "1600/12 Brückenwirt ist wieder frei. Braustatt Adler hat die Bindung",
@@ -89,29 +89,27 @@
   "rohstoff": 41,
   "ansehen": 30,
   "faesser": 16,
-  "chronik": 12,
-  "protokoll": 41,
+  "chronik": 13,
+  "protokoll": 40,
   "amtszeit": 2,
-  "amtsname": "Sebastian Bruckner",
-  "gebunden": "lindenhof:-,ochse:adler,torschenke:-,pfarrhof:-,muehlwirt:adler,brueckenwirt:-,faehrhaus:-,hirsch:adler,markt:adler,obernberg:-,bahnhofswirt:haus,neustadt:-",
-  "gegnerzuege": "adler:2,konzern:0",
-  "wuerfel": -165762544,
+  "amtsname": "Magdalena Bruckner",
+  "gebunden": "lindenhof:adler,ochse:adler,torschenke:-,pfarrhof:-,muehlwirt:adler,brueckenwirt:-,faehrhaus:-,hirsch:adler,markt:adler,obernberg:-,bahnhofswirt:haus,neustadt:-",
+  "gegnerzuege": "adler:13,konzern:0",
+  "wuerfel": 466073126,
   "saat": 1350,
-  "letzteChronik": "1600/13 Das Haus geht auf Sebastian Bruckner über. Vorher hafteten 0",
-  "letztesBuch": "41 Erbteil der Miterben aus dem Keller 0",
+  "letzteChronik": "1600/13 Das Haus geht auf Magdalena Bruckner über. Vorher hafteten 0",
+  "letztesBuch": "40 Erbteil der Miterben aus dem Keller 0",
   "lage": 0,
   "lageTexte": [],
   "speicher": [
    "brauhaus:2:1350"
   ],
-  "standZeile": "STAND  spiel · brauhaus:2:1350 · liegt vor · fortgesetzt 1600/12 · 1× geschrieben, zuletzt 14990 Zeichen",
+  "standZeile": "STAND  spiel · brauhaus:2:1350 · liegt vor · fortgesetzt 1600/12 · 1× geschrieben, zuletzt 20680 Zeichen",
   "fortgesetztImKopf": "1600/12",
   "fortgesetztText": "fortgesetzt · 1600/12",
   "neuKnopf": true
  },
- "abweichung": [
-  "gegnerzuege"
- ],
- "bestanden": false,
+ "abweichung": [],
+ "bestanden": true,
  "laeuftWeiter": true
 }

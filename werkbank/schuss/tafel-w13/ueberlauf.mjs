@@ -56,7 +56,12 @@ for (const [br, ho] of [[1600, 900], [1366, 768]]) {
         if (!t) return { fehlt: true };
         const kappt = v => v === 'hidden' || v === 'clip';
         const ab = [];
-        t.querySelectorAll('*').forEach(el => {
+        /* Die Tafel SELBST gehoert in die Liste. Sie traegt `overflow:
+           hidden`; laeuft sie ueber, steht ein ganzer Kasten ausserhalb —
+           gemessen am 8. August 2026 die Reihe der Festlegungen, 136 px
+           unter dem Rand. Eine Probe, die nur die Kinder ansieht, findet
+           genau den schwersten Fall nicht. */
+        [t, ...t.querySelectorAll('*')].forEach(el => {
           const c = getComputedStyle(el);
           const abY = el.scrollHeight > el.clientHeight + 1 && kappt(c.overflowY);
           const abX = el.scrollWidth > el.clientWidth + 1 && kappt(c.overflowX);
@@ -123,3 +128,84 @@ alles.forEach(a => {
   if (a.fehler && a.fehler.length) a.fehler.slice(0, 3).forEach(f => console.log('      SEITENFEHLER ' + f));
 });
 console.log(`\nSUMME: ${sum} abgeschnittene Kästen · ${sumB} Wortbrüche über 16 Blätter`);
+
+/* ---------------------------------------------------------------------------
+   ZWEITER DURCHGANG — DAS ARME MICHAELI.
+   Der erste misst eine frische Partie (`?jahr=…`): die Kasse ist voll, die
+   Erklärkästen „HEUTE NICHT" / „HEUTE KEINE" stehen nicht da, und genau die
+   waren es, die die Reihe der Angebote auf null gedrückt haben. Also wird ein
+   zweites Mal gemessen — gespielt bis zu dem Michaeli, an dem die Kasse für
+   nichts reicht.
+   --------------------------------------------------------------------------- */
+const b2 = await chromium.launch({ ignoreDefaultArgs: ['--hide-scrollbars'] });
+const arm = [];
+for (const [br, ho] of [[1600, 900], [1366, 768]]) {
+  for (const ep of [1, 2, 3, 4]) {
+    const s = await b2.newPage({ viewport: { width: br, height: ho }, deviceScaleFactor: 1 });
+    const fe = [];
+    s.on('pageerror', e => fe.push(String(e).slice(0, 160)));
+    await s.goto(`http://127.0.0.1:${HAFEN}/spiel/?epoche=${ep}&saat=1350`, { waitUntil: 'networkidle' });
+    await s.waitForTimeout(1300);
+    const kl = async (z) => {
+      const l = await s.evaluate(q => {
+        const e = document.querySelector(`[data-zug="${q}"]`); if (!e) return null;
+        const r = e.getBoundingClientRect(); if (r.width < 4) return null;
+        const cx = r.left + r.width / 2, cy = r.top + r.height / 2;
+        const t = document.elementFromPoint(cx, cy);
+        return { x: cx, y: cy, aus: !!e.disabled, hit: !!(t && (t === e || e.contains(t))) };
+      }, z);
+      if (!l || l.aus || !l.hit) return false;
+      await s.mouse.move(l.x, l.y, { steps: 3 });
+      await s.mouse.down(); await s.waitForTimeout(50); await s.mouse.up();
+      await s.waitForTimeout(230); return true;
+    };
+    let gefunden = null;
+    for (let i = 0; i < 160; i++) {
+      const st = await s.evaluate(() => {
+        const t = document.querySelector('.pr-tafel');
+        const liegt = !!(t && !t.classList.contains('stadt-zugeklappt'));
+        return { liegt, knapp: !!(t && t.querySelector('.pr-knapp')),
+          ende: !!BRAUHAUS.welt.zeit.ende,
+          jahr: BRAUHAUS.welt.zeit.jahr, woche: BRAUHAUS.welt.zeit.woche };
+      });
+      if (st.ende) break;
+      if (st.liegt && st.knapp) { gefunden = st.jahr + '/' + st.woche; break; }
+      if (st.liegt) { await kl('preis:tafel-zu'); continue; }
+      await kl('fuhre:wie-vorige'); await kl('fuhre:abschicken'); await kl('weiter');
+    }
+    const r = gefunden ? await s.evaluate(() => {
+      const t = document.querySelector('.pr-tafel');
+      const kappt = v => v === 'hidden' || v === 'clip';
+      const ab = [];
+      [t, ...t.querySelectorAll('*')].forEach(el => {
+        const c = getComputedStyle(el);
+        const abY = el.scrollHeight > el.clientHeight + 1 && kappt(c.overflowY);
+        const abX = el.scrollWidth > el.clientWidth + 1 && kappt(c.overflowX);
+        if (!abY && !abX) return;
+        ab.push({ klasse: (el.className || '').toString().slice(0, 50),
+          richtung: (abY ? 'y' : '') + (abX ? 'x' : ''),
+          text: (el.textContent || '').trim().replace(/\s+/g, ' ').slice(0, 70) });
+      });
+      const tr = t.getBoundingClientRect();
+      const nimm = [...t.querySelectorAll('[data-zug^="preis:nimm:"]')];
+      const reihe = t.querySelector('.pr-mitte > .pr-reihe');
+      return { ab, karten: t.querySelectorAll('.pr-karte').length,
+        reiheHoch: reihe ? Math.round(reihe.getBoundingClientRect().height) : -1,
+        nimmGanz: nimm.length, nimmFrei: nimm.filter(e => !e.disabled).length,
+        raus: nimm.filter(e => e.getBoundingClientRect().bottom > tr.bottom + 1).length };
+    }) : { ab: [], fehlt: true };
+    arm.push({ fenster: br + 'x' + ho, epoche: ep, bei: gefunden, fehler: fe, ...r });
+    await s.close();
+  }
+}
+await b2.close();
+fs.writeFileSync(`${WURZ}/protokoll/${MARKE}-arm.json`, JSON.stringify(arm, null, 1));
+let s2 = 0;
+console.log('\nARMES MICHAELI (Kasse reicht für nichts, Erklärkästen stehen da):');
+arm.forEach(a => {
+  s2 += a.ab.length;
+  console.log(`${a.fenster}  E${a.epoche}  ${a.bei || '— nicht erreicht —'}  ` +
+    (a.bei ? `${a.ab.length} abgeschnitten · Reihe ${a.reiheHoch}px · ${a.nimmFrei}/${a.nimmGanz} Nehmen frei · ${a.raus} unter dem Rand` : ''));
+  a.ab.slice(0, 5).forEach(x => console.log(`      [${x.richtung}] .${x.klasse}  „${x.text}"`));
+});
+console.log(`SUMME armes Michaeli: ${s2} abgeschnittene Kästen`);
