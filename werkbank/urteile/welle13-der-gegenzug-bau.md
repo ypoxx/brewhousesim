@@ -495,11 +495,11 @@ ist:**
 |---|---|---|---|---|
 | Wochen ohne bezahlbaren Gegenzug, **eng** — Lauf A | **0** | **0** | **1** | **4** |
 | Wochen ohne bezahlbaren Gegenzug, **eng** — Lauf B | **9** | **0** | **1** | **4** |
-| Wochen ohne bezahlbaren Gegenzug, **eng** — Lauf C | **9** | — | — | — |
+| Wochen ohne bezahlbaren Gegenzug, **eng** — Lauf C | **9** | **0** | **1** | **4** |
 | Wochen ohne bezahlbaren Gegenzug, **weit** | 0 | 0 | 1 | 1 |
 | gespielte Wochen · Seitenfehler · `lage` | 100 · 0 · 0 | 100 · 0 · 0 | 100 · 0 · 0 | 100 · 0 · 0 |
 
-Drei der vier Epochen geben zweimal dieselbe Zahl. **1350 gibt 0 und 9** — und
+Drei der vier Epochen geben **dreimal** dieselbe Zahl. **1350 gibt 0 und 9** — und
 das ist ehrlich hinzuschreiben, statt sich die kleinere auszusuchen: der
 Arbeitsbaum wird von drei anderen Buildern weitergeschrieben, während ich messe,
 und `probe13.mjs` wartet nach jedem Klick eine feste Zeitspanne. **Beide Zahlen
