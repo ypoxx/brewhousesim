@@ -20,7 +20,7 @@ Klageknopf fehlt).
 
 | Auflage | verlangt | gemessen |
 |---|---|---|
-| **R15** Wochen ohne bezahlbaren Gegenzug je 100, enge Lesart | ≤ 10, alle vier Epochen | **9 · 0 · 0 · 1** am eingefrorenen Welle-12-Stand · **9 · 0 · 1 · 4** am laufenden Stand (ungünstigster von zwei Läufen) |
+| **R15** Wochen ohne bezahlbaren Gegenzug je 100, enge Lesart | ≤ 10, alle vier Epochen | **9 · 0 · 0 · 1** am eingefrorenen Welle-12-Stand · **9 · 0 · 1 · 4** am laufenden Stand (ungünstigster von drei Läufen je Epoche) |
 | **R16** Aufschrift des Reiters, Woche 45 = Woche 15 | ja | **ja**, 50 von 50 Wochen tragen die Zahl (vorher 30 von 50) |
 | §4b des Urteils | unangetastet | **kein** Eingriff ins Verhalten, kein `meldeZug` |
 | ρ, 400 Wochen je Epoche | darf sich nicht bewegen | Aufzeichnung **byteweise gleich** in 1350, 1600 und 1884 *(1970 s. §4.4)* |
@@ -505,8 +505,8 @@ Arbeitsbaum wird von drei anderen Buildern weitergeschrieben, während ich messe
 und `probe13.mjs` wartet nach jedem Klick eine feste Zeitspanne. **Beide Zahlen
 liegen unter der Latte von 10**, und die höhere ist dieselbe 9 wie am
 eingefrorenen Stand — dieselben neun Wochen mit 3 bis 11 Pf in der Lade (§4.3).
-Ein dritter Lauf gab wieder **9**; die 0 war der Ausreißer, nicht die Regel.
-Ich rechne mit 9 und nicht mit 0.
+Ein dritter **und** ein vierter Lauf gaben wieder **9**; die 0 war der
+Ausreißer, nicht die Regel. Ich rechne mit 9 und nicht mit 0.
 
 ### 4.2c Und mit der KOMPETENTEN Hand, die kauft und festlegt
 
