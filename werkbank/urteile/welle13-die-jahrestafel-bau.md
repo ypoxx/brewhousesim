@@ -280,4 +280,230 @@ ist es, der es braucht.
 
 ---
 
-*(Fortsetzung: Abnahme über zehn Braujahre, vier Epochen, Wiederholbarkeit.)*
+## 6 · Ein Fehler, den ich selbst gebaut und selbst gefunden habe
+
+Er steht hier vollständig, weil er die teuerste Sorte war: **er hat das Herz
+des Bretts unbedienbar gemacht, und die erste Messung hat ihn nicht gesehen.**
+
+Der Satz aus R8 stand zuerst **im** Abschnittskopf der Festlegungen. Dieser
+Kopf ist eine **Zeile** (`.pr-abschnitt { display: flex; align-items:
+baseline }`): ein Kasten mit vier Sätzen wird darin auf Wortbreite gequetscht
+und dafür hoch. `.pr-mitte` ist eine Spalte, in der nur die Reihe der Angebote
+biegsam war — jeder Pixel, den der Kopf dazugewann, ging von den Angeboten ab.
+
+Gemessen, Michaeli 1351, drei Fenster:
+
+| | 2752×1536 | 1600×900 | 1366×768 |
+|---|---|---|---|
+| Reihe der Angebote, vorher (Vorzustand `7e21973`) | 530 px | 286 px | 218 px |
+| Reihe der Angebote, mit dem Fehler | **0 px** | **0 px** | **0 px** |
+| Karten hoch | 22 px | 12 px | 11 px |
+| Tafel läuft über | 0 px | **136 px** | **197 px** |
+| „Nehmen" mit `elementFromPoint` zu treffen | **0 von 5** | **0 von 5** | **0 von 5** |
+| Reihe der Angebote, nach der Abhilfe | 373 px | **215 px** | **184 px** |
+| „Nehmen" zu treffen, nach der Abhilfe | 1 von 5 | **1 von 5** | 1 von 5 |
+
+**Warum meine erste R9-Messung ihn nicht fand — zwei Lücken im eigenen Gerät,
+beide behoben:**
+1. Sie maß mit `?jahr=1359&woche=1`, also einer **frischen** Partie mit voller
+   Kasse. Dann steht der Erklärkasten gar nicht da, und der Fehler auch nicht.
+   `ueberlauf.mjs` hat seither einen **zweiten Durchgang**, der bis zu dem
+   Michaeli spielt, an dem die Kasse für nichts reicht.
+2. Sie sah nur `tafel.querySelectorAll('*')` an, nicht die **Tafel selbst**.
+   Genau die trägt `overflow: hidden`; dass eine ganze Reihe 136 px unter
+   ihrem Rand stand, war deshalb unsichtbar. Jetzt steht sie mit in der Liste.
+
+Die Abhilfe: der Kasten ist eine eigene Zeile der Spalte (kein Kind des
+Kopfes), beide Reihen sind biegsam und haben einen **gemessenen Boden**
+(370 × `--s` für die Angebote — so viel brauchen Hinweis, Dauerzeile und Knopf
+einer Karte, die nie schrumpfen dürfen; 270 × `--s` für die Festlegungen), und
+die Erklärkästen sind gedeckelt und rollen.
+
+**Die Lehre, und sie gilt über diesen Fall hinaus:** wer einem vollen Brett
+einen Satz hinzufügt, ändert eine Höhenrechnung. Ein Blatt, das an einem Tag
+im Jahr fünf Entscheidungen trägt, muss an **diesem Tag** gemessen werden —
+nicht an dem Tag, an dem es leer ist.
+
+---
+
+## 7 · Die Abnahme, in Zahlen
+
+Alles am laufenden Spiel gemessen, Saat 1350, Geräte unter
+`werkbank/schuss/tafel-w13/`, Rohdaten unter `…/protokoll/`.
+
+### R6 · Der Knopf lügt nicht
+
+`blick.mjs` — spielt, **ohne einen einzigen Reiter anzufassen**, und liest nach
+**jedem** Klick ab.
+
+| Epoche | abgelesene Zustände | „schließen" ohne Tafel | „Michaelitafel …" bei liegender Tafel | Seitenfehler · `lage` |
+|---|---|---|---|---|
+| 1350 | 206 | **0** | 0 | 0 · 0 |
+| 1600 | 206 | **0** | 0 | 0 · 0 |
+| 1884 | 202 | **0** | 0 | 0 · 0 |
+| 1970 | 198 | **0** | 0 | 0 · 0 |
+
+Vorzustand derselben Probe in 1350: **33 Lügen in 308 Zuständen.**
+Die Aufsicht hat am Vorzustand mit eigenem Gerät **100 von 100** Wochen mit
+der Aufschrift „Michaelitafel schließen" gezählt, davon 97 ohne liegende
+Tafel. Nachher gibt es diese Aufschrift nur noch dann, wenn die Tafel wirklich
+liegt — geprüft über **1.512 abgelesene Zustände** in der Zehnjahresprobe:
+**0 Lügen.**
+
+Vier verschiedene Aufschriften stehen jetzt am Knopf, jede für eine Lage:
+`Michaelitafel schließen` · `Michaelitafel 1350 · 5 Angebote` ·
+`Michaelitafel 1350 · 5 Angebote — heute ist Michaeli` (Michaelitag, Tafel
+weggelegt; roter Rahmen) · `… — liegt bereit` (der Sommerzettel liegt oben).
+
+### R7 · Die Tafel liegt zu Michaeli von selbst auf
+
+`jahrzehnt.mjs` — zehn Braujahre 1350, **in Woche 1 wird kein Reiter, kein
+Griff und nichts angefasst**; gelesen wird nur, und weggelegt wird mit dem
+eigenen Knopf der Tafel.
+
+| | |
+|---|---|
+| gespielt | 1350/1 bis **1360/2**, 1.512 abgelesene Zustände, 1.370 echte Klicks |
+| Michaelitage erlebt | **11** (1350 bis 1360) |
+| **davon lag die Tafel von selbst da** | **10** |
+| davon nicht | **1** — der **Ladetag 1350/1** |
+| Reiterklicks in Woche 1 | 0 (außer den 10 Proben zu R10) |
+| Seitenfehler · `lage` | 0 · 0 |
+
+Der Ladetag ist der Tag, an dem DIE STADT jedes fremde Brett wegklappt. Dort
+steht jetzt die ehrliche Aufschrift mit rotem Rahmen, und **die erste
+Handlung des Spielers holt die Tafel auf den Tisch** — auch der erste Druck
+auf WEITER, einmal je Braujahr. Gemessen: `blick.mjs`, das nach jedem Klick
+abliest, findet die Tafel in **allen vier Epochen auch am Ladetag** liegend
+(1350 · 1600 · 1884 · 1970, je 4 von 4 erlebten Michaelitagen), und
+`reiterprobe.mjs` beginnt seine R10-Probe in allen vier Epochen an **1350/1,
+1600/1, 1884/1, 1970/1** — sie kommt dort nur hin, weil die Tafel nach dem
+ersten Klick liegt.
+
+**Was am Michaelitag wirklich auf dem Tisch liegt** (1351/1, Kasse 48 Pf,
+1600×900): fünf Karten mit Preisschild nebeneinander — 34 · 59 · 120 · 210 ·
+1.200 Pf —, davon **ein** „Nehmen" bedienbar, vier abgeschaltet mit
+*„Über der Kasse: es fehlen …"*; dazu drei Festlegungen, keine bezahlbar.
+Das ist genau der Punkt 2 der Aufsicht, und dafür ist R8 gebaut.
+
+### R10 · Der fremde Reiter nimmt das Blatt weg
+
+`reiterprobe.mjs` — bis zu einem Michaeli mit liegender Tafel spielen, dann
+vier fremde Reiter der Reihe nach mit **echter Maus** greifen; vorher mit
+`elementFromPoint` geprüft, dass unter dem Zeiger auch wirklich dieser Reiter
+liegt; zwischen zwei Klicks das Blatt wieder aufschlagen.
+
+| Epoche | bei | Klicks | wirklich getroffen | **Blatt weg** | greifbare Züge vorher → nachher |
+|---|---|---|---|---|---|
+| 1350 | 1350/1 | 4 | 4 | **4** | 33 → 48 · 58 · 64 · 64 |
+| 1600 | 1600/1 | 4 | 4 | **4** | 36 → 49 · 59 · 64 · 64 |
+| 1884 | 1884/1 | 4 | 4 | **4** | 39 → 49 · 56 · 62 · 62 |
+| 1970 | 1970/1 | 4 | 4 | **4** | 29 → 45 · 55 · 59 · 59 |
+
+**16 von 16.** Vorzustand, von der Aufsicht gemessen: vier Klicks,
+25 → 26 → 26 → 26 → 26, das Blatt blieb liegen. Vom Kritiker in 1601:
+achtmal identisch 30.
+Dazu in der Zehnjahresprobe zehn weitere Reiterklicks unter liegendem Blatt:
+Blatt weg in 9 von 10, mehr greifbare Züge in **10 von 10** (24…32 → 31…53);
+der eine Ausreißer (1354) ist ein Griff der Probe, der laut Protokoll unter
+dem Zeiger einen anderen Knopf traf.
+
+### R9 · Kein abgeschnittener Text
+
+`ueberlauf.mjs`, **mit gezeichneter Rollleiste**, zwei Fenster × vier Epochen
+× zwei Seiten = 16 Blätter, dazu ein zweiter Durchgang am **armen Michaeli**.
+
+| | vorher | nachher |
+|---|---|---|
+| abgeschnittene Kästen, 16 Blätter | 0 | **0** |
+| **Wortbrüche, 16 Blätter** | **51** | **0** |
+| armes Michaeli 1600×900 (E1 1351/1 · E2 1602/1) | 0 · 0 | **0 · 0** |
+| armes Michaeli 1366×768 (E1 1351/1 · E2 1602/1) | 3 · 3 | **0 · 0** |
+| Tafel läuft über den eigenen Rand | 136 / 197 px | **0 px** |
+
+`werkbank/schuss/aufsicht/lesbarkeit.mjs`, vier Epochen:
+**1600×900 → 2 Überläufe, keiner aus `pr:`** (beide `nm:`);
+**1366×768 → 17 Überläufe, keiner aus `pr:`** (`nm:` 4, `fu:` 2, `sud:` 1,
+`zielzeile:` 4, ohne Klasse 4). Aus DER JAHRESTAFEL kommt in keinem der acht
+Läufe ein einziger. 0 von 309 aktiven Knöpfen unter 24 px.
+
+### R8 · Woher das Geld kommt
+
+Am Bildschirm abgelesen, 1350, Michaeli 1351, Kasse 48 Pf (Bild:
+`…/tafel-w13/schuesse/abnahme-arm-e1-1600.png`):
+
+> **HEUTE KEINE** Für keine dieser Festlegungen reicht die Kasse. Die
+> billigste — Vertrag statt Gunst — kostet 88 Pf, es fehlen 40 Pf. Eine
+> Festlegung, die man nie bezahlen kann, ist keine Festlegung.
+> **HEUTE BRINGT KEIN KNOPF GELD** Kein Zug auf diesem Schirm legt Geld in
+> die Lade. Das vorige Braujahr ließ nichts übrig — diese Summe kommt aus den
+> Fuhren, nicht aus der Zeit.
+
+Steht ein Einnahmeknopf da, nennt der Satz ihn mit seinem eigenen Wortlaut,
+seiner Zahl und dem Weg dorthin. Gemessen an vier Ladeschirmen ist das
+**genau ein Knopf im ganzen Spiel** — `fuhre:rueckkauf:rohstoff`, +19 Pf /
++66 fl / +633 M / +7.200 DM, in 1884 und 1970 im Ladezustand abgeschaltet.
+Das ist der Befund zu A9 und A7 und gehört den Stücken 3 und 4; diese Tafel
+kann nur nennen, was es gibt.
+
+### Was nicht zurückgenommen wurde
+
+| | |
+|---|---|
+| **Wiederholbarkeit** | `wdh.mjs`: 45 Wochen, **drei Läufe je Epoche, je EINE Prüfsumme** — 1350 `0be47d8dd506` · 1600 `7610c22564ef` · 1884 `4fe03d5759b1` · 1970 `daba9fb71978`. Geprüft über Jahr, Woche, Kasse, Rohstoff, Ansehen, Fässer, Chronik, Buch, Gegnerzüge, Anschlag, genommene Angebote, Festlegungen und die ganze LEITER. |
+| **`Math.random()`** | kein Vorkommen in `stuecke/preis*.js` |
+| **Wanduhrfrist im Zeichenweg** | **keine mehr** — die 420-ms-Frist ist ersatzlos entfernt; das Stück hat kein `setTimeout` und kein `setInterval` mehr |
+| Preise · Erträge · Fristen | **unverändert.** Keine Zahl der Wirtschaft angefasst: keine Änderung an `preisVon`, `zahlplan`, `festPreis`, `rechneAnschlag`, `teuerung`, `pflichtSumme`, `notpfennig` oder an `preis-daten.js`. 1600 ist damit nicht berührt. |
+| Ausschluss zwischen den Angeboten | **unverändert** (`nimm` → `a.sperrt`, `partnerVon`, `waehleAngebote` — keine Zeile angefasst) |
+| Seitenfehler · `BRAUHAUS.lage` | **0 · 0** in allen vier Epochen, in jeder Probe dieser Welle |
+| fremdes DOM | nur gelesen (`.fu-sommerblatt`, `[data-preis]`, `.pr-tafel`-Klassen); **nichts geschrieben**, kein Reiter abgeschaltet |
+| Dateien | nur `spiel/stuecke/preis.js` und `spiel/stil/preis.css` · `preis-zusatz.css` |
+
+**Ein Nebeneffekt, der genannt gehört:** der eine gehaltene WEITER-Druck je
+Braujahr (nur wenn der Rahmen die Tafel weggeklappt hat, praktisch also einmal
+je Sitzung im Ladejahr) kostet einen Klick, ohne die Woche zu schalten. Eine
+messende Hand, die Wochen an WEITER-Klicks zählt, kommt dadurch **eine Woche
+kürzer** — nicht anders. Am Spielverlauf ändert er nichts: es ist derselbe
+Halt, den DIE FUHRE zu Georgi seit Welle 6 hat.
+
+---
+
+## 8 · Was ich nicht gebaut habe, und warum
+
+* **Die Tafel am Ladetag ohne jeden Klick.** DIE STADT klappt beim Laden jedes
+  fremde Brett in einen Reiter (`stadt.js`: `jetzt - startZeit < LADEZEIT`),
+  und ihr Gedächtnis `lage[s]` behält das Urteil. Dagegen anzuzeichnen hieße,
+  im 240-ms-Takt des Rahmens zu flackern — genau das Rennen, das Welle 12 vier
+  Tage gekostet hat. Der Weg des Rahmens ist der Klick (`handZeit`), und den
+  gehe ich. **Wenn die Aufsicht das anders will, ist es eine Änderung an
+  `stuecke/stadt.js`** — ein Brett, das der Kalender auflegt, ist etwas anderes
+  als eines, das beim Laden zufällig dalag. Diese Welle öffnet DIE STADT nicht.
+* **Mehr bezahlbare Angebote.** Der Preis der Angebote ist die zweite
+  Messlatte, und 1600 steht bei ρ +0,538 gegen eine Latte von 0,700. R8
+  verlangt einen Weg zum Geld, keine Preissenkung — und der Weg wird
+  abgelesen, nicht erfunden.
+* **Einen eigenen Einnahmeknopf auf der Tafel.** Das wäre eine neue Geldquelle
+  und damit ein Eingriff in die Wirtschaft aller vier Epochen.
+
+---
+
+## 9 · Für den blinden Kritiker: was in einer Minute nachzuzählen ist
+
+```
+?epoche=1&saat=1350
+  · oben rechts, Woche 1:  „Michaelitafel 1350 · 5 Angebote — heute ist Michaeli"
+    (roter Rahmen).  Irgendeinen Knopf drücken — auch WEITER —: die Tafel liegt.
+  · BRAUHAUS.preis.lage().gesehen   -> je Braujahr: lag die Tafel offen da?
+  · BRAUHAUS.preis.lage().geklemmt  -> hat DIE STADT sie weggeklappt?
+  · Bei liegender Tafel auf einen Reiter oben klicken: das Blatt geht weg,
+    BRAUHAUS.zuege() zählt danach 15 bis 31 greifbare Züge mehr.
+  · WEITER drücken, bis Woche 2: die Tafel ist weg (genommen wird nur zu
+    Michaeli — `nimm()` prüft die Woche).
+  · Jahreswechsel: die Tafel liegt von selbst, ohne einen Klick.
+```
+
+Geräte, jedes mit eigenem Protokoll unter `…/tafel-w13/protokoll/`:
+`blick.mjs` (R6, ohne Reiter) · `jahrzehnt.mjs` (R7 und R10 über zehn
+Braujahre) · `reiterprobe.mjs` (R10, vier Epochen) · `ueberlauf.mjs` (R9, mit
+Rollleiste, zwei Fenster, dazu das arme Michaeli) · `wdh.mjs`
+(Wiederholbarkeit, drei Läufe je Epoche).

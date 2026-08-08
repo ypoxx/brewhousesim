@@ -467,3 +467,45 @@ keinen Knopf unter die 24-px-Grenze.
 
 `werkbank/schuss.mjs`, 2752×1536, alle vier Epochen: **„keine Fehler auf der
 Seite"** (`werkbank/schuss/gegenzug-w13/schuesse/welle13-gegenzug-e1..4.png`).
+
+---
+
+## 5 · Was ein blinder Kritiker als erstes nachzählen sollte
+
+Alles hier ist am Bildschirm gezählt. Wer es nachzählen will, braucht drei
+Befehle und keine Erklärung von mir:
+
+```bash
+npx --yes http-server -p 8924 -s . >/dev/null 2>&1 &
+
+# R15 — mit dem Gerät der Aufsicht, ohne einen Reiter anzufassen
+HAFEN=8924 node werkbank/schuss/aufsicht/welle13-gegen/probe13.mjs 1 100
+
+# R16 — mit dem Gerät des Kritikers, ohne einen Reiter anzufassen
+HAFEN=8924 node werkbank/schuss/spiel-w12/gegnerblick.mjs 1 50
+
+# beide Preise an einem Giebel, beide Kellerlagen, vier Epochen
+HAFEN=8924 node werkbank/schuss/gegenzug-w13/zweiwaehrungen.mjs
+```
+
+In der Konsole des laufenden Spiels:
+
+```js
+BRAUHAUS.gegner.fasspreis()   // {fass, imKeller, ausKeller, zukauf, mitGeld}
+BRAUHAUS.gegner.zonen()       // {beschriftungen:[…], griffe:[…]} in Prozent
+BRAUHAUS.gegner.zahl()        // dieselbe Zahl, die am Reiter steht
+```
+
+**Und die drei Sätze, an denen ich hängen würde, wenn ich prüfte:**
+
+1. Der Fassknopf hat **kein** `data-preis`, der Zukaufknopf hat eines. Das ist
+   Absicht und in §1.1 begründet: der eine kostet wirklich kein Geld, der
+   andere wirklich welches. Eine Null wäre bequem und unwahr gewesen.
+2. Der Gegner verliert durch beide **nichts** — sie vertagen ihn. Wer prüfen
+   will, ob er zu leicht abräumbar wurde, zählt `BRAUHAUS.gegner.zahl()` und
+   `BRAUHAUS.welt.adressen` nach hundert Wochen: die Zahl seiner Züge und die
+   Zahl seiner Bindungen sind dieselben wie vorher.
+3. Die neun Restwochen in 1350 sind Wochen mit **3 bis 11 Pf in der Lade**.
+   Dort ist kein Preis klein genug. Wer sie schließen will, muss nicht am
+   Gegenzug drehen, sondern am Auftragsbuch — das ist A10/R8 und gehört DER
+   JAHRESTAFEL.
