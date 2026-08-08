@@ -1576,6 +1576,79 @@
     }
   }
 
+  /* ======================================================================
+     AUFLAGE R8 — WENN NICHTS BEZAHLBAR IST, SAGT DIE TAFEL, WOHER DAS GELD
+     KOMMT.  ALS BENANNTER ZUG, NICHT ALS RATSCHLAG.
+
+     Gemessen im Urteil der Welle 12: in der 1350-Sitzung war in **127 von
+     284 Wochen** ueberhaupt nichts mit Preisschild bezahlbar; in vier
+     Sitzungen und 1.030 Wochen hat der Kritiker ZWEI unwiderrufliche
+     Festlegungen getroffen, in 1350 null von drei. Sein Satz: „Eine
+     unwiderrufliche Festlegung, die man nie bezahlen kann, ist trotzdem
+     keine Festlegung, sondern eine Vitrine."
+
+     Der vorhandene Satz „HEUTE NICHT · … es fehlen 12 Pf" nennt die Luecke.
+     Was fehlte, ist der Satz danach. Er wird NICHT erfunden, sondern
+     ABGELESEN: das Spiel schreibt jede Einnahme als Preisschild mit
+     POSITIVER Zahl an ihren Knopf (`kern/buehne.js` B.knopf: `einnahme =
+     opt.preis > 0`). Was hier steht, ist also immer ein Knopf, den es in
+     dieser Woche wirklich gibt — mit seinem eigenen Wortlaut und seiner
+     eigenen Zahl.
+
+     WARUM DAS EIN ZUG IST UND KEIN RATSCHLAG: die Tafel geht mit dem Griff
+     oben rechts zu und wieder auf, ohne dass die Woche laeuft, und `nimm()`
+     fragt nur nach der WOCHE, nicht nach der Reihenfolge. Zettel schliessen,
+     Grut verkaufen, Tafel wieder aufschlagen, nehmen — alles am selben
+     Michaelistag. Genau das steht im Satz.
+
+     GEMESSEN, BEVOR DIESER SATZ GESCHRIEBEN WURDE: es gibt im ganzen Spiel
+     GENAU EINEN Knopf mit positivem Preisschild, in allen vier Epochen
+     denselben — `fuhre:rueckkauf:rohstoff` (+19 Pf / +66 fl / +633 M /
+     +7.200 DM). In 1884 und 1970 ist er im Ladezustand abgeschaltet. Das ist
+     ein Befund ueber das Spiel und keiner ueber diese Tafel; er gehoert DER
+     FUHRE und dem GEGENZUG (Auflage A9) und steht deshalb im Bericht, nicht
+     hier im Knopf. Diese Tafel sagt, was da ist — und wenn nichts da ist,
+     sagt sie auch das, statt einen Weg zu erfinden.
+
+     Fremdes DOM wird hier nur GELESEN. `stuecke/fuhre.js` zeichnet vor
+     diesem Stueck (Reihenfolge in `spiel/index.html`), der Knopf ist also
+     aus derselben Runde.
+     ====================================================================== */
+  function einnahmeZuege() {
+    if (typeof document === 'undefined') return [];
+    var raus = [];
+    var alle = document.querySelectorAll('[data-preis]');
+    for (var i = 0; i < alle.length; i++) {
+      var el = alle[i];
+      var zug = el.getAttribute('data-zug') || '';
+      if (zug.indexOf('preis:') === 0) continue;        /* das eigene Blatt */
+      var p = parseFloat(el.getAttribute('data-preis'));
+      if (!(p > 0)) continue;
+      if (el.disabled) continue;
+      var r = el.getBoundingClientRect ? el.getBoundingClientRect() : null;
+      if (r && (r.width < 4 || r.height < 4)) continue;
+      var wort = el.querySelector ? el.querySelector('.wort') : null;
+      raus.push({
+        zug: zug, betrag: Math.round(p),
+        name: ((wort ? wort.textContent : el.textContent) || zug).trim().replace(/\s+/g, ' ')
+      });
+    }
+    return raus;
+  }
+
+  /* Der Zug, der die Luecke schliesst: der KLEINSTE, der reicht — und wenn
+     keiner reicht, der groesste, den es gibt. Ein Haus verkauft nicht mehr,
+     als es muss. */
+  function geldZug(fehlt) {
+    var l = einnahmeZuege();
+    if (!l.length) return null;
+    var reicht = l.filter(function (z) { return z.betrag >= fehlt; });
+    if (reicht.length) {
+      return reicht.reduce(function (a, z) { return z.betrag < a.betrag ? z : a; });
+    }
+    return l.reduce(function (a, z) { return z.betrag > a.betrag ? z : a; });
+  }
+
   function billigstesAngebot() {
     var best = null;
     lebendeAngebote().forEach(function (k) {

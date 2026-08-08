@@ -99,13 +99,13 @@ await s.context().close();
 s = await frischeSeite();
 await s.evaluate((n) => {
   const B = window.BRAUHAUS;
-  const jahre = Math.ceil(n / B.uhr.WOCHEN_IM_JAHR);
+  const jahre = Math.max(1, Math.round(n / B.uhr.WOCHEN_IM_JAHR));
   for (let i = 0; i < jahre && !B.welt.zeit.ende; i++) {
     B.welt.zeit.woche = B.uhr.WOCHEN_IM_JAHR;
     B.uhr.schliesseJahr();
   }
   B.sende('zeichne', { grund: 'sprung-alt' });
-}, N);
+}, gerueckt);
 await s.waitForTimeout(900);
 const C = await lesen(s);
 await s.context().close();
@@ -116,7 +116,7 @@ const abwAB = felder.filter(k => JSON.stringify(A[k]) !== JSON.stringify(B1[k]))
 const abwAC = felder.filter(k => JSON.stringify(A[k]) !== JSON.stringify(C[k]));
 
 const erg = {
-  epoche: ep, wochen: N, url: URL, fehler,
+  epoche: ep, wochenGewollt: N, wochenGelaufen: gerueckt, url: URL, fehler,
   anfang, geklickt: A, gesprungen: B1, alteFassung: C,
   rueckgabe: sprung, standNachSprung,
   abweichungSprungGegenKlicken: abwAB,

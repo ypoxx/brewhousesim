@@ -1,0 +1,55 @@
+{
+ "epoche": 1,
+ "wochen": 30,
+ "punkte": [
+  {
+   "jahr": 1350,
+   "woche": 1,
+   "zeichen": 5430,
+   "buch": 1,
+   "chronik": 4,
+   "faesser": 4,
+   "msMin": 0,
+   "msMittel": 0.1,
+   "msMax": 1.3,
+   "marke": "Ladezustand"
+  },
+  {
+   "jahr": 1350,
+   "woche": 18,
+   "zeichen": 31543,
+   "buch": 152,
+   "chronik": 17,
+   "faesser": 9,
+   "msMin": 0.2,
+   "msMittel": 0.5,
+   "msMax": 2.5,
+   "marke": "nach 10 Wochen"
+  },
+  {
+   "jahr": 1351,
+   "woche": 8,
+   "zeichen": 50587,
+   "buch": 263,
+   "chronik": 30,
+   "faesser": 3,
+   "msMin": 0.3,
+   "msMittel": 0.7,
+   "msMax": 4.3,
+   "marke": "nach 20 Wochen"
+  },
+  {
+   "jahr": 1351,
+   "woche": 28,
+   "zeichen": 67666,
+   "buch": 367,
+   "chronik": 35,
+   "faesser": 3,
+   "msMin": 0.5,
+   "msMittel": 0.7,
+   "msMax": 2.8,
+   "marke": "nach 30 Wochen"
+  }
+ ],
+ "fehler": []
+}

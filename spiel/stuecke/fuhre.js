@@ -1659,19 +1659,36 @@
   /* ----------------------------------------------------------------------
      DER SPRUNG — ruhige Wochen werden erzaehlt, nicht geklickt.
 
-     WARUM NICHT `B.uhr.springe()`: die Uhr springt in JAHREN
-     (`z.woche = 30; schliesseJahr()`) und sendet dabei kein einziges
-     `woche`-Ereignis. Fuer dieses Stueck heisst das: kein Sud, keine Fuhre,
-     kein Umlauf, kein Unterhalt, keine Frist — dafuer aber die volle
-     Jahresabrechnung samt `mahnenUndVerlieren`. Nachgemessen am 8. August
-     (werkbank/schuss/woche-w13/springeprobe.mjs): EIN gesprungenes Jahr in
-     1350 nimmt dem Haus alle zwölf Adressen auf einmal. Ein Werkzeug, das
-     die Partie beendet, ist kein Werkzeug fuer eine ruhige Woche.
+     `B.uhr.springeWochen(n)` IST DAS WERKZEUG, UND ES WIRD BENUTZT — aber
+     nicht fuer jede Woche, und der Grund steht in einer Messung.
 
-     Hier wird deshalb in WOCHEN gesprungen, und jede gesprungene Woche ist
-     eine wirklich gespielte: derselbe Fuhrplan, `schicke()`, dieselbe
-     `naechsteWoche()`. Der Unterschied ist nur, dass sie nicht geklickt
-     wird. Angehalten wird, sobald etwas zu entscheiden ist.
+     Der Rahmen-Builder hat `springe()` in dieser Welle umgebaut: seit dem
+     8. August laeuft jede uebersprungene Woche wirklich (`vorwoche`,
+     `verfall`, `woche` bzw. `jahresende`/`jahr`), und der Wuerfel dreht sich
+     genau so oft wie beim Spielen (spiel/LIESMICH.md). Ein Sprung ist damit
+     woertlich „n-mal WEITER druecken, ohne hinzusehen".
+
+     Genau das ist fuer DIE FUHRE der Haken: wer WEITER drueckt, ohne
+     hinzusehen, schickt keine Fuhre hinaus. Gemessen mit
+     werkbank/schuss/woche-w13/springeprobe.mjs, Epoche 1, Saat 1350, EIN
+     gesprungenes Braujahr:
+
+         Haeuser 10 -> 9   ·  Keller 4 -> 0 Fass  ·  Rohstoff 40 -> 7
+         Kasse 112 -> 48 Pf  ·  Fuhren 0  ·  29 woche- und 1 jahr-Ereignis
+
+     Ein Jahr ohne Fuhre kostet eine Adresse und den ganzen Keller. Ein
+     Werkzeug, das die Woche ueberspringt, darf deshalb den Wagen nicht
+     stehenlassen.
+
+     Also beides, und jedes an seiner Stelle:
+       · Woche MIT reifem Fass — der Fuhrmann faehrt weiter wie zuletzt:
+         laden nach `Z.letzterPlan`, `schicke()`. Das ist keine
+         uebersprungene Woche, das ist eine gefahrene, die niemand klicken
+         musste.
+       · Woche OHNE reifes Fass — `B.uhr.springeWochen(1)`: da ist wirklich
+         nichts zu tun, und die Uhr macht es billiger und sicherer, als
+         dieses Stueck es koennte (sie haelt bei `zeit.ende` von selbst an).
+     Angehalten wird, sobald es wieder etwas zu entscheiden gibt.
      ---------------------------------------------------------------------- */
   var SPRUNG_HOECHSTENS = 6;
 
@@ -1710,6 +1727,8 @@
         gefahren++;
         schicke();
         geld += Math.max(0, B.welt.haus.kasse - vorKasse);
+      } else if (B.uhr.springeWochen) {
+        B.uhr.springeWochen(1);
       } else {
         B.uhr.naechsteWoche();
       }

@@ -468,11 +468,11 @@
     return Math.max(1, Math.round(fehlt * preisJeFass() * 4 / 3));
   }
 
-  /* Traegt die Lade den Zug in dieser Woche? Ohne Zukauf immer. */
-  function hinhaltBezahlbar(k) {
+  /* Traegt die Lade den Zug in dieser Woche? Ohne Zukauf immer — der Preis
+     haengt am Keller und am Satz der Epoche, nicht an der Adresse. */
+  function hinhaltBezahlbar() {
     var n = hinhaltFass();
-    var fehlt = fassFehlt(n);
-    return !fehlt || B.welt.kann(zukaufPreis(n));
+    return !fassFehlt(n) || B.welt.kann(zukaufPreis(n));
   }
 
   /* Was der Abschlag kostet: solange er die Adresse haelt, druckt er den
@@ -3045,7 +3045,7 @@
           text: ep().hinhalten.name + ' · ' + B.welt.menge(hinhaltFass()),
           zug: 'gegner:hinhalten-blatt:' + a.schluessel,
           preis: zukaufPreis(hinhaltFass()) ? -zukaufPreis(hinhaltFass()) : 0,
-          aus: !hinhaltMoeglich(a.schluessel) || !hinhaltBezahlbar(a.schluessel),
+          aus: !hinhaltMoeglich(a.schluessel) || !hinhaltBezahlbar(),
           titel: ep().hinhalten.satz + ' Kostet Bier, kein Geld — und bis Michaeli '
                + 'drückt er an dieser Adresse den Preis nicht mehr.'
                + (zukaufPreis(hinhaltFass())
@@ -3149,7 +3149,7 @@
             text: ep().hinhalten.name + ' · ' + B.welt.menge(hinhaltFass()),
             zug: 'gegner:hinhalten-blatt:' + kk,
             preis: zukaufPreis(hinhaltFass()) ? -zukaufPreis(hinhaltFass()) : 0,
-            aus: !hinhaltMoeglich(kk) || !hinhaltBezahlbar(kk),
+            aus: !hinhaltMoeglich(kk) || !hinhaltBezahlbar(),
             titel: ep().hinhalten.satz + ' Kostet Bier, kein Geld — und schiebt ihn '
                  + (ep().hinhalten.wochen || 3) + ' Wochen hinaus.'
                  + (zukaufPreis(hinhaltFass())

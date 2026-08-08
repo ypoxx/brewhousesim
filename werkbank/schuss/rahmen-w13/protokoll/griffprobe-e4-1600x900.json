@@ -1,0 +1,255 @@
+{
+ "epoche": 4,
+ "fenster": "1600x900",
+ "fehler": [],
+ "mitAnschlag": {
+  "greifbar": 39,
+  "zuege": 99,
+  "textzeilen": 437,
+  "woerter": {
+   "Ziel": 3,
+   "gewinnen": 1,
+   "ueberleben": 1
+  },
+  "zettel": true
+ },
+ "ohneAnschlag": {
+  "greifbar": 30,
+  "zuege": 114,
+  "textzeilen": 646,
+  "woerter": {
+   "Ziel": 2,
+   "gewinnen": 0,
+   "ueberleben": 0
+  },
+  "zettel": false
+ },
+ "anfangenGetroffen": true,
+ "unterschied": [
+  {
+   "zug": "gegner:oeffnen:adler",
+   "mitAnschlag": "hit",
+   "ohne": "blind"
+  },
+  {
+   "zug": "gegner:abloesen:brueckenwirt",
+   "mitAnschlag": "hit",
+   "ohne": "blind"
+  },
+  {
+   "zug": "gegner:hinhalten:brueckenwirt",
+   "mitAnschlag": "hit",
+   "ohne": "blind"
+  },
+  {
+   "zug": "gegner:abloesen:hirsch",
+   "mitAnschlag": "hit",
+   "ohne": "blind"
+  },
+  {
+   "zug": "gegner:hinhalten:hirsch",
+   "mitAnschlag": "hit",
+   "ohne": "blind"
+  },
+  {
+   "zug": "gegner:abloesen:bahnhofswirt",
+   "mitAnschlag": "blind",
+   "ohne": "hit"
+  },
+  {
+   "zug": "gegner:hinhalten:bahnhofswirt",
+   "mitAnschlag": "blind",
+   "ohne": "hit"
+  },
+  {
+   "zug": "gegner:beschwerde-bild",
+   "mitAnschlag": "hit",
+   "ohne": "blind"
+  },
+  {
+   "zug": "sud:zettel-anstich",
+   "mitAnschlag": "hit",
+   "ohne": "ausblind"
+  },
+  {
+   "zug": "sud:zettel-hefe-fass",
+   "mitAnschlag": "hit",
+   "ohne": "ausblind"
+  },
+  {
+   "zug": "sud:zettel-wechsel-frei",
+   "mitAnschlag": "hit",
+   "ohne": "ausblind"
+  },
+  {
+   "zug": "sud:zettel-wechsel-kauf",
+   "mitAnschlag": "hit",
+   "ohne": "ausblind"
+  },
+  {
+   "zug": "name:anschlag:bierdeckel",
+   "mitAnschlag": "hit",
+   "ohne": "blind"
+  },
+  {
+   "zug": "stadt:marke:fuhre-lindenhof",
+   "mitAnschlag": "hit",
+   "ohne": "blind"
+  },
+  {
+   "zug": "stadt:marke:fuhre-marktplatz",
+   "mitAnschlag": "hit",
+   "ohne": "blind"
+  },
+  {
+   "zug": "stadt:marke:fuhre-fluss",
+   "mitAnschlag": "hit",
+   "ohne": "blind"
+  },
+  {
+   "zug": "fuhre:plan:mager",
+   "mitAnschlag": "(fort)",
+   "ohne": "blind"
+  },
+  {
+   "zug": "fuhre:plan:durst",
+   "mitAnschlag": "(fort)",
+   "ohne": "blind"
+  },
+  {
+   "zug": "fuhre:plan:rechnung",
+   "mitAnschlag": "(fort)",
+   "ohne": "blind"
+  },
+  {
+   "zug": "erbe:tafel:verschreibe",
+   "mitAnschlag": "hit",
+   "ohne": "blind"
+  },
+  {
+   "zug": "erbe:uebergabe:leibgeding",
+   "mitAnschlag": "hit",
+   "ohne": "blind"
+  },
+  {
+   "zug": "erbe:uebergabe:abfindung",
+   "mitAnschlag": "hit",
+   "ohne": "blind"
+  },
+  {
+   "zug": "erbe:uebergabe:bruch",
+   "mitAnschlag": "hit",
+   "ohne": "blind"
+  },
+  {
+   "zug": "erbe:buch",
+   "mitAnschlag": "hit",
+   "ohne": "blind"
+  },
+  {
+   "zug": "stadt:reiter:preis-pr-stil-offset-pr-tafel",
+   "mitAnschlag": "(fort)",
+   "ohne": "hit"
+  },
+  {
+   "zug": "stadt:alles-zuklappen",
+   "mitAnschlag": "(fort)",
+   "ohne": "hit"
+  },
+  {
+   "zug": "preis:chronik",
+   "mitAnschlag": "(fort)",
+   "ohne": "hit"
+  },
+  {
+   "zug": "preis:nimm:schankanlage",
+   "mitAnschlag": "(fort)",
+   "ohne": "hit"
+  },
+  {
+   "zug": "preis:nimm:grosshandel",
+   "mitAnschlag": "(fort)",
+   "ohne": "hit"
+  },
+  {
+   "zug": "preis:nimm:lastzug",
+   "mitAnschlag": "(fort)",
+   "ohne": "hit"
+  },
+  {
+   "zug": "preis:nimm:abfuellung",
+   "mitAnschlag": "(fort)",
+   "ohne": "aushit"
+  },
+  {
+   "zug": "preis:nimm:logistik",
+   "mitAnschlag": "(fort)",
+   "ohne": "aushit"
+  },
+  {
+   "zug": "preis:festlege:handelsmarke",
+   "mitAnschlag": "(fort)",
+   "ohne": "aushit"
+  },
+  {
+   "zug": "preis:festlege:konzern",
+   "mitAnschlag": "(fort)",
+   "ohne": "hit"
+  },
+  {
+   "zug": "preis:festlege:genossenschaft",
+   "mitAnschlag": "(fort)",
+   "ohne": "aushit"
+  },
+  {
+   "zug": "preis:festlege:privat",
+   "mitAnschlag": "(fort)",
+   "ohne": "hit"
+  },
+  {
+   "zug": "preis:nichts",
+   "mitAnschlag": "(fort)",
+   "ohne": "hit"
+  },
+  {
+   "zug": "preis:tafel-zu",
+   "mitAnschlag": "(fort)",
+   "ohne": "hit"
+  },
+  {
+   "zug": "kern:anfangen",
+   "mitAnschlag": "hit",
+   "ohne": "(fort)"
+  },
+  {
+   "zug": "preis:chronik-auf",
+   "mitAnschlag": "hit",
+   "ohne": "(fort)"
+  }
+ ],
+ "nurDerAnschlagKnopf": false,
+ "haushalt": [
+  "stadt: 272928/40000 px  oben 126249/26000 px",
+  "preis: 147102/24000 px  oben 81160/20000 px",
+  "sud: 65942/34000 px",
+  "erbe: 50302/28000 px",
+  "name: 28932/20000 px",
+  "kern: 110467/120000 px  oben 89614/80000 px"
+ ],
+ "haushaltKern": {
+  "stueck": "kern",
+  "kaesten": 9,
+  "px": 110467,
+  "anteil": 2.6133219401041665,
+  "obenPx": 89614,
+  "obenAnteil": 12.720010446947674,
+  "grenze": 120000,
+  "grenzeOben": 80000,
+  "bekannt": true,
+  "ueber": -9533,
+  "ueberOben": 9614
+ },
+ "tafeln": [],
+ "ueberRand": [],
+ "lage": []
+}

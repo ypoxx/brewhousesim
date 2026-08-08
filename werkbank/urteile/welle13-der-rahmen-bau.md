@@ -290,6 +290,17 @@ ist `null`, und das ist der richtige Zustand, solange niemand meldet.
 Dokumentiert in `spiel/LIESMICH.md` unter *„Welt — lesen frei, ändern nur
 über die API"*.
 
+**Nachtrag am Ende des Laufs: DIE FUHRE hat die Schnittstelle genommen.**
+`stuecke/fuhre.js:2760` `meldeZiel()` ruft sie in jedem Zeichendurchgang
+(`:5303`), mit drei Sätzen und einer gerechneten Nähe:
+
+* `:2766` *„… liegt auf dem Tisch — noch n Wochen"* (Angebot liegt)
+* `:2772` *„das Haus weitergeben, solange es steht — zu Michaeli liegt das Angebot."*, `naehe` 0,95
+* `:2775` *„das Haus weitergeben, solange es steht. "* + `uebergabeFehlt()`, `naehe` aus `zielNaehe()`
+
+`:2761` prüft `if (!B.welt.meldeZiel) return;` — *„Rahmen ohne R3 — dann
+keine Zeile"*. Die Schnittstelle hält also auch von der anderen Seite.
+
 ---
 
 ## R4 — Der Startschirm sagt, was das hier ist
@@ -388,6 +399,11 @@ Gesichert wird **einmal** am Ende des Sprungs, nicht je Woche.
 Drei Zeilen dazu stehen in `spiel/LIESMICH.md` im Kasten *„springe() — die
 drei Zeilen, nach denen Welle 13 gefragt hat"*.
 
+**Nachtrag am Ende des Laufs: DIE FUHRE ruft es.** `stuecke/fuhre.js:1717`
+`springeWochen(n)` → `:1731` `B.uhr.springeWochen(1)`, angeboten über den
+Knopf in `:3722`. Damit ist R5 nicht mehr nur „geprüft und gebaut", sondern
+im Spiel — und A7 hat sein Werkzeug.
+
 **Was ich am Klickweg ausdrücklich NICHT geändert habe:** am Jahreswechsel
 gab es immer **zwei** Zeichenrunden — eine mit `grund:'jahr'` aus
 `schliesseJahr()`, eine mit `grund:'woche'` aus `naechsteWoche()`. Sie
@@ -399,7 +415,23 @@ Wiederholbarkeit dieses Laufs ist teuer erkauft. `stumm` gilt nur im Sprung.
 
 ## Die Falle: kostet das Sichern Zeit im Zeichenweg?
 
-*(Meßwerte folgen unter „Nachtrag" — `werkbank/schuss/rahmen-w13/kosten.mjs`.)*
+**Gemessen** (`werkbank/schuss/rahmen-w13/kosten.mjs`, E1, Saat 1350, je
+21 Durchläufe von `JSON.stringify` + `localStorage.setItem` an einem eigenen
+Schlüssel, `performance.now()` **in der Probe**, nicht im Spiel):
+
+| Stand | Buchzeilen | Länge des Standes | min / Mittel / max |
+|---|---|---|---|
+| Ladezustand 1350/1 | 1 | 5.430 Zeichen | 0,00 / **0,10** / 1,30 ms |
+| nach 10 Runden · 1350/18 | 152 | 31.543 Zeichen | 0,20 / **0,50** / 2,50 ms |
+| nach 20 Runden · 1351/8 | 263 | 50.587 Zeichen | 0,30 / **0,70** / 4,30 ms |
+| nach 30 Runden · 1351/28 | 367 | 67.666 Zeichen | 0,50 / **0,70** / 2,80 ms |
+
+**Der Mittelwert liegt bei 0,7 ms je Wochenwechsel.** Zum Vergleich, aus dem
+Kopf von `kern/runde.js`: die Wanduhrfrist, an der Welle 12 zerbrochen ist,
+war **420 ms**, und die messende Hand wartet nach jedem Klick rund **33 ms**.
+Das Sichern liegt zwei Größenordnungen darunter, und — was mehr zählt als die
+Zahl — es **verzweigt nicht**: es ist derselbe synchrone Block in jeder
+Woche, ohne Frist, ohne Wiederholung, ohne Bedingung auf eine Uhr.
 
 Was gebaut ist, damit die Antwort überhaupt eine Chance hat:
 
