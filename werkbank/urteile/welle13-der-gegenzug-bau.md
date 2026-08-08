@@ -378,6 +378,23 @@ den `rueckkopplung-r3/linie.mjs` in seinem Kopf beschreibt. Die hier genannten
 Zahlen stammen aus dem Lauf, in dem **nur diese Messung** auf der Maschine
 lief.
 
+### 4.2b Dieselbe Messung am LAUFENDEN Stand — was der Kritiker sehen wird
+
+Die Tabelle oben isoliert meine Arbeit gegen den Welle-12-Stand. Der blinde
+Kritiker misst aber den **integrierten** Baum, in dem auch DER RAHMEN, DIE
+JAHRESTAFEL und DIE WOCHE fertig sind. Dieselbe Probe, derselbe Befehl,
+Hafen 8924:
+
+| | 1350 | 1600 | 1884 | 1970 |
+|---|---|---|---|---|
+| Wochen ohne bezahlbaren Gegenzug, **eng** | **0** | **0** | **1** | **4** |
+| Wochen ohne bezahlbaren Gegenzug, **weit** | **0** | **0** | **1** | **1** |
+| gespielte Wochen · Seitenfehler · `lage` | 100 · 0 · 0 | 100 · 0 · 0 | 100 · 0 · 0 | 100 · 0 · 0 |
+
+Die neun Restwochen der Epoche 1 sind dort **verschwunden** — genau wie in
+§4.3 vorhergesagt: sobald die Michaelitafel nicht mehr dauerhaft über der Karte
+liegt, ist der Klageknopf greifbar, und er kostet kein Geld.
+
 ### 4.3 Was in 1350 übrig bleibt, und woran es liegt
 
 Die neun Wochen sind **1351/22 bis 1351/30**, und sie sind ein Block. Die
