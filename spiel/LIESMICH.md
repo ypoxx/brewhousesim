@@ -116,37 +116,6 @@ BRAUHAUS.welt.meldeZiel(satz, naehe)          // was das gute Ende ist und wie w
 > `naehe`; **meldet niemand, bleibt die Zeile leer** — sie erfindet nichts und
 > sie zeigt nichts Altes. Der Rahmen schreibt sie über *„nächster Zug: …"*.
 
-## Spielstand — `kern/stand.js`, neu in Welle 13
-
-Nach jedem Wochenwechsel schreibt der Rahmen den ganzen Zustand des **Kerns**
-(Haus, Zeit, Vorrat, Adressen, Gegner, Chronik, Buch, Zählerstand des Würfels)
-nach `localStorage`, Schlüssel `brauhaus:<epoche>:<saat>`. Beim Laden derselben
-Adresse wird er eingesetzt, und im Kopf steht *„fortgesetzt · 1354/12"*.
-
-**Der Eigenzustand eines Stücks (`Z`) wird nicht mitgesichert** — dafür gibt es
-zwei Zeilen, und der Kern muss dafür nicht angefasst werden:
-
-```js
-BRAUHAUS.stand.melde('gegner', function () { return { zuege: Z.zuege }; });  // beim Laden anmelden
-var alt = BRAUHAUS.stand.geladen('gegner');   // in aufbau(); null = frische Partie
-```
-
-`sammeln()` gibt **reine Daten** zurück (JSON-fähig), misst nichts und fasst
-kein DOM an. Wer nichts anmeldet, verliert seinen Eigenzustand beim Neuladen —
-still, aber nicht heimlich: `BRAUHAUS.stand.bericht().stuecke` sagt, wer
-angemeldet ist.
-
-* `?neu=1` — frische Partie: **lädt nichts, schreibt nichts** und räumt beim
-  Anlassen jeden Schlüssel `brauhaus:*` weg. **Jede Messreihe benutzt ihn.**
-* `?jahr=` oder `?woche=` in der Adresse — Aufnahme: lädt nichts, schreibt
-  nichts, lässt einen vorhandenen Stand aber liegen.
-* `BRAUHAUS.stand.zeile()` in der Konsole sagt Modus, Schlüssel, Größe.
-
-In `kern/stand.js` steht **kein** `setTimeout`, `setInterval`,
-`requestAnimationFrame` und **kein** `Date.now()`. Gesichert wird synchron am
-Ende des Wochenwechsels, in derselben Aufrufkette wie der Klick auf WEITER —
-siehe den Kasten *„Kein Würfel, aber trotzdem Zufall"* weiter unten.
-
 **Zwei Sperrlisten-Sicherungen — benutze sie, dann kannst du hier nicht durchfallen:**
 
 * `BRAUHAUS.welt.geld(n)` → Währung **des Jahres** (Pfennig · Gulden · Mark ab 1873 ·
@@ -193,6 +162,40 @@ Marktanteil wird auf die **eigene** Gesamtmenge bezogen.
 > wird, darf umziehen.** Die Probe, wenn man unsicher ist: *könnte man es an
 > einem Tag abreißen und woanders wieder aufstellen?* Eine Küferei ja, ein
 > Brunnen nein. Steht etwas davor, rückt das, was davorsteht.
+
+## Spielstand — `kern/stand.js`, neu in Welle 13
+
+Nach jedem Wochenwechsel schreibt der Rahmen den ganzen Zustand des **Kerns**
+(Haus, Zeit, Vorrat, Adressen, Gegner, Chronik, Buch, Zählerstand des Würfels)
+nach `localStorage`, Schlüssel `brauhaus:<epoche>:<saat>`. Beim Laden derselben
+Adresse wird er eingesetzt, und im Kopf steht *„fortgesetzt · 1354/12"*.
+
+**Der Eigenzustand eines Stücks (`Z`) wird nicht mitgesichert** — dafür gibt es
+zwei Zeilen, und der Kern muss dafür nicht angefasst werden:
+
+```js
+BRAUHAUS.stand.melde('gegner', function () { return {haeuser: Z.haeuser}; });  // beim Laden anmelden
+var alt = BRAUHAUS.stand.geladen('gegner');   // in aufbau(); null = frische Partie
+```
+
+Die Sammelfunktion gibt **reine Daten** zurück (JSON-fähig), misst nichts und
+fasst kein DOM an. Wer nichts anmeldet, verliert seinen Eigenzustand beim
+Neuladen — still, aber nicht heimlich:
+`BRAUHAUS.stand.bericht().stuecke` sagt, wer angemeldet ist.
+
+* `?neu=1` — frische Partie: **lädt nichts, schreibt nichts** und räumt beim
+  Anlassen jeden Schlüssel `brauhaus:*` weg. **Jede Messreihe benutzt ihn.**
+* `?jahr=` oder `?woche=` in der Adresse — Aufnahme: lädt nichts, schreibt
+  nichts, lässt einen vorhandenen Stand aber liegen.
+* `BRAUHAUS.stand.zeile()` in der Konsole sagt Modus, Schlüssel, Größe.
+
+In `kern/stand.js` steht **kein** `setTimeout`, `setInterval`,
+`requestAnimationFrame` und **kein** `Date.now()`. Gesichert wird synchron am
+Ende des Wochenwechsels, in derselben Aufrufkette wie der Klick auf WEITER —
+siehe den Kasten *„Kein Würfel, aber trotzdem Zufall"* weiter unten. Und weil
+kein Zeitstempel im Stand steht, ist der geschriebene Stand selbst
+wiederholbar: dieselbe Saat, dieselben Klicks, Zeichen für Zeichen derselbe
+Eintrag.
 
 ## Uhr, Würfel, Ereignisse
 

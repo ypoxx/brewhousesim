@@ -1074,3 +1074,157 @@ html[data-hof-zu] #fach-blatt-fuhre { z-index: 200; }
      ganze Adresse aus der sichtbaren Liste. */
   .fu-wagen .knopf .wort { white-space: normal; line-height: 1.14; }
 }
+
+/* ==========================================================================
+   DIE WOCHENKARTE — WELLE 13, R13/R12
+
+   WAS SIE IST: der eine Ort, an dem die Woche jede Woche bedienbar ist, OHNE
+   dass ein Reiter angefasst wird. Gemessen am 8. August 2026 vor dem Umbau
+   (werkbank/schuss/woche-w13/hand-w13.mjs, Epoche 1, 100 Wochen, echte
+   Maus, kein Reiterklick): 100 von 106 Klicks auf WEITER, kein einziger auf
+   die Fuhre — alle vier Bretter der FUHRE liegen beim Laden als Reiter, und
+   `fuhre:abschicken` war in allen 100 Wochen abgeschaltet, weil der Wagen
+   leer blieb.
+
+   WARUM SIE SO KLEIN IST: stadt.js behandelt jedes Kind eines fremden Fachs
+   ueber GRENZE (3,5 % der Buehne) als BRETT und klappt es beim Laden in einen
+   Reiter. Darunter ist es eine KARTE IM BILD und bleibt liegen. Diese Karte
+   misst 33 x 10,2 % = 3,37 % und beansprucht KEINE Ausnahme (kein .amort,
+   kein data-frei) — sie faellt unter die Regel, nicht unter deren Ausnahme.
+   Wer die Masse aendert, misst mit
+   `werkbank/schuss/woche-w13/freiflaeche.mjs` nach.
+
+   WARUM SIE KEINEN KASTEN HAT: Welle 10 hat dieselbe Rechnung schon einmal
+   aufgemacht — „die ZAHL bleibt, das PAPIER geht. Der Lichthof traegt die
+   Schrift, wie er die Hauszeile traegt." Ein Papier von 3,37 % im untersten
+   Sechstel waere ein Fuenftel des Streifens, in dem jedes Zielbild seinen
+   Vordergrund hat. Gedeckt werden so nur die Knoepfe selbst.
+
+   WARUM SIE VON UNTEN WAECHST: die Hoehe steht fest (sonst waechst sie ueber
+   die 3,5 % hinaus, sobald ein Satz laenger wird). Der Inhalt haengt an der
+   Unterkante; was nicht hineinpasst, steht darueber im freien Bild, statt
+   abgeschnitten zu werden.
+   ========================================================================== */
+.fu-woche {
+  position: absolute;
+  left: 1.2%;
+  top: 85.6%;
+  width: 33%;
+  height: 10.2%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: calc(var(--s) * 5);
+  overflow: visible;
+  pointer-events: none;               /* das Bild darunter bleibt frei */
+}
+.fu-woche > * { pointer-events: auto; }
+
+.fu-wochenkopf {
+  display: flex;
+  align-items: baseline;
+  gap: calc(var(--s) * 8);
+  font-family: var(--fu-schrift);
+  color: #2b1d10;
+  text-shadow:
+    0 0 calc(var(--s) * 9) rgba(255, 248, 230, 0.98),
+    0 0 calc(var(--s) * 4) rgba(255, 248, 230, 0.98),
+    0 0 calc(var(--s) * 2) rgba(255, 248, 230, 0.98);
+}
+.fu-wochenkopf b {
+  flex: 0 0 auto;
+  font-size: max(11px, calc(var(--s) * 19));
+  letter-spacing: calc(var(--s) * 2);
+}
+.fu-wochensatz {
+  flex: 1 1 auto;
+  min-width: 0;
+  font-size: max(11px, calc(var(--s) * 17));
+  line-height: 1.25;
+}
+/* Was diese Woche zu entscheiden ist, steht in der Farbe der Dringlichkeit —
+   sonst liest sich „der Lindenhof hat zwei magere Jahre" wie Wetter. */
+.fu-wochensatz.dringend { color: #7d2c14; font-weight: 700; }
+
+#buehne[data-epoche="4"] .fu-wochenkopf {
+  color: #17202b;
+  text-shadow:
+    0 0 calc(var(--s) * 9) rgba(244, 248, 255, 0.98),
+    0 0 calc(var(--s) * 4) rgba(244, 248, 255, 0.98),
+    0 0 calc(var(--s) * 2) rgba(244, 248, 255, 0.98);
+}
+#buehne[data-epoche="4"] .fu-wochensatz.dringend { color: #8d2f16; }
+
+.fu-wochenwahl {
+  display: flex;
+  flex-wrap: wrap;
+  gap: calc(var(--s) * 6);
+  align-items: flex-end;
+}
+
+/* Der Chip: ein Knopf, der so wenig Flaeche nimmt wie moeglich und trotzdem
+   sein Preisschild traegt — ohne das Schild waere er nach Latte 2 nur ein
+   halber Knopf. */
+.knopf.fu-chip {
+  min-height: calc(var(--s) * 40);
+  padding: calc(var(--s) * 4) calc(var(--s) * 10);
+  gap: calc(var(--s) * 7);
+  font-size: max(11px, calc(var(--s) * 18));
+  border-radius: calc(var(--s) * 3);
+  box-shadow: 0 calc(var(--s) * 2) 0 rgba(0, 0, 0, 0.42),
+              0 0 calc(var(--s) * 8) rgba(255, 248, 230, 0.75);
+}
+.knopf.fu-chip .preis { font-size: max(11px, calc(var(--s) * 17)); }
+
+/* Der Rat des Hauses: der Plan, der die Frage dieser Woche beantwortet. Er
+   ist ein Hinweis und keine Sperre — die anderen bleiben anfassbar. */
+.knopf.fu-chip.fu-rat {
+  border-color: var(--fu-gut, #4a6b3a);
+  box-shadow: 0 calc(var(--s) * 2) 0 rgba(0, 0, 0, 0.42),
+              0 0 calc(var(--s) * 10) rgba(74, 107, 58, 0.55);
+}
+
+/* Das gute Ende hat als einziges eine eigene Farbe — genau das verlangt
+   Auflage A3, damit es nicht „ein braunes Rechteck unter zehn anderen
+   braunen Rechtecken" ist. */
+.knopf.fu-chip.fu-gut {
+  background: linear-gradient(180deg, #e8f0d8 0%, #c9dcae 100%);
+  border-color: var(--fu-gut, #4a6b3a);
+  color: #23361a;
+  font-weight: 700;
+  letter-spacing: calc(var(--s) * 1);
+  box-shadow: 0 calc(var(--s) * 2) 0 rgba(30, 50, 20, 0.5),
+              0 0 calc(var(--s) * 14) rgba(120, 170, 90, 0.8);
+}
+.knopf.fu-chip.fu-gut:hover { background: linear-gradient(180deg, #f2f8e6 0%, #d6e7bd 100%); }
+
+.knopf.fu-chip.fu-sprung {
+  background: linear-gradient(180deg, #ece4d2 0%, #d6c9ab 100%);
+  font-style: italic;
+}
+
+/* Auf der Georgi-Tafel bekommt der Knopf zum guten Ende dieselbe Farbe wie
+   auf der Wochenkarte — es ist derselbe Weg. */
+.knopf.fu-gut:not(.fu-chip) {
+  background: linear-gradient(180deg, #e8f0d8 0%, #c9dcae 100%);
+  border-color: var(--fu-gut, #4a6b3a);
+  color: #23361a;
+}
+.fu-sommer-uebergabe {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: calc(var(--s) * 8);
+}
+.fu-sommer-uebergabe b { flex: 0 0 auto; letter-spacing: calc(var(--s) * 2); }
+.fu-sommer-uebergabe span { flex: 1 1 calc(var(--s) * 400); min-width: 0; }
+
+/* Das Uebergabeblatt traegt seit Welle 13 einen dritten, kleinen Knopf:
+   weglegen ist keine Antwort. Er darf die beiden grossen nicht erschlagen. */
+.fu-ausgang-wahl > .knopf.fu-klein {
+  width: auto;
+  align-self: flex-start;
+  font-size: max(11px, calc(var(--s) * 18));
+  min-height: calc(var(--s) * 40);
+  background: linear-gradient(180deg, #e2dac6 0%, #cec1a3 100%);
+}

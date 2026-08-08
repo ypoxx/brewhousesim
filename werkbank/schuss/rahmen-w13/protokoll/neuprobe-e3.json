@@ -1,0 +1,83 @@
+{
+ "epoche": 3,
+ "wochen": 30,
+ "fehler": [],
+ "mitNeu": {
+  "pruefsummen": [
+   "11b8ad938e51f69f",
+   "11b8ad938e51f69f",
+   "11b8ad938e51f69f"
+  ],
+  "einePruefsumme": true,
+  "speicherLeer": true,
+  "speicher": [
+   [],
+   [],
+   []
+  ],
+  "modus": [
+   "neu",
+   "neu",
+   "neu"
+  ],
+  "geschrieben": [
+   0,
+   0,
+   0
+  ],
+  "schluss": [
+   "1884/30 Kasse 2562",
+   "1884/30 Kasse 2562",
+   "1884/30 Kasse 2562"
+  ]
+ },
+ "ohneNeu": {
+  "pruefsummen": [
+   "11b8ad938e51f69f",
+   "03e914ffdf43b237",
+   "6e7f00c002174fe4"
+  ],
+  "einePruefsumme": false,
+  "speicher": [
+   [
+    "brauhaus:3:1350"
+   ],
+   [
+    "brauhaus:3:1350"
+   ],
+   [
+    "brauhaus:3:1350"
+   ]
+  ],
+  "anfang": [
+   "1884/1 Kasse 14250",
+   "1884/30 Kasse 2562",
+   "1885/30 Kasse 3504"
+  ],
+  "schluss": [
+   "1884/30 Kasse 2562",
+   "1885/30 Kasse 3504",
+   "1886/30 Kasse 3504"
+  ],
+  "zeichen": [
+   26357,
+   36115,
+   52710
+  ]
+ },
+ "raeumtNach": {
+  "speicher": [],
+  "pruefsumme": "11b8ad938e51f69f",
+  "gleichWieLaufEins": true
+ },
+ "lage": [
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0
+ ],
+ "bestanden": true
+}

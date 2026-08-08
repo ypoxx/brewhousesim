@@ -98,12 +98,14 @@
   var geladeneStuecke = {};      /* was die Stuecke beim letzten Mal mitgegeben haben */
   var sammler = {};              /* name -> function, von den Stuecken angemeldet */
   var vorhanden = false;         /* liegt gerade ein Stand im Speicher? */
+  var aufgegeben = false;        /* dreimal verweigert — es wird nicht mehr versucht */
 
   var zahl = {
     geschrieben: 0,              /* wie oft gesichert wurde */
     zeichen: 0,                  /* Laenge des zuletzt geschriebenen Textes */
     gekuerzt: 0,                 /* wie oft das Buch gekuerzt werden musste */
-    verweigert: 0,               /* wie oft der Speicher NEIN gesagt hat */
+    verweigert: 0,               /* NEIN am Stueck — wird bei Erfolg zurueckgesetzt */
+    verweigertGesamt: 0,         /* NEIN insgesamt — steigt nur */
     geladen: 0,
     verworfen: 0
   };
@@ -354,27 +356,44 @@
     },
 
     /* Der eine Aufruf, den kern/uhr.js macht. SYNCHRON, ohne jede Frist.
-       Wird nur im Modus 'spiel' wirksam. */
+       Wird nur im Modus 'spiel' wirksam.
+
+       WARUM HIER `try/catch` STEHT UND NICHT `B.wage`: `B.wage` schreibt
+       jeden Fehler nach `BRAUHAUS.lage`, und `lage.length` muss 0 sein —
+       das ist eine Abnahme des Loops. Ein voller oder gesperrter Speicher
+       ist aber KEIN Fehler eines Stuecks, sondern eine Lage der Maschine;
+       sie gehoert in `B.stand.bericht().klagen` und nicht in die Liste, mit
+       der geprueft wird, ob ein Stueck geworfen hat. Ein Fehler beim
+       SAMMELN eines Stueckstandes landet weiterhin in `lage` — der wird in
+       `stueckStaende()` einzeln eingepackt, und das ist ein echter Bug.
+
+       Nach DREI Verweigerungen hintereinander wird nicht mehr versucht.
+       Sonst kostet ein voller Speicher in jeder Woche einen vollen
+       JSON-Durchlauf, und das waere Zeit im Zeichenweg fuer nichts. */
     sichere: function (grund) {
-      if (modus !== 'spiel' || !schluessel) return false;
+      if (modus !== 'spiel' || !schluessel || aufgegeben) return false;
       if (!B.welt || !B.welt.zeit) return false;
       var s = ablage();
       if (!s) return false;
-      var gut = false;
-      B.wage('stand.sichere' + (grund ? ':' + grund : ''), function () {
-        var text = schreibe(sammle());
-        if (text === null) return;
+      var text;
+      try {
+        text = schreibe(sammle());
         s.setItem(schluessel, text);
-        zahl.geschrieben++;
-        zahl.zeichen = text.length;
-        vorhanden = true;
-        gut = true;
-      });
-      if (!gut) {
-        zahl.verweigert++;
-        merke('Speicher hat den Stand nicht genommen (Platz?)');
+      } catch (e) {
+        zahl.verweigert++; zahl.verweigertGesamt++;
+        merke('Speicher hat den Stand nicht genommen (' + grund + '): '
+          + (e && e.message ? e.message : e));
+        if (zahl.verweigert >= 3) {
+          aufgegeben = true;
+          merke('nach drei Verweigerungen wird nicht mehr gesichert');
+        }
+        return false;
       }
-      return gut;
+      zahl.geschrieben++;
+      zahl.zeichen = text.length;
+      zahl.verweigert = 0;
+      vorhanden = true;
+      return true;
     },
 
     /* „Neue Partie": wirft NUR den Stand dieser Adresse weg. Der Knopf in
@@ -411,7 +430,7 @@
       return {
         modus: modus, schluessel: schluessel, liegtVor: vorhanden,
         fortgesetzt: fortgesetzt, stuecke: Object.keys(sammler),
-        zahl: zahl, klagen: klagen.slice()
+        aufgegeben: aufgegeben, zahl: zahl, klagen: klagen.slice()
       };
     },
     zeile: function () {
@@ -420,7 +439,8 @@
         + (fortgesetzt ? ' · fortgesetzt ' + fortgesetzt.jahr + '/' + fortgesetzt.woche : '')
         + ' · ' + zahl.geschrieben + '× geschrieben, zuletzt ' + zahl.zeichen + ' Zeichen'
         + (zahl.gekuerzt ? ' (Buch ' + zahl.gekuerzt + '× gekuerzt)' : '')
-        + (zahl.verweigert ? '  !! ' + zahl.verweigert + '× verweigert' : '');
+        + (zahl.verweigertGesamt ? '  !! ' + zahl.verweigertGesamt + '× verweigert'
+           + (aufgegeben ? ', aufgegeben' : '') : '');
     }
   };
 

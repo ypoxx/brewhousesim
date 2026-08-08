@@ -260,10 +260,17 @@
     if (!ziel || !ziel.satz) return;
 
     var w = B.el('div', 'zielzeile');
+    /* `max-width` + `ellipsis`: den Satz schreibt ein STUECK, nicht der
+       Rahmen — er kann laenger werden, als hier Platz ist. Lieber ein
+       abgeschnittener Satz am rechten Rand als einer, der links aus dem
+       Bild laeuft (Auflage A13 des Kritikers gilt fuer jeden Kasten des
+       Spiels, und der Rahmen faengt bei sich selbst an). Der ganze Satz
+       steht im `title`. */
     w.style.cssText = 'position:absolute;left:93%;top:86.6%;transform:translate(-100%,-50%);'
       + 'font-family:var(--mono);font-size:max(11px,calc(var(--s)*18));color:#3a2a16;'
-      + 'white-space:nowrap;' + LICHTHOF;
+      + 'white-space:nowrap;max-width:58%;overflow:hidden;text-overflow:ellipsis;' + LICHTHOF;
     w.setAttribute('data-ziel', '1');
+    w.title = ziel.satz;
     if (ziel.naehe !== null && ziel.naehe !== undefined) {
       w.setAttribute('data-ziel-naehe', B.rund(ziel.naehe, 3));
     }
