@@ -23,7 +23,7 @@ Klageknopf fehlt).
 | **R15** Wochen ohne bezahlbaren Gegenzug je 100, enge Lesart | ≤ 10, alle vier Epochen | **9 · 0 · 0 · 1** am eingefrorenen Welle-12-Stand · **0 · 0 · 1 · 4** am laufenden Stand |
 | **R16** Aufschrift des Reiters, Woche 45 = Woche 15 | ja | **ja**, 50 von 50 Wochen tragen die Zahl (vorher 30 von 50) |
 | §4b des Urteils | unangetastet | **kein** Eingriff ins Verhalten, kein `meldeZug` |
-| ρ, 400 Wochen je Epoche | darf sich nicht bewegen | Aufzeichnung **byteweise gleich** in 1350 und 1600 *(1884/1970 s. §4.4)* |
+| ρ, 400 Wochen je Epoche | darf sich nicht bewegen | Aufzeichnung **byteweise gleich** in 1350, 1600 und 1884 *(1970 s. §4.4)* |
 | Spielstand, `gegnerzuege` nach dem Neuladen | ziffernweise gleich | **gleich**, alle vier Epochen, `abweichung []` |
 | `BRAUHAUS.lage` · Seitenfehler | 0 · 0 | **0 · 0**, vier Epochen, zwei Fenster |
 | `haushalt.tafeln()` · `ueberRand()` | leer | **leer** |
