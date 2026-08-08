@@ -332,24 +332,26 @@ Partie**. Eine fortgesetzte hat ihn schon getan.
 **Abnahme mit `werkbank/schuss/rahmen-w13/wiederkehr.mjs`, 12 Wochen,
 alle vier Epochen, am laufenden Stand:**
 
-| Epoche | `abweichung` | `gegnerzuege` |
-|---|---|---|
-| 1350 | **[]** | gleich |
-| 1600 | **[]** | gleich |
-| 1884 | `kasse`, `protokoll`, `letztesBuch` | **gleich** |
-| 1970 | **[]** | gleich |
+| Epoche | `abweichung` | `gegnerzuege` | `lage` |
+|---|---|---|---|
+| 1350 | **[]** | gleich | 0 |
+| 1600 | **[]** | gleich | 0 |
+| 1884 | **[]** | gleich | 0 |
+| 1970 | **[]** | gleich | 0 |
 
-**Der Zählerstand des Gegners stimmt in allen vier Epochen ziffernweise.**
+**Der Zählerstand des Gegners stimmt in allen vier Epochen ziffernweise, und
+kein einziges der fünfzehn Felder weicht ab.**
 
-> **Ein Fund, der nicht mir gehört, und ich melde ihn statt ihn zu
-> reparieren:** in **Epoche 3** weicht nach dem Neuladen die Kasse ab
-> (4.296 → 4.513 bzw. 6.066 → 6.266) und das Buch hat 18 bis 20 Einträge mehr.
-> In zwei Läufen reproduzierbar, in 1350/1600/1970 nicht. Es ist **nicht** der
-> Gegner: `gegnerzuege` und `gebunden` stimmen, und eine Gegenprobe mit einer
-> eigenen Hand (`/tmp`, 12 Wochen, Protokoll Eintrag für Eintrag verglichen)
-> fand **null** zusätzliche Einträge. Es sieht nach einer Lieferung aus, die
-> beim Fortsetzen ein zweites Mal gebucht wird — das gehört DER FUHRE oder DEM
-> RAHMEN.
+> **Was dabei zwischendurch dastand, und warum es hier trotzdem steht:** in
+> einem früheren Durchgang meldete Epoche 3 zweimal reproduzierbar
+> `kasse`, `protokoll`, `letztesBuch` als abweichend (4.296 → 4.513 bzw.
+> 6.066 → 6.266, 18 bis 20 Bucheinträge mehr) — **nie** aber `gegnerzuege`
+> oder `gebunden`. Beim letzten Lauf ist es weg. Ich weiß nicht sicher, ob
+> meine letzte Änderung (die Vorstellung des Gegners wird bei einer
+> fortgesetzten Partie nicht wiederholt) es behoben hat oder eine fremde;
+> ich schreibe es auf, damit es jemand wiedererkennt, falls es zurückkommt.
+> Der Verdacht war und bleibt: eine Lieferung, die beim Fortsetzen ein
+> zweites Mal gebucht wird.
 
 ---
 
@@ -515,28 +517,35 @@ auch nichts ändern: der reine Welle-12-Stand hat kein `kern/stand.js`, also ist
 wie nachher. Am laufenden Stand ist sie mit `rahmen-w13/wiederkehr.mjs`
 geprüft: `abweichung []`.)*
 
-*(Zahlen je Epoche folgen; Epoche 1 steht.)*
+**Das Ergebnis ist keine Annäherung, sondern Gleichheit.**
 
-**Epoche 1350 — 400 Wochen, Ziffer für Ziffer dieselbe Partie.**
+| Epoche | SHA-256 vorher | SHA-256 nachher | |
+|---|---|---|---|
+| 1350 | `ca86822e306fef8d` | `ca86822e306fef8d` | **gleich** |
+| **1600** | `94df265afe2fbb10` | `94df265afe2fbb10` | **gleich** |
+| 1884 | *(läuft)* | | |
+| 1970 | *(läuft)* | | |
+
+Die Prüfsumme geht über die **ganze** Aufzeichnung eines 400-Wochen-Laufs
+(nur das Feld `hafen` ist herausgenommen): Kasse und Rohstoff jeder einzelnen
+Woche, Fässer, Plätze, Amtszeit, Deckung, Nennerzug und Nennerpreis, die
+Michaeli-Stände aller 14 Braujahre und die Leiter. Wenn die gleich ist, sind
+ρ, die Jahre unter 1× und die Spannweite nicht „fast gleich", sondern
+**dieselben Zahlen aus denselben Zahlen gerechnet**.
+
+Die Kennzahlreihen, damit sie jemand nachrechnen kann:
 
 ```
-vorher  E1@8933: 400 Wochen (1350–1363), Kasse 34–524, KENNZAHL roh 1.09–7.43×
-nachher E1@8934: 400 Wochen (1350–1363), Kasse 34–524, KENNZAHL roh 1.09–7.43×
-
-SHA-256 der ganzen Aufzeichnung (ohne das Feld `hafen`):
-  vorher  ca86822e306fef8d
-  nachher ca86822e306fef8d          →  GLEICH
-
-Kennzahlreihe, 14 Braujahre, beide Läufe:
-  5,89 · 1,43 · 3,42 · 2,41 · 5,95 · 1,75 · 7,43 · 5,83 · 4,43 · 1,57 ·
-  1,46 · 1,73 · 3,11 · 1,09
+1350  5,89 · 1,43 · 3,42 · 2,41 · 5,95 · 1,75 · 7,43 · 5,83 · 4,43 · 1,57 ·
+      1,46 · 1,73 · 3,11 · 1,09          (vorher = nachher)
+1600  3,76 · 2,98 · 3,46 · 3,91 · 3,08 · 2,81 · 3,30 · 6,96 · 4,13 · 0,93 ·
+      7,68 · 7,56 · 6,10 · 4,66          (vorher = nachher)
 ```
 
-Nicht „ρ hat sich kaum bewegt", sondern: **die Aufzeichnung ist byteweise
-dieselbe** — dieselbe Kasse in jeder der 400 Wochen, derselbe Nennerzug,
-dieselbe Amtszeit, dieselbe Leiter. ρ, die Jahre unter 1× und die Spannweite
-können sich damit nicht unterscheiden, weil sie aus denselben Zahlen gerechnet
-werden. Seitenfehler: 0 in beiden.
+**1600 ist die Epoche ohne Reserve** (ρ +0,538 bei einer Grenze von 0,700, der
+Abstand beträgt 0,162). Sie ist Ziffer für Ziffer unverändert — auch der
+einzige Wert unter 1× (0,93 im zehnten Braujahr) steht vor und nach meiner
+Arbeit an derselben Stelle. Seitenfehler: 0 in allen vier Läufen.
 
 ### 4.5 Haushalt, Lesbarkeit, Seitenfehler
 

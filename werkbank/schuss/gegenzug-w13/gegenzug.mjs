@@ -74,6 +74,13 @@ const lese = () => seite.evaluate((muster) => {
     kasse, faesser: B.welt.vorrat.faesser.length, plaetze: B.welt.vorrat.plaetze,
     ansehen: B.welt.haus.ansehen, lage: B.lage.length,
     gegnerzuege: (B.welt.gegner[0] || {}).zuege || 0,
+    /* Wie viele Adressen haelt er, und wie reich ist er? Damit sich nachzaehlen
+       laesst, ob der neue Gegenzug ihn abraeumt (WELLE 13, R15). */
+    seineAdressen: B.welt.adressen.filter(function (a) {
+      return a.bindung && a.bindung.wem !== 'haus'; }).length,
+    meineAdressen: B.welt.adressen.filter(function (a) {
+      return a.bindung && a.bindung.wem === 'haus'; }).length,
+    seineKasse: (B.welt.gegner[0] || {}).kasse || 0,
     zuege
   };
 }, GEGENZUG.source);
@@ -103,6 +110,8 @@ for (let i = 0; i < N; i++) {
   const bezahlbar = greifbar.filter(z => z.preis === null || z.preis <= s.kasse);
   reihe.push({ n: i + 1, jahr: s.jahr, woche: s.woche, kasse: s.kasse,
     faesser: s.faesser, plaetze: s.plaetze, gegnerzuege: s.gegnerzuege,
+    seineAdressen: s.seineAdressen, meineAdressen: s.meineAdressen,
+    seineKasse: s.seineKasse,
     gefunden: s.zuege.length, greifbar: greifbar.length, bezahlbar: bezahlbar.length,
     billigst: bezahlbar.length ? Math.min(...bezahlbar.map(z => z.preis === null ? 0 : z.preis)) : null,
     wege: bezahlbar.map(z => z.zug),
@@ -131,6 +140,11 @@ const erg = {
   medianKasse: (() => { const v = reihe.map(r => r.kasse).sort((a, b) => a - b); return v.length ? v[v.length >> 1] : null; })(),
   medianFaesser: (() => { const v = reihe.map(r => r.faesser).sort((a, b) => a - b); return v.length ? v[v.length >> 1] : null; })(),
   gegnerzuege: reihe.length ? reihe[reihe.length - 1].gegnerzuege - reihe[0].gegnerzuege : 0,
+  seineAdressenAnfang: reihe.length ? reihe[0].seineAdressen : null,
+  seineAdressenEnde: reihe.length ? reihe[reihe.length - 1].seineAdressen : null,
+  meineAdressenEnde: reihe.length ? reihe[reihe.length - 1].meineAdressen : null,
+  seineKasseAnfang: reihe.length ? reihe[0].seineKasse : null,
+  seineKasseEnde: reihe.length ? reihe[reihe.length - 1].seineKasse : null,
   gedrueckt,
   seitenfehler: fehler.length, fehler: fehler.slice(0, 5),
   leereWochen: ohne.slice(0, 20).map(r => ({ n: r.n, jahr: r.jahr, woche: r.woche, kasse: r.kasse,
