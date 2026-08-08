@@ -276,8 +276,21 @@ wegzurunden, weil sie ein Befund ist und kein Versehen:
 > **2 Ladungen in 50 Wochen, 3 in 39, 4 in 8, keine in 3.**
 > Damit können höchstens drei Knöpfe den Verkehr tragen — und drei Knöpfe, die
 > allen Verkehr tragen, sind per Definition 100 % der drei häufigsten.
-> In 1884 und 1970, wo der Keller voller ist, stehen vier bis fünf Ladungen
-> nebeneinander, und **beide Latten fallen von selbst**.
+>
+> Gemessen, wie viele Fuhrpläne **mit Preisschild** in einer Woche
+> nebeneinanderstehen (je 100 Wochen, aus `wahl-der-woche` im Protokoll):
+>
+> | Zahl der Pläne | 0 | 1 | 2 | 3 | 4 |
+> |---|---|---|---|---|---|
+> | **1350** | 7 | 23 | **67** | 2 | 1 |
+> | **1600** | 4 | 4 | 46 | 31 | 15 |
+> | **1884** | 19 | 0 | 10 | 18 | **53** |
+> | **1970** | 34 | 10 | 1 | 8 | **47** |
+>
+> In 1350 stehen in **3 von 100** Wochen drei oder mehr Ladungen zur Wahl, in
+> 1884 in **71**, in 1970 in **55**. Genau in dieser Reihenfolge fallen auch
+> die Klickanteile — **die Latte misst hier die Fässer im Keller, nicht die
+> Knöpfe auf der Karte.**
 >
 > Die Latte misst an dieser Stelle also nicht mehr die Woche, sondern die
 > Knappheit — dieselbe, die der Kritiker als *„ein interessantes Spiel, das
@@ -290,9 +303,13 @@ wegzurunden, weil sie ein Befund ist und kein Versehen:
 **Was sich unabhängig von jeder Hand geändert hat** — die Zahl, die der
 Kritiker als Punkt 1 der zweiten Messlatte zählt:
 
-| | vorher | nachher |
-|---|---|---|
-| Wochen mit **Optionen mit Preisschild nebeneinander, die einander ausschließen**, außerhalb der Michaelitafel | 0 von 100 | **97 von 100** (E1) |
-| davon mit 3 oder mehr | 0 | 47 von 100 (E1) |
-| Züge der FUHRE, die **ohne Reiterklick** greifbar sind, Woche 1 | 0 | 2–4 Fuhrpläne + Sprung |
+| | vorher | 1350 | 1600 | 1884 | 1970 |
+|---|---|---|---|---|---|
+| Wochen mit **zwei oder mehr Optionen mit Preisschild nebeneinander, die einander ausschließen**, außerhalb der Michaelitafel | **0 von 100** | **70** | **92** | **81** | **56** |
+| davon mit drei oder mehr | 0 | 3 | 46 | 71 | 55 |
+| Züge der FUHRE, die **ohne einen Reiterklick** greifbar sind | **0** | 2–4 Fuhrpläne + Sprung + Übergabe | | | |
+
+Das ist der Punkt 1 der zweiten Messlatte, und er stand bisher **allein auf
+der Michaelitafel**, die einmal im Braujahr aufliegt. Er steht jetzt in 56 bis
+92 von 100 Wochen auch in der Woche selbst.
 
