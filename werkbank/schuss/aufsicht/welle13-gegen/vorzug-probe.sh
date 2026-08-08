@@ -35,7 +35,51 @@ HAFEN=${1:-8934}
 D=werkbank/schuss/aufsicht/welle13-gegen/vorzug
 mkdir -p "$D"
 
-./werkbank/schuss/aufsicht/messstand.sh probe/ohne-vorzug "$HAFEN" || exit 1
+# DER PROBE-COMMIT BAUT SICH SELBST. Er darf an keinem Zweig haengen — die
+# Fassung ohne Vorziehregel wird nie ausgeliefert —, und eine lose Marke haelt
+# den naechsten Container-Reset nicht aus (der Zwischenspeicher der Umgebung
+# nimmt `git push` fuer Tags nicht an, 403). Also wird er hier aus dem
+# aktuellen Kopf erzeugt, ohne den Arbeitsbaum anzufassen: Blob schreiben,
+# Baum daneben legen, Commit haengen. Wer das Skript nach einem Reset erneut
+# aufruft, bekommt denselben Stand zurueck.
+baue_probe () {
+  python3 - <<'PY'
+import subprocess, pathlib
+S = pathlib.Path('spiel/kern/runde.js')
+alt = S.read_text()
+suche = """  window.setTimeout = function (fn, ms) {
+    if (faengt() && typeof fn === 'function' && !(+ms > FRISTGRENZE)) {
+      return merke(fn, Array.prototype.slice.call(arguments, 2));
+    }
+    return oST.apply(window, arguments);
+  };"""
+ersatz = """  window.setTimeout = function (fn, ms) {
+    /* PROBE OHNE VORZIEHREGEL — nur fuer die Messfrage der Welle 12, nie
+       ausgeliefert. Hier stand die Umhuellung, die ein waehrend einer
+       Zeichenrunde bestelltes `setTimeout` in die Runde vorzieht. */
+    return oST.apply(window, arguments);
+  };"""
+if alt.count(suche) != 1:
+    raise SystemExit('Fundstelle in kern/runde.js nicht eindeutig — '
+                     'die Umhuellung hat sich geaendert, Probe neu schreiben.')
+S.write_text(alt.replace(suche, ersatz))
+blob = subprocess.run(['git', 'hash-object', '-w', 'spiel/kern/runde.js'],
+                      capture_output=True, text=True, check=True).stdout.strip()
+S.write_text(alt)                 # Arbeitsbaum sofort zurueck, immer
+print(blob)
+PY
+}
+
+BLOB=$(baue_probe) || { echo "Probe liess sich nicht bauen" >&2; exit 1; }
+git read-tree HEAD --index-output=/tmp/idx-ohnevorzug
+GIT_INDEX_FILE=/tmp/idx-ohnevorzug git update-index --cacheinfo "100644,$BLOB,spiel/kern/runde.js"
+TREE=$(GIT_INDEX_FILE=/tmp/idx-ohnevorzug git write-tree)
+PROBE=$(git commit-tree "$TREE" -p HEAD -m "PROBE ohne Vorziehregel — nur zum Messen")
+git tag -f probe/ohne-vorzug "$PROBE" >/dev/null
+echo "Probe-Commit $(git rev-parse --short "$PROBE") gebaut, ein Unterschied zu $(git rev-parse --short HEAD):"
+git diff --stat HEAD "$PROBE"
+
+./werkbank/schuss/aufsicht/messstand.sh "$PROBE" "$HAFEN" || exit 1
 
 for L in A B C D E F; do
   Z="$D/e1-$L.json"
