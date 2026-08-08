@@ -121,6 +121,29 @@
 }
 .gg-fass:disabled { cursor: default; opacity: 0.66; }
 .gg-fass.zuteuer .gg-fasstext i { color: var(--gg-warn); }
+
+/* WELLE 13, R15 — DER ZUKAUF SIEHT ANDERS AUS ALS DER EIGENE KELLER.
+   Liegt im Keller nicht genug, kostet derselbe Zug Geld statt Bier. Das darf
+   man am Knopf sehen, ohne den Zeiger daraufzulegen: die Unterzeile bekommt
+   die Tinte der Geldpreise und einen Strich darunter, so wie ein Betrag, der
+   aus der Lade geht. Der Knopf verschiebt sich dadurch nicht — es aendert
+   sich Farbe und Unterstreichung, nicht die Schriftgroesse und nicht die
+   Zeilen.
+
+   AUSDRUECKLICH `text-decoration` UND KEIN `border-bottom`: ein Rahmen macht
+   den Kasten hoeher, und ein hoeherer Kasten schiebt alles darunter im
+   `.gg-paar` um ein Pixel. Die Lehre der Aufsicht („Groessen bewegen die
+   Wirtschaft") gilt auch fuer ein Pixel — eine Unterstreichung kostet keine
+   Hoehe. */
+.gg-fass.zukauf .gg-fasstext i {
+  color: #6d3f14;
+  text-decoration: underline dotted rgba(109, 63, 20, 0.6);
+  text-underline-offset: 0.18em;
+}
+.gg-fass.zukauf.zuteuer .gg-fasstext i {
+  color: var(--gg-warn);
+  text-decoration-color: rgba(141, 47, 28, 0.55);
+}
 /* Wo das Fass schon steht, ist das Zeichen am Giebel ruhiger: er drueckt
    dort in diesem Braujahr nicht mehr. */
 .gg-schild.hingehalten .gg-schildtext b { opacity: 0.75; }

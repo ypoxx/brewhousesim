@@ -1485,7 +1485,7 @@
   /* Die Plaene selbst. Jeder baut NUR `Z.ladung` — nichts sonst. */
   var PLAN = {
     vorige: {
-      wort: 'Wie vorige Woche',
+      wort: 'wie zuletzt',
       satz: 'Dieselbe Verteilung wie bei der letzten Fuhre.',
       da: function () { return !!Z.vorige; },
       baue: function () {
@@ -1498,7 +1498,7 @@
       }
     },
     durst: {
-      wort: 'Den Durstigen zuerst',
+      wort: 'nach Durst',
       satz: 'Die Faustregel des Fuhrmanns: wer am längsten wartet, wird zuerst beliefert.',
       da: function () { return true; },
       baue: function () {
@@ -1508,7 +1508,7 @@
       }
     },
     rechnung: {
-      wort: 'Den Zahlern zuerst',
+      wort: 'nach Rechnung',
       satz: 'Der Wagen fährt dorthin, wo das Fass am meisten bringt — der Durst der anderen wächst weiter.',
       da: function () { return haeuser().length > 1; },
       baue: function () {
@@ -1520,13 +1520,13 @@
       }
     },
     nah: {
-      wort: 'Nur die kurzen Wege',
+      wort: 'kurze Wege',
       satz: 'Wenig Fuhrlohn, wenig Weg. Was weiter weg wohnt, wartet.',
       da: function () { return haeuser().length > 1; },
       baue: function () { fuelleNachRang(function (a) { return -a.km * 10 + Math.min(3, durst(a)); }); }
     },
     mager: {
-      wort: 'Den mageren Häusern zuerst',
+      wort: 'die mageren Häuser',
       satz: 'Wer drei magere Jahre hat, ist weg. Diese Fuhre hält die Adresse — sie bringt dafür weniger.',
       da: function () {
         return haeuser().some(function (a) { return inNot(a) >= 10; });
@@ -1536,7 +1536,7 @@
       }
     },
     probe: {
-      wort: 'Ein Fass ohne Rechnung',
+      wort: 'ohne Rechnung',
       satz: 'Ein reifes Fass an einen Wirt, der nichts mehr nimmt — kein Preis, kein Ungeld. '
           + 'Vier davon holen ihn zurück.',
       da: function () { return !!probeKandidat(); },
@@ -3629,44 +3629,52 @@
 
     var k = B.el('div', 'fu-woche');
     var lage = wochenLage();
-    var kopf = B.el('div', 'fu-wochenkopf');
-    kopf.appendChild(B.el('b', null, 'DIE WOCHE ' + B.welt.zeit.woche + '/' + B.uhr.WOCHEN_IM_JAHR));
-    kopf.appendChild(B.el('span', 'fu-wochensatz' + (lage ? ' dringend' : ''),
-      lage ? lage.satz
-           : (Z.sprungBericht ? Z.sprungBericht + '.'
-              : 'Nichts steht an. Der Wagen fährt, wie er zuletzt gefahren ist.')));
-    k.appendChild(kopf);
+    var reihe = B.el('div', 'fu-wochenwahl');
 
-    /* DAS GUTE ENDE, wenn es liegt — als erstes und in eigener Farbe.
+    /* VIER CHIPS, NICHT MEHR. Die Karte ist 33 x 10,2 Prozent gross und
+       traegt zwei Zeilen Knoepfe; was darueber hinausgeht, stuende ueber dem
+       eigenen Kasten. Der Platz wird deshalb von oben verteilt: das gute
+       Ende zuerst, dann der Sprung, dann so viele Fuhrplaene, wie noch
+       hineingehen. */
+    var frei = 4;
+    var weite = sprungWeite();
+
+    /* DAS GUTE ENDE, wenn es liegt — zuerst und in eigener Farbe.
        Auflage A3: „Solange das Angebot liegt, wird es nicht als einer von elf
        gleich aussehenden Reitern gezeigt." */
     if (Z.uebergabe && !B.welt.zeit.ende) {
-      var u = uebergabeDef();
-      var rest = Math.max(1, Z.uebergabe.frist === undefined ? UEBERGABE_WOCHEN : Z.uebergabe.frist);
-      var band = B.el('div', 'fu-wochenuebergabe');
-      band.appendChild(B.el('b', null, u.wort.toUpperCase()));
-      band.appendChild(B.el('span', null, 'Das Haus steht gut genug, um es weiterzugeben — noch '
-        + rest + (rest === 1 ? ' Woche' : ' Wochen') + '.'));
-      band.appendChild(B.knopf({
-        text: Z.uebergabeZu ? 'Das Angebot aufschlagen' : 'Das Angebot lesen',
+      var ur = Math.max(1, Z.uebergabe.frist === undefined ? UEBERGABE_WOCHEN : Z.uebergabe.frist);
+      reihe.appendChild(B.knopf({
+        text: uebergabeDef().wort.toUpperCase() + ' · noch ' + ur
+            + (ur === 1 ? ' Woche' : ' Wochen'),
         zug: 'fuhre:uebergabe-auf', klasse: 'fu-chip fu-gut',
-        titel: 'Das einzige Ende, nach dem am nächsten Morgen wieder Feuer unter der Pfanne brennt.',
+        titel: 'Das einzige Ende, nach dem am nächsten Morgen wieder Feuer unter der Pfanne '
+             + 'brennt. Ein Klick legt das Angebot auf den Tisch.',
         tu: function () {
           Z.uebergabeZu = false;
           Z.sommerOffen = false;
           B.sende('zeichne', { grund: 'fuhre-uebergabe-auf' });
         }
       }));
-      k.appendChild(band);
+      frei--;
     }
 
-    var reihe = B.el('div', 'fu-wochenwahl');
-    var plaene = planListe();
+    if (weite >= 2) {
+      reihe.appendChild(B.knopf({
+        text: 'Ruhige Wochen fahren lassen · bis zu ' + weite,
+        zug: 'fuhre:sprung', klasse: 'fu-chip fu-sprung',
+        titel: 'Der Fuhrmann fährt weiter wie zuletzt, ohne dass jemand hinsieht. '
+             + 'Angehalten wird, sobald wieder etwas zu entscheiden ist — spätestens zu '
+             + 'Michaeli. Was dabei geschah, steht danach hier und in der Chronik.',
+        tu: function () { springeWochen(weite); }
+      }));
+      frei--;
+    }
 
+    var plaene = planListe().slice(0, Math.max(0, frei));
     plaene.forEach(function (p) {
       reihe.appendChild(B.knopf({
-        text: 'Fahren: ' + p.wort.toLowerCase() + ' · ' + B.welt.menge(p.fass) + ' · '
-            + p.halte + (p.halte === 1 ? ' Halt' : ' Halte'),
+        text: 'Fahren: ' + p.wort + ' · ' + B.welt.menge(p.fass),
         zug: 'fuhre:plan:' + p.k, preis: p.netto,
         klasse: 'fu-chip' + (lage && lage.art === p.k ? ' fu-rat' : ''),
         titel: p.satz + ' — ' + B.welt.menge(p.fass) + ' an ' + p.halte
@@ -3678,28 +3686,18 @@
       }));
     });
 
-    /* Keine Ladung moeglich UND nichts zu entscheiden: dann wird die Zeit
-       erzaehlt statt geklickt. */
-    var weite = plaene.length ? (lage ? 0 : sprungWeite()) : sprungWeite();
-    if (weite >= 2) {
-      reihe.appendChild(B.knopf({
-        text: (plaene.length ? 'Ruhige Wochen fahren lassen · bis zu ' : 'Warten, bis ein Fass reif ist · bis zu ')
-            + weite + ' Wochen',
-        zug: 'fuhre:sprung', klasse: 'fu-chip fu-sprung',
-        titel: 'Der Fuhrmann fährt weiter wie zuletzt, ohne dass jemand hinsieht. '
-             + 'Angehalten wird, sobald wieder etwas zu entscheiden ist — '
-             + 'spätestens zu Michaeli. Was dabei geschah, steht danach hier und in der Chronik.',
-        tu: function () { springeWochen(weite); }
-      }));
-    }
+    var kopf = B.el('div', 'fu-wochenkopf');
+    kopf.appendChild(B.el('b', null, 'DIE WOCHE ' + B.welt.zeit.woche + '/' + B.uhr.WOCHEN_IM_JAHR));
+    kopf.appendChild(B.el('span', 'fu-wochensatz' + (lage ? ' dringend' : ''),
+      lage ? lage.satz
+        : (!plaene.length
+            ? (freieFaesser().length
+                ? 'Kein Haus nimmt diese Woche ein Fass. Was zu tun ist, steht auf DIE HÄUSER.'
+                : 'Kein reifes Fass im Keller — der Sud fällt von selbst.')
+            : (Z.sprungBericht ? Z.sprungBericht + '.'
+               : 'Nichts steht an. Der Wagen fährt, wie er zuletzt gefahren ist.'))));
 
-    if (!plaene.length && weite < 2) {
-      reihe.appendChild(B.el('div', 'fu-wochenleer',
-        freieFaesser().length
-          ? 'Kein Haus nimmt diese Woche ein Fass. Was zu tun ist, steht auf DIE HÄUSER.'
-          : 'Kein reifes Fass im Keller. Der Sud fällt von selbst — WEITER schaltet die Woche.'));
-    }
-
+    k.appendChild(kopf);
     k.appendChild(reihe);
     fach.appendChild(k);
   }
@@ -3902,6 +3900,16 @@
       text: 'Weiterbrauen — noch ein Braujahr', zug: 'fuhre:uebergabe:nein', klasse: 'gross flach',
       titel: 'Das Angebot kommt zum nächsten Michaeli wieder, solange das Haus steht.',
       tu: schlageUebergabeAus
+    }));
+    /* Weglegen ist keine Antwort. Der Knopf steht hier, damit der Weg, den
+       R14 einem Reiterklick gibt, auch auf dem Blatt selbst zu sehen ist —
+       und damit niemand ablehnt, bloss um den Hof wiederzusehen. */
+    w.appendChild(B.knopf({
+      text: 'Beiseitelegen — das Angebot bleibt liegen', zug: 'fuhre:uebergabe-zu',
+      klasse: 'fu-klein',
+      titel: 'Das Blatt geht weg, das Angebot nicht. Es steht weiter auf der Wochenkarte, '
+           + 'mit der Frist, und ein Klick holt es zurück.',
+      tu: function () { Z.uebergabeZu = true; B.sende('zeichne', { grund: 'fuhre-uebergabe-zu' }); }
     }));
     bl.appendChild(w);
     bl.appendChild(B.el('div', 'fu-ausgang-fuss',
@@ -4444,6 +4452,39 @@
       'Von Georgi ' + s.jahr + ' bis Michaeli — der Sommer und der Zahltag'));
     kopf.appendChild(B.el('div', 'fu-sommer-kurz', sommerZeile(s)));
     bl.appendChild(kopf);
+
+    /* WELLE 13, R12 — DAS GUTE ENDE STEHT DA, WO DER SPIELER OHNEHIN
+       HINSIEHT.
+
+       Das Uebergabeblatt wird zu Michaeli gesetzt (`pruefeUebergabe` am Ende
+       von `jahr:`), gezeichnet wird es aber erst, wenn dieses Blatt weg ist
+       — also ab Woche 2. Genau das hat der Kritiker gesehen: „Woche 2, 3 und
+       4 jedes Jahres, 15 von 284 Wochen, null Mal bemerkt." Die Georgi-Tafel
+       ist das eine Blatt, das in jedem Braujahr von selbst aufliegt. Also
+       nennt sie das Angebot beim Namen, in eigener Farbe, mit der Frist. */
+    if (Z.uebergabe && !Z.antrag && !B.welt.zeit.ende) {
+      var uu = uebergabeDef();
+      var ur = Math.max(1, Z.uebergabe.frist === undefined ? UEBERGABE_WOCHEN : Z.uebergabe.frist);
+      var band = B.el('div', 'fu-sommer-uebergabe');
+      band.appendChild(B.el('b', null, uu.wort.toUpperCase() + ' · ' + Z.uebergabe.jahr));
+      band.appendChild(B.el('span', null,
+        'Das Haus steht gut genug, um es weiterzugeben — '
+        + (Z.uebergabe.haeuser === 1 ? 'ein Haus der Stadt führt sein Bier'
+           : Z.uebergabe.haeuser + ' Häuser der Stadt führen sein Bier') + ', '
+        + B.welt.menge(Z.uebergabe.verladen) + ' sind hinausgegangen. '
+        + 'Das Angebot liegt noch ' + ur + (ur === 1 ? ' Woche' : ' Wochen') + '. '
+        + 'Es ist das einzige Ende, nach dem am nächsten Morgen wieder angestellt wird.'));
+      band.appendChild(B.knopf({
+        text: 'Die Übergabe vor dem Rat ansehen', zug: 'fuhre:sommer-uebergabe',
+        klasse: 'gross fu-gut',
+        titel: 'Legt dieses Blatt beiseite und schlägt das Angebot auf.',
+        tu: function () {
+          Z.uebergabeZu = false;
+          schliesseSommer('fuhre-sommer-uebergabe');
+        }
+      }));
+      bl.appendChild(band);
+    }
 
     if (weit) bl.appendChild(sommerBericht(s, e));
 

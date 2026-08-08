@@ -292,12 +292,24 @@
          eigenen. Es ist der Schalter, mit dem gemessen wird; sein
          Versprechen lautet „schreibt nichts und laesst nichts liegen", und
          die Abnahme prueft den Speicher als Ganzes. Wer nur eine einzelne
-         Partie loswerden will, nimmt den Knopf „Neue Partie". */
+         Partie loswerden will, nimmt den Knopf „Neue Partie".
+         DAS RAEUMEN STEHT VOR JEDER ANDEREN PRUEFUNG: es muss auch dann
+         geschehen, wenn die Welt gar nicht aufgebaut ist. */
       if (modus === 'neu') {
         alleSchluessel(s).forEach(function (k) {
           try { s.removeItem(k); zahl.verworfen++; } catch (e) { merke('nicht zu loeschen: ' + k); }
         });
         vorhanden = false;
+        return false;
+      }
+
+      /* Ist die Welt gar nicht aufgebaut (die Notfallwelt aus kern/start.js
+         steht), wird nichts eingesetzt und nichts geschrieben — in eine
+         halbe Welt einen ganzen Stand zu giessen, macht sie nicht ganzer. */
+      if (!B.welt || !B.welt.haus || !B.welt.zeit || !B.welt.vorrat
+          || !B.welt.adressen || !B.welt.gegner || !B.welt.chronik) {
+        modus = 'aufnahme';
+        merke('keine aufgebaute Welt — Spielstand bleibt aus');
         return false;
       }
 

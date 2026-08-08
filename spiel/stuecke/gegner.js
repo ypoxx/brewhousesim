@@ -1544,20 +1544,33 @@
     var a = adresse(k), hh = ep().hinhalten;
     if (!a || !hh || !hinhaltMoeglich(k)) return;
     var n = hinhaltFass();
-    if (fassImKeller() < n) {
-      Z.meldung = hh.name + ' beim ' + a.name + ': dafür müssten ' + B.welt.menge(n)
-        + ' im ' + (B.welt.epoche().lager || 'Keller') + ' liegen. Es liegt nichts da.';
+    /* WELLE 13, R15: was im Keller liegt, geht aus dem Keller; was fehlt,
+       wird zugekauft. Erst wenn auch die Lade das nicht traegt, ist der Zug
+       heute nicht zu haben — und DANN sagt die Meldung eine Zahl statt eines
+       Achselzuckens. */
+    var ausKeller = Math.min(n, fassImKeller());
+    var fehlt = n - ausKeller;
+    var zu = fehlt ? zukaufPreis(n) : 0;
+    if (fehlt && !B.welt.zahle(zu, hh.name + ' an ' + a.name + ' — ' + B.welt.menge(fehlt)
+                               + ' zugekauft', 'spieler')) {
+      Z.meldung = hh.name + ' beim ' + a.name + ': im '
+        + (B.welt.epoche().lager || 'Keller') + ' liegen ' + B.welt.menge(ausKeller)
+        + ', gebraucht werden ' + B.welt.menge(n) + '. Zukaufen kostet '
+        + B.welt.geld(zu) + ', in der Lade liegen ' + B.welt.geld(B.welt.haus.kasse) + '.';
       return neuZeichnen('gegner-leer');
     }
-    B.welt.nimmHeraus(n);
+    if (ausKeller) B.welt.nimmHeraus(ausKeller);
     Z.hinhalt[k] = jahr();
     /* Ohne 'menge': DIE FUHRE liest das Protokoll und zaehlt jeden Eintrag mit
        Adresse UND Menge als Lieferung. Ein Fass, das der Wirt geschenkt
        bekommt, ist keine Lieferung — es stuende sonst in fremder Buchfuehrung
-       als Umsatz, den es nie gab. Die Menge steht im Text. */
+       als Umsatz, den es nie gab. Die Menge steht im Text.
+       Der Zukauf steht mit seinem Preis darin: er ist Geld, das das Haus
+       ausgegeben hat, und Geld gehoert in die Buchfuehrung. */
     B.welt.protokolliere({ wer: 'spieler',
-      was: hh.name + ' an ' + a.name + ' · ' + B.welt.menge(n),
-      preis: 0, adresse: k });
+      was: hh.name + ' an ' + a.name + ' · ' + B.welt.menge(n)
+         + (fehlt ? ' (' + B.welt.menge(fehlt) + ' zugekauft)' : ''),
+      preis: fehlt ? -zu : 0, adresse: k });
 
     var folge = [];
     if (Z.absicht[k]) { Z.absicht[k].bis += (hh.wochen || 3); folge.push('er vertagt'); }
@@ -1565,12 +1578,19 @@
     if (Z.bindung[k]) folge.push('bis Michaeli drückt er hier den Preis nicht mehr');
 
     B.welt.schreibe(hh.name + ' an ' + a.name + ': ' + hh.satz
-      + ' Es kostet ' + B.welt.menge(n) + ' aus dem eigenen Vorrat und keinen '
-      + B.welt.waehrung().name + '.', 'gegner');
+      + ' Es kostet ' + B.welt.menge(n)
+      + (fehlt
+         ? (ausKeller ? ' — ' + B.welt.menge(ausKeller) + ' aus dem eigenen Vorrat, '
+                      : ' — nichts davon aus dem eigenen Vorrat, ')
+           + B.welt.menge(fehlt) + ' auf die Schnelle zugekauft für ' + B.welt.geld(zu) + '.'
+         : ' aus dem eigenen Vorrat und keinen ' + B.welt.waehrung().name + '.'), 'gegner');
     B.ton.spiele('gegner:hinhalten', { ort: a.ort });
     Z.wechsel[k] = { takt: takt(), an: null, von: null, hinhalt: true };
-    Z.meldung = a.name + ': ' + hh.marke + ' — ' + B.welt.menge(n) + ' aus dem Vorrat, '
-      + (folge.length ? folge.join(', ') + '.' : 'der Wirt lässt ihn warten.')
+    Z.meldung = a.name + ': ' + hh.marke + ' — ' + B.welt.menge(n)
+      + (fehlt
+         ? (ausKeller ? ', davon ' + B.welt.menge(fehlt) : '') + ' zugekauft für ' + B.welt.geld(zu)
+         : ' aus dem Vorrat')
+      + ', ' + (folge.length ? folge.join(', ') + '.' : 'der Wirt lässt ihn warten.')
       + ' Einmal im Braujahr je Adresse.';
     neuZeichnen('gegner-hinhalt');
   }
@@ -2194,30 +2214,57 @@
      und man kann nur eine von beiden haben.
      --------------------------------------------------------------------- */
 
-  /* Der Knopf, der Bier kostet statt Geld. */
+  /* Der Knopf, der Bier kostet statt Geld — und, wenn kein Bier da ist, den
+     Bruchteil eines Geldes, das die Lade traegt.
+
+     WELLE 13, R15. Bis hierher hiess der Knopf bei leerem Keller „Vorrat
+     reicht nicht" und war abgeschaltet. Das war ehrlich und trotzdem falsch:
+     ein abgeschalteter Knopf ist die Aussage „heute gibt es gegen ihn
+     nichts", und diese Aussage stand in fast jeder Woche des Kritikers da.
+     Jetzt sagt derselbe Knopf, WAS es kostet, das Fehlende auf die Schnelle
+     zu bekommen — und schaltet sich erst ab, wenn auch das nicht geht.
+
+     Der Preis steht als `data-preis` am Knopf. Das ist keine Zierde: die
+     zweite Messlatte zaehlt Optionen mit Preisschild, die NEBENEINANDER
+     stehen und einander ausschliessen, und hier stehen sie jetzt wirklich
+     nebeneinander — oben „abloesen 66 Pf" (endgueltig, teuer), unten
+     „1 Fass zukaufen · 12 Pf" (vertagt drei Wochen, billig). Aus einer Kasse,
+     an einem Giebel, und man bekommt nur eine von beiden. */
   function fassKnopf(a) {
     var k = a.schluessel, hh = ep().hinhalten;
     if (!hh) return null;
     var n = hinhaltFass();
     var geht = hinhaltMoeglich(k);
-    var da = fassImKeller() >= n;
+    var getan = Z.hinhalt[k] === jahr();
+    var ausKeller = Math.min(n, fassImKeller());
+    var fehlt = n - ausKeller;
+    var zu = fehlt ? zukaufPreis(n) : 0;
+    var traegt = !fehlt || B.welt.kann(zu);
     var b = document.createElement('button');
     b.type = 'button';
-    b.className = 'gg-fass' + (geht && da ? '' : ' zuteuer');
+    b.className = 'gg-fass' + (geht && traegt ? '' : ' zuteuer') + (fehlt ? ' zukauf' : '');
     b.setAttribute('data-zug', 'gegner:hinhalten:' + k);
     b.setAttribute('data-adr', k);
     b.setAttribute('data-fass', String(n));
-    b.disabled = !geht || !da;
+    if (fehlt) b.setAttribute('data-preis', String(-zu));
+    b.disabled = !geht || !traegt;
     b.title = hh.name + ' beim ' + a.name + '. ' + hh.satz
-      + ' Kostet ' + B.welt.menge(n) + ' aus dem eigenen Vorrat und keinen '
-      + B.welt.waehrung().name + '. Einmal im Braujahr je Adresse.'
-      + (Z.hinhalt[k] === jahr() ? ' In diesem Braujahr schon geschehen.' : '')
-      + (da ? '' : ' Es liegt nicht genug im ' + (B.welt.epoche().lager || 'Keller') + '.');
+      + ' Kostet ' + B.welt.menge(n)
+      + (fehlt
+         ? (ausKeller ? ' — ' + B.welt.menge(ausKeller) + ' aus dem eigenen Vorrat, '
+                      : ' — nichts davon liegt im ' + (B.welt.epoche().lager || 'Keller') + ', ')
+           + B.welt.menge(fehlt) + ' auf die Schnelle zugekauft für ' + B.welt.geld(zu)
+           + ' (ein Drittel über dem laufenden Satz).'
+         : ' aus dem eigenen Vorrat und keinen ' + B.welt.waehrung().name + '.')
+      + ' Einmal im Braujahr je Adresse.'
+      + (getan ? ' In diesem Braujahr schon geschehen.' : '')
+      + (traegt ? '' : ' In der Lade liegen ' + B.welt.geld(B.welt.haus.kasse) + '.');
     var t = B.el('span', 'gg-fasstext');
-    t.appendChild(B.el('b', null, Z.hinhalt[k] === jahr() ? hh.marke : hh.kurz));
-    t.appendChild(B.el('i', null, Z.hinhalt[k] === jahr()
-      ? 'läuft bis Michaeli' : (da ? B.welt.menge(n) + ' statt Geld'
-                                  : 'Vorrat reicht nicht')));
+    t.appendChild(B.el('b', null, getan ? hh.marke : hh.kurz));
+    t.appendChild(B.el('i', null, getan
+      ? 'läuft bis Michaeli'
+      : (fehlt ? B.welt.menge(fehlt) + ' zukaufen · ' + B.welt.geld(zu)
+               : B.welt.menge(n) + ' statt Geld')));
     b.appendChild(t);
     b.addEventListener('click', function () { hinhalten(k); });
     return b;
@@ -2629,13 +2676,44 @@
       : 'Ablösung ' + B.welt.geld(l[0]) + ' bis ' + B.welt.geld(l[l.length - 1]);
   }
 
+  /* Die Zahl in Worten — an drei Orten dieselbe Form, damit sie nirgends
+     nach etwas anderem aussieht. */
+  function zaehlerWort() {
+    return Z.zaehler + (Z.zaehler === 1 ? ' Zug' : ' Züge');
+  }
+
   /* --- das Laufband: OHNE DICH GESCHEHEN -------------------------------- */
   function zeichneBand(fach) {
     var band = B.el('div', 'gg-band');
+    /* WELLE 13, AUFLAGE R16 — DIE ZAHL WANDERT NICHT MITTEN IN DER PARTIE.
+
+       Gemessen mit `werkbank/schuss/spiel-w12/gegnerblick.mjs` (spielt 50
+       Wochen, ohne einen Reiter anzufassen), Saat 1350, Fenster 1600x900:
+       der Reiter trug in Woche 1 bis 30 „OHNE DICH GESCHEHEN 19 Züge" und ab
+       1351/1 in ALLEN zwanzig weiteren Wochen nur noch „OHNE DICH GESCHEHEN".
+
+       DIE URSACHE, nachgemessen und nicht geraten: DIE STADT baut die
+       Aufschrift eines Reiters aus zwei Stuecken — `.wort` aus der ersten
+       Zeile des Brettkopfes, `.zahl` aus der zweiten. Beide standen richtig
+       im DOM, auch in 1351 (`<span class="zahl" title="20 Züge">20 Züge`).
+       Nur wird die Reiterzeile ab dem zweiten Braujahr schmal — es kommen
+       Bretter dazu —, und `stil/stadt.css:349` blendet dann `.zahl` aus:
+       `.stadt-werkbank.schmal .knopf.stadt-reiter .zahl { display: none; }`.
+       Das ist eine richtige Entscheidung DER STADT (zehn Reiter in einer
+       Zeile koennen nicht alle zwei Zeilen tragen) und keine, an der ich
+       drehe — `stil/stadt.css` gehoert mir nicht.
+
+       Was mir gehoert, ist die Aufschrift meines eigenen Bretts. DIE STADT
+       hat dafuer eine Tuer: `beschriftung()` liest `data-reiter`, wenn es
+       dasteht, und nimmt es als Titel, ungekuerzt und ohne die 30-Zeichen-
+       Grenze der abgeleiteten Fassung. Also steht die Zahl ab jetzt im
+       TITEL — in `.wort`, das nie ausgeblendet wird — und bleibt zusaetzlich
+       im Kopf des Bretts stehen, wo sie immer stand. Beide Orte, wie die
+       Auflage es verlangt, und keiner davon fremdes DOM. */
+    band.setAttribute('data-reiter', 'Ohne dich geschehen · ' + zaehlerWort());
     var kopf = B.el('div', 'gg-bandkopf');
     kopf.appendChild(B.el('span', 'gg-bandtitel', 'Ohne dich geschehen'));
-    kopf.appendChild(B.el('span', 'gg-bandzahl',
-      Z.zaehler + (Z.zaehler === 1 ? ' Zug' : ' Züge')));
+    kopf.appendChild(B.el('span', 'gg-bandzahl', zaehlerWort()));
     if (Z.wocheZuege > 0) {
       var neu = B.el('span', 'gg-bandneu', 'diese Woche ' + Z.wocheZuege);
       neu.title = 'So viele Züge sind seit dem letzten Klick auf WEITER gefallen — '
@@ -2960,14 +3038,20 @@
           tu: function () { loeseAb(a.schluessel); }
         }));
       }
-      /* Die billige Antwort daneben, in der anderen Waehrung. */
+      /* Die billige Antwort daneben, in der anderen Waehrung — und, wenn der
+         Keller sie nicht hergibt, mit dem Preis des Zukaufs am Knopf (R15). */
       if (ep().hinhalten) {
         kk.appendChild(B.knopf({
           text: ep().hinhalten.name + ' · ' + B.welt.menge(hinhaltFass()),
           zug: 'gegner:hinhalten-blatt:' + a.schluessel,
-          aus: !hinhaltMoeglich(a.schluessel) || fassImKeller() < hinhaltFass(),
+          preis: zukaufPreis(hinhaltFass()) ? -zukaufPreis(hinhaltFass()) : 0,
+          aus: !hinhaltMoeglich(a.schluessel) || !hinhaltBezahlbar(a.schluessel),
           titel: ep().hinhalten.satz + ' Kostet Bier, kein Geld — und bis Michaeli '
-               + 'drückt er an dieser Adresse den Preis nicht mehr.',
+               + 'drückt er an dieser Adresse den Preis nicht mehr.'
+               + (zukaufPreis(hinhaltFass())
+                  ? ' Im ' + (B.welt.epoche().lager || 'Keller') + ' liegt zu wenig: '
+                    + B.welt.menge(fassFehlt(hinhaltFass())) + ' werden für '
+                    + B.welt.geld(zukaufPreis(hinhaltFass())) + ' zugekauft.' : ''),
           tu: function () { hinhalten(a.schluessel); }
         }));
       }
@@ -3064,9 +3148,14 @@
           ka.appendChild(B.knopf({
             text: ep().hinhalten.name + ' · ' + B.welt.menge(hinhaltFass()),
             zug: 'gegner:hinhalten-blatt:' + kk,
-            aus: !hinhaltMoeglich(kk) || fassImKeller() < hinhaltFass(),
+            preis: zukaufPreis(hinhaltFass()) ? -zukaufPreis(hinhaltFass()) : 0,
+            aus: !hinhaltMoeglich(kk) || !hinhaltBezahlbar(kk),
             titel: ep().hinhalten.satz + ' Kostet Bier, kein Geld — und schiebt ihn '
-                 + (ep().hinhalten.wochen || 3) + ' Wochen hinaus.',
+                 + (ep().hinhalten.wochen || 3) + ' Wochen hinaus.'
+                 + (zukaufPreis(hinhaltFass())
+                    ? ' Im ' + (B.welt.epoche().lager || 'Keller') + ' liegt zu wenig: '
+                      + B.welt.menge(fassFehlt(hinhaltFass())) + ' werden für '
+                      + B.welt.geld(zukaufPreis(hinhaltFass())) + ' zugekauft.' : ''),
             tu: function () { hinhalten(kk); }
           }));
         }
