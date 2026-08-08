@@ -1,6 +1,6 @@
 {
- "stand": "2026-08-08T15:25:59+00:00",
- "phase": "Welle 13: alle vier Builder haben abgegeben, die Abnahme der Aufsicht laeuft am eingefrorenen Stand b098fc6. DER RAHMEN hat den Spielstand gebaut — nach zwoelf Wochen und einem Neuladen stimmen 15 von 15 Feldern in allen vier Epochen, und ?neu=1 haelt die Wiederholbarkeit frei. DIE JAHRESTAFEL hat den luegenden Knopf geheilt (die Abfrage suchte ein Element, das eine Zeile vorher geloescht worden war), die Tafel liegt an 10 von 10 Braujahren von selbst auf, ein fremder Reiterklick nimmt das Blatt in 16 von 16 Faellen weg, 51 Wortbrueche auf 0. DIE WOCHE hat gefunden, dass die Woche ohne Reiterklick gar nicht spielbar war — 94 Prozent der Klicks fielen auf WEITER —, und den haeufigsten Knopf auf 32,5 / 36,8 / 26,8 / 17,0 Prozent gebracht; Wochen mit zwei einander ausschliessenden Preisoptionen von 0 auf 70 / 92 / 81 / 56 von 100. DER GEGENZUG hat die Wochen ohne bezahlbaren Gegenzug von 55/60/0/19 auf 9/0/0/1 gesenkt, ohne dass sich die Partie um ein Byte bewegt: acht Laeufe zu 400 Wochen, vorher gegen nachher, dieselbe Pruefsumme in allen vier Epochen. Jetzt misst die Aufsicht selbst nach, zuerst die Wiederholbarkeit, danach kommen die vier blinden Kritiker.",
+ "stand": "2026-08-08T16:05:55+00:00",
+ "phase": "Phase 0 des Umsetzungsplans laeuft. Die Welle-13-Abnahme (T0.2) steht bei 12 von 15 Laeufen: 1350 sechsfach, 1600 und 1884 je dreifach, je Epoche EINE Pruefsumme, und die Latte 2 haelt in allen drei Schnitten — 1350 -0,259/-0,236/-0,389, 1600 +0,406/+0,489/+0,538, 1884 +0,343/+0,484/+0,495. Die drei 1970er Laeufe laufen gerade; danach die Gegenmessung und erst dann die vier blinden Kritiker. Nebenher sind vier Tickets durch: der Release-Schnitt trennt den Deploy vom Repo (375 MB auf 24 MB, kein Werkbank-Urteil mehr oeffentlich), der Kurzlauf ist geeicht (100 Wochen genuegen als rho-Waechter — beide bekannten Aenderungen, die rho bewegt haben, liefen in Woche 32 und 61 aus dem Ruder; er gilt als Veto, nicht als Freispruch), die Nachtmessung faehrt die Latte 2 kuenftig ohne Modell daneben, und der Repo-Ballast ist aus dem Deploy.",
  "latte": "BILD: Playwright-Aufnahme 2752x1536 gegen zielbild/0X-JAHR.jpg, blind, vier Epochen derselbe Ort. SPIEL: Kritiker zählt am Bildschirm Preisschilder nebeneinander, unwiderrufliche Festlegungen, Züge des Gegners ohne ihn — plus Barschaft gegen Preis des nächsten sinnvollen Zuges. Ziel dieser Welle, hart: |rho| unter 0,7 in allen vier Epochen und höchstens ein Jahr von sechs unter 1x. TON: 30 Sekunden blind, Epoche und Vorgang benannt. NEU als vierte Prüfung: erreichbar muss jeder aktive Zug sein — werkbank/schuss/eichung/erreichbar.mjs. Sperrliste design/PRUEFUNG.md disqualifiziert.",
  "zahlen": {
   "Epochen": "4",
@@ -143,10 +143,6 @@
   }
  ],
  "chronik": [
-  {
-   "zeit": "2026-08-01T21:31:42+00:00",
-   "text": "DIE EICHUNG, Zwischenstand (bescheidener Spielstil, 300 Wochen je Epoche, Saat 1350, echte Mausklicks): Angebote am Michaelitag aktiv+anklickbar in den ersten fuenf Braujahren — E1 3/3/4/1/2, E2 3/1/3/1/0, E3 4/3/4/3/0, E4 3/2/1/2/1. Sieben von zwanzig Michaelitagen liegen unter zwei. Kennzahl (eigener Nenner nach 18): E1 schwankt 5,6-17,9 (rho +0,12), E2 faellt 7,3 auf 0,13 und liegt sechs Jahre unter 1x (rho -0,81), E3 1,3-18,9 (rho -0,62), E4 steigt 4,9 auf 20,4 (rho +0,89)."
-  },
   {
    "zeit": "2026-08-01T21:35:42+00:00",
    "text": "DIE EICHUNG, Runde 1, ZURUECK — 1.975 gespielte Wochen am Bildschirm (Playwright, echte Mausklicks, elementFromPoint, Saat 1350, kein Seitenfehler, kein Sackgassenzustand). BESCHEIDENER STIL, erste fuenf Braujahre, Angebote aktiv+anklickbar: E1 3/3/4/1/2 · E2 3/1/3/1/0 · E3 4/3/4/3/0 · E4 3/2/1/2/1 — 13 von 20 Michaelitagen tragen zwei Karten, sieben nicht. Kasse beim Aufgehen des Blattes: E1 112/201/238/185/210 Pf, E2 640/1.061/690/602/93 fl, E3 14.250/21.971/12.790/9.449/481 M, E4 86.000/77.507/42.408/89.718/41.027 DM. Kontrolle: KEIN einziger nicht gesperrter Knopf wurde von elementFromPoint verfehlt — aktiv und anklickbar sind hier dasselbe."
@@ -942,6 +938,10 @@
   {
    "zeit": "2026-08-08T15:25:59+00:00",
    "text": "Abnahme Welle 13, zehn von fuenfzehn Laeufen: 1350 sechsmal eine Pruefsumme, 1600 dreimal eine Pruefsumme, beide ziffernweise die Zahlen der Welle 12. 1884 ist gewandert — rho von +0,169 auf +0,495, Jahre unter 1x von 0 auf 2 von 14. Beide Bedingungen halten, aber die Reserve ist von 0,531 auf 0,205 geschrumpft."
+  },
+  {
+   "zeit": "2026-08-08T16:05:55+00:00",
+   "text": "Phase 0 des Umsetzungsplans laeuft. Die Welle-13-Abnahme (T0.2) steht bei 12 von 15 Laeufen: 1350 sechsfach, 1600 und 1884 je dreifach, je Epoche EINE Pruefsumme, und die Latte 2 haelt in allen drei Schnitten — 1350 -0,259/-0,236/-0,389, 1600 +0,406/+0,489/+0,538, 1884 +0,343/+0,484/+0,495. Die drei 1970er Laeufe laufen gerade; danach die Gegenmessung und erst dann die vier blinden Kritiker. Nebenher sind vier Tickets durch: der Release-Schnitt trennt den Deploy vom Repo (375 MB auf 24 MB, kein Werkbank-Urteil mehr oeffentlich), der Kurzlauf ist geeicht (100 Wochen genuegen als rho-Waechter — beide bekannten Aenderungen, die rho bewegt haben, liefen in Woche 32 und 61 aus dem Ruder; er gilt als Veto, nicht als Freispruch), die Nachtmessung faehrt die Latte 2 kuenftig ohne Modell daneben, und der Repo-Ballast ist aus dem Deploy."
   }
  ]
 }
