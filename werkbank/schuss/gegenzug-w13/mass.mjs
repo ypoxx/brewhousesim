@@ -71,7 +71,8 @@ for (let i = 0; i < Math.min(a.length, b.length); i++) {
   const felder = ['zeile', 'werkbank', 'schmal', 'reiterZahl', 'meiner', 'weiter', 'abschicken', 'wievorige'];
   const diff = felder.filter(f => !gleich(a[i][f], b[i][f]));
   if (diff.length || i < 2 || i === 30) {
-    console.log(`W${i + 1} ${a[i].jahr}/${a[i].woche}  ${diff.length ? 'ABWEICHUNG: ' + diff.join(',') : 'gleich'}`);
+    console.log(`W${i + 1} A=${a[i].jahr}/${a[i].woche} B=${b[i].jahr}/${b[i].woche}  `
+      + `${diff.length ? 'ABWEICHUNG: ' + diff.join(',') : 'gleich'}`);
     diff.forEach(f => console.log(`     ${f}\n       A ${JSON.stringify(a[i][f])}\n       B ${JSON.stringify(b[i][f])}`));
     if (i < 2 || i === 30) {
       console.log(`     Reiter A "${a[i].meinerText}"  ${JSON.stringify(a[i].meiner)}`);

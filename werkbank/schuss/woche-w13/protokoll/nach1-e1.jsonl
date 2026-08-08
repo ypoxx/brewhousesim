@@ -1,0 +1,248 @@
+{"t":3.2,"was":"laden","url":"http://127.0.0.1:8923/spiel/?epoche=1&saat=1350&neu=1","fenster":"1600x900"}
+{"t":3.8,"was":"erster-schirmtext","n":413,"zielWorte":["Ziel: das Haus weitergeben, solange es steht. Noch 5 Braujahre, dann ist das Haus alt genug für eine Übergabe. (33 % des Wegs)","DAS ZIEL —"],"zielWorteN":2}
+{"t":7.4,"was":"klick","nr":1,"zug":"kern:anfangen","grund":"Anschlag gelesen","knopf":{"text":"Anfangen","preis":null,"w":64,"h":24},"vor":{"jahr":1350,"woche":1,"kasse":112},"nach":{"jahr":1350,"woche":1,"kasse":112},"dkasse":0,"lage":0}
+{"t":7.4,"was":"woche","n":1,"jahr":1350,"woche":1,"kasse":112,"greifbar":30,"mitPreis":6,"deckung":5.894736842105263,"nenner":"Zuvorkommen Klosterschenke Obernberg","ziel":null,"uebergabeImText":1}
+{"t":9.3,"was":"klick","nr":2,"zug":"preis:nimm:dach","grund":"Michaeli: billigstes bezahlbare","knopf":{"text":"Nehmen −33 Pf","preis":-33,"w":122,"h":25},"vor":{"jahr":1350,"woche":1,"kasse":112},"nach":{"jahr":1350,"woche":1,"kasse":79},"dkasse":-33,"lage":0}
+{"t":10.4,"was":"klick","nr":3,"zug":"preis:tafel-zu","grund":"Das Jahr beginnen","knopf":{"text":"Das Jahr beginnen","preis":null,"w":158,"h":56},"vor":{"jahr":1350,"woche":1,"kasse":79},"nach":{"jahr":1350,"woche":1,"kasse":79},"dkasse":0,"lage":0}
+{"t":11.3,"was":"klick","nr":4,"zug":"gegner:zuvorkommen:obernberg","grund":"dem Gegner zuvorkommen","knopf":{"text":"wirbt · noch 4 Wo. zuvorkommen 19 Pf","preis":-19,"w":135,"h":28},"vor":{"jahr":1350,"woche":1,"kasse":79},"nach":{"jahr":1350,"woche":1,"kasse":60},"dkasse":-19,"lage":0}
+{"t":12.1,"was":"klick","nr":5,"zug":"fuhre:plan:durst","grund":"Fuhrplan","knopf":{"text":"Fahren: nach Durst · 4 Fass +31 Pf","preis":31,"w":206,"h":24},"vor":{"jahr":1350,"woche":1,"kasse":60},"nach":{"jahr":1350,"woche":2,"kasse":60},"dkasse":0,"lage":0}
+{"t":12.1,"was":"abgeschaltet","zug":"fuhre:abschicken","text":"FUHRE ABSCHICKEN"}
+{"t":12.2,"was":"woche","n":2,"jahr":1350,"woche":2,"kasse":60,"greifbar":41,"mitPreis":9,"deckung":1.0714285714285714,"nenner":"Ablösung Schenke am Tor","ziel":null,"uebergabeImText":1}
+{"t":13.4,"was":"klick","nr":6,"zug":"fuhre:plan:durst","grund":"Fuhrplan","knopf":{"text":"Fahren: nach Durst · 4 Fass +33 Pf","preis":33,"w":206,"h":24},"vor":{"jahr":1350,"woche":2,"kasse":60},"nach":{"jahr":1350,"woche":3,"kasse":62},"dkasse":2,"lage":0}
+{"t":13.4,"was":"abgeschaltet","zug":"fuhre:abschicken","text":"FUHRE ABSCHICKEN"}
+{"t":13.5,"was":"woche","n":3,"jahr":1350,"woche":3,"kasse":62,"greifbar":40,"mitPreis":8,"deckung":1.1071428571428572,"nenner":"Ablösung Schenke am Tor","ziel":null,"uebergabeImText":1}
+{"t":14.5,"was":"klick","nr":7,"zug":"fuhre:plan:vorige","grund":"Fuhrplan","knopf":{"text":"Fahren: wie zuletzt · 4 Fass +33 Pf","preis":33,"w":207,"h":24},"vor":{"jahr":1350,"woche":3,"kasse":62},"nach":{"jahr":1350,"woche":4,"kasse":64},"dkasse":2,"lage":0}
+{"t":14.6,"was":"abgeschaltet","zug":"fuhre:abschicken","text":"FUHRE ABSCHICKEN"}
+{"t":14.6,"was":"woche","n":4,"jahr":1350,"woche":4,"kasse":64,"greifbar":41,"mitPreis":9,"deckung":1.1428571428571428,"nenner":"Ablösung Schenke am Tor","ziel":null,"uebergabeImText":1}
+{"t":15.8,"was":"klick","nr":8,"zug":"fuhre:plan:vorige","grund":"Fuhrplan","knopf":{"text":"Fahren: wie zuletzt · 4 Fass +33 Pf","preis":33,"w":207,"h":24},"vor":{"jahr":1350,"woche":4,"kasse":64},"nach":{"jahr":1350,"woche":5,"kasse":66},"dkasse":2,"lage":0}
+{"t":15.8,"was":"abgeschaltet","zug":"fuhre:abschicken","text":"FUHRE ABSCHICKEN"}
+{"t":15.9,"was":"woche","n":5,"jahr":1350,"woche":5,"kasse":66,"greifbar":40,"mitPreis":9,"deckung":1.1785714285714286,"nenner":"Ablösung Schenke am Tor","ziel":null,"uebergabeImText":1}
+{"t":16.6,"was":"klick","nr":9,"zug":"name:anschlag:umtrunk","grund":"etwas fuer den Namen","knopf":{"text":"Umtrunk beim Wirt −9 Pf − 1 Fass","preis":-9,"w":164,"h":31},"vor":{"jahr":1350,"woche":5,"kasse":66},"nach":{"jahr":1350,"woche":5,"kasse":57},"dkasse":-9,"lage":0}
+{"t":17.4,"was":"klick","nr":10,"zug":"fuhre:plan:vorige","grund":"Fuhrplan","knopf":{"text":"Fahren: wie zuletzt · 3 Fass +25 Pf","preis":25,"w":207,"h":24},"vor":{"jahr":1350,"woche":5,"kasse":57},"nach":{"jahr":1350,"woche":6,"kasse":56},"dkasse":-1,"lage":0}
+{"t":17.5,"was":"abgeschaltet","zug":"fuhre:abschicken","text":"FUHRE ABSCHICKEN"}
+{"t":17.5,"was":"woche","n":6,"jahr":1350,"woche":6,"kasse":56,"greifbar":41,"mitPreis":9,"deckung":1.8666666666666667,"nenner":"Zuvorkommen Pfarrschenke St. Michael","ziel":null,"uebergabeImText":1}
+{"t":18.5,"was":"klick","nr":11,"zug":"fuhre:plan:mager","grund":"Fuhrplan","knopf":{"text":"Fahren: die mageren Häuser · 4 Fass +30 Pf","preis":30,"w":251,"h":24},"vor":{"jahr":1350,"woche":6,"kasse":56},"nach":{"jahr":1350,"woche":7,"kasse":56},"dkasse":0,"lage":0}
+{"t":18.5,"was":"abgeschaltet","zug":"fuhre:abschicken","text":"FUHRE ABSCHICKEN"}
+{"t":18.6,"was":"woche","n":7,"jahr":1350,"woche":7,"kasse":56,"greifbar":41,"mitPreis":9,"deckung":1.8666666666666667,"nenner":"Zuvorkommen Pfarrschenke St. Michael","ziel":null,"uebergabeImText":1}
+{"t":19.6,"was":"klick","nr":12,"zug":"fuhre:plan:mager","grund":"Fuhrplan","knopf":{"text":"Fahren: die mageren Häuser · 4 Fass +30 Pf","preis":30,"w":251,"h":24},"vor":{"jahr":1350,"woche":7,"kasse":56},"nach":{"jahr":1350,"woche":8,"kasse":56},"dkasse":0,"lage":0}
+{"t":19.6,"was":"abgeschaltet","zug":"fuhre:abschicken","text":"FUHRE ABSCHICKEN"}
+{"t":19.8,"was":"woche","n":8,"jahr":1350,"woche":8,"kasse":56,"greifbar":41,"mitPreis":9,"deckung":1.1666666666666667,"nenner":"Ablösung Pfarrschenke St. Michael","ziel":null,"uebergabeImText":1}
+{"t":20.8,"was":"klick","nr":13,"zug":"fuhre:plan:durst","grund":"Fuhrplan","knopf":{"text":"Fahren: nach Durst · 4 Fass +33 Pf","preis":33,"w":206,"h":24},"vor":{"jahr":1350,"woche":8,"kasse":56},"nach":{"jahr":1350,"woche":9,"kasse":57},"dkasse":1,"lage":0}
+{"t":20.8,"was":"abgeschaltet","zug":"fuhre:abschicken","text":"FUHRE ABSCHICKEN"}
+{"t":20.9,"was":"woche","n":9,"jahr":1350,"woche":9,"kasse":57,"greifbar":42,"mitPreis":10,"deckung":1.1875,"nenner":"Ablösung Pfarrschenke St. Michael","ziel":null,"uebergabeImText":1}
+{"t":22.2,"was":"klick","nr":14,"zug":"fuhre:plan:vorige","grund":"Fuhrplan","knopf":{"text":"Fahren: wie zuletzt · 4 Fass +33 Pf","preis":33,"w":207,"h":24},"vor":{"jahr":1350,"woche":9,"kasse":57},"nach":{"jahr":1350,"woche":10,"kasse":58},"dkasse":1,"lage":0}
+{"t":22.3,"was":"abgeschaltet","zug":"fuhre:abschicken","text":"FUHRE ABSCHICKEN"}
+{"t":22.3,"was":"woche","n":10,"jahr":1350,"woche":10,"kasse":58,"greifbar":41,"mitPreis":9,"deckung":1.0357142857142858,"nenner":"Ablösung Schenke am Tor","ziel":null,"uebergabeImText":1}
+{"t":23.7,"was":"klick","nr":15,"zug":"fuhre:plan:vorige","grund":"Fuhrplan","knopf":{"text":"Fahren: wie zuletzt · 4 Fass +33 Pf","preis":33,"w":207,"h":24},"vor":{"jahr":1350,"woche":10,"kasse":58},"nach":{"jahr":1350,"woche":11,"kasse":59},"dkasse":1,"lage":0}
+{"t":23.7,"was":"abgeschaltet","zug":"fuhre:abschicken","text":"FUHRE ABSCHICKEN"}
+{"t":23.8,"was":"woche","n":11,"jahr":1350,"woche":11,"kasse":59,"greifbar":42,"mitPreis":10,"deckung":1.0535714285714286,"nenner":"Ablösung Schenke am Tor","ziel":null,"uebergabeImText":1}
+{"t":25.5,"was":"klick","nr":16,"zug":"fuhre:plan:vorige","grund":"Fuhrplan","knopf":{"text":"Fahren: wie zuletzt · 4 Fass +33 Pf","preis":33,"w":207,"h":24},"vor":{"jahr":1350,"woche":11,"kasse":59},"nach":{"jahr":1350,"woche":12,"kasse":60},"dkasse":1,"lage":0}
+{"t":25.6,"was":"abgeschaltet","zug":"fuhre:abschicken","text":"FUHRE ABSCHICKEN"}
+{"t":25.6,"was":"woche","n":12,"jahr":1350,"woche":12,"kasse":60,"greifbar":42,"mitPreis":10,"deckung":1.0714285714285714,"nenner":"Ablösung Schenke am Tor","ziel":null,"uebergabeImText":1}
+{"t":26.6,"was":"klick","nr":17,"zug":"fuhre:plan:vorige","grund":"Fuhrplan","knopf":{"text":"Fahren: wie zuletzt · 4 Fass +33 Pf","preis":33,"w":207,"h":24},"vor":{"jahr":1350,"woche":12,"kasse":60},"nach":{"jahr":1350,"woche":13,"kasse":61},"dkasse":1,"lage":0}
+{"t":26.6,"was":"abgeschaltet","zug":"fuhre:abschicken","text":"FUHRE ABSCHICKEN"}
+{"t":26.7,"was":"woche","n":13,"jahr":1350,"woche":13,"kasse":61,"greifbar":45,"mitPreis":12,"deckung":1.0892857142857142,"nenner":"Ablösung Schenke am Tor","ziel":null,"uebergabeImText":1}
+{"t":28.2,"was":"klick","nr":18,"zug":"fuhre:plan:vorige","grund":"Fuhrplan","knopf":{"text":"Fahren: wie zuletzt · 4 Fass +33 Pf","preis":33,"w":207,"h":24},"vor":{"jahr":1350,"woche":13,"kasse":61},"nach":{"jahr":1350,"woche":14,"kasse":62},"dkasse":1,"lage":0}
+{"t":28.2,"was":"abgeschaltet","zug":"fuhre:abschicken","text":"FUHRE ABSCHICKEN"}
+{"t":28.3,"was":"woche","n":14,"jahr":1350,"woche":14,"kasse":62,"greifbar":44,"mitPreis":12,"deckung":1.1071428571428572,"nenner":"Ablösung Schenke am Tor","ziel":null,"uebergabeImText":1}
+{"t":30,"was":"klick","nr":19,"zug":"fuhre:plan:vorige","grund":"Fuhrplan","knopf":{"text":"Fahren: wie zuletzt · 4 Fass +33 Pf","preis":33,"w":207,"h":24},"vor":{"jahr":1350,"woche":14,"kasse":62},"nach":{"jahr":1350,"woche":15,"kasse":71},"dkasse":9,"lage":0}
+{"t":30,"was":"abgeschaltet","zug":"fuhre:abschicken","text":"FUHRE ABSCHICKEN"}
+{"t":30.1,"was":"woche","n":15,"jahr":1350,"woche":15,"kasse":71,"greifbar":41,"mitPreis":9,"deckung":1.2678571428571428,"nenner":"Ablösung Schenke am Tor","ziel":null,"uebergabeImText":1}
+{"t":31.3,"was":"klick","nr":20,"zug":"fuhre:plan:durst","grund":"Fuhrplan","knopf":{"text":"Fahren: nach Durst · 2 Fass +4 Pf","preis":4,"w":199,"h":24},"vor":{"jahr":1350,"woche":15,"kasse":71},"nach":{"jahr":1350,"woche":16,"kasse":69},"dkasse":-2,"lage":0}
+{"t":31.4,"was":"abgeschaltet","zug":"fuhre:abschicken","text":"FUHRE ABSCHICKEN"}
+{"t":31.5,"was":"woche","n":16,"jahr":1350,"woche":16,"kasse":69,"greifbar":46,"mitPreis":13,"deckung":1.5333333333333334,"nenner":"Zuvorkommen Zum Goldenen Ochsen","ziel":null,"uebergabeImText":1}
+{"t":32.7,"was":"klick","nr":21,"zug":"fuhre:plan:durst","grund":"Fuhrplan","knopf":{"text":"Fahren: nach Durst · 3 Fass +6 Pf","preis":6,"w":199,"h":24},"vor":{"jahr":1350,"woche":16,"kasse":69},"nach":{"jahr":1350,"woche":17,"kasse":67},"dkasse":-2,"lage":0}
+{"t":32.7,"was":"abgeschaltet","zug":"fuhre:abschicken","text":"FUHRE ABSCHICKEN"}
+{"t":32.8,"was":"woche","n":17,"jahr":1350,"woche":17,"kasse":67,"greifbar":44,"mitPreis":11,"deckung":1.488888888888889,"nenner":"Zuvorkommen Zum Goldenen Ochsen","ziel":null,"uebergabeImText":1}
+{"t":33.8,"was":"klick","nr":22,"zug":"fuhre:plan:vorige","grund":"Fuhrplan","knopf":{"text":"Fahren: wie zuletzt · 3 Fass +6 Pf","preis":6,"w":199,"h":24},"vor":{"jahr":1350,"woche":17,"kasse":67},"nach":{"jahr":1350,"woche":18,"kasse":65},"dkasse":-2,"lage":0}
+{"t":33.8,"was":"abgeschaltet","zug":"fuhre:abschicken","text":"FUHRE ABSCHICKEN"}
+{"t":34,"was":"woche","n":18,"jahr":1350,"woche":18,"kasse":65,"greifbar":45,"mitPreis":12,"deckung":1.1607142857142858,"nenner":"Ablösung Schenke am Tor","ziel":null,"uebergabeImText":1}
+{"t":35.1,"was":"klick","nr":23,"zug":"fuhre:plan:vorige","grund":"Fuhrplan","knopf":{"text":"Fahren: wie zuletzt · 3 Fass +6 Pf","preis":6,"w":199,"h":24},"vor":{"jahr":1350,"woche":18,"kasse":65},"nach":{"jahr":1350,"woche":19,"kasse":63},"dkasse":-2,"lage":0}
+{"t":35.2,"was":"abgeschaltet","zug":"fuhre:abschicken","text":"FUHRE ABSCHICKEN"}
+{"t":35.2,"was":"woche","n":19,"jahr":1350,"woche":19,"kasse":63,"greifbar":45,"mitPreis":12,"deckung":1.125,"nenner":"Ablösung Schenke am Tor","ziel":null,"uebergabeImText":1}
+{"t":36,"was":"klick","nr":24,"zug":"fuhre:plan:vorige","grund":"Fuhrplan","knopf":{"text":"Fahren: wie zuletzt · 3 Fass +6 Pf","preis":6,"w":199,"h":24},"vor":{"jahr":1350,"woche":19,"kasse":63},"nach":{"jahr":1350,"woche":20,"kasse":62},"dkasse":-1,"lage":0}
+{"t":36.1,"was":"abgeschaltet","zug":"fuhre:abschicken","text":"FUHRE ABSCHICKEN"}
+{"t":36.1,"was":"woche","n":20,"jahr":1350,"woche":20,"kasse":62,"greifbar":45,"mitPreis":12,"deckung":1.1071428571428572,"nenner":"Ablösung Schenke am Tor","ziel":null,"uebergabeImText":1}
+{"t":37.1,"was":"klick","nr":25,"zug":"fuhre:plan:vorige","grund":"Fuhrplan","knopf":{"text":"Fahren: wie zuletzt · 3 Fass +6 Pf","preis":6,"w":199,"h":24},"vor":{"jahr":1350,"woche":20,"kasse":62},"nach":{"jahr":1350,"woche":21,"kasse":61},"dkasse":-1,"lage":0}
+{"t":37.1,"was":"abgeschaltet","zug":"fuhre:abschicken","text":"FUHRE ABSCHICKEN"}
+{"t":37.2,"was":"woche","n":21,"jahr":1350,"woche":21,"kasse":61,"greifbar":45,"mitPreis":12,"deckung":1.0892857142857142,"nenner":"Ablösung Schenke am Tor","ziel":null,"uebergabeImText":1}
+{"t":38.3,"was":"klick","nr":26,"zug":"fuhre:plan:vorige","grund":"Fuhrplan","knopf":{"text":"Fahren: wie zuletzt · 3 Fass +6 Pf","preis":6,"w":199,"h":24},"vor":{"jahr":1350,"woche":21,"kasse":61},"nach":{"jahr":1350,"woche":22,"kasse":60},"dkasse":-1,"lage":0}
+{"t":38.3,"was":"abgeschaltet","zug":"fuhre:abschicken","text":"FUHRE ABSCHICKEN"}
+{"t":38.4,"was":"woche","n":22,"jahr":1350,"woche":22,"kasse":60,"greifbar":45,"mitPreis":12,"deckung":1.0714285714285714,"nenner":"Ablösung Schenke am Tor","ziel":null,"uebergabeImText":1}
+{"t":39.4,"was":"klick","nr":27,"zug":"fuhre:plan:vorige","grund":"Fuhrplan","knopf":{"text":"Fahren: wie zuletzt · 3 Fass +6 Pf","preis":6,"w":199,"h":24},"vor":{"jahr":1350,"woche":22,"kasse":60},"nach":{"jahr":1350,"woche":23,"kasse":59},"dkasse":-1,"lage":0}
+{"t":39.4,"was":"abgeschaltet","zug":"fuhre:abschicken","text":"FUHRE ABSCHICKEN"}
+{"t":39.5,"was":"woche","n":23,"jahr":1350,"woche":23,"kasse":59,"greifbar":45,"mitPreis":12,"deckung":1.0535714285714286,"nenner":"Ablösung Schenke am Tor","ziel":null,"uebergabeImText":1}
+{"t":40.4,"was":"klick","nr":28,"zug":"fuhre:plan:vorige","grund":"Fuhrplan","knopf":{"text":"Fahren: wie zuletzt · 3 Fass +6 Pf","preis":6,"w":199,"h":24},"vor":{"jahr":1350,"woche":23,"kasse":59},"nach":{"jahr":1350,"woche":24,"kasse":58},"dkasse":-1,"lage":0}
+{"t":40.4,"was":"abgeschaltet","zug":"fuhre:abschicken","text":"FUHRE ABSCHICKEN"}
+{"t":40.5,"was":"woche","n":24,"jahr":1350,"woche":24,"kasse":58,"greifbar":46,"mitPreis":12,"deckung":1.8125,"nenner":"Zuvorkommen Pfarrschenke St. Michael","ziel":null,"uebergabeImText":1}
+{"t":41.5,"was":"klick","nr":29,"zug":"fuhre:plan:vorige","grund":"Fuhrplan","knopf":{"text":"Fahren: wie zuletzt · 3 Fass +6 Pf","preis":6,"w":199,"h":24},"vor":{"jahr":1350,"woche":24,"kasse":58},"nach":{"jahr":1350,"woche":25,"kasse":57},"dkasse":-1,"lage":0}
+{"t":41.5,"was":"abgeschaltet","zug":"fuhre:abschicken","text":"FUHRE ABSCHICKEN"}
+{"t":41.6,"was":"woche","n":25,"jahr":1350,"woche":25,"kasse":57,"greifbar":46,"mitPreis":12,"deckung":1.78125,"nenner":"Zuvorkommen Pfarrschenke St. Michael","ziel":null,"uebergabeImText":1}
+{"t":42.8,"was":"klick","nr":30,"zug":"fuhre:plan:vorige","grund":"Fuhrplan","knopf":{"text":"Fahren: wie zuletzt · 3 Fass +6 Pf","preis":6,"w":199,"h":24},"vor":{"jahr":1350,"woche":25,"kasse":57},"nach":{"jahr":1350,"woche":26,"kasse":56},"dkasse":-1,"lage":0}
+{"t":42.8,"was":"abgeschaltet","zug":"fuhre:abschicken","text":"FUHRE ABSCHICKEN"}
+{"t":42.9,"was":"woche","n":26,"jahr":1350,"woche":26,"kasse":56,"greifbar":46,"mitPreis":12,"deckung":1,"nenner":"Ablösung Schenke am Tor","ziel":null,"uebergabeImText":1}
+{"t":43.7,"was":"klick","nr":31,"zug":"fuhre:plan:vorige","grund":"Fuhrplan","knopf":{"text":"Fahren: wie zuletzt · 3 Fass +6 Pf","preis":6,"w":199,"h":24},"vor":{"jahr":1350,"woche":26,"kasse":56},"nach":{"jahr":1350,"woche":27,"kasse":55},"dkasse":-1,"lage":0}
+{"t":43.8,"was":"abgeschaltet","zug":"fuhre:abschicken","text":"FUHRE ABSCHICKEN"}
+{"t":43.8,"was":"woche","n":27,"jahr":1350,"woche":27,"kasse":55,"greifbar":45,"mitPreis":11,"deckung":0.9821428571428571,"nenner":"Ablösung Schenke am Tor","ziel":null,"uebergabeImText":1}
+{"t":45.1,"was":"klick","nr":32,"zug":"fuhre:plan:vorige","grund":"Fuhrplan","knopf":{"text":"Fahren: wie zuletzt · 3 Fass +6 Pf","preis":6,"w":199,"h":24},"vor":{"jahr":1350,"woche":27,"kasse":55},"nach":{"jahr":1350,"woche":28,"kasse":53},"dkasse":-2,"lage":0}
+{"t":45.1,"was":"abgeschaltet","zug":"fuhre:abschicken","text":"FUHRE ABSCHICKEN"}
+{"t":45.2,"was":"woche","n":28,"jahr":1350,"woche":28,"kasse":53,"greifbar":45,"mitPreis":11,"deckung":0.9464285714285714,"nenner":"Ablösung Schenke am Tor","ziel":null,"uebergabeImText":1}
+{"t":46.1,"was":"klick","nr":33,"zug":"fuhre:plan:vorige","grund":"Fuhrplan","knopf":{"text":"Fahren: wie zuletzt · 3 Fass +6 Pf","preis":6,"w":199,"h":24},"vor":{"jahr":1350,"woche":28,"kasse":53},"nach":{"jahr":1350,"woche":29,"kasse":52},"dkasse":-1,"lage":0}
+{"t":46.1,"was":"abgeschaltet","zug":"fuhre:abschicken","text":"FUHRE ABSCHICKEN"}
+{"t":46.2,"was":"woche","n":29,"jahr":1350,"woche":29,"kasse":52,"greifbar":45,"mitPreis":11,"deckung":0.9285714285714286,"nenner":"Ablösung Schenke am Tor","ziel":null,"uebergabeImText":1}
+{"t":47.2,"was":"klick","nr":34,"zug":"fuhre:plan:vorige","grund":"Fuhrplan","knopf":{"text":"Fahren: wie zuletzt · 3 Fass +6 Pf","preis":6,"w":199,"h":24},"vor":{"jahr":1350,"woche":29,"kasse":52},"nach":{"jahr":1350,"woche":30,"kasse":51},"dkasse":-1,"lage":0}
+{"t":47.2,"was":"abgeschaltet","zug":"fuhre:abschicken","text":"FUHRE ABSCHICKEN"}
+{"t":47.3,"was":"woche","n":30,"jahr":1350,"woche":30,"kasse":51,"greifbar":45,"mitPreis":11,"deckung":0.9107142857142857,"nenner":"Ablösung Schenke am Tor","ziel":null,"uebergabeImText":1}
+{"t":49.7,"was":"klick","nr":35,"zug":"fuhre:plan:vorige","grund":"Fuhrplan","knopf":{"text":"Fahren: wie zuletzt · 3 Fass +6 Pf","preis":6,"w":199,"h":24},"vor":{"jahr":1350,"woche":30,"kasse":51},"nach":{"jahr":1351,"woche":1,"kasse":64},"dkasse":13,"lage":0}
+{"t":50,"was":"abgeschaltet","zug":"fuhre:abschicken","text":"FUHRE ABSCHICKEN"}
+{"t":50.1,"was":"woche","n":31,"jahr":1351,"woche":1,"kasse":64,"greifbar":26,"mitPreis":3,"deckung":1.1428571428571428,"nenner":"Ablösung Schenke am Tor","ziel":null,"uebergabeImText":1}
+{"t":50.4,"was":"nicht-zu-greifen","zug":"fuhre:sommer-zu"}
+{"t":51.4,"was":"klick","nr":36,"zug":"preis:nimm:fasskauf","grund":"Michaeli: billigstes bezahlbare","knopf":{"text":"Nehmen −44 Pf","preis":-44,"w":122,"h":25},"vor":{"jahr":1351,"woche":1,"kasse":64},"nach":{"jahr":1351,"woche":1,"kasse":20},"dkasse":-44,"lage":0}
+{"t":52.7,"was":"klick","nr":37,"zug":"preis:tafel-zu","grund":"Das Jahr beginnen","knopf":{"text":"Das Jahr beginnen","preis":null,"w":151,"h":56},"vor":{"jahr":1351,"woche":1,"kasse":20},"nach":{"jahr":1351,"woche":1,"kasse":20},"dkasse":0,"lage":0}
+{"t":52.8,"was":"abgeschaltet","zug":"fuhre:abschicken","text":"FUHRE ABSCHICKEN"}
+{"t":53.7,"was":"klick","nr":38,"zug":"weiter","grund":"naechste Woche","knopf":{"text":"WEITER","preis":null,"w":147,"h":42},"vor":{"jahr":1351,"woche":1,"kasse":20},"nach":{"jahr":1351,"woche":2,"kasse":19},"dkasse":-1,"lage":0}
+{"t":53.8,"was":"woche","n":32,"jahr":1351,"woche":2,"kasse":19,"greifbar":44,"mitPreis":9,"deckung":0.3392857142857143,"nenner":"Ablösung Schenke am Tor","ziel":null,"uebergabeImText":1}
+{"t":54.5,"was":"klick","nr":39,"zug":"fuhre:plan:mager","grund":"Fuhrplan","knopf":{"text":"Fahren: die mageren Häuser · 3 Fass +5 Pf","preis":5,"w":243,"h":24},"vor":{"jahr":1351,"woche":2,"kasse":19},"nach":{"jahr":1351,"woche":3,"kasse":18},"dkasse":-1,"lage":0}
+{"t":54.5,"was":"abgeschaltet","zug":"fuhre:abschicken","text":"FUHRE ABSCHICKEN"}
+{"t":54.7,"was":"woche","n":33,"jahr":1351,"woche":3,"kasse":18,"greifbar":48,"mitPreis":12,"deckung":0.5454545454545454,"nenner":"Zuvorkommen Ausschank am Markt","ziel":null,"uebergabeImText":1}
+{"t":55.5,"was":"klick","nr":40,"zug":"fuhre:plan:vorige","grund":"Fuhrplan","knopf":{"text":"Fahren: wie zuletzt · 3 Fass +5 Pf","preis":5,"w":199,"h":24},"vor":{"jahr":1351,"woche":3,"kasse":18},"nach":{"jahr":1351,"woche":4,"kasse":17},"dkasse":-1,"lage":0}
+{"t":55.6,"was":"abgeschaltet","zug":"fuhre:abschicken","text":"FUHRE ABSCHICKEN"}
+{"t":55.6,"was":"woche","n":34,"jahr":1351,"woche":4,"kasse":17,"greifbar":47,"mitPreis":11,"deckung":0.5151515151515151,"nenner":"Zuvorkommen Ausschank am Markt","ziel":null,"uebergabeImText":1}
+{"t":56.7,"was":"klick","nr":41,"zug":"fuhre:plan:vorige","grund":"Fuhrplan","knopf":{"text":"Fahren: wie zuletzt · 3 Fass +5 Pf","preis":5,"w":199,"h":24},"vor":{"jahr":1351,"woche":4,"kasse":17},"nach":{"jahr":1351,"woche":5,"kasse":16},"dkasse":-1,"lage":0}
+{"t":56.8,"was":"abgeschaltet","zug":"fuhre:abschicken","text":"FUHRE ABSCHICKEN"}
+{"t":56.8,"was":"woche","n":35,"jahr":1351,"woche":5,"kasse":16,"greifbar":47,"mitPreis":11,"deckung":0.48484848484848486,"nenner":"Zuvorkommen Ausschank am Markt","ziel":null,"uebergabeImText":1}
+{"t":58,"was":"klick","nr":42,"zug":"fuhre:plan:vorige","grund":"Fuhrplan","knopf":{"text":"Fahren: wie zuletzt · 3 Fass +5 Pf","preis":5,"w":199,"h":24},"vor":{"jahr":1351,"woche":5,"kasse":16},"nach":{"jahr":1351,"woche":6,"kasse":15},"dkasse":-1,"lage":0}
+{"t":58,"was":"abgeschaltet","zug":"fuhre:abschicken","text":"FUHRE ABSCHICKEN"}
+{"t":58.1,"was":"woche","n":36,"jahr":1351,"woche":6,"kasse":15,"greifbar":49,"mitPreis":12,"deckung":0.6818181818181818,"nenner":"Zuvorkommen Mühlschenke","ziel":null,"uebergabeImText":1}
+{"t":59,"was":"klick","nr":43,"zug":"fuhre:plan:vorige","grund":"Fuhrplan","knopf":{"text":"Fahren: wie zuletzt · 3 Fass +5 Pf","preis":5,"w":199,"h":24},"vor":{"jahr":1351,"woche":6,"kasse":15},"nach":{"jahr":1351,"woche":7,"kasse":14},"dkasse":-1,"lage":0}
+{"t":59,"was":"abgeschaltet","zug":"fuhre:abschicken","text":"FUHRE ABSCHICKEN"}
+{"t":59.1,"was":"woche","n":37,"jahr":1351,"woche":7,"kasse":14,"greifbar":48,"mitPreis":11,"deckung":0.6363636363636364,"nenner":"Zuvorkommen Mühlschenke","ziel":null,"uebergabeImText":1}
+{"t":60,"was":"klick","nr":44,"zug":"fuhre:plan:vorige","grund":"Fuhrplan","knopf":{"text":"Fahren: wie zuletzt · 3 Fass +5 Pf","preis":5,"w":199,"h":24},"vor":{"jahr":1351,"woche":7,"kasse":14},"nach":{"jahr":1351,"woche":8,"kasse":13},"dkasse":-1,"lage":0}
+{"t":60,"was":"abgeschaltet","zug":"fuhre:abschicken","text":"FUHRE ABSCHICKEN"}
+{"t":60,"was":"woche","n":38,"jahr":1351,"woche":8,"kasse":13,"greifbar":47,"mitPreis":11,"deckung":0.5909090909090909,"nenner":"Zuvorkommen Mühlschenke","ziel":null,"uebergabeImText":1}
+{"t":60.8,"was":"klick","nr":45,"zug":"fuhre:plan:vorige","grund":"Fuhrplan","knopf":{"text":"Fahren: wie zuletzt · 3 Fass +5 Pf","preis":5,"w":199,"h":24},"vor":{"jahr":1351,"woche":8,"kasse":13},"nach":{"jahr":1351,"woche":9,"kasse":12},"dkasse":-1,"lage":0}
+{"t":60.9,"was":"abgeschaltet","zug":"fuhre:abschicken","text":"FUHRE ABSCHICKEN"}
+{"t":61.1,"was":"woche","n":39,"jahr":1351,"woche":9,"kasse":12,"greifbar":45,"mitPreis":10,"deckung":0.25,"nenner":"Ablösung Mühlschenke","ziel":null,"uebergabeImText":1}
+{"t":62.1,"was":"klick","nr":46,"zug":"fuhre:plan:vorige","grund":"Fuhrplan","knopf":{"text":"Fahren: wie zuletzt · 3 Fass +5 Pf","preis":5,"w":199,"h":24},"vor":{"jahr":1351,"woche":9,"kasse":12},"nach":{"jahr":1351,"woche":10,"kasse":11},"dkasse":-1,"lage":0}
+{"t":62.2,"was":"abgeschaltet","zug":"fuhre:abschicken","text":"FUHRE ABSCHICKEN"}
+{"t":62.3,"was":"woche","n":40,"jahr":1351,"woche":10,"kasse":11,"greifbar":46,"mitPreis":11,"deckung":0.22916666666666666,"nenner":"Ablösung Mühlschenke","ziel":null,"uebergabeImText":1}
+{"t":63.2,"was":"klick","nr":47,"zug":"fuhre:plan:vorige","grund":"Fuhrplan","knopf":{"text":"Fahren: wie zuletzt · 3 Fass +5 Pf","preis":5,"w":199,"h":24},"vor":{"jahr":1351,"woche":10,"kasse":11},"nach":{"jahr":1351,"woche":11,"kasse":10},"dkasse":-1,"lage":0}
+{"t":63.2,"was":"abgeschaltet","zug":"fuhre:abschicken","text":"FUHRE ABSCHICKEN"}
+{"t":63.2,"was":"woche","n":41,"jahr":1351,"woche":11,"kasse":10,"greifbar":46,"mitPreis":11,"deckung":0.20833333333333334,"nenner":"Ablösung Mühlschenke","ziel":null,"uebergabeImText":1}
+{"t":64,"was":"klick","nr":48,"zug":"fuhre:plan:vorige","grund":"Fuhrplan","knopf":{"text":"Fahren: wie zuletzt · 3 Fass +5 Pf","preis":5,"w":199,"h":24},"vor":{"jahr":1351,"woche":11,"kasse":10},"nach":{"jahr":1351,"woche":12,"kasse":9},"dkasse":-1,"lage":0}
+{"t":64.1,"was":"abgeschaltet","zug":"fuhre:abschicken","text":"FUHRE ABSCHICKEN"}
+{"t":64.1,"was":"woche","n":42,"jahr":1351,"woche":12,"kasse":9,"greifbar":46,"mitPreis":11,"deckung":0.1875,"nenner":"Ablösung Mühlschenke","ziel":null,"uebergabeImText":1}
+{"t":65,"was":"klick","nr":49,"zug":"fuhre:plan:vorige","grund":"Fuhrplan","knopf":{"text":"Fahren: wie zuletzt · 3 Fass +5 Pf","preis":5,"w":199,"h":24},"vor":{"jahr":1351,"woche":12,"kasse":9},"nach":{"jahr":1351,"woche":13,"kasse":8},"dkasse":-1,"lage":0}
+{"t":65.1,"was":"abgeschaltet","zug":"fuhre:abschicken","text":"FUHRE ABSCHICKEN"}
+{"t":65.1,"was":"woche","n":43,"jahr":1351,"woche":13,"kasse":8,"greifbar":48,"mitPreis":12,"deckung":0.24242424242424243,"nenner":"Zuvorkommen Ausschank am Markt","ziel":null,"uebergabeImText":1}
+{"t":65.9,"was":"klick","nr":50,"zug":"fuhre:plan:vorige","grund":"Fuhrplan","knopf":{"text":"Fahren: wie zuletzt · 3 Fass +5 Pf","preis":5,"w":199,"h":24},"vor":{"jahr":1351,"woche":13,"kasse":8},"nach":{"jahr":1351,"woche":14,"kasse":6},"dkasse":-2,"lage":0}
+{"t":66,"was":"abgeschaltet","zug":"fuhre:abschicken","text":"FUHRE ABSCHICKEN"}
+{"t":66,"was":"woche","n":44,"jahr":1351,"woche":14,"kasse":6,"greifbar":47,"mitPreis":11,"deckung":0.18181818181818182,"nenner":"Zuvorkommen Ausschank am Markt","ziel":null,"uebergabeImText":1}
+{"t":66.9,"was":"klick","nr":51,"zug":"fuhre:plan:vorige","grund":"Fuhrplan","knopf":{"text":"Fahren: wie zuletzt · 3 Fass +5 Pf","preis":5,"w":199,"h":24},"vor":{"jahr":1351,"woche":14,"kasse":6},"nach":{"jahr":1351,"woche":15,"kasse":5},"dkasse":-1,"lage":0}
+{"t":66.9,"was":"abgeschaltet","zug":"fuhre:abschicken","text":"FUHRE ABSCHICKEN"}
+{"t":67,"was":"woche","n":45,"jahr":1351,"woche":15,"kasse":5,"greifbar":45,"mitPreis":9,"deckung":0.09259259259259259,"nenner":"Ablösung Ausschank am Markt","ziel":null,"uebergabeImText":1}
+{"t":67.9,"was":"klick","nr":52,"zug":"fuhre:plan:vorige","grund":"Fuhrplan","knopf":{"text":"Fahren: wie zuletzt · 3 Fass +5 Pf","preis":5,"w":199,"h":24},"vor":{"jahr":1351,"woche":15,"kasse":5},"nach":{"jahr":1351,"woche":16,"kasse":4},"dkasse":-1,"lage":0}
+{"t":67.9,"was":"abgeschaltet","zug":"fuhre:abschicken","text":"FUHRE ABSCHICKEN"}
+{"t":68,"was":"woche","n":46,"jahr":1351,"woche":16,"kasse":4,"greifbar":45,"mitPreis":9,"deckung":0.07407407407407407,"nenner":"Ablösung Ausschank am Markt","ziel":null,"uebergabeImText":1}
+{"t":68.9,"was":"klick","nr":53,"zug":"fuhre:plan:vorige","grund":"Fuhrplan","knopf":{"text":"Fahren: wie zuletzt · 3 Fass +5 Pf","preis":5,"w":199,"h":24},"vor":{"jahr":1351,"woche":16,"kasse":4},"nach":{"jahr":1351,"woche":17,"kasse":3},"dkasse":-1,"lage":0}
+{"t":68.9,"was":"abgeschaltet","zug":"fuhre:abschicken","text":"FUHRE ABSCHICKEN"}
+{"t":69,"was":"woche","n":47,"jahr":1351,"woche":17,"kasse":3,"greifbar":44,"mitPreis":8,"deckung":0.05555555555555555,"nenner":"Ablösung Ausschank am Markt","ziel":null,"uebergabeImText":1}
+{"t":70,"was":"klick","nr":54,"zug":"fuhre:plan:vorige","grund":"Fuhrplan","knopf":{"text":"Fahren: wie zuletzt · 3 Fass +5 Pf","preis":5,"w":199,"h":24},"vor":{"jahr":1351,"woche":17,"kasse":3},"nach":{"jahr":1351,"woche":18,"kasse":2},"dkasse":-1,"lage":0}
+{"t":70,"was":"abgeschaltet","zug":"fuhre:abschicken","text":"FUHRE ABSCHICKEN"}
+{"t":70.1,"was":"woche","n":48,"jahr":1351,"woche":18,"kasse":2,"greifbar":46,"mitPreis":9,"deckung":0.07692307692307693,"nenner":"Zuvorkommen Brückenwirt","ziel":null,"uebergabeImText":1}
+{"t":70.9,"was":"klick","nr":55,"zug":"fuhre:plan:vorige","grund":"Fuhrplan","knopf":{"text":"Fahren: wie zuletzt · 3 Fass +5 Pf","preis":5,"w":199,"h":24},"vor":{"jahr":1351,"woche":18,"kasse":2},"nach":{"jahr":1351,"woche":19,"kasse":1},"dkasse":-1,"lage":0}
+{"t":71,"was":"abgeschaltet","zug":"fuhre:abschicken","text":"FUHRE ABSCHICKEN"}
+{"t":71.1,"was":"woche","n":49,"jahr":1351,"woche":19,"kasse":1,"greifbar":45,"mitPreis":9,"deckung":0.038461538461538464,"nenner":"Zuvorkommen Brückenwirt","ziel":null,"uebergabeImText":1}
+{"t":72,"was":"klick","nr":56,"zug":"fuhre:plan:vorige","grund":"Fuhrplan","knopf":{"text":"Fahren: wie zuletzt · 3 Fass +5 Pf","preis":5,"w":199,"h":24},"vor":{"jahr":1351,"woche":19,"kasse":1},"nach":{"jahr":1351,"woche":20,"kasse":0},"dkasse":-1,"lage":0}
+{"t":72,"was":"abgeschaltet","zug":"fuhre:abschicken","text":"FUHRE ABSCHICKEN"}
+{"t":72.1,"was":"woche","n":50,"jahr":1351,"woche":20,"kasse":0,"greifbar":47,"mitPreis":10,"deckung":0,"nenner":"Zuvorkommen Brückenwirt","ziel":null,"uebergabeImText":1}
+{"t":73,"was":"klick","nr":57,"zug":"fuhre:plan:vorige","grund":"Fuhrplan","knopf":{"text":"Fahren: wie zuletzt · 3 Fass +5 Pf","preis":5,"w":199,"h":24},"vor":{"jahr":1351,"woche":20,"kasse":0},"nach":{"jahr":1351,"woche":21,"kasse":0},"dkasse":0,"lage":0}
+{"t":73,"was":"abgeschaltet","zug":"fuhre:abschicken","text":"FUHRE ABSCHICKEN"}
+{"t":73.1,"was":"woche","n":51,"jahr":1351,"woche":21,"kasse":0,"greifbar":46,"mitPreis":10,"deckung":0,"nenner":"Zuvorkommen Mühlschenke","ziel":null,"uebergabeImText":1}
+{"t":74,"was":"klick","nr":58,"zug":"fuhre:plan:vorige","grund":"Fuhrplan","knopf":{"text":"Fahren: wie zuletzt · 3 Fass +5 Pf","preis":5,"w":199,"h":24},"vor":{"jahr":1351,"woche":21,"kasse":0},"nach":{"jahr":1351,"woche":22,"kasse":0},"dkasse":0,"lage":0}
+{"t":74.1,"was":"abgeschaltet","zug":"fuhre:abschicken","text":"FUHRE ABSCHICKEN"}
+{"t":74.2,"was":"woche","n":52,"jahr":1351,"woche":22,"kasse":0,"greifbar":44,"mitPreis":9,"deckung":0,"nenner":"Ablösung Schenke am Tor","ziel":null,"uebergabeImText":1}
+{"t":75.3,"was":"klick","nr":59,"zug":"fuhre:plan:vorige","grund":"Fuhrplan","knopf":{"text":"Fahren: wie zuletzt · 3 Fass +5 Pf","preis":5,"w":199,"h":24},"vor":{"jahr":1351,"woche":22,"kasse":0},"nach":{"jahr":1351,"woche":23,"kasse":0},"dkasse":0,"lage":0}
+{"t":75.3,"was":"abgeschaltet","zug":"fuhre:abschicken","text":"FUHRE ABSCHICKEN"}
+{"t":75.3,"was":"woche","n":53,"jahr":1351,"woche":23,"kasse":0,"greifbar":45,"mitPreis":10,"deckung":0,"nenner":"Ablösung Schenke am Tor","ziel":null,"uebergabeImText":1}
+{"t":76.3,"was":"klick","nr":60,"zug":"fuhre:plan:vorige","grund":"Fuhrplan","knopf":{"text":"Fahren: wie zuletzt · 3 Fass +5 Pf","preis":5,"w":199,"h":24},"vor":{"jahr":1351,"woche":23,"kasse":0},"nach":{"jahr":1351,"woche":24,"kasse":0},"dkasse":0,"lage":0}
+{"t":76.3,"was":"abgeschaltet","zug":"fuhre:abschicken","text":"FUHRE ABSCHICKEN"}
+{"t":76.4,"was":"woche","n":54,"jahr":1351,"woche":24,"kasse":0,"greifbar":45,"mitPreis":10,"deckung":0,"nenner":"Ablösung Schenke am Tor","ziel":null,"uebergabeImText":1}
+{"t":77.4,"was":"klick","nr":61,"zug":"fuhre:plan:vorige","grund":"Fuhrplan","knopf":{"text":"Fahren: wie zuletzt · 3 Fass +5 Pf","preis":5,"w":199,"h":24},"vor":{"jahr":1351,"woche":24,"kasse":0},"nach":{"jahr":1351,"woche":25,"kasse":0},"dkasse":0,"lage":0}
+{"t":77.4,"was":"abgeschaltet","zug":"fuhre:abschicken","text":"FUHRE ABSCHICKEN"}
+{"t":77.5,"was":"woche","n":55,"jahr":1351,"woche":25,"kasse":0,"greifbar":45,"mitPreis":10,"deckung":0,"nenner":"Ablösung Schenke am Tor","ziel":null,"uebergabeImText":1}
+{"t":78.7,"was":"klick","nr":62,"zug":"fuhre:plan:vorige","grund":"Fuhrplan","knopf":{"text":"Fahren: wie zuletzt · 3 Fass +5 Pf","preis":5,"w":199,"h":24},"vor":{"jahr":1351,"woche":25,"kasse":0},"nach":{"jahr":1351,"woche":26,"kasse":0},"dkasse":0,"lage":0}
+{"t":78.8,"was":"abgeschaltet","zug":"fuhre:abschicken","text":"FUHRE ABSCHICKEN"}
+{"t":78.8,"was":"woche","n":56,"jahr":1351,"woche":26,"kasse":0,"greifbar":45,"mitPreis":10,"deckung":0,"nenner":"Ablösung Schenke am Tor","ziel":null,"uebergabeImText":1}
+{"t":79.7,"was":"klick","nr":63,"zug":"fuhre:plan:vorige","grund":"Fuhrplan","knopf":{"text":"Fahren: wie zuletzt · 3 Fass +5 Pf","preis":5,"w":199,"h":24},"vor":{"jahr":1351,"woche":26,"kasse":0},"nach":{"jahr":1351,"woche":27,"kasse":0},"dkasse":0,"lage":0}
+{"t":79.7,"was":"abgeschaltet","zug":"fuhre:abschicken","text":"FUHRE ABSCHICKEN"}
+{"t":79.7,"was":"woche","n":57,"jahr":1351,"woche":27,"kasse":0,"greifbar":45,"mitPreis":10,"deckung":0,"nenner":"Ablösung Schenke am Tor","ziel":null,"uebergabeImText":1}
+{"t":80.5,"was":"klick","nr":64,"zug":"fuhre:plan:vorige","grund":"Fuhrplan","knopf":{"text":"Fahren: wie zuletzt · 3 Fass +5 Pf","preis":5,"w":199,"h":24},"vor":{"jahr":1351,"woche":27,"kasse":0},"nach":{"jahr":1351,"woche":28,"kasse":0},"dkasse":0,"lage":0}
+{"t":80.5,"was":"abgeschaltet","zug":"fuhre:abschicken","text":"FUHRE ABSCHICKEN"}
+{"t":80.5,"was":"woche","n":58,"jahr":1351,"woche":28,"kasse":0,"greifbar":45,"mitPreis":10,"deckung":0,"nenner":"Ablösung Schenke am Tor","ziel":null,"uebergabeImText":1}
+{"t":81.3,"was":"klick","nr":65,"zug":"fuhre:plan:vorige","grund":"Fuhrplan","knopf":{"text":"Fahren: wie zuletzt · 3 Fass +5 Pf","preis":5,"w":199,"h":24},"vor":{"jahr":1351,"woche":28,"kasse":0},"nach":{"jahr":1351,"woche":29,"kasse":0},"dkasse":0,"lage":0}
+{"t":81.3,"was":"abgeschaltet","zug":"fuhre:abschicken","text":"FUHRE ABSCHICKEN"}
+{"t":81.3,"was":"woche","n":59,"jahr":1351,"woche":29,"kasse":0,"greifbar":45,"mitPreis":10,"deckung":0,"nenner":"Ablösung Schenke am Tor","ziel":null,"uebergabeImText":1}
+{"t":82.5,"was":"klick","nr":66,"zug":"fuhre:plan:vorige","grund":"Fuhrplan","knopf":{"text":"Fahren: wie zuletzt · 3 Fass +5 Pf","preis":5,"w":199,"h":24},"vor":{"jahr":1351,"woche":29,"kasse":0},"nach":{"jahr":1351,"woche":30,"kasse":0},"dkasse":0,"lage":0}
+{"t":82.5,"was":"abgeschaltet","zug":"fuhre:abschicken","text":"FUHRE ABSCHICKEN"}
+{"t":82.6,"was":"woche","n":60,"jahr":1351,"woche":30,"kasse":0,"greifbar":47,"mitPreis":11,"deckung":0,"nenner":"Ablösung Schenke am Tor","ziel":null,"uebergabeImText":1}
+{"t":85.3,"was":"klick","nr":67,"zug":"fuhre:plan:vorige","grund":"Fuhrplan","knopf":{"text":"Fahren: wie zuletzt · 3 Fass +5 Pf","preis":5,"w":199,"h":24},"vor":{"jahr":1351,"woche":30,"kasse":0},"nach":{"jahr":1352,"woche":1,"kasse":93},"dkasse":93,"lage":0}
+{"t":85.7,"was":"abgeschaltet","zug":"fuhre:abschicken","text":"FUHRE ABSCHICKEN"}
+{"t":85.7,"was":"woche","n":61,"jahr":1352,"woche":1,"kasse":93,"greifbar":31,"mitPreis":8,"deckung":1.631578947368421,"nenner":"Ablösung Brückenwirt","ziel":null,"uebergabeImText":1}
+{"t":87.8,"was":"nicht-zu-greifen","zug":"fuhre:sommer-zu"}
+{"t":89.9,"was":"klick","nr":68,"zug":"preis:nimm:bottich","grund":"Michaeli: billigstes bezahlbare","knopf":{"text":"Nehmen −45 Pf","preis":-45,"w":122,"h":25},"vor":{"jahr":1352,"woche":1,"kasse":93},"nach":{"jahr":1352,"woche":1,"kasse":48},"dkasse":-45,"lage":0}
+{"t":91.2,"was":"klick","nr":69,"zug":"preis:tafel-zu","grund":"Das Jahr beginnen","knopf":{"text":"Das Jahr beginnen","preis":null,"w":149,"h":56},"vor":{"jahr":1352,"woche":1,"kasse":48},"nach":{"jahr":1352,"woche":1,"kasse":48},"dkasse":0,"lage":0}
+{"t":91.6,"was":"abgeschaltet","zug":"fuhre:abschicken","text":"FUHRE ABSCHICKEN"}
+{"t":93,"was":"klick","nr":70,"zug":"weiter","grund":"naechste Woche","knopf":{"text":"WEITER","preis":null,"w":147,"h":42},"vor":{"jahr":1352,"woche":1,"kasse":48},"nach":{"jahr":1352,"woche":2,"kasse":47},"dkasse":-1,"lage":0}
+{"t":93.1,"was":"woche","n":62,"jahr":1352,"woche":2,"kasse":47,"greifbar":45,"mitPreis":10,"deckung":0.8245614035087719,"nenner":"Ablösung Brückenwirt","ziel":null,"uebergabeImText":1}
+{"t":94.1,"was":"klick","nr":71,"zug":"fuhre:plan:durst","grund":"Fuhrplan","knopf":{"text":"Fahren: nach Durst · 3 Fass +6 Pf","preis":6,"w":199,"h":24},"vor":{"jahr":1352,"woche":2,"kasse":47},"nach":{"jahr":1352,"woche":3,"kasse":46},"dkasse":-1,"lage":0}
+{"t":94.2,"was":"abgeschaltet","zug":"fuhre:abschicken","text":"FUHRE ABSCHICKEN"}
+{"t":94.2,"was":"woche","n":63,"jahr":1352,"woche":3,"kasse":46,"greifbar":45,"mitPreis":10,"deckung":0.8070175438596491,"nenner":"Ablösung Brückenwirt","ziel":null,"uebergabeImText":1}
+{"t":95.5,"was":"klick","nr":72,"zug":"fuhre:plan:vorige","grund":"Fuhrplan","knopf":{"text":"Fahren: wie zuletzt · 3 Fass +6 Pf","preis":6,"w":199,"h":24},"vor":{"jahr":1352,"woche":3,"kasse":46},"nach":{"jahr":1352,"woche":4,"kasse":45},"dkasse":-1,"lage":0}
+{"t":95.5,"was":"abgeschaltet","zug":"fuhre:abschicken","text":"FUHRE ABSCHICKEN"}
+{"t":95.6,"was":"woche","n":64,"jahr":1352,"woche":4,"kasse":45,"greifbar":45,"mitPreis":10,"deckung":0.7894736842105263,"nenner":"Ablösung Brückenwirt","ziel":null,"uebergabeImText":1}
+{"t":96.5,"was":"klick","nr":73,"zug":"fuhre:plan:vorige","grund":"Fuhrplan","knopf":{"text":"Fahren: wie zuletzt · 3 Fass +6 Pf","preis":6,"w":199,"h":24},"vor":{"jahr":1352,"woche":4,"kasse":45},"nach":{"jahr":1352,"woche":5,"kasse":44},"dkasse":-1,"lage":0}
+{"t":96.5,"was":"abgeschaltet","zug":"fuhre:abschicken","text":"FUHRE ABSCHICKEN"}
+{"t":96.6,"was":"woche","n":65,"jahr":1352,"woche":5,"kasse":44,"greifbar":47,"mitPreis":11,"deckung":2.933333333333333,"nenner":"Zuvorkommen Fährhaus am Fluss","ziel":null,"uebergabeImText":1}
+{"t":97.5,"was":"klick","nr":74,"zug":"fuhre:plan:vorige","grund":"Fuhrplan","knopf":{"text":"Fahren: wie zuletzt · 3 Fass +6 Pf","preis":6,"w":199,"h":24},"vor":{"jahr":1352,"woche":5,"kasse":44},"nach":{"jahr":1352,"woche":6,"kasse":43},"dkasse":-1,"lage":0}
+{"t":97.5,"was":"abgeschaltet","zug":"fuhre:abschicken","text":"FUHRE ABSCHICKEN"}
+{"t":97.6,"was":"woche","n":66,"jahr":1352,"woche":6,"kasse":43,"greifbar":48,"mitPreis":12,"deckung":2.8666666666666667,"nenner":"Zuvorkommen Fährhaus am Fluss","ziel":null,"uebergabeImText":1}
+{"t":98.8,"was":"klick","nr":75,"zug":"fuhre:plan:vorige","grund":"Fuhrplan","knopf":{"text":"Fahren: wie zuletzt · 3 Fass +6 Pf","preis":6,"w":199,"h":24},"vor":{"jahr":1352,"woche":6,"kasse":43},"nach":{"jahr":1352,"woche":7,"kasse":42},"dkasse":-1,"lage":0}
+{"t":98.8,"was":"abgeschaltet","zug":"fuhre:abschicken","text":"FUHRE ABSCHICKEN"}
+{"t":98.9,"was":"woche","n":67,"jahr":1352,"woche":7,"kasse":42,"greifbar":48,"mitPreis":12,"deckung":2.8,"nenner":"Zuvorkommen Fährhaus am Fluss","ziel":null,"uebergabeImText":1}
+{"t":100,"was":"klick","nr":76,"zug":"fuhre:plan:vorige","grund":"Fuhrplan","knopf":{"text":"Fahren: wie zuletzt · 3 Fass +6 Pf","preis":6,"w":199,"h":24},"vor":{"jahr":1352,"woche":7,"kasse":42},"nach":{"jahr":1352,"woche":8,"kasse":41},"dkasse":-1,"lage":0}
+{"t":100,"was":"abgeschaltet","zug":"fuhre:abschicken","text":"FUHRE ABSCHICKEN"}
+{"t":100.1,"was":"woche","n":68,"jahr":1352,"woche":8,"kasse":41,"greifbar":48,"mitPreis":12,"deckung":2.7333333333333334,"nenner":"Zuvorkommen Fährhaus am Fluss","ziel":null,"uebergabeImText":1}
+{"t":101.2,"was":"klick","nr":77,"zug":"fuhre:plan:vorige","grund":"Fuhrplan","knopf":{"text":"Fahren: wie zuletzt · 3 Fass +6 Pf","preis":6,"w":199,"h":24},"vor":{"jahr":1352,"woche":8,"kasse":41},"nach":{"jahr":1352,"woche":9,"kasse":40},"dkasse":-1,"lage":0}
+{"t":101.3,"was":"abgeschaltet","zug":"fuhre:abschicken","text":"FUHRE ABSCHICKEN"}
+{"t":101.3,"was":"woche","n":69,"jahr":1352,"woche":9,"kasse":40,"greifbar":49,"mitPreis":12,"deckung":1.3333333333333333,"nenner":"Zuvorkommen Pfarrschenke St. Michael","ziel":null,"uebergabeImText":1}
+{"t":102.4,"was":"klick","nr":78,"zug":"fuhre:plan:vorige","grund":"Fuhrplan","knopf":{"text":"Fahren: wie zuletzt · 3 Fass +6 Pf","preis":6,"w":199,"h":24},"vor":{"jahr":1352,"woche":9,"kasse":40},"nach":{"jahr":1352,"woche":10,"kasse":39},"dkasse":-1,"lage":0}
+{"t":102.5,"was":"abgeschaltet","zug":"fuhre:abschicken","text":"FUHRE ABSCHICKEN"}
+{"t":102.6,"was":"woche","n":70,"jahr":1352,"woche":10,"kasse":39,"greifbar":49,"mitPreis":12,"deckung":1.3,"nenner":"Zuvorkommen Pfarrschenke St. Michael","ziel":null,"uebergabeImText":1}
+{"t":103.6,"was":"klick","nr":79,"zug":"fuhre:plan:vorige","grund":"Fuhrplan","knopf":{"text":"Fahren: wie zuletzt · 3 Fass +6 Pf","preis":6,"w":199,"h":24},"vor":{"jahr":1352,"woche":10,"kasse":39},"nach":{"jahr":1352,"woche":11,"kasse":38},"dkasse":-1,"lage":0}
+{"t":103.6,"was":"abgeschaltet","zug":"fuhre:abschicken","text":"FUHRE ABSCHICKEN"}
+{"t":103.7,"was":"woche","n":71,"jahr":1352,"woche":11,"kasse":38,"greifbar":49,"mitPreis":12,"deckung":1.2666666666666666,"nenner":"Zuvorkommen Pfarrschenke St. Michael","ziel":null,"uebergabeImText":1}
+{"t":105,"was":"klick","nr":80,"zug":"fuhre:plan:vorige","grund":"Fuhrplan","knopf":{"text":"Fahren: wie zuletzt · 3 Fass +6 Pf","preis":6,"w":199,"h":24},"vor":{"jahr":1352,"woche":11,"kasse":38},"nach":{"jahr":1352,"woche":12,"kasse":37},"dkasse":-1,"lage":0}
+{"t":105.1,"was":"abgeschaltet","zug":"fuhre:abschicken","text":"FUHRE ABSCHICKEN"}
+{"t":105.1,"was":"woche","n":72,"jahr":1352,"woche":12,"kasse":37,"greifbar":46,"mitPreis":9,"deckung":0.578125,"nenner":"Ablösung Mühlschenke","ziel":null,"uebergabeImText":1}
+{"t":106.2,"was":"klick","nr":81,"zug":"fuhre:plan:vorige","grund":"Fuhrplan","knopf":{"text":"Fahren: wie zuletzt · 3 Fass +6 Pf","preis":6,"w":199,"h":24},"vor":{"jahr":1352,"woche":12,"kasse":37},"nach":{"jahr":1352,"woche":13,"kasse":36},"dkasse":-1,"lage":0}
+{"t":106.2,"was":"abgeschaltet","zug":"fuhre:abschicken","text":"FUHRE ABSCHICKEN"}
+{"t":106.3,"was":"woche","n":73,"jahr":1352,"woche":13,"kasse":36,"greifbar":46,"mitPreis":10,"deckung":0.5625,"nenner":"Ablösung Mühlschenke","ziel":null,"uebergabeImText":1}
+{"t":107.3,"was":"klick","nr":82,"zug":"fuhre:plan:vorige","grund":"Fuhrplan","knopf":{"text":"Fahren: wie zuletzt · 3 Fass +6 Pf","preis":6,"w":199,"h":24},"vor":{"jahr":1352,"woche":13,"kasse":36},"nach":{"jahr":1352,"woche":14,"kasse":34},"dkasse":-2,"lage":0}
+{"t":107.3,"was":"abgeschaltet","zug":"fuhre:abschicken","text":"FUHRE ABSCHICKEN"}
+{"t":107.4,"was":"woche","n":74,"jahr":1352,"woche":14,"kasse":34,"greifbar":46,"mitPreis":10,"deckung":0.53125,"nenner":"Ablösung Mühlschenke","ziel":null,"uebergabeImText":1}
+{"t":108.4,"was":"klick","nr":83,"zug":"fuhre:plan:vorige","grund":"Fuhrplan","knopf":{"text":"Fahren: wie zuletzt · 3 Fass +6 Pf","preis":6,"w":199,"h":24},"vor":{"jahr":1352,"woche":14,"kasse":34},"nach":{"jahr":1352,"woche":15,"kasse":33},"dkasse":-1,"lage":0}
+{"t":108.4,"was":"abgeschaltet","zug":"fuhre:abschicken","text":"FUHRE ABSCHICKEN"}
+{"t":108.6,"was":"woche","n":75,"jahr":1352,"woche":15,"kasse":33,"greifbar":46,"mitPreis":10,"deckung":0.515625,"nenner":"Ablösung Mühlschenke","ziel":null,"uebergabeImText":1}
+{"t":109.6,"was":"klick","nr":84,"zug":"fuhre:plan:vorige","grund":"Fuhrplan","knopf":{"text":"Fahren: wie zuletzt · 3 Fass +6 Pf","preis":6,"w":199,"h":24},"vor":{"jahr":1352,"woche":15,"kasse":33},"nach":{"jahr":1352,"woche":16,"kasse":32},"dkasse":-1,"lage":0}
+{"t":109.7,"was":"abgeschaltet","zug":"fuhre:abschicken","text":"FUHRE ABSCHICKEN"}
+{"t":109.8,"was":"woche","n":76,"jahr":1352,"woche":16,"kasse":32,"greifbar":43,"mitPreis":9,"deckung":0.5,"nenner":"Ablösung Mühlschenke","ziel":null,"uebergabeImText":1}
+{"t":110.8,"was":"klick","nr":85,"zug":"fuhre:plan:vorige","grund":"Fuhrplan","knopf":{"text":"Fahren: wie zuletzt · 2 Fass +4 Pf","preis":4,"w":199,"h":24},"vor":{"jahr":1352,"woche":16,"kasse":32},"nach":{"jahr":1352,"woche":17,"kasse":31},"dkasse":-1,"lage":0}
+{"t":110.8,"was":"abgeschaltet","zug":"fuhre:abschicken","text":"FUHRE ABSCHICKEN"}
+{"t":110.9,"was":"woche","n":77,"jahr":1352,"woche":17,"kasse":31,"greifbar":46,"mitPreis":11,"deckung":1.4090909090909092,"nenner":"Zuvorkommen Pfarrschenke St. Michael","ziel":null,"uebergabeImText":1}
+{"t":112,"was":"klick","nr":86,"zug":"fuhre:plan:mager","grund":"Fuhrplan","knopf":{"text":"Fahren: die mageren Häuser · 3 Fass +5 Pf","preis":5,"w":243,"h":24},"vor":{"jahr":1352,"woche":17,"kasse":31},"nach":{"jahr":1352,"woche":18,"kasse":28},"dkasse":-3,"lage":0}
+{"t":112,"was":"abgeschaltet","zug":"fuhre:abschicken","text":"FUHRE ABSCHICKEN"}
+{"t":112.2,"was":"woche","n":78,"jahr":1352,"woche":18,"kasse":28,"greifbar":44,"mitPreis":10,"deckung":1.2727272727272727,"nenner":"Zuvorkommen Pfarrschenke St. Michael","ziel":null,"uebergabeImText":1}
+{"t":113.2,"was":"klick","nr":87,"zug":"fuhre:plan:mager","grund":"Fuhrplan","knopf":{"text":"Fahren: die mageren Häuser · 3 Fass +5 Pf","preis":5,"w":243,"h":24},"vor":{"jahr":1352,"woche":18,"kasse":28},"nach":{"jahr":1352,"woche":19,"kasse":26},"dkasse":-2,"lage":0}
+{"t":113.2,"was":"abgeschaltet","zug":"fuhre:abschicken","text":"FUHRE ABSCHICKEN"}
+{"t":113.3,"was":"woche","n":79,"jahr":1352,"woche":19,"kasse":26,"greifbar":44,"mitPreis":10,"deckung":1.1818181818181819,"nenner":"Zuvorkommen Pfarrschenke St. Michael","ziel":null,"uebergabeImText":1}

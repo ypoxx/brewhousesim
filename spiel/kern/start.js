@@ -89,9 +89,13 @@
       + 'font-size:max(13px,calc(var(--s)*24));';
     zettel.appendChild(kopf);
 
+    /* Die Saetze halten in allen vier Epochen. Kein „Schenke", kein „Fass",
+       kein „Braurecht" — das sind Woerter von 1350, und dieser Anschlag
+       steht auch 1970 da. Was epochenweise wechselt, kommt aus welt.js
+       (`e.sagt`) und nicht aus einem Satz, den der Rahmen erfindet. */
     zettel.appendChild(absatz('',
-      'Du führst dieses Haus: brauen, ausliefern, die Wirte halten, die Abgaben zahlen. '
-      + e.sagt));
+      'Du führst dieses Haus: brauen, ausliefern, die Abnehmer halten, die '
+      + 'Abgaben zahlen. ' + e.sagt));
 
     zettel.appendChild(absatz('DAS ZIEL —',
       'das Haus so weit bringen, dass es übergeben werden kann: an die nächste '
@@ -99,10 +103,10 @@
       + 'übergeben können — und die meisten Jahre geht es zuerst ums Überleben.'));
 
     zettel.appendChild(absatz('SO ENDET ES SCHLECHT —',
-      'wenn keine Schenke der Stadt mehr ein Fass nimmt, ist das Braurecht weg. '
-      + 'Nicht die leere Kasse macht das Haus zu, sondern das leere Auftragsbuch. '
-      + 'Auch eine Pfanne, die drei Jahre kalt bleibt, und ein leerer Hof mit '
-      + 'Schulden beenden die Partie.'));
+      'wenn niemand in der Stadt mehr abnimmt, ist das Haus zu. Nicht die '
+      + 'leere Kasse macht es zu, sondern das leere Auftragsbuch. Auch eine '
+      + 'Pfanne, die drei Jahre kalt bleibt, und ein leerer Hof mit Schulden '
+      + 'beenden die Partie.'));
 
     zettel.appendChild(absatz('JEDE EPOCHE IST EIN EIGENES SZENARIO —',
       '1350, 1600, 1884, 1970, jede mit eigenem Anfang und eigenem Ende. Sie '

@@ -1089,7 +1089,7 @@ html[data-hof-zu] #fach-blatt-fuhre { z-index: 200; }
    WARUM SIE SO KLEIN IST: stadt.js behandelt jedes Kind eines fremden Fachs
    ueber GRENZE (3,5 % der Buehne) als BRETT und klappt es beim Laden in einen
    Reiter. Darunter ist es eine KARTE IM BILD und bleibt liegen. Diese Karte
-   misst 33 x 10,2 % = 3,37 % und beansprucht KEINE Ausnahme (kein .amort,
+   misst 31,5 x 10,2 % = 3,21 % und beansprucht KEINE Ausnahme (kein .amort,
    kein data-frei) — sie faellt unter die Regel, nicht unter deren Ausnahme.
    Wer die Masse aendert, misst mit
    `werkbank/schuss/woche-w13/freiflaeche.mjs` nach.
@@ -1109,7 +1109,7 @@ html[data-hof-zu] #fach-blatt-fuhre { z-index: 200; }
   position: absolute;
   left: 1.2%;
   top: 85.6%;
-  width: 33%;
+  width: 31.5%;
   height: 10.2%;
   display: flex;
   flex-direction: column;

@@ -121,16 +121,23 @@
      Seite ueber file://) — dann laeuft das Spiel wie vor Welle 13 weiter und
      sagt es in `B.stand.bericht()`. Es wirft nie.
      ---------------------------------------------------------------------- */
+  /* Einmal geprueft, dann gemerkt. Die Probe kostet ein Schreiben und ein
+     Loeschen; sie in jeder Woche zu wiederholen waere Zeit im Zeichenweg
+     fuer eine Frage, deren Antwort sich nicht mehr aendert. */
+  var ablageGeprueft = false, ablageEl = null;
+
   function ablage() {
+    if (ablageGeprueft) return ablageEl;
+    ablageGeprueft = true;
     try {
       var s = window.localStorage;
-      if (!s) return null;
+      if (!s) return (ablageEl = null);
       s.setItem(PRAEFIX + 'probe', '1');
       s.removeItem(PRAEFIX + 'probe');
-      return s;
+      return (ablageEl = s);
     } catch (e) {
       merke('kein Speicher: ' + (e && e.message ? e.message : e));
-      return null;
+      return (ablageEl = null);
     }
   }
 

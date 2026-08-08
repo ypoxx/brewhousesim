@@ -168,6 +168,11 @@ schreib({ was: 'erster-schirmtext', n: ersterText.length,
 
 const uebergabeGesehen = [];
 
+/* Der Anschlag des Rahmens wird gelesen und beiseitegelegt, wie ein Mensch es
+   taete. Er geht ohnehin beim ersten Wochenwechsel von selbst. Der Klick
+   zaehlt mit — er steht im Protokoll wie jeder andere. */
+await greif('kern:anfangen', { grund: 'Anschlag gelesen', warte: 200 });
+
 while (gespielt < ZIELWOCHEN) {
   let s = await schirm();
   if (s.ende) { abbruch = { grund: 'Spiel meldet ENDE', jahr: s.jahr, woche: s.woche }; await foto('ende'); break; }

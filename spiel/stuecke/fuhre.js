@@ -3617,7 +3617,7 @@
      Buehne), als BRETT und gibt ihm einen Reiter — beim Laden zugeklappt.
      Was darunter bleibt und keine Ausnahme beansprucht (kein .amort, kein
      data-frei), ist eine KARTE IM BILD und bleibt liegen. Die Karte misst
-     31,8 x 10,2 Prozent = 3,24 % (stil/fuhre-zusatz.css) und traegt keinen
+     31,5 x 10,2 Prozent = 3,21 % (stil/fuhre-zusatz.css) und traegt keinen
      Kasten: Schrift im Lichthof, Knoepfe als Chips. Wer hier die Hoehe
      aendert, misst zuerst nach, ob sie noch unter 3,5 % liegt —
      werkbank/schuss/woche-w13/freiflaeche.mjs sagt es in einer Zeile.
@@ -3627,11 +3627,24 @@
        sagen: das Blatt traegt dann die Entscheidung. */
     if (sommerLiegtOben() || schlussLiegtOben()) return;
 
+    /* SOLANGE DER ANSCHLAG DES RAHMENS LIEGT, TRITT DIE KARTE ZURUECK.
+
+       `kern/start.js` legt seinen Anschlag (Welle 13, R4) auf denselben
+       Streifen unten links — gemessen x 2,4–49,4 / y 74,4–95,3 Prozent. Zwei
+       Schriften im selben Lichthof uebereinander sind beide unlesbar, und
+       sein Knopf „Anfangen" laege genau auf den Chips. Er sagt dasselbe
+       zuerst („DAS ZIEL — das Haus so weit bringen, dass es übergeben werden
+       kann") und geht von selbst, sobald die Zeit laeuft — beim ersten
+       `woche`- oder `jahr`-Ereignis oder auf Klick.
+       GELESEN, NICHT ANGEFASST: dieses Stueck sieht nur nach, ob sein Fach
+       da ist. Es aendert an fremdem DOM nichts. */
+    if (document.getElementById('fach-kopf-kern-start')) return;
+
     var k = B.el('div', 'fu-woche');
     var lage = wochenLage();
     var reihe = B.el('div', 'fu-wochenwahl');
 
-    /* VIER CHIPS, NICHT MEHR. Die Karte ist 33 x 10,2 Prozent gross und
+    /* VIER CHIPS, NICHT MEHR. Die Karte ist 31,5 x 10,2 Prozent gross und
        traegt zwei Zeilen Knoepfe; was darueber hinausgeht, stuende ueber dem
        eigenen Kasten. Der Platz wird deshalb von oben verteilt: das gute
        Ende zuerst, dann der Sprung, dann so viele Fuhrplaene, wie noch
