@@ -51,4 +51,209 @@ sie bisher stand.
 
 ---
 
-*(Fortsetzung während des Baus.)*
+## 1 · R6 — der Knopf `preis:tafel` lügt nicht mehr
+
+**Was gebaut wurde, in drei Zeilen `zeichne`:**
+
+```js
+klemmeLesen();                    // liest die Tafel der VORIGEN Runde
+var fach = B.ebene('blatt', 'preis'); B.leere(fach);
+var sichtbar = tafelSichtbar();   // EINE Entscheidung
+zeichneGriff(fach, sichtbar); if (sichtbar) zeichneTafel(fach);
+```
+
+* `klemmeLesen()` liest **vor** dem Leeren des Fachs, ob `.pr-tafel` die
+  Klasse `stadt-zugeklappt` oder `stadt-verdeckt` trägt. Das ist das Element,
+  über das DIE STADT seit dem letzten Bildaufbau geurteilt hat — die einzige
+  Stelle, an der diese Auskunft überhaupt zu haben ist. Steht keine Tafel im
+  DOM, gilt die vorige Entscheidung weiter (sonst flackerte das Blatt im
+  240-ms-Takt des Rahmens).
+* `sichtbar` wird **einmal** je Runde berechnet und an `zeichneGriff`
+  *übergeben*. Ein Knopf und ein Blatt, die aus demselben Wert gezeichnet
+  werden, können einander nicht widersprechen. Vorher rief `zeichneGriff`
+  `tafelSichtbar()` selbst — zwei Messungen in einer Runde.
+* **Die 420-ms-Frist ist ersatzlos fort**, ebenso `seheNachRahmen()` und
+  `tafelWeggeklappt()`. Der Rundenschluss aus `kern/runde.js` zieht nach, was
+  sie tun sollte: seine Klemmenwache zeichnet neu, sobald sich
+  `.stadt-zugeklappt` ändert. `stuecke/preis.js:2737` — die Stelle, die
+  `kern/runde.js` im Kopf als **den Verursacher** der Bistabilität vom
+  7. August nennt — existiert nicht mehr. Damit hat das ganze Spiel nur noch
+  **eine** gefangene Frist (`name.js:2272`, 0 ms).
+
+**Nebenbefund, und er war die halbe Ursache dafür, dass R7 nicht messbar war:**
+`.pr-tafel` trug in `stil/preis.css` ein `animation: pr-auf 220ms` mit
+`from { opacity: 0 }`. Das Fach wird bei **jedem** Bildaufbau geleert und neu
+gefüllt — die Tafel ist ein neues Element je Runde, die Aufblende lief also
+jedes Mal von vorn. Gemessen am Jahreswechsel 1351/1: Tafel im DOM, nicht
+weggeklappt, ihr Ausgangsknopf mit `elementFromPoint` zu treffen — und
+`getComputedStyle(...).opacity` **= 0**. Eine Hand, die nach ihrem Klick
+hinsieht, sieht ein durchsichtiges Blatt und zählt es nicht. Die Aufblende
+läuft jetzt nur noch beim ersten Bildaufbau nach dem Aufschlagen (Klasse
+`pr-frisch`, gesetzt aus `Z.imDom`).
+
+### Gemessen (1350, Saat 1350, 1600×900, kein einziger Reiterklick)
+
+| | vorher | nachher |
+|---|---|---|
+| abgelesene Zustände | 308 | 206 |
+| **Aufschrift „schließen" ohne liegende Tafel** | **33** | **0** |
+| Aufschrift „Michaelitafel …" bei liegender Tafel | 0 | 0 |
+| **ehrliche Aufschriften** | 275 | **206 von 206** |
+| Seitenfehler · `BRAUHAUS.lage` | 0 · 0 | 0 · 0 |
+
+Protokolle: `…/tafel-w13/protokoll/vorher-e1.json` und `nach3-e1.json`.
+Über alle vier Epochen (je 4 Braujahre, ohne Reiterklick): **0 Lügen in
+206/206/202/198 abgelesenen Zuständen.**
+
+---
+
+## 2 · R7 — die Tafel liegt zu Michaeli von selbst auf
+
+Drei Änderungen, und die dritte ist die, über die man streiten kann:
+
+**(a) `michaeli()` setzt die Merkmarken zurück.** `Z.geklemmt` trug sonst das
+Urteil der STADT über die Tafel des *vorigen* Jahres weiter.
+
+**(b) Eine Tafel außerhalb von Michaeli wird weggelegt.** Neuer
+`woche`-Horcher: `if (d.woche !== 1) Z.offen = false`. Grund: `nimm()`
+beginnt mit `if (B.welt.zeit.woche !== 1) return;` und `angebotKarte`
+beschriftet den Knopf dann mit „Michaeli ist vorüber" und schaltet ihn aus.
+Bis zu dieser Welle blieb `Z.offen` das ganze Braujahr stehen — wer die Tafel
+in Woche 1 nicht weglegte, sah bis Woche 30 ein formatfüllendes Blatt mit
+fünf abgeschalteten Knöpfen. Das ist die Vitrine aus §3 des Urteils.
+
+**(c) Michaeli lässt sich nicht übergehen.** DIE STADT klappt beim Laden
+**jedes** fremde Brett in einen Reiter (`stadt.js`: `jetzt - startZeit <
+LADEZEIT` → `'zu'`), und `lage[s]` behält dieses Urteil danach bei. Für die
+Michaelitafel des **Ladejahres** heißt das: sie liegt nie, und genommen wird
+nur in Woche 1. Gemessen am Stand vorher: 1350 lag sie in keiner der 30
+Wochen des Ladejahres.
+
+Die Regel ist deshalb: *solange Michaeli ist, die Tafel nicht weggelegt wurde
+und nur der Rahmen sie weggeklappt hat, holt sie sich den Tisch bei der
+nächsten Handlung des Spielers zurück.* Das ist **keine Gegenwehr gegen den
+Rahmen, sondern sein eigener Weg**: ein Brett, das unmittelbar nach einem
+Klick neu erscheint, gilt DER STADT als vom Spieler geholt und bleibt
+aufgeschlagen (`handZeit`, `HANDFRIST = 1400`). Kein Zeitgeber, keine Frist,
+keine Klasse an fremdem DOM. Verriegelt auf **drei** Versuche je Braujahr.
+
+Für den einen Klick, mit dem man Michaeli sonst verlässt — WEITER —, gilt der
+**Georgi-Halt** der FUHRE (`fuhre.js`, ZUSTÄNDIGKEIT 23): der erste Druck legt
+die Tafel auf den Tisch, statt die Woche zu schalten, **einmal je Braujahr**
+(`Z.gehalten`). Schlägt sie danach immer noch nicht auf, läuft der nächste
+Druck durch — eine Sackgasse kann daraus nicht werden.
+
+Der Horcher hängt an `#buehne`, nicht an `document`, und das ist Absicht:
+`stopPropagation` hält dort den Knopf des Kerns auf, **nicht** den Horcher DER
+STADT, der am selben Knoten hängt und `handZeit` setzt. Hinge er an
+`document`, klappte DIE STADT die eben geholte Tafel sofort wieder weg.
+
+---
+
+## 3 · R10 — das eigene Blatt geht beim Klick auf einen fremden Reiter weg
+
+Derselbe Horcher. Trifft ein Klick `stadt:reiter:*`, `stadt:bauhof`,
+`stadt:ortsmarken` oder `stadt:alles-zuklappen`, während die Tafel liegt,
+setzt DIE JAHRESTAFEL ihr **eigenes** `Z.offen` auf false und zeichnet neu.
+Der Klick läuft unverändert an den Reiter weiter, der ihn bekommen soll — er
+kostet den Spieler nichts und tut jetzt, was draufsteht. Kein Reiter wird
+abgeschaltet, kein fremdes DOM angefasst (Entscheidung ③ der Aufsicht).
+
+---
+
+## 4 · R8 — woher das Geld kommt
+
+Der Satz wird nicht erfunden, sondern **abgelesen**: das Spiel schreibt jede
+Einnahme als Preisschild mit positiver Zahl an ihren Knopf
+(`kern/buehne.js`: `einnahme = opt.preis > 0`). `einnahmeZuege()` sammelt alle
+solchen Knöpfe, die nicht abgeschaltet sind und eine Fläche haben; `geldZug()`
+nimmt den **kleinsten, der die Lücke schließt** — und wenn keiner reicht, den
+größten. Fremdes DOM wird nur gelesen; `stuecke/fuhre.js` zeichnet laut
+`spiel/index.html` vor diesem Stück, der Knopf ist also aus derselben Runde.
+
+Der Satz steht an **zwei** Orten: unter „HEUTE NICHT" bei den Angeboten und —
+neu — unter „HEUTE KEINE" bei den Festlegungen, wenn zwar ein Angebot, aber
+keine Festlegung bezahlbar ist. Genau dieser Fall ist §3 des Urteils: *„in
+1350 null von drei, weil die billigste 85 Pf kostete bei einer Kasse von 112"*.
+
+Dass die Tafel dabei zugeht und wieder auf, ist kein Umweg, sondern der Zug:
+der Griff oben rechts schaltet sie, ohne dass die Woche läuft, und `nimm()`
+fragt nur nach der Woche. **Zettel schließen, Grut verkaufen, Tafel wieder
+aufschlagen, nehmen — alles am selben Michaelistag.** Das steht im Satz.
+
+**Ein Befund, der nicht dieser Tafel gehört, aber hierher, weil er den Satz
+begrenzt:** im ganzen Spiel trägt **genau ein** Knopf ein positives
+Preisschild, in allen vier Epochen derselbe — `fuhre:rueckkauf:rohstoff`
+(+19 Pf / +66 fl / +633 M / +7.200 DM); in 1884 und 1970 ist er im
+Ladezustand abgeschaltet. Gemessen an vier Ladeschirmen. Solange das so ist,
+kann diese Tafel in vielen Wochen keinen Geldzug nennen, weil es keinen gibt.
+Das ist Auflage A9 (Stück 4) und A7 (Stück 3), nicht R8.
+
+Für diesen Fall erfindet die Tafel nichts, sondern sagt, was wahr ist — und
+sie sagt es mit einer **gemessenen Zahl**: was das vorige Braujahr übrig
+gelassen hat (`Z.ertrag`, die Veränderung der Lade von Michaeli zu Michaeli)
+und in wie vielen Braujahren die Summe bei diesem Gang zusammenkäme. Ließ das
+Jahr nichts übrig, steht der Satz da, der dann wahr ist: *„Solange das so
+bleibt, kommt diese Summe nicht zusammen — sie kommt aus den Fuhren, nicht
+aus der Zeit."*
+
+Am Bildschirm abgelesen (1350, Michaeli 1351, Kasse 48 Pf):
+
+> **HEUTE KEINE** Für keine dieser Festlegungen reicht die Kasse. Die
+> billigste — Vertrag statt Gunst — kostet 88 Pf, es fehlen 40 Pf. Eine
+> Festlegung, die man nie bezahlen kann, ist keine Festlegung.
+> **HEUTE BRINGT KEIN KNOPF GELD** Auf diesem Schirm steht kein Zug mit
+> Preisschild, der etwas in die Lade legt. Das vorige Braujahr hat nichts
+> übrig gelassen. Solange das so bleibt, kommt diese Summe nicht zusammen —
+> sie kommt aus den Fuhren, nicht aus der Zeit. Was heute nicht genommen
+> wird, bleibt in der Kasse; die Tafel von 1352 steht am selben Ort.
+
+---
+
+## 5 · R9 — kein abgeschnittener Text
+
+Gerät: `werkbank/schuss/tafel-w13/ueberlauf.mjs`. **Mit gezeichneter
+Rollleiste** (`ignoreDefaultArgs: ['--hide-scrollbars']`), zwei Fenster
+(1600×900 und 1366×768), vier Epochen, beide Seiten der Tafel (Angebote und
+Chronik) = **16 Blätter**. Gemessen am neunten Braujahr jeder Epoche
+(1359 / 1609 / 1893 / 1979), also an vollen Kästen.
+
+Zwei Sorten werden gezählt:
+1. **Abgeschnittene Kästen** — je Richtung getrennt: läuft in dieser Richtung
+   über UND kann in dieser Richtung nicht rollen.
+2. **Wortbrüche** — ein Knopfwort auf mehr Zeilen, als es Wörter hat. Die
+   Zeilenzahl kommt aus `Range.getClientRects()`, nicht aus Höhe geteilt
+   durch Zeilenhöhe; das ist der Unterschied zwischen „sieht so aus" und
+   „ist so".
+
+| | vorher | nachher |
+|---|---|---|
+| abgeschnittene Kästen (16 Blätter) | 0 | **0** |
+| **Wortbrüche (16 Blätter)** | **51** | **0** |
+
+Die vier Kästen aus A13 (*„Zusammen im Jahr"*, *„Der Anschlag steht im
+Steuerbuch der Stadt"*, *„1 fertig · 0 im Bau · 0 durch eine Wahl für immer"*)
+schneiden in **keinem** der 16 Blätter mehr ab — das hat die Nacharbeit der
+Welle 7 erledigt (`@media`-Block in `stil/preis-zusatz.css`), und es hält auch
+bei 1366×768 und mit Rollleiste.
+
+**Der Wortbruch dagegen stand noch, und seine Ursache ist eine Kette aus drei
+einzeln richtigen Regeln:**
+`.pr-tafel .pr-karte { overflow-wrap: anywhere }` ist für lange Komposita im
+Kartentext gedacht, wird aber auf das Wort im Knopf vererbt; der Knopf ist ein
+`inline-flex` aus `.wort` und `.preis` (`kern/buehne.js`), und beide Kinder
+schrumpfen bei knappem Platz unter ihre eigene Breite; mit `white-space:
+normal` bricht das Wort dann an jeder Stelle. Ergebnis: *„Nehme n"*.
+
+Abhilfe: `.wort` und `.preis` bekommen `flex: 0 1 auto` mit
+**`min-width: min-content`** — das ist genau die Breite des längsten Wortes.
+Damit schrumpft die Aufschrift bis an die Wortgrenze und keinen Buchstaben
+weiter; der Knopf darf dafür **zwischen** Wort und Preisschild umbrechen
+(`flex-wrap: wrap`). „Festlegen — Geld herein" bricht an seinen Leerzeichen
+und passt in die 144 px breite Karte (vorher: 145 px auf einer Zeile, 11 px
+über den Rand); „Nehmen" bricht nie. Der Kartentext behält `anywhere` — er
+ist es, der es braucht.
+
+---
+
+*(Fortsetzung: Abnahme über zehn Braujahre, vier Epochen, Wiederholbarkeit.)*

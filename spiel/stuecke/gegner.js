@@ -362,26 +362,32 @@
     for (; i < l.length; i++) alt.push(l[i]);
   }
 
-  /* Die ERSTEN Werte werden aus dem Bildaufbau geholt, sonst stuende die
-     allererste Woche einer Sitzung ohne Ausweiche da — das `woche`-Ereignis
-     kommt erst an ihrem Ende, und gerade der Ladezustand ist das Bild, das
-     ein Kritiker als erstes sieht.
+  /* Waehrend des Zeichnens wird NICHT gemessen — `griffzonen()` liest nur.
+     Gefuellt wird die Liste an zwei Stellen, beide ausserhalb des
+     Zeichenwegs: einmal je Woche (`woche`) und in den ersten zwoelf
+     Bildaufbauten einer Epoche (`zeichne`, oben, vor dem ersten Strich).
 
-     Beim allerersten Bildaufbau ist der Griff erst 3,7 % hoch und waechst
-     dann auf 23,9 %, waehrend die Chronik sich fuellt. Darum sind es nicht
-     eine, sondern HOECHSTENS ZWOELF Abfragen je Epoche — eine feste,
-     abzaehlbare Schranke, keine Schleife an der Wanduhr. Zwoelf Bildaufbauten
-     sind in jeder gemessenen Partie weniger als die erste Woche; danach
-     kommt jede weitere Messung aus dem `woche`-Ereignis. */
+     WARUM UEBERHAUPT IM BILDAUFBAU: sonst stuende die allererste Woche einer
+     Sitzung ohne Ausweiche da — das `woche`-Ereignis kommt erst an ihrem
+     Ende, und gerade der Ladezustand ist das Bild, das ein Kritiker als
+     erstes sieht. Beim allerersten Bildaufbau ist der Griff erst 3,7 % hoch
+     und waechst auf 23,9 %, waehrend die Chronik sich fuellt.
+
+     WARUM ZWOELF UND WARUM GEZAEHLT WIRD, WAS GEZAEHLT WIRD: gezaehlt werden
+     BILDAUFBAUTEN, nicht Aufrufe. Beim ersten Anlauf stand die Schranke in
+     `griffzonen()` selbst — und die wird je Adresse zweimal gerufen, bei vier
+     offenen Adressen also achtmal je Bild. Zwoelf „Anlaeufe" waren damit nach
+     anderthalb Bildern verbraucht, und zwar bevor der Griff seine Hoehe
+     hatte. Eine Schranke, die etwas anderes zaehlt, als sie zu zaehlen
+     vorgibt, ist keine Schranke. */
   var GRIFFE_ANLAUF = {};
-  function griffzonen() {
+  function griffeNachmessen() {
     var e = epNr();
-    if ((GRIFFE_ANLAUF[e] || 0) < 12) {
-      GRIFFE_ANLAUF[e] = (GRIFFE_ANLAUF[e] || 0) + 1;
-      messeGriffe();
-    }
-    return GRIFFE[e] || [];
+    if ((GRIFFE_ANLAUF[e] || 0) >= 12) return;
+    GRIFFE_ANLAUF[e] = (GRIFFE_ANLAUF[e] || 0) + 1;
+    messeGriffe();
   }
+  function griffzonen() { return GRIFFE[epNr()] || []; }
 
   /* Die senkrechte Ausweiche kennt weiterhin NUR die Beschriftungen — an
      ihrem Verhalten aendert diese Welle nichts. `data-a3zonen` nennt beide
@@ -3522,6 +3528,10 @@
       B.leere(fach);
       if (!Z.bereit) return;
       Z.takt = takt();
+
+      /* Vor dem ersten Strich, hoechstens zwoelfmal je Epoche: wo stehen die
+         Griffe der Ebenen ueber mir? Begruendung bei `griffeNachmessen`. */
+      griffeNachmessen();
 
       /* Zuerst rechnen, dann malen: die Kennzahl der zweiten Messlatte steht
          mit im Bild und darf nicht eine Woche alt sein. */

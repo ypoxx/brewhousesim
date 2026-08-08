@@ -153,8 +153,33 @@ unverändert.**
 1350 lag sie **kein einziges Mal** von selbst auf; in 1600 fehlte sie an jedem
 geprüften Jahreswechsel. In Woche 1 jedes Braujahres wird sie aufgeschlagen —
 so wie das Sommerblatt zu Georgi —, und erst *„Das Jahr beginnen"* legt sie weg.
-*Abnahme:* zehn Braujahre 1350 spielen, ohne einen Reiter anzufassen; die Tafel
-muss **zehnmal** von selbst dagelegen haben.
+
+> **BERICHTIGT von der Aufsicht am 8. August, 08:55 UTC, bevor jemand daran
+> gemessen wurde. Der Absatz oben stimmt nicht.** Am Vorzustand `7e21973`,
+> 100 Wochen Epoche 1, **ohne einen einzigen Reiterklick**, liegt die Tafel an
+> **3 von 3** Jahreswechseln (1351, 1352, 1353) — und sie bleibt liegen: eine
+> Zeitreihe nach dem Wechsel misst sie bei 60/120/250/400/600/900/1300/1800/
+> 2500/3500/5000/8000 ms **zwölfmal** als liegend. Kein Rennen, kein Aufblitzen.
+>
+> Die „0 von 10" des Kritikers stammt aus seiner eigenen Hand: sein Protokoll
+> (`spiel-w12/protokoll/e1.jsonl`) trägt bei 1351/1 die Zeile `michaeli-fehlt` —
+> an derselben Stelle, an der ich das Blatt liegen sehe —, nachdem seine Hand am
+> Jahreswechsel einen Rundgang über die Reiter gemacht hatte. Er hat genau diese
+> Schwäche in seinem Abschnitt X selbst benannt: *„sie fasst nichts an, wonach
+> sie nicht ausdrücklich sucht."* Alles nachlesbar in
+> `werkbank/schuss/aufsicht/welle13-gegen/BEFUND-VORHER.md`.
+>
+> **Was wirklich fehlt, und es ist enger und billiger:**
+> 1. **Am Spielanfang (1350/1) liegt die Tafel nicht** — und genau dort steht
+>    der Knopf, der behauptet, sie läge (R6). Das ist die Stelle, an der der
+>    Kritiker gesucht hat, was er da schließen soll.
+> 2. **Am Jahreswechsel trägt sie EIN Angebot** (`preis:nimm:dach`, −34 Pf),
+>    nicht die fünf, von denen das Urteil spricht. Die fünf bekommt nur zu
+>    sehen, wer sie in Woche 2 selbst aufschlägt.
+
+*Abnahme:* zehn Braujahre 1350 spielen, ohne einen Reiter anzufassen — die Tafel
+liegt an **jedem** Jahreswechsel **und am Spielanfang**, und die Zahl der
+Angebote, die dabei wirklich auf dem Tisch stehen, steht im Bericht.
 
 **R8 — Wenn nichts bezahlbar ist, sagt die Tafel, woher das Geld kommt.** (A10)
 Der Satz *„HEUTE NICHT · Die Kasse reicht für keines dieser Angebote. Das
@@ -228,6 +253,19 @@ war fast immer mit *„Vorrat reicht nicht"* abgeschaltet, weil der Keller leer
 war.
 *Abnahme:* über 100 Wochen darf es **höchstens 10 Wochen** geben, in denen
 **kein** Zug gegen den Gegner bezahlbar ist. Gemessen in allen vier Epochen.
+
+> **PRÄZISIERT von der Aufsicht am 8. August, 08:55 UTC — ein Loch im eigenen
+> Brief, geschlossen bevor jemand daran gemessen wurde.** „Bezahlbar" hat zwei
+> Lesarten, und sie liegen weit auseinander. Am Vorzustand `7e21973`, 100 Wochen
+> Epoche 1: **eng** (nur Züge mit Preisschild, das die Kasse trägt) → **68 von
+> 100** Wochen ohne Gegenzug. **Weit** (auch Züge ohne Preisschild wie „Fass an
+> den Wirt · 1 Fass statt Geld") → **0 von 100**. Unter der weiten Lesart wäre
+> die Abnahme schon heute erfüllt, ohne dass irgendjemand etwas tut.
+>
+> **Es gilt die enge Lesart**, mit einem Zusatz: ein Zug ohne Preisschild zählt
+> nur mit, wenn er **wirklich ausführbar** ist — „Fass an den Wirt" ist greifbar
+> und trotzdem sinnlos, solange der Keller leer ist; der Kritiker hat ihn „fast
+> immer mit ‚Vorrat reicht nicht' abgeschaltet" gefunden. **Baseline: 68 von 100.**
 
 **R16 — Der Zähler wandert nicht mitten in der Partie.** (A8) Der Reiter *OHNE
 DICH GESCHEHEN* trägt die Zahl der Züge nur im **ersten** Braujahr; ab 1351/1

@@ -58,12 +58,49 @@ Spiel — sie macht das vorhandene bedienbar. Die dreizehn Auflagen der
 Spielprobe sind die Liste; zehn davon sind hier verteilt, drei ausdrücklich
 zurückgestellt.
 
-| Stück | Hafen | Auflagen | Berichtsdatei |
-|---|---|---|---|
-| **DER RAHMEN** — Spielstand, Zielsatz, Startschirm | 8921 | A1 A2(Platz) A12(Entscheidung) | `urteile/welle13-der-rahmen-bau.md` |
-| **DIE JAHRESTAFEL** — der lügende Knopf, die Tafel, die nie aufliegt | 8922 | A4 A5 A6 A10 A13 | `urteile/welle13-die-jahrestafel-bau.md` |
-| **DIE WOCHE** — 71 % der Klicks sind zwei Knöpfe | 8923 | A2(Satz) A3 A6 A7 | `urteile/welle13-die-woche-bau.md` |
-| **DER GEGENZUG** — 457 zu 5 | 8924 | A8 A9 | `urteile/welle13-der-gegenzug-bau.md` |
+| Stück | Hafen | Auflagen | Stand | Berichtsdatei |
+|---|---|---|---|---|
+| **DER RAHMEN** — Spielstand, Zielsatz, Startschirm | 8921 | A1 A2(Platz) A12(Entscheidung) | **gebaut, 09:0x** | `urteile/welle13-der-rahmen-bau.md` |
+| **DIE JAHRESTAFEL** — der lügende Knopf, die Tafel, die nie aufliegt | 8922 | A4 A5 A6 A10 A13 | baut | `urteile/welle13-die-jahrestafel-bau.md` |
+| **DIE WOCHE** — 71 % der Klicks sind zwei Knöpfe | 8923 | A2(Satz) A3 A6 A7 | baut | `urteile/welle13-die-woche-bau.md` |
+| **DER GEGENZUG** — 457 zu 5 | 8924 | A8 A9 | baut | `urteile/welle13-der-gegenzug-bau.md` |
+
+> ### DIE GEGENMESSUNG DER AUFSICHT HAT ZWEI AUFLAGEN WIDERLEGT
+>
+> *8. August, 08:30–08:55 UTC, am eingefrorenen Vorzustand `7e21973` auf Hafen
+> 8931, mit einem Gerät, das **vor** jedem Wellenergebnis geschrieben wurde
+> (`aufsicht/welle13-gegen/probe13.mjs`). Voller Befund:
+> `aufsicht/welle13-gegen/BEFUND-VORHER.md`.*
+>
+> **Das Lineal ist geeicht:** 613 Textzeilen auf dem ersten Schirm, 0 Zielworte,
+> leerer Speicher, `lage` 0 — ziffernweise die Zahlen des Kritikers.
+>
+> **A5 ist falsch.** Die Michaelitafel liegt an **3 von 3** Jahreswechseln von
+> selbst auf und bleibt liegen (Zeitreihe: zwölf Ablesungen von 60 bis 8000 ms,
+> zwölfmal liegend). Die „0 von 10" stammt aus der Hand des Kritikers, die am
+> Jahreswechsel erst einen Rundgang über die Reiter macht und danach abliest;
+> sein eigenes Protokoll trägt `michaeli-fehlt` an genau der Stelle, an der ich
+> das Blatt liegen sehe. **Was wirklich fehlt: der Spielanfang** (dort liegt sie
+> nicht, und dort lügt der Knopf) **und die Zahl der Angebote** — am
+> Jahreswechsel liegt **eines**, nicht fünf.
+>
+> **A4 bestätigt und schärfer:** `preis:tafel` trägt in **100 von 100** Wochen
+> „Michaelitafel schließen", in **97** davon liegt nichts.
+>
+> **A6 bestätigt, ziffernweise:** vier fremde Reiter unter liegender Tafel,
+> alle vier greifbar und geklickt, greifbare Züge 25→26→26→26→26. **Das ist die
+> eigentliche Ursache** dafür, dass ein sorgfältiger Spieler das beste Brett des
+> Spiels nicht zu Gesicht bekommt — nicht dass es fehlt, sondern dass alles
+> ringsum tot ist, während es liegt.
+>
+> **Ein Loch im eigenen Brief, geschlossen:** „bezahlbarer Gegenzug" hieß eng
+> **68 von 100** Wochen ohne, weit **0 von 100**. Unter der weiten Lesart wäre
+> R15 heute schon erfüllt, ohne dass jemand etwas tut. Es gilt die enge Lesart.
+> *Wer eine Abnahme schreibt, prüft sie gegen die Frage: kann man sie bestehen,
+> indem man nichts tut?*
+>
+> Beide Builder haben den Befund per Nachricht bekommen, `WELLE-13.md` ist an
+> R7 und R15 berichtigt.
 
 **Drei Entscheidungen der Aufsicht stehen im Brief**, damit kein Builder rät:
 

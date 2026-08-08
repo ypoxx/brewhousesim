@@ -76,7 +76,8 @@ async function schirm() {
       }
       zuege.push({ zug: el.getAttribute('data-zug'),
         preis: el.getAttribute('data-preis') ? +el.getAttribute('data-preis') : null,
-        aus: !!el.disabled, hit, x: Math.round(cx), y: Math.round(cy),
+        aus: !!el.disabled, hit, rat: el.classList.contains('fu-rat'),
+        x: Math.round(cx), y: Math.round(cy),
         w: Math.round(r.width), h: Math.round(r.height),
         text: (el.innerText || '').trim().replace(/\s+/g, ' ').slice(0, 80) });
     });
@@ -267,15 +268,17 @@ while (gespielt < ZIELWOCHEN) {
      zu geben. Genau das ist die zweite Haelfte von R13 („Wochen ohne
      Entscheidung werden zusammengefasst") — und es ist keine Regel des
      Messgeraets, sondern die, zu der die Karte selbst auffordert. */
-  let bestPlanJetzt = null;
+  let bestPlanJetzt = null, ratPlan = null;
   {
     const pl = s.zuege.filter(z => z.hit && !z.aus && /^fuhre:plan:/.test(z.zug));
+    const rat = pl.find(z => z.rat);
+    if (rat) ratPlan = rat.zug;
     const mitPreis = pl.filter(z => z.preis !== null && z.preis !== undefined);
     if (mitPreis.length) bestPlanJetzt = mitPreis.reduce((a, z) => (z.preis > a.preis ? z : a)).zug;
     else if (pl.length) bestPlanJetzt = pl[0].zug;
   }
   let gesprungen = false;
-  if (!fragen.length && sprung && (!bestPlanJetzt || bestPlanJetzt === letzterPlan)) {
+  if (!fragen.length && !ratPlan && sprung && (!bestPlanJetzt || bestPlanJetzt === letzterPlan)) {
     const vorSpr = await schirm();
     if (await greif(sprung.zug, { grund: 'ruhige Wochen zusammenfassen', warte: 340 })) {
       const nachSpr = await schirm();
@@ -293,9 +296,9 @@ while (gespielt < ZIELWOCHEN) {
       (/^fuhre:plan:/.test(z.zug) || z.zug === 'fuhre:wie-vorige' || z.zug === 'fuhre:fuellen'));
     if (plaene.length) {
       const mitPreis = plaene.filter(z => z.preis !== null && z.preis !== undefined);
-      let gew;
-      if (mitPreis.length) gew = mitPreis.reduce((a, z) => (z.preis > a.preis ? z : a));
-      else gew = plaene.find(z => z.zug === 'fuhre:wie-vorige') || plaene[0];
+      let gew = plaene.find(z => z.rat);       /* der Rat des Hauses geht vor */
+      if (!gew && mitPreis.length) gew = mitPreis.reduce((a, z) => (z.preis > a.preis ? z : a));
+      if (!gew) gew = plaene.find(z => z.zug === 'fuhre:wie-vorige') || plaene[0];
       await greif(gew.zug, { grund: 'Fuhrplan', warte: 220 });
       letzterPlan = gew.zug;
     }

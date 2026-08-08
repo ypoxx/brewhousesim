@@ -1,5 +1,5 @@
 {
- "stand": "2026-08-08T08:33:16+00:00",
+ "stand": "2026-08-08T08:36:05+00:00",
  "phase": "Welle 13 ist angesetzt: DIE ERSTE VOLLVERSION. Der blinde Spielkritiker hat vier Epochen mit echter Maus gespielt — 1032 Wochen, 3709 Klicks, null Seitenfehler — und den Satz hinterlassen: das Spiel wird an seinem Ende gut, und man kommt zu selten dorthin. Vier Stücke arbeiten seine dreizehn Auflagen ab. DER RAHMEN baut den Spielstand (heute setzt ein Neuladen die Partie auf Woche 1 zurück, ohne Warnung) und den Satz, der sagt, wohin das führt — die Wörter Ziel, gewinnen und überleben kommen auf dem ersten Schirm null Mal vor, bei 613 Textzeilen. DIE JAHRESTAFEL macht das einzige Brett mit echten Entscheidungen sichtbar: es lag in zehn Braujahren kein einziges Mal von selbst auf, und der Knopf dorthin behauptet in 71 von 71 abgelesenen Zuständen, es läge schon da. DIE WOCHE zerlegt die zwei Knöpfe, auf die 71 Prozent aller Klicks entfallen. DER GEGENZUG sorgt dafür, dass man sich einen leisten kann — 457 Züge des Gegners standen gegen 5 Züge des Spielers.",
  "latte": "BILD: Playwright-Aufnahme 2752x1536 gegen zielbild/0X-JAHR.jpg, blind, vier Epochen derselbe Ort. SPIEL: Kritiker zählt am Bildschirm Preisschilder nebeneinander, unwiderrufliche Festlegungen, Züge des Gegners ohne ihn — plus Barschaft gegen Preis des nächsten sinnvollen Zuges. Ziel dieser Welle, hart: |rho| unter 0,7 in allen vier Epochen und höchstens ein Jahr von sechs unter 1x. TON: 30 Sekunden blind, Epoche und Vorgang benannt. NEU als vierte Prüfung: erreichbar muss jeder aktive Zug sein — werkbank/schuss/eichung/erreichbar.mjs. Sperrliste design/PRUEFUNG.md disqualifiziert.",
  "zahlen": {
@@ -33,7 +33,8 @@
   "Spielstand": "es gibt keinen: kein Speichern, kein Laden, kein Fortsetzen",
   "Wiederholbarkeit": "1350 dreifach eine Pruefsumme, beim Builder sechsfach — die Bistabilitaet ist weg",
   "Spielprobe": "13 Auflagen · 71 Prozent aller Klicks sind zwei Knoepfe · kein Spielstand · das Ende ist das beste Blatt",
-  "Welle 13": "angesetzt am 8. August, vier Stücke, dreizehn Auflagen der Spielprobe"
+  "Welle 13": "angesetzt am 8. August, vier Stücke, dreizehn Auflagen der Spielprobe",
+  "Gegenmessung Vorzustand": "erster Schirm 613 Textzeilen und 0 Zielworte — ziffernweise wie beim Kritiker; Knopf luegt 97 von 100; Tafel liegt 3 von 3 Jahreswechseln; Gegenzug eng 68 von 100 ohne"
  },
  "stuecke": [
   {
@@ -142,14 +143,6 @@
   }
  ],
  "chronik": [
-  {
-   "zeit": "2026-08-01T20:59:56+00:00",
-   "text": "KRITIKER DER STADT R6: neues Messgeraet werkbank/auge.py angelegt, BEVOR damit gemessen wird (ZUSTAENDIGKEIT 16). Es ist das fremde Auge fuer Latte 1: zwei Bilder A/B in getauschter Reihenfolge, ohne Hinweis, welches das gebaute Spiel und welches zielbild/ ist; es muss drei benennbare Stellen nennen. Waehlt der Fremde das Zielbild, geht die Arbeit zurueck."
-  },
-  {
-   "zeit": "2026-08-01T21:10:56+00:00",
-   "text": "SUD: Stueck gebaut — Verfahren je Epoche, Gaerkeller getrennt vom Lagerkeller, B.sud.rohstoff und B.sud.nimmHeraus(n, wahl)."
-  },
   {
    "zeit": "2026-08-01T21:11:09+00:00",
    "text": "KERN: nimmHeraus(n) nimmt immer das aelteste Fass. DER SUD sortiert vorher um (wie DIE FUHRE). Bitte nimmHeraus(n, wahl) mit {aeltestes|juengstes|sorte|k|faesser|reif} — Vorlage steht als B.sud.nimmHeraus in stuecke/sud.js."
@@ -941,6 +934,14 @@
   {
    "zeit": "2026-08-08T08:33:16+00:00",
    "text": "DER RAHMEN (Welle 13, Stück 1): Der Spielstand steht. Nach jedem Wochenwechsel geht der ganze Kernzustand samt Würfelzählerstand nach localStorage unter brauhaus:<epoche>:<saat>; ein Neuladen setzt in allen vier Epochen Jahr, Woche, Kasse, Fässer, Chronik und Buch ziffernweise wieder ein (1350: 1350/12 · 1 Pf · 12 Fass · 9 · 41 vor und nach dem reload), im Kopf steht 'fortgesetzt · 1350/12', und der Knopf 'Neue Partie' verwirft ihn nach einer Rückfrage aus zwei echten Knöpfen — null Browserdialoge. ?neu=1 lädt nichts, schreibt nichts und räumt den Speicher: dreimal dieselbe Adresse im selben Browserkontext ergibt in allen vier Epochen EINE Prüfsumme, ohne den Schalter drei verschiedene. Das Sichern kostet im Median 0,7 ms und hängt an keiner Uhr. B.welt.meldeZiel(satz, naehe) und B.uhr.springeWochen(n) sind gebaut und werden von DER FUHRE schon gerufen; springe() lief bis heute an den Wochen vorbei, statt sie laufen zu lassen (Rohstoff unverändert, 7 statt 16 Verfallbuchungen, 1 statt 19 Gegnerzüge) und ist jetzt Ziffer für Ziffer dasselbe wie Klicken. Der Startschirm sagt Ziel, Gewinnen und Überleben — vier Epochen, keine Fehler auf der Seite, lage 0, null Pixel Flächenzuwachs."
+  },
+  {
+   "zeit": "2026-08-08T08:36:05+00:00",
+   "text": "Gegenmessung der Aufsicht am Vorzustand: A5 widerlegt — die Michaelitafel liegt an 3 von 3 Jahreswechseln von selbst auf und bleibt liegen (zwoelf Ablesungen von 60 bis 8000 ms). Die Null des Kritikers stammt aus seiner eigenen Hand. A4 und A6 bestaetigt: der Knopf luegt in 97 von 100 Wochen, vier Reiter unter liegender Tafel bewirken nichts."
+  },
+  {
+   "zeit": "2026-08-08T08:36:05+00:00",
+   "text": "DER RAHMEN ist gebaut: kern/stand.js, Spielstand in localStorage je Epoche und Saat, Neuladen stimmt in 15 von 15 Feldern ueber alle vier Epochen. ?neu=1 gibt dreimal dieselbe Pruefsumme im selben Browserkontext. springe() war kaputt und ist neu gebaut."
   }
  ]
 }

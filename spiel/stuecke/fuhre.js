@@ -1748,7 +1748,12 @@
        geschehen — die werden nicht ueberfahren. */
     var lage = wochenLage();
     if (lage && lage.art !== 'mager') return 0;
-    if (!planRechne('vorige')) return 0;
+    /* Zwei Wochen sind ruhig: die, in der die vorige Fuhre noch fahrbar ist,
+       und die, in der ueberhaupt nichts zu laden ist (kein reifes Fass). Die
+       zweite war vorher eine tote Woche, in der nur WEITER half — gemessen
+       25 von 118 Klicks. Eine Woche ohne Zug ist keine Woche, die man
+       klicken muss. */
+    if (!planRechne('vorige') && planListe().length) return 0;
     var bisJahresende = B.uhr.WOCHEN_IM_JAHR - B.welt.zeit.woche;
     return B.grenze(Math.min(SPRUNG_HOECHSTENS, bisJahresende), 0, SPRUNG_HOECHSTENS);
   }
