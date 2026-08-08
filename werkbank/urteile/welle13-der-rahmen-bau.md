@@ -412,6 +412,46 @@ drei Zeilen, nach denen Welle 13 gefragt hat"*.
 Knopf in `:3722`. Damit ist R5 nicht mehr nur „geprüft und gebaut", sondern
 im Spiel — und A7 hat sein Werkzeug.
 
+### Abnahme — `werkbank/schuss/rahmen-w13/sprungprobe.mjs`
+
+Die Frage ist nicht *„läuft es durch"*, sondern **ist ein Sprung dasselbe wie
+Klicken**. Also zweimal gespielt, dieselbe Saat, zwei frische Kontexte:
+**A** — mit echter Maus WEITER drücken, bis die Woche 30-mal wirklich
+gerückt ist; **B** — einmal `B.uhr.springeWochen(30)`. Verglichen werden elf
+Felder. Dazu **C**, die alte Fassung mit derselben Hand nachgestellt
+(`woche = 30` setzen, `schliesseJahr()` rufen).
+
+**Epoche 1350, Saat 1350, ein Braujahr:**
+
+| | Jahr/Woche | Kasse | Rohstoff | Chronik | Buch | Züge d. Gegners | Verfall-Buchungen | Würfelzähler |
+|---|---|---|---|---|---|---|---|---|
+| Anfang | 1350/1 | 112 | 40 | 4 | 1 | 1 | 0 | 1312461287 |
+| **A geklickt** | 1351/1 | 48 | 7 | 20 | 98 | 19 | 16 | 691532714 |
+| **B gesprungen** | **1351/1** | **48** | **7** | **20** | **98** | **19** | **16** | **691532714** |
+| C alte Fassung | 1351/1 | **88** | **40** | **13** | **14** | **1** | **7** | 1688532169 |
+
+**A gegen B: keine Abweichung in elf von elf Feldern** — bis auf den
+Zählerstand des Würfels. Ein Sprung ist Ziffer für Ziffer dasselbe wie
+dreißigmal WEITER drücken, ohne hinzusehen.
+
+**A gegen C: sieben von elf Feldern weichen ab**, und die Liste liest sich
+wie die Fehlerbeschreibung: der **Rohstoff steht unverändert auf 40** (es
+wurde nie gebraut), es gibt **7 statt 16** Verfall-Buchungen, **14 statt 98**
+Buchzeilen, und der Adler hat **einen statt neunzehn** Zügen getan. Das ist
+kein erzähltes Jahr; das ist ein Jahr, das nicht stattgefunden hat.
+
+**Epoche 1600, dieselbe Probe, dasselbe Bild:**
+
+| | Jahr/Woche | Kasse | Rohstoff | Chronik | Buch | Züge d. Gegners | Verfall |
+|---|---|---|---|---|---|---|---|
+| **A geklickt** | 1601/1 | 291 | 1 | 17 | 104 | 19 | 14 |
+| **B gesprungen** | **1601/1** | **291** | **1** | **17** | **104** | **19** | **14** |
+| C alte Fassung | 1601/1 | **370** | **65** | **14** | **17** | **1** | **7** |
+
+`abweichungSprungGegenKlicken` = **[]** in beiden Epochen. `lage` = 0,
+Seitenfehler = 0. Rückgabe jeweils `{jahre:1, wochen:30, angehalten:null}`.
+Rohdaten: `…/protokoll/sprungprobe-e{1,2}.json`.
+
 **Was ich am Klickweg ausdrücklich NICHT geändert habe:** am Jahreswechsel
 gab es immer **zwei** Zeichenrunden — eine mit `grund:'jahr'` aus
 `schliesseJahr()`, eine mit `grund:'woche'` aus `naechsteWoche()`. Sie
@@ -460,7 +500,7 @@ Was gebaut ist, damit die Antwort überhaupt eine Chance hat:
 
 ---
 
-## Flächenhaushalt — was diese Welle an Fläche kostet
+## Flächenhaushalt — diese Welle kostet **null Pixel**
 
 Gemessen im Ladezustand E1, 2752×1536, **vor** meinen Änderungen:
 
@@ -478,10 +518,64 @@ Partie"*, die Rückfrage, die Zielzeile und der Anschlag am Anfang.
 sichtbarem deutschem Text und stabilem `data-zug` bleibt es trotzdem; die
 Bedienregel hängt am Knopf, nicht am Grund.
 
-*(Nachmessung unter „Nachtrag".)*
+**Nachgemessen, und zwar so, daß es nicht zu bestreiten ist**
+(`griffprobe.mjs`): in **einem** Augenblick wird `haushalt.miss()` zweimal
+gerufen — einmal wie es steht, und einmal, nachdem `.standzeile`,
+`.zielzeile`, `.startzettel` und `.neu-frage` aus dem DOM genommen wurden
+(und danach wieder eingehängt). Beide Zahlen aus demselben Fenster,
+demselben Bild, derselben Sekunde:
+
+| Epoche (1600×900) | kern **mit** | kern **ohne** | Unterschied |
+|---|---|---|---|
+| 1350 | 105.395 / oben 84.541 | 105.395 / oben 84.541 | **0 / 0** |
+| 1600 | 107.931 / oben 87.078 | 107.931 / oben 87.078 | **0 / 0** |
+| 1884 | 112.158 / oben 91.305 | 112.158 / oben 91.305 | **0 / 0** |
+| 1970 | 110.467 / oben 89.614 | 110.467 / oben 89.614 | **0 / 0** |
+
+`kaesten` bleibt in jeder Epoche **9** — Kopfleiste, ihre sieben Tafeln und
+die WEITER-Tafel, genau wie vor der Welle.
+
+> **Ein Befund, der nicht meiner ist und deshalb hierhin gehört:** bei
+> **1600×900** liegt `kern` schon **ohne** meine Zeilen bei 84.541–91.305 px
+> im obersten Sechstel, also über der Grenze von 80.000 — und das gilt für
+> jede Zeile dieser Tabelle in der Spalte *ohne*. Der Grund ist nicht der
+> Inhalt, sondern die Rasterung: `haushalt.miss()` legt ein 4-px-Raster über
+> das **Fenster** und rechnet die Zellen auf die Bezugsfläche 2752×1536 hoch;
+> bei 1600 Breite deckt eine Zelle 6,88 Bezugspixel je Kante, und jede Kante
+> eines Kastens wird aufgerundet. Auf der Entwurfsleinwand 2752×1536 mißt
+> dieselbe Kopfleiste 78.336 px. **Wer den Haushalt abnimmt, mißt auf der
+> Entwurfsleinwand** — sonst mißt er die Rasterweite mit.
 
 ---
 
-## Nachtrag — die Zahlen, die zum Zeitpunkt des Schreibens noch liefen
+## Der Anschlag: zwei Fehler, die ich selbst gemessen und behoben habe
 
-*(wird ergänzt)*
+Beide gefunden mit `werkbank/schuss/rahmen-w13/griffprobe.mjs`, beide vom
+selben Schlag — etwas, das man am Bildschirm nicht sieht und das trotzdem
+eine Partie verschiebt.
+
+**1 · Ein unsichtbarer Balken, der Klicks fraß.** `pointer-events:auto` stand
+am umschließenden `<div>` des *„Anfangen"*-Knopfes. Das ist ein Blockelement
+über die volle Breite des Anschlags — ein Streifen von rund 750×40 px, der
+Klicks abfing. Gemessen: `sud:gaerung:keller` (1600) und
+`fuhre:listen:neustadt` (1970) lagen darunter, waren am Bildschirm zu sehen
+und ließen sich nicht anfassen. Genau daraus wird ein ausgefallener Klick,
+und aus einem ausgefallenen Klick eine andere Partie. `pointer-events:auto`
+gehört an den Knopf und an nichts sonst.
+*Nach der Änderung:* `vomAnschlagVerdeckt` = **[]** in allen vier Epochen.
+
+**2 · Der Anschlag lief durch den Zielsatz.** Im ersten Entwurf 47 % breit ab
+74,4 % Höhe — auf der Aufnahme 2752×1536 lief *„JEDE EPOCHE IST EIN EIGENES
+SZENARIO …"* mitten durch *„Ziel: das Haus weitergeben …"*. Jetzt ist die
+Zielzeile auf **53 % Breite** begrenzt (also nie weiter links als 40 %) und
+der Anschlag auf **36 %** — sie können sich nicht mehr treffen, egal wie lang
+der Satz wird, den ein Stück meldet.
+
+**3 · Er war zu blaß zum Lesen.** Drei Schatten wie die Hauszeile reichen für
+eine Zeile, nicht für zwölf über einem gezeichneten Hof. Jetzt vier engere
+Schatten und `font-weight:600` — nachgesehen am Ausschnitt in voller
+Auflösung, nicht am verkleinerten Gesamtbild.
+
+---
+
+## Nachtrag — Schlußabnahme

@@ -1425,14 +1425,21 @@
   /* Der gemeinsame Fuellvorgang aller Plaene. `rang` sagt, wer zuerst
      drankommt; die Regel „ein ZUSAETZLICHER Halt muss sich tragen" ist
      woertlich die des Fuhrmanns aus fuelleNachDurst und gilt fuer alle. */
-  function fuelleNachRang(rang, mitLeeren) {
+  /* KEIN PLAN DARF MEHR LADEN ALS DIE ANDEREN. Beim zweiten Anlauf trug
+     „die mageren Haeuser" als einziger Plan eine Ausnahme von der Durstregel
+     — er durfte auch Haeuser beladen, die gar nichts wollten. Damit war er
+     fast immer der vollste Wagen und damit der eintraeglichste: 52 von 109
+     Klicks (48 %) fielen auf diesen einen Knopf. Ein Plan, der mehr darf,
+     ist keine Wahl, sondern ein Vorteil. Alle fuellen jetzt nach derselben
+     Regel und unterscheiden sich NUR in der Reihenfolge. */
+  function fuelleNachRang(rang) {
     var l = haeuser().slice().sort(function (x, y) { return rang(y) - rang(x); });
     var sicherung = 0;
     while (geladen() < wagenPlaetze() && sicherung++ < 600) {
       var gelegt = false;
       for (var i = 0; i < l.length; i++) {
         var a = l[i];
-        if (!mitLeeren && durst(a) - geladenFuer(a.schluessel) < 1) continue;
+        if (durst(a) - geladenFuer(a.schluessel) < 1) continue;
         if (rang(a) <= -9e8) continue;
         if (kannLaden(a)) continue;
         var neuerHalt = geladenFuer(a.schluessel) === 0 && Z.ladung.length > 0;
@@ -1532,7 +1539,7 @@
         return haeuser().some(function (a) { return inNot(a) >= 10; });
       },
       baue: function () {
-        fuelleNachRang(function (a) { return inNot(a) * 100 + durst(a) - a.km; }, true);
+        fuelleNachRang(function (a) { return inNot(a) * 100 + durst(a) - a.km; });
       }
     },
     umkaempft: {
@@ -1545,7 +1552,7 @@
       baue: function () {
         fuelleNachRang(function (a) {
           return (fremdGebunden(a) ? 1000 : 0) + durst(a) - a.km;
-        }, true);
+        });
       }
     },
     probe: {
@@ -1734,7 +1741,13 @@
     if (B.welt.zeit.ende) return 0;
     if (sommerLiegtOben() || schlussLiegtOben() || Z.antrag || Z.uebergabe) return 0;
     if (Z.frist !== null && Z.frist !== undefined) return 0;
-    if (wochenLage()) return 0;
+    /* Ein EREIGNIS haelt auf, ein Dauerzustand nicht. „Ein Haus ist mager"
+       steht in 1350 fast jede Woche da; waere das ein Grund, nie zu
+       erzaehlen, gaebe es den Sprung nie. Das Probefass, der volle Keller,
+       die Frist und die beiden Angebote sind dagegen Dinge, die HEUTE
+       geschehen — die werden nicht ueberfahren. */
+    var lage = wochenLage();
+    if (lage && lage.art !== 'mager') return 0;
     if (!planRechne('vorige')) return 0;
     var bisJahresende = B.uhr.WOCHEN_IM_JAHR - B.welt.zeit.woche;
     return B.grenze(Math.min(SPRUNG_HOECHSTENS, bisJahresende), 0, SPRUNG_HOECHSTENS);

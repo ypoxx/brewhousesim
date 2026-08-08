@@ -1,0 +1,234 @@
+[
+ {
+  "fenster": "1600x900",
+  "epoche": 1,
+  "seite": "tafel",
+  "fehler": [],
+  "fehlt": false,
+  "ab": [],
+  "bruch": [],
+  "tafel": {
+   "b": 1344,
+   "h": 673
+  },
+  "rand": false
+ },
+ {
+  "fenster": "1600x900",
+  "epoche": 1,
+  "seite": "chronik",
+  "fehler": [],
+  "fehlt": false,
+  "ab": [],
+  "bruch": [],
+  "tafel": {
+   "b": 1344,
+   "h": 673
+  },
+  "rand": false
+ },
+ {
+  "fenster": "1600x900",
+  "epoche": 2,
+  "seite": "tafel",
+  "fehler": [],
+  "fehlt": false,
+  "ab": [],
+  "bruch": [],
+  "tafel": {
+   "b": 1344,
+   "h": 673
+  },
+  "rand": false
+ },
+ {
+  "fenster": "1600x900",
+  "epoche": 2,
+  "seite": "chronik",
+  "fehler": [],
+  "fehlt": false,
+  "ab": [],
+  "bruch": [],
+  "tafel": {
+   "b": 1344,
+   "h": 673
+  },
+  "rand": false
+ },
+ {
+  "fenster": "1600x900",
+  "epoche": 3,
+  "seite": "tafel",
+  "fehler": [],
+  "fehlt": false,
+  "ab": [],
+  "bruch": [],
+  "tafel": {
+   "b": 1344,
+   "h": 673
+  },
+  "rand": false
+ },
+ {
+  "fenster": "1600x900",
+  "epoche": 3,
+  "seite": "chronik",
+  "fehler": [],
+  "fehlt": false,
+  "ab": [],
+  "bruch": [],
+  "tafel": {
+   "b": 1344,
+   "h": 673
+  },
+  "rand": false
+ },
+ {
+  "fenster": "1600x900",
+  "epoche": 4,
+  "seite": "tafel",
+  "fehler": [],
+  "fehlt": false,
+  "ab": [],
+  "bruch": [],
+  "tafel": {
+   "b": 1344,
+   "h": 673
+  },
+  "rand": false
+ },
+ {
+  "fenster": "1600x900",
+  "epoche": 4,
+  "seite": "chronik",
+  "fehler": [],
+  "fehlt": false,
+  "ab": [],
+  "bruch": [],
+  "tafel": {
+   "b": 1344,
+   "h": 673
+  },
+  "rand": false
+ },
+ {
+  "fenster": "1366x768",
+  "epoche": 1,
+  "seite": "tafel",
+  "fehler": [],
+  "fehlt": false,
+  "ab": [],
+  "bruch": [],
+  "tafel": {
+   "b": 1147,
+   "h": 574
+  },
+  "rand": false
+ },
+ {
+  "fenster": "1366x768",
+  "epoche": 1,
+  "seite": "chronik",
+  "fehler": [],
+  "fehlt": false,
+  "ab": [],
+  "bruch": [],
+  "tafel": {
+   "b": 1147,
+   "h": 574
+  },
+  "rand": false
+ },
+ {
+  "fenster": "1366x768",
+  "epoche": 2,
+  "seite": "tafel",
+  "fehler": [],
+  "fehlt": false,
+  "ab": [],
+  "bruch": [],
+  "tafel": {
+   "b": 1147,
+   "h": 574
+  },
+  "rand": false
+ },
+ {
+  "fenster": "1366x768",
+  "epoche": 2,
+  "seite": "chronik",
+  "fehler": [],
+  "fehlt": false,
+  "ab": [],
+  "bruch": [],
+  "tafel": {
+   "b": 1147,
+   "h": 574
+  },
+  "rand": false
+ },
+ {
+  "fenster": "1366x768",
+  "epoche": 3,
+  "seite": "tafel",
+  "fehler": [],
+  "fehlt": false,
+  "ab": [],
+  "bruch": [],
+  "tafel": {
+   "b": 1147,
+   "h": 574
+  },
+  "rand": false
+ },
+ {
+  "fenster": "1366x768",
+  "epoche": 3,
+  "seite": "chronik",
+  "fehler": [],
+  "fehlt": false,
+  "ab": [],
+  "bruch": [],
+  "tafel": {
+   "b": 1147,
+   "h": 574
+  },
+  "rand": false
+ },
+ {
+  "fenster": "1366x768",
+  "epoche": 4,
+  "seite": "tafel",
+  "fehler": [],
+  "fehlt": false,
+  "ab": [
+   {
+    "klasse": "pr-fest",
+    "richtung": "x",
+    "fehltY": 0,
+    "fehltX": 12,
+    "text": "Der Liefervertrag mit der Nordstern-GruppeDer Konzern nimmt die Menge ab, stellt die Käste"
+   }
+  ],
+  "bruch": [],
+  "tafel": {
+   "b": 1147,
+   "h": 574
+  },
+  "rand": false
+ },
+ {
+  "fenster": "1366x768",
+  "epoche": 4,
+  "seite": "chronik",
+  "fehler": [],
+  "fehlt": false,
+  "ab": [],
+  "bruch": [],
+  "tafel": {
+   "b": 1147,
+   "h": 574
+  },
+  "rand": false
+ }
+]

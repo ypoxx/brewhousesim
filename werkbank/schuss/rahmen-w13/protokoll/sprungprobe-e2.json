@@ -1,6 +1,7 @@
 {
  "epoche": 2,
- "wochen": 30,
+ "wochenGewollt": 30,
+ "wochenGelaufen": 30,
  "url": "http://127.0.0.1:8921/spiel/?epoche=2&saat=1350&neu=1",
  "fehler": [],
  "anfang": {
@@ -19,17 +20,17 @@
   "lage": 0
  },
  "geklickt": {
-  "jahr": 1600,
-  "woche": 30,
-  "kasse": 422,
+  "jahr": 1601,
+  "woche": 1,
+  "kasse": 291,
   "rohstoff": 1,
-  "faesser": 8,
-  "chronik": 13,
-  "buch": 93,
+  "faesser": 0,
+  "chronik": 17,
+  "buch": 104,
   "gegnerzuege": "adler:19,konzern:0",
-  "wuerfel": -1771868769,
+  "wuerfel": -763962217,
   "amtszeit": 2,
-  "verfall": 11,
+  "verfall": 14,
   "ende": false,
   "lage": 0
  },
@@ -69,27 +70,15 @@
   "angehalten": null
  },
  "standNachSprung": "STAND  neu · brauhaus:2:1350 · leer · 0× geschrieben, zuletzt 0 Zeichen",
- "abweichungSprungGegenKlicken": [
-  "jahr",
-  "woche",
-  "kasse",
-  "faesser",
-  "chronik",
-  "buch",
-  "wuerfel",
-  "verfall"
- ],
+ "abweichungSprungGegenKlicken": [],
  "abweichungAlteFassungGegenKlicken": [
-  "jahr",
-  "woche",
   "kasse",
   "rohstoff",
-  "faesser",
   "chronik",
   "buch",
   "gegnerzuege",
   "wuerfel",
   "verfall"
  ],
- "bestanden": false
+ "bestanden": true
 }

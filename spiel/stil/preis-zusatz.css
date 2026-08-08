@@ -597,7 +597,7 @@
      beide sind ganz zu lesen. Der Kartentext behält `anywhere`; er ist es,
      der es braucht. */
   .pr-tafel .knopf,
-  .pr-griff .knopf { flex-wrap: wrap; }
+  .pr-griff .knopf { flex-wrap: wrap; max-width: 100%; box-sizing: border-box; }
   .pr-tafel .knopf > .wort,
   .pr-tafel .knopf > .preis,
   .pr-griff .knopf > .wort,
