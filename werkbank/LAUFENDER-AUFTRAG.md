@@ -23,6 +23,27 @@
 > (das ist T0.1). Die Detailberichte liest die Aufsicht abschnittsweise bei
 > Bedarf; **Builder lesen sie nie** (Tokenregel 2).
 
+> ### ZWEI AUFSICHTEN AUF EINEM ZWEIG — bemerkt am 8. August, 16:24 UTC
+>
+> Auf `claude/brauhaus-imperium-sim-163s85` erschien ein Commit, der nicht aus
+> diesem Container kam: eine Chronikzeile, gezeichnet „Claude", 16:24:37. Kein
+> Veröffentlicher lief hier, und im eigenen Reflog stand er nicht. Die
+> Sitzungsliste hat es aufgeklärt: die **Aufsicht der Wellen 1–13 lief noch**
+> („Brauhaus-Imperium Wirtschaftssimulation", seit 31. Juli) und fuhr
+> **dieselbe Welle-13-Abnahme** — ihr letzter Stand meldete wörtlich dieselben
+> 13 von 15 Läufen und dieselben zwei offenen 1970er.
+>
+> **Zwei Aufsichten auf einem Zweig sind kein doppelter Fleiß, sondern ein
+> Rennen** — dieselben Dateipfade, dieselben Messreihen, und am Ende weiß
+> niemand, welche Zahl von welcher Hand stammt. Genau davor schützt in diesem
+> Lauf sonst das Messfenster.
+>
+> **Erledigt:** der fremde Commit wurde hereingeholt statt überfahren (er
+> berührte allein `stand.json`), der Auftraggeber hat entschieden, und die alte
+> Sitzung ist stillgelegt. **Die Regel daraus:** wer diesen Zweig übernimmt,
+> sieht zuerst nach, ob die Vorgängerin noch läuft — `list_sessions` mit dem
+> Zweignamen, ein Handgriff. Und vor jedem Push wird geholt, nicht gedrückt.
+
 ## DIE WERKSTATTSEITE — wo sie steht, und wie sie am 3. August still starb
 
 ```
