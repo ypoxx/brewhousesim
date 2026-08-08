@@ -47,8 +47,21 @@
   font-family: var(--pr-schrift);
   pointer-events: auto;
   overflow: hidden;
-  animation: pr-auf 220ms ease-out;
 }
+
+/* WELLE 13 — DIE AUFBLENDE LAEUFT NUR NOCH BEIM AUFSCHLAGEN.
+
+   Sie stand bis hierher an `.pr-tafel` selbst. Das Fach dieses Stuecks wird
+   bei jedem Bildaufbau geleert und neu gefuellt: die Tafel ist ein NEUES
+   Element je Runde, und `animation` fing jedes Mal wieder bei `opacity: 0`
+   an. Gemessen (`werkbank/schuss/tafel-w13/blick.mjs`, 1350, Jahreswechsel
+   1351/1): Tafel im DOM, nicht weggeklappt, Ausgangsknopf mit
+   `elementFromPoint` zu treffen — und `opacity` gelesen: **0**. Wer nach
+   seinem Klick hinsieht, sieht ein durchsichtiges Blatt.
+
+   `pr-frisch` setzt `stuecke/preis.js` nur dann, wenn in der vorigen Runde
+   keine Tafel im DOM stand — also genau einmal je Aufschlag. */
+.pr-tafel.pr-frisch { animation: pr-auf 220ms ease-out; }
 
 @keyframes pr-auf {
   from { opacity: 0; scale: 0.985; }

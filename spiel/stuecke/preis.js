@@ -2638,7 +2638,7 @@
   /* --- Die Tafel -------------------------------------------------------- */
   function zeichneTafel(fach) {
     var e = ep();
-    var tafel = B.el('div', 'pr-tafel pr-stil-' + e.stil);
+    var tafel = B.el('div', 'pr-tafel pr-stil-' + e.stil + (Z.imDom ? '' : ' pr-frisch'));
     tafel.setAttribute('data-blatt', 'michaeli');
     tafel.setAttribute('data-jahr', Z.tafelJahr);
 
@@ -2761,6 +2761,19 @@
      ====================================================================== */
   function klemmeLesen() {
     var t = document.querySelector('.pr-tafel');
+    /* GEFUNDEN BEIM MESSEN VON R7, und es ist ein Fehler fuer sich:
+       `.pr-tafel` trug in stil/preis.css ein `animation: pr-auf 220ms` mit
+       `from { opacity: 0 }`. Das Fach wird bei JEDEM Bildaufbau geleert und
+       neu gefuellt — die Tafel ist also ein NEUES Element je Runde, und die
+       Aufblende lief jedes Mal von vorn. Gemessen mit `blick.mjs`: am
+       Jahreswechsel 1351/1 stand die Tafel im DOM, war nicht weggeklappt,
+       ihr Ausgangsknopf war mit `elementFromPoint` zu treffen — und
+       `getComputedStyle(...).opacity` las **0**. Eine Hand, die nach ihrem
+       Klick hinsieht, sieht dann ein durchsichtiges Blatt und zaehlt es
+       nicht. Die Aufblende laeuft seit dieser Welle nur noch beim ERSTEN
+       Bildaufbau nach dem Aufschlagen (Klasse `pr-frisch`), und `Z.imDom`
+       ist die Antwort auf die Frage „lag sie in der vorigen Runde schon?".  */
+    Z.imDom = !!t;
     /* Steht keine Tafel im DOM, hat diese Runde nichts Neues zu sagen: die
        vorige Entscheidung gilt weiter. Sonst zeichnete jede beliebige Runde
        die Tafel wieder auf, DIE STADT schnitte sie wieder weg, und das Bild

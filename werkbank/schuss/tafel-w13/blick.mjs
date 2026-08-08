@@ -43,17 +43,21 @@ const lese = () => seite.evaluate(() => {
   };
   const t = document.querySelector('.pr-tafel');
   let tafelDa = false, tafelFlaeche = 0, getroffen = false, zugeklappt = false;
+  let deckung = null, klar = null;
   if (t) {
-    zugeklappt = t.classList.contains('stadt-zugeklappt');
-    tafelDa = sicht(t) && !zugeklappt;
+    zugeklappt = t.classList.contains('stadt-zugeklappt') || t.classList.contains('stadt-verdeckt');
+    const cs = getComputedStyle(t);
+    deckung = cs.clipPath; klar = +cs.opacity;
     const r = t.getBoundingClientRect();
     tafelFlaeche = Math.round((r.width * r.height) / (innerWidth * innerHeight) * 1000) / 10;
-    if (tafelDa) {
-      const el = document.elementFromPoint(
-        Math.min(innerWidth - 2, Math.max(2, r.left + r.width / 2)),
-        Math.min(innerHeight - 2, Math.max(2, r.top + r.height / 2)));
-      getroffen = !!(el && (el === t || t.contains(el)));
-    }
+    const el = document.elementFromPoint(
+      Math.min(innerWidth - 2, Math.max(2, r.left + r.width / 2)),
+      Math.min(innerHeight - 2, Math.max(2, r.top + r.height / 2)));
+    getroffen = !!(el && (el === t || t.contains(el)));
+    /* „Lag wirklich da" heisst: Flaeche, nicht weggeschnitten, unter dem
+       Zeiger, und sichtbar (opacity > 0,5 — eine halbe Aufblende zaehlt
+       nicht als Blatt). */
+    tafelDa = sicht(t) && !zugeklappt && getroffen && klar > 0.5;
   }
   const k = document.querySelector('[data-zug="preis:tafel"]');
   const kText = k ? (k.innerText || '').trim().replace(/\s+/g, ' ') : null;
@@ -66,7 +70,7 @@ const lese = () => seite.evaluate(() => {
   }
   return {
     jahr: B.welt.zeit.jahr, woche: B.welt.zeit.woche, kasse: Math.round(B.welt.haus.kasse),
-    tafelImDom: !!t, tafelDa, zugeklappt, tafelFlaeche, getroffen,
+    tafelImDom: !!t, tafelDa, zugeklappt, tafelFlaeche, getroffen, klar, deckung,
     kText, zuGreifbar, lage: B.lage.length
   };
 });
