@@ -2397,6 +2397,50 @@
     return karte;
   }
 
+  /* Der Satz, der die Luecke schliesst — oder ehrlich sagt, dass sie heute
+     nicht zu schliessen ist. Er nennt IMMER einen Knopf mit Wortlaut und
+     Zahl, nie eine Empfehlung. Was hier nicht steht: „du solltest". Diese
+     Tafel bewertet nicht an Stelle des Spielers (siehe Kopf der Datei). */
+  function woherSatz(fehlt) {
+    var kasten = B.el('div', 'pr-woher');
+    var zug = geldZug(fehlt);
+    if (zug) {
+      kasten.appendChild(B.el('span', 'pr-woher-marke', 'DAS GELD LIEGT AM HOF'));
+      var reicht = zug.betrag >= fehlt;
+      kasten.appendChild(B.el('span', 'pr-woher-text',
+        '„' + zug.name + '" bringt ' + geld(zug.betrag) + ' in die Lade — '
+        + (reicht
+            ? 'genug für die ' + geld(fehlt) + ', die fehlen.'
+            : geld(fehlt - zug.betrag) + ' bleiben dann noch offen.')
+        + ' Der Knopf steht auf dem Hof, nicht auf dieser Tafel: '
+        + 'oben rechts „Michaelitafel schließen", den Zug tun, Tafel wieder aufschlagen. '
+        + 'Michaeli bleibt diese ganze Woche — genommen wird bis zum Wochenwechsel.'));
+      return kasten;
+    }
+    /* Kein Knopf am Schirm bringt heute Geld. Dann steht genau das da. Eine
+       erfundene Auskunft waere schlimmer als keine. */
+    var rate = null;
+    lebendeAngebote().forEach(function (k) {
+      var a = angebotVon(k);
+      if (!a) return;
+      var pl = zahlplan(a);
+      if (!pl.raten) return;
+      if (!rate || pl.jetzt < rate.jetzt) rate = { a: a, jetzt: pl.jetzt, ganz: pl.ganz, n: pl.raten, rate: pl.rate };
+    });
+    kasten.appendChild(B.el('span', 'pr-woher-marke', 'HEUTE BRINGT KEIN KNOPF GELD'));
+    kasten.appendChild(B.el('span', 'pr-woher-text',
+      'Auf diesem Schirm steht kein Zug, der etwas in die Lade legt. '
+      + (rate
+          ? 'Das billigste, was in Raten geht, ist „' + rate.a.name + '": '
+            + geld(rate.jetzt) + ' heute, dann ' + rate.n + ' × ' + geld(rate.rate)
+            + ' — auch das ist heute zu teuer. '
+          : '')
+      + 'Was hier fehlt, kommt aus den Fuhren dieses Braujahres; die Tafel von '
+      + (Z.tafelJahr + 1) + ' steht am selben Ort, und was heute nicht genommen wird, '
+      + 'bleibt in der Kasse.'));
+    return kasten;
+  }
+
   function spalteAngebote() {
     var sp = B.el('div', 'pr-spalte pr-mitte');
 
@@ -2414,14 +2458,17 @@
        Ausgang und kein Fehler — aber er muss dastehen, mit der Zahl daneben.
        Sonst sieht der Spieler fuenf graue Karten und liest darin nichts. */
     if (billig && !reicht) {
+      var fehlt = billig.preis - Math.max(0, B.welt.haus.kasse);
       var not = B.el('div', 'pr-knapp');
       not.appendChild(B.el('span', 'pr-knapp-marke', 'HEUTE NICHT'));
       not.appendChild(B.el('span', 'pr-knapp-text',
         'Die Kasse reicht für keines dieser Angebote. Das billigste — ' + billig.a.name
-        + ' — kostet ' + geld(billig.preis) + ', es fehlen '
-        + geld(billig.preis - Math.max(0, B.welt.haus.kasse)) + '. '
+        + ' — kostet ' + geld(billig.preis) + ', es fehlen ' + geld(fehlt) + '. '
         + 'Wer nichts nimmt, behält die Kasse für Michaeli ' + (Z.tafelJahr + 1) + '; '
         + 'der Anschlag steigt bis dahin um ' + B.zahl((ep().teuerungJahr - 1) * 100, 1) + ' im Hundert.'));
+      /* AUFLAGE R8 — der Satz danach: woher das Geld kommt. Begruendung und
+         Messung bei `einnahmeZuege`. */
+      not.appendChild(woherSatz(fehlt));
       sp.appendChild(not);
     }
 
@@ -2457,6 +2504,29 @@
           : (offenJetzt
               ? 'heute ' + offenJetzt + ' zu haben'
               : 'heute reicht die Kasse für keine'))));
+    /* AUFLAGE R8, zweiter Ort. Der Kritiker hat in vier Sitzungen und 1.030
+       Wochen ZWEI unwiderrufliche Festlegungen getroffen — in 1350 null von
+       drei, „weil die billigste 85 Pf kostete bei einer Kasse von 112". Ist
+       also das billigste ANGEBOT bezahlbar (dann steht oben kein HEUTE
+       NICHT), aber keine FESTLEGUNG, dann fehlt der Satz genau hier. */
+    if (reicht && festlegungOffen() && !offenJetzt) {
+      var billigFest = null;
+      festlegungenTafel().forEach(function (f) {
+        var p = festPreis(f);
+        if (p > 0 && (!billigFest || p < billigFest.preis)) billigFest = { f: f, preis: p };
+      });
+      if (billigFest) {
+        var luecke = billigFest.preis - Math.max(0, B.welt.haus.kasse);
+        var kf = B.el('div', 'pr-knapp pr-knapp-fest');
+        kf.appendChild(B.el('span', 'pr-knapp-marke', 'HEUTE KEINE'));
+        kf.appendChild(B.el('span', 'pr-knapp-text',
+          'Für keine dieser Festlegungen reicht die Kasse. Die billigste — ' + billigFest.f.name
+          + ' — kostet ' + geld(billigFest.preis) + ', es fehlen ' + geld(luecke)
+          + '. Eine Festlegung, die man nie bezahlen kann, ist keine Festlegung.'));
+        kf.appendChild(woherSatz(luecke));
+        fkopf.appendChild(kf);
+      }
+    }
     sp.appendChild(fkopf);
 
     var freihe = B.el('div', 'pr-reihe pr-reihe-fest');

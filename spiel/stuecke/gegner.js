@@ -248,6 +248,49 @@
       l.push({ x: 100 * r.x / VB, y: 100 * r.y / VH,
                b: 100 * r.width / VB, h: 100 * r.height / VH });
     }
+
+    /* ------------------------------------------------------------------
+       WELLE 13, R15 — DER GRIFF DES PREISES NIMMT DIE MAUS, UND ZWAR MEINE.
+
+       Die drei Zonen darueber sind gemalte Beschriftungen; bei ihnen geht es
+       um Lesbarkeit. Diese vierte ist etwas anderes und darum steht sie
+       gesondert: `.pr-griff` ist der stehende Chronikgriff DES PREISES,
+       er liegt in der Ebene `blatt` — also UEBER `marken` — und er nimmt die
+       Maus an.
+
+       GEMESSEN (1600x900, Saat 1350, `gegenzug-w13/gegenzug.mjs`):
+         Griff             x 85,6 – 98,9 %   y 3,0 – 26,9 %
+         Paar bahnhofswirt x 91,2 – 98,7 %   y 16,8 – 23,4 %   (Epoche IV)
+       In 1971/3 bis 1971/7 war der Bahnhofswirt die EINZIGE Adresse mit
+       einem Zeichen im Bild — und `elementFromPoint` traf auf seiner Mitte
+       den Griff. Fuenf Wochen hintereinander gab es also keinen einzigen
+       greifbaren Zug gegen den Gegner, obwohl zwei Knoepfe dastanden und
+       einer davon bezahlbar war. Das ist genau die Sorte Luege, die das
+       Urteil „die teuerste in einem Spiel, das nach Klicks bewertet wird"
+       nennt: ein Knopf, der sich nicht anfassen laesst.
+
+       Ich fasse fremdes DOM nicht an — ich messe es und weiche aus. Das
+       Zeichen rueckt unter den Griff, der Ort bleibt, wo er ist.
+
+       DER PUFFER von 2,5 % ist kein Zierat: die Hoehe eines `gg-paar` wird
+       in `zeichneAdressen` GESCHAETZT (2,1 % je Reihe, geeicht auf der
+       Entwurfsleinwand 2752x1536) und faellt auf kleinen Fenstern zu klein
+       aus — bei 1600x900 misst ein zweireihiges Paar 6,6 % statt der
+       geschaetzten 4,7 %. Ohne Puffer landete die MITTE des Zeichens knapp
+       unter der Unterkante des Griffs, und knapp reicht hier nicht.
+
+       WENN DER PREIS SEINEN GRIFF UMBENENNT, greift diese Zone lautlos nicht
+       mehr. Damit das messbar bleibt und nicht behauptet ist, steht die Zahl
+       der gefundenen Zonen weiter in `data-a3zonen` am eigenen Fach — sie
+       geht dann von 5 auf 4 zurueck. */
+    var g = document.querySelectorAll('#ebene-blatt .pr-griff');
+    for (var j = 0; j < g.length; j++) {
+      var rg = g[j].getBoundingClientRect();
+      if (rg.width < 8 || rg.height < 6) continue;
+      l.push({ x: 100 * rg.x / VB, y: 100 * rg.y / VH,
+               b: 100 * rg.width / VB, h: 100 * rg.height / VH + 2.5 });
+    }
+
     if (l.length) ZONEN[e] = l;
     else ZONEN_LEER[e] = (ZONEN_LEER[e] || 0) + 1;
     meldeZonen(l.length);

@@ -27,11 +27,12 @@ Sammellauf `sh werkbank/schuss/rahmen-w13/alles.sh`.
 ## Wo ich stehe
 
 - [x] R1 Spielstand — gemessen, vier Epochen, besteht
-- [x] R2 `?neu=1` — gemessen mit Gegenbeweis, besteht (E1; E2–E4 laufen)
-- [x] R3 `meldeZiel(satz, naehe)` — gebaut, Platz gebaut, Zeile bleibt leer, solange niemand meldet
-- [x] R4 Startzettel — gebaut
-- [x] R5 `springe()` — geprüft, Fehler gefunden, neu gebaut, dokumentiert
-- [ ] Schlußabnahme: vier Epochen `schuss.mjs`, PNG angesehen
+- [x] R2 `?neu=1` — gemessen mit Gegenbeweis, vier Epochen, besteht
+- [x] R3 `meldeZiel(satz, naehe)` — gebaut; **DIE FUHRE ruft es** (`fuhre.js:2760`)
+- [x] R4 Der Anschlag am Anfang — gebaut, gemessen
+- [x] R5 `springe()` — geprüft, Fehler gefunden, neu gebaut, dokumentiert; **DIE FUHRE ruft es** (`fuhre.js:1731`)
+- [x] `spiel/LIESMICH.md` fortgeschrieben: `meldeZiel`, Spielstand-API, `springe()`-Kasten, `&neu=1`
+- [x] Schlußabnahme: vier Epochen `schuss.mjs`, PNG angesehen
 
 ---
 
@@ -309,16 +310,16 @@ keine Zeile"*. Die Schnittstelle hält also auch von der anderen Seite.
 (`left:2,4 % · top:74,4 % · width:47 %`), vier Absätze, kein Handbuch:
 
 > **BRAUHAUS ZUM ANKER · 1350 · DAS RECHT**
-> Du führst dieses Haus: brauen, ausliefern, die Wirte halten, die Abgaben
+> Du führst dieses Haus: brauen, ausliefern, die Abnehmer halten, die Abgaben
 > zahlen. *(dazu der Satz der Epoche aus `welt.js`)*
 > **DAS ZIEL —** das Haus so weit bringen, daß es übergeben werden kann: an
 > die nächste Hand, vor dem Rat. **Gewinnen** heißt hier nicht groß werden,
 > sondern übergeben können — und die meisten Jahre geht es zuerst ums
 > **Überleben**.
-> **SO ENDET ES SCHLECHT —** wenn keine Schenke der Stadt mehr ein Faß nimmt,
-> ist das Braurecht weg. Nicht die leere Kasse macht das Haus zu, sondern das
-> leere Auftragsbuch. Auch eine Pfanne, die drei Jahre kalt bleibt, und ein
-> leerer Hof mit Schulden beenden die Partie.
+> **SO ENDET ES SCHLECHT —** wenn niemand in der Stadt mehr abnimmt, ist das
+> Haus zu. Nicht die leere Kasse macht es zu, sondern das leere Auftragsbuch.
+> Auch eine Pfanne, die drei Jahre kalt bleibt, und ein leerer Hof mit
+> Schulden beenden die Partie.
 > **JEDE EPOCHE IST EIN EIGENES SZENARIO —** 1350, 1600, 1884, 1970, jede mit
 > eigenem Anfang und eigenem Ende. Sie zeigen denselben Ort, aber man spielt
 > sie einzeln; keine wächst in die nächste hinüber.
@@ -331,6 +332,13 @@ die im Spiel wirklich `B.uhr.beende()` rufen: `stuecke/fuhre.js:959`
 `stuecke/stadt.js:322` (leerer Hof, negative Kasse). Der Satz *„Nicht die
 leere Kasse hat das Haus zugemacht"* steht im Schlußblatt des Spiels selbst
 und ist nach dem Urteil dessen bester Satz.
+
+**Kein Wort aus einer einzelnen Epoche.** Der erste Entwurf sagte *„wenn keine
+Schenke der Stadt mehr ein Faß nimmt, ist das Braurecht weg"* — drei Wörter
+von 1350, und derselbe Anschlag steht auch 1970 da, wo es Gaststätten,
+Hektoliter und kein verliehenes Braurecht gibt. Was epochenweise wechselt,
+kommt aus `welt.js` (`e.name`, `e.sagt`, das Jahr) und nicht aus einem Satz,
+den der Rahmen erfindet.
 
 **Drei Dinge, die dieser Anschlag ausdrücklich nicht tut**, und jedes hat
 einen Grund, der eine Meßreihe rettet:

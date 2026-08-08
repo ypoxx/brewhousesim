@@ -119,7 +119,8 @@
 .pr-knapp {
   flex: 0 0 auto;
   display: flex;
-  gap: calc(var(--s) * 9);
+  flex-wrap: wrap;
+  gap: calc(var(--s) * 4) calc(var(--s) * 9);
   align-items: baseline;
   padding: calc(var(--s) * 5) calc(var(--s) * 9);
   border: calc(var(--s) * 2) dashed var(--pr-rot);
@@ -132,14 +133,66 @@
   letter-spacing: calc(var(--s) * 3);
   color: var(--pr-rot);
   white-space: nowrap;
+  flex: 0 0 auto;
 }
-.pr-knapp-text { font-size: max(12px, calc(var(--s) * 15)); line-height: 1.3; }
+.pr-knapp-text {
+  font-size: max(12px, calc(var(--s) * 15));
+  line-height: 1.3;
+  flex: 1 1 calc(var(--s) * 300);
+  min-width: 0;
+}
+
+/* --------------------------------------------------------------------------
+   WOHER DAS GELD KOMMT.  (Auflage R8, Welle 13)
+
+   Der Satz nach „es fehlen 12 Pf". Er steht auf eigener Zeile unter dem
+   HEUTE-NICHT-Kasten — nicht daneben: er nennt einen Knopf mit Wortlaut und
+   Zahl und ist damit länger als die Zeile darüber. `flex-basis: 100%` gibt
+   ihm die ganze Breite; die Zeile darüber bleibt, wie sie war.
+   -------------------------------------------------------------------------- */
+.pr-woher {
+  flex: 1 0 100%;
+  display: flex;
+  gap: calc(var(--s) * 9);
+  align-items: baseline;
+  margin-top: calc(var(--s) * 4);
+  padding-top: calc(var(--s) * 4);
+  border-top: calc(var(--s) * 1) dotted var(--pr-linie);
+}
+.pr-woher-marke {
+  font-family: var(--pr-zahlen);
+  font-size: max(11px, calc(var(--s) * 12));
+  letter-spacing: calc(var(--s) * 3);
+  color: var(--pr-gruen);
+  white-space: nowrap;
+  flex: 0 0 auto;
+}
+.pr-woher-text {
+  font-size: max(12px, calc(var(--s) * 15));
+  line-height: 1.3;
+  flex: 1 1 auto;
+  min-width: 0;
+}
+.pr-knapp-fest { margin-top: calc(var(--s) * 5); flex-basis: 100%; }
 
 /* Zu Michaeli liegt der Sommerzettel der FUHRE oben. Der Griff sagt dann,
    dass die Tafel darunter bereitliegt, statt "schließen" zu behaupten. */
 .knopf.pr-griff-wartet {
   border-color: var(--pr-rot, #91301c);
   box-shadow: 0 0 0 calc(var(--s) * 2) rgba(145, 48, 28, 0.18);
+}
+
+/* HEUTE IST MICHAELI, UND DIE TAFEL LIEGT NICHT.  (Auflage R6/R7)
+
+   Genau der Zustand, in dem der Kritiker „eine Weile gesucht" hat, was er da
+   schließen soll — nur trägt der Knopf jetzt, was wirklich dahintersteckt.
+   Er bekommt dafür den einzigen roten Rahmen der Kopfzeile: an genau einem
+   Tag im Braujahr steht hinter diesem Knopf eine Entscheidung mit
+   Preisschild, an den anderen 29 nicht. */
+.knopf.pr-griff-heute {
+  border-color: var(--pr-rot, #91301c);
+  box-shadow: 0 0 0 calc(var(--s) * 2) rgba(145, 48, 28, 0.28);
+  font-weight: 600;
 }
 
 /* --------------------------------------------------------------------------
