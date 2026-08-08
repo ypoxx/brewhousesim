@@ -3591,7 +3591,9 @@
          ob sie es in diesem Braujahr schon getan hat, und behaelt das. */
       if (!fortgesetzt) Z.beschwerdeJahr = 0;
       Z.bereit = true;
-      B.welt.schreibe('Gegenüber steht ' + nameVon(haus('adler')) + '. '
+      /* Die Vorstellung des Gegners gehoert an den ANFANG einer Partie, nicht
+         an jedes Neuladen. Wer fortsetzt, kennt ihn. */
+      if (!fortgesetzt) B.welt.schreibe('Gegenüber steht ' + nameVon(haus('adler')) + '. '
         + haus('adler').erbe.name + ' führt es. Gebunden wird in dieser Zeit mit '
         + ep().waehrung + '.', 'gegner');
       B.ton.melde('gegner:werben', { art: 'geraeusch', sagt: 'Fremder Karren im Hof' });

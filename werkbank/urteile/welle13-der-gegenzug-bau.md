@@ -463,6 +463,14 @@ zwei Wege verändern: über den **gemeldeten Zug** (`meldeZug` — unangetastet,
 §0) und über die **Geometrie** (ein Zeichen, das einen fremden Knopf deckt).
 Beides ist gemessen, nicht behauptet.
 
+*(Eine Kleinigkeit der Redlichkeit: die allerletzte Änderung dieses Stücks —
+die Vorstellung des Gegners in der Chronik wird bei einer **fortgesetzten**
+Partie nicht wiederholt — ist in den Messbäumen nicht enthalten. Sie kann dort
+auch nichts ändern: der reine Welle-12-Stand hat kein `kern/stand.js`, also ist
+`fortgesetzt` dort immer falsch und die Zeile wird immer geschrieben, vorher
+wie nachher. Am laufenden Stand ist sie mit `rahmen-w13/wiederkehr.mjs`
+geprüft: `abweichung []`.)*
+
 *(Zahlen je Epoche folgen; Epoche 1 steht.)*
 
 **Epoche 1350 — 400 Wochen, Ziffer für Ziffer dieselbe Partie.**

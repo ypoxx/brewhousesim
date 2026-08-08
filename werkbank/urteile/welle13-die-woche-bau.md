@@ -427,3 +427,44 @@ sie, damit die Aufsicht sie abziehen kann.
    unteren linken Streifen.** Ich weiche aus, solange er liegt. Wenn der
    Rahmen ihn später verschiebt, kann diese Ausnahme wieder heraus —
    `zeichneWoche()`, eine Zeile.
+
+---
+
+## 6 · Die Abnahme in einer Tabelle
+
+| Auftrag | verlangt | gemessen | |
+|---|---|---|---|
+| **R11** Zielsatz in jeder Woche | mindestens einmal auf dem ersten Schirm, ohne ein Brett aufzuschlagen | `B.welt.meldeZiel()` in jedem Zeichendurchgang; im Ladeschirm aller vier Epochen abgelesen | **bestanden** |
+| **R12** Übergabe fällt auf | 1350–1355 ohne einen Reiterklick | 78 Wochen, 1350–1358, **0 Reiterklicks**; Angebot lag 13 Wochen, sichtbar in 12–13 davon, mit Knopf in 9. 1600: 9 von 9 | **bestanden** |
+| **R13** häufigster Knopf ≤ 35 % | ≤ 35 % | 1350 **32,5 %** · 1600 36,8 % · 1884 **26,8 %** · 1970 **17,0 %** (vorher 71 %, ohne Reitersuche 94 %) | **3 von 4** |
+| **R13** drei häufigste ≤ 60 % | ≤ 60 % | 1350 82,5 % · 1600 72,8 % · 1884 **56,7 %** · 1970 **43,7 %** (vorher 78 %) | **2 von 4** |
+| **R14** Blatt schließt bei fremdem Reiter | Georgi- und Übergabeblatt | gebaut, Fangphase, mit `zeichne`; Angebot bleibt liegen | **bestanden** |
+| keine Fehler auf der Seite · `lage` 0 | alle vier Epochen | 4 von 4 · 0 in allen Läufen | **bestanden** |
+| ρ in 1600 | \|ρ\| < 0,700 | **+0,538**, Ziffer für Ziffer der Stand nach Welle 12 | **bestanden** |
+
+**Nicht bestanden: „drei häufigste ≤ 60 %" in 1350 und 1600.** Die Ursache
+steht in §3 und ist gemessen: in 1350 stehen in 3 von 100 Wochen drei oder
+mehr verschiedene Ladungen zur Wahl — es ist zu wenig Bier im Keller, als dass
+sich mehr als drei Knöpfe die Arbeit teilen könnten. Wer diese Latte dort
+reißen will, dreht an Sudmenge, Wagengröße oder Fassplätzen, und das misst
+1600 zuerst. Das ist eine Entscheidung der Aufsicht.
+
+---
+
+## 7 · Was ich angefasst habe
+
+| Datei | was |
+|---|---|
+| `spiel/stuecke/fuhre.js` | Fuhrpläne · Wochenkarte · Sprung · Zielsatz · Übergabe an vier Orten · Reiterhorcher · Anschlaghorcher |
+| `spiel/stil/fuhre-zusatz.css` | `.fu-woche` und ihre Chips · `.fu-sommer-uebergabe` · der kleine Knopf auf dem Übergabeblatt |
+| `werkbank/schuss/woche-w13/hand-w13.mjs` | die Hand, die die Woche liest statt sie auswendig zu kennen |
+| `werkbank/schuss/woche-w13/klickanteil.py` | die Auswertung, an der R13 hängt |
+| `werkbank/schuss/woche-w13/uebergabe.mjs` | die Abnahme zu R12 — ohne einen Reiterklick |
+| `werkbank/schuss/woche-w13/springeprobe.mjs` | was `B.uhr.springe()` mit der FUHRE macht |
+| `werkbank/schuss/woche-w13/freiflaeche.mjs` | wo im Bild Platz ist und wie groß ein Brett sein darf |
+| `werkbank/schuss/woche-w13/haushalt.mjs` · `lage.mjs` | Flächenhaushalt, `ueberRand`, Lage der Bretter |
+| `werkbank/schuss/welle13-woche-e1..e4.png` | die vier Aufnahmen |
+
+**Nicht angefasst:** `spiel/kern/**`, jedes fremde Stück, jedes fremde DOM,
+`spiel/index.html`, `spiel/LIESMICH.md`. Kein `git add`, kein `commit`,
+kein `push`.
