@@ -87,3 +87,7 @@ werkbank/schuss/*.wav
 # 1280 breit, zusammen unter 2 MB. Es wird nachgeschossen, wenn sich das Stueck
 # aendert, nicht angehaeuft. Wer hier etwas ablegt, prueft vorher die Groesse.
 # Massenschuesse einer Messung gehoeren weiterhin nach werkbank/schuss/.
+
+# Das Ausgabeverzeichnis des Netlify-Builds (werkbank/auslieferung.sh).
+# Es wird bei jedem Build neu erzeugt und gehoert nie ins Repo.
+auslieferung/

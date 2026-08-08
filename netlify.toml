@@ -1,14 +1,20 @@
-# Die Werkbank ist eine statische Seite in der Repo-Wurzel; es gibt keinen Build.
+# DER RELEASE-SCHNITT — Entscheidung F7 des Auftraggebers vom 8. August 2026.
+#
+# Hier stand bis heute `publish = "."`, und damit lag die ganze Repo-Wurzel
+# oeffentlich im Netz: 186 MB `design/`, 146 MB `werkbank/` samt interner
+# Urteile und Bauberichte, 18 MB `zielbild/`. Ausgeliefert wird ab jetzt nur
+# noch, was `werkbank/auslieferung.sh` zusammenstellt — das Spiel, die
+# Werkstatt-/Startseite und der `stand.json`-Spiegel, den sie liest.
+# Das Skript prueft sein Ergebnis selbst nach und bricht laut ab, wenn eines
+# der drei fehlt oder etwas Internes mitgerutscht ist.
 [build]
-  publish = "."
-  command = ""
+  publish = "auslieferung"
+  command = "bash werkbank/auslieferung.sh"
 
+# Der Zeitstempel der Werkstattseite darf nie aus dem Zwischenspeicher kommen —
+# eine Seite, die stehenbleibt, ohne es zu sagen, ist schlimmer als gar keine
+# (3. August 2026, siehe werkbank/LAUFENDER-AUFTRAG.md).
 [[headers]]
   for = "/werkbank/stand.json"
-  [headers.values]
-    Cache-Control = "no-store"
-
-[[headers]]
-  for = "/werkbank/schuss/*"
   [headers.values]
     Cache-Control = "no-store"
