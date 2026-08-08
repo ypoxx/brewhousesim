@@ -291,6 +291,18 @@ derselbe, und jedes vorhandene Messgerät findet ihn weiter.
 | Woche 45 | `OHNE DICH GESCHEHEN` | `OHNE DICH GESCHEHEN · 25 ZÜGE  zugeklappt` | `OHNE DICH GESCHEHEN · 46 ZÜGE` |
 | **Form Woche 45 = Form Woche 15** | **nein** | **ja** | **ja** |
 
+**Und dieselbe Probe in den anderen drei Epochen, am laufenden Stand:**
+
+| | 1600 | 1884 | 1970 |
+|---|---|---|---|
+| Wochen mit Zahl am Reiter | **50 / 50** | **50 / 50** | **50 / 50** |
+| Woche 15 | `… · 13 ZÜGE zugeklappt` | `… · 12 ZÜGE zugeklappt` | `… · 20 ZÜGE` |
+| Woche 45 | `… · 24 ZÜGE` | `… · 27 ZÜGE` | `… · 42 ZÜGE zugeklappt` |
+
+In allen vier Epochen trägt der Reiter die Zahl in **jeder** der fünfzig
+Wochen; das zweite Wort (`zugeklappt` / nichts) hängt daran, ob die
+Reiterzeile in dieser Woche schmal ist, und nicht am Braujahr.
+
 Die dritte Spalte ist der Arbeitsbaum, in dem die anderen drei Builder
 gleichzeitig arbeiten — dort läuft die Partie schneller (50 Klicks reichen bis
 1352/26 statt 1351/14), und die Reiterzeile ist bereits so breit, dass die
@@ -470,14 +482,15 @@ Linie** — Zeile für Zeile die Hand aus `rueckkopplung-r3/linie.mjs`, also die
 aus der die ρ-Zahlen stammen (Michaelitafel, Festlegung, Angebot, Ziel, Fässer
 auf den Karren, Rohstoff, Engpass, Fuhre). Laufender Stand, 100 Wochen:
 
-| | 1350 | 1970 |
-|---|---|---|
-| Wochen ohne bezahlbaren Gegenzug | **1** | **3** |
-| Wochen, in denen gar nichts greifbar war | 1 | 2 |
-| bezahlbare Gegenzüge je Woche, Median | **8** | **5** |
-| Seitenfehler | 0 | 0 |
+| | 1350 | 1600 | 1884 | 1970 |
+|---|---|---|---|---|
+| Wochen ohne bezahlbaren Gegenzug | **1** | **0** | **0** | **3** |
+| Wochen, in denen gar nichts greifbar war | 1 | 0 | 0 | 2 |
+| bezahlbare Gegenzüge je Woche, **Median** | **8** | **9** | **6** | **5** |
+| Seitenfehler | 0 | 0 | 0 | 0 |
 
-Aus „im Median 0 bezahlbare Gegenzüge" ist „im Median 8" geworden.
+Aus „im Median **0** bezahlbare Gegenzüge" ist „im Median **5 bis 9**"
+geworden — mit der Hand, die auch das Geld ausgibt.
 
 ### 4.3 Was in 1350 übrig bleibt, und woran es liegt
 
