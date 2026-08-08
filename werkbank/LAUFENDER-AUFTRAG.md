@@ -62,7 +62,7 @@ zurückgestellt.
 |---|---|---|---|---|
 | **DER RAHMEN** — Spielstand, Zielsatz, Startschirm | 8921 | A1 A2(Platz) A12(Entscheidung) | **gebaut, 09:0x** | `urteile/welle13-der-rahmen-bau.md` |
 | **DIE JAHRESTAFEL** — der lügende Knopf, die Tafel, die nie aufliegt | 8922 | A4 A5 A6 A10 A13 | **gebaut, 09:4x** | `urteile/welle13-die-jahrestafel-bau.md` |
-| **DIE WOCHE** — 71 % der Klicks sind zwei Knöpfe | 8923 | A2(Satz) A3 A6 A7 | baut | `urteile/welle13-die-woche-bau.md` |
+| **DIE WOCHE** — 71 % der Klicks sind zwei Knöpfe | 8923 | A2(Satz) A3 A6 A7 | **gebaut, 10:0x — eine Schwelle zurück an die Aufsicht** | `urteile/welle13-die-woche-bau.md` |
 | **DER GEGENZUG** — 457 zu 5 | 8924 | A8 A9 | baut | `urteile/welle13-der-gegenzug-bau.md` |
 
 > ### DIE GEGENMESSUNG DER AUFSICHT HAT ZWEI AUFLAGEN WIDERLEGT
@@ -128,6 +128,45 @@ zurückgestellt.
 > Begründung der Welle 12 falsch und die Regel überflüssig; hält sie nicht, war
 > sie richtig. Bis dahin bleibt der Satz in `LIESMICH.md` stehen — **eine Regel,
 > die trägt, wird nicht auf einen unbelegten Verdacht hin entfernt.**
+
+> ### DIE 71 % WAREN EINE UNTERGRENZE — DIE WOCHE WAR OHNE REITERKLICK GAR NICHT SPIELBAR
+>
+> *Gemessen von DIE WOCHE **vor** dem ersten Handgriff, am Vorzustand.*
+>
+> Alle vier Bretter der FUHRE liegen beim Laden als `stadt-zugeklappt`. Wer
+> keinen Reiter anfasst, kann die Fuhre nicht abschicken: **100 von 106 Klicks
+> (94 %) fielen auf WEITER**, und `fuhre:abschicken` war **100-mal
+> abgeschaltet**. Die 71 % des Spielkritikers entstanden, weil seine Hand vor
+> jedem Griff eine Reitersuche fuhr (er zählt sie selbst: 1 089 · 1 062 · 709
+> „zusätzliche Klicks, nur um ein Brett zu suchen").
+>
+> **Das ist dieselbe Familie wie A5 und A6, und jetzt sind es drei Fälle:** was
+> wie ein fehlendes Angebot aussah, war ein zugeklapptes Brett; was wie eine nie
+> aufliegende Tafel aussah, war eine Hand, die sie selbst wegklickte; was wie
+> ein langweiliger Wochenlauf aussah, war ein Spiel, dessen Handgriffe hinter
+> zehn braunen Rechtecken lagen. **Nicht das Spiel war arm, sondern der Zugang
+> zu ihm.**
+
+> ### EINE SCHWELLE LIEGT BEI DER AUFSICHT — noch nicht entschieden
+>
+> DIE WOCHE erreicht *„häufigster Knopf ≤ 35 %"* in **1350 (32,5 %), 1884
+> (26,8 %) und 1970 (17,0 %)**, verfehlt sie in **1600 (36,8 %)**. Die zweite
+> Schwelle *„drei häufigste zusammen ≤ 60 %"* wird in **1884 (56,7 %)** und
+> **1970 (43,7 %)** erreicht, in **1350 (82,5 %)** und **1600 (72,8 %)** nicht.
+> Zugleich stehen Wochen mit **zwei einander ausschließenden Preisoptionen** von
+> **0 von 100** auf **70 / 92 / 81 / 56**.
+>
+> Seine Begründung, gemessen: in 1350 stehen in nur 3 von 100 Wochen drei oder
+> mehr verschiedene Ladungen zur Wahl — der Ochsenkarren fährt 5 Fass an 4
+> Halte, im Keller liegen im Median 4 reife Fass. *„Die Latte misst dort die
+> Fässer, nicht die Knöpfe"*, und sie wäre nur über Sudmenge, Wagengröße oder
+> Fassplätze zu erreichen — in einer Epoche (1600) ohne jede Reserve bei
+> ρ +0,538.
+>
+> **Die Aufsicht entscheidet das NICHT, bevor sie es selbst gemessen hat**, und
+> ohnehin erst, wenn DER GEGENZUG fertig ist: er ändert `gegner:*`-Züge, und die
+> zählen in denselben Klickanteil. Jede Zahl von jetzt ist überholt, sobald er
+> abgibt.
 
 **Drei Entscheidungen der Aufsicht stehen im Brief**, damit kein Builder rät:
 
