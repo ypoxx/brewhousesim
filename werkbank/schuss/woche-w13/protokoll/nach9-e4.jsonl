@@ -210,3 +210,194 @@
 {"t":201.6,"was":"wahl-der-woche","plaene":6,"sprung":false,"liste":[{"zug":"fuhre:plan:probe","preis":2342,"text":"Fahren: ohne Rechnung · 120 hl +2.342 DM"},{"zug":"fuhre:plan:mager","preis":2166,"text":"Fahren: die mageren Häuser · 90 hl +2.166 DM"},{"zug":"fuhre:plan:umkaempft","preis":2477,"text":"Fahren: wo der Adler wirbt · 90 hl +2.477 DM"},{"zug":"fuhre:plan:durst","preis":2238,"text":"Fahren: nach Durst · 90 hl +2.238 DM"}]}
 {"t":202.8,"was":"klick","nr":70,"zug":"fuhre:plan:umkaempft","grund":"Fuhrplan","knopf":{"text":"Fahren: wo der Adler wirbt · 90 hl +2.477 DM","preis":2477,"w":262,"h":24},"vor":{"jahr":1972,"woche":6,"kasse":552},"nach":{"jahr":1972,"woche":7,"kasse":7406},"dkasse":6854,"lage":0}
 {"t":203.2,"was":"abgeschaltet","zug":"fuhre:abschicken","text":"FUHRE ABSCHICKEN"}
+{"t":203.6,"was":"woche","n":49,"jahr":1972,"woche":7,"kasse":7406,"greifbar":55,"mitPreis":16,"deckung":0.615678776290631,"nenner":"Zuvorkommen Brückenwirt","ziel":null,"uebergabeImText":1}
+{"t":204,"was":"wahl-der-woche","plaene":3,"sprung":false,"liste":[{"zug":"fuhre:plan:probe","preis":-285,"text":"Fahren: ohne Rechnung · 30 hl −285 DM"}]}
+{"t":205.6,"was":"klick","nr":71,"zug":"fuhre:plan:probe","grund":"Fuhrplan","knopf":{"text":"Fahren: ohne Rechnung · 30 hl −285 DM","preis":-285,"w":230,"h":24},"vor":{"jahr":1972,"woche":7,"kasse":7406},"nach":{"jahr":1972,"woche":8,"kasse":2127},"dkasse":-5279,"lage":0}
+{"t":205.7,"was":"abgeschaltet","zug":"fuhre:abschicken","text":"FUHRE ABSCHICKEN"}
+{"t":205.9,"was":"woche","n":50,"jahr":1972,"woche":8,"kasse":2127,"greifbar":54,"mitPreis":14,"deckung":0.17682267852689335,"nenner":"Zuvorkommen Brückenwirt","ziel":null,"uebergabeImText":1}
+{"t":206.2,"was":"wahl-der-woche","plaene":3,"sprung":false,"liste":[{"zug":"fuhre:plan:probe","preis":-285,"text":"Fahren: ohne Rechnung · 30 hl −285 DM"}]}
+{"t":207.4,"was":"klick","nr":72,"zug":"fuhre:plan:probe","grund":"Fuhrplan","knopf":{"text":"Fahren: ohne Rechnung · 30 hl −285 DM","preis":-285,"w":230,"h":24},"vor":{"jahr":1972,"woche":8,"kasse":2127},"nach":{"jahr":1972,"woche":9,"kasse":7848},"dkasse":5721,"lage":0}
+{"t":207.5,"was":"abgeschaltet","zug":"fuhre:abschicken","text":"FUHRE ABSCHICKEN"}
+{"t":207.6,"was":"woche","n":51,"jahr":1972,"woche":9,"kasse":7848,"greifbar":55,"mitPreis":16,"deckung":0.6524233103333611,"nenner":"Zuvorkommen Brückenwirt","ziel":null,"uebergabeImText":1}
+{"t":208,"was":"wahl-der-woche","plaene":3,"sprung":false,"liste":[{"zug":"fuhre:plan:probe","preis":-212,"text":"Fahren: ohne Rechnung · 30 hl −212 DM"}]}
+{"t":209.5,"was":"klick","nr":73,"zug":"fuhre:plan:probe","grund":"Fuhrplan","knopf":{"text":"Fahren: ohne Rechnung · 30 hl −212 DM","preis":-212,"w":230,"h":24},"vor":{"jahr":1972,"woche":9,"kasse":7848},"nach":{"jahr":1972,"woche":10,"kasse":2642},"dkasse":-5206,"lage":0}
+{"t":209.6,"was":"abgeschaltet","zug":"fuhre:abschicken","text":"FUHRE ABSCHICKEN"}
+{"t":209.6,"was":"woche","n":52,"jahr":1972,"woche":10,"kasse":2642,"greifbar":52,"mitPreis":14,"deckung":0.21963587995677114,"nenner":"Zuvorkommen Brückenwirt","ziel":null,"uebergabeImText":1}
+{"t":209.9,"was":"wahl-der-woche","plaene":3,"sprung":false,"liste":[{"zug":"fuhre:plan:probe","preis":-212,"text":"Fahren: ohne Rechnung · 30 hl −212 DM"}]}
+{"t":211,"was":"klick","nr":74,"zug":"fuhre:plan:probe","grund":"Fuhrplan","knopf":{"text":"Fahren: ohne Rechnung · 30 hl −212 DM","preis":-212,"w":230,"h":24},"vor":{"jahr":1972,"woche":10,"kasse":2642},"nach":{"jahr":1972,"woche":11,"kasse":8436},"dkasse":5794,"lage":0}
+{"t":211.2,"was":"abgeschaltet","zug":"fuhre:abschicken","text":"FUHRE ABSCHICKEN"}
+{"t":211.9,"was":"woche","n":53,"jahr":1972,"woche":11,"kasse":8436,"greifbar":55,"mitPreis":15,"deckung":0.7013051791503866,"nenner":"Zuvorkommen Brückenwirt","ziel":null,"uebergabeImText":1}
+{"t":212.3,"was":"wahl-der-woche","plaene":2,"sprung":true,"liste":[]}
+{"t":214.8,"was":"klick","nr":75,"zug":"fuhre:sprung","grund":"ruhige Wochen zusammenfassen","knopf":{"text":"Weiter wie zuletzt · bis zu 6 Wochen","preis":null,"w":191,"h":24},"vor":{"jahr":1972,"woche":11,"kasse":8436},"nach":{"jahr":1972,"woche":17,"kasse":1284},"dkasse":-7152,"lage":0}
+{"t":214.9,"was":"sprung","wochen":6,"text":"Weiter wie zuletzt · bis zu 6 Wochen"}
+{"t":215.1,"was":"woche","n":54,"jahr":1972,"woche":17,"kasse":1284,"greifbar":52,"mitPreis":12,"deckung":0.06604938271604938,"nenner":"Ablösung Schenke am Tor","ziel":null,"uebergabeImText":1}
+{"t":215.3,"was":"wahl-der-woche","plaene":2,"sprung":true,"liste":[]}
+{"t":217.8,"was":"klick","nr":76,"zug":"fuhre:sprung","grund":"ruhige Wochen zusammenfassen","knopf":{"text":"Weiter wie zuletzt · bis zu 6 Wochen","preis":null,"w":191,"h":24},"vor":{"jahr":1972,"woche":17,"kasse":1284},"nach":{"jahr":1972,"woche":23,"kasse":4065},"dkasse":2781,"lage":0}
+{"t":217.8,"was":"sprung","wochen":6,"text":"Weiter wie zuletzt · bis zu 6 Wochen"}
+{"t":218,"was":"woche","n":55,"jahr":1972,"woche":23,"kasse":4065,"greifbar":44,"mitPreis":8,"deckung":0.16728395061728396,"nenner":"Ablösung Fährhaus am Fluss","ziel":null,"uebergabeImText":1}
+{"t":218.3,"was":"wahl-der-woche","plaene":2,"sprung":true,"liste":[]}
+{"t":220.9,"was":"klick","nr":77,"zug":"fuhre:sprung","grund":"ruhige Wochen zusammenfassen","knopf":{"text":"Weiter wie zuletzt · bis zu 6 Wochen","preis":null,"w":191,"h":24},"vor":{"jahr":1972,"woche":23,"kasse":4065},"nach":{"jahr":1972,"woche":29,"kasse":195},"dkasse":-3870,"lage":0}
+{"t":221.4,"was":"sprung","wochen":6,"text":"Weiter wie zuletzt · bis zu 6 Wochen"}
+{"t":221.5,"was":"woche","n":56,"jahr":1972,"woche":29,"kasse":195,"greifbar":44,"mitPreis":4,"deckung":0.018490422909159872,"nenner":"Zuvorkommen Pfarrschenke St. Michael","ziel":null,"uebergabeImText":1}
+{"t":221.7,"was":"wahl-der-woche","plaene":2,"sprung":false,"liste":[]}
+{"t":223.2,"was":"klick","nr":78,"zug":"fuhre:wie-vorige","grund":"Fuhrplan","knopf":{"text":"Wie vorige Woche","preis":null,"w":112,"h":24},"vor":{"jahr":1972,"woche":29,"kasse":195},"nach":{"jahr":1972,"woche":29,"kasse":195},"dkasse":0,"lage":0}
+{"t":223.6,"was":"abgeschaltet","zug":"fuhre:abschicken","text":"FUHRE ABSCHICKEN"}
+{"t":227.2,"was":"klick","nr":79,"zug":"weiter","grund":"naechste Woche","knopf":{"text":"WEITER","preis":null,"w":147,"h":42},"vor":{"jahr":1972,"woche":29,"kasse":195},"nach":{"jahr":1972,"woche":30,"kasse":195},"dkasse":0,"lage":0}
+{"t":227.3,"was":"woche","n":57,"jahr":1972,"woche":30,"kasse":195,"greifbar":44,"mitPreis":4,"deckung":0.025473546701502287,"nenner":"Zuvorkommen Pfarrschenke St. Michael","ziel":null,"uebergabeImText":1}
+{"t":227.6,"was":"wahl-der-woche","plaene":2,"sprung":false,"liste":[]}
+{"t":230.1,"was":"klick","nr":80,"zug":"fuhre:wie-vorige","grund":"Fuhrplan","knopf":{"text":"Wie vorige Woche","preis":null,"w":112,"h":24},"vor":{"jahr":1972,"woche":30,"kasse":195},"nach":{"jahr":1972,"woche":30,"kasse":195},"dkasse":0,"lage":0}
+{"t":230.6,"was":"abgeschaltet","zug":"fuhre:abschicken","text":"FUHRE ABSCHICKEN"}
+{"t":236.6,"was":"klick","nr":81,"zug":"weiter","grund":"naechste Woche","knopf":{"text":"JAHR SCHLIESSEN","preis":null,"w":275,"h":42},"vor":{"jahr":1972,"woche":30,"kasse":195},"nach":{"jahr":1973,"woche":1,"kasse":50000},"dkasse":49805,"lage":0}
+{"t":237.5,"was":"woche","n":58,"jahr":1973,"woche":1,"kasse":50000,"greifbar":30,"mitPreis":5,"deckung":6.531678641410843,"nenner":"Zuvorkommen Pfarrschenke St. Michael","ziel":null,"uebergabeImText":1}
+{"t":237.9,"was":"nicht-zu-greifen","zug":"fuhre:sommer-zu"}
+{"t":244.4,"was":"klick","nr":82,"zug":"preis:nimm:zelt","grund":"Michaeli: billigstes bezahlbare","knopf":{"text":"Nehmen −35.000 DM","preis":-35000,"w":122,"h":46},"vor":{"jahr":1973,"woche":1,"kasse":50000},"nach":{"jahr":1973,"woche":1,"kasse":15000},"dkasse":-35000,"lage":0}
+{"t":246.7,"was":"klick","nr":83,"zug":"preis:tafel-zu","grund":"Das Jahr beginnen","knopf":{"text":"Das Jahr beginnen","preis":null,"w":142,"h":56},"vor":{"jahr":1973,"woche":1,"kasse":15000},"nach":{"jahr":1973,"woche":1,"kasse":15000},"dkasse":0,"lage":0}
+{"t":247,"was":"wahl-der-woche","plaene":1,"sprung":false,"liste":[]}
+{"t":251.5,"was":"klick","nr":84,"zug":"fuhre:fuellen","grund":"Fuhrplan","knopf":{"text":"Nach Durst füllen","preis":null,"w":109,"h":24},"vor":{"jahr":1973,"woche":1,"kasse":15000},"nach":{"jahr":1973,"woche":1,"kasse":15000},"dkasse":0,"lage":0}
+{"t":251.7,"was":"abgeschaltet","zug":"fuhre:abschicken","text":"FUHRE ABSCHICKEN"}
+{"t":254.3,"was":"klick","nr":85,"zug":"weiter","grund":"naechste Woche","knopf":{"text":"WEITER","preis":null,"w":147,"h":42},"vor":{"jahr":1973,"woche":1,"kasse":15000},"nach":{"jahr":1973,"woche":2,"kasse":9906},"dkasse":-5094,"lage":0}
+{"t":254.9,"was":"woche","n":59,"jahr":1973,"woche":2,"kasse":9906,"greifbar":43,"mitPreis":9,"deckung":1.2940561724363162,"nenner":"Zuvorkommen Pfarrschenke St. Michael","ziel":null,"uebergabeImText":1}
+{"t":255.2,"was":"wahl-der-woche","plaene":5,"sprung":false,"liste":[{"zug":"fuhre:plan:probe","preis":1444,"text":"Fahren: ohne Rechnung · 90 hl +1.444 DM"},{"zug":"fuhre:plan:mager","preis":2788,"text":"Fahren: die mageren Häuser · 90 hl +2.788 DM"},{"zug":"fuhre:plan:umkaempft","preis":2809,"text":"Fahren: wo der Adler wirbt · 90 hl +2.809 DM"},{"zug":"fuhre:plan:durst","preis":2845,"text":"Fahren: nach Durst · 90 hl +2.845 DM"}]}
+{"t":257.7,"was":"klick","nr":86,"zug":"fuhre:plan:durst","grund":"Fuhrplan","knopf":{"text":"Fahren: nach Durst · 90 hl +2.845 DM","preis":2845,"w":222,"h":24},"vor":{"jahr":1973,"woche":2,"kasse":9906},"nach":{"jahr":1973,"woche":3,"kasse":5124},"dkasse":-4782,"lage":0}
+{"t":257.9,"was":"abgeschaltet","zug":"fuhre:abschicken","text":"FUHRE ABSCHICKEN"}
+{"t":258.1,"was":"woche","n":60,"jahr":1973,"woche":3,"kasse":5124,"greifbar":43,"mitPreis":9,"deckung":0.6693664271717832,"nenner":"Zuvorkommen Pfarrschenke St. Michael","ziel":null,"uebergabeImText":1}
+{"t":258.3,"was":"wahl-der-woche","plaene":6,"sprung":false,"liste":[{"zug":"fuhre:plan:probe","preis":1444,"text":"Fahren: ohne Rechnung · 90 hl +1.444 DM"},{"zug":"fuhre:plan:mager","preis":2627,"text":"Fahren: die mageren Häuser · 90 hl +2.627 DM"},{"zug":"fuhre:plan:umkaempft","preis":2809,"text":"Fahren: wo der Adler wirbt · 90 hl +2.809 DM"},{"zug":"fuhre:plan:durst","preis":2951,"text":"Fahren: nach Durst · 90 hl +2.951 DM"}]}
+{"t":260.1,"was":"klick","nr":87,"zug":"fuhre:plan:durst","grund":"Fuhrplan","knopf":{"text":"Fahren: nach Durst · 90 hl +2.951 DM","preis":2951,"w":222,"h":24},"vor":{"jahr":1973,"woche":3,"kasse":5124},"nach":{"jahr":1973,"woche":4,"kasse":1309},"dkasse":-3815,"lage":0}
+{"t":260.7,"was":"abgeschaltet","zug":"fuhre:abschicken","text":"FUHRE ABSCHICKEN"}
+{"t":261.1,"was":"woche","n":61,"jahr":1973,"woche":4,"kasse":1309,"greifbar":40,"mitPreis":4,"deckung":0.07695473251028806,"nenner":"Ablösung Pfarrschenke St. Michael","ziel":null,"uebergabeImText":1}
+{"t":261.3,"was":"wahl-der-woche","plaene":3,"sprung":false,"liste":[{"zug":"fuhre:plan:probe","preis":-195,"text":"Fahren: ohne Rechnung · 30 hl −195 DM"}]}
+{"t":262.8,"was":"klick","nr":88,"zug":"fuhre:plan:probe","grund":"Fuhrplan","knopf":{"text":"Fahren: ohne Rechnung · 30 hl −195 DM","preis":-195,"w":230,"h":24},"vor":{"jahr":1973,"woche":4,"kasse":1309},"nach":{"jahr":1973,"woche":5,"kasse":7020},"dkasse":5711,"lage":0}
+{"t":263.7,"was":"abgeschaltet","zug":"fuhre:abschicken","text":"FUHRE ABSCHICKEN"}
+{"t":263.8,"was":"woche","n":62,"jahr":1973,"woche":5,"kasse":7020,"greifbar":40,"mitPreis":4,"deckung":1.2838332114118507,"nenner":"Zuvorkommen Ausschank am Markt","ziel":null,"uebergabeImText":1}
+{"t":263.9,"was":"wahl-der-woche","plaene":3,"sprung":false,"liste":[{"zug":"fuhre:plan:probe","preis":-195,"text":"Fahren: ohne Rechnung · 30 hl −195 DM"}]}
+{"t":265.1,"was":"klick","nr":89,"zug":"fuhre:plan:probe","grund":"Fuhrplan","knopf":{"text":"Fahren: ohne Rechnung · 30 hl −195 DM","preis":-195,"w":230,"h":24},"vor":{"jahr":1973,"woche":5,"kasse":7020},"nach":{"jahr":1973,"woche":6,"kasse":1731},"dkasse":-5289,"lage":0}
+{"t":265.2,"was":"abgeschaltet","zug":"fuhre:abschicken","text":"FUHRE ABSCHICKEN"}
+{"t":265.6,"was":"woche","n":63,"jahr":1973,"woche":6,"kasse":1731,"greifbar":37,"mitPreis":1,"deckung":0.3165691294806145,"nenner":"Zuvorkommen Ausschank am Markt","ziel":null,"uebergabeImText":1}
+{"t":266.1,"was":"wahl-der-woche","plaene":3,"sprung":false,"liste":[{"zug":"fuhre:plan:probe","preis":-195,"text":"Fahren: ohne Rechnung · 30 hl −195 DM"}]}
+{"t":267.3,"was":"klick","nr":90,"zug":"fuhre:plan:probe","grund":"Fuhrplan","knopf":{"text":"Fahren: ohne Rechnung · 30 hl −195 DM","preis":-195,"w":230,"h":24},"vor":{"jahr":1973,"woche":6,"kasse":1731},"nach":{"jahr":1973,"woche":7,"kasse":878},"dkasse":-853,"lage":0}
+{"t":267.4,"was":"abgeschaltet","zug":"fuhre:abschicken","text":"FUHRE ABSCHICKEN"}
+{"t":268,"was":"woche","n":64,"jahr":1973,"woche":7,"kasse":878,"greifbar":40,"mitPreis":3,"deckung":0.16057059253840528,"nenner":"Zuvorkommen Ausschank am Markt","ziel":null,"uebergabeImText":1}
+{"t":268.2,"was":"wahl-der-woche","plaene":3,"sprung":false,"liste":[{"zug":"fuhre:plan:probe","preis":-195,"text":"Fahren: ohne Rechnung · 30 hl −195 DM"}]}
+{"t":269.3,"was":"klick","nr":91,"zug":"fuhre:plan:probe","grund":"Fuhrplan","knopf":{"text":"Fahren: ohne Rechnung · 30 hl −195 DM","preis":-195,"w":230,"h":24},"vor":{"jahr":1973,"woche":7,"kasse":878},"nach":{"jahr":1973,"woche":8,"kasse":25},"dkasse":-853,"lage":0}
+{"t":269.3,"was":"abgeschaltet","zug":"fuhre:abschicken","text":"FUHRE ABSCHICKEN"}
+{"t":269.5,"was":"woche","n":65,"jahr":1973,"woche":8,"kasse":25,"greifbar":39,"mitPreis":4,"deckung":0.004572055596196049,"nenner":"Zuvorkommen Ausschank am Markt","ziel":null,"uebergabeImText":1}
+{"t":270.2,"was":"wahl-der-woche","plaene":5,"sprung":true,"liste":[{"zug":"fuhre:plan:mager","preis":1266,"text":"Fahren: die mageren Häuser · 45 hl +1.266 DM"},{"zug":"fuhre:plan:durst","preis":1466,"text":"Fahren: nach Durst · 45 hl +1.466 DM"},{"zug":"fuhre:plan:nah","preis":1268,"text":"Fahren: kurze Wege · 45 hl +1.268 DM"}]}
+{"t":271.9,"was":"klick","nr":92,"zug":"fuhre:plan:durst","grund":"Fuhrplan","knopf":{"text":"Fahren: nach Durst · 45 hl +1.466 DM","preis":1466,"w":222,"h":24},"vor":{"jahr":1973,"woche":8,"kasse":25},"nach":{"jahr":1973,"woche":9,"kasse":626},"dkasse":601,"lage":0}
+{"t":272.2,"was":"abgeschaltet","zug":"fuhre:abschicken","text":"FUHRE ABSCHICKEN"}
+{"t":272.4,"was":"woche","n":66,"jahr":1973,"woche":9,"kasse":626,"greifbar":37,"mitPreis":1,"deckung":0.11448427212874908,"nenner":"Zuvorkommen Ausschank am Markt","ziel":null,"uebergabeImText":1}
+{"t":272.5,"was":"wahl-der-woche","plaene":2,"sprung":true,"liste":[]}
+{"t":274.3,"was":"klick","nr":93,"zug":"fuhre:sprung","grund":"ruhige Wochen zusammenfassen","knopf":{"text":"Weiter wie zuletzt · bis zu 6 Wochen","preis":null,"w":191,"h":24},"vor":{"jahr":1973,"woche":9,"kasse":626},"nach":{"jahr":1973,"woche":15,"kasse":626},"dkasse":0,"lage":0}
+{"t":274.8,"was":"sprung","wochen":6,"text":"Weiter wie zuletzt · bis zu 6 Wochen"}
+{"t":275,"was":"woche","n":67,"jahr":1973,"woche":15,"kasse":626,"greifbar":37,"mitPreis":2,"deckung":0.04007169376520292,"nenner":"Ablösung Ausschank am Markt","ziel":null,"uebergabeImText":1}
+{"t":275.6,"was":"wahl-der-woche","plaene":2,"sprung":true,"liste":[]}
+{"t":278.8,"was":"klick","nr":94,"zug":"fuhre:sprung","grund":"ruhige Wochen zusammenfassen","knopf":{"text":"Weiter wie zuletzt · bis zu 6 Wochen","preis":null,"w":191,"h":24},"vor":{"jahr":1973,"woche":15,"kasse":626},"nach":{"jahr":1973,"woche":21,"kasse":626},"dkasse":0,"lage":0}
+{"t":278.9,"was":"sprung","wochen":6,"text":"Weiter wie zuletzt · bis zu 6 Wochen"}
+{"t":279,"was":"woche","n":68,"jahr":1973,"woche":21,"kasse":626,"greifbar":44,"mitPreis":4,"deckung":0.0408909791625841,"nenner":"Zuvorkommen Zum Goldenen Ochsen","ziel":null,"uebergabeImText":1}
+{"t":279.2,"was":"wahl-der-woche","plaene":2,"sprung":true,"liste":[]}
+{"t":281.3,"was":"klick","nr":95,"zug":"fuhre:sprung","grund":"ruhige Wochen zusammenfassen","knopf":{"text":"Weiter wie zuletzt · bis zu 6 Wochen","preis":null,"w":191,"h":24},"vor":{"jahr":1973,"woche":21,"kasse":626},"nach":{"jahr":1973,"woche":27,"kasse":626},"dkasse":0,"lage":0}
+{"t":281.6,"was":"sprung","wochen":6,"text":"Weiter wie zuletzt · bis zu 6 Wochen"}
+{"t":282.1,"was":"woche","n":69,"jahr":1973,"woche":27,"kasse":626,"greifbar":45,"mitPreis":4,"deckung":0.04007169376520292,"nenner":"Ablösung Ausschank am Markt","ziel":null,"uebergabeImText":1}
+{"t":282.5,"was":"wahl-der-woche","plaene":2,"sprung":true,"liste":[]}
+{"t":286.2,"was":"klick","nr":96,"zug":"fuhre:sprung","grund":"ruhige Wochen zusammenfassen","knopf":{"text":"Weiter wie zuletzt · bis zu 3 Wochen","preis":null,"w":191,"h":24},"vor":{"jahr":1973,"woche":27,"kasse":626},"nach":{"jahr":1973,"woche":30,"kasse":626},"dkasse":0,"lage":0}
+{"t":286.6,"was":"sprung","wochen":3,"text":"Weiter wie zuletzt · bis zu 3 Wochen"}
+{"t":286.9,"was":"woche","n":70,"jahr":1973,"woche":30,"kasse":626,"greifbar":43,"mitPreis":3,"deckung":0.04007169376520292,"nenner":"Ablösung Ausschank am Markt","ziel":null,"uebergabeImText":1}
+{"t":287.4,"was":"wahl-der-woche","plaene":2,"sprung":false,"liste":[]}
+{"t":291.1,"was":"klick","nr":97,"zug":"fuhre:wie-vorige","grund":"Fuhrplan","knopf":{"text":"Wie vorige Woche","preis":null,"w":112,"h":24},"vor":{"jahr":1973,"woche":30,"kasse":626},"nach":{"jahr":1973,"woche":30,"kasse":626},"dkasse":0,"lage":0}
+{"t":291.2,"was":"abgeschaltet","zug":"fuhre:abschicken","text":"FUHRE ABSCHICKEN"}
+{"t":295.2,"was":"klick","nr":98,"zug":"weiter","grund":"naechste Woche","knopf":{"text":"JAHR SCHLIESSEN","preis":null,"w":275,"h":42},"vor":{"jahr":1973,"woche":30,"kasse":626},"nach":{"jahr":1974,"woche":1,"kasse":50000},"dkasse":49374,"lage":0}
+{"t":295.8,"was":"woche","n":71,"jahr":1974,"woche":1,"kasse":50000,"greifbar":26,"mitPreis":2,"deckung":3.2006145179874537,"nenner":"Ablösung Ausschank am Markt","ziel":null,"uebergabeImText":3}
+{"t":299.8,"was":"nicht-zu-greifen","zug":"fuhre:sommer-zu"}
+{"t":303.5,"was":"klick","nr":99,"zug":"preis:festlege:konzern","grund":"Michaeli: billigstes bezahlbare","knopf":{"text":"Festlegen — Geld herein +34.000 DM","preis":34000,"w":157,"h":61},"vor":{"jahr":1974,"woche":1,"kasse":50000},"nach":{"jahr":1974,"woche":1,"kasse":84000},"dkasse":34000,"lage":0}
+{"t":305.4,"was":"klick","nr":100,"zug":"preis:tafel-zu","grund":"Das Jahr beginnen","knopf":{"text":"Das Jahr beginnen","preis":null,"w":121,"h":56},"vor":{"jahr":1974,"woche":1,"kasse":84000},"nach":{"jahr":1974,"woche":1,"kasse":84000},"dkasse":0,"lage":0}
+{"t":306.2,"was":"wahl-der-woche","plaene":1,"sprung":false,"liste":[]}
+{"t":309.6,"was":"klick","nr":101,"zug":"fuhre:fuellen","grund":"Fuhrplan","knopf":{"text":"Nach Durst füllen","preis":null,"w":109,"h":24},"vor":{"jahr":1974,"woche":1,"kasse":84000},"nach":{"jahr":1974,"woche":1,"kasse":84000},"dkasse":0,"lage":0}
+{"t":309.7,"was":"abgeschaltet","zug":"fuhre:abschicken","text":"FUHRE ABSCHICKEN"}
+{"t":314,"was":"klick","nr":102,"zug":"weiter","grund":"naechste Woche","knopf":{"text":"WEITER","preis":null,"w":147,"h":42},"vor":{"jahr":1974,"woche":1,"kasse":84000},"nach":{"jahr":1974,"woche":2,"kasse":83329},"dkasse":-671,"lage":0}
+{"t":314.5,"was":"woche","n":72,"jahr":1974,"woche":2,"kasse":83329,"greifbar":44,"mitPreis":7,"deckung":5.3340801433875304,"nenner":"Ablösung Ausschank am Markt","ziel":null,"uebergabeImText":6}
+{"t":314.8,"was":"wahl-der-woche","plaene":0,"sprung":false,"liste":[]}
+{"t":315.1,"was":"abgeschaltet","zug":"fuhre:abschicken","text":"FUHRE ABSCHICKEN"}
+{"t":317.6,"was":"klick","nr":103,"zug":"weiter","grund":"naechste Woche","knopf":{"text":"WEITER","preis":null,"w":147,"h":42},"vor":{"jahr":1974,"woche":2,"kasse":83329},"nach":{"jahr":1974,"woche":3,"kasse":82658},"dkasse":-671,"lage":0}
+{"t":319.7,"was":"woche","n":73,"jahr":1974,"woche":3,"kasse":82658,"greifbar":57,"mitPreis":14,"deckung":5.291127896556139,"nenner":"Ablösung Ausschank am Markt","ziel":null,"uebergabeImText":6}
+{"t":321.2,"was":"wahl-der-woche","plaene":0,"sprung":false,"liste":[]}
+{"t":321.4,"was":"abgeschaltet","zug":"fuhre:abschicken","text":"FUHRE ABSCHICKEN"}
+{"t":323.3,"was":"klick","nr":104,"zug":"weiter","grund":"naechste Woche","knopf":{"text":"WEITER","preis":null,"w":147,"h":42},"vor":{"jahr":1974,"woche":3,"kasse":82658},"nach":{"jahr":1974,"woche":4,"kasse":81987},"dkasse":-671,"lage":0}
+{"t":323.5,"was":"woche","n":74,"jahr":1974,"woche":4,"kasse":81987,"greifbar":56,"mitPreis":14,"deckung":5.248175649724748,"nenner":"Ablösung Ausschank am Markt","ziel":null,"uebergabeImText":6}
+{"t":323.6,"was":"wahl-der-woche","plaene":0,"sprung":false,"liste":[]}
+{"t":323.7,"was":"abgeschaltet","zug":"fuhre:abschicken","text":"FUHRE ABSCHICKEN"}
+{"t":332.1,"was":"klick","nr":105,"zug":"weiter","grund":"naechste Woche","knopf":{"text":"WEITER","preis":null,"w":147,"h":42},"vor":{"jahr":1974,"woche":4,"kasse":81987},"nach":{"jahr":1974,"woche":5,"kasse":81316},"dkasse":-671,"lage":0}
+{"t":332.8,"was":"woche","n":75,"jahr":1974,"woche":5,"kasse":81316,"greifbar":54,"mitPreis":14,"deckung":5.205223402893355,"nenner":"Ablösung Ausschank am Markt","ziel":null,"uebergabeImText":0}
+{"t":335.9,"was":"klick","nr":106,"zug":"name:anschlag:bierdeckel","grund":"etwas fuer den Namen","knopf":{"text":"Bierdeckel drucken lassen −1.800 DM","preis":-1800,"w":164,"h":31},"vor":{"jahr":1974,"woche":5,"kasse":81316},"nach":{"jahr":1974,"woche":5,"kasse":79516},"dkasse":-1800,"lage":0}
+{"t":336.3,"was":"wahl-der-woche","plaene":0,"sprung":false,"liste":[]}
+{"t":336.4,"was":"abgeschaltet","zug":"fuhre:abschicken","text":"FUHRE ABSCHICKEN"}
+{"t":339.1,"was":"klick","nr":107,"zug":"weiter","grund":"naechste Woche","knopf":{"text":"WEITER","preis":null,"w":147,"h":42},"vor":{"jahr":1974,"woche":5,"kasse":79516},"nach":{"jahr":1974,"woche":6,"kasse":78845},"dkasse":-671,"lage":0}
+{"t":339.2,"was":"woche","n":76,"jahr":1974,"woche":6,"kasse":78845,"greifbar":55,"mitPreis":13,"deckung":5.047049033414416,"nenner":"Ablösung Ausschank am Markt","ziel":null,"uebergabeImText":0}
+{"t":339.5,"was":"wahl-der-woche","plaene":0,"sprung":false,"liste":[]}
+{"t":339.6,"was":"abgeschaltet","zug":"fuhre:abschicken","text":"FUHRE ABSCHICKEN"}
+{"t":341.7,"was":"klick","nr":108,"zug":"weiter","grund":"naechste Woche","knopf":{"text":"WEITER","preis":null,"w":147,"h":42},"vor":{"jahr":1974,"woche":6,"kasse":78845},"nach":{"jahr":1974,"woche":7,"kasse":78174},"dkasse":-671,"lage":0}
+{"t":342.1,"was":"woche","n":77,"jahr":1974,"woche":7,"kasse":78174,"greifbar":57,"mitPreis":15,"deckung":5.004096786583024,"nenner":"Ablösung Ausschank am Markt","ziel":null,"uebergabeImText":0}
+{"t":342.4,"was":"wahl-der-woche","plaene":0,"sprung":false,"liste":[]}
+{"t":342.6,"was":"abgeschaltet","zug":"fuhre:abschicken","text":"FUHRE ABSCHICKEN"}
+{"t":345.1,"was":"klick","nr":109,"zug":"weiter","grund":"naechste Woche","knopf":{"text":"WEITER","preis":null,"w":147,"h":42},"vor":{"jahr":1974,"woche":7,"kasse":78174},"nach":{"jahr":1974,"woche":8,"kasse":77503},"dkasse":-671,"lage":0}
+{"t":345.3,"was":"woche","n":78,"jahr":1974,"woche":8,"kasse":77503,"greifbar":57,"mitPreis":15,"deckung":4.961144539751633,"nenner":"Ablösung Ausschank am Markt","ziel":null,"uebergabeImText":0}
+{"t":345.6,"was":"wahl-der-woche","plaene":0,"sprung":false,"liste":[]}
+{"t":345.7,"was":"abgeschaltet","zug":"fuhre:abschicken","text":"FUHRE ABSCHICKEN"}
+{"t":347.6,"was":"klick","nr":110,"zug":"weiter","grund":"naechste Woche","knopf":{"text":"WEITER","preis":null,"w":147,"h":42},"vor":{"jahr":1974,"woche":8,"kasse":77503},"nach":{"jahr":1974,"woche":9,"kasse":76832},"dkasse":-671,"lage":0}
+{"t":348.2,"was":"woche","n":79,"jahr":1974,"woche":9,"kasse":76832,"greifbar":57,"mitPreis":15,"deckung":4.91819229292024,"nenner":"Ablösung Ausschank am Markt","ziel":null,"uebergabeImText":0}
+{"t":349.7,"was":"klick","nr":111,"zug":"gegner:zuvorkommen:pfarrhof","grund":"dem Gegner zuvorkommen","knopf":{"text":"wirbt · noch 3 Wo. zuvorkommen 22.113 DM","preis":-22113,"w":135,"h":28},"vor":{"jahr":1974,"woche":9,"kasse":76832},"nach":{"jahr":1974,"woche":9,"kasse":54719},"dkasse":-22113,"lage":0}
+{"t":349.9,"was":"wahl-der-woche","plaene":0,"sprung":false,"liste":[]}
+{"t":350.1,"was":"abgeschaltet","zug":"fuhre:abschicken","text":"FUHRE ABSCHICKEN"}
+{"t":351.4,"was":"klick","nr":112,"zug":"weiter","grund":"naechste Woche","knopf":{"text":"WEITER","preis":null,"w":147,"h":42},"vor":{"jahr":1974,"woche":9,"kasse":54719},"nach":{"jahr":1974,"woche":10,"kasse":54048},"dkasse":-671,"lage":0}
+{"t":351.6,"was":"woche","n":80,"jahr":1974,"woche":10,"kasse":54048,"greifbar":56,"mitPreis":14,"deckung":2.8578680203045685,"nenner":"Ablösung Ausschank am Markt","ziel":null,"uebergabeImText":0}
+{"t":351.9,"was":"wahl-der-woche","plaene":0,"sprung":false,"liste":[]}
+{"t":352,"was":"abgeschaltet","zug":"fuhre:abschicken","text":"FUHRE ABSCHICKEN"}
+{"t":353.2,"was":"klick","nr":113,"zug":"weiter","grund":"naechste Woche","knopf":{"text":"WEITER","preis":null,"w":147,"h":42},"vor":{"jahr":1974,"woche":10,"kasse":54048},"nach":{"jahr":1974,"woche":11,"kasse":53377},"dkasse":-671,"lage":0}
+{"t":353.3,"was":"woche","n":81,"jahr":1974,"woche":11,"kasse":53377,"greifbar":55,"mitPreis":14,"deckung":2.8223879018612523,"nenner":"Ablösung Ausschank am Markt","ziel":null,"uebergabeImText":0}
+{"t":353.4,"was":"wahl-der-woche","plaene":0,"sprung":false,"liste":[]}
+{"t":353.5,"was":"abgeschaltet","zug":"fuhre:abschicken","text":"FUHRE ABSCHICKEN"}
+{"t":354.7,"was":"klick","nr":114,"zug":"weiter","grund":"naechste Woche","knopf":{"text":"WEITER","preis":null,"w":147,"h":42},"vor":{"jahr":1974,"woche":11,"kasse":53377},"nach":{"jahr":1974,"woche":12,"kasse":52706},"dkasse":-671,"lage":0}
+{"t":354.8,"was":"woche","n":82,"jahr":1974,"woche":12,"kasse":52706,"greifbar":54,"mitPreis":13,"deckung":2.7869077834179357,"nenner":"Ablösung Ausschank am Markt","ziel":null,"uebergabeImText":0}
+{"t":355.1,"was":"wahl-der-woche","plaene":0,"sprung":false,"liste":[]}
+{"t":355.2,"was":"abgeschaltet","zug":"fuhre:abschicken","text":"FUHRE ABSCHICKEN"}
+{"t":356.6,"was":"klick","nr":115,"zug":"weiter","grund":"naechste Woche","knopf":{"text":"WEITER","preis":null,"w":147,"h":42},"vor":{"jahr":1974,"woche":12,"kasse":52706},"nach":{"jahr":1974,"woche":13,"kasse":52035},"dkasse":-671,"lage":0}
+{"t":356.9,"was":"woche","n":83,"jahr":1974,"woche":13,"kasse":52035,"greifbar":53,"mitPreis":13,"deckung":2.7514276649746194,"nenner":"Ablösung Ausschank am Markt","ziel":null,"uebergabeImText":0}
+{"t":357.1,"was":"wahl-der-woche","plaene":0,"sprung":false,"liste":[]}
+{"t":357.1,"was":"abgeschaltet","zug":"fuhre:abschicken","text":"FUHRE ABSCHICKEN"}
+{"t":358.6,"was":"klick","nr":116,"zug":"weiter","grund":"naechste Woche","knopf":{"text":"WEITER","preis":null,"w":147,"h":42},"vor":{"jahr":1974,"woche":13,"kasse":52035},"nach":{"jahr":1974,"woche":14,"kasse":51364},"dkasse":-671,"lage":0}
+{"t":358.7,"was":"woche","n":84,"jahr":1974,"woche":14,"kasse":51364,"greifbar":52,"mitPreis":13,"deckung":2.5569494225408205,"nenner":"Zuvorkommen Schenke am Tor","ziel":null,"uebergabeImText":0}
+{"t":358.9,"was":"wahl-der-woche","plaene":0,"sprung":false,"liste":[]}
+{"t":359,"was":"abgeschaltet","zug":"fuhre:abschicken","text":"FUHRE ABSCHICKEN"}
+{"t":360.9,"was":"klick","nr":117,"zug":"weiter","grund":"naechste Woche","knopf":{"text":"WEITER","preis":null,"w":147,"h":42},"vor":{"jahr":1974,"woche":14,"kasse":51364},"nach":{"jahr":1974,"woche":15,"kasse":50693},"dkasse":-671,"lage":0}
+{"t":361,"was":"woche","n":85,"jahr":1974,"woche":15,"kasse":50693,"greifbar":55,"mitPreis":15,"deckung":5.150680755943914,"nenner":"Zuvorkommen Mühlschenke","ziel":null,"uebergabeImText":0}
+{"t":362.5,"was":"klick","nr":118,"zug":"name:anschlag:kronkorken","grund":"etwas fuer den Namen","knopf":{"text":"Kronkorken bedrucken −5.000 DM","preis":-5000,"w":164,"h":31},"vor":{"jahr":1974,"woche":15,"kasse":50693},"nach":{"jahr":1974,"woche":15,"kasse":45693},"dkasse":-5000,"lage":0}
+{"t":362.9,"was":"wahl-der-woche","plaene":0,"sprung":false,"liste":[]}
+{"t":363,"was":"abgeschaltet","zug":"fuhre:abschicken","text":"FUHRE ABSCHICKEN"}
+{"t":364.4,"was":"klick","nr":119,"zug":"weiter","grund":"naechste Woche","knopf":{"text":"WEITER","preis":null,"w":147,"h":42},"vor":{"jahr":1974,"woche":15,"kasse":45693},"nach":{"jahr":1974,"woche":16,"kasse":45022},"dkasse":-671,"lage":0}
+{"t":364.5,"was":"woche","n":86,"jahr":1974,"woche":16,"kasse":45022,"greifbar":59,"mitPreis":17,"deckung":4.574476732371469,"nenner":"Zuvorkommen Mühlschenke","ziel":null,"uebergabeImText":0}
+{"t":364.6,"was":"wahl-der-woche","plaene":0,"sprung":false,"liste":[]}
+{"t":364.7,"was":"abgeschaltet","zug":"fuhre:abschicken","text":"FUHRE ABSCHICKEN"}
+{"t":367.4,"was":"klick","nr":120,"zug":"weiter","grund":"naechste Woche","knopf":{"text":"WEITER","preis":null,"w":147,"h":42},"vor":{"jahr":1974,"woche":16,"kasse":45022},"nach":{"jahr":1974,"woche":17,"kasse":44351},"dkasse":-671,"lage":0}
+{"t":367.5,"was":"woche","n":87,"jahr":1974,"woche":17,"kasse":44351,"greifbar":48,"mitPreis":13,"deckung":4.506299532615322,"nenner":"Zuvorkommen Mühlschenke","ziel":null,"uebergabeImText":0}
+{"t":368.2,"was":"wahl-der-woche","plaene":5,"sprung":false,"liste":[{"zug":"fuhre:plan:probe","preis":-134,"text":"Fahren: ohne Rechnung · 45 hl −134 DM"},{"zug":"fuhre:plan:mager","preis":1507,"text":"Fahren: die mageren Häuser · 45 hl +1.507 DM"},{"zug":"fuhre:plan:umkaempft","preis":1427,"text":"Fahren: wo der Adler wirbt · 45 hl +1.427 DM"},{"zug":"fuhre:plan:nah","preis":1308,"text":"Fahren: kurze Wege · 45 hl +1.308 DM"}]}
+{"t":370,"was":"klick","nr":121,"zug":"fuhre:plan:mager","grund":"Fuhrplan","knopf":{"text":"Fahren: die mageren Häuser · 45 hl +1.507 DM","preis":1507,"w":266,"h":24},"vor":{"jahr":1974,"woche":17,"kasse":44351},"nach":{"jahr":1974,"woche":18,"kasse":43763},"dkasse":-588,"lage":0}
+{"t":370.6,"was":"abgeschaltet","zug":"fuhre:abschicken","text":"FUHRE ABSCHICKEN"}
+{"t":371.1,"was":"woche","n":88,"jahr":1974,"woche":18,"kasse":43763,"greifbar":49,"mitPreis":13,"deckung":4.446555578134525,"nenner":"Zuvorkommen Mühlschenke","ziel":null,"uebergabeImText":0}
+{"t":371.4,"was":"wahl-der-woche","plaene":6,"sprung":false,"liste":[{"zug":"fuhre:plan:probe","preis":-206,"text":"Fahren: ohne Rechnung · 30 hl −206 DM"},{"zug":"fuhre:plan:mager","preis":1635,"text":"Fahren: die mageren Häuser · 36 hl +1.635 DM"},{"zug":"fuhre:plan:umkaempft","preis":1665,"text":"Fahren: wo der Adler wirbt · 36 hl +1.665 DM"},{"zug":"fuhre:plan:durst","preis":1838,"text":"Fahren: nach Durst · 36 hl +1.838 DM"}]}
+{"t":372.6,"was":"klick","nr":122,"zug":"fuhre:plan:durst","grund":"Fuhrplan","knopf":{"text":"Fahren: nach Durst · 36 hl +1.838 DM","preis":1838,"w":222,"h":24},"vor":{"jahr":1974,"woche":18,"kasse":43763},"nach":{"jahr":1974,"woche":19,"kasse":44195},"dkasse":432,"lage":0}
+{"t":372.6,"was":"abgeschaltet","zug":"fuhre:abschicken","text":"FUHRE ABSCHICKEN"}
+{"t":372.7,"was":"woche","n":89,"jahr":1974,"woche":19,"kasse":44195,"greifbar":47,"mitPreis":13,"deckung":4.490449095712254,"nenner":"Zuvorkommen Mühlschenke","ziel":null,"uebergabeImText":0}
+{"t":373.1,"was":"wahl-der-woche","plaene":6,"sprung":false,"liste":[{"zug":"fuhre:plan:probe","preis":-134,"text":"Fahren: ohne Rechnung · 45 hl −134 DM"},{"zug":"fuhre:plan:mager","preis":1414,"text":"Fahren: die mageren Häuser · 45 hl +1.414 DM"},{"zug":"fuhre:plan:umkaempft","preis":1427,"text":"Fahren: wo der Adler wirbt · 45 hl +1.427 DM"},{"zug":"fuhre:plan:durst","preis":1507,"text":"Fahren: nach Durst · 45 hl +1.507 DM"}]}
+{"t":374.5,"was":"klick","nr":123,"zug":"fuhre:plan:durst","grund":"Fuhrplan","knopf":{"text":"Fahren: nach Durst · 45 hl +1.507 DM","preis":1507,"w":222,"h":24},"vor":{"jahr":1974,"woche":19,"kasse":44195},"nach":{"jahr":1974,"woche":20,"kasse":43604},"dkasse":-591,"lage":0}
+{"t":374.6,"was":"abgeschaltet","zug":"fuhre:abschicken","text":"FUHRE ABSCHICKEN"}
+{"t":375.5,"was":"woche","n":90,"jahr":1974,"woche":20,"kasse":43604,"greifbar":47,"mitPreis":13,"deckung":4.4304003251371675,"nenner":"Zuvorkommen Mühlschenke","ziel":null,"uebergabeImText":0}
+{"t":376.2,"was":"wahl-der-woche","plaene":6,"sprung":false,"liste":[{"zug":"fuhre:plan:probe","preis":-134,"text":"Fahren: ohne Rechnung · 45 hl −134 DM"},{"zug":"fuhre:plan:mager","preis":1414,"text":"Fahren: die mageren Häuser · 45 hl +1.414 DM"},{"zug":"fuhre:plan:umkaempft","preis":1427,"text":"Fahren: wo der Adler wirbt · 45 hl +1.427 DM"},{"zug":"fuhre:plan:durst","preis":1507,"text":"Fahren: nach Durst · 45 hl +1.507 DM"}]}
+{"t":378.3,"was":"klick","nr":124,"zug":"fuhre:plan:durst","grund":"Fuhrplan","knopf":{"text":"Fahren: nach Durst · 45 hl +1.507 DM","preis":1507,"w":222,"h":24},"vor":{"jahr":1974,"woche":20,"kasse":43604},"nach":{"jahr":1974,"woche":21,"kasse":43407},"dkasse":-197,"lage":0}
+{"t":378.8,"was":"abgeschaltet","zug":"fuhre:abschicken","text":"FUHRE ABSCHICKEN"}
+{"t":379.9,"was":"woche","n":91,"jahr":1974,"woche":21,"kasse":43407,"greifbar":47,"mitPreis":13,"deckung":4.410384068278805,"nenner":"Zuvorkommen Mühlschenke","ziel":null,"uebergabeImText":0}
+{"t":380.6,"was":"wahl-der-woche","plaene":6,"sprung":false,"liste":[{"zug":"fuhre:plan:probe","preis":-134,"text":"Fahren: ohne Rechnung · 45 hl −134 DM"},{"zug":"fuhre:plan:mager","preis":1414,"text":"Fahren: die mageren Häuser · 45 hl +1.414 DM"},{"zug":"fuhre:plan:umkaempft","preis":1427,"text":"Fahren: wo der Adler wirbt · 45 hl +1.427 DM"},{"zug":"fuhre:plan:durst","preis":1507,"text":"Fahren: nach Durst · 45 hl +1.507 DM"}]}
+{"t":382.2,"was":"klick","nr":125,"zug":"fuhre:plan:durst","grund":"Fuhrplan","knopf":{"text":"Fahren: nach Durst · 45 hl +1.507 DM","preis":1507,"w":222,"h":24},"vor":{"jahr":1974,"woche":21,"kasse":43407},"nach":{"jahr":1974,"woche":22,"kasse":43303},"dkasse":-104,"lage":0}
+{"t":382.5,"was":"abgeschaltet","zug":"fuhre:abschicken","text":"FUHRE ABSCHICKEN"}
+{"t":382.7,"was":"woche","n":92,"jahr":1974,"woche":22,"kasse":43303,"greifbar":48,"mitPreis":13,"deckung":2.159966081404629,"nenner":"Zuvorkommen Brückenwirt","ziel":null,"uebergabeImText":0}
+{"t":383.4,"was":"wahl-der-woche","plaene":6,"sprung":false,"liste":[{"zug":"fuhre:plan:probe","preis":-134,"text":"Fahren: ohne Rechnung · 45 hl −134 DM"},{"zug":"fuhre:plan:mager","preis":1414,"text":"Fahren: die mageren Häuser · 45 hl +1.414 DM"},{"zug":"fuhre:plan:umkaempft","preis":1507,"text":"Fahren: wo der Adler wirbt · 45 hl +1.507 DM"},{"zug":"fuhre:plan:nah","preis":1308,"text":"Fahren: kurze Wege · 45 hl +1.308 DM"}]}
+{"t":384.8,"was":"klick","nr":126,"zug":"fuhre:plan:umkaempft","grund":"Fuhrplan","knopf":{"text":"Fahren: wo der Adler wirbt · 45 hl +1.507 DM","preis":1507,"w":262,"h":24},"vor":{"jahr":1974,"woche":22,"kasse":43303},"nach":{"jahr":1974,"woche":23,"kasse":43199},"dkasse":-104,"lage":0}
+{"t":385.4,"was":"abgeschaltet","zug":"fuhre:abschicken","text":"FUHRE ABSCHICKEN"}
+{"t":386.3,"was":"woche","n":93,"jahr":1974,"woche":23,"kasse":43199,"greifbar":48,"mitPreis":13,"deckung":1.9143401577594612,"nenner":"Ablösung Ausschank am Markt","ziel":null,"uebergabeImText":0}
