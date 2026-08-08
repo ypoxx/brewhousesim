@@ -1,5 +1,5 @@
 {
- "stand": "2026-08-08T09:34:39+00:00",
+ "stand": "2026-08-08T09:40:12+00:00",
  "phase": "Welle 13, Stand 09:25 UTC: DER RAHMEN ist gebaut — Spielstand in localStorage je Epoche und Saat, das Neuladen stimmt nach seiner eigenen Messung in 15 von 15 Feldern ueber alle vier Epochen, und ?neu=1 gibt dreimal dieselbe Pruefsumme im selben Browserkontext, damit der Spielstand die Wiederholbarkeit nicht anfasst. Nebenbei hat er gefunden, dass B.uhr.springe() kaputt war: es setzte die Woche auf 30 und schloss das Jahr, die uebersprungenen Wochen fanden gar nicht statt. DIE JAHRESTAFEL, DIE WOCHE und DER GEGENZUG schreiben noch; zusammen stehen bisher rund 3100 geaenderte Zeilen im Spiel. Das Abnahmetor steht in allen vier Epochen offen, lage 0, keine Konsolenfehler. Die Aufsicht hat unterdessen mit eigenem Geraet am eingefrorenen Vorzustand nachgemessen und zwei Auflagen der Spielprobe widerlegt — die Michaelitafel liegt an drei von drei Jahreswechseln von selbst auf; was wirklich fehlt, ist der Spielanfang. Die Wiederholbarkeitsprobe der ganzen Welle ist bewusst verschoben, bis die Maschine still ist: eine solche Zahl unter der Last fremder Browser ist genau der Fehler, der Welle 12 vier Tage gekostet hat.",
  "latte": "BILD: Playwright-Aufnahme 2752x1536 gegen zielbild/0X-JAHR.jpg, blind, vier Epochen derselbe Ort. SPIEL: Kritiker zählt am Bildschirm Preisschilder nebeneinander, unwiderrufliche Festlegungen, Züge des Gegners ohne ihn — plus Barschaft gegen Preis des nächsten sinnvollen Zuges. Ziel dieser Welle, hart: |rho| unter 0,7 in allen vier Epochen und höchstens ein Jahr von sechs unter 1x. TON: 30 Sekunden blind, Epoche und Vorgang benannt. NEU als vierte Prüfung: erreichbar muss jeder aktive Zug sein — werkbank/schuss/eichung/erreichbar.mjs. Sperrliste design/PRUEFUNG.md disqualifiziert.",
  "zahlen": {
@@ -143,10 +143,6 @@
   }
  ],
  "chronik": [
-  {
-   "zeit": "2026-08-01T21:11:09+00:00",
-   "text": "DER SUD · Runde 1 · läuft — Bild und Ton des Stuecks fehlen noch (bild/sud/**, ton/sud/**); Messung laeuft."
-  },
   {
    "zeit": "2026-08-01T21:11:10+00:00",
    "text": "AUFSICHT (21): DER VORWURF DER FUHRE TRIFFT ZU. DER PREIS nimmt 22-44 % (E1) und 22-24 % (E3) statt der erlaubten 5 - das Vier- bis Neunfache, und er sprengt den Gesamtdeckel von 18 allein. Wichtiger als die Zahl ist die Formel: pflichtHoehe haengt an der KASSE, nicht nur am Umsatz. Eine Abgabe, die an der Barschaft haengt, ist keine Abgabe, sondern ein Schwamm - sie frisst genau das Geld, das die Eichung an den Michaelitag traegt, und erklaert rueckwirkend, warum die Kasse im Jahr auf das Vierfache steigt und Michaeli sie vollstaendig nimmt. AUFLAGE AN DER PREIS: (1) keine Abgabe haengt an der Barschaft - Bemessung ist Umsatz oder Besitz, nie der Kassenstand; (2) zurueck auf 5 % im Jahresmittel je Epoche. AUFLAGE AN ALLE VIER: wer der Kasse etwas entnimmt, schreibt seinen Stuecknamen an den Posten - DIE FUHRE konnte in E2 und E4 nicht zuordnen, weil die Namen ihr nicht gehoeren, und ein Deckel, den nur sein Uebertreter nachrechnen kann, ist keiner. DIE EICHUNG wartet damit nicht auf DIE FUHRE (E1 5/5, E2 4/5, E3 5/5, E4 4/5), sondern auf DEN PREIS."
@@ -942,6 +938,10 @@
   {
    "zeit": "2026-08-08T09:34:39+00:00",
    "text": "DIE WOCHE: Die Woche war ohne Reiterklick überhaupt nicht spielbar — gemessen 100 von 106 Klicks auf WEITER, weil alle vier Bretter der FUHRE beim Laden als Reiter liegen. Sie liegt jetzt als Karte im Bild (3,21 % der Bühne, unter der Grenze der Platzordnung, ohne Papier, nur Chips im Lichthof) und trägt zwei bis vier Fuhrpläne nebeneinander, jeder mit Preisschild, jeder schließt die anderen aus — statt in 0 von 100 Wochen jetzt in 56 bis 92 von 100. Der häufigste Knopf fiel von 71 auf 32,5 / 36,8 / 26,8 / 17,0 Prozent; die drei häufigsten bestehen in 1884 und 1970, in 1350 und 1600 nicht, und der Grund ist gemessen: dort stehen in 3 von 100 Wochen drei verschiedene Ladungen zur Wahl, weil zu wenig Bier im Keller liegt. Die Übergabe vor dem Rat, die der Kritiker in 15 Wochen null Mal bemerkt hat, steht jetzt an vier Orten und wurde in einer Partie 1350 bis 1358 ohne einen einzigen Reiterklick in 13 von 13 Wochen gesehen. Der Zielsatz steht von Woche 1 an unten am Rand, neben und nicht anstelle der besten Zeile des Spiels. 1600 misst unverändert rho +0,538."
+  },
+  {
+   "zeit": "2026-08-08T09:40:12+00:00",
+   "text": "DIE WOCHE steht. Ihr wichtigster Befund ist aelter als ihr Bau: die Woche war ohne Reiterklick gar nicht spielbar — alle vier Bretter der FUHRE liegen beim Laden zugeklappt, 94 Prozent der Klicks fielen auf WEITER, fuhre:abschicken war 100 mal abgeschaltet. Die 71 Prozent des Kritikers waren eine Untergrenze. Jetzt: haeufigster Knopf 32,5 / 36,8 / 26,8 / 17,0 Prozent, Wochen mit zwei einander ausschliessenden Preisoptionen von 0 auf 70 / 92 / 81 / 56 von 100."
   }
  ]
 }
