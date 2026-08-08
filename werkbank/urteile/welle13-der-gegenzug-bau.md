@@ -316,13 +316,32 @@ nicht. `diff -rq` zwischen den Bäumen nennt genau zwei Dateien.
 
 | | 1350 | 1600 | 1884 | 1970 |
 |---|---|---|---|---|
-| Wochen ohne bezahlbaren Gegenzug, **eng** — vorher | **55** | **60** | 0 | *(s. u.)* |
-| Wochen ohne bezahlbaren Gegenzug, **eng** — nachher | **9** | **0** | **0** | *(s. u.)* |
-| Wochen ohne bezahlbaren Gegenzug, **weit** — vorher | 0 | 3 | 0 | *(s. u.)* |
-| Wochen ohne bezahlbaren Gegenzug, **weit** — nachher | **0** | **0** | **0** | *(s. u.)* |
+| gespielte Wochen | 100 | 100 | 100 | 99 *(Spiel endete)* |
+| Wochen ohne bezahlbaren Gegenzug, **eng** — vorher | **55** | **60** | 0 | **19** |
+| Wochen ohne bezahlbaren Gegenzug, **eng** — **nachher** | **9** | **0** | **0** | **1** |
+| Wochen ohne bezahlbaren Gegenzug, **weit** — vorher | 0 | 3 | 0 | 1 |
+| Wochen ohne bezahlbaren Gegenzug, **weit** — **nachher** | **0** | **0** | **0** | **1** |
 | Seitenfehler · `BRAUHAUS.lage` | 0 · 0 | 0 · 0 | 0 · 0 | 0 · 0 |
 
-**Die Latte ist ≤ 10 von 100 in allen vier Epochen.**
+**Die Latte ist ≤ 10 von 100. Sie hält in allen vier Epochen, unter beiden
+Lesarten:  9 · 0 · 0 · 1  (eng)  und  0 · 0 · 0 · 1  (weit).**
+
+Die Ausgangszahl der Aufsicht für 1350 lautete 68; mein eigener Lauf am
+eingefrorenen Welle-12-Stand kommt auf 55. Der Unterschied ist die Partie, nicht
+die Rechnung — dieselbe Saat, aber ein anderer Baum (`1bb28ce` gegen `7e21973`)
+und ein anderer Augenblick. **Beide Zahlen liegen weit über 10, und beide
+gehören zum Vorzustand.** Gemessen wird das Ergebnis am Paar aus derselben
+Zeile: 55 → 9 und 19 → 1.
+
+Ein Wort zur Streuung, damit sie niemand für ein Ergebnis hält: ein früherer
+Lauf desselben Paares (unter voller Maschinenlast, drei Browser gleichzeitig)
+gab für 1350 nachher **14** statt 9. Die Abweichung liegt in fünf Wochen des
+Jahres 1350, in denen der Klageknopf bei der einen Messung getroffen wurde und
+bei der anderen nicht — `probe13.mjs` wartet nach jedem Klick eine feste
+Zeitspanne, und unter Last reicht sie nicht immer. Das ist genau der Befund,
+den `rueckkopplung-r3/linie.mjs` in seinem Kopf beschreibt. Die hier genannten
+Zahlen stammen aus dem Lauf, in dem **nur diese Messung** auf der Maschine
+lief.
 
 ### 4.3 Was in 1350 übrig bleibt, und woran es liegt
 
@@ -362,6 +381,20 @@ bezahlbar — sie zählen nur unter der **weiten** Lesart: *„Fass an den Wirt 
 > deckt. Sobald DIE JAHRESTAFEL R6/R7/R10 eingelöst hat, ist der Klageknopf in
 > diesen Wochen frei, und dann trägt er sie. **Die 9 sind also eine
 > Obergrenze, gemessen gegen den schlechtestmöglichen Nachbarn.**
+
+### 4.3b Was in 1970 übrig bleibt: eine einzige Woche, und sie ist kein Preis
+
+| | vorher | nachher |
+|---|---|---|
+| Wochen ohne bezahlbaren Gegenzug (eng) | 19 | **1** |
+
+Die eine Woche ist **1973/9**. Die Kasse steht dort bei **61.776 DM** — es ist
+also nichts zu teuer. Es steht in dieser Woche überhaupt **kein** Zeichen des
+Gegners greifbar im Bild (`gegenGreifbar 0`): der Konzern hält in dieser Woche
+nichts, um das gestritten würde, und was er hält, ist gerade nicht ablösbar.
+Eine Woche ohne Streit ist keine Woche ohne Gegenzug — sie ist eine Woche, in
+der es nichts zu kontern gibt. Ich habe sie stehen lassen, statt einen Knopf zu
+erfinden, der auf nichts zeigt.
 
 ### 4.4 Die zweite Messlatte — ρ
 

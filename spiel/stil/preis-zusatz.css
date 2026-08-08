@@ -210,7 +210,7 @@
 }
 .pr-tafel .pr-mitte > .pr-reihe-fest {
   flex: 0 1 38%;
-  min-height: calc(var(--s) * 190);
+  min-height: calc(var(--s) * 270);
 }
 .pr-tafel .pr-mitte > .pr-knapp {
   flex: 0 1 auto;
