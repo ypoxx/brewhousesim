@@ -395,6 +395,25 @@ Die neun Restwochen der Epoche 1 sind dort **verschwunden** — genau wie in
 §4.3 vorhergesagt: sobald die Michaelitafel nicht mehr dauerhaft über der Karte
 liegt, ist der Klageknopf greifbar, und er kostet kein Geld.
 
+### 4.2c Und mit der KOMPETENTEN Hand, die kauft und festlegt
+
+Die beiden Messungen oben spielen wie §4b des Urteils: füllen, abschicken,
+WEITER. Eine Hand, die hortet, hat mehr in der Lade als eine, die kauft. Damit
+niemand sagen kann, die Zahl gelte nur für den Geizhals, misst
+`gegenzug-w13/gegenzug-linie.mjs` dasselbe mit der **kompetent spielenden
+Linie** — Zeile für Zeile die Hand aus `rueckkopplung-r3/linie.mjs`, also die,
+aus der die ρ-Zahlen stammen (Michaelitafel, Festlegung, Angebot, Ziel, Fässer
+auf den Karren, Rohstoff, Engpass, Fuhre). Laufender Stand, 100 Wochen:
+
+| | 1350 | 1970 |
+|---|---|---|
+| Wochen ohne bezahlbaren Gegenzug | **1** | **3** |
+| Wochen, in denen gar nichts greifbar war | 1 | 2 |
+| bezahlbare Gegenzüge je Woche, Median | **8** | **5** |
+| Seitenfehler | 0 | 0 |
+
+Aus „im Median 0 bezahlbare Gegenzüge" ist „im Median 8" geworden.
+
 ### 4.3 Was in 1350 übrig bleibt, und woran es liegt
 
 Die neun Wochen sind **1351/22 bis 1351/30**, und sie sind ein Block. Die
