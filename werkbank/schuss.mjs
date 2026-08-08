@@ -34,7 +34,14 @@ seite.on('pageerror', (e) => fehler.push('pageerror: ' + e));
 seite.on('console', (m) => { if (m.type() === 'error') fehler.push('console: ' + m.text()); });
 seite.on('requestfailed', (r) => fehler.push('request: ' + r.url() + ' — ' + r.failure()?.errorText));
 
-await seite.goto(url, { waitUntil: 'networkidle', timeout: 60000 });
+/* `neu=1` seit dem 8. August (T0.5): ein Schuss zeigt, was ein frischer
+   Aufruf zeigt, nicht was ein liegengebliebener Spielstand daraus macht.
+   NUR fuer Spieladressen und nur, wenn der Rufer nichts anderes verlangt —
+   wer ausdruecklich `neu=` mitgibt, behaelt seine Wahl. */
+const adr = (/\/spiel\//.test(url) && !/[?&]neu=/.test(url))
+  ? url + (url.includes('?') ? '&' : '?') + 'neu=1'
+  : url;
+await seite.goto(adr, { waitUntil: 'networkidle', timeout: 60000 });
 await seite.waitForTimeout(+wartems);
 await seite.screenshot({ path: ziel });
 await browser.close();

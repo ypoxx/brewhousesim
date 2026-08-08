@@ -31,7 +31,8 @@ const fehler = [];
 seite.on('pageerror', e => fehler.push('pageerror: ' + String(e).slice(0, 250)));
 seite.on('console', m => { if (m.type() === 'error') fehler.push('console: ' + m.text().slice(0, 250)); });
 
-const URL = `http://127.0.0.1:${HAFEN}/spiel/?epoche=${ep}&saat=${SAAT}`;
+/* `&neu=1` seit dem 8. August (T0.5). */
+const URL = `http://127.0.0.1:${HAFEN}/spiel/?epoche=${ep}&saat=${SAAT}&neu=1`;
 await seite.goto(URL, { waitUntil: 'networkidle' });
 await seite.waitForTimeout(1200);
 schreib({ was: 'laden', url: URL, fenster: BR + 'x' + HO });

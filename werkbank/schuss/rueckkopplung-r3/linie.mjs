@@ -63,7 +63,12 @@ const fehler = [];
 seite.on('pageerror', e => fehler.push('pageerror: ' + String(e).slice(0, 200)));
 seite.on('console', m => { if (m.type() === 'error') fehler.push('console: ' + m.text().slice(0, 200)); });
 
-await seite.goto(`http://127.0.0.1:${HAFEN}/spiel/?epoche=${ep}&saat=${SAAT}`, { waitUntil: 'networkidle' });
+/* `&neu=1` seit dem 8. August (T0.5, offener RAHMEN-Punkt 2): eine Messreihe
+   startet frisch und laesst nichts liegen. Bis dahin hing die Sicherung allein
+   daran, dass Playwright je Lauf einen leeren localStorage mitbringt — ein
+   gluecklicher Umstand, kein Entwurf. Der Beweis, dass es die Partie nicht
+   bewegt, steht in werkbank/KURZLAUF-EICHUNG.md. */
+await seite.goto(`http://127.0.0.1:${HAFEN}/spiel/?epoche=${ep}&saat=${SAAT}&neu=1`, { waitUntil: 'networkidle' });
 await seite.waitForTimeout(900);
 
 /* ---------------------------------------------------------------- Handgriffe */

@@ -12,7 +12,8 @@ const WURZ = '/home/user/brewhousesim/werkbank/schuss/spiel-w12';
 
 const browser = await chromium.launch();
 const seite = await browser.newPage({ viewport: { width: 1600, height: 900 }, deviceScaleFactor: 1 });
-await seite.goto(`http://127.0.0.1:${HAFEN}/spiel/?epoche=${ep}&saat=1350`, { waitUntil: 'networkidle' });
+/* `&neu=1` seit dem 8. August (T0.5). */
+await seite.goto(`http://127.0.0.1:${HAFEN}/spiel/?epoche=${ep}&saat=1350&neu=1`, { waitUntil: 'networkidle' });
 await seite.waitForTimeout(1200);
 
 const lese = () => seite.evaluate(() => {
