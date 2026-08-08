@@ -16,6 +16,18 @@ Klageknopf fehlt).
 
 ---
 
+## Der Stand in einer Tabelle
+
+| Auflage | verlangt | gemessen |
+|---|---|---|
+| **R15** Wochen ohne bezahlbaren Gegenzug je 100, enge Lesart | ≤ 10, alle vier Epochen | **9 · 0 · 0 · 1** am eingefrorenen Welle-12-Stand · **0 · 0 · 1 · 4** am laufenden Stand |
+| **R16** Aufschrift des Reiters, Woche 45 = Woche 15 | ja | **ja**, 50 von 50 Wochen tragen die Zahl (vorher 30 von 50) |
+| §4b des Urteils | unangetastet | **kein** Eingriff ins Verhalten, kein `meldeZug` |
+| ρ, 400 Wochen je Epoche | darf sich nicht bewegen | Aufzeichnung **byteweise gleich** in 1350 und 1600 *(1884/1970 s. §4.4)* |
+| Spielstand, `gegnerzuege` nach dem Neuladen | ziffernweise gleich | **gleich**, alle vier Epochen, `abweichung []` |
+| `BRAUHAUS.lage` · Seitenfehler | 0 · 0 | **0 · 0**, vier Epochen, zwei Fenster |
+| `haushalt.tafeln()` · `ueberRand()` | leer | **leer** |
+
 ## 0 · Was ich NICHT angefasst habe
 
 §4b des Urteils ist bestanden, und zwar ausdrücklich: *„Von allem, was ich in
@@ -141,6 +153,13 @@ auf fünf Adressen und zieht 25-mal MEHR.** Was sich ändert: seine Kasse
 halbiert sich, das Haus holt eine Adresse zurück statt keiner — und die eigene
 Lade ist danach in 69 von 100 Wochen leer. Der Zug hat einen Preis, und man
 merkt ihn.
+
+*(Die letzte Zeile ist kein Widerspruch zur Abnahme, sondern ihre Kehrseite:
+gemessen wird die MÖGLICHKEIT eines Gegenzugs, mit einer Hand, die keinen
+drückt — so misst auch das Gerät der Aufsicht. Eine Hand, die jede Woche alles
+ausgibt, was sie hat, ist danach arm; das ist keine Eigenschaft des Gegenzugs,
+sondern der Ausgabe. Wer ihn dreimal im Jahr statt einunddreißigmal drückt,
+bleibt bei beidem.)*
 
 ### 1.3 Der zweite Fund: ein Knopf, den die Maus nicht trifft
 
