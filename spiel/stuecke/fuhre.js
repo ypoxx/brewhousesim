@@ -1613,7 +1613,7 @@
      zusammengefasst. Wer eine einzelne Woche genau wie die vorige fahren
      will, hat dafuer unveraendert `fuhre:wie-vorige` auf dem Brett DER
      WAGEN. */
-  var PLAN_REIHE = ['probe', 'mager', 'umkaempft', 'durst', 'rechnung', 'nah', 'vorige'];
+  var PLAN_REIHE = ['probe', 'mager', 'umkaempft', 'durst', 'rechnung', 'nah'];
   var PLAN_HOECHSTENS = 4;
 
   function planListe() {

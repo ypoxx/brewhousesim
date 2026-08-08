@@ -40,10 +40,10 @@ Sammellauf `sh werkbank/schuss/rahmen-w13/alles.sh`.
 
 | Datei | was |
 |---|---|
-| `kern/stand.js` | **neu.** Der Spielstand. 380 Zeilen, davon die Hälfte Begründung. |
+| `kern/stand.js` | **neu.** Der Spielstand. 454 Zeilen, davon die Hälfte Begründung. |
 | `kern/uhr.js` | Würfel-Zählerstand lesbar/setzbar · `eineWoche()` herausgelöst · `springe()` neu gebaut · `springeWochen()` neu · Sicherungspunkte in `naechsteWoche()`, `springe*()`, `beende()` |
 | `kern/welt.js` | `meldeZiel(satz, naehe)` · `bestesZiel()` · `zielMeldungen` |
-| `kern/kopf.js` | Zielzeile am unteren Rand · Standzeile *„fortgesetzt · 1350/13"* · Knopf *„Neue Partie"* mit Rückfrage · Escape und fremder Reiter schließen die Rückfrage |
+| `kern/kopf.js` | Zielzeile am unteren Rand · Standzeile *„fortgesetzt · 1350/12"* · Knopf *„Neue Partie"* mit Rückfrage · Escape und fremder Reiter schließen die Rückfrage |
 | `kern/buehne.js` | Zielmeldungen werden vor jedem Zeichnen vergessen · Zug 2 des Spielstandes zwischen `aufbau()` und erstem Bild |
 | `kern/basis.js` | `?neu=1` |
 | `kern/start.js` | `B.stand.starte()` an der einen richtigen Stelle · der Anschlag am Anfang (R4) |
@@ -107,27 +107,40 @@ Rohstoff, Ansehen, Fässer, Chronik, Buch, Amtszeitnummer, Amtszeitname,
 Bindungen aller zwölf Adressen, Züge der Gegner, Würfelzählerstand, letzte
 Chronikzeile im Wortlaut, letzte Buchzeile im Wortlaut.
 
-| | Anfang | nach 12 Wochen | **nach dem Neuladen** | Abweichung |
+**Der Lauf am Endstand dieser Welle** (Reihenfolge: Jahr/Woche · Kasse ·
+Fässer · Chronik · Buch):
+
+| | Anfang | nach 12 Runden | **nach dem Neuladen** | Abweichung |
 |---|---|---|---|---|
-| **1350** | 1350/1 · 112 · 4 · 4 · 1 | 1350/13 · 60 · 12 · 8 · 42 | **1350/13 · 60 · 12 · 8 · 42** | nur `gegnerzuege` |
-| **1600** | — | 1600/13 · 556 · 16 · 13 · 40 | **1600/13 · 556 · 16 · 13 · 40** | nur `gegnerzuege` |
-| **1884** | — | 1884/13 · 12.170 · 79 · 10 · 39 | **1884/13 · 12.170 · 79 · 10 · 39** | nur `gegnerzuege` |
-| **1970** | — | 1970/13 · 53.480 · 240 · 14 · 58 | **1970/13 · 53.480 · 240 · 14 · 58** | nur `gegnerzuege` |
+| **1350** | 1350/1 · 112 · 4 · 4 · 1 | 1350/12 · 1 · 12 · 9 · 41 | **1350/12 · 1 · 12 · 9 · 41** | nur `gegnerzuege` |
+| **1600** | 1600/1 · 640 · 8 · 4 · 1 | 1600/12 · 558 · 24 · 7 · 35 | **1600/12 · 558 · 24 · 7 · 35** | nur `gegnerzuege` |
+| **1884** | 1884/1 · 14.250 · 7 · 4 · 1 | 1884/12 · 2.994 · 79 · 11 · 40 | **1884/12 · 2.994 · 79 · 11 · 40** | nur `gegnerzuege` |
+| **1970** | 1970/1 · 86.000 · 140 · 4 · 1 | 1970/12 · 340 · 200 · 15 · 57 | **1970/12 · 340 · 200 · 15 · 57** | nur `gegnerzuege` |
 
-*(Reihenfolge: Jahr/Woche · Kasse · Fässer · Chronik · Buch.)*
+**Der erste Lauf, gefahren um 07:51 an einem früheren Stand des Spiels**, ist
+die Zeile, die neben §6 des Urteils gehört — dieselbe Hand, dieselbe Saat,
+dasselbe Fenster:
 
-Die 1350-Zeile ist Ziffer für Ziffer die aus §6 des Urteils — dort stand
-rechts noch **1350/1 · 112 · 4 · 4 · 1**.
+| 1350 | Anfang | nach 12 Wochen | nach dem Neuladen |
+|---|---|---|---|
+| **Urteil §6 (Welle 12)** | 1350/1 · 112 · 4 · 4 · 1 | 1350/13 · 60 · 12 · 8 · 42 | **1350/1 · 112 · 4 · 4 · 1** ✘ |
+| **heute, 07:51** | 1350/1 · 112 · 4 · 4 · 1 | 1350/13 · 60 · 12 · 8 · 42 | **1350/13 · 60 · 12 · 8 · 42** ✔ |
+
+Der Kritiker hat 1350/13 · 60 · 12 · 8 · 42 gemessen, und genau das stand
+nach dem Neuladen wieder da. *(Daß der Lauf um 08:26 andere Absolutwerte hat,
+liegt an den drei anderen Bauern — siehe die Vorbemerkung. Was in beiden
+Läufen gleich ist: links und rechts vom Neuladen dieselben Ziffern.)*
 
 Weiter gemessen, in allen vier Epochen:
 
 * `localStorage` trägt genau **einen** Schlüssel: `brauhaus:1:1350` bzw.
   `:2:` `:3:` `:4:`.
-* Im Kopf steht **`fortgesetzt · 1350/13`** (Element mit
-  `data-fortgesetzt="1350/13"`), der Knopf `kern:neu` („Neue Partie") ist da.
+* Im Kopf steht **`fortgesetzt · 1350/12`** — ein Element mit
+  `data-fortgesetzt="1350/12"`, in jeder Epoche mit ihrem Jahr und ihrer
+  Woche. Der Knopf `kern:neu` („Neue Partie") steht daneben.
 * `BRAUHAUS.lage.length` = **0**, Seitenfehler = **0**.
-* Die fortgesetzte Partie **läuft weiter**: ein weiteres WEITER schaltet auf
-  1350/14, das Buch wächst auf 44.
+* Die fortgesetzte Partie **läuft weiter**: ein weiteres WEITER schaltet die
+  Woche in allen vier Epochen wirklich weiter (`laeuftWeiter: true`).
 
 Rohdaten: `werkbank/schuss/rahmen-w13/protokoll/wiederkehr-e{1..4}.json`,
 Bilder: `…/schuesse/wiederkehr-e{1..4}-{vor,nach}-neuladen.png`.
@@ -578,4 +591,137 @@ Auflösung, nicht am verkleinerten Gesamtbild.
 
 ---
 
-## Nachtrag — Schlußabnahme
+## Schlußabnahme
+
+### Die geforderte — vier Epochen, Entwurfsleinwand
+
+```
+node werkbank/schuss.mjs "http://127.0.0.1:8921/spiel/?epoche=N" \
+     werkbank/schuss/welle13-rahmen-eN.png 2752 1536
+```
+
+| | Ausgabe | `BRAUHAUS.lage.length` | `haushalt.tafeln()` | `ueberRand()` |
+|---|---|---|---|---|
+| **1350** | **keine Fehler auf der Seite** | **0** | leer | leer |
+| **1600** | **keine Fehler auf der Seite** | **0** | leer | leer |
+| **1884** | **keine Fehler auf der Seite** | **0** | leer | leer |
+| **1970** | **keine Fehler auf der Seite** | **0** | leer | leer |
+
+Bilder: `werkbank/schuss/welle13-rahmen-e{1..4}.png`. **Angesehen**, nicht nur
+erzeugt — und zweimal daraufhin geändert (siehe *„Der Anschlag: zwei Fehler"*).
+Der Ausschnitt des Anschlags in voller Auflösung liegt als
+`werkbank/schuss/rahmen-w13/schuesse/griff-e{1..4}-1600x900.png` daneben.
+
+### Die Wörter, nach denen §5 des Urteils fragt
+
+Gezählt über alle sichtbaren Textzeilen des ersten Schirms, 1600×900, wie der
+Kritiker gezählt hat (dort: **0 von 613 Zeilen**):
+
+| | Textzeilen | *Ziel* | *gewinnen* | *überleben* |
+|---|---|---|---|---|
+| **1350** | 410 | **2** | **1** | **1** |
+| **1600** | 425 | **5** | **1** | **1** |
+| **1884** | 426 | **2** | **1** | **1** |
+| **1970** | 437 | **3** | **1** | **1** |
+
+Und zwar an **zwei** Stellen, ohne daß ein Brett aufgeschlagen wird:
+
+* im Anschlag — *„DAS ZIEL —"* und *„Gewinnen heißt hier nicht groß werden,
+  sondern übergeben können — und die meisten Jahre geht es zuerst ums
+  Überleben."*
+* am unteren Rand, aus DER FUHRE über `meldeZiel` — *„Ziel: das Haus
+  weitergeben, solange es steht. Noch 5 Braujahre, dann ist das Haus alt
+  genug für eine Übergabe. (33 % des Wegs)"*
+
+*(Die höheren Zählungen in 1600 und 1970 kommen von Wörtern anderer Stücke,
+die „Ziel" im Sinne von Zahlungsziel benutzen — *„Auf Ziel bis Michaeli"*,
+*„Lastschrift mit dem Lieferschein, kein Ziel."*. Sie sind mitgezählt, weil
+der Kritiker so gezählt hat; die beiden Stellen oben tragen die Latte allein.)*
+
+### Steht der Anschlag einem Zug im Weg?
+
+| Epoche (1600×900) | Züge im Sichtfeld | greifbar | **vom Anschlag verdeckt** |
+|---|---|---|---|
+| 1350 | 95 | 41 | **0** |
+| 1600 | 103 | 43 | **0** |
+| 1884 | 106 | 41 | **0** |
+| 1970 | 99 | 39 | **0** |
+
+---
+
+## Was ein Kritiker nachzählen kann, ohne Quelltext zu lesen
+
+```js
+BRAUHAUS.stand.zeile()      // Modus, Schlüssel, Größe, wie oft geschrieben
+BRAUHAUS.stand.bericht()    // dazu: welche Stücke ihren Zustand anmelden (heute: keines)
+BRAUHAUS.uhr.springe(1)     // -> {jahre, wochen, angehalten}
+BRAUHAUS.welt.bestesZiel()  // was in der Zielzeile steht, oder null
+BRAUHAUS.haushalt.tafel()   // Flächenhaushalt, eine Zeile je Stück
+```
+
+Am Bildschirm: `[data-fortgesetzt]` trägt *„JJJJ/WW"*, `.zielzeile` trägt
+`data-ziel-naehe`, `[data-zug="kern:neu"]` ist der Knopf *„Neue Partie"*,
+`[data-zug="kern:anfangen"]` legt den Anschlag beiseite.
+`localStorage` trägt genau einen Schlüssel: `brauhaus:<epoche>:<saat>`.
+
+**Zwei Dinge, die ein Kritiker suchen und nicht finden wird, und beide mit
+Absicht:**
+
+1. **Der Knopf *„Neue Partie"* fehlt in Woche 1.** Er erscheint erst, wenn
+   wirklich ein Stand im Speicher liegt — also nach dem ersten
+   Wochenwechsel. Ein Knopf, der verspricht, einen Stand zu verwerfen, den es
+   nicht gibt, wäre dieselbe Lüge, an der Welle 12 gehangen hat.
+2. **Die Zielzeile fehlt, solange kein Stück meldet.** Steht kein Satz an,
+   bleibt die Zeile leer, statt einen alten zu wiederholen.
+
+---
+
+## Was offen bleibt — namentlich, mit Datei und Zeile
+
+*(Nichts davon gehört in diese Welle; alles davon gehört benannt.)*
+
+| # | was | wo | Abnahme |
+|---|---|---|---|
+| 1 | Der Eigenzustand der acht Stücke wird nicht gesichert | `stuecke/*.js`, je das `Z`-Objekt; am sichtbarsten `gegner.js:517` + `:567` | nach `B.stand.melde()`/`geladen()` muß `wiederkehr.mjs` auch bei `gegnerzuege` keine Abweichung mehr melden |
+| 2 | Die Meßgeräte laden ohne `?neu=1` | `rueckkopplung-r3/linie.mjs:66`, `spiel-w12/hand3.mjs`, `…/gegnerblick.mjs`, `aufsicht/messfenster.sh`, `werkbank/schuss.mjs` | drei Läufe im **selben** Kontext ergeben dieselbe Prüfsumme |
+| 3 | `haushalt.miss()` mißt bei kleinen Fenstern die Rasterweite mit | `kern/haushalt.js:186` (`RASTER = 4`) | dieselbe Seite bei 1600×900 und 2752×1536 darf nicht 84.541 gegen 78.336 px für dieselben neun Kästen melden |
+| 4 | Epochenwechsel im Spiel | Entscheidung ① der Aufsicht — eigene Welle, sobald der Spielstand steht | — |
+
+---
+
+## Meine eigene Prüfung, und was an ihr schwach ist
+
+*Steht bewußt am Schluß und nicht in einer Fußnote.*
+
+1. **Meine Hand ist einfacher als die des Kritikers.** `wiederkehr.mjs`
+   drückt vier Knöpfe in fester Reihenfolge und prüft nicht mit
+   `elementFromPoint`, ob sie wirklich getroffen hat. Für die Frage *„steht
+   nach dem Neuladen dasselbe da"* genügt das — beide Seiten des Vergleichs
+   sehen denselben Zustand. Für Aussagen über Spielstärke oder Deckung taugt
+   sie nicht, und ich mache keine.
+2. **Zwölf Wochen sind kurz.** Die Wiederkehr-Probe deckt eine Sitzung von
+   zwölf Runden ab, nicht 284. Die Prüfsummenprobe geht über 30 Runden und
+   damit über einen Jahreswechsel; über einen **Epochenwechsel** oder einen
+   **Erbfall in der fortgesetzten Partie** habe ich nicht gemessen.
+3. **Ich habe den vollen Speicher nie gesehen.** Die Kürzung des Buches
+   (> 3.000.000 Zeichen) und das Aufgeben nach drei Verweigerungen sind
+   gebaut und gelesen, aber nicht ausgelöst worden; der größte gemessene
+   Stand war 70.524 Zeichen (1970, drei Läufe ohne `neu=1`). Das ist ein
+   Zweiundvierzigstel der Grenze.
+4. **Das Spiel bewegte sich unter der Messung.** Drei andere Bauer
+   schreiben zur selben Stunde in `spiel/stuecke/**`. Jede meiner Zahlen ist
+   ein Vergleich **innerhalb** eines Laufs; Absolutwerte aus zwei Stunden
+   stehen nirgends nebeneinander, ohne daß die Stunde dabeisteht.
+5. **Die Zielzeile habe ich nicht selbst gefüllt.** Was am unteren Rand
+   steht, kommt aus `stuecke/fuhre.js` — ich habe den Platz, die Regel und
+   die Leerfassung gemessen, nicht den Satz.
+6. **Ein Fenster.** 1600×900 für die Zählungen, 2752×1536 für die Bilder.
+   Bei 1366×768 habe ich nicht gemessen.
+
+---
+
+## Stand dieses Berichts
+
+Alle fünf Auflagen R1–R5 sind gebaut und gemessen. Zwei davon (`meldeZiel`,
+`springeWochen`) werden von DER FUHRE bereits gerufen. `spiel/LIESMICH.md` ist
+fortgeschrieben. Vier Epochen: *„keine Fehler auf der Seite"*, `lage` 0.

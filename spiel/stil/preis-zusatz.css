@@ -602,8 +602,13 @@
   .pr-tafel .knopf > .preis,
   .pr-griff .knopf > .wort,
   .pr-griff .knopf > .preis {
-    flex: 0 0 auto;
-    min-width: 0;
+    /* `min-content` ist genau die Breite des LÄNGSTEN WORTES. Damit schrumpft
+       die Aufschrift bis an die Wortgrenze und keinen Buchstaben weiter:
+       „Festlegen — Geld herein" bricht an seinen Leerzeichen und passt in die
+       144 px breite Karte (gemessen 1366×768, Epoche IV: vorher 145 px auf
+       einer Zeile und 11 px über den Rand hinaus), „Nehmen" bricht nie. */
+    flex: 0 1 auto;
+    min-width: min-content;
     overflow-wrap: normal;
     word-break: normal;
     hyphens: none;

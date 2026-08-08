@@ -157,7 +157,7 @@ async function foto(name) {
 
 /* ---------------------------------------------------------------- Partie */
 const wahl = [];
-let gespielt = 0, abbruch = null, jahrVorher = null;
+let gespielt = 0, abbruch = null, jahrVorher = null, letzterPlan = null;
 let sprungWochen = 0;
 
 await foto('00-ankunft');
@@ -262,8 +262,20 @@ while (gespielt < ZIELWOCHEN) {
   schreib({ was: 'wahl-der-woche', plaene: planZahl, sprung: !!sprung,
     liste: s.zuege.filter(z => z.hit && !z.aus && /^fuhre:plan:/.test(z.zug))
       .map(z => ({ zug: z.zug, preis: z.preis, text: z.text })) });
+  /* DIE REGEL DES SPIELERS, den diese Hand nachstellt: waere die Antwort
+     dieselbe wie vorige Woche, dann lasse ich fahren, statt sie noch einmal
+     zu geben. Genau das ist die zweite Haelfte von R13 („Wochen ohne
+     Entscheidung werden zusammengefasst") — und es ist keine Regel des
+     Messgeraets, sondern die, zu der die Karte selbst auffordert. */
+  let bestPlanJetzt = null;
+  {
+    const pl = s.zuege.filter(z => z.hit && !z.aus && /^fuhre:plan:/.test(z.zug));
+    const mitPreis = pl.filter(z => z.preis !== null && z.preis !== undefined);
+    if (mitPreis.length) bestPlanJetzt = mitPreis.reduce((a, z) => (z.preis > a.preis ? z : a)).zug;
+    else if (pl.length) bestPlanJetzt = pl[0].zug;
+  }
   let gesprungen = false;
-  if (!fragen.length && sprung) {
+  if (!fragen.length && sprung && (!bestPlanJetzt || bestPlanJetzt === letzterPlan)) {
     const vorSpr = await schirm();
     if (await greif(sprung.zug, { grund: 'ruhige Wochen zusammenfassen', warte: 340 })) {
       const nachSpr = await schirm();
@@ -285,6 +297,7 @@ while (gespielt < ZIELWOCHEN) {
       if (mitPreis.length) gew = mitPreis.reduce((a, z) => (z.preis > a.preis ? z : a));
       else gew = plaene.find(z => z.zug === 'fuhre:wie-vorige') || plaene[0];
       await greif(gew.zug, { grund: 'Fuhrplan', warte: 220 });
+      letzterPlan = gew.zug;
     }
     /* 7 · abschicken */
     await greif('fuhre:abschicken', { grund: 'Fuhre abschicken', warte: 300 });
