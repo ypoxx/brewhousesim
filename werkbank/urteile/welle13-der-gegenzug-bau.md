@@ -20,7 +20,7 @@ Klageknopf fehlt).
 
 | Auflage | verlangt | gemessen |
 |---|---|---|
-| **R15** Wochen ohne bezahlbaren Gegenzug je 100, enge Lesart | ≤ 10, alle vier Epochen | **9 · 0 · 0 · 1** am eingefrorenen Welle-12-Stand · **0 · 0 · 1 · 4** am laufenden Stand |
+| **R15** Wochen ohne bezahlbaren Gegenzug je 100, enge Lesart | ≤ 10, alle vier Epochen | **9 · 0 · 0 · 1** am eingefrorenen Welle-12-Stand · **9 · 0 · 1 · 4** am laufenden Stand (ungünstigster von zwei Läufen) |
 | **R16** Aufschrift des Reiters, Woche 45 = Woche 15 | ja | **ja**, 50 von 50 Wochen tragen die Zahl (vorher 30 von 50) |
 | §4b des Urteils | unangetastet | **kein** Eingriff ins Verhalten, kein `meldeZug` |
 | ρ, 400 Wochen je Epoche | darf sich nicht bewegen | Aufzeichnung **byteweise gleich** in 1350, 1600 und 1884 *(1970 s. §4.4)* |
@@ -488,19 +488,25 @@ Kritiker misst aber den **integrierten** Baum, in dem auch DER RAHMEN, DIE
 JAHRESTAFEL und DIE WOCHE fertig sind. Dieselbe Probe, derselbe Befehl,
 Hafen 8924:
 
+**Zweimal gemessen, in zwei unabhängigen Läufen, damit es keine Momentaufnahme
+ist:**
+
 | | 1350 | 1600 | 1884 | 1970 |
 |---|---|---|---|---|
-| Wochen ohne bezahlbaren Gegenzug, **eng** | **0** | **0** | **1** | **4** |
-| Wochen ohne bezahlbaren Gegenzug, **weit** | **0** | **0** | **1** | **1** |
+| Wochen ohne bezahlbaren Gegenzug, **eng** — Lauf A | **0** | **0** | **1** | **4** |
+| Wochen ohne bezahlbaren Gegenzug, **eng** — Lauf B | **9** | **0** | **1** | **4** |
+| Wochen ohne bezahlbaren Gegenzug, **eng** — Lauf C | **9** | — | — | — |
+| Wochen ohne bezahlbaren Gegenzug, **weit** | 0 | 0 | 1 | 1 |
 | gespielte Wochen · Seitenfehler · `lage` | 100 · 0 · 0 | 100 · 0 · 0 | 100 · 0 · 0 | 100 · 0 · 0 |
 
-Die neun Restwochen der Epoche 1 sind dort **verschwunden** — genau wie in
-§4.3 vorhergesagt: sobald die Michaelitafel nicht mehr dauerhaft über der Karte
-liegt, ist der Klageknopf greifbar, und er kostet kein Geld.
-
-**Zweimal gemessen, damit es keine Momentaufnahme ist:** 1600 und 1884 in einem
-zweiten, unabhängigen Lauf — wieder **0** und **1**. Ziffer für Ziffer
-dieselben Zahlen.
+Drei der vier Epochen geben zweimal dieselbe Zahl. **1350 gibt 0 und 9** — und
+das ist ehrlich hinzuschreiben, statt sich die kleinere auszusuchen: der
+Arbeitsbaum wird von drei anderen Buildern weitergeschrieben, während ich messe,
+und `probe13.mjs` wartet nach jedem Klick eine feste Zeitspanne. **Beide Zahlen
+liegen unter der Latte von 10**, und die höhere ist dieselbe 9 wie am
+eingefrorenen Stand — dieselben neun Wochen mit 3 bis 11 Pf in der Lade (§4.3).
+Ein dritter Lauf gab wieder **9**; die 0 war der Ausreißer, nicht die Regel.
+Ich rechne mit 9 und nicht mit 0.
 
 ### 4.2c Und mit der KOMPETENTEN Hand, die kauft und festlegt
 
@@ -547,7 +553,15 @@ bezahlbar — sie zählen nur unter der **weiten** Lesart: *„Fass an den Wirt 
 1 Fass statt Geld"* an zwei Adressen. Der Spieler ist in diesen Wochen also
 **nicht** handlungsunfähig; er ist bloß bar.
 
-> **Und ein Fund, der nicht mir gehört, aber diese neun Wochen erklärt:**
+**Am laufenden Stand sind es dieselben neun Wochen** — 1351/22 bis 1351/30,
+Kasse 11 → 3 Pf —, nur stehen dort **acht** greifbare Züge gegen ihn im Bild
+und **sechs** davon sind ausführbar (die Bierantworten und die Klage); keiner
+trägt ein Preisschild, das eine Kasse von 3 Pf hält. Der Spieler ist in diesen
+Wochen also nicht handlungsunfähig — er ist bar, und die enge Lesart zählt nur
+Geld.
+
+> **Und ein Fund, der nicht mir gehört, aber die neun Wochen am EINGEFRORENEN
+> Stand zusätzlich erklärt:**
 > der Zug, der überhaupt kein Geld kostet — *„Klage vor dem Stadtgericht ·
 > kostet kein Geld · vier Ansehen"*, `gegner:beschwerde-bild`, `data-preis=0` —
 > **steht in diesen Wochen da, ist an, und die Maus trifft ihn nicht.**
