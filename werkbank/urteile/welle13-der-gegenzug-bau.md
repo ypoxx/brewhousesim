@@ -561,7 +561,7 @@ geprüft: `abweichung []`.)*
 |---|---|---|---|
 | 1350 | `ca86822e306fef8d` | `ca86822e306fef8d` | **gleich** |
 | **1600** | `94df265afe2fbb10` | `94df265afe2fbb10` | **gleich** |
-| 1884 | *(läuft)* | | |
+| 1884 | `d2978598077039e0` | `d2978598077039e0` | **gleich** |
 | 1970 | *(läuft)* | | |
 
 Die Prüfsumme geht über die **ganze** Aufzeichnung eines 400-Wochen-Laufs
@@ -578,6 +578,8 @@ Die Kennzahlreihen, damit sie jemand nachrechnen kann:
       1,46 · 1,73 · 3,11 · 1,09          (vorher = nachher)
 1600  3,76 · 2,98 · 3,46 · 3,91 · 3,08 · 2,81 · 3,30 · 6,96 · 4,13 · 0,93 ·
       7,68 · 7,56 · 6,10 · 4,66          (vorher = nachher)
+1884  8,35 · 5,03 · 1,70 · 2,75 · 1,61 · 6,04 · 3,34 · 2,05 · 3,65 · 1,53 ·
+      13,32 · 8,70 · 11,14 · 2,02        (vorher = nachher)
 ```
 
 **1600 ist die Epoche ohne Reserve** (ρ +0,538 bei einer Grenze von 0,700, der
