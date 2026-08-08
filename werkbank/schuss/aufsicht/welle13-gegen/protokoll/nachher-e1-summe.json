@@ -1,0 +1,46 @@
+{
+ "epoche": 1,
+ "url": "http://127.0.0.1:8933/spiel/?epoche=1&saat=1350&neu=1",
+ "gespielteWochen": 100,
+ "jahre": "1350–1353",
+ "lageMax": 0,
+ "seitenfehler": 0,
+ "fehler": [],
+ "ersterSchirm": {
+  "textzeilen": 419,
+  "zielZeilen": 2,
+  "zielBeispiel": [
+   "Ziel: das Haus weitergeben, solange es steht. Noch 5 Braujahre, dann ist das Haus alt genug für eine Übergabe. (33 % des Wegs)",
+   "DAS ZIEL —"
+  ],
+  "knopf": "Michaelitafel 1350 · 5 Angebote — heute ist Michaeli",
+  "tafelLiegt": false,
+  "speicherSchluessel": 0
+ },
+ "wochenMitTafel": 4,
+ "knopfDa": 100,
+ "luegtZu": 0,
+ "luegtAuf": 0,
+ "aufschriften": [
+  "Michaelitafel 1350 · 5 Angebote — heute ist Michaeli",
+  "Michaelitafel schließen",
+  "Michaelitafel 1350 · 5 Angebote",
+  "Michaelitafel 1351 · 5 Angebote",
+  "Michaelitafel 1352 · 5 Angebote",
+  "Michaelitafel 1353 · 5 Angebote"
+ ],
+ "jahresanfaenge": 5,
+ "davonMitTafel": 4,
+ "wochenOhneGegenzugEng": 9,
+ "wochenOhneGegenzugWeit": 0,
+ "wochenOhneGegenzugEngJe100": 9,
+ "wochenOhneGegenzugWeitJe100": 0,
+ "wochenMitZielwort": 99,
+ "wochenMitUebergabe": 0,
+ "davonNurAmReiter": 0,
+ "wochenOhneBezahlbares": 2,
+ "deckungUnter1": 57,
+ "kasseAnfang": 112,
+ "kasseEnde": 40,
+ "speicherSchluesselEnde": 0
+}

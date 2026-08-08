@@ -30,7 +30,14 @@ MARK=$(curl -s -m 5 "http://127.0.0.1:$HAFEN/.messstand-marke")
 echo "=== Gegenmessung auf Hafen $HAFEN · Messstand $MARK · index.html $KOPF ===" | tee -a "$LOG"
 [ -z "$MARK" ] && { echo "!!! Hafen $HAFEN tot — messstand.sh zuerst" | tee -a "$LOG"; exit 1; }
 
-lauf () {  # lauf <ergebnisdatei> <beschriftung> <befehl…>
+# DIE MARKE IST DIE DATEI, DIE AM ENDE GESCHRIEBEN WIRD — nicht die, in die
+# waehrend des Laufs gestroemt wird. `probe13.mjs` und `hand3.mjs` schreiben
+# ihr `.jsonl` Zeile fuer Zeile mit, damit ein sterbender Agent nichts
+# verliert; wer darauf ueberspringt, nimmt eine abgebrochene Messung
+# stillschweigend als fertig. Gepruefte Marken: `<marke>-summe.json` (probe13,
+# Zeile 245), `wiederkehr-e<N>.json` (Zeile 54), `<lauf>-wahl.json` (hand3,
+# Zeile 364). Alle drei entstehen erst nach dem letzten Klick.
+lauf () {  # lauf <schlussdatei> <beschriftung> <befehl…>
   local ziel=$1 name=$2; shift 2
   if [ -s "$ziel" ]; then echo "$name: liegt schon vor" | tee -a "$LOG"; return; fi
   local t0=$(date +%s)
@@ -44,7 +51,7 @@ lauf () {  # lauf <ergebnisdatei> <beschriftung> <befehl…>
 
 echo "--- 1/3 · probe13, 100 Wochen je Epoche, gegen BEFUND-VORHER.md ---" | tee -a "$LOG"
 for E in 1 2 3 4; do
-  lauf "$G/protokoll/nachher-e$E.jsonl" "probe13 e$E" \
+  lauf "$G/protokoll/nachher-e$E-summe.json" "probe13 e$E" \
        env MARKE=nachher-e$E HAFEN=$HAFEN node "$G/probe13.mjs" "$E" 100
 done
 
@@ -60,7 +67,7 @@ done
 # ohne dass eine Ausgangszahl ueberschrieben wird.
 echo "--- 3/3 · hand3, 20 Minuten je Epoche bei 1600x900 ---" | tee -a "$LOG"
 for E in 1 2 3 4; do
-  lauf "$S/protokoll/n$E.jsonl" "hand3 n$E" \
+  lauf "$S/protokoll/n$E-wahl.json" "hand3 n$E" \
        env HAFEN=$HAFEN node "$S/hand3.mjs" "$E" 20 "n$E" 1600 900
 done
 
