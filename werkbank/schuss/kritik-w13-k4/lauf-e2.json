@@ -1,0 +1,6615 @@
+{
+ "epoche": "2",
+ "saat": "1350",
+ "wochenZiel": 100,
+ "kumWocheErreicht": 100,
+ "setupKlicks": [
+  {
+   "zug": "kern:anfangen",
+   "ergebnis": {
+    "ok": true
+   }
+  }
+ ],
+ "klickProtokoll": [
+  {
+   "kumWoche": 1,
+   "zug": "gegner:zuvorkommen:muehlwirt",
+   "ergebnis": "geklickt",
+   "quelle": "gegenzug",
+   "kasseVorher": 640
+  },
+  {
+   "kumWoche": 1,
+   "zug": "fuhre:plan:mager",
+   "ergebnis": "nicht-gegriffen:nicht-unter-zeiger",
+   "quelle": "fuhre-woche",
+   "kasseVorher": 470
+  },
+  {
+   "kumWoche": 1,
+   "zug": "weiter",
+   "ergebnis": "geklickt",
+   "quelle": "pflicht",
+   "kasseVorher": 470
+  },
+  {
+   "kumWoche": 2,
+   "zug": "sud:zettel-anstich",
+   "ergebnis": "geklickt",
+   "quelle": "sud-anzapfen",
+   "kasseVorher": 448
+  },
+  {
+   "kumWoche": 2,
+   "zug": "fuhre:plan:mager",
+   "ergebnis": "geklickt",
+   "quelle": "fuhre-woche",
+   "kasseVorher": 448
+  },
+  {
+   "kumWoche": 3,
+   "zug": "sud:zettel-anstich",
+   "ergebnis": "geklickt",
+   "quelle": "sud-anzapfen",
+   "kasseVorher": 492
+  },
+  {
+   "kumWoche": 3,
+   "zug": "fuhre:plan:mager",
+   "ergebnis": "geklickt",
+   "quelle": "fuhre-woche",
+   "kasseVorher": 492
+  },
+  {
+   "kumWoche": 4,
+   "zug": "sud:zettel-anstich",
+   "ergebnis": "geklickt",
+   "quelle": "sud-anzapfen",
+   "kasseVorher": 519
+  },
+  {
+   "kumWoche": 4,
+   "zug": "gegner:abwehren:lindenhof",
+   "ergebnis": "geklickt",
+   "quelle": "gegenzug",
+   "kasseVorher": 519
+  },
+  {
+   "kumWoche": 4,
+   "zug": "fuhre:plan:mager",
+   "ergebnis": "geklickt",
+   "quelle": "fuhre-woche",
+   "kasseVorher": 50
+  },
+  {
+   "kumWoche": 5,
+   "zug": "sud:zettel-anstich",
+   "ergebnis": "geklickt",
+   "quelle": "sud-anzapfen",
+   "kasseVorher": 74
+  },
+  {
+   "kumWoche": 5,
+   "zug": "fuhre:plan:mager",
+   "ergebnis": "geklickt",
+   "quelle": "fuhre-woche",
+   "kasseVorher": 74
+  },
+  {
+   "kumWoche": 6,
+   "zug": "sud:zettel-anstich",
+   "ergebnis": "geklickt",
+   "quelle": "sud-anzapfen",
+   "kasseVorher": 100
+  },
+  {
+   "kumWoche": 6,
+   "zug": "fuhre:plan:mager",
+   "ergebnis": "geklickt",
+   "quelle": "fuhre-woche",
+   "kasseVorher": 100
+  },
+  {
+   "kumWoche": 7,
+   "zug": "sud:zettel-anstich",
+   "ergebnis": "geklickt",
+   "quelle": "sud-anzapfen",
+   "kasseVorher": 123
+  },
+  {
+   "kumWoche": 7,
+   "zug": "gegner:zuvorkommen:faehrhaus",
+   "ergebnis": "nicht-gegriffen:nicht-unter-zeiger",
+   "quelle": "gegenzug",
+   "kasseVorher": 123
+  },
+  {
+   "kumWoche": 7,
+   "zug": "fuhre:plan:mager",
+   "ergebnis": "geklickt",
+   "quelle": "fuhre-woche",
+   "kasseVorher": 123
+  },
+  {
+   "kumWoche": 8,
+   "zug": "sud:zettel-anstich",
+   "ergebnis": "geklickt",
+   "quelle": "sud-anzapfen",
+   "kasseVorher": 139
+  },
+  {
+   "kumWoche": 8,
+   "zug": "gegner:zuvorkommen:faehrhaus",
+   "ergebnis": "nicht-gegriffen:nicht-unter-zeiger",
+   "quelle": "gegenzug",
+   "kasseVorher": 139
+  },
+  {
+   "kumWoche": 8,
+   "zug": "fuhre:plan:mager",
+   "ergebnis": "geklickt",
+   "quelle": "fuhre-woche",
+   "kasseVorher": 139
+  },
+  {
+   "kumWoche": 9,
+   "zug": "sud:zettel-anstich",
+   "ergebnis": "geklickt",
+   "quelle": "sud-anzapfen",
+   "kasseVorher": 174
+  },
+  {
+   "kumWoche": 9,
+   "zug": "gegner:zuvorkommen:faehrhaus",
+   "ergebnis": "nicht-gegriffen:nicht-unter-zeiger",
+   "quelle": "gegenzug",
+   "kasseVorher": 174
+  },
+  {
+   "kumWoche": 9,
+   "zug": "fuhre:plan:mager",
+   "ergebnis": "geklickt",
+   "quelle": "fuhre-woche",
+   "kasseVorher": 174
+  },
+  {
+   "kumWoche": 10,
+   "zug": "sud:zettel-anstich",
+   "ergebnis": "geklickt",
+   "quelle": "sud-anzapfen",
+   "kasseVorher": 220
+  },
+  {
+   "kumWoche": 10,
+   "zug": "gegner:zuvorkommen:faehrhaus",
+   "ergebnis": "nicht-gegriffen:nicht-unter-zeiger",
+   "quelle": "gegenzug",
+   "kasseVorher": 220
+  },
+  {
+   "kumWoche": 10,
+   "zug": "fuhre:plan:mager",
+   "ergebnis": "geklickt",
+   "quelle": "fuhre-woche",
+   "kasseVorher": 220
+  },
+  {
+   "kumWoche": 11,
+   "zug": "sud:zettel-anstich",
+   "ergebnis": "geklickt",
+   "quelle": "sud-anzapfen",
+   "kasseVorher": 254
+  },
+  {
+   "kumWoche": 11,
+   "zug": "gegner:zuvorkommen:faehrhaus",
+   "ergebnis": "geklickt",
+   "quelle": "gegenzug",
+   "kasseVorher": 254
+  },
+  {
+   "kumWoche": 11,
+   "zug": "fuhre:plan:mager",
+   "ergebnis": "geklickt",
+   "quelle": "fuhre-woche",
+   "kasseVorher": 141
+  },
+  {
+   "kumWoche": 12,
+   "zug": "sud:zettel-anstich",
+   "ergebnis": "geklickt",
+   "quelle": "sud-anzapfen",
+   "kasseVorher": 145
+  },
+  {
+   "kumWoche": 12,
+   "zug": "fuhre:plan:mager",
+   "ergebnis": "geklickt",
+   "quelle": "fuhre-woche",
+   "kasseVorher": 145
+  },
+  {
+   "kumWoche": 13,
+   "zug": "sud:zettel-anstich",
+   "ergebnis": "geklickt",
+   "quelle": "sud-anzapfen",
+   "kasseVorher": 146
+  },
+  {
+   "kumWoche": 13,
+   "zug": "gegner:zuvorkommen:pfarrhof",
+   "ergebnis": "geklickt",
+   "quelle": "gegenzug",
+   "kasseVorher": 146
+  },
+  {
+   "kumWoche": 13,
+   "zug": "fuhre:plan:mager",
+   "ergebnis": "geklickt",
+   "quelle": "fuhre-woche",
+   "kasseVorher": 61
+  },
+  {
+   "kumWoche": 14,
+   "zug": "sud:zettel-anstich",
+   "ergebnis": "geklickt",
+   "quelle": "sud-anzapfen",
+   "kasseVorher": 59
+  },
+  {
+   "kumWoche": 14,
+   "zug": "fuhre:plan:mager",
+   "ergebnis": "geklickt",
+   "quelle": "fuhre-woche",
+   "kasseVorher": 59
+  },
+  {
+   "kumWoche": 15,
+   "zug": "sud:zettel-anstich",
+   "ergebnis": "geklickt",
+   "quelle": "sud-anzapfen",
+   "kasseVorher": 60
+  },
+  {
+   "kumWoche": 15,
+   "zug": "fuhre:plan:mager",
+   "ergebnis": "geklickt",
+   "quelle": "fuhre-woche",
+   "kasseVorher": 60
+  },
+  {
+   "kumWoche": 16,
+   "zug": "sud:zettel-anstich",
+   "ergebnis": "geklickt",
+   "quelle": "sud-anzapfen",
+   "kasseVorher": 60
+  },
+  {
+   "kumWoche": 16,
+   "zug": "fuhre:plan:mager",
+   "ergebnis": "geklickt",
+   "quelle": "fuhre-woche",
+   "kasseVorher": 60
+  },
+  {
+   "kumWoche": 17,
+   "zug": "sud:zettel-anstich",
+   "ergebnis": "geklickt",
+   "quelle": "sud-anzapfen",
+   "kasseVorher": 58
+  },
+  {
+   "kumWoche": 17,
+   "zug": "fuhre:plan:mager",
+   "ergebnis": "geklickt",
+   "quelle": "fuhre-woche",
+   "kasseVorher": 58
+  },
+  {
+   "kumWoche": 18,
+   "zug": "sud:zettel-anstich",
+   "ergebnis": "geklickt",
+   "quelle": "sud-anzapfen",
+   "kasseVorher": 59
+  },
+  {
+   "kumWoche": 18,
+   "zug": "fuhre:plan:mager",
+   "ergebnis": "geklickt",
+   "quelle": "fuhre-woche",
+   "kasseVorher": 59
+  },
+  {
+   "kumWoche": 19,
+   "zug": "sud:zettel-anstich",
+   "ergebnis": "geklickt",
+   "quelle": "sud-anzapfen",
+   "kasseVorher": 58
+  },
+  {
+   "kumWoche": 19,
+   "zug": "fuhre:plan:mager",
+   "ergebnis": "geklickt",
+   "quelle": "fuhre-woche",
+   "kasseVorher": 58
+  },
+  {
+   "kumWoche": 20,
+   "zug": "sud:zettel-anstich",
+   "ergebnis": "geklickt",
+   "quelle": "sud-anzapfen",
+   "kasseVorher": 58
+  },
+  {
+   "kumWoche": 20,
+   "zug": "fuhre:plan:mager",
+   "ergebnis": "geklickt",
+   "quelle": "fuhre-woche",
+   "kasseVorher": 58
+  },
+  {
+   "kumWoche": 21,
+   "zug": "sud:zettel-anstich",
+   "ergebnis": "geklickt",
+   "quelle": "sud-anzapfen",
+   "kasseVorher": 57
+  },
+  {
+   "kumWoche": 21,
+   "zug": "fuhre:plan:mager",
+   "ergebnis": "geklickt",
+   "quelle": "fuhre-woche",
+   "kasseVorher": 57
+  },
+  {
+   "kumWoche": 22,
+   "zug": "sud:zettel-anstich",
+   "ergebnis": "geklickt",
+   "quelle": "sud-anzapfen",
+   "kasseVorher": 57
+  },
+  {
+   "kumWoche": 22,
+   "zug": "fuhre:plan:mager",
+   "ergebnis": "geklickt",
+   "quelle": "fuhre-woche",
+   "kasseVorher": 57
+  },
+  {
+   "kumWoche": 23,
+   "zug": "sud:zettel-anstich",
+   "ergebnis": "geklickt",
+   "quelle": "sud-anzapfen",
+   "kasseVorher": 56
+  },
+  {
+   "kumWoche": 23,
+   "zug": "fuhre:plan:mager",
+   "ergebnis": "geklickt",
+   "quelle": "fuhre-woche",
+   "kasseVorher": 56
+  },
+  {
+   "kumWoche": 24,
+   "zug": "sud:zettel-anstich",
+   "ergebnis": "geklickt",
+   "quelle": "sud-anzapfen",
+   "kasseVorher": 56
+  },
+  {
+   "kumWoche": 24,
+   "zug": "fuhre:plan:mager",
+   "ergebnis": "geklickt",
+   "quelle": "fuhre-woche",
+   "kasseVorher": 56
+  },
+  {
+   "kumWoche": 25,
+   "zug": "sud:zettel-anstich",
+   "ergebnis": "geklickt",
+   "quelle": "sud-anzapfen",
+   "kasseVorher": 55
+  },
+  {
+   "kumWoche": 25,
+   "zug": "fuhre:plan:mager",
+   "ergebnis": "geklickt",
+   "quelle": "fuhre-woche",
+   "kasseVorher": 55
+  },
+  {
+   "kumWoche": 26,
+   "zug": "sud:zettel-anstich",
+   "ergebnis": "geklickt",
+   "quelle": "sud-anzapfen",
+   "kasseVorher": 55
+  },
+  {
+   "kumWoche": 26,
+   "zug": "fuhre:plan:mager",
+   "ergebnis": "geklickt",
+   "quelle": "fuhre-woche",
+   "kasseVorher": 55
+  },
+  {
+   "kumWoche": 27,
+   "zug": "sud:zettel-anstich",
+   "ergebnis": "geklickt",
+   "quelle": "sud-anzapfen",
+   "kasseVorher": 55
+  },
+  {
+   "kumWoche": 27,
+   "zug": "fuhre:plan:mager",
+   "ergebnis": "geklickt",
+   "quelle": "fuhre-woche",
+   "kasseVorher": 55
+  },
+  {
+   "kumWoche": 28,
+   "zug": "sud:zettel-anstich",
+   "ergebnis": "geklickt",
+   "quelle": "sud-anzapfen",
+   "kasseVorher": 54
+  },
+  {
+   "kumWoche": 28,
+   "zug": "fuhre:plan:mager",
+   "ergebnis": "geklickt",
+   "quelle": "fuhre-woche",
+   "kasseVorher": 54
+  },
+  {
+   "kumWoche": 29,
+   "zug": "sud:zettel-anstich",
+   "ergebnis": "geklickt",
+   "quelle": "sud-anzapfen",
+   "kasseVorher": 54
+  },
+  {
+   "kumWoche": 29,
+   "zug": "fuhre:plan:mager",
+   "ergebnis": "geklickt",
+   "quelle": "fuhre-woche",
+   "kasseVorher": 54
+  },
+  {
+   "kumWoche": 30,
+   "zug": "sud:zettel-anstich",
+   "ergebnis": "geklickt",
+   "quelle": "sud-anzapfen",
+   "kasseVorher": 53
+  },
+  {
+   "kumWoche": 30,
+   "zug": "fuhre:plan:mager",
+   "ergebnis": "geklickt",
+   "quelle": "fuhre-woche",
+   "kasseVorher": 53
+  },
+  {
+   "kumWoche": 31,
+   "zug": "weiter",
+   "ergebnis": "geklickt",
+   "quelle": "pflicht",
+   "kasseVorher": 293
+  },
+  {
+   "kumWoche": 32,
+   "zug": "fuhre:plan:mager",
+   "ergebnis": "geklickt",
+   "quelle": "fuhre-woche",
+   "kasseVorher": 291
+  },
+  {
+   "kumWoche": 33,
+   "zug": "fuhre:plan:mager",
+   "ergebnis": "geklickt",
+   "quelle": "fuhre-woche",
+   "kasseVorher": 284
+  },
+  {
+   "kumWoche": 34,
+   "zug": "gegner:abwehren:torschenke",
+   "ergebnis": "nicht-gegriffen:nicht-unter-zeiger",
+   "quelle": "gegenzug",
+   "kasseVorher": 274
+  },
+  {
+   "kumWoche": 34,
+   "zug": "fuhre:plan:mager",
+   "ergebnis": "geklickt",
+   "quelle": "fuhre-woche",
+   "kasseVorher": 274
+  },
+  {
+   "kumWoche": 35,
+   "zug": "gegner:abwehren:torschenke",
+   "ergebnis": "nicht-gegriffen:nicht-unter-zeiger",
+   "quelle": "gegenzug",
+   "kasseVorher": 267
+  },
+  {
+   "kumWoche": 35,
+   "zug": "fuhre:plan:mager",
+   "ergebnis": "geklickt",
+   "quelle": "fuhre-woche",
+   "kasseVorher": 267
+  },
+  {
+   "kumWoche": 36,
+   "zug": "gegner:abwehren:torschenke",
+   "ergebnis": "nicht-gegriffen:nicht-unter-zeiger",
+   "quelle": "gegenzug",
+   "kasseVorher": 256
+  },
+  {
+   "kumWoche": 36,
+   "zug": "fuhre:plan:mager",
+   "ergebnis": "geklickt",
+   "quelle": "fuhre-woche",
+   "kasseVorher": 256
+  },
+  {
+   "kumWoche": 37,
+   "zug": "gegner:abwehren:torschenke",
+   "ergebnis": "nicht-gegriffen:nicht-unter-zeiger",
+   "quelle": "gegenzug",
+   "kasseVorher": 245
+  },
+  {
+   "kumWoche": 37,
+   "zug": "fuhre:plan:mager",
+   "ergebnis": "geklickt",
+   "quelle": "fuhre-woche",
+   "kasseVorher": 245
+  },
+  {
+   "kumWoche": 38,
+   "zug": "gegner:abwehren:torschenke",
+   "ergebnis": "nicht-gegriffen:nicht-unter-zeiger",
+   "quelle": "gegenzug",
+   "kasseVorher": 240
+  },
+  {
+   "kumWoche": 38,
+   "zug": "fuhre:plan:mager",
+   "ergebnis": "geklickt",
+   "quelle": "fuhre-woche",
+   "kasseVorher": 240
+  },
+  {
+   "kumWoche": 39,
+   "zug": "fuhre:plan:mager",
+   "ergebnis": "geklickt",
+   "quelle": "fuhre-woche",
+   "kasseVorher": 226
+  },
+  {
+   "kumWoche": 40,
+   "zug": "fuhre:plan:mager",
+   "ergebnis": "geklickt",
+   "quelle": "fuhre-woche",
+   "kasseVorher": 215
+  },
+  {
+   "kumWoche": 41,
+   "zug": "fuhre:plan:mager",
+   "ergebnis": "geklickt",
+   "quelle": "fuhre-woche",
+   "kasseVorher": 208
+  },
+  {
+   "kumWoche": 42,
+   "zug": "gegner:abwehren:markt",
+   "ergebnis": "nicht-gegriffen:nicht-unter-zeiger",
+   "quelle": "gegenzug",
+   "kasseVorher": 197
+  },
+  {
+   "kumWoche": 42,
+   "zug": "fuhre:plan:mager",
+   "ergebnis": "geklickt",
+   "quelle": "fuhre-woche",
+   "kasseVorher": 197
+  },
+  {
+   "kumWoche": 43,
+   "zug": "gegner:abwehren:markt",
+   "ergebnis": "nicht-gegriffen:nicht-unter-zeiger",
+   "quelle": "gegenzug",
+   "kasseVorher": 189
+  },
+  {
+   "kumWoche": 43,
+   "zug": "fuhre:plan:mager",
+   "ergebnis": "geklickt",
+   "quelle": "fuhre-woche",
+   "kasseVorher": 189
+  },
+  {
+   "kumWoche": 44,
+   "zug": "gegner:abwehren:markt",
+   "ergebnis": "nicht-gegriffen:nicht-unter-zeiger",
+   "quelle": "gegenzug",
+   "kasseVorher": 188
+  },
+  {
+   "kumWoche": 44,
+   "zug": "fuhre:plan:mager",
+   "ergebnis": "geklickt",
+   "quelle": "fuhre-woche",
+   "kasseVorher": 188
+  },
+  {
+   "kumWoche": 45,
+   "zug": "gegner:abwehren:markt",
+   "ergebnis": "nicht-gegriffen:nicht-unter-zeiger",
+   "quelle": "gegenzug",
+   "kasseVorher": 183
+  },
+  {
+   "kumWoche": 45,
+   "zug": "fuhre:plan:mager",
+   "ergebnis": "geklickt",
+   "quelle": "fuhre-woche",
+   "kasseVorher": 183
+  },
+  {
+   "kumWoche": 46,
+   "zug": "fuhre:plan:mager",
+   "ergebnis": "geklickt",
+   "quelle": "fuhre-woche",
+   "kasseVorher": 177
+  },
+  {
+   "kumWoche": 47,
+   "zug": "fuhre:plan:mager",
+   "ergebnis": "geklickt",
+   "quelle": "fuhre-woche",
+   "kasseVorher": 173
+  },
+  {
+   "kumWoche": 48,
+   "zug": "fuhre:plan:mager",
+   "ergebnis": "geklickt",
+   "quelle": "fuhre-woche",
+   "kasseVorher": 165
+  },
+  {
+   "kumWoche": 49,
+   "zug": "fuhre:plan:mager",
+   "ergebnis": "geklickt",
+   "quelle": "fuhre-woche",
+   "kasseVorher": 163
+  },
+  {
+   "kumWoche": 50,
+   "zug": "fuhre:plan:mager",
+   "ergebnis": "geklickt",
+   "quelle": "fuhre-woche",
+   "kasseVorher": 159
+  },
+  {
+   "kumWoche": 51,
+   "zug": "fuhre:plan:mager",
+   "ergebnis": "geklickt",
+   "quelle": "fuhre-woche",
+   "kasseVorher": 157
+  },
+  {
+   "kumWoche": 52,
+   "zug": "fuhre:plan:mager",
+   "ergebnis": "geklickt",
+   "quelle": "fuhre-woche",
+   "kasseVorher": 149
+  },
+  {
+   "kumWoche": 53,
+   "zug": "fuhre:plan:mager",
+   "ergebnis": "geklickt",
+   "quelle": "fuhre-woche",
+   "kasseVorher": 145
+  },
+  {
+   "kumWoche": 54,
+   "zug": "fuhre:plan:mager",
+   "ergebnis": "geklickt",
+   "quelle": "fuhre-woche",
+   "kasseVorher": 143
+  },
+  {
+   "kumWoche": 55,
+   "zug": "fuhre:plan:mager",
+   "ergebnis": "geklickt",
+   "quelle": "fuhre-woche",
+   "kasseVorher": 135
+  },
+  {
+   "kumWoche": 56,
+   "zug": "fuhre:plan:mager",
+   "ergebnis": "geklickt",
+   "quelle": "fuhre-woche",
+   "kasseVorher": 133
+  },
+  {
+   "kumWoche": 57,
+   "zug": "fuhre:plan:mager",
+   "ergebnis": "geklickt",
+   "quelle": "fuhre-woche",
+   "kasseVorher": 133
+  },
+  {
+   "kumWoche": 58,
+   "zug": "fuhre:plan:mager",
+   "ergebnis": "geklickt",
+   "quelle": "fuhre-woche",
+   "kasseVorher": 127
+  },
+  {
+   "kumWoche": 59,
+   "zug": "fuhre:plan:mager",
+   "ergebnis": "geklickt",
+   "quelle": "fuhre-woche",
+   "kasseVorher": 121
+  },
+  {
+   "kumWoche": 60,
+   "zug": "fuhre:plan:mager",
+   "ergebnis": "geklickt",
+   "quelle": "fuhre-woche",
+   "kasseVorher": 117
+  },
+  {
+   "kumWoche": 61,
+   "zug": "gegner:abwehren:markt",
+   "ergebnis": "nicht-gegriffen:nicht-unter-zeiger",
+   "quelle": "gegenzug",
+   "kasseVorher": 341
+  },
+  {
+   "kumWoche": 61,
+   "zug": "weiter",
+   "ergebnis": "geklickt",
+   "quelle": "pflicht",
+   "kasseVorher": 341
+  },
+  {
+   "kumWoche": 62,
+   "zug": "gegner:abwehren:markt",
+   "ergebnis": "nicht-gegriffen:nicht-unter-zeiger",
+   "quelle": "gegenzug",
+   "kasseVorher": 339
+  },
+  {
+   "kumWoche": 62,
+   "zug": "fuhre:plan:probe",
+   "ergebnis": "geklickt",
+   "quelle": "fuhre-woche",
+   "kasseVorher": 339
+  },
+  {
+   "kumWoche": 63,
+   "zug": "fuhre:plan:probe",
+   "ergebnis": "geklickt",
+   "quelle": "fuhre-woche",
+   "kasseVorher": 324
+  },
+  {
+   "kumWoche": 64,
+   "zug": "fuhre:plan:probe",
+   "ergebnis": "geklickt",
+   "quelle": "fuhre-woche",
+   "kasseVorher": 313
+  },
+  {
+   "kumWoche": 65,
+   "zug": "fuhre:plan:probe",
+   "ergebnis": "geklickt",
+   "quelle": "fuhre-woche",
+   "kasseVorher": 298
+  },
+  {
+   "kumWoche": 66,
+   "zug": "fuhre:plan:mager",
+   "ergebnis": "geklickt",
+   "quelle": "fuhre-woche",
+   "kasseVorher": 286
+  },
+  {
+   "kumWoche": 67,
+   "zug": "fuhre:plan:mager",
+   "ergebnis": "geklickt",
+   "quelle": "fuhre-woche",
+   "kasseVorher": 275
+  },
+  {
+   "kumWoche": 68,
+   "zug": "fuhre:plan:mager",
+   "ergebnis": "geklickt",
+   "quelle": "fuhre-woche",
+   "kasseVorher": 269
+  },
+  {
+   "kumWoche": 69,
+   "zug": "gegner:abwehren:obernberg",
+   "ergebnis": "geklickt",
+   "quelle": "gegenzug",
+   "kasseVorher": 261
+  },
+  {
+   "kumWoche": 69,
+   "zug": "fuhre:plan:mager",
+   "ergebnis": "geklickt",
+   "quelle": "fuhre-woche",
+   "kasseVorher": 127
+  },
+  {
+   "kumWoche": 70,
+   "zug": "fuhre:plan:mager",
+   "ergebnis": "geklickt",
+   "quelle": "fuhre-woche",
+   "kasseVorher": 116
+  },
+  {
+   "kumWoche": 71,
+   "zug": "fuhre:plan:mager",
+   "ergebnis": "geklickt",
+   "quelle": "fuhre-woche",
+   "kasseVorher": 111
+  },
+  {
+   "kumWoche": 72,
+   "zug": "fuhre:plan:mager",
+   "ergebnis": "geklickt",
+   "quelle": "fuhre-woche",
+   "kasseVorher": 101
+  },
+  {
+   "kumWoche": 73,
+   "zug": "fuhre:plan:mager",
+   "ergebnis": "geklickt",
+   "quelle": "fuhre-woche",
+   "kasseVorher": 96
+  },
+  {
+   "kumWoche": 74,
+   "zug": "fuhre:plan:mager",
+   "ergebnis": "geklickt",
+   "quelle": "fuhre-woche",
+   "kasseVorher": 84
+  },
+  {
+   "kumWoche": 75,
+   "zug": "fuhre:plan:mager",
+   "ergebnis": "geklickt",
+   "quelle": "fuhre-woche",
+   "kasseVorher": 78
+  },
+  {
+   "kumWoche": 76,
+   "zug": "fuhre:plan:mager",
+   "ergebnis": "geklickt",
+   "quelle": "fuhre-woche",
+   "kasseVorher": 73
+  },
+  {
+   "kumWoche": 77,
+   "zug": "fuhre:plan:mager",
+   "ergebnis": "geklickt",
+   "quelle": "fuhre-woche",
+   "kasseVorher": 66
+  },
+  {
+   "kumWoche": 78,
+   "zug": "fuhre:plan:mager",
+   "ergebnis": "geklickt",
+   "quelle": "fuhre-woche",
+   "kasseVorher": 59
+  },
+  {
+   "kumWoche": 79,
+   "zug": "fuhre:plan:mager",
+   "ergebnis": "geklickt",
+   "quelle": "fuhre-woche",
+   "kasseVorher": 52
+  },
+  {
+   "kumWoche": 80,
+   "zug": "fuhre:plan:mager",
+   "ergebnis": "geklickt",
+   "quelle": "fuhre-woche",
+   "kasseVorher": 44
+  },
+  {
+   "kumWoche": 81,
+   "zug": "fuhre:plan:mager",
+   "ergebnis": "geklickt",
+   "quelle": "fuhre-woche",
+   "kasseVorher": 34
+  },
+  {
+   "kumWoche": 82,
+   "zug": "fuhre:plan:mager",
+   "ergebnis": "geklickt",
+   "quelle": "fuhre-woche",
+   "kasseVorher": 30
+  },
+  {
+   "kumWoche": 83,
+   "zug": "fuhre:plan:mager",
+   "ergebnis": "geklickt",
+   "quelle": "fuhre-woche",
+   "kasseVorher": 27
+  },
+  {
+   "kumWoche": 84,
+   "zug": "fuhre:plan:mager",
+   "ergebnis": "geklickt",
+   "quelle": "fuhre-woche",
+   "kasseVorher": 17
+  },
+  {
+   "kumWoche": 85,
+   "zug": "fuhre:plan:mager",
+   "ergebnis": "geklickt",
+   "quelle": "fuhre-woche",
+   "kasseVorher": 10
+  },
+  {
+   "kumWoche": 86,
+   "zug": "fuhre:plan:mager",
+   "ergebnis": "geklickt",
+   "quelle": "fuhre-woche",
+   "kasseVorher": 4
+  },
+  {
+   "kumWoche": 87,
+   "zug": "fuhre:plan:mager",
+   "ergebnis": "geklickt",
+   "quelle": "fuhre-woche",
+   "kasseVorher": 0
+  },
+  {
+   "kumWoche": 88,
+   "zug": "fuhre:plan:mager",
+   "ergebnis": "geklickt",
+   "quelle": "fuhre-woche",
+   "kasseVorher": 0
+  },
+  {
+   "kumWoche": 89,
+   "zug": "fuhre:plan:mager",
+   "ergebnis": "geklickt",
+   "quelle": "fuhre-woche",
+   "kasseVorher": 0
+  },
+  {
+   "kumWoche": 90,
+   "zug": "fuhre:plan:mager",
+   "ergebnis": "geklickt",
+   "quelle": "fuhre-woche",
+   "kasseVorher": 0
+  },
+  {
+   "kumWoche": 91,
+   "zug": "weiter",
+   "ergebnis": "geklickt",
+   "quelle": "pflicht",
+   "kasseVorher": 280
+  },
+  {
+   "kumWoche": 92,
+   "zug": "fuhre:plan:probe",
+   "ergebnis": "geklickt",
+   "quelle": "fuhre-woche",
+   "kasseVorher": 278
+  },
+  {
+   "kumWoche": 93,
+   "zug": "fuhre:plan:probe",
+   "ergebnis": "geklickt",
+   "quelle": "fuhre-woche",
+   "kasseVorher": 274
+  },
+  {
+   "kumWoche": 94,
+   "zug": "fuhre:plan:probe",
+   "ergebnis": "geklickt",
+   "quelle": "fuhre-woche",
+   "kasseVorher": 268
+  },
+  {
+   "kumWoche": 95,
+   "zug": "gegner:abwehren:muehlwirt",
+   "ergebnis": "geklickt",
+   "quelle": "gegenzug",
+   "kasseVorher": 258
+  },
+  {
+   "kumWoche": 95,
+   "zug": "fuhre:plan:probe",
+   "ergebnis": "geklickt",
+   "quelle": "fuhre-woche",
+   "kasseVorher": 24
+  },
+  {
+   "kumWoche": 96,
+   "zug": "fuhre:plan:probe",
+   "ergebnis": "geklickt",
+   "quelle": "fuhre-woche",
+   "kasseVorher": 22
+  },
+  {
+   "kumWoche": 97,
+   "zug": "fuhre:plan:probe",
+   "ergebnis": "geklickt",
+   "quelle": "fuhre-woche",
+   "kasseVorher": 8
+  },
+  {
+   "kumWoche": 98,
+   "zug": "fuhre:plan:probe",
+   "ergebnis": "geklickt",
+   "quelle": "fuhre-woche",
+   "kasseVorher": 0
+  },
+  {
+   "kumWoche": 99,
+   "zug": "fuhre:plan:probe",
+   "ergebnis": "geklickt",
+   "quelle": "fuhre-woche",
+   "kasseVorher": 0
+  },
+  {
+   "kumWoche": 100,
+   "zug": "fuhre:plan:probe",
+   "ergebnis": "geklickt",
+   "quelle": "fuhre-woche",
+   "kasseVorher": 0
+  }
+ ],
+ "gegnerZensus": [
+  {
+   "kumWoche": 1,
+   "jahr": 1600,
+   "woche": 1,
+   "epoche": 2,
+   "anzahlGreifbar": 9,
+   "liste": [
+    {
+     "zug": "gegner:zuvorkommen:muehlwirt",
+     "text": "wirbt · noch 6 Wo.zuvorkommen 170 fl",
+     "preis": "-170"
+    },
+    {
+     "zug": "gegner:hinhalten:muehlwirt",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:muehlwirt",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    },
+    {
+     "zug": "gegner:abloesen:brueckenwirt",
+     "text": "BRU · HEIablösen 231 fl",
+     "preis": "-231"
+    },
+    {
+     "zug": "gegner:hinhalten:brueckenwirt",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:brueckenwirt",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    },
+    {
+     "zug": "gegner:abloesen:obernberg",
+     "text": "OBE · ZUNablösen 216 fl",
+     "preis": "-216"
+    },
+    {
+     "zug": "gegner:hinhalten:obernberg",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:obernberg",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    }
+   ]
+  },
+  {
+   "kumWoche": 2,
+   "jahr": 1600,
+   "woche": 2,
+   "epoche": 2,
+   "anzahlGreifbar": 10,
+   "liste": [
+    {
+     "zug": "gegner:oeffnen:adler",
+     "text": "Braustatt Adler",
+     "preis": null
+    },
+    {
+     "zug": "gegner:hinhalten:ochse",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:ochse",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    },
+    {
+     "zug": "gegner:abloesen:brueckenwirt",
+     "text": "BRU · HEIablösen 231 fl",
+     "preis": "-231"
+    },
+    {
+     "zug": "gegner:hinhalten:brueckenwirt",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:brueckenwirt",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    },
+    {
+     "zug": "gegner:abloesen:obernberg",
+     "text": "OBE · ZUNablösen 216 fl",
+     "preis": "-216"
+    },
+    {
+     "zug": "gegner:hinhalten:obernberg",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:obernberg",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    },
+    {
+     "zug": "gegner:beschwerde-bild",
+     "text": "Anzeige bei der Zunftladekostet kein Geld · vier Ansehengegen Zum Goldenen Ochsen",
+     "preis": "0"
+    }
+   ]
+  },
+  {
+   "kumWoche": 3,
+   "jahr": 1600,
+   "woche": 3,
+   "epoche": 2,
+   "anzahlGreifbar": 10,
+   "liste": [
+    {
+     "zug": "gegner:oeffnen:adler",
+     "text": "Braustatt Adler",
+     "preis": null
+    },
+    {
+     "zug": "gegner:hinhalten:ochse",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:ochse",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    },
+    {
+     "zug": "gegner:abloesen:brueckenwirt",
+     "text": "BRU · HEIablösen 231 fl",
+     "preis": "-231"
+    },
+    {
+     "zug": "gegner:hinhalten:brueckenwirt",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:brueckenwirt",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    },
+    {
+     "zug": "gegner:abloesen:obernberg",
+     "text": "OBE · ZUNablösen 216 fl",
+     "preis": "-216"
+    },
+    {
+     "zug": "gegner:hinhalten:obernberg",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:obernberg",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    },
+    {
+     "zug": "gegner:beschwerde-bild",
+     "text": "Anzeige bei der Zunftladekostet kein Geld · vier Ansehengegen Zum Goldenen Ochsen",
+     "preis": "0"
+    }
+   ]
+  },
+  {
+   "kumWoche": 4,
+   "jahr": 1600,
+   "woche": 4,
+   "epoche": 2,
+   "anzahlGreifbar": 13,
+   "liste": [
+    {
+     "zug": "gegner:oeffnen:adler",
+     "text": "Braustatt Adler",
+     "preis": null
+    },
+    {
+     "zug": "gegner:abwehren:lindenhof",
+     "text": "die Lade ladet · noch 5 Wo.zuvorkommen 469 fl",
+     "preis": "-469"
+    },
+    {
+     "zug": "gegner:hinhalten:lindenhof",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:lindenhof",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    },
+    {
+     "zug": "gegner:hinhalten:ochse",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:ochse",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    },
+    {
+     "zug": "gegner:abloesen:brueckenwirt",
+     "text": "BRU · HEIablösen 231 fl",
+     "preis": "-231"
+    },
+    {
+     "zug": "gegner:hinhalten:brueckenwirt",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:brueckenwirt",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    },
+    {
+     "zug": "gegner:abloesen:obernberg",
+     "text": "OBE · ZUNablösen 216 fl",
+     "preis": "-216"
+    },
+    {
+     "zug": "gegner:hinhalten:obernberg",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:obernberg",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    },
+    {
+     "zug": "gegner:beschwerde-bild",
+     "text": "Anzeige bei der Zunftladekostet kein Geld · vier Ansehengegen Zum Goldenen Ochsen",
+     "preis": "0"
+    }
+   ]
+  },
+  {
+   "kumWoche": 5,
+   "jahr": 1600,
+   "woche": 5,
+   "epoche": 2,
+   "anzahlGreifbar": 8,
+   "liste": [
+    {
+     "zug": "gegner:oeffnen:adler",
+     "text": "Braustatt Adler",
+     "preis": null
+    },
+    {
+     "zug": "gegner:hinhalten:ochse",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:ochse",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    },
+    {
+     "zug": "gegner:hinhalten:brueckenwirt",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:brueckenwirt",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    },
+    {
+     "zug": "gegner:hinhalten:obernberg",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:obernberg",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    },
+    {
+     "zug": "gegner:beschwerde-bild",
+     "text": "Anzeige bei der Zunftladekostet kein Geld · vier Ansehengegen Zum Goldenen Ochsen",
+     "preis": "0"
+    }
+   ]
+  },
+  {
+   "kumWoche": 6,
+   "jahr": 1600,
+   "woche": 6,
+   "epoche": 2,
+   "anzahlGreifbar": 8,
+   "liste": [
+    {
+     "zug": "gegner:oeffnen:adler",
+     "text": "Braustatt Adler",
+     "preis": null
+    },
+    {
+     "zug": "gegner:hinhalten:ochse",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:ochse",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    },
+    {
+     "zug": "gegner:hinhalten:brueckenwirt",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:brueckenwirt",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    },
+    {
+     "zug": "gegner:hinhalten:obernberg",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:obernberg",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    },
+    {
+     "zug": "gegner:beschwerde-bild",
+     "text": "Anzeige bei der Zunftladekostet kein Geld · vier Ansehengegen Zum Goldenen Ochsen",
+     "preis": "0"
+    }
+   ]
+  },
+  {
+   "kumWoche": 7,
+   "jahr": 1600,
+   "woche": 7,
+   "epoche": 2,
+   "anzahlGreifbar": 10,
+   "liste": [
+    {
+     "zug": "gegner:oeffnen:adler",
+     "text": "Braustatt Adler",
+     "preis": null
+    },
+    {
+     "zug": "gegner:hinhalten:ochse",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:ochse",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    },
+    {
+     "zug": "gegner:hinhalten:brueckenwirt",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:brueckenwirt",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    },
+    {
+     "zug": "gegner:hinhalten:faehrhaus",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:faehrhaus",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    },
+    {
+     "zug": "gegner:hinhalten:obernberg",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:obernberg",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    },
+    {
+     "zug": "gegner:beschwerde-bild",
+     "text": "Anzeige bei der Zunftladekostet kein Geld · vier Ansehengegen Fährhaus am Fluss",
+     "preis": "0"
+    }
+   ]
+  },
+  {
+   "kumWoche": 8,
+   "jahr": 1600,
+   "woche": 8,
+   "epoche": 2,
+   "anzahlGreifbar": 10,
+   "liste": [
+    {
+     "zug": "gegner:oeffnen:adler",
+     "text": "Braustatt Adler",
+     "preis": null
+    },
+    {
+     "zug": "gegner:hinhalten:ochse",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:ochse",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    },
+    {
+     "zug": "gegner:hinhalten:brueckenwirt",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:brueckenwirt",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    },
+    {
+     "zug": "gegner:hinhalten:faehrhaus",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:faehrhaus",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    },
+    {
+     "zug": "gegner:hinhalten:obernberg",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:obernberg",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    },
+    {
+     "zug": "gegner:beschwerde-bild",
+     "text": "Anzeige bei der Zunftladekostet kein Geld · vier Ansehengegen Fährhaus am Fluss",
+     "preis": "0"
+    }
+   ]
+  },
+  {
+   "kumWoche": 9,
+   "jahr": 1600,
+   "woche": 9,
+   "epoche": 2,
+   "anzahlGreifbar": 10,
+   "liste": [
+    {
+     "zug": "gegner:oeffnen:adler",
+     "text": "Braustatt Adler",
+     "preis": null
+    },
+    {
+     "zug": "gegner:hinhalten:ochse",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:ochse",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    },
+    {
+     "zug": "gegner:hinhalten:brueckenwirt",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:brueckenwirt",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    },
+    {
+     "zug": "gegner:hinhalten:faehrhaus",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:faehrhaus",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    },
+    {
+     "zug": "gegner:hinhalten:obernberg",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:obernberg",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    },
+    {
+     "zug": "gegner:beschwerde-bild",
+     "text": "Anzeige bei der Zunftladekostet kein Geld · vier Ansehengegen Fährhaus am Fluss",
+     "preis": "0"
+    }
+   ]
+  },
+  {
+   "kumWoche": 10,
+   "jahr": 1600,
+   "woche": 10,
+   "epoche": 2,
+   "anzahlGreifbar": 11,
+   "liste": [
+    {
+     "zug": "gegner:oeffnen:adler",
+     "text": "Braustatt Adler",
+     "preis": null
+    },
+    {
+     "zug": "gegner:hinhalten:ochse",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:ochse",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    },
+    {
+     "zug": "gegner:hinhalten:brueckenwirt",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:brueckenwirt",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    },
+    {
+     "zug": "gegner:hinhalten:faehrhaus",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:faehrhaus",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    },
+    {
+     "zug": "gegner:abloesen:obernberg",
+     "text": "OBE · ZUNablösen 216 fl",
+     "preis": "-216"
+    },
+    {
+     "zug": "gegner:hinhalten:obernberg",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:obernberg",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    },
+    {
+     "zug": "gegner:beschwerde-bild",
+     "text": "Anzeige bei der Zunftladekostet kein Geld · vier Ansehengegen Fährhaus am Fluss",
+     "preis": "0"
+    }
+   ]
+  },
+  {
+   "kumWoche": 11,
+   "jahr": 1600,
+   "woche": 11,
+   "epoche": 2,
+   "anzahlGreifbar": 10,
+   "liste": [
+    {
+     "zug": "gegner:oeffnen:adler",
+     "text": "Braustatt Adler",
+     "preis": null
+    },
+    {
+     "zug": "gegner:hinhalten:ochse",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:ochse",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    },
+    {
+     "zug": "gegner:abloesen:brueckenwirt",
+     "text": "BRU · HEIablösen 231 fl",
+     "preis": "-231"
+    },
+    {
+     "zug": "gegner:hinhalten:brueckenwirt",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:brueckenwirt",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    },
+    {
+     "zug": "gegner:zuvorkommen:faehrhaus",
+     "text": "wirbt · noch 2 Wo.zuvorkommen 113 fl",
+     "preis": "-113"
+    },
+    {
+     "zug": "gegner:hinhalten:faehrhaus",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:faehrhaus",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    },
+    {
+     "zug": "gegner:beschwerde-bild",
+     "text": "Anzeige bei der Zunftladekostet kein Geld · vier Ansehengegen Fährhaus am Fluss",
+     "preis": "0"
+    }
+   ]
+  },
+  {
+   "kumWoche": 12,
+   "jahr": 1600,
+   "woche": 12,
+   "epoche": 2,
+   "anzahlGreifbar": 6,
+   "liste": [
+    {
+     "zug": "gegner:oeffnen:adler",
+     "text": "Braustatt Adler",
+     "preis": null
+    },
+    {
+     "zug": "gegner:hinhalten:ochse",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:ochse",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    },
+    {
+     "zug": "gegner:hinhalten:brueckenwirt",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:brueckenwirt",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    },
+    {
+     "zug": "gegner:beschwerde-bild",
+     "text": "Anzeige bei der Zunftladekostet kein Geld · vier Ansehengegen Zum Goldenen Ochsen",
+     "preis": "0"
+    }
+   ]
+  },
+  {
+   "kumWoche": 13,
+   "jahr": 1600,
+   "woche": 13,
+   "epoche": 2,
+   "anzahlGreifbar": 9,
+   "liste": [
+    {
+     "zug": "gegner:oeffnen:adler",
+     "text": "Braustatt Adler",
+     "preis": null
+    },
+    {
+     "zug": "gegner:hinhalten:ochse",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:ochse",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    },
+    {
+     "zug": "gegner:zuvorkommen:pfarrhof",
+     "text": "wirbt · noch 3 Wo.zuvorkommen 85 fl",
+     "preis": "-85"
+    },
+    {
+     "zug": "gegner:hinhalten:pfarrhof",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:pfarrhof",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    },
+    {
+     "zug": "gegner:hinhalten:brueckenwirt",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:brueckenwirt",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    },
+    {
+     "zug": "gegner:beschwerde-bild",
+     "text": "Anzeige bei der Zunftladekostet kein Geld · vier Ansehengegen Pfarrschenke St. Michael",
+     "preis": "0"
+    }
+   ]
+  },
+  {
+   "kumWoche": 14,
+   "jahr": 1600,
+   "woche": 14,
+   "epoche": 2,
+   "anzahlGreifbar": 6,
+   "liste": [
+    {
+     "zug": "gegner:oeffnen:adler",
+     "text": "Braustatt Adler",
+     "preis": null
+    },
+    {
+     "zug": "gegner:hinhalten:ochse",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:ochse",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    },
+    {
+     "zug": "gegner:hinhalten:brueckenwirt",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:brueckenwirt",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    },
+    {
+     "zug": "gegner:beschwerde-bild",
+     "text": "Anzeige bei der Zunftladekostet kein Geld · vier Ansehengegen Zum Goldenen Ochsen",
+     "preis": "0"
+    }
+   ]
+  },
+  {
+   "kumWoche": 15,
+   "jahr": 1600,
+   "woche": 15,
+   "epoche": 2,
+   "anzahlGreifbar": 8,
+   "liste": [
+    {
+     "zug": "gegner:oeffnen:adler",
+     "text": "Braustatt Adler",
+     "preis": null
+    },
+    {
+     "zug": "gegner:hinhalten:ochse",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:ochse",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    },
+    {
+     "zug": "gegner:hinhalten:brueckenwirt",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:brueckenwirt",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    },
+    {
+     "zug": "gegner:hinhalten:markt",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:markt",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    },
+    {
+     "zug": "gegner:beschwerde-bild",
+     "text": "Anzeige bei der Zunftladekostet kein Geld · vier Ansehengegen Zum Goldenen Ochsen",
+     "preis": "0"
+    }
+   ]
+  },
+  {
+   "kumWoche": 16,
+   "jahr": 1600,
+   "woche": 16,
+   "epoche": 2,
+   "anzahlGreifbar": 8,
+   "liste": [
+    {
+     "zug": "gegner:oeffnen:adler",
+     "text": "Braustatt Adler",
+     "preis": null
+    },
+    {
+     "zug": "gegner:hinhalten:ochse",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:ochse",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    },
+    {
+     "zug": "gegner:hinhalten:brueckenwirt",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:brueckenwirt",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    },
+    {
+     "zug": "gegner:hinhalten:markt",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:markt",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    },
+    {
+     "zug": "gegner:beschwerde-bild",
+     "text": "Anzeige bei der Zunftladekostet kein Geld · vier Ansehengegen Zum Goldenen Ochsen",
+     "preis": "0"
+    }
+   ]
+  },
+  {
+   "kumWoche": 17,
+   "jahr": 1600,
+   "woche": 17,
+   "epoche": 2,
+   "anzahlGreifbar": 8,
+   "liste": [
+    {
+     "zug": "gegner:oeffnen:adler",
+     "text": "Braustatt Adler",
+     "preis": null
+    },
+    {
+     "zug": "gegner:hinhalten:ochse",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:ochse",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    },
+    {
+     "zug": "gegner:hinhalten:brueckenwirt",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:brueckenwirt",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    },
+    {
+     "zug": "gegner:hinhalten:markt",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:markt",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    },
+    {
+     "zug": "gegner:beschwerde-bild",
+     "text": "Anzeige bei der Zunftladekostet kein Geld · vier Ansehengegen Zum Goldenen Ochsen",
+     "preis": "0"
+    }
+   ]
+  },
+  {
+   "kumWoche": 18,
+   "jahr": 1600,
+   "woche": 18,
+   "epoche": 2,
+   "anzahlGreifbar": 8,
+   "liste": [
+    {
+     "zug": "gegner:oeffnen:adler",
+     "text": "Braustatt Adler",
+     "preis": null
+    },
+    {
+     "zug": "gegner:hinhalten:ochse",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:ochse",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    },
+    {
+     "zug": "gegner:hinhalten:brueckenwirt",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:brueckenwirt",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    },
+    {
+     "zug": "gegner:hinhalten:markt",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:markt",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    },
+    {
+     "zug": "gegner:beschwerde-bild",
+     "text": "Anzeige bei der Zunftladekostet kein Geld · vier Ansehengegen Zum Goldenen Ochsen",
+     "preis": "0"
+    }
+   ]
+  },
+  {
+   "kumWoche": 19,
+   "jahr": 1600,
+   "woche": 19,
+   "epoche": 2,
+   "anzahlGreifbar": 8,
+   "liste": [
+    {
+     "zug": "gegner:oeffnen:adler",
+     "text": "Braustatt Adler",
+     "preis": null
+    },
+    {
+     "zug": "gegner:hinhalten:ochse",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:ochse",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    },
+    {
+     "zug": "gegner:hinhalten:brueckenwirt",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:brueckenwirt",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    },
+    {
+     "zug": "gegner:hinhalten:markt",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:markt",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    },
+    {
+     "zug": "gegner:beschwerde-bild",
+     "text": "Anzeige bei der Zunftladekostet kein Geld · vier Ansehengegen Zum Goldenen Ochsen",
+     "preis": "0"
+    }
+   ]
+  },
+  {
+   "kumWoche": 20,
+   "jahr": 1600,
+   "woche": 20,
+   "epoche": 2,
+   "anzahlGreifbar": 9,
+   "liste": [
+    {
+     "zug": "gegner:oeffnen:adler",
+     "text": "Braustatt Adler",
+     "preis": null
+    },
+    {
+     "zug": "gegner:hinhalten:ochse",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:ochse",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    },
+    {
+     "zug": "gegner:zukaufen:torschenke",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    },
+    {
+     "zug": "gegner:hinhalten:brueckenwirt",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:brueckenwirt",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    },
+    {
+     "zug": "gegner:hinhalten:markt",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:markt",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    },
+    {
+     "zug": "gegner:beschwerde-bild",
+     "text": "Anzeige bei der Zunftladekostet kein Geld · vier Ansehengegen Zum Goldenen Ochsen",
+     "preis": "0"
+    }
+   ]
+  },
+  {
+   "kumWoche": 21,
+   "jahr": 1600,
+   "woche": 21,
+   "epoche": 2,
+   "anzahlGreifbar": 9,
+   "liste": [
+    {
+     "zug": "gegner:oeffnen:adler",
+     "text": "Braustatt Adler",
+     "preis": null
+    },
+    {
+     "zug": "gegner:hinhalten:ochse",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:ochse",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    },
+    {
+     "zug": "gegner:zukaufen:torschenke",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    },
+    {
+     "zug": "gegner:hinhalten:brueckenwirt",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:brueckenwirt",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    },
+    {
+     "zug": "gegner:hinhalten:markt",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:markt",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    },
+    {
+     "zug": "gegner:beschwerde-bild",
+     "text": "Anzeige bei der Zunftladekostet kein Geld · vier Ansehengegen Zum Goldenen Ochsen",
+     "preis": "0"
+    }
+   ]
+  },
+  {
+   "kumWoche": 22,
+   "jahr": 1600,
+   "woche": 22,
+   "epoche": 2,
+   "anzahlGreifbar": 9,
+   "liste": [
+    {
+     "zug": "gegner:oeffnen:adler",
+     "text": "Braustatt Adler",
+     "preis": null
+    },
+    {
+     "zug": "gegner:hinhalten:ochse",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:ochse",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    },
+    {
+     "zug": "gegner:zukaufen:torschenke",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    },
+    {
+     "zug": "gegner:hinhalten:brueckenwirt",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:brueckenwirt",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    },
+    {
+     "zug": "gegner:hinhalten:markt",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:markt",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    },
+    {
+     "zug": "gegner:beschwerde-bild",
+     "text": "Anzeige bei der Zunftladekostet kein Geld · vier Ansehengegen Zum Goldenen Ochsen",
+     "preis": "0"
+    }
+   ]
+  },
+  {
+   "kumWoche": 23,
+   "jahr": 1600,
+   "woche": 23,
+   "epoche": 2,
+   "anzahlGreifbar": 9,
+   "liste": [
+    {
+     "zug": "gegner:oeffnen:adler",
+     "text": "Braustatt Adler",
+     "preis": null
+    },
+    {
+     "zug": "gegner:hinhalten:ochse",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:ochse",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    },
+    {
+     "zug": "gegner:zukaufen:torschenke",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    },
+    {
+     "zug": "gegner:hinhalten:brueckenwirt",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:brueckenwirt",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    },
+    {
+     "zug": "gegner:hinhalten:markt",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:markt",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    },
+    {
+     "zug": "gegner:beschwerde-bild",
+     "text": "Anzeige bei der Zunftladekostet kein Geld · vier Ansehengegen Zum Goldenen Ochsen",
+     "preis": "0"
+    }
+   ]
+  },
+  {
+   "kumWoche": 24,
+   "jahr": 1600,
+   "woche": 24,
+   "epoche": 2,
+   "anzahlGreifbar": 12,
+   "liste": [
+    {
+     "zug": "gegner:oeffnen:adler",
+     "text": "Braustatt Adler",
+     "preis": null
+    },
+    {
+     "zug": "gegner:hinhalten:ochse",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:ochse",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    },
+    {
+     "zug": "gegner:hinhalten:torschenke",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:torschenke",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    },
+    {
+     "zug": "gegner:hinhalten:brueckenwirt",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:brueckenwirt",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    },
+    {
+     "zug": "gegner:hinhalten:markt",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:markt",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    },
+    {
+     "zug": "gegner:hinhalten:obernberg",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:obernberg",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    },
+    {
+     "zug": "gegner:beschwerde-bild",
+     "text": "Anzeige bei der Zunftladekostet kein Geld · vier Ansehengegen Klosterschenke Obernberg",
+     "preis": "0"
+    }
+   ]
+  },
+  {
+   "kumWoche": 25,
+   "jahr": 1600,
+   "woche": 25,
+   "epoche": 2,
+   "anzahlGreifbar": 12,
+   "liste": [
+    {
+     "zug": "gegner:oeffnen:adler",
+     "text": "Braustatt Adler",
+     "preis": null
+    },
+    {
+     "zug": "gegner:hinhalten:ochse",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:ochse",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    },
+    {
+     "zug": "gegner:hinhalten:torschenke",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:torschenke",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    },
+    {
+     "zug": "gegner:hinhalten:brueckenwirt",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:brueckenwirt",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    },
+    {
+     "zug": "gegner:hinhalten:markt",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:markt",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    },
+    {
+     "zug": "gegner:hinhalten:obernberg",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:obernberg",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    },
+    {
+     "zug": "gegner:beschwerde-bild",
+     "text": "Anzeige bei der Zunftladekostet kein Geld · vier Ansehengegen Klosterschenke Obernberg",
+     "preis": "0"
+    }
+   ]
+  },
+  {
+   "kumWoche": 26,
+   "jahr": 1600,
+   "woche": 26,
+   "epoche": 2,
+   "anzahlGreifbar": 14,
+   "liste": [
+    {
+     "zug": "gegner:oeffnen:adler",
+     "text": "Braustatt Adler",
+     "preis": null
+    },
+    {
+     "zug": "gegner:hinhalten:ochse",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:ochse",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    },
+    {
+     "zug": "gegner:hinhalten:torschenke",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:torschenke",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    },
+    {
+     "zug": "gegner:hinhalten:brueckenwirt",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:brueckenwirt",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    },
+    {
+     "zug": "gegner:hinhalten:hirsch",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:hirsch",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    },
+    {
+     "zug": "gegner:hinhalten:markt",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:markt",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    },
+    {
+     "zug": "gegner:hinhalten:obernberg",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:obernberg",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    },
+    {
+     "zug": "gegner:beschwerde-bild",
+     "text": "Anzeige bei der Zunftladekostet kein Geld · vier Ansehengegen Klosterschenke Obernberg",
+     "preis": "0"
+    }
+   ]
+  },
+  {
+   "kumWoche": 27,
+   "jahr": 1600,
+   "woche": 27,
+   "epoche": 2,
+   "anzahlGreifbar": 14,
+   "liste": [
+    {
+     "zug": "gegner:oeffnen:adler",
+     "text": "Braustatt Adler",
+     "preis": null
+    },
+    {
+     "zug": "gegner:hinhalten:ochse",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:ochse",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    },
+    {
+     "zug": "gegner:hinhalten:torschenke",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:torschenke",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    },
+    {
+     "zug": "gegner:hinhalten:brueckenwirt",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:brueckenwirt",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    },
+    {
+     "zug": "gegner:hinhalten:hirsch",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:hirsch",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    },
+    {
+     "zug": "gegner:hinhalten:markt",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:markt",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    },
+    {
+     "zug": "gegner:hinhalten:obernberg",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:obernberg",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    },
+    {
+     "zug": "gegner:beschwerde-bild",
+     "text": "Anzeige bei der Zunftladekostet kein Geld · vier Ansehengegen Landgasthof Hirsch",
+     "preis": "0"
+    }
+   ]
+  },
+  {
+   "kumWoche": 28,
+   "jahr": 1600,
+   "woche": 28,
+   "epoche": 2,
+   "anzahlGreifbar": 12,
+   "liste": [
+    {
+     "zug": "gegner:oeffnen:adler",
+     "text": "Braustatt Adler",
+     "preis": null
+    },
+    {
+     "zug": "gegner:hinhalten:ochse",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:ochse",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    },
+    {
+     "zug": "gegner:hinhalten:brueckenwirt",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:brueckenwirt",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    },
+    {
+     "zug": "gegner:hinhalten:hirsch",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:hirsch",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    },
+    {
+     "zug": "gegner:hinhalten:markt",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:markt",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    },
+    {
+     "zug": "gegner:hinhalten:obernberg",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:obernberg",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    },
+    {
+     "zug": "gegner:beschwerde-bild",
+     "text": "Anzeige bei der Zunftladekostet kein Geld · vier Ansehengegen Landgasthof Hirsch",
+     "preis": "0"
+    }
+   ]
+  },
+  {
+   "kumWoche": 29,
+   "jahr": 1600,
+   "woche": 29,
+   "epoche": 2,
+   "anzahlGreifbar": 12,
+   "liste": [
+    {
+     "zug": "gegner:oeffnen:adler",
+     "text": "Braustatt Adler",
+     "preis": null
+    },
+    {
+     "zug": "gegner:hinhalten:ochse",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:ochse",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    },
+    {
+     "zug": "gegner:hinhalten:brueckenwirt",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:brueckenwirt",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    },
+    {
+     "zug": "gegner:hinhalten:hirsch",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:hirsch",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    },
+    {
+     "zug": "gegner:hinhalten:markt",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:markt",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    },
+    {
+     "zug": "gegner:hinhalten:obernberg",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:obernberg",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    },
+    {
+     "zug": "gegner:beschwerde-bild",
+     "text": "Anzeige bei der Zunftladekostet kein Geld · vier Ansehengegen Zum Goldenen Ochsen",
+     "preis": "0"
+    }
+   ]
+  },
+  {
+   "kumWoche": 30,
+   "jahr": 1600,
+   "woche": 30,
+   "epoche": 2,
+   "anzahlGreifbar": 12,
+   "liste": [
+    {
+     "zug": "gegner:oeffnen:adler",
+     "text": "Braustatt Adler",
+     "preis": null
+    },
+    {
+     "zug": "gegner:hinhalten:ochse",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:ochse",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    },
+    {
+     "zug": "gegner:hinhalten:brueckenwirt",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:brueckenwirt",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    },
+    {
+     "zug": "gegner:hinhalten:hirsch",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:hirsch",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    },
+    {
+     "zug": "gegner:hinhalten:markt",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:markt",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    },
+    {
+     "zug": "gegner:hinhalten:obernberg",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:obernberg",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    },
+    {
+     "zug": "gegner:beschwerde-bild",
+     "text": "Anzeige bei der Zunftladekostet kein Geld · vier Ansehengegen Zum Goldenen Ochsen",
+     "preis": "0"
+    }
+   ]
+  },
+  {
+   "kumWoche": 31,
+   "jahr": 1601,
+   "woche": 1,
+   "epoche": 2,
+   "anzahlGreifbar": 4,
+   "liste": [
+    {
+     "zug": "gegner:abloesen:brueckenwirt",
+     "text": "BRU · HEIablösen 231 fl",
+     "preis": "-231"
+    },
+    {
+     "zug": "gegner:zukaufen:brueckenwirt",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    },
+    {
+     "zug": "gegner:abloesen:obernberg",
+     "text": "OBE · ZUNablösen 216 fl",
+     "preis": "-216"
+    },
+    {
+     "zug": "gegner:zukaufen:obernberg",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    }
+   ]
+  },
+  {
+   "kumWoche": 32,
+   "jahr": 1601,
+   "woche": 2,
+   "epoche": 2,
+   "anzahlGreifbar": 11,
+   "liste": [
+    {
+     "zug": "gegner:oeffnen:adler",
+     "text": "Braustatt Adler",
+     "preis": null
+    },
+    {
+     "zug": "gegner:hinhalten:ochse",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:ochse",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    },
+    {
+     "zug": "gegner:abloesen:brueckenwirt",
+     "text": "BRU · HEIablösen 231 fl",
+     "preis": "-231"
+    },
+    {
+     "zug": "gegner:hinhalten:brueckenwirt",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:brueckenwirt",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    },
+    {
+     "zug": "gegner:hinhalten:hirsch",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:hirsch",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    },
+    {
+     "zug": "gegner:abloesen:obernberg",
+     "text": "OBE · ZUNablösen 216 fl",
+     "preis": "-216"
+    },
+    {
+     "zug": "gegner:hinhalten:obernberg",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:obernberg",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    }
+   ]
+  },
+  {
+   "kumWoche": 33,
+   "jahr": 1601,
+   "woche": 3,
+   "epoche": 2,
+   "anzahlGreifbar": 11,
+   "liste": [
+    {
+     "zug": "gegner:oeffnen:adler",
+     "text": "Braustatt Adler",
+     "preis": null
+    },
+    {
+     "zug": "gegner:hinhalten:ochse",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:ochse",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    },
+    {
+     "zug": "gegner:abloesen:brueckenwirt",
+     "text": "BRU · HEIablösen 231 fl",
+     "preis": "-231"
+    },
+    {
+     "zug": "gegner:hinhalten:brueckenwirt",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:brueckenwirt",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    },
+    {
+     "zug": "gegner:hinhalten:hirsch",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:hirsch",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    },
+    {
+     "zug": "gegner:abloesen:obernberg",
+     "text": "OBE · ZUNablösen 216 fl",
+     "preis": "-216"
+    },
+    {
+     "zug": "gegner:hinhalten:obernberg",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:obernberg",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    }
+   ]
+  },
+  {
+   "kumWoche": 34,
+   "jahr": 1601,
+   "woche": 4,
+   "epoche": 2,
+   "anzahlGreifbar": 11,
+   "liste": [
+    {
+     "zug": "gegner:oeffnen:adler",
+     "text": "Braustatt Adler",
+     "preis": null
+    },
+    {
+     "zug": "gegner:hinhalten:ochse",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:ochse",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    },
+    {
+     "zug": "gegner:abloesen:brueckenwirt",
+     "text": "BRU · HEIablösen 231 fl",
+     "preis": "-231"
+    },
+    {
+     "zug": "gegner:hinhalten:brueckenwirt",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:brueckenwirt",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    },
+    {
+     "zug": "gegner:hinhalten:hirsch",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:hirsch",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    },
+    {
+     "zug": "gegner:abloesen:obernberg",
+     "text": "OBE · ZUNablösen 216 fl",
+     "preis": "-216"
+    },
+    {
+     "zug": "gegner:hinhalten:obernberg",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:obernberg",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    }
+   ]
+  },
+  {
+   "kumWoche": 35,
+   "jahr": 1601,
+   "woche": 5,
+   "epoche": 2,
+   "anzahlGreifbar": 11,
+   "liste": [
+    {
+     "zug": "gegner:oeffnen:adler",
+     "text": "Braustatt Adler",
+     "preis": null
+    },
+    {
+     "zug": "gegner:hinhalten:ochse",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:ochse",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    },
+    {
+     "zug": "gegner:abloesen:brueckenwirt",
+     "text": "BRU · HEIablösen 231 fl",
+     "preis": "-231"
+    },
+    {
+     "zug": "gegner:hinhalten:brueckenwirt",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:brueckenwirt",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    },
+    {
+     "zug": "gegner:hinhalten:hirsch",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:hirsch",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    },
+    {
+     "zug": "gegner:abloesen:obernberg",
+     "text": "OBE · ZUNablösen 216 fl",
+     "preis": "-216"
+    },
+    {
+     "zug": "gegner:hinhalten:obernberg",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:obernberg",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    }
+   ]
+  },
+  {
+   "kumWoche": 36,
+   "jahr": 1601,
+   "woche": 6,
+   "epoche": 2,
+   "anzahlGreifbar": 11,
+   "liste": [
+    {
+     "zug": "gegner:oeffnen:adler",
+     "text": "Braustatt Adler",
+     "preis": null
+    },
+    {
+     "zug": "gegner:hinhalten:ochse",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:ochse",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    },
+    {
+     "zug": "gegner:abloesen:brueckenwirt",
+     "text": "BRU · HEIablösen 231 fl",
+     "preis": "-231"
+    },
+    {
+     "zug": "gegner:hinhalten:brueckenwirt",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:brueckenwirt",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    },
+    {
+     "zug": "gegner:hinhalten:hirsch",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:hirsch",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    },
+    {
+     "zug": "gegner:abloesen:obernberg",
+     "text": "OBE · ZUNablösen 216 fl",
+     "preis": "-216"
+    },
+    {
+     "zug": "gegner:hinhalten:obernberg",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:obernberg",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    }
+   ]
+  },
+  {
+   "kumWoche": 37,
+   "jahr": 1601,
+   "woche": 7,
+   "epoche": 2,
+   "anzahlGreifbar": 11,
+   "liste": [
+    {
+     "zug": "gegner:oeffnen:adler",
+     "text": "Braustatt Adler",
+     "preis": null
+    },
+    {
+     "zug": "gegner:hinhalten:ochse",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:ochse",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    },
+    {
+     "zug": "gegner:abloesen:brueckenwirt",
+     "text": "BRU · HEIablösen 231 fl",
+     "preis": "-231"
+    },
+    {
+     "zug": "gegner:hinhalten:brueckenwirt",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:brueckenwirt",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    },
+    {
+     "zug": "gegner:hinhalten:hirsch",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:hirsch",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    },
+    {
+     "zug": "gegner:abloesen:obernberg",
+     "text": "OBE · ZUNablösen 216 fl",
+     "preis": "-216"
+    },
+    {
+     "zug": "gegner:hinhalten:obernberg",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:obernberg",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    }
+   ]
+  },
+  {
+   "kumWoche": 38,
+   "jahr": 1601,
+   "woche": 8,
+   "epoche": 2,
+   "anzahlGreifbar": 11,
+   "liste": [
+    {
+     "zug": "gegner:oeffnen:adler",
+     "text": "Braustatt Adler",
+     "preis": null
+    },
+    {
+     "zug": "gegner:hinhalten:ochse",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:ochse",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    },
+    {
+     "zug": "gegner:abloesen:brueckenwirt",
+     "text": "BRU · HEIablösen 231 fl",
+     "preis": "-231"
+    },
+    {
+     "zug": "gegner:hinhalten:brueckenwirt",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:brueckenwirt",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    },
+    {
+     "zug": "gegner:hinhalten:hirsch",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:hirsch",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    },
+    {
+     "zug": "gegner:abloesen:obernberg",
+     "text": "OBE · ZUNablösen 216 fl",
+     "preis": "-216"
+    },
+    {
+     "zug": "gegner:hinhalten:obernberg",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:obernberg",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    }
+   ]
+  },
+  {
+   "kumWoche": 39,
+   "jahr": 1601,
+   "woche": 9,
+   "epoche": 2,
+   "anzahlGreifbar": 10,
+   "liste": [
+    {
+     "zug": "gegner:oeffnen:adler",
+     "text": "Braustatt Adler",
+     "preis": null
+    },
+    {
+     "zug": "gegner:hinhalten:ochse",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:ochse",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    },
+    {
+     "zug": "gegner:hinhalten:brueckenwirt",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:brueckenwirt",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    },
+    {
+     "zug": "gegner:hinhalten:hirsch",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:hirsch",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    },
+    {
+     "zug": "gegner:abloesen:obernberg",
+     "text": "OBE · ZUNablösen 216 fl",
+     "preis": "-216"
+    },
+    {
+     "zug": "gegner:hinhalten:obernberg",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:obernberg",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    }
+   ]
+  },
+  {
+   "kumWoche": 40,
+   "jahr": 1601,
+   "woche": 10,
+   "epoche": 2,
+   "anzahlGreifbar": 9,
+   "liste": [
+    {
+     "zug": "gegner:oeffnen:adler",
+     "text": "Braustatt Adler",
+     "preis": null
+    },
+    {
+     "zug": "gegner:hinhalten:ochse",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:ochse",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    },
+    {
+     "zug": "gegner:hinhalten:brueckenwirt",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:brueckenwirt",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    },
+    {
+     "zug": "gegner:hinhalten:hirsch",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:hirsch",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    },
+    {
+     "zug": "gegner:hinhalten:obernberg",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:obernberg",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    }
+   ]
+  },
+  {
+   "kumWoche": 41,
+   "jahr": 1601,
+   "woche": 11,
+   "epoche": 2,
+   "anzahlGreifbar": 9,
+   "liste": [
+    {
+     "zug": "gegner:oeffnen:adler",
+     "text": "Braustatt Adler",
+     "preis": null
+    },
+    {
+     "zug": "gegner:hinhalten:ochse",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:ochse",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    },
+    {
+     "zug": "gegner:hinhalten:brueckenwirt",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:brueckenwirt",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    },
+    {
+     "zug": "gegner:hinhalten:hirsch",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:hirsch",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    },
+    {
+     "zug": "gegner:hinhalten:obernberg",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:obernberg",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    }
+   ]
+  },
+  {
+   "kumWoche": 42,
+   "jahr": 1601,
+   "woche": 12,
+   "epoche": 2,
+   "anzahlGreifbar": 9,
+   "liste": [
+    {
+     "zug": "gegner:oeffnen:adler",
+     "text": "Braustatt Adler",
+     "preis": null
+    },
+    {
+     "zug": "gegner:hinhalten:ochse",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:ochse",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    },
+    {
+     "zug": "gegner:hinhalten:brueckenwirt",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:brueckenwirt",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    },
+    {
+     "zug": "gegner:hinhalten:hirsch",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:hirsch",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    },
+    {
+     "zug": "gegner:hinhalten:obernberg",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:obernberg",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    }
+   ]
+  },
+  {
+   "kumWoche": 43,
+   "jahr": 1601,
+   "woche": 13,
+   "epoche": 2,
+   "anzahlGreifbar": 9,
+   "liste": [
+    {
+     "zug": "gegner:oeffnen:adler",
+     "text": "Braustatt Adler",
+     "preis": null
+    },
+    {
+     "zug": "gegner:hinhalten:ochse",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:ochse",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    },
+    {
+     "zug": "gegner:hinhalten:brueckenwirt",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:brueckenwirt",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    },
+    {
+     "zug": "gegner:hinhalten:hirsch",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:hirsch",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    },
+    {
+     "zug": "gegner:hinhalten:obernberg",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:obernberg",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    }
+   ]
+  },
+  {
+   "kumWoche": 44,
+   "jahr": 1601,
+   "woche": 14,
+   "epoche": 2,
+   "anzahlGreifbar": 9,
+   "liste": [
+    {
+     "zug": "gegner:oeffnen:adler",
+     "text": "Braustatt Adler",
+     "preis": null
+    },
+    {
+     "zug": "gegner:hinhalten:ochse",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:ochse",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    },
+    {
+     "zug": "gegner:hinhalten:brueckenwirt",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:brueckenwirt",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    },
+    {
+     "zug": "gegner:hinhalten:hirsch",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:hirsch",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    },
+    {
+     "zug": "gegner:hinhalten:obernberg",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:obernberg",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    }
+   ]
+  },
+  {
+   "kumWoche": 45,
+   "jahr": 1601,
+   "woche": 15,
+   "epoche": 2,
+   "anzahlGreifbar": 9,
+   "liste": [
+    {
+     "zug": "gegner:oeffnen:adler",
+     "text": "Braustatt Adler",
+     "preis": null
+    },
+    {
+     "zug": "gegner:hinhalten:ochse",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:ochse",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    },
+    {
+     "zug": "gegner:hinhalten:brueckenwirt",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:brueckenwirt",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    },
+    {
+     "zug": "gegner:hinhalten:hirsch",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:hirsch",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    },
+    {
+     "zug": "gegner:hinhalten:obernberg",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:obernberg",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    }
+   ]
+  },
+  {
+   "kumWoche": 46,
+   "jahr": 1601,
+   "woche": 16,
+   "epoche": 2,
+   "anzahlGreifbar": 9,
+   "liste": [
+    {
+     "zug": "gegner:oeffnen:adler",
+     "text": "Braustatt Adler",
+     "preis": null
+    },
+    {
+     "zug": "gegner:hinhalten:ochse",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:ochse",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    },
+    {
+     "zug": "gegner:hinhalten:brueckenwirt",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:brueckenwirt",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    },
+    {
+     "zug": "gegner:hinhalten:hirsch",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:hirsch",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    },
+    {
+     "zug": "gegner:hinhalten:obernberg",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:obernberg",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    }
+   ]
+  },
+  {
+   "kumWoche": 47,
+   "jahr": 1601,
+   "woche": 17,
+   "epoche": 2,
+   "anzahlGreifbar": 9,
+   "liste": [
+    {
+     "zug": "gegner:oeffnen:adler",
+     "text": "Braustatt Adler",
+     "preis": null
+    },
+    {
+     "zug": "gegner:hinhalten:ochse",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:ochse",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    },
+    {
+     "zug": "gegner:hinhalten:brueckenwirt",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:brueckenwirt",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    },
+    {
+     "zug": "gegner:hinhalten:hirsch",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:hirsch",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    },
+    {
+     "zug": "gegner:hinhalten:obernberg",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:obernberg",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    }
+   ]
+  },
+  {
+   "kumWoche": 48,
+   "jahr": 1601,
+   "woche": 18,
+   "epoche": 2,
+   "anzahlGreifbar": 9,
+   "liste": [
+    {
+     "zug": "gegner:oeffnen:adler",
+     "text": "Braustatt Adler",
+     "preis": null
+    },
+    {
+     "zug": "gegner:hinhalten:ochse",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:ochse",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    },
+    {
+     "zug": "gegner:hinhalten:brueckenwirt",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:brueckenwirt",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    },
+    {
+     "zug": "gegner:hinhalten:hirsch",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:hirsch",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    },
+    {
+     "zug": "gegner:hinhalten:obernberg",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:obernberg",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    }
+   ]
+  },
+  {
+   "kumWoche": 49,
+   "jahr": 1601,
+   "woche": 19,
+   "epoche": 2,
+   "anzahlGreifbar": 9,
+   "liste": [
+    {
+     "zug": "gegner:oeffnen:adler",
+     "text": "Braustatt Adler",
+     "preis": null
+    },
+    {
+     "zug": "gegner:hinhalten:ochse",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:ochse",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    },
+    {
+     "zug": "gegner:hinhalten:brueckenwirt",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:brueckenwirt",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    },
+    {
+     "zug": "gegner:hinhalten:hirsch",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:hirsch",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    },
+    {
+     "zug": "gegner:hinhalten:obernberg",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:obernberg",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    }
+   ]
+  },
+  {
+   "kumWoche": 50,
+   "jahr": 1601,
+   "woche": 20,
+   "epoche": 2,
+   "anzahlGreifbar": 7,
+   "liste": [
+    {
+     "zug": "gegner:oeffnen:adler",
+     "text": "Braustatt Adler",
+     "preis": null
+    },
+    {
+     "zug": "gegner:hinhalten:brueckenwirt",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:brueckenwirt",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    },
+    {
+     "zug": "gegner:hinhalten:hirsch",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:hirsch",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    },
+    {
+     "zug": "gegner:hinhalten:obernberg",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:obernberg",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    }
+   ]
+  },
+  {
+   "kumWoche": 51,
+   "jahr": 1601,
+   "woche": 21,
+   "epoche": 2,
+   "anzahlGreifbar": 9,
+   "liste": [
+    {
+     "zug": "gegner:oeffnen:adler",
+     "text": "Braustatt Adler",
+     "preis": null
+    },
+    {
+     "zug": "gegner:hinhalten:ochse",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:ochse",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    },
+    {
+     "zug": "gegner:hinhalten:brueckenwirt",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:brueckenwirt",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    },
+    {
+     "zug": "gegner:hinhalten:hirsch",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:hirsch",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    },
+    {
+     "zug": "gegner:hinhalten:obernberg",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:obernberg",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    }
+   ]
+  },
+  {
+   "kumWoche": 52,
+   "jahr": 1601,
+   "woche": 22,
+   "epoche": 2,
+   "anzahlGreifbar": 9,
+   "liste": [
+    {
+     "zug": "gegner:oeffnen:adler",
+     "text": "Braustatt Adler",
+     "preis": null
+    },
+    {
+     "zug": "gegner:hinhalten:ochse",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:ochse",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    },
+    {
+     "zug": "gegner:hinhalten:brueckenwirt",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:brueckenwirt",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    },
+    {
+     "zug": "gegner:hinhalten:hirsch",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:hirsch",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    },
+    {
+     "zug": "gegner:hinhalten:obernberg",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:obernberg",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    }
+   ]
+  },
+  {
+   "kumWoche": 53,
+   "jahr": 1601,
+   "woche": 23,
+   "epoche": 2,
+   "anzahlGreifbar": 9,
+   "liste": [
+    {
+     "zug": "gegner:oeffnen:adler",
+     "text": "Braustatt Adler",
+     "preis": null
+    },
+    {
+     "zug": "gegner:hinhalten:ochse",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:ochse",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    },
+    {
+     "zug": "gegner:hinhalten:brueckenwirt",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:brueckenwirt",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    },
+    {
+     "zug": "gegner:hinhalten:hirsch",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:hirsch",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    },
+    {
+     "zug": "gegner:hinhalten:obernberg",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:obernberg",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    }
+   ]
+  },
+  {
+   "kumWoche": 54,
+   "jahr": 1601,
+   "woche": 24,
+   "epoche": 2,
+   "anzahlGreifbar": 9,
+   "liste": [
+    {
+     "zug": "gegner:oeffnen:adler",
+     "text": "Braustatt Adler",
+     "preis": null
+    },
+    {
+     "zug": "gegner:hinhalten:ochse",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:ochse",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    },
+    {
+     "zug": "gegner:hinhalten:brueckenwirt",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:brueckenwirt",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    },
+    {
+     "zug": "gegner:hinhalten:hirsch",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:hirsch",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    },
+    {
+     "zug": "gegner:hinhalten:obernberg",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:obernberg",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    }
+   ]
+  },
+  {
+   "kumWoche": 55,
+   "jahr": 1601,
+   "woche": 25,
+   "epoche": 2,
+   "anzahlGreifbar": 9,
+   "liste": [
+    {
+     "zug": "gegner:oeffnen:adler",
+     "text": "Braustatt Adler",
+     "preis": null
+    },
+    {
+     "zug": "gegner:hinhalten:ochse",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:ochse",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    },
+    {
+     "zug": "gegner:hinhalten:brueckenwirt",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:brueckenwirt",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    },
+    {
+     "zug": "gegner:hinhalten:hirsch",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:hirsch",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    },
+    {
+     "zug": "gegner:hinhalten:obernberg",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:obernberg",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    }
+   ]
+  },
+  {
+   "kumWoche": 56,
+   "jahr": 1601,
+   "woche": 26,
+   "epoche": 2,
+   "anzahlGreifbar": 9,
+   "liste": [
+    {
+     "zug": "gegner:oeffnen:adler",
+     "text": "Braustatt Adler",
+     "preis": null
+    },
+    {
+     "zug": "gegner:hinhalten:ochse",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:ochse",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    },
+    {
+     "zug": "gegner:hinhalten:brueckenwirt",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:brueckenwirt",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    },
+    {
+     "zug": "gegner:hinhalten:hirsch",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:hirsch",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    },
+    {
+     "zug": "gegner:hinhalten:obernberg",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:obernberg",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    }
+   ]
+  },
+  {
+   "kumWoche": 57,
+   "jahr": 1601,
+   "woche": 27,
+   "epoche": 2,
+   "anzahlGreifbar": 9,
+   "liste": [
+    {
+     "zug": "gegner:oeffnen:adler",
+     "text": "Braustatt Adler",
+     "preis": null
+    },
+    {
+     "zug": "gegner:hinhalten:ochse",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:ochse",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    },
+    {
+     "zug": "gegner:hinhalten:brueckenwirt",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:brueckenwirt",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    },
+    {
+     "zug": "gegner:hinhalten:hirsch",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:hirsch",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    },
+    {
+     "zug": "gegner:hinhalten:obernberg",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:obernberg",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    }
+   ]
+  },
+  {
+   "kumWoche": 58,
+   "jahr": 1601,
+   "woche": 28,
+   "epoche": 2,
+   "anzahlGreifbar": 9,
+   "liste": [
+    {
+     "zug": "gegner:oeffnen:adler",
+     "text": "Braustatt Adler",
+     "preis": null
+    },
+    {
+     "zug": "gegner:hinhalten:ochse",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:ochse",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    },
+    {
+     "zug": "gegner:hinhalten:brueckenwirt",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:brueckenwirt",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    },
+    {
+     "zug": "gegner:hinhalten:hirsch",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:hirsch",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    },
+    {
+     "zug": "gegner:hinhalten:obernberg",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:obernberg",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    }
+   ]
+  },
+  {
+   "kumWoche": 59,
+   "jahr": 1601,
+   "woche": 29,
+   "epoche": 2,
+   "anzahlGreifbar": 9,
+   "liste": [
+    {
+     "zug": "gegner:oeffnen:adler",
+     "text": "Braustatt Adler",
+     "preis": null
+    },
+    {
+     "zug": "gegner:hinhalten:ochse",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:ochse",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    },
+    {
+     "zug": "gegner:hinhalten:brueckenwirt",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:brueckenwirt",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    },
+    {
+     "zug": "gegner:hinhalten:hirsch",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:hirsch",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    },
+    {
+     "zug": "gegner:hinhalten:obernberg",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:obernberg",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    }
+   ]
+  },
+  {
+   "kumWoche": 60,
+   "jahr": 1601,
+   "woche": 30,
+   "epoche": 2,
+   "anzahlGreifbar": 9,
+   "liste": [
+    {
+     "zug": "gegner:oeffnen:adler",
+     "text": "Braustatt Adler",
+     "preis": null
+    },
+    {
+     "zug": "gegner:hinhalten:ochse",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:ochse",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    },
+    {
+     "zug": "gegner:hinhalten:brueckenwirt",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:brueckenwirt",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    },
+    {
+     "zug": "gegner:hinhalten:hirsch",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:hirsch",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    },
+    {
+     "zug": "gegner:hinhalten:obernberg",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:obernberg",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    }
+   ]
+  },
+  {
+   "kumWoche": 61,
+   "jahr": 1602,
+   "woche": 1,
+   "epoche": 2,
+   "anzahlGreifbar": 4,
+   "liste": [
+    {
+     "zug": "gegner:abloesen:brueckenwirt",
+     "text": "BRU · HEIablösen 231 fl",
+     "preis": "-231"
+    },
+    {
+     "zug": "gegner:zukaufen:brueckenwirt",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    },
+    {
+     "zug": "gegner:abloesen:obernberg",
+     "text": "OBE · ZUNablösen 216 fl",
+     "preis": "-216"
+    },
+    {
+     "zug": "gegner:zukaufen:obernberg",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    }
+   ]
+  },
+  {
+   "kumWoche": 62,
+   "jahr": 1602,
+   "woche": 2,
+   "epoche": 2,
+   "anzahlGreifbar": 11,
+   "liste": [
+    {
+     "zug": "gegner:oeffnen:adler",
+     "text": "Braustatt Adler",
+     "preis": null
+    },
+    {
+     "zug": "gegner:hinhalten:ochse",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:ochse",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    },
+    {
+     "zug": "gegner:abloesen:brueckenwirt",
+     "text": "BRU · HEIablösen 231 fl",
+     "preis": "-231"
+    },
+    {
+     "zug": "gegner:hinhalten:brueckenwirt",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:brueckenwirt",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    },
+    {
+     "zug": "gegner:hinhalten:hirsch",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:hirsch",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    },
+    {
+     "zug": "gegner:abloesen:obernberg",
+     "text": "OBE · ZUNablösen 216 fl",
+     "preis": "-216"
+    },
+    {
+     "zug": "gegner:hinhalten:obernberg",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:obernberg",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    }
+   ]
+  },
+  {
+   "kumWoche": 63,
+   "jahr": 1602,
+   "woche": 3,
+   "epoche": 2,
+   "anzahlGreifbar": 8,
+   "liste": [
+    {
+     "zug": "gegner:oeffnen:adler",
+     "text": "Braustatt Adler",
+     "preis": null
+    },
+    {
+     "zug": "gegner:hinhalten:ochse",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:ochse",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    },
+    {
+     "zug": "gegner:abloesen:brueckenwirt",
+     "text": "BRU · HEIablösen 231 fl",
+     "preis": "-231"
+    },
+    {
+     "zug": "gegner:hinhalten:brueckenwirt",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:brueckenwirt",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    },
+    {
+     "zug": "gegner:hinhalten:hirsch",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:hirsch",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    }
+   ]
+  },
+  {
+   "kumWoche": 64,
+   "jahr": 1602,
+   "woche": 4,
+   "epoche": 2,
+   "anzahlGreifbar": 8,
+   "liste": [
+    {
+     "zug": "gegner:oeffnen:adler",
+     "text": "Braustatt Adler",
+     "preis": null
+    },
+    {
+     "zug": "gegner:hinhalten:ochse",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:ochse",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    },
+    {
+     "zug": "gegner:abloesen:brueckenwirt",
+     "text": "BRU · HEIablösen 231 fl",
+     "preis": "-231"
+    },
+    {
+     "zug": "gegner:hinhalten:brueckenwirt",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:brueckenwirt",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    },
+    {
+     "zug": "gegner:hinhalten:hirsch",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:hirsch",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    }
+   ]
+  },
+  {
+   "kumWoche": 65,
+   "jahr": 1602,
+   "woche": 5,
+   "epoche": 2,
+   "anzahlGreifbar": 8,
+   "liste": [
+    {
+     "zug": "gegner:oeffnen:adler",
+     "text": "Braustatt Adler",
+     "preis": null
+    },
+    {
+     "zug": "gegner:hinhalten:ochse",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:ochse",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    },
+    {
+     "zug": "gegner:abloesen:brueckenwirt",
+     "text": "BRU · HEIablösen 231 fl",
+     "preis": "-231"
+    },
+    {
+     "zug": "gegner:hinhalten:brueckenwirt",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:brueckenwirt",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    },
+    {
+     "zug": "gegner:hinhalten:hirsch",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:hirsch",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    }
+   ]
+  },
+  {
+   "kumWoche": 66,
+   "jahr": 1602,
+   "woche": 6,
+   "epoche": 2,
+   "anzahlGreifbar": 8,
+   "liste": [
+    {
+     "zug": "gegner:oeffnen:adler",
+     "text": "Braustatt Adler",
+     "preis": null
+    },
+    {
+     "zug": "gegner:hinhalten:ochse",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:ochse",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    },
+    {
+     "zug": "gegner:abloesen:brueckenwirt",
+     "text": "BRU · HEIablösen 231 fl",
+     "preis": "-231"
+    },
+    {
+     "zug": "gegner:hinhalten:brueckenwirt",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:brueckenwirt",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    },
+    {
+     "zug": "gegner:hinhalten:hirsch",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:hirsch",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    }
+   ]
+  },
+  {
+   "kumWoche": 67,
+   "jahr": 1602,
+   "woche": 7,
+   "epoche": 2,
+   "anzahlGreifbar": 8,
+   "liste": [
+    {
+     "zug": "gegner:oeffnen:adler",
+     "text": "Braustatt Adler",
+     "preis": null
+    },
+    {
+     "zug": "gegner:hinhalten:ochse",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:ochse",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    },
+    {
+     "zug": "gegner:abloesen:brueckenwirt",
+     "text": "BRU · HEIablösen 231 fl",
+     "preis": "-231"
+    },
+    {
+     "zug": "gegner:hinhalten:brueckenwirt",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:brueckenwirt",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    },
+    {
+     "zug": "gegner:hinhalten:hirsch",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:hirsch",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    }
+   ]
+  },
+  {
+   "kumWoche": 68,
+   "jahr": 1602,
+   "woche": 8,
+   "epoche": 2,
+   "anzahlGreifbar": 8,
+   "liste": [
+    {
+     "zug": "gegner:oeffnen:adler",
+     "text": "Braustatt Adler",
+     "preis": null
+    },
+    {
+     "zug": "gegner:hinhalten:ochse",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:ochse",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    },
+    {
+     "zug": "gegner:abloesen:brueckenwirt",
+     "text": "BRU · HEIablösen 231 fl",
+     "preis": "-231"
+    },
+    {
+     "zug": "gegner:hinhalten:brueckenwirt",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:brueckenwirt",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    },
+    {
+     "zug": "gegner:hinhalten:hirsch",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:hirsch",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    }
+   ]
+  },
+  {
+   "kumWoche": 69,
+   "jahr": 1602,
+   "woche": 9,
+   "epoche": 2,
+   "anzahlGreifbar": 11,
+   "liste": [
+    {
+     "zug": "gegner:oeffnen:adler",
+     "text": "Braustatt Adler",
+     "preis": null
+    },
+    {
+     "zug": "gegner:hinhalten:ochse",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:ochse",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    },
+    {
+     "zug": "gegner:abloesen:brueckenwirt",
+     "text": "BRU · HEIablösen 231 fl",
+     "preis": "-231"
+    },
+    {
+     "zug": "gegner:hinhalten:brueckenwirt",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:brueckenwirt",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    },
+    {
+     "zug": "gegner:hinhalten:hirsch",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:hirsch",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    },
+    {
+     "zug": "gegner:abwehren:obernberg",
+     "text": "die Lade ladet · noch 2 Wo.zuvorkommen 134 fl",
+     "preis": "-134"
+    },
+    {
+     "zug": "gegner:hinhalten:obernberg",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:obernberg",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    }
+   ]
+  },
+  {
+   "kumWoche": 70,
+   "jahr": 1602,
+   "woche": 10,
+   "epoche": 2,
+   "anzahlGreifbar": 7,
+   "liste": [
+    {
+     "zug": "gegner:oeffnen:adler",
+     "text": "Braustatt Adler",
+     "preis": null
+    },
+    {
+     "zug": "gegner:hinhalten:ochse",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:ochse",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    },
+    {
+     "zug": "gegner:hinhalten:brueckenwirt",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:brueckenwirt",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    },
+    {
+     "zug": "gegner:hinhalten:hirsch",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:hirsch",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    }
+   ]
+  },
+  {
+   "kumWoche": 71,
+   "jahr": 1602,
+   "woche": 11,
+   "epoche": 2,
+   "anzahlGreifbar": 7,
+   "liste": [
+    {
+     "zug": "gegner:oeffnen:adler",
+     "text": "Braustatt Adler",
+     "preis": null
+    },
+    {
+     "zug": "gegner:hinhalten:ochse",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:ochse",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    },
+    {
+     "zug": "gegner:hinhalten:brueckenwirt",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:brueckenwirt",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    },
+    {
+     "zug": "gegner:hinhalten:hirsch",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:hirsch",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    }
+   ]
+  },
+  {
+   "kumWoche": 72,
+   "jahr": 1602,
+   "woche": 12,
+   "epoche": 2,
+   "anzahlGreifbar": 7,
+   "liste": [
+    {
+     "zug": "gegner:oeffnen:adler",
+     "text": "Braustatt Adler",
+     "preis": null
+    },
+    {
+     "zug": "gegner:hinhalten:ochse",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:ochse",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    },
+    {
+     "zug": "gegner:hinhalten:brueckenwirt",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:brueckenwirt",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    },
+    {
+     "zug": "gegner:hinhalten:hirsch",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:hirsch",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    }
+   ]
+  },
+  {
+   "kumWoche": 73,
+   "jahr": 1602,
+   "woche": 13,
+   "epoche": 2,
+   "anzahlGreifbar": 7,
+   "liste": [
+    {
+     "zug": "gegner:oeffnen:adler",
+     "text": "Braustatt Adler",
+     "preis": null
+    },
+    {
+     "zug": "gegner:hinhalten:ochse",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:ochse",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    },
+    {
+     "zug": "gegner:hinhalten:brueckenwirt",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:brueckenwirt",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    },
+    {
+     "zug": "gegner:hinhalten:hirsch",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:hirsch",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    }
+   ]
+  },
+  {
+   "kumWoche": 74,
+   "jahr": 1602,
+   "woche": 14,
+   "epoche": 2,
+   "anzahlGreifbar": 7,
+   "liste": [
+    {
+     "zug": "gegner:oeffnen:adler",
+     "text": "Braustatt Adler",
+     "preis": null
+    },
+    {
+     "zug": "gegner:hinhalten:ochse",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:ochse",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    },
+    {
+     "zug": "gegner:hinhalten:brueckenwirt",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:brueckenwirt",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    },
+    {
+     "zug": "gegner:hinhalten:hirsch",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:hirsch",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    }
+   ]
+  },
+  {
+   "kumWoche": 75,
+   "jahr": 1602,
+   "woche": 15,
+   "epoche": 2,
+   "anzahlGreifbar": 7,
+   "liste": [
+    {
+     "zug": "gegner:oeffnen:adler",
+     "text": "Braustatt Adler",
+     "preis": null
+    },
+    {
+     "zug": "gegner:hinhalten:ochse",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:ochse",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    },
+    {
+     "zug": "gegner:hinhalten:brueckenwirt",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:brueckenwirt",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    },
+    {
+     "zug": "gegner:hinhalten:hirsch",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:hirsch",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    }
+   ]
+  },
+  {
+   "kumWoche": 76,
+   "jahr": 1602,
+   "woche": 16,
+   "epoche": 2,
+   "anzahlGreifbar": 7,
+   "liste": [
+    {
+     "zug": "gegner:oeffnen:adler",
+     "text": "Braustatt Adler",
+     "preis": null
+    },
+    {
+     "zug": "gegner:hinhalten:ochse",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:ochse",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    },
+    {
+     "zug": "gegner:hinhalten:brueckenwirt",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:brueckenwirt",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    },
+    {
+     "zug": "gegner:hinhalten:hirsch",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:hirsch",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    }
+   ]
+  },
+  {
+   "kumWoche": 77,
+   "jahr": 1602,
+   "woche": 17,
+   "epoche": 2,
+   "anzahlGreifbar": 7,
+   "liste": [
+    {
+     "zug": "gegner:oeffnen:adler",
+     "text": "Braustatt Adler",
+     "preis": null
+    },
+    {
+     "zug": "gegner:hinhalten:ochse",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:ochse",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    },
+    {
+     "zug": "gegner:hinhalten:brueckenwirt",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:brueckenwirt",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    },
+    {
+     "zug": "gegner:hinhalten:hirsch",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:hirsch",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    }
+   ]
+  },
+  {
+   "kumWoche": 78,
+   "jahr": 1602,
+   "woche": 18,
+   "epoche": 2,
+   "anzahlGreifbar": 7,
+   "liste": [
+    {
+     "zug": "gegner:oeffnen:adler",
+     "text": "Braustatt Adler",
+     "preis": null
+    },
+    {
+     "zug": "gegner:hinhalten:ochse",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:ochse",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    },
+    {
+     "zug": "gegner:hinhalten:brueckenwirt",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:brueckenwirt",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    },
+    {
+     "zug": "gegner:hinhalten:hirsch",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:hirsch",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    }
+   ]
+  },
+  {
+   "kumWoche": 79,
+   "jahr": 1602,
+   "woche": 19,
+   "epoche": 2,
+   "anzahlGreifbar": 7,
+   "liste": [
+    {
+     "zug": "gegner:oeffnen:adler",
+     "text": "Braustatt Adler",
+     "preis": null
+    },
+    {
+     "zug": "gegner:hinhalten:ochse",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:ochse",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    },
+    {
+     "zug": "gegner:hinhalten:brueckenwirt",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:brueckenwirt",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    },
+    {
+     "zug": "gegner:hinhalten:hirsch",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:hirsch",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    }
+   ]
+  },
+  {
+   "kumWoche": 80,
+   "jahr": 1602,
+   "woche": 20,
+   "epoche": 2,
+   "anzahlGreifbar": 7,
+   "liste": [
+    {
+     "zug": "gegner:oeffnen:adler",
+     "text": "Braustatt Adler",
+     "preis": null
+    },
+    {
+     "zug": "gegner:hinhalten:ochse",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:ochse",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    },
+    {
+     "zug": "gegner:hinhalten:brueckenwirt",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:brueckenwirt",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    },
+    {
+     "zug": "gegner:hinhalten:hirsch",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:hirsch",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    }
+   ]
+  },
+  {
+   "kumWoche": 81,
+   "jahr": 1602,
+   "woche": 21,
+   "epoche": 2,
+   "anzahlGreifbar": 7,
+   "liste": [
+    {
+     "zug": "gegner:oeffnen:adler",
+     "text": "Braustatt Adler",
+     "preis": null
+    },
+    {
+     "zug": "gegner:hinhalten:ochse",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:ochse",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    },
+    {
+     "zug": "gegner:hinhalten:brueckenwirt",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:brueckenwirt",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    },
+    {
+     "zug": "gegner:hinhalten:hirsch",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:hirsch",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    }
+   ]
+  },
+  {
+   "kumWoche": 82,
+   "jahr": 1602,
+   "woche": 22,
+   "epoche": 2,
+   "anzahlGreifbar": 7,
+   "liste": [
+    {
+     "zug": "gegner:oeffnen:adler",
+     "text": "Braustatt Adler",
+     "preis": null
+    },
+    {
+     "zug": "gegner:hinhalten:ochse",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:ochse",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    },
+    {
+     "zug": "gegner:hinhalten:brueckenwirt",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:brueckenwirt",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    },
+    {
+     "zug": "gegner:hinhalten:hirsch",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:hirsch",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    }
+   ]
+  },
+  {
+   "kumWoche": 83,
+   "jahr": 1602,
+   "woche": 23,
+   "epoche": 2,
+   "anzahlGreifbar": 4,
+   "liste": [
+    {
+     "zug": "gegner:oeffnen:adler",
+     "text": "Braustatt Adler",
+     "preis": null
+    },
+    {
+     "zug": "gegner:hinhalten:ochse",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:hinhalten:brueckenwirt",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:hinhalten:hirsch",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    }
+   ]
+  },
+  {
+   "kumWoche": 84,
+   "jahr": 1602,
+   "woche": 24,
+   "epoche": 2,
+   "anzahlGreifbar": 4,
+   "liste": [
+    {
+     "zug": "gegner:oeffnen:adler",
+     "text": "Braustatt Adler",
+     "preis": null
+    },
+    {
+     "zug": "gegner:hinhalten:ochse",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:hinhalten:brueckenwirt",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:hinhalten:hirsch",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    }
+   ]
+  },
+  {
+   "kumWoche": 85,
+   "jahr": 1602,
+   "woche": 25,
+   "epoche": 2,
+   "anzahlGreifbar": 4,
+   "liste": [
+    {
+     "zug": "gegner:oeffnen:adler",
+     "text": "Braustatt Adler",
+     "preis": null
+    },
+    {
+     "zug": "gegner:hinhalten:ochse",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:hinhalten:brueckenwirt",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:hinhalten:hirsch",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    }
+   ]
+  },
+  {
+   "kumWoche": 86,
+   "jahr": 1602,
+   "woche": 26,
+   "epoche": 2,
+   "anzahlGreifbar": 3,
+   "liste": [
+    {
+     "zug": "gegner:oeffnen:adler",
+     "text": "Braustatt Adler",
+     "preis": null
+    },
+    {
+     "zug": "gegner:hinhalten:ochse",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:hinhalten:hirsch",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    }
+   ]
+  },
+  {
+   "kumWoche": 87,
+   "jahr": 1602,
+   "woche": 27,
+   "epoche": 2,
+   "anzahlGreifbar": 4,
+   "liste": [
+    {
+     "zug": "gegner:oeffnen:adler",
+     "text": "Braustatt Adler",
+     "preis": null
+    },
+    {
+     "zug": "gegner:hinhalten:ochse",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:hinhalten:brueckenwirt",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:hinhalten:hirsch",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    }
+   ]
+  },
+  {
+   "kumWoche": 88,
+   "jahr": 1602,
+   "woche": 28,
+   "epoche": 2,
+   "anzahlGreifbar": 4,
+   "liste": [
+    {
+     "zug": "gegner:oeffnen:adler",
+     "text": "Braustatt Adler",
+     "preis": null
+    },
+    {
+     "zug": "gegner:hinhalten:ochse",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:hinhalten:brueckenwirt",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:hinhalten:hirsch",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    }
+   ]
+  },
+  {
+   "kumWoche": 89,
+   "jahr": 1602,
+   "woche": 29,
+   "epoche": 2,
+   "anzahlGreifbar": 4,
+   "liste": [
+    {
+     "zug": "gegner:oeffnen:adler",
+     "text": "Braustatt Adler",
+     "preis": null
+    },
+    {
+     "zug": "gegner:hinhalten:ochse",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:hinhalten:brueckenwirt",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:hinhalten:hirsch",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    }
+   ]
+  },
+  {
+   "kumWoche": 90,
+   "jahr": 1602,
+   "woche": 30,
+   "epoche": 2,
+   "anzahlGreifbar": 4,
+   "liste": [
+    {
+     "zug": "gegner:oeffnen:adler",
+     "text": "Braustatt Adler",
+     "preis": null
+    },
+    {
+     "zug": "gegner:hinhalten:ochse",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:hinhalten:brueckenwirt",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:hinhalten:hirsch",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    }
+   ]
+  },
+  {
+   "kumWoche": 91,
+   "jahr": 1603,
+   "woche": 1,
+   "epoche": 2,
+   "anzahlGreifbar": 1,
+   "liste": [
+    {
+     "zug": "gegner:zukaufen:brueckenwirt",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    }
+   ]
+  },
+  {
+   "kumWoche": 92,
+   "jahr": 1603,
+   "woche": 2,
+   "epoche": 2,
+   "anzahlGreifbar": 7,
+   "liste": [
+    {
+     "zug": "gegner:oeffnen:adler",
+     "text": "Braustatt Adler",
+     "preis": null
+    },
+    {
+     "zug": "gegner:hinhalten:ochse",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:ochse",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    },
+    {
+     "zug": "gegner:hinhalten:brueckenwirt",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:brueckenwirt",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    },
+    {
+     "zug": "gegner:hinhalten:hirsch",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:hirsch",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    }
+   ]
+  },
+  {
+   "kumWoche": 93,
+   "jahr": 1603,
+   "woche": 3,
+   "epoche": 2,
+   "anzahlGreifbar": 7,
+   "liste": [
+    {
+     "zug": "gegner:oeffnen:adler",
+     "text": "Braustatt Adler",
+     "preis": null
+    },
+    {
+     "zug": "gegner:hinhalten:ochse",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:ochse",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    },
+    {
+     "zug": "gegner:hinhalten:brueckenwirt",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:brueckenwirt",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    },
+    {
+     "zug": "gegner:hinhalten:hirsch",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:hirsch",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    }
+   ]
+  },
+  {
+   "kumWoche": 94,
+   "jahr": 1603,
+   "woche": 4,
+   "epoche": 2,
+   "anzahlGreifbar": 7,
+   "liste": [
+    {
+     "zug": "gegner:oeffnen:adler",
+     "text": "Braustatt Adler",
+     "preis": null
+    },
+    {
+     "zug": "gegner:hinhalten:ochse",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:ochse",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    },
+    {
+     "zug": "gegner:hinhalten:brueckenwirt",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:brueckenwirt",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    },
+    {
+     "zug": "gegner:hinhalten:hirsch",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:hirsch",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    }
+   ]
+  },
+  {
+   "kumWoche": 95,
+   "jahr": 1603,
+   "woche": 5,
+   "epoche": 2,
+   "anzahlGreifbar": 10,
+   "liste": [
+    {
+     "zug": "gegner:oeffnen:adler",
+     "text": "Braustatt Adler",
+     "preis": null
+    },
+    {
+     "zug": "gegner:hinhalten:ochse",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:ochse",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    },
+    {
+     "zug": "gegner:abwehren:muehlwirt",
+     "text": "die Lade ladet · noch 4 Wo.zuvorkommen 234 fl",
+     "preis": "-234"
+    },
+    {
+     "zug": "gegner:hinhalten:muehlwirt",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:muehlwirt",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    },
+    {
+     "zug": "gegner:hinhalten:brueckenwirt",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:brueckenwirt",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    },
+    {
+     "zug": "gegner:hinhalten:hirsch",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:hirsch",
+     "text": "lieber zukaufen1 Fass · 29 fl",
+     "preis": "-29"
+    }
+   ]
+  },
+  {
+   "kumWoche": 96,
+   "jahr": 1603,
+   "woche": 6,
+   "epoche": 2,
+   "anzahlGreifbar": 4,
+   "liste": [
+    {
+     "zug": "gegner:oeffnen:adler",
+     "text": "Braustatt Adler",
+     "preis": null
+    },
+    {
+     "zug": "gegner:hinhalten:ochse",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:hinhalten:brueckenwirt",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:hinhalten:hirsch",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    }
+   ]
+  },
+  {
+   "kumWoche": 97,
+   "jahr": 1603,
+   "woche": 7,
+   "epoche": 2,
+   "anzahlGreifbar": 4,
+   "liste": [
+    {
+     "zug": "gegner:oeffnen:adler",
+     "text": "Braustatt Adler",
+     "preis": null
+    },
+    {
+     "zug": "gegner:hinhalten:ochse",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:hinhalten:brueckenwirt",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:hinhalten:hirsch",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    }
+   ]
+  },
+  {
+   "kumWoche": 98,
+   "jahr": 1603,
+   "woche": 8,
+   "epoche": 2,
+   "anzahlGreifbar": 4,
+   "liste": [
+    {
+     "zug": "gegner:oeffnen:adler",
+     "text": "Braustatt Adler",
+     "preis": null
+    },
+    {
+     "zug": "gegner:hinhalten:ochse",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:hinhalten:brueckenwirt",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:hinhalten:hirsch",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    }
+   ]
+  },
+  {
+   "kumWoche": 99,
+   "jahr": 1603,
+   "woche": 9,
+   "epoche": 2,
+   "anzahlGreifbar": 4,
+   "liste": [
+    {
+     "zug": "gegner:oeffnen:adler",
+     "text": "Braustatt Adler",
+     "preis": null
+    },
+    {
+     "zug": "gegner:hinhalten:ochse",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:hinhalten:brueckenwirt",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:hinhalten:hirsch",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    }
+   ]
+  },
+  {
+   "kumWoche": 100,
+   "jahr": 1603,
+   "woche": 10,
+   "epoche": 2,
+   "anzahlGreifbar": 5,
+   "liste": [
+    {
+     "zug": "gegner:oeffnen:adler",
+     "text": "Braustatt Adler",
+     "preis": null
+    },
+    {
+     "zug": "gegner:hinhalten:ochse",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:hinhalten:brueckenwirt",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:hinhalten:faehrhaus",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:hinhalten:hirsch",
+     "text": "Fass in die Lade1 Fass statt Geld",
+     "preis": null
+    }
+   ]
+  }
+ ],
+ "tafelProtokoll": [
+  {
+   "kumWoche": 1,
+   "text": "Michaelitafel schließen",
+   "offen": true
+  },
+  {
+   "kumWoche": 2,
+   "text": "Michaelitafel 1600 · 5 Angebote",
+   "offen": true
+  },
+  {
+   "kumWoche": 3,
+   "text": "Michaelitafel 1600 · 5 Angebote",
+   "offen": true
+  },
+  {
+   "kumWoche": 4,
+   "text": "Michaelitafel 1600 · 5 Angebote",
+   "offen": true
+  },
+  {
+   "kumWoche": 5,
+   "text": "Michaelitafel 1600 · 5 Angebote",
+   "offen": true
+  },
+  {
+   "kumWoche": 6,
+   "text": "Michaelitafel 1600 · 5 Angebote",
+   "offen": true
+  },
+  {
+   "kumWoche": 7,
+   "text": "Michaelitafel 1600 · 5 Angebote",
+   "offen": true
+  },
+  {
+   "kumWoche": 8,
+   "text": "Michaelitafel 1600 · 5 Angebote",
+   "offen": true
+  },
+  {
+   "kumWoche": 9,
+   "text": "Michaelitafel 1600 · 5 Angebote",
+   "offen": true
+  },
+  {
+   "kumWoche": 10,
+   "text": "Michaelitafel 1600 · 5 Angebote",
+   "offen": true
+  },
+  {
+   "kumWoche": 11,
+   "text": "Michaelitafel 1600 · 5 Angebote",
+   "offen": true
+  },
+  {
+   "kumWoche": 12,
+   "text": "Michaelitafel 1600 · 5 Angebote",
+   "offen": true
+  },
+  {
+   "kumWoche": 13,
+   "text": "Michaelitafel 1600 · 5 Angebote",
+   "offen": true
+  },
+  {
+   "kumWoche": 14,
+   "text": "Michaelitafel 1600 · 5 Angebote",
+   "offen": true
+  },
+  {
+   "kumWoche": 15,
+   "text": "Michaelitafel 1600 · 5 Angebote",
+   "offen": true
+  },
+  {
+   "kumWoche": 16,
+   "text": "Michaelitafel 1600 · 5 Angebote",
+   "offen": true
+  },
+  {
+   "kumWoche": 17,
+   "text": "Michaelitafel 1600 · 5 Angebote",
+   "offen": true
+  },
+  {
+   "kumWoche": 18,
+   "text": "Michaelitafel 1600 · 5 Angebote",
+   "offen": true
+  },
+  {
+   "kumWoche": 19,
+   "text": "Michaelitafel 1600 · 5 Angebote",
+   "offen": true
+  },
+  {
+   "kumWoche": 20,
+   "text": "Michaelitafel 1600 · 5 Angebote",
+   "offen": true
+  },
+  {
+   "kumWoche": 21,
+   "text": "Michaelitafel 1600 · 5 Angebote",
+   "offen": true
+  },
+  {
+   "kumWoche": 22,
+   "text": "Michaelitafel 1600 · 5 Angebote",
+   "offen": true
+  },
+  {
+   "kumWoche": 23,
+   "text": "Michaelitafel 1600 · 5 Angebote",
+   "offen": true
+  },
+  {
+   "kumWoche": 24,
+   "text": "Michaelitafel 1600 · 5 Angebote",
+   "offen": true
+  },
+  {
+   "kumWoche": 25,
+   "text": "Michaelitafel 1600 · 5 Angebote",
+   "offen": true
+  },
+  {
+   "kumWoche": 26,
+   "text": "Michaelitafel 1600 · 5 Angebote",
+   "offen": true
+  },
+  {
+   "kumWoche": 27,
+   "text": "Michaelitafel 1600 · 5 Angebote",
+   "offen": true
+  },
+  {
+   "kumWoche": 28,
+   "text": "Michaelitafel 1600 · 5 Angebote",
+   "offen": true
+  },
+  {
+   "kumWoche": 29,
+   "text": "Michaelitafel 1600 · 5 Angebote",
+   "offen": true
+  },
+  {
+   "kumWoche": 30,
+   "text": "Michaelitafel 1600 · 5 Angebote",
+   "offen": true
+  },
+  {
+   "kumWoche": 31,
+   "text": "Michaelitafel schließen",
+   "offen": true
+  },
+  {
+   "kumWoche": 32,
+   "text": "Michaelitafel 1601 · 5 Angebote",
+   "offen": true
+  },
+  {
+   "kumWoche": 33,
+   "text": "Michaelitafel 1601 · 5 Angebote",
+   "offen": true
+  },
+  {
+   "kumWoche": 34,
+   "text": "Michaelitafel 1601 · 5 Angebote",
+   "offen": true
+  },
+  {
+   "kumWoche": 35,
+   "text": "Michaelitafel 1601 · 5 Angebote",
+   "offen": true
+  },
+  {
+   "kumWoche": 36,
+   "text": "Michaelitafel 1601 · 5 Angebote",
+   "offen": true
+  },
+  {
+   "kumWoche": 37,
+   "text": "Michaelitafel 1601 · 5 Angebote",
+   "offen": true
+  },
+  {
+   "kumWoche": 38,
+   "text": "Michaelitafel 1601 · 5 Angebote",
+   "offen": true
+  },
+  {
+   "kumWoche": 39,
+   "text": "Michaelitafel 1601 · 5 Angebote",
+   "offen": true
+  },
+  {
+   "kumWoche": 40,
+   "text": "Michaelitafel 1601 · 5 Angebote",
+   "offen": true
+  },
+  {
+   "kumWoche": 41,
+   "text": "Michaelitafel 1601 · 5 Angebote",
+   "offen": true
+  },
+  {
+   "kumWoche": 42,
+   "text": "Michaelitafel 1601 · 5 Angebote",
+   "offen": true
+  },
+  {
+   "kumWoche": 43,
+   "text": "Michaelitafel 1601 · 5 Angebote",
+   "offen": true
+  },
+  {
+   "kumWoche": 44,
+   "text": "Michaelitafel 1601 · 5 Angebote",
+   "offen": true
+  },
+  {
+   "kumWoche": 45,
+   "text": "Michaelitafel 1601 · 5 Angebote",
+   "offen": true
+  },
+  {
+   "kumWoche": 46,
+   "text": "Michaelitafel 1601 · 5 Angebote",
+   "offen": true
+  },
+  {
+   "kumWoche": 47,
+   "text": "Michaelitafel 1601 · 5 Angebote",
+   "offen": true
+  },
+  {
+   "kumWoche": 48,
+   "text": "Michaelitafel 1601 · 5 Angebote",
+   "offen": true
+  },
+  {
+   "kumWoche": 49,
+   "text": "Michaelitafel 1601 · 5 Angebote",
+   "offen": true
+  },
+  {
+   "kumWoche": 50,
+   "text": "Michaelitafel 1601 · 5 Angebote",
+   "offen": true
+  },
+  {
+   "kumWoche": 51,
+   "text": "Michaelitafel 1601 · 5 Angebote",
+   "offen": true
+  },
+  {
+   "kumWoche": 52,
+   "text": "Michaelitafel 1601 · 5 Angebote",
+   "offen": true
+  },
+  {
+   "kumWoche": 53,
+   "text": "Michaelitafel 1601 · 5 Angebote",
+   "offen": true
+  },
+  {
+   "kumWoche": 54,
+   "text": "Michaelitafel 1601 · 5 Angebote",
+   "offen": true
+  },
+  {
+   "kumWoche": 55,
+   "text": "Michaelitafel 1601 · 5 Angebote",
+   "offen": true
+  },
+  {
+   "kumWoche": 56,
+   "text": "Michaelitafel 1601 · 5 Angebote",
+   "offen": true
+  },
+  {
+   "kumWoche": 57,
+   "text": "Michaelitafel 1601 · 5 Angebote",
+   "offen": true
+  },
+  {
+   "kumWoche": 58,
+   "text": "Michaelitafel 1601 · 5 Angebote",
+   "offen": true
+  },
+  {
+   "kumWoche": 59,
+   "text": "Michaelitafel 1601 · 5 Angebote",
+   "offen": true
+  },
+  {
+   "kumWoche": 60,
+   "text": "Michaelitafel 1601 · 5 Angebote",
+   "offen": true
+  },
+  {
+   "kumWoche": 61,
+   "text": "Michaelitafel schließen",
+   "offen": true
+  },
+  {
+   "kumWoche": 62,
+   "text": "Michaelitafel 1602 · 5 Angebote",
+   "offen": true
+  },
+  {
+   "kumWoche": 63,
+   "text": "Michaelitafel 1602 · 5 Angebote",
+   "offen": true
+  },
+  {
+   "kumWoche": 64,
+   "text": "Michaelitafel 1602 · 5 Angebote",
+   "offen": true
+  },
+  {
+   "kumWoche": 65,
+   "text": "Michaelitafel 1602 · 5 Angebote",
+   "offen": true
+  },
+  {
+   "kumWoche": 66,
+   "text": "Michaelitafel 1602 · 5 Angebote",
+   "offen": true
+  },
+  {
+   "kumWoche": 67,
+   "text": "Michaelitafel 1602 · 5 Angebote",
+   "offen": true
+  },
+  {
+   "kumWoche": 68,
+   "text": "Michaelitafel 1602 · 5 Angebote",
+   "offen": true
+  },
+  {
+   "kumWoche": 69,
+   "text": "Michaelitafel 1602 · 5 Angebote",
+   "offen": true
+  },
+  {
+   "kumWoche": 70,
+   "text": "Michaelitafel 1602 · 5 Angebote",
+   "offen": true
+  },
+  {
+   "kumWoche": 71,
+   "text": "Michaelitafel 1602 · 5 Angebote",
+   "offen": true
+  },
+  {
+   "kumWoche": 72,
+   "text": "Michaelitafel 1602 · 5 Angebote",
+   "offen": true
+  },
+  {
+   "kumWoche": 73,
+   "text": "Michaelitafel 1602 · 5 Angebote",
+   "offen": true
+  },
+  {
+   "kumWoche": 74,
+   "text": "Michaelitafel 1602 · 5 Angebote",
+   "offen": true
+  },
+  {
+   "kumWoche": 75,
+   "text": "Michaelitafel 1602 · 5 Angebote",
+   "offen": true
+  },
+  {
+   "kumWoche": 76,
+   "text": "Michaelitafel 1602 · 5 Angebote",
+   "offen": true
+  },
+  {
+   "kumWoche": 77,
+   "text": "Michaelitafel 1602 · 5 Angebote",
+   "offen": true
+  },
+  {
+   "kumWoche": 78,
+   "text": "Michaelitafel 1602 · 5 Angebote",
+   "offen": true
+  },
+  {
+   "kumWoche": 79,
+   "text": "Michaelitafel 1602 · 5 Angebote",
+   "offen": true
+  },
+  {
+   "kumWoche": 80,
+   "text": "Michaelitafel 1602 · 5 Angebote",
+   "offen": true
+  },
+  {
+   "kumWoche": 81,
+   "text": "Michaelitafel 1602 · 5 Angebote",
+   "offen": true
+  },
+  {
+   "kumWoche": 82,
+   "text": "Michaelitafel 1602 · 5 Angebote",
+   "offen": true
+  },
+  {
+   "kumWoche": 83,
+   "text": "Michaelitafel 1602 · 5 Angebote",
+   "offen": true
+  },
+  {
+   "kumWoche": 84,
+   "text": "Michaelitafel 1602 · 5 Angebote",
+   "offen": true
+  },
+  {
+   "kumWoche": 85,
+   "text": "Michaelitafel 1602 · 5 Angebote",
+   "offen": true
+  },
+  {
+   "kumWoche": 86,
+   "text": "Michaelitafel 1602 · 5 Angebote",
+   "offen": true
+  },
+  {
+   "kumWoche": 87,
+   "text": "Michaelitafel 1602 · 5 Angebote",
+   "offen": true
+  },
+  {
+   "kumWoche": 88,
+   "text": "Michaelitafel 1602 · 5 Angebote",
+   "offen": true
+  },
+  {
+   "kumWoche": 89,
+   "text": "Michaelitafel 1602 · 5 Angebote",
+   "offen": true
+  },
+  {
+   "kumWoche": 90,
+   "text": "Michaelitafel 1602 · 5 Angebote",
+   "offen": true
+  },
+  {
+   "kumWoche": 91,
+   "text": "Michaelitafel schließen",
+   "offen": true
+  },
+  {
+   "kumWoche": 92,
+   "text": "Michaelitafel 1603 · 5 Angebote",
+   "offen": true
+  },
+  {
+   "kumWoche": 93,
+   "text": "Michaelitafel 1603 · 5 Angebote",
+   "offen": true
+  },
+  {
+   "kumWoche": 94,
+   "text": "Michaelitafel 1603 · 5 Angebote",
+   "offen": true
+  },
+  {
+   "kumWoche": 95,
+   "text": "Michaelitafel 1603 · 5 Angebote",
+   "offen": true
+  },
+  {
+   "kumWoche": 96,
+   "text": "Michaelitafel 1603 · 5 Angebote",
+   "offen": true
+  },
+  {
+   "kumWoche": 97,
+   "text": "Michaelitafel 1603 · 5 Angebote",
+   "offen": true
+  },
+  {
+   "kumWoche": 98,
+   "text": "Michaelitafel 1603 · 5 Angebote",
+   "offen": true
+  },
+  {
+   "kumWoche": 99,
+   "text": "Michaelitafel 1603 · 5 Angebote",
+   "offen": true
+  },
+  {
+   "kumWoche": 100,
+   "text": "Michaelitafel 1603 · 5 Angebote",
+   "offen": true
+  }
+ ],
+ "reiterSchnappschuss": {
+  "15": {
+   "zug": "stadt:reiter:gegner-amort-gg-band",
+   "text": "Ohne dich geschehen · 10 Zügezugeklappt",
+   "offen": true
+  },
+  "45": {
+   "zug": "stadt:reiter:gegner-amort-gg-band",
+   "text": "Ohne dich geschehen · 30 Zügezugeklappt",
+   "offen": true
+  }
+ },
+ "endZustand": {
+  "jahr": 1603,
+  "woche": 11,
+  "epoche": 2,
+  "ende": false,
+  "kasse": 0,
+  "naechsterZug": {
+   "was": "Zuvorkommen Fährhaus am Fluss",
+   "preis": 156,
+   "zug": null,
+   "art": "umkaempft",
+   "rang": 3
+  },
+  "bestesZiel": {
+   "satz": "das Haus weitergeben, solange es steht. Noch 2 Braujahre, dann ist das Haus alt genug für eine Übergabe.",
+   "naehe": 0.8666666666666667
+  }
+ },
+ "lageMax": 0,
+ "lageEintraege": [],
+ "seitenfehler": []
+}

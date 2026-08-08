@@ -1,0 +1,861 @@
+{
+ "epoche": "1",
+ "saat": "1350",
+ "wochenZiel": 10,
+ "kumWocheErreicht": 10,
+ "setupKlicks": [
+  {
+   "zug": "kern:anfangen",
+   "ergebnis": {
+    "ok": true
+   }
+  }
+ ],
+ "klickProtokoll": [
+  {
+   "kumWoche": 1,
+   "zug": "fuhre:plan:mager",
+   "ergebnis": "nicht-gegriffen:nicht-unter-zeiger",
+   "quelle": "fuhre-woche",
+   "kasseVorher": 112
+  },
+  {
+   "kumWoche": 1,
+   "zug": "gegner:zuvorkommen:obernberg",
+   "ergebnis": "geklickt",
+   "quelle": "gegenzug",
+   "kasseVorher": 112
+  },
+  {
+   "kumWoche": 1,
+   "zug": "weiter",
+   "ergebnis": "geklickt",
+   "quelle": "pflicht",
+   "kasseVorher": 93
+  },
+  {
+   "kumWoche": 2,
+   "zug": "sud:zettel-anstich",
+   "ergebnis": "geklickt",
+   "quelle": "sud-anzapfen",
+   "kasseVorher": 84
+  },
+  {
+   "kumWoche": 2,
+   "zug": "fuhre:plan:mager",
+   "ergebnis": "geklickt",
+   "quelle": "fuhre-woche",
+   "kasseVorher": 84
+  },
+  {
+   "kumWoche": 2,
+   "zug": "weiter",
+   "ergebnis": "geklickt",
+   "quelle": "pflicht",
+   "kasseVorher": 86
+  },
+  {
+   "kumWoche": 3,
+   "zug": "sud:zettel-anstich",
+   "ergebnis": "geklickt",
+   "quelle": "sud-anzapfen",
+   "kasseVorher": 77
+  },
+  {
+   "kumWoche": 3,
+   "zug": "fuhre:plan:mager",
+   "ergebnis": "geklickt",
+   "quelle": "fuhre-woche",
+   "kasseVorher": 77
+  },
+  {
+   "kumWoche": 3,
+   "zug": "weiter",
+   "ergebnis": "geklickt",
+   "quelle": "pflicht",
+   "kasseVorher": 79
+  },
+  {
+   "kumWoche": 4,
+   "zug": "sud:zettel-anstich",
+   "ergebnis": "geklickt",
+   "quelle": "sud-anzapfen",
+   "kasseVorher": 70
+  },
+  {
+   "kumWoche": 4,
+   "zug": "fuhre:plan:mager",
+   "ergebnis": "geklickt",
+   "quelle": "fuhre-woche",
+   "kasseVorher": 70
+  },
+  {
+   "kumWoche": 4,
+   "zug": "gegner:abwehren:markt",
+   "ergebnis": "nicht-gegriffen:nicht-im-dom",
+   "quelle": "gegenzug",
+   "kasseVorher": 71
+  },
+  {
+   "kumWoche": 4,
+   "zug": "weiter",
+   "ergebnis": "geklickt",
+   "quelle": "pflicht",
+   "kasseVorher": 71
+  },
+  {
+   "kumWoche": 5,
+   "zug": "sud:zettel-anstich",
+   "ergebnis": "geklickt",
+   "quelle": "sud-anzapfen",
+   "kasseVorher": 70
+  },
+  {
+   "kumWoche": 5,
+   "zug": "fuhre:plan:mager",
+   "ergebnis": "geklickt",
+   "quelle": "fuhre-woche",
+   "kasseVorher": 70
+  },
+  {
+   "kumWoche": 5,
+   "zug": "weiter",
+   "ergebnis": "geklickt",
+   "quelle": "pflicht",
+   "kasseVorher": 73
+  },
+  {
+   "kumWoche": 6,
+   "zug": "sud:zettel-anstich",
+   "ergebnis": "geklickt",
+   "quelle": "sud-anzapfen",
+   "kasseVorher": 64
+  },
+  {
+   "kumWoche": 6,
+   "zug": "fuhre:plan:mager",
+   "ergebnis": "geklickt",
+   "quelle": "fuhre-woche",
+   "kasseVorher": 64
+  },
+  {
+   "kumWoche": 6,
+   "zug": "gegner:abwehren:hirsch",
+   "ergebnis": "geklickt",
+   "quelle": "gegenzug",
+   "kasseVorher": 65
+  },
+  {
+   "kumWoche": 6,
+   "zug": "weiter",
+   "ergebnis": "geklickt",
+   "quelle": "pflicht",
+   "kasseVorher": 20
+  },
+  {
+   "kumWoche": 7,
+   "zug": "sud:zettel-anstich",
+   "ergebnis": "geklickt",
+   "quelle": "sud-anzapfen",
+   "kasseVorher": 19
+  },
+  {
+   "kumWoche": 7,
+   "zug": "fuhre:plan:mager",
+   "ergebnis": "geklickt",
+   "quelle": "fuhre-woche",
+   "kasseVorher": 19
+  },
+  {
+   "kumWoche": 7,
+   "zug": "weiter",
+   "ergebnis": "geklickt",
+   "quelle": "pflicht",
+   "kasseVorher": 22
+  },
+  {
+   "kumWoche": 8,
+   "zug": "sud:zettel-anstich",
+   "ergebnis": "geklickt",
+   "quelle": "sud-anzapfen",
+   "kasseVorher": 13
+  },
+  {
+   "kumWoche": 8,
+   "zug": "fuhre:plan:mager",
+   "ergebnis": "geklickt",
+   "quelle": "fuhre-woche",
+   "kasseVorher": 13
+  },
+  {
+   "kumWoche": 8,
+   "zug": "weiter",
+   "ergebnis": "geklickt",
+   "quelle": "pflicht",
+   "kasseVorher": 17
+  },
+  {
+   "kumWoche": 9,
+   "zug": "sud:zettel-anstich",
+   "ergebnis": "geklickt",
+   "quelle": "sud-anzapfen",
+   "kasseVorher": 8
+  },
+  {
+   "kumWoche": 9,
+   "zug": "fuhre:plan:mager",
+   "ergebnis": "geklickt",
+   "quelle": "fuhre-woche",
+   "kasseVorher": 8
+  },
+  {
+   "kumWoche": 9,
+   "zug": "weiter",
+   "ergebnis": "geklickt",
+   "quelle": "pflicht",
+   "kasseVorher": 20
+  },
+  {
+   "kumWoche": 10,
+   "zug": "sud:zettel-anstich",
+   "ergebnis": "geklickt",
+   "quelle": "sud-anzapfen",
+   "kasseVorher": 19
+  },
+  {
+   "kumWoche": 10,
+   "zug": "fuhre:plan:mager",
+   "ergebnis": "geklickt",
+   "quelle": "fuhre-woche",
+   "kasseVorher": 19
+  },
+  {
+   "kumWoche": 10,
+   "zug": "weiter",
+   "ergebnis": "geklickt",
+   "quelle": "pflicht",
+   "kasseVorher": 24
+  }
+ ],
+ "gegnerZensus": [
+  {
+   "kumWoche": 1,
+   "jahr": 1350,
+   "woche": 1,
+   "epoche": 1,
+   "anzahlGreifbar": 6,
+   "liste": [
+    {
+     "zug": "gegner:abloesen:faehrhaus",
+     "text": "FAE · BANablösen 66 Pf",
+     "preis": "-66"
+    },
+    {
+     "zug": "gegner:hinhalten:faehrhaus",
+     "text": "Fass an den Wirt1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:faehrhaus",
+     "text": "lieber zukaufen1 Fass · 12 Pf",
+     "preis": "-12"
+    },
+    {
+     "zug": "gegner:zuvorkommen:obernberg",
+     "text": "wirbt · noch 4 Wo.zuvorkommen 19 Pf",
+     "preis": "-19"
+    },
+    {
+     "zug": "gegner:hinhalten:obernberg",
+     "text": "Fass an den Wirt1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:obernberg",
+     "text": "lieber zukaufen1 Fass · 12 Pf",
+     "preis": "-12"
+    }
+   ]
+  },
+  {
+   "kumWoche": 2,
+   "jahr": 1350,
+   "woche": 2,
+   "epoche": 1,
+   "anzahlGreifbar": 7,
+   "liste": [
+    {
+     "zug": "gegner:oeffnen:adler",
+     "text": "Brauhaus zum Adler",
+     "preis": null
+    },
+    {
+     "zug": "gegner:hinhalten:torschenke",
+     "text": "Fass an den Wirt1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:torschenke",
+     "text": "lieber zukaufen1 Fass · 12 Pf",
+     "preis": "-12"
+    },
+    {
+     "zug": "gegner:abloesen:faehrhaus",
+     "text": "FAE · BANablösen 66 Pf",
+     "preis": "-66"
+    },
+    {
+     "zug": "gegner:hinhalten:faehrhaus",
+     "text": "Fass an den Wirt1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:faehrhaus",
+     "text": "lieber zukaufen1 Fass · 12 Pf",
+     "preis": "-12"
+    },
+    {
+     "zug": "gegner:beschwerde-bild",
+     "text": "Klage vor dem Stadtgerichtkostet kein Geld · vier Ansehengegen Fährhaus am Fluss",
+     "preis": "0"
+    }
+   ]
+  },
+  {
+   "kumWoche": 3,
+   "jahr": 1350,
+   "woche": 4,
+   "epoche": 1,
+   "anzahlGreifbar": 7,
+   "liste": [
+    {
+     "zug": "gegner:oeffnen:adler",
+     "text": "Brauhaus zum Adler",
+     "preis": null
+    },
+    {
+     "zug": "gegner:hinhalten:torschenke",
+     "text": "Fass an den Wirt1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:torschenke",
+     "text": "lieber zukaufen1 Fass · 12 Pf",
+     "preis": "-12"
+    },
+    {
+     "zug": "gegner:abloesen:faehrhaus",
+     "text": "FAE · BANablösen 66 Pf",
+     "preis": "-66"
+    },
+    {
+     "zug": "gegner:hinhalten:faehrhaus",
+     "text": "Fass an den Wirt1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:faehrhaus",
+     "text": "lieber zukaufen1 Fass · 12 Pf",
+     "preis": "-12"
+    },
+    {
+     "zug": "gegner:beschwerde-bild",
+     "text": "Klage vor dem Stadtgerichtkostet kein Geld · vier Ansehengegen Fährhaus am Fluss",
+     "preis": "0"
+    }
+   ]
+  },
+  {
+   "kumWoche": 4,
+   "jahr": 1350,
+   "woche": 6,
+   "epoche": 1,
+   "anzahlGreifbar": 11,
+   "liste": [
+    {
+     "zug": "gegner:oeffnen:adler",
+     "text": "Brauhaus zum Adler",
+     "preis": null
+    },
+    {
+     "zug": "gegner:abloesen:torschenke",
+     "text": "TOR · KONablösen 56 Pf",
+     "preis": "-56"
+    },
+    {
+     "zug": "gegner:hinhalten:torschenke",
+     "text": "Fass an den Wirt1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:torschenke",
+     "text": "lieber zukaufen1 Fass · 12 Pf",
+     "preis": "-12"
+    },
+    {
+     "zug": "gegner:abloesen:faehrhaus",
+     "text": "FAE · BANablösen 66 Pf",
+     "preis": "-66"
+    },
+    {
+     "zug": "gegner:hinhalten:faehrhaus",
+     "text": "Fass an den Wirt1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:faehrhaus",
+     "text": "lieber zukaufen1 Fass · 12 Pf",
+     "preis": "-12"
+    },
+    {
+     "zug": "gegner:abwehren:markt",
+     "text": "spricht vor · noch 1 Wo.zuvorkommen 22 Pf",
+     "preis": "-22"
+    },
+    {
+     "zug": "gegner:hinhalten:markt",
+     "text": "Fass an den Wirt1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:markt",
+     "text": "lieber zukaufen1 Fass · 12 Pf",
+     "preis": "-12"
+    },
+    {
+     "zug": "gegner:beschwerde-bild",
+     "text": "Klage vor dem Stadtgerichtkostet kein Geld · vier Ansehengegen Fährhaus am Fluss",
+     "preis": "0"
+    }
+   ]
+  },
+  {
+   "kumWoche": 5,
+   "jahr": 1350,
+   "woche": 8,
+   "epoche": 1,
+   "anzahlGreifbar": 11,
+   "liste": [
+    {
+     "zug": "gegner:oeffnen:adler",
+     "text": "Brauhaus zum Adler",
+     "preis": null
+    },
+    {
+     "zug": "gegner:abloesen:torschenke",
+     "text": "TOR · KONablösen 56 Pf",
+     "preis": "-56"
+    },
+    {
+     "zug": "gegner:hinhalten:torschenke",
+     "text": "Fass an den Wirt1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:torschenke",
+     "text": "lieber zukaufen1 Fass · 12 Pf",
+     "preis": "-12"
+    },
+    {
+     "zug": "gegner:abloesen:faehrhaus",
+     "text": "FAE · BANablösen 66 Pf",
+     "preis": "-66"
+    },
+    {
+     "zug": "gegner:hinhalten:faehrhaus",
+     "text": "Fass an den Wirt1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:faehrhaus",
+     "text": "lieber zukaufen1 Fass · 12 Pf",
+     "preis": "-12"
+    },
+    {
+     "zug": "gegner:abloesen:markt",
+     "text": "MKT · KONablösen 36 Pf",
+     "preis": "-36"
+    },
+    {
+     "zug": "gegner:hinhalten:markt",
+     "text": "Fass an den Wirt1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:markt",
+     "text": "lieber zukaufen1 Fass · 12 Pf",
+     "preis": "-12"
+    },
+    {
+     "zug": "gegner:beschwerde-bild",
+     "text": "Klage vor dem Stadtgerichtkostet kein Geld · vier Ansehengegen Fährhaus am Fluss",
+     "preis": "0"
+    }
+   ]
+  },
+  {
+   "kumWoche": 6,
+   "jahr": 1350,
+   "woche": 10,
+   "epoche": 1,
+   "anzahlGreifbar": 10,
+   "liste": [
+    {
+     "zug": "gegner:oeffnen:adler",
+     "text": "Brauhaus zum Adler",
+     "preis": null
+    },
+    {
+     "zug": "gegner:abloesen:torschenke",
+     "text": "TOR · KONablösen 56 Pf",
+     "preis": "-56"
+    },
+    {
+     "zug": "gegner:hinhalten:torschenke",
+     "text": "Fass an den Wirt1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:torschenke",
+     "text": "lieber zukaufen1 Fass · 12 Pf",
+     "preis": "-12"
+    },
+    {
+     "zug": "gegner:hinhalten:faehrhaus",
+     "text": "Fass an den Wirt1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:faehrhaus",
+     "text": "lieber zukaufen1 Fass · 12 Pf",
+     "preis": "-12"
+    },
+    {
+     "zug": "gegner:abwehren:hirsch",
+     "text": "spricht vor · noch 2 Wo.zuvorkommen 45 Pf",
+     "preis": "-45"
+    },
+    {
+     "zug": "gegner:hinhalten:hirsch",
+     "text": "Fass an den Wirt1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:hirsch",
+     "text": "lieber zukaufen1 Fass · 12 Pf",
+     "preis": "-12"
+    },
+    {
+     "zug": "gegner:beschwerde-bild",
+     "text": "Klage vor dem Stadtgerichtkostet kein Geld · vier Ansehengegen Fährhaus am Fluss",
+     "preis": "0"
+    }
+   ]
+  },
+  {
+   "kumWoche": 7,
+   "jahr": 1350,
+   "woche": 12,
+   "epoche": 1,
+   "anzahlGreifbar": 8,
+   "liste": [
+    {
+     "zug": "gegner:oeffnen:adler",
+     "text": "Brauhaus zum Adler",
+     "preis": null
+    },
+    {
+     "zug": "gegner:hinhalten:torschenke",
+     "text": "Fass an den Wirt1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:torschenke",
+     "text": "lieber zukaufen1 Fass · 12 Pf",
+     "preis": "-12"
+    },
+    {
+     "zug": "gegner:hinhalten:muehlwirt",
+     "text": "Fass an den Wirt1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:muehlwirt",
+     "text": "lieber zukaufen1 Fass · 12 Pf",
+     "preis": "-12"
+    },
+    {
+     "zug": "gegner:hinhalten:faehrhaus",
+     "text": "Fass an den Wirt1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:faehrhaus",
+     "text": "lieber zukaufen1 Fass · 12 Pf",
+     "preis": "-12"
+    },
+    {
+     "zug": "gegner:beschwerde-bild",
+     "text": "Klage vor dem Stadtgerichtkostet kein Geld · vier Ansehengegen Mühlschenke",
+     "preis": "0"
+    }
+   ]
+  },
+  {
+   "kumWoche": 8,
+   "jahr": 1350,
+   "woche": 14,
+   "epoche": 1,
+   "anzahlGreifbar": 10,
+   "liste": [
+    {
+     "zug": "gegner:oeffnen:adler",
+     "text": "Brauhaus zum Adler",
+     "preis": null
+    },
+    {
+     "zug": "gegner:hinhalten:torschenke",
+     "text": "Fass an den Wirt1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:torschenke",
+     "text": "lieber zukaufen1 Fass · 12 Pf",
+     "preis": "-12"
+    },
+    {
+     "zug": "gegner:hinhalten:pfarrhof",
+     "text": "Fass an den Wirt1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:pfarrhof",
+     "text": "lieber zukaufen1 Fass · 12 Pf",
+     "preis": "-12"
+    },
+    {
+     "zug": "gegner:hinhalten:muehlwirt",
+     "text": "Fass an den Wirt1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:muehlwirt",
+     "text": "lieber zukaufen1 Fass · 12 Pf",
+     "preis": "-12"
+    },
+    {
+     "zug": "gegner:hinhalten:faehrhaus",
+     "text": "Fass an den Wirt1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:faehrhaus",
+     "text": "lieber zukaufen1 Fass · 12 Pf",
+     "preis": "-12"
+    },
+    {
+     "zug": "gegner:beschwerde-bild",
+     "text": "Klage vor dem Stadtgerichtkostet kein Geld · vier Ansehengegen Mühlschenke",
+     "preis": "0"
+    }
+   ]
+  },
+  {
+   "kumWoche": 9,
+   "jahr": 1350,
+   "woche": 16,
+   "epoche": 1,
+   "anzahlGreifbar": 7,
+   "liste": [
+    {
+     "zug": "gegner:oeffnen:adler",
+     "text": "Brauhaus zum Adler",
+     "preis": null
+    },
+    {
+     "zug": "gegner:hinhalten:lindenhof",
+     "text": "Fass an den Wirt1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:hinhalten:torschenke",
+     "text": "Fass an den Wirt1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:hinhalten:pfarrhof",
+     "text": "Fass an den Wirt1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:hinhalten:muehlwirt",
+     "text": "Fass an den Wirt1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:hinhalten:faehrhaus",
+     "text": "Fass an den Wirt1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:beschwerde-bild",
+     "text": "Klage vor dem Stadtgerichtkostet kein Geld · vier Ansehengegen Gasthof Lindenhof",
+     "preis": "0"
+    }
+   ]
+  },
+  {
+   "kumWoche": 10,
+   "jahr": 1350,
+   "woche": 18,
+   "epoche": 1,
+   "anzahlGreifbar": 14,
+   "liste": [
+    {
+     "zug": "gegner:oeffnen:adler",
+     "text": "Brauhaus zum Adler",
+     "preis": null
+    },
+    {
+     "zug": "gegner:hinhalten:lindenhof",
+     "text": "Fass an den Wirt1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:lindenhof",
+     "text": "lieber zukaufen1 Fass · 12 Pf",
+     "preis": "-12"
+    },
+    {
+     "zug": "gegner:hinhalten:ochse",
+     "text": "Fass an den Wirt1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:ochse",
+     "text": "lieber zukaufen1 Fass · 12 Pf",
+     "preis": "-12"
+    },
+    {
+     "zug": "gegner:hinhalten:torschenke",
+     "text": "Fass an den Wirt1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:torschenke",
+     "text": "lieber zukaufen1 Fass · 12 Pf",
+     "preis": "-12"
+    },
+    {
+     "zug": "gegner:hinhalten:pfarrhof",
+     "text": "Fass an den Wirt1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:pfarrhof",
+     "text": "lieber zukaufen1 Fass · 12 Pf",
+     "preis": "-12"
+    },
+    {
+     "zug": "gegner:hinhalten:muehlwirt",
+     "text": "Fass an den Wirt1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:muehlwirt",
+     "text": "lieber zukaufen1 Fass · 12 Pf",
+     "preis": "-12"
+    },
+    {
+     "zug": "gegner:hinhalten:faehrhaus",
+     "text": "Fass an den Wirt1 Fass statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:faehrhaus",
+     "text": "lieber zukaufen1 Fass · 12 Pf",
+     "preis": "-12"
+    },
+    {
+     "zug": "gegner:beschwerde-bild",
+     "text": "Klage vor dem Stadtgerichtkostet kein Geld · vier Ansehengegen Gasthof Lindenhof",
+     "preis": "0"
+    }
+   ]
+  }
+ ],
+ "tafelProtokoll": [
+  {
+   "kumWoche": 1,
+   "text": "Michaelitafel schließen",
+   "offen": true
+  },
+  {
+   "kumWoche": 2,
+   "text": "Michaelitafel 1350 · 5 Angebote",
+   "offen": true
+  },
+  {
+   "kumWoche": 3,
+   "text": "Michaelitafel 1350 · 5 Angebote",
+   "offen": true
+  },
+  {
+   "kumWoche": 4,
+   "text": "Michaelitafel 1350 · 5 Angebote",
+   "offen": true
+  },
+  {
+   "kumWoche": 5,
+   "text": "Michaelitafel 1350 · 5 Angebote",
+   "offen": true
+  },
+  {
+   "kumWoche": 6,
+   "text": "Michaelitafel 1350 · 5 Angebote",
+   "offen": true
+  },
+  {
+   "kumWoche": 7,
+   "text": "Michaelitafel 1350 · 5 Angebote",
+   "offen": true
+  },
+  {
+   "kumWoche": 8,
+   "text": "Michaelitafel 1350 · 5 Angebote",
+   "offen": true
+  },
+  {
+   "kumWoche": 9,
+   "text": "Michaelitafel 1350 · 5 Angebote",
+   "offen": true
+  },
+  {
+   "kumWoche": 10,
+   "text": "Michaelitafel 1350 · 5 Angebote",
+   "offen": true
+  }
+ ],
+ "reiterSchnappschuss": {},
+ "endZustand": {
+  "jahr": 1350,
+  "woche": 20,
+  "epoche": 1,
+  "ende": false,
+  "kasse": 23,
+  "naechsterZug": {
+   "was": "Ablösung Fährhaus am Fluss",
+   "preis": 66,
+   "zug": null,
+   "art": "umkaempft",
+   "rang": 3
+  },
+  "bestesZiel": {
+   "satz": "das Haus weitergeben, solange es steht. Noch 5 Braujahre, dann ist das Haus alt genug für eine Übergabe.",
+   "naehe": 0.3333333333333333
+  }
+ },
+ "lageMax": 0,
+ "lageEintraege": [],
+ "seitenfehler": []
+}

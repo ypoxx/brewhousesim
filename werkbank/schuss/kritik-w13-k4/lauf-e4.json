@@ -1,0 +1,7569 @@
+{
+ "epoche": "4",
+ "saat": "1350",
+ "wochenZiel": 100,
+ "kumWocheErreicht": 100,
+ "setupKlicks": [
+  {
+   "zug": "kern:anfangen",
+   "ergebnis": {
+    "ok": true
+   }
+  }
+ ],
+ "klickProtokoll": [
+  {
+   "kumWoche": 1,
+   "zug": "fuhre:plan:mager",
+   "ergebnis": "nicht-gegriffen:nicht-unter-zeiger",
+   "quelle": "fuhre-woche",
+   "kasseVorher": 86000
+  },
+  {
+   "kumWoche": 1,
+   "zug": "weiter",
+   "ergebnis": "geklickt",
+   "quelle": "pflicht",
+   "kasseVorher": 86000
+  },
+  {
+   "kumWoche": 2,
+   "zug": "sud:zettel-anstich",
+   "ergebnis": "geklickt",
+   "quelle": "sud-anzapfen",
+   "kasseVorher": 81200
+  },
+  {
+   "kumWoche": 2,
+   "zug": "gegner:zuvorkommen:bahnhofswirt",
+   "ergebnis": "geklickt",
+   "quelle": "gegenzug",
+   "kasseVorher": 81200
+  },
+  {
+   "kumWoche": 2,
+   "zug": "fuhre:plan:mager",
+   "ergebnis": "geklickt",
+   "quelle": "fuhre-woche",
+   "kasseVorher": 54956
+  },
+  {
+   "kumWoche": 3,
+   "zug": "sud:zettel-anstich",
+   "ergebnis": "geklickt",
+   "quelle": "sud-anzapfen",
+   "kasseVorher": 61383
+  },
+  {
+   "kumWoche": 3,
+   "zug": "fuhre:plan:mager",
+   "ergebnis": "geklickt",
+   "quelle": "fuhre-woche",
+   "kasseVorher": 61383
+  },
+  {
+   "kumWoche": 4,
+   "zug": "sud:zettel-anstich",
+   "ergebnis": "geklickt",
+   "quelle": "sud-anzapfen",
+   "kasseVorher": 60535
+  },
+  {
+   "kumWoche": 4,
+   "zug": "gegner:zuvorkommen:muehlwirt",
+   "ergebnis": "nicht-gegriffen:nicht-unter-zeiger",
+   "quelle": "gegenzug",
+   "kasseVorher": 60535
+  },
+  {
+   "kumWoche": 4,
+   "zug": "fuhre:plan:mager",
+   "ergebnis": "geklickt",
+   "quelle": "fuhre-woche",
+   "kasseVorher": 60535
+  },
+  {
+   "kumWoche": 5,
+   "zug": "sud:zettel-anstich",
+   "ergebnis": "geklickt",
+   "quelle": "sud-anzapfen",
+   "kasseVorher": 59930
+  },
+  {
+   "kumWoche": 5,
+   "zug": "gegner:zuvorkommen:muehlwirt",
+   "ergebnis": "nicht-gegriffen:nicht-unter-zeiger",
+   "quelle": "gegenzug",
+   "kasseVorher": 59930
+  },
+  {
+   "kumWoche": 5,
+   "zug": "fuhre:plan:mager",
+   "ergebnis": "geklickt",
+   "quelle": "fuhre-woche",
+   "kasseVorher": 59930
+  },
+  {
+   "kumWoche": 6,
+   "zug": "sud:zettel-anstich",
+   "ergebnis": "geklickt",
+   "quelle": "sud-anzapfen",
+   "kasseVorher": 59227
+  },
+  {
+   "kumWoche": 6,
+   "zug": "gegner:zuvorkommen:muehlwirt",
+   "ergebnis": "nicht-gegriffen:nicht-unter-zeiger",
+   "quelle": "gegenzug",
+   "kasseVorher": 59227
+  },
+  {
+   "kumWoche": 6,
+   "zug": "fuhre:plan:mager",
+   "ergebnis": "geklickt",
+   "quelle": "fuhre-woche",
+   "kasseVorher": 59227
+  },
+  {
+   "kumWoche": 7,
+   "zug": "sud:zettel-anstich",
+   "ergebnis": "geklickt",
+   "quelle": "sud-anzapfen",
+   "kasseVorher": 55279
+  },
+  {
+   "kumWoche": 7,
+   "zug": "gegner:zuvorkommen:muehlwirt",
+   "ergebnis": "nicht-gegriffen:nicht-unter-zeiger",
+   "quelle": "gegenzug",
+   "kasseVorher": 55279
+  },
+  {
+   "kumWoche": 7,
+   "zug": "fuhre:plan:mager",
+   "ergebnis": "geklickt",
+   "quelle": "fuhre-woche",
+   "kasseVorher": 55279
+  },
+  {
+   "kumWoche": 8,
+   "zug": "sud:zettel-anstich",
+   "ergebnis": "geklickt",
+   "quelle": "sud-anzapfen",
+   "kasseVorher": 58661
+  },
+  {
+   "kumWoche": 8,
+   "zug": "gegner:abwehren:ochse",
+   "ergebnis": "geklickt",
+   "quelle": "gegenzug",
+   "kasseVorher": 58661
+  },
+  {
+   "kumWoche": 8,
+   "zug": "fuhre:plan:mager",
+   "ergebnis": "geklickt",
+   "quelle": "fuhre-woche",
+   "kasseVorher": 23507
+  },
+  {
+   "kumWoche": 9,
+   "zug": "sud:zettel-anstich",
+   "ergebnis": "geklickt",
+   "quelle": "sud-anzapfen",
+   "kasseVorher": 26408
+  },
+  {
+   "kumWoche": 9,
+   "zug": "gegner:abwehren:pfarrhof",
+   "ergebnis": "nicht-gegriffen:nicht-unter-zeiger",
+   "quelle": "gegenzug",
+   "kasseVorher": 26408
+  },
+  {
+   "kumWoche": 9,
+   "zug": "fuhre:plan:mager",
+   "ergebnis": "geklickt",
+   "quelle": "fuhre-woche",
+   "kasseVorher": 26408
+  },
+  {
+   "kumWoche": 10,
+   "zug": "sud:zettel-anstich",
+   "ergebnis": "geklickt",
+   "quelle": "sud-anzapfen",
+   "kasseVorher": 31584
+  },
+  {
+   "kumWoche": 10,
+   "zug": "gegner:zuvorkommen:lindenhof",
+   "ergebnis": "geklickt",
+   "quelle": "gegenzug",
+   "kasseVorher": 31584
+  },
+  {
+   "kumWoche": 10,
+   "zug": "fuhre:plan:mager",
+   "ergebnis": "geklickt",
+   "quelle": "fuhre-woche",
+   "kasseVorher": 11901
+  },
+  {
+   "kumWoche": 11,
+   "zug": "sud:zettel-anstich",
+   "ergebnis": "geklickt",
+   "quelle": "sud-anzapfen",
+   "kasseVorher": 13833
+  },
+  {
+   "kumWoche": 11,
+   "zug": "fuhre:plan:mager",
+   "ergebnis": "geklickt",
+   "quelle": "fuhre-woche",
+   "kasseVorher": 13833
+  },
+  {
+   "kumWoche": 12,
+   "zug": "sud:zettel-anstich",
+   "ergebnis": "geklickt",
+   "quelle": "sud-anzapfen",
+   "kasseVorher": 14336
+  },
+  {
+   "kumWoche": 12,
+   "zug": "fuhre:plan:mager",
+   "ergebnis": "geklickt",
+   "quelle": "fuhre-woche",
+   "kasseVorher": 14336
+  },
+  {
+   "kumWoche": 13,
+   "zug": "sud:zettel-anstich",
+   "ergebnis": "geklickt",
+   "quelle": "sud-anzapfen",
+   "kasseVorher": 14382
+  },
+  {
+   "kumWoche": 13,
+   "zug": "fuhre:plan:mager",
+   "ergebnis": "geklickt",
+   "quelle": "fuhre-woche",
+   "kasseVorher": 14382
+  },
+  {
+   "kumWoche": 14,
+   "zug": "sud:zettel-anstich",
+   "ergebnis": "geklickt",
+   "quelle": "sud-anzapfen",
+   "kasseVorher": 14847
+  },
+  {
+   "kumWoche": 14,
+   "zug": "gegner:zuvorkommen:torschenke",
+   "ergebnis": "geklickt",
+   "quelle": "gegenzug",
+   "kasseVorher": 14847
+  },
+  {
+   "kumWoche": 14,
+   "zug": "fuhre:plan:mager",
+   "ergebnis": "geklickt",
+   "quelle": "fuhre-woche",
+   "kasseVorher": 267
+  },
+  {
+   "kumWoche": 15,
+   "zug": "sud:zettel-anstich",
+   "ergebnis": "geklickt",
+   "quelle": "sud-anzapfen",
+   "kasseVorher": 729
+  },
+  {
+   "kumWoche": 15,
+   "zug": "fuhre:plan:mager",
+   "ergebnis": "geklickt",
+   "quelle": "fuhre-woche",
+   "kasseVorher": 729
+  },
+  {
+   "kumWoche": 16,
+   "zug": "sud:zettel-anstich",
+   "ergebnis": "geklickt",
+   "quelle": "sud-anzapfen",
+   "kasseVorher": 1185
+  },
+  {
+   "kumWoche": 16,
+   "zug": "fuhre:plan:mager",
+   "ergebnis": "geklickt",
+   "quelle": "fuhre-woche",
+   "kasseVorher": 1185
+  },
+  {
+   "kumWoche": 17,
+   "zug": "sud:zettel-anstich",
+   "ergebnis": "geklickt",
+   "quelle": "sud-anzapfen",
+   "kasseVorher": 1638
+  },
+  {
+   "kumWoche": 17,
+   "zug": "fuhre:plan:mager",
+   "ergebnis": "geklickt",
+   "quelle": "fuhre-woche",
+   "kasseVorher": 1638
+  },
+  {
+   "kumWoche": 18,
+   "zug": "sud:zettel-anstich",
+   "ergebnis": "geklickt",
+   "quelle": "sud-anzapfen",
+   "kasseVorher": 2088
+  },
+  {
+   "kumWoche": 18,
+   "zug": "fuhre:plan:mager",
+   "ergebnis": "geklickt",
+   "quelle": "fuhre-woche",
+   "kasseVorher": 2088
+  },
+  {
+   "kumWoche": 19,
+   "zug": "sud:zettel-anstich",
+   "ergebnis": "geklickt",
+   "quelle": "sud-anzapfen",
+   "kasseVorher": 2538
+  },
+  {
+   "kumWoche": 19,
+   "zug": "fuhre:plan:mager",
+   "ergebnis": "geklickt",
+   "quelle": "fuhre-woche",
+   "kasseVorher": 2538
+  },
+  {
+   "kumWoche": 20,
+   "zug": "sud:zettel-anstich",
+   "ergebnis": "geklickt",
+   "quelle": "sud-anzapfen",
+   "kasseVorher": 2985
+  },
+  {
+   "kumWoche": 20,
+   "zug": "fuhre:plan:mager",
+   "ergebnis": "geklickt",
+   "quelle": "fuhre-woche",
+   "kasseVorher": 2985
+  },
+  {
+   "kumWoche": 21,
+   "zug": "sud:zettel-anstich",
+   "ergebnis": "geklickt",
+   "quelle": "sud-anzapfen",
+   "kasseVorher": 3426
+  },
+  {
+   "kumWoche": 21,
+   "zug": "fuhre:plan:mager",
+   "ergebnis": "geklickt",
+   "quelle": "fuhre-woche",
+   "kasseVorher": 3426
+  },
+  {
+   "kumWoche": 22,
+   "zug": "sud:zettel-anstich",
+   "ergebnis": "geklickt",
+   "quelle": "sud-anzapfen",
+   "kasseVorher": 3864
+  },
+  {
+   "kumWoche": 22,
+   "zug": "fuhre:plan:mager",
+   "ergebnis": "geklickt",
+   "quelle": "fuhre-woche",
+   "kasseVorher": 3864
+  },
+  {
+   "kumWoche": 23,
+   "zug": "sud:zettel-anstich",
+   "ergebnis": "geklickt",
+   "quelle": "sud-anzapfen",
+   "kasseVorher": 4302
+  },
+  {
+   "kumWoche": 23,
+   "zug": "fuhre:plan:mager",
+   "ergebnis": "geklickt",
+   "quelle": "fuhre-woche",
+   "kasseVorher": 4302
+  },
+  {
+   "kumWoche": 24,
+   "zug": "sud:zettel-anstich",
+   "ergebnis": "geklickt",
+   "quelle": "sud-anzapfen",
+   "kasseVorher": 4737
+  },
+  {
+   "kumWoche": 24,
+   "zug": "fuhre:plan:mager",
+   "ergebnis": "geklickt",
+   "quelle": "fuhre-woche",
+   "kasseVorher": 4737
+  },
+  {
+   "kumWoche": 25,
+   "zug": "sud:zettel-anstich",
+   "ergebnis": "geklickt",
+   "quelle": "sud-anzapfen",
+   "kasseVorher": 5172
+  },
+  {
+   "kumWoche": 25,
+   "zug": "fuhre:plan:mager",
+   "ergebnis": "geklickt",
+   "quelle": "fuhre-woche",
+   "kasseVorher": 5172
+  },
+  {
+   "kumWoche": 26,
+   "zug": "sud:zettel-anstich",
+   "ergebnis": "geklickt",
+   "quelle": "sud-anzapfen",
+   "kasseVorher": 5561
+  },
+  {
+   "kumWoche": 26,
+   "zug": "fuhre:plan:mager",
+   "ergebnis": "geklickt",
+   "quelle": "fuhre-woche",
+   "kasseVorher": 5561
+  },
+  {
+   "kumWoche": 27,
+   "zug": "sud:zettel-anstich",
+   "ergebnis": "geklickt",
+   "quelle": "sud-anzapfen",
+   "kasseVorher": 5948
+  },
+  {
+   "kumWoche": 27,
+   "zug": "fuhre:plan:mager",
+   "ergebnis": "geklickt",
+   "quelle": "fuhre-woche",
+   "kasseVorher": 5948
+  },
+  {
+   "kumWoche": 28,
+   "zug": "sud:zettel-anstich",
+   "ergebnis": "geklickt",
+   "quelle": "sud-anzapfen",
+   "kasseVorher": 6335
+  },
+  {
+   "kumWoche": 28,
+   "zug": "fuhre:plan:mager",
+   "ergebnis": "geklickt",
+   "quelle": "fuhre-woche",
+   "kasseVorher": 6335
+  },
+  {
+   "kumWoche": 29,
+   "zug": "sud:zettel-anstich",
+   "ergebnis": "geklickt",
+   "quelle": "sud-anzapfen",
+   "kasseVorher": 6722
+  },
+  {
+   "kumWoche": 29,
+   "zug": "fuhre:plan:mager",
+   "ergebnis": "geklickt",
+   "quelle": "fuhre-woche",
+   "kasseVorher": 6722
+  },
+  {
+   "kumWoche": 30,
+   "zug": "sud:zettel-anstich",
+   "ergebnis": "geklickt",
+   "quelle": "sud-anzapfen",
+   "kasseVorher": 6259
+  },
+  {
+   "kumWoche": 30,
+   "zug": "fuhre:plan:mager",
+   "ergebnis": "geklickt",
+   "quelle": "fuhre-woche",
+   "kasseVorher": 6259
+  },
+  {
+   "kumWoche": 31,
+   "zug": "gegner:abwehren:muehlwirt",
+   "ergebnis": "nicht-gegriffen:nicht-unter-zeiger",
+   "quelle": "gegenzug",
+   "kasseVorher": 50005
+  },
+  {
+   "kumWoche": 31,
+   "zug": "weiter",
+   "ergebnis": "geklickt",
+   "quelle": "pflicht",
+   "kasseVorher": 50005
+  },
+  {
+   "kumWoche": 32,
+   "zug": "gegner:abwehren:muehlwirt",
+   "ergebnis": "geklickt",
+   "quelle": "gegenzug",
+   "kasseVorher": 49373
+  },
+  {
+   "kumWoche": 32,
+   "zug": "fuhre:plan:mager",
+   "ergebnis": "geklickt",
+   "quelle": "fuhre-woche",
+   "kasseVorher": 35814
+  },
+  {
+   "kumWoche": 33,
+   "zug": "fuhre:plan:mager",
+   "ergebnis": "geklickt",
+   "quelle": "fuhre-woche",
+   "kasseVorher": 36036
+  },
+  {
+   "kumWoche": 34,
+   "zug": "fuhre:plan:mager",
+   "ergebnis": "geklickt",
+   "quelle": "fuhre-woche",
+   "kasseVorher": 35894
+  },
+  {
+   "kumWoche": 35,
+   "zug": "gegner:zuvorkommen:faehrhaus",
+   "ergebnis": "geklickt",
+   "quelle": "gegenzug",
+   "kasseVorher": 35390
+  },
+  {
+   "kumWoche": 35,
+   "zug": "fuhre:plan:mager",
+   "ergebnis": "geklickt",
+   "quelle": "fuhre-woche",
+   "kasseVorher": 28829
+  },
+  {
+   "kumWoche": 36,
+   "zug": "fuhre:plan:mager",
+   "ergebnis": "geklickt",
+   "quelle": "fuhre-woche",
+   "kasseVorher": 28687
+  },
+  {
+   "kumWoche": 37,
+   "zug": "fuhre:plan:mager",
+   "ergebnis": "geklickt",
+   "quelle": "fuhre-woche",
+   "kasseVorher": 28182
+  },
+  {
+   "kumWoche": 38,
+   "zug": "fuhre:plan:mager",
+   "ergebnis": "geklickt",
+   "quelle": "fuhre-woche",
+   "kasseVorher": 28039
+  },
+  {
+   "kumWoche": 39,
+   "zug": "gegner:abwehren:brueckenwirt",
+   "ergebnis": "geklickt",
+   "quelle": "gegenzug",
+   "kasseVorher": 27533
+  },
+  {
+   "kumWoche": 39,
+   "zug": "fuhre:plan:mager",
+   "ergebnis": "geklickt",
+   "quelle": "fuhre-woche",
+   "kasseVorher": 10960
+  },
+  {
+   "kumWoche": 40,
+   "zug": "fuhre:plan:mager",
+   "ergebnis": "geklickt",
+   "quelle": "fuhre-woche",
+   "kasseVorher": 11360
+  },
+  {
+   "kumWoche": 41,
+   "zug": "fuhre:plan:mager",
+   "ergebnis": "geklickt",
+   "quelle": "fuhre-woche",
+   "kasseVorher": 11216
+  },
+  {
+   "kumWoche": 42,
+   "zug": "fuhre:plan:mager",
+   "ergebnis": "geklickt",
+   "quelle": "fuhre-woche",
+   "kasseVorher": 10711
+  },
+  {
+   "kumWoche": 43,
+   "zug": "fuhre:plan:mager",
+   "ergebnis": "geklickt",
+   "quelle": "fuhre-woche",
+   "kasseVorher": 10568
+  },
+  {
+   "kumWoche": 44,
+   "zug": "fuhre:plan:mager",
+   "ergebnis": "geklickt",
+   "quelle": "fuhre-woche",
+   "kasseVorher": 10062
+  },
+  {
+   "kumWoche": 45,
+   "zug": "fuhre:plan:mager",
+   "ergebnis": "geklickt",
+   "quelle": "fuhre-woche",
+   "kasseVorher": 9919
+  },
+  {
+   "kumWoche": 46,
+   "zug": "fuhre:plan:mager",
+   "ergebnis": "geklickt",
+   "quelle": "fuhre-woche",
+   "kasseVorher": 9413
+  },
+  {
+   "kumWoche": 47,
+   "zug": "fuhre:plan:mager",
+   "ergebnis": "geklickt",
+   "quelle": "fuhre-woche",
+   "kasseVorher": 9270
+  },
+  {
+   "kumWoche": 48,
+   "zug": "fuhre:plan:mager",
+   "ergebnis": "geklickt",
+   "quelle": "fuhre-woche",
+   "kasseVorher": 8764
+  },
+  {
+   "kumWoche": 49,
+   "zug": "fuhre:plan:mager",
+   "ergebnis": "geklickt",
+   "quelle": "fuhre-woche",
+   "kasseVorher": 9206
+  },
+  {
+   "kumWoche": 50,
+   "zug": "fuhre:plan:mager",
+   "ergebnis": "geklickt",
+   "quelle": "fuhre-woche",
+   "kasseVorher": 9021
+  },
+  {
+   "kumWoche": 51,
+   "zug": "fuhre:plan:mager",
+   "ergebnis": "geklickt",
+   "quelle": "fuhre-woche",
+   "kasseVorher": 8515
+  },
+  {
+   "kumWoche": 52,
+   "zug": "fuhre:plan:mager",
+   "ergebnis": "geklickt",
+   "quelle": "fuhre-woche",
+   "kasseVorher": 8372
+  },
+  {
+   "kumWoche": 53,
+   "zug": "fuhre:plan:mager",
+   "ergebnis": "geklickt",
+   "quelle": "fuhre-woche",
+   "kasseVorher": 7867
+  },
+  {
+   "kumWoche": 54,
+   "zug": "fuhre:plan:mager",
+   "ergebnis": "geklickt",
+   "quelle": "fuhre-woche",
+   "kasseVorher": 7723
+  },
+  {
+   "kumWoche": 55,
+   "zug": "fuhre:plan:mager",
+   "ergebnis": "geklickt",
+   "quelle": "fuhre-woche",
+   "kasseVorher": 7218
+  },
+  {
+   "kumWoche": 56,
+   "zug": "fuhre:plan:mager",
+   "ergebnis": "geklickt",
+   "quelle": "fuhre-woche",
+   "kasseVorher": 7075
+  },
+  {
+   "kumWoche": 57,
+   "zug": "fuhre:plan:mager",
+   "ergebnis": "geklickt",
+   "quelle": "fuhre-woche",
+   "kasseVorher": 6569
+  },
+  {
+   "kumWoche": 58,
+   "zug": "fuhre:plan:mager",
+   "ergebnis": "geklickt",
+   "quelle": "fuhre-woche",
+   "kasseVorher": 6969
+  },
+  {
+   "kumWoche": 59,
+   "zug": "fuhre:plan:mager",
+   "ergebnis": "geklickt",
+   "quelle": "fuhre-woche",
+   "kasseVorher": 6826
+  },
+  {
+   "kumWoche": 60,
+   "zug": "fuhre:plan:mager",
+   "ergebnis": "geklickt",
+   "quelle": "fuhre-woche",
+   "kasseVorher": 6320
+  },
+  {
+   "kumWoche": 61,
+   "zug": "weiter",
+   "ergebnis": "geklickt",
+   "quelle": "pflicht",
+   "kasseVorher": 50000
+  },
+  {
+   "kumWoche": 62,
+   "zug": "fuhre:plan:probe",
+   "ergebnis": "geklickt",
+   "quelle": "fuhre-woche",
+   "kasseVorher": 49355
+  },
+  {
+   "kumWoche": 63,
+   "zug": "fuhre:plan:probe",
+   "ergebnis": "geklickt",
+   "quelle": "fuhre-woche",
+   "kasseVorher": 48383
+  },
+  {
+   "kumWoche": 64,
+   "zug": "fuhre:plan:probe",
+   "ergebnis": "geklickt",
+   "quelle": "fuhre-woche",
+   "kasseVorher": 47424
+  },
+  {
+   "kumWoche": 65,
+   "zug": "fuhre:plan:probe",
+   "ergebnis": "geklickt",
+   "quelle": "fuhre-woche",
+   "kasseVorher": 46452
+  },
+  {
+   "kumWoche": 66,
+   "zug": "gegner:abwehren:pfarrhof",
+   "ergebnis": "geklickt",
+   "quelle": "gegenzug",
+   "kasseVorher": 45493
+  },
+  {
+   "kumWoche": 66,
+   "zug": "fuhre:plan:probe",
+   "ergebnis": "geklickt",
+   "quelle": "fuhre-woche",
+   "kasseVorher": 34947
+  },
+  {
+   "kumWoche": 67,
+   "zug": "fuhre:plan:probe",
+   "ergebnis": "geklickt",
+   "quelle": "fuhre-woche",
+   "kasseVorher": 33975
+  },
+  {
+   "kumWoche": 68,
+   "zug": "fuhre:plan:probe",
+   "ergebnis": "geklickt",
+   "quelle": "fuhre-woche",
+   "kasseVorher": 33016
+  },
+  {
+   "kumWoche": 69,
+   "zug": "fuhre:plan:probe",
+   "ergebnis": "geklickt",
+   "quelle": "fuhre-woche",
+   "kasseVorher": 32086
+  },
+  {
+   "kumWoche": 70,
+   "zug": "fuhre:plan:probe",
+   "ergebnis": "geklickt",
+   "quelle": "fuhre-woche",
+   "kasseVorher": 31168
+  },
+  {
+   "kumWoche": 71,
+   "zug": "fuhre:plan:probe",
+   "ergebnis": "geklickt",
+   "quelle": "fuhre-woche",
+   "kasseVorher": 30238
+  },
+  {
+   "kumWoche": 72,
+   "zug": "fuhre:plan:probe",
+   "ergebnis": "geklickt",
+   "quelle": "fuhre-woche",
+   "kasseVorher": 29320
+  },
+  {
+   "kumWoche": 73,
+   "zug": "fuhre:plan:probe",
+   "ergebnis": "geklickt",
+   "quelle": "fuhre-woche",
+   "kasseVorher": 28390
+  },
+  {
+   "kumWoche": 74,
+   "zug": "fuhre:plan:mager",
+   "ergebnis": "geklickt",
+   "quelle": "fuhre-woche",
+   "kasseVorher": 27472
+  },
+  {
+   "kumWoche": 75,
+   "zug": "fuhre:plan:mager",
+   "ergebnis": "geklickt",
+   "quelle": "fuhre-woche",
+   "kasseVorher": 27892
+  },
+  {
+   "kumWoche": 76,
+   "zug": "fuhre:plan:mager",
+   "ergebnis": "geklickt",
+   "quelle": "fuhre-woche",
+   "kasseVorher": 27986
+  },
+  {
+   "kumWoche": 77,
+   "zug": "fuhre:plan:mager",
+   "ergebnis": "geklickt",
+   "quelle": "fuhre-woche",
+   "kasseVorher": 27647
+  },
+  {
+   "kumWoche": 78,
+   "zug": "fuhre:plan:mager",
+   "ergebnis": "geklickt",
+   "quelle": "fuhre-woche",
+   "kasseVorher": 27722
+  },
+  {
+   "kumWoche": 79,
+   "zug": "fuhre:plan:mager",
+   "ergebnis": "geklickt",
+   "quelle": "fuhre-woche",
+   "kasseVorher": 28141
+  },
+  {
+   "kumWoche": 80,
+   "zug": "fuhre:plan:mager",
+   "ergebnis": "geklickt",
+   "quelle": "fuhre-woche",
+   "kasseVorher": 28438
+  },
+  {
+   "kumWoche": 81,
+   "zug": "fuhre:plan:mager",
+   "ergebnis": "geklickt",
+   "quelle": "fuhre-woche",
+   "kasseVorher": 28718
+  },
+  {
+   "kumWoche": 82,
+   "zug": "fuhre:plan:mager",
+   "ergebnis": "geklickt",
+   "quelle": "fuhre-woche",
+   "kasseVorher": 29062
+  },
+  {
+   "kumWoche": 83,
+   "zug": "fuhre:plan:mager",
+   "ergebnis": "geklickt",
+   "quelle": "fuhre-woche",
+   "kasseVorher": 28874
+  },
+  {
+   "kumWoche": 84,
+   "zug": "fuhre:plan:mager",
+   "ergebnis": "geklickt",
+   "quelle": "fuhre-woche",
+   "kasseVorher": 28397
+  },
+  {
+   "kumWoche": 85,
+   "zug": "gegner:zuvorkommen:hirsch",
+   "ergebnis": "geklickt",
+   "quelle": "gegenzug",
+   "kasseVorher": 28804
+  },
+  {
+   "kumWoche": 85,
+   "zug": "fuhre:plan:mager",
+   "ergebnis": "geklickt",
+   "quelle": "fuhre-woche",
+   "kasseVorher": 10579
+  },
+  {
+   "kumWoche": 86,
+   "zug": "fuhre:plan:mager",
+   "ergebnis": "geklickt",
+   "quelle": "fuhre-woche",
+   "kasseVorher": 10859
+  },
+  {
+   "kumWoche": 87,
+   "zug": "fuhre:plan:mager",
+   "ergebnis": "geklickt",
+   "quelle": "fuhre-woche",
+   "kasseVorher": 11322
+  },
+  {
+   "kumWoche": 88,
+   "zug": "gegner:abwehren:markt",
+   "ergebnis": "nicht-gegriffen:nicht-unter-zeiger",
+   "quelle": "gegenzug",
+   "kasseVorher": 11156
+  },
+  {
+   "kumWoche": 88,
+   "zug": "fuhre:plan:mager",
+   "ergebnis": "geklickt",
+   "quelle": "fuhre-woche",
+   "kasseVorher": 11156
+  },
+  {
+   "kumWoche": 89,
+   "zug": "gegner:abwehren:markt",
+   "ergebnis": "nicht-gegriffen:nicht-unter-zeiger",
+   "quelle": "gegenzug",
+   "kasseVorher": 10679
+  },
+  {
+   "kumWoche": 89,
+   "zug": "fuhre:plan:mager",
+   "ergebnis": "geklickt",
+   "quelle": "fuhre-woche",
+   "kasseVorher": 10679
+  },
+  {
+   "kumWoche": 90,
+   "zug": "gegner:abwehren:markt",
+   "ergebnis": "nicht-gegriffen:nicht-unter-zeiger",
+   "quelle": "gegenzug",
+   "kasseVorher": 11142
+  },
+  {
+   "kumWoche": 90,
+   "zug": "fuhre:plan:mager",
+   "ergebnis": "geklickt",
+   "quelle": "fuhre-woche",
+   "kasseVorher": 11142
+  },
+  {
+   "kumWoche": 91,
+   "zug": "gegner:abwehren:markt",
+   "ergebnis": "nicht-gegriffen:nicht-unter-zeiger",
+   "quelle": "gegenzug",
+   "kasseVorher": 50000
+  },
+  {
+   "kumWoche": 91,
+   "zug": "weiter",
+   "ergebnis": "geklickt",
+   "quelle": "pflicht",
+   "kasseVorher": 50000
+  },
+  {
+   "kumWoche": 92,
+   "zug": "gegner:zuvorkommen:neustadt",
+   "ergebnis": "nicht-gegriffen:nicht-unter-zeiger",
+   "quelle": "gegenzug",
+   "kasseVorher": 49342
+  },
+  {
+   "kumWoche": 92,
+   "zug": "fuhre:plan:probe",
+   "ergebnis": "geklickt",
+   "quelle": "fuhre-woche",
+   "kasseVorher": 49342
+  },
+  {
+   "kumWoche": 93,
+   "zug": "gegner:zuvorkommen:markt",
+   "ergebnis": "nicht-gegriffen:nicht-unter-zeiger",
+   "quelle": "gegenzug",
+   "kasseVorher": 48495
+  },
+  {
+   "kumWoche": 93,
+   "zug": "fuhre:plan:probe",
+   "ergebnis": "geklickt",
+   "quelle": "fuhre-woche",
+   "kasseVorher": 48495
+  },
+  {
+   "kumWoche": 94,
+   "zug": "gegner:zuvorkommen:markt",
+   "ergebnis": "nicht-gegriffen:nicht-unter-zeiger",
+   "quelle": "gegenzug",
+   "kasseVorher": 47661
+  },
+  {
+   "kumWoche": 94,
+   "zug": "fuhre:plan:probe",
+   "ergebnis": "geklickt",
+   "quelle": "fuhre-woche",
+   "kasseVorher": 47661
+  },
+  {
+   "kumWoche": 95,
+   "zug": "gegner:zuvorkommen:bahnhofswirt",
+   "ergebnis": "geklickt",
+   "quelle": "gegenzug",
+   "kasseVorher": 46814
+  },
+  {
+   "kumWoche": 95,
+   "zug": "fuhre:plan:probe",
+   "ergebnis": "geklickt",
+   "quelle": "fuhre-woche",
+   "kasseVorher": 3074
+  },
+  {
+   "kumWoche": 96,
+   "zug": "fuhre:plan:probe",
+   "ergebnis": "geklickt",
+   "quelle": "fuhre-woche",
+   "kasseVorher": 2240
+  },
+  {
+   "kumWoche": 97,
+   "zug": "fuhre:plan:probe",
+   "ergebnis": "geklickt",
+   "quelle": "fuhre-woche",
+   "kasseVorher": 1393
+  },
+  {
+   "kumWoche": 98,
+   "zug": "fuhre:plan:probe",
+   "ergebnis": "geklickt",
+   "quelle": "fuhre-woche",
+   "kasseVorher": 559
+  },
+  {
+   "kumWoche": 99,
+   "zug": "fuhre:plan:probe",
+   "ergebnis": "geklickt",
+   "quelle": "fuhre-woche",
+   "kasseVorher": 343
+  },
+  {
+   "kumWoche": 100,
+   "zug": "weiter",
+   "ergebnis": "geklickt",
+   "quelle": "pflicht",
+   "kasseVorher": 139
+  }
+ ],
+ "gegnerZensus": [
+  {
+   "kumWoche": 1,
+   "jahr": 1970,
+   "woche": 1,
+   "epoche": 4,
+   "anzahlGreifbar": 1,
+   "liste": [
+    {
+     "zug": "gegner:oeffnen:konzern",
+     "text": "Nordstern-Gruppe",
+     "preis": null
+    }
+   ]
+  },
+  {
+   "kumWoche": 2,
+   "jahr": 1970,
+   "woche": 2,
+   "epoche": 4,
+   "anzahlGreifbar": 13,
+   "liste": [
+    {
+     "zug": "gegner:oeffnen:adler",
+     "text": "Adler-Bräu AG",
+     "preis": null
+    },
+    {
+     "zug": "gegner:oeffnen:konzern",
+     "text": "Nordstern-Gruppe",
+     "preis": null
+    },
+    {
+     "zug": "gegner:abloesen:brueckenwirt",
+     "text": "BRU · LISablösen 38.221 DM",
+     "preis": "-38221"
+    },
+    {
+     "zug": "gegner:hinhalten:brueckenwirt",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:brueckenwirt",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:abloesen:hirsch",
+     "text": "HIR · JVBablösen 40.500 DM",
+     "preis": "-40500"
+    },
+    {
+     "zug": "gegner:hinhalten:hirsch",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:hirsch",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:abloesen:bahnhofswirt",
+     "text": "BHF · LISablösen 58.320 DM",
+     "preis": "-58320"
+    },
+    {
+     "zug": "gegner:zuvorkommen:bahnhofswirt",
+     "text": "wirbt · noch 6 Wo.zuvorkommen 26.244 DM",
+     "preis": "-26244"
+    },
+    {
+     "zug": "gegner:hinhalten:bahnhofswirt",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:bahnhofswirt",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:beschwerde-bild",
+     "text": "Anzeige beim Bundeskartellamtkostet kein Geld · vier Ansehengegen Bahnhofsgaststätte",
+     "preis": "0"
+    }
+   ]
+  },
+  {
+   "kumWoche": 3,
+   "jahr": 1970,
+   "woche": 3,
+   "epoche": 4,
+   "anzahlGreifbar": 12,
+   "liste": [
+    {
+     "zug": "gegner:oeffnen:adler",
+     "text": "Adler-Bräu AG",
+     "preis": null
+    },
+    {
+     "zug": "gegner:oeffnen:konzern",
+     "text": "Nordstern-Gruppe",
+     "preis": null
+    },
+    {
+     "zug": "gegner:abloesen:brueckenwirt",
+     "text": "BRU · LISablösen 38.221 DM",
+     "preis": "-38221"
+    },
+    {
+     "zug": "gegner:hinhalten:brueckenwirt",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:brueckenwirt",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:abloesen:hirsch",
+     "text": "HIR · JVBablösen 40.500 DM",
+     "preis": "-40500"
+    },
+    {
+     "zug": "gegner:hinhalten:hirsch",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:hirsch",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:abloesen:bahnhofswirt",
+     "text": "BHF · LISablösen 58.320 DM",
+     "preis": "-58320"
+    },
+    {
+     "zug": "gegner:hinhalten:bahnhofswirt",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:bahnhofswirt",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:beschwerde-bild",
+     "text": "Anzeige beim Bundeskartellamtkostet kein Geld · vier Ansehengegen Bahnhofsgaststätte",
+     "preis": "0"
+    }
+   ]
+  },
+  {
+   "kumWoche": 4,
+   "jahr": 1970,
+   "woche": 4,
+   "epoche": 4,
+   "anzahlGreifbar": 13,
+   "liste": [
+    {
+     "zug": "gegner:oeffnen:adler",
+     "text": "Adler-Bräu AG",
+     "preis": null
+    },
+    {
+     "zug": "gegner:oeffnen:konzern",
+     "text": "Nordstern-Gruppe",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:muehlwirt",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:abloesen:brueckenwirt",
+     "text": "BRU · LISablösen 38.221 DM",
+     "preis": "-38221"
+    },
+    {
+     "zug": "gegner:hinhalten:brueckenwirt",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:brueckenwirt",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:abloesen:hirsch",
+     "text": "HIR · JVBablösen 40.500 DM",
+     "preis": "-40500"
+    },
+    {
+     "zug": "gegner:hinhalten:hirsch",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:hirsch",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:abloesen:bahnhofswirt",
+     "text": "BHF · LISablösen 58.320 DM",
+     "preis": "-58320"
+    },
+    {
+     "zug": "gegner:hinhalten:bahnhofswirt",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:bahnhofswirt",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:beschwerde-bild",
+     "text": "Anzeige beim Bundeskartellamtkostet kein Geld · vier Ansehengegen Mühlschenke",
+     "preis": "0"
+    }
+   ]
+  },
+  {
+   "kumWoche": 5,
+   "jahr": 1970,
+   "woche": 5,
+   "epoche": 4,
+   "anzahlGreifbar": 16,
+   "liste": [
+    {
+     "zug": "gegner:oeffnen:adler",
+     "text": "Adler-Bräu AG",
+     "preis": null
+    },
+    {
+     "zug": "gegner:oeffnen:konzern",
+     "text": "Nordstern-Gruppe",
+     "preis": null
+    },
+    {
+     "zug": "gegner:abwehren:ochse",
+     "text": "verhandelt · noch 4 Wo.zuvorkommen 35.154 DM",
+     "preis": "-35154"
+    },
+    {
+     "zug": "gegner:hinhalten:ochse",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:ochse",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:zukaufen:muehlwirt",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:abloesen:brueckenwirt",
+     "text": "BRU · LISablösen 38.221 DM",
+     "preis": "-38221"
+    },
+    {
+     "zug": "gegner:hinhalten:brueckenwirt",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:brueckenwirt",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:abloesen:hirsch",
+     "text": "HIR · JVBablösen 40.500 DM",
+     "preis": "-40500"
+    },
+    {
+     "zug": "gegner:hinhalten:hirsch",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:hirsch",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:abloesen:bahnhofswirt",
+     "text": "BHF · LISablösen 58.320 DM",
+     "preis": "-58320"
+    },
+    {
+     "zug": "gegner:hinhalten:bahnhofswirt",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:bahnhofswirt",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:beschwerde-bild",
+     "text": "Anzeige beim Bundeskartellamtkostet kein Geld · vier Ansehengegen Mühlschenke",
+     "preis": "0"
+    }
+   ]
+  },
+  {
+   "kumWoche": 6,
+   "jahr": 1970,
+   "woche": 6,
+   "epoche": 4,
+   "anzahlGreifbar": 20,
+   "liste": [
+    {
+     "zug": "gegner:oeffnen:adler",
+     "text": "Adler-Bräu AG",
+     "preis": null
+    },
+    {
+     "zug": "gegner:oeffnen:konzern",
+     "text": "Nordstern-Gruppe",
+     "preis": null
+    },
+    {
+     "zug": "gegner:abwehren:ochse",
+     "text": "verhandelt · noch 3 Wo.zuvorkommen 35.154 DM",
+     "preis": "-35154"
+    },
+    {
+     "zug": "gegner:hinhalten:ochse",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:ochse",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:abwehren:pfarrhof",
+     "text": "verhandelt · noch 4 Wo.zuvorkommen 10.546 DM",
+     "preis": "-10546"
+    },
+    {
+     "zug": "gegner:hinhalten:pfarrhof",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:pfarrhof",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:hinhalten:muehlwirt",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:muehlwirt",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:abloesen:brueckenwirt",
+     "text": "BRU · LISablösen 38.221 DM",
+     "preis": "-38221"
+    },
+    {
+     "zug": "gegner:hinhalten:brueckenwirt",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:brueckenwirt",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:abloesen:hirsch",
+     "text": "HIR · JVBablösen 40.500 DM",
+     "preis": "-40500"
+    },
+    {
+     "zug": "gegner:hinhalten:hirsch",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:hirsch",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:abloesen:bahnhofswirt",
+     "text": "BHF · LISablösen 58.320 DM",
+     "preis": "-58320"
+    },
+    {
+     "zug": "gegner:hinhalten:bahnhofswirt",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:bahnhofswirt",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:beschwerde-bild",
+     "text": "Anzeige beim Bundeskartellamtkostet kein Geld · vier Ansehengegen Mühlschenke",
+     "preis": "0"
+    }
+   ]
+  },
+  {
+   "kumWoche": 7,
+   "jahr": 1970,
+   "woche": 7,
+   "epoche": 4,
+   "anzahlGreifbar": 21,
+   "liste": [
+    {
+     "zug": "gegner:oeffnen:adler",
+     "text": "Adler-Bräu AG",
+     "preis": null
+    },
+    {
+     "zug": "gegner:oeffnen:konzern",
+     "text": "Nordstern-Gruppe",
+     "preis": null
+    },
+    {
+     "zug": "gegner:abwehren:ochse",
+     "text": "verhandelt · noch 2 Wo.zuvorkommen 35.154 DM",
+     "preis": "-35154"
+    },
+    {
+     "zug": "gegner:hinhalten:ochse",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:ochse",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:abwehren:pfarrhof",
+     "text": "verhandelt · noch 3 Wo.zuvorkommen 10.546 DM",
+     "preis": "-10546"
+    },
+    {
+     "zug": "gegner:hinhalten:pfarrhof",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:pfarrhof",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:hinhalten:muehlwirt",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:muehlwirt",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:abloesen:brueckenwirt",
+     "text": "BRU · LISablösen 38.221 DM",
+     "preis": "-38221"
+    },
+    {
+     "zug": "gegner:hinhalten:brueckenwirt",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:brueckenwirt",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:abloesen:hirsch",
+     "text": "HIR · JVBablösen 40.500 DM",
+     "preis": "-40500"
+    },
+    {
+     "zug": "gegner:hinhalten:hirsch",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:hirsch",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:hinhalten:bahnhofswirt",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:bahnhofswirt",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:beschwerde-bild",
+     "text": "Anzeige beim Bundeskartellamtkostet kein Geld · vier Ansehengegen Mühlschenke",
+     "preis": "0"
+    },
+    {
+     "zug": "gegner:mitbieten:0",
+     "text": "knapp darüber−39.917 DM",
+     "preis": "-39917"
+    },
+    {
+     "zug": "gegner:mitbieten:1",
+     "text": "deutlich darüber−51.678 DM",
+     "preis": "-51678"
+    }
+   ]
+  },
+  {
+   "kumWoche": 8,
+   "jahr": 1970,
+   "woche": 8,
+   "epoche": 4,
+   "anzahlGreifbar": 27,
+   "liste": [
+    {
+     "zug": "gegner:oeffnen:adler",
+     "text": "Adler-Bräu AG",
+     "preis": null
+    },
+    {
+     "zug": "gegner:oeffnen:konzern",
+     "text": "Nordstern-Gruppe",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zuvorkommen:lindenhof",
+     "text": "wirbt · noch 5 Wo.zuvorkommen 19.683 DM",
+     "preis": "-19683"
+    },
+    {
+     "zug": "gegner:hinhalten:lindenhof",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:lindenhof",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:abwehren:ochse",
+     "text": "verhandelt · noch 1 Wo.zuvorkommen 35.154 DM",
+     "preis": "-35154"
+    },
+    {
+     "zug": "gegner:hinhalten:ochse",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:ochse",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:hinhalten:torschenke",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:torschenke",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:abwehren:pfarrhof",
+     "text": "verhandelt · noch 2 Wo.zuvorkommen 10.546 DM",
+     "preis": "-10546"
+    },
+    {
+     "zug": "gegner:hinhalten:pfarrhof",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:pfarrhof",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:hinhalten:muehlwirt",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:muehlwirt",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:abloesen:brueckenwirt",
+     "text": "BRU · LISablösen 38.221 DM",
+     "preis": "-38221"
+    },
+    {
+     "zug": "gegner:hinhalten:brueckenwirt",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:brueckenwirt",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:abloesen:hirsch",
+     "text": "HIR · JVBablösen 40.500 DM",
+     "preis": "-40500"
+    },
+    {
+     "zug": "gegner:hinhalten:hirsch",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:hirsch",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:abloesen:bahnhofswirt",
+     "text": "BHF · LISablösen 58.320 DM",
+     "preis": "-58320"
+    },
+    {
+     "zug": "gegner:hinhalten:bahnhofswirt",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:bahnhofswirt",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:beschwerde-bild",
+     "text": "Anzeige beim Bundeskartellamtkostet kein Geld · vier Ansehengegen Gasthof Lindenhof",
+     "preis": "0"
+    },
+    {
+     "zug": "gegner:mitbieten:0",
+     "text": "knapp darüber−39.917 DM",
+     "preis": "-39917"
+    },
+    {
+     "zug": "gegner:mitbieten:1",
+     "text": "deutlich darüber−51.678 DM",
+     "preis": "-51678"
+    }
+   ]
+  },
+  {
+   "kumWoche": 9,
+   "jahr": 1970,
+   "woche": 9,
+   "epoche": 4,
+   "anzahlGreifbar": 18,
+   "liste": [
+    {
+     "zug": "gegner:oeffnen:adler",
+     "text": "Adler-Bräu AG",
+     "preis": null
+    },
+    {
+     "zug": "gegner:oeffnen:konzern",
+     "text": "Nordstern-Gruppe",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zuvorkommen:lindenhof",
+     "text": "wirbt · noch 4 Wo.zuvorkommen 19.683 DM",
+     "preis": "-19683"
+    },
+    {
+     "zug": "gegner:hinhalten:lindenhof",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:lindenhof",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:hinhalten:torschenke",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:torschenke",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:hinhalten:pfarrhof",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:pfarrhof",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:hinhalten:muehlwirt",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:muehlwirt",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:hinhalten:brueckenwirt",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:brueckenwirt",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:hinhalten:hirsch",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:hirsch",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:hinhalten:bahnhofswirt",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:bahnhofswirt",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:beschwerde-bild",
+     "text": "Anzeige beim Bundeskartellamtkostet kein Geld · vier Ansehengegen Gasthof Lindenhof",
+     "preis": "0"
+    }
+   ]
+  },
+  {
+   "kumWoche": 10,
+   "jahr": 1970,
+   "woche": 10,
+   "epoche": 4,
+   "anzahlGreifbar": 18,
+   "liste": [
+    {
+     "zug": "gegner:oeffnen:adler",
+     "text": "Adler-Bräu AG",
+     "preis": null
+    },
+    {
+     "zug": "gegner:oeffnen:konzern",
+     "text": "Nordstern-Gruppe",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zuvorkommen:lindenhof",
+     "text": "wirbt · noch 3 Wo.zuvorkommen 19.683 DM",
+     "preis": "-19683"
+    },
+    {
+     "zug": "gegner:hinhalten:lindenhof",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:lindenhof",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:zukaufen:torschenke",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:abloesen:pfarrhof",
+     "text": "PFA · LISablösen 17.010 DM",
+     "preis": "-17010"
+    },
+    {
+     "zug": "gegner:hinhalten:pfarrhof",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:pfarrhof",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:hinhalten:muehlwirt",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:muehlwirt",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:hinhalten:brueckenwirt",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:brueckenwirt",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:hinhalten:hirsch",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:hirsch",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:hinhalten:bahnhofswirt",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:bahnhofswirt",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:beschwerde-bild",
+     "text": "Anzeige beim Bundeskartellamtkostet kein Geld · vier Ansehengegen Gasthof Lindenhof",
+     "preis": "0"
+    }
+   ]
+  },
+  {
+   "kumWoche": 11,
+   "jahr": 1970,
+   "woche": 11,
+   "epoche": 4,
+   "anzahlGreifbar": 15,
+   "liste": [
+    {
+     "zug": "gegner:oeffnen:adler",
+     "text": "Adler-Bräu AG",
+     "preis": null
+    },
+    {
+     "zug": "gegner:oeffnen:konzern",
+     "text": "Nordstern-Gruppe",
+     "preis": null
+    },
+    {
+     "zug": "gegner:hinhalten:torschenke",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:torschenke",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:hinhalten:pfarrhof",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:pfarrhof",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:hinhalten:muehlwirt",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:muehlwirt",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:hinhalten:brueckenwirt",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:brueckenwirt",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:hinhalten:hirsch",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:hirsch",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:hinhalten:bahnhofswirt",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:bahnhofswirt",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:beschwerde-bild",
+     "text": "Anzeige beim Bundeskartellamtkostet kein Geld · vier Ansehengegen Schenke am Tor",
+     "preis": "0"
+    }
+   ]
+  },
+  {
+   "kumWoche": 12,
+   "jahr": 1970,
+   "woche": 12,
+   "epoche": 4,
+   "anzahlGreifbar": 17,
+   "liste": [
+    {
+     "zug": "gegner:oeffnen:adler",
+     "text": "Adler-Bräu AG",
+     "preis": null
+    },
+    {
+     "zug": "gegner:hinhalten:torschenke",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:torschenke",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:hinhalten:pfarrhof",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:pfarrhof",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:hinhalten:muehlwirt",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:muehlwirt",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:hinhalten:brueckenwirt",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:brueckenwirt",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:abwehren:faehrhaus",
+     "text": "verhandelt · noch 4 Wo.zuvorkommen 9.040 DM",
+     "preis": "-9040"
+    },
+    {
+     "zug": "gegner:hinhalten:faehrhaus",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:faehrhaus",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:hinhalten:hirsch",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:hirsch",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:hinhalten:bahnhofswirt",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:bahnhofswirt",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:beschwerde-bild",
+     "text": "Anzeige beim Bundeskartellamtkostet kein Geld · vier Ansehengegen Schenke am Tor",
+     "preis": "0"
+    }
+   ]
+  },
+  {
+   "kumWoche": 13,
+   "jahr": 1970,
+   "woche": 13,
+   "epoche": 4,
+   "anzahlGreifbar": 17,
+   "liste": [
+    {
+     "zug": "gegner:oeffnen:adler",
+     "text": "Adler-Bräu AG",
+     "preis": null
+    },
+    {
+     "zug": "gegner:hinhalten:torschenke",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:torschenke",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:hinhalten:pfarrhof",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:pfarrhof",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:hinhalten:muehlwirt",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:muehlwirt",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:hinhalten:brueckenwirt",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:brueckenwirt",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:abwehren:faehrhaus",
+     "text": "verhandelt · noch 3 Wo.zuvorkommen 9.040 DM",
+     "preis": "-9040"
+    },
+    {
+     "zug": "gegner:hinhalten:faehrhaus",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:faehrhaus",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:hinhalten:hirsch",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:hirsch",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:hinhalten:bahnhofswirt",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:bahnhofswirt",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:beschwerde-bild",
+     "text": "Anzeige beim Bundeskartellamtkostet kein Geld · vier Ansehengegen Schenke am Tor",
+     "preis": "0"
+    }
+   ]
+  },
+  {
+   "kumWoche": 14,
+   "jahr": 1970,
+   "woche": 14,
+   "epoche": 4,
+   "anzahlGreifbar": 18,
+   "liste": [
+    {
+     "zug": "gegner:oeffnen:adler",
+     "text": "Adler-Bräu AG",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zuvorkommen:torschenke",
+     "text": "wirbt · noch 1 Wo.zuvorkommen 14.580 DM",
+     "preis": "-14580"
+    },
+    {
+     "zug": "gegner:hinhalten:torschenke",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:torschenke",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:hinhalten:pfarrhof",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:pfarrhof",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:hinhalten:muehlwirt",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:muehlwirt",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:hinhalten:brueckenwirt",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:brueckenwirt",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:abwehren:faehrhaus",
+     "text": "verhandelt · noch 2 Wo.zuvorkommen 9.040 DM",
+     "preis": "-9040"
+    },
+    {
+     "zug": "gegner:hinhalten:faehrhaus",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:faehrhaus",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:hinhalten:hirsch",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:hirsch",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:hinhalten:bahnhofswirt",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:bahnhofswirt",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:beschwerde-bild",
+     "text": "Anzeige beim Bundeskartellamtkostet kein Geld · vier Ansehengegen Schenke am Tor",
+     "preis": "0"
+    }
+   ]
+  },
+  {
+   "kumWoche": 15,
+   "jahr": 1970,
+   "woche": 15,
+   "epoche": 4,
+   "anzahlGreifbar": 8,
+   "liste": [
+    {
+     "zug": "gegner:oeffnen:adler",
+     "text": "Adler-Bräu AG",
+     "preis": null
+    },
+    {
+     "zug": "gegner:hinhalten:pfarrhof",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:hinhalten:muehlwirt",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:hinhalten:brueckenwirt",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:hinhalten:faehrhaus",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:hinhalten:hirsch",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:hinhalten:bahnhofswirt",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:beschwerde-bild",
+     "text": "Anzeige beim Bundeskartellamtkostet kein Geld · vier Ansehengegen Mühlschenke",
+     "preis": "0"
+    }
+   ]
+  },
+  {
+   "kumWoche": 16,
+   "jahr": 1970,
+   "woche": 16,
+   "epoche": 4,
+   "anzahlGreifbar": 14,
+   "liste": [
+    {
+     "zug": "gegner:oeffnen:adler",
+     "text": "Adler-Bräu AG",
+     "preis": null
+    },
+    {
+     "zug": "gegner:hinhalten:pfarrhof",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:pfarrhof",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:hinhalten:muehlwirt",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:muehlwirt",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:hinhalten:brueckenwirt",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:brueckenwirt",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:hinhalten:faehrhaus",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:faehrhaus",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:hinhalten:hirsch",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:hirsch",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:hinhalten:bahnhofswirt",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:bahnhofswirt",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:beschwerde-bild",
+     "text": "Anzeige beim Bundeskartellamtkostet kein Geld · vier Ansehengegen Mühlschenke",
+     "preis": "0"
+    }
+   ]
+  },
+  {
+   "kumWoche": 17,
+   "jahr": 1970,
+   "woche": 17,
+   "epoche": 4,
+   "anzahlGreifbar": 12,
+   "liste": [
+    {
+     "zug": "gegner:oeffnen:adler",
+     "text": "Adler-Bräu AG",
+     "preis": null
+    },
+    {
+     "zug": "gegner:hinhalten:pfarrhof",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:pfarrhof",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:hinhalten:brueckenwirt",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:brueckenwirt",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:hinhalten:faehrhaus",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:faehrhaus",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:hinhalten:hirsch",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:hirsch",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:hinhalten:bahnhofswirt",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:bahnhofswirt",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:beschwerde-bild",
+     "text": "Anzeige beim Bundeskartellamtkostet kein Geld · vier Ansehengegen Bahnhofsgaststätte",
+     "preis": "0"
+    }
+   ]
+  },
+  {
+   "kumWoche": 18,
+   "jahr": 1970,
+   "woche": 18,
+   "epoche": 4,
+   "anzahlGreifbar": 12,
+   "liste": [
+    {
+     "zug": "gegner:oeffnen:adler",
+     "text": "Adler-Bräu AG",
+     "preis": null
+    },
+    {
+     "zug": "gegner:hinhalten:pfarrhof",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:pfarrhof",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:hinhalten:brueckenwirt",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:brueckenwirt",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:hinhalten:faehrhaus",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:faehrhaus",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:hinhalten:hirsch",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:hirsch",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:hinhalten:bahnhofswirt",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:bahnhofswirt",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:beschwerde-bild",
+     "text": "Anzeige beim Bundeskartellamtkostet kein Geld · vier Ansehengegen Fährhaus am Fluss",
+     "preis": "0"
+    }
+   ]
+  },
+  {
+   "kumWoche": 19,
+   "jahr": 1970,
+   "woche": 19,
+   "epoche": 4,
+   "anzahlGreifbar": 13,
+   "liste": [
+    {
+     "zug": "gegner:oeffnen:adler",
+     "text": "Adler-Bräu AG",
+     "preis": null
+    },
+    {
+     "zug": "gegner:hinhalten:pfarrhof",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:pfarrhof",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:zukaufen:muehlwirt",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:hinhalten:brueckenwirt",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:brueckenwirt",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:hinhalten:faehrhaus",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:faehrhaus",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:hinhalten:hirsch",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:hirsch",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:hinhalten:bahnhofswirt",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:bahnhofswirt",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:beschwerde-bild",
+     "text": "Anzeige beim Bundeskartellamtkostet kein Geld · vier Ansehengegen Fährhaus am Fluss",
+     "preis": "0"
+    }
+   ]
+  },
+  {
+   "kumWoche": 20,
+   "jahr": 1970,
+   "woche": 20,
+   "epoche": 4,
+   "anzahlGreifbar": 13,
+   "liste": [
+    {
+     "zug": "gegner:oeffnen:adler",
+     "text": "Adler-Bräu AG",
+     "preis": null
+    },
+    {
+     "zug": "gegner:hinhalten:pfarrhof",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:pfarrhof",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:zukaufen:muehlwirt",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:hinhalten:brueckenwirt",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:brueckenwirt",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:hinhalten:faehrhaus",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:faehrhaus",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:hinhalten:hirsch",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:hirsch",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:hinhalten:bahnhofswirt",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:bahnhofswirt",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:beschwerde-bild",
+     "text": "Anzeige beim Bundeskartellamtkostet kein Geld · vier Ansehengegen Fährhaus am Fluss",
+     "preis": "0"
+    }
+   ]
+  },
+  {
+   "kumWoche": 21,
+   "jahr": 1970,
+   "woche": 21,
+   "epoche": 4,
+   "anzahlGreifbar": 13,
+   "liste": [
+    {
+     "zug": "gegner:oeffnen:adler",
+     "text": "Adler-Bräu AG",
+     "preis": null
+    },
+    {
+     "zug": "gegner:hinhalten:pfarrhof",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:pfarrhof",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:zukaufen:muehlwirt",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:hinhalten:brueckenwirt",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:brueckenwirt",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:hinhalten:faehrhaus",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:faehrhaus",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:hinhalten:hirsch",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:hirsch",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:hinhalten:bahnhofswirt",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:bahnhofswirt",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:beschwerde-bild",
+     "text": "Anzeige beim Bundeskartellamtkostet kein Geld · vier Ansehengegen Fährhaus am Fluss",
+     "preis": "0"
+    }
+   ]
+  },
+  {
+   "kumWoche": 22,
+   "jahr": 1970,
+   "woche": 22,
+   "epoche": 4,
+   "anzahlGreifbar": 13,
+   "liste": [
+    {
+     "zug": "gegner:oeffnen:adler",
+     "text": "Adler-Bräu AG",
+     "preis": null
+    },
+    {
+     "zug": "gegner:hinhalten:pfarrhof",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:pfarrhof",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:zukaufen:muehlwirt",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:hinhalten:brueckenwirt",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:brueckenwirt",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:hinhalten:faehrhaus",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:faehrhaus",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:hinhalten:hirsch",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:hirsch",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:hinhalten:bahnhofswirt",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:bahnhofswirt",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:beschwerde-bild",
+     "text": "Anzeige beim Bundeskartellamtkostet kein Geld · vier Ansehengegen Fährhaus am Fluss",
+     "preis": "0"
+    }
+   ]
+  },
+  {
+   "kumWoche": 23,
+   "jahr": 1970,
+   "woche": 23,
+   "epoche": 4,
+   "anzahlGreifbar": 14,
+   "liste": [
+    {
+     "zug": "gegner:oeffnen:adler",
+     "text": "Adler-Bräu AG",
+     "preis": null
+    },
+    {
+     "zug": "gegner:hinhalten:pfarrhof",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:pfarrhof",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:hinhalten:muehlwirt",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:muehlwirt",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:hinhalten:brueckenwirt",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:brueckenwirt",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:hinhalten:faehrhaus",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:faehrhaus",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:hinhalten:hirsch",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:hirsch",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:hinhalten:bahnhofswirt",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:bahnhofswirt",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:beschwerde-bild",
+     "text": "Anzeige beim Bundeskartellamtkostet kein Geld · vier Ansehengegen Fährhaus am Fluss",
+     "preis": "0"
+    }
+   ]
+  },
+  {
+   "kumWoche": 24,
+   "jahr": 1970,
+   "woche": 24,
+   "epoche": 4,
+   "anzahlGreifbar": 14,
+   "liste": [
+    {
+     "zug": "gegner:oeffnen:adler",
+     "text": "Adler-Bräu AG",
+     "preis": null
+    },
+    {
+     "zug": "gegner:hinhalten:pfarrhof",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:pfarrhof",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:hinhalten:muehlwirt",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:muehlwirt",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:hinhalten:brueckenwirt",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:brueckenwirt",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:hinhalten:faehrhaus",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:faehrhaus",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:hinhalten:hirsch",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:hirsch",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:hinhalten:bahnhofswirt",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:bahnhofswirt",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:beschwerde-bild",
+     "text": "Anzeige beim Bundeskartellamtkostet kein Geld · vier Ansehengegen Fährhaus am Fluss",
+     "preis": "0"
+    }
+   ]
+  },
+  {
+   "kumWoche": 25,
+   "jahr": 1970,
+   "woche": 25,
+   "epoche": 4,
+   "anzahlGreifbar": 16,
+   "liste": [
+    {
+     "zug": "gegner:oeffnen:adler",
+     "text": "Adler-Bräu AG",
+     "preis": null
+    },
+    {
+     "zug": "gegner:hinhalten:pfarrhof",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:pfarrhof",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:hinhalten:muehlwirt",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:muehlwirt",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:hinhalten:brueckenwirt",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:brueckenwirt",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:hinhalten:faehrhaus",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:faehrhaus",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:hinhalten:hirsch",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:hirsch",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:hinhalten:bahnhofswirt",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:bahnhofswirt",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:hinhalten:neustadt",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:neustadt",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:beschwerde-bild",
+     "text": "Anzeige beim Bundeskartellamtkostet kein Geld · vier Ansehengegen Fährhaus am Fluss",
+     "preis": "0"
+    }
+   ]
+  },
+  {
+   "kumWoche": 26,
+   "jahr": 1970,
+   "woche": 26,
+   "epoche": 4,
+   "anzahlGreifbar": 14,
+   "liste": [
+    {
+     "zug": "gegner:oeffnen:adler",
+     "text": "Adler-Bräu AG",
+     "preis": null
+    },
+    {
+     "zug": "gegner:hinhalten:pfarrhof",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:pfarrhof",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:hinhalten:muehlwirt",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:muehlwirt",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:hinhalten:faehrhaus",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:faehrhaus",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:hinhalten:hirsch",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:hirsch",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:hinhalten:bahnhofswirt",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:bahnhofswirt",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:hinhalten:neustadt",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:neustadt",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:beschwerde-bild",
+     "text": "Anzeige beim Bundeskartellamtkostet kein Geld · vier Ansehengegen Gaststätte Neustadt",
+     "preis": "0"
+    }
+   ]
+  },
+  {
+   "kumWoche": 27,
+   "jahr": 1970,
+   "woche": 27,
+   "epoche": 4,
+   "anzahlGreifbar": 14,
+   "liste": [
+    {
+     "zug": "gegner:oeffnen:adler",
+     "text": "Adler-Bräu AG",
+     "preis": null
+    },
+    {
+     "zug": "gegner:hinhalten:pfarrhof",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:pfarrhof",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:hinhalten:muehlwirt",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:muehlwirt",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:hinhalten:faehrhaus",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:faehrhaus",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:hinhalten:hirsch",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:hirsch",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:hinhalten:bahnhofswirt",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:bahnhofswirt",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:hinhalten:neustadt",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:neustadt",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:beschwerde-bild",
+     "text": "Anzeige beim Bundeskartellamtkostet kein Geld · vier Ansehengegen Gaststätte Neustadt",
+     "preis": "0"
+    }
+   ]
+  },
+  {
+   "kumWoche": 28,
+   "jahr": 1970,
+   "woche": 28,
+   "epoche": 4,
+   "anzahlGreifbar": 14,
+   "liste": [
+    {
+     "zug": "gegner:oeffnen:adler",
+     "text": "Adler-Bräu AG",
+     "preis": null
+    },
+    {
+     "zug": "gegner:hinhalten:pfarrhof",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:pfarrhof",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:hinhalten:muehlwirt",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:muehlwirt",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:hinhalten:faehrhaus",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:faehrhaus",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:hinhalten:hirsch",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:hirsch",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:hinhalten:bahnhofswirt",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:bahnhofswirt",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:hinhalten:neustadt",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:neustadt",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:beschwerde-bild",
+     "text": "Anzeige beim Bundeskartellamtkostet kein Geld · vier Ansehengegen Gaststätte Neustadt",
+     "preis": "0"
+    }
+   ]
+  },
+  {
+   "kumWoche": 29,
+   "jahr": 1970,
+   "woche": 29,
+   "epoche": 4,
+   "anzahlGreifbar": 13,
+   "liste": [
+    {
+     "zug": "gegner:oeffnen:adler",
+     "text": "Adler-Bräu AG",
+     "preis": null
+    },
+    {
+     "zug": "gegner:hinhalten:pfarrhof",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:pfarrhof",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:zukaufen:muehlwirt",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:hinhalten:faehrhaus",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:faehrhaus",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:hinhalten:hirsch",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:hirsch",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:hinhalten:bahnhofswirt",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:bahnhofswirt",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:hinhalten:neustadt",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:neustadt",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:beschwerde-bild",
+     "text": "Anzeige beim Bundeskartellamtkostet kein Geld · vier Ansehengegen Gaststätte Neustadt",
+     "preis": "0"
+    }
+   ]
+  },
+  {
+   "kumWoche": 30,
+   "jahr": 1970,
+   "woche": 30,
+   "epoche": 4,
+   "anzahlGreifbar": 13,
+   "liste": [
+    {
+     "zug": "gegner:oeffnen:adler",
+     "text": "Adler-Bräu AG",
+     "preis": null
+    },
+    {
+     "zug": "gegner:hinhalten:pfarrhof",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:pfarrhof",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:zukaufen:muehlwirt",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:hinhalten:faehrhaus",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:faehrhaus",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:hinhalten:hirsch",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:hirsch",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:hinhalten:bahnhofswirt",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:bahnhofswirt",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:hinhalten:neustadt",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:neustadt",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:beschwerde-bild",
+     "text": "Anzeige beim Bundeskartellamtkostet kein Geld · vier Ansehengegen Gaststätte Neustadt",
+     "preis": "0"
+    }
+   ]
+  },
+  {
+   "kumWoche": 31,
+   "jahr": 1971,
+   "woche": 1,
+   "epoche": 4,
+   "anzahlGreifbar": 3,
+   "liste": [
+    {
+     "zug": "gegner:abloesen:faehrhaus",
+     "text": "FAE · JVBablösen 24.300 DM",
+     "preis": "-24300"
+    },
+    {
+     "zug": "gegner:zukaufen:faehrhaus",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:mitbieten:0",
+     "text": "knapp darüber−39.917 DM",
+     "preis": "-39917"
+    }
+   ]
+  },
+  {
+   "kumWoche": 32,
+   "jahr": 1971,
+   "woche": 2,
+   "epoche": 4,
+   "anzahlGreifbar": 12,
+   "liste": [
+    {
+     "zug": "gegner:oeffnen:adler",
+     "text": "Adler-Bräu AG",
+     "preis": null
+    },
+    {
+     "zug": "gegner:abloesen:pfarrhof",
+     "text": "PFA · LISablösen 17.010 DM",
+     "preis": "-17010"
+    },
+    {
+     "zug": "gegner:hinhalten:pfarrhof",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:pfarrhof",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:abwehren:muehlwirt",
+     "text": "verhandelt · noch 2 Wo.zuvorkommen 13.559 DM",
+     "preis": "-13559"
+    },
+    {
+     "zug": "gegner:abloesen:muehlwirt",
+     "text": "MUE · LISablösen 26.815 DM",
+     "preis": "-26815"
+    },
+    {
+     "zug": "gegner:hinhalten:muehlwirt",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:muehlwirt",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:abloesen:faehrhaus",
+     "text": "FAE · JVBablösen 24.300 DM",
+     "preis": "-24300"
+    },
+    {
+     "zug": "gegner:hinhalten:faehrhaus",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:faehrhaus",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:mitbieten:0",
+     "text": "knapp darüber−39.917 DM",
+     "preis": "-39917"
+    }
+   ]
+  },
+  {
+   "kumWoche": 33,
+   "jahr": 1971,
+   "woche": 3,
+   "epoche": 4,
+   "anzahlGreifbar": 9,
+   "liste": [
+    {
+     "zug": "gegner:oeffnen:adler",
+     "text": "Adler-Bräu AG",
+     "preis": null
+    },
+    {
+     "zug": "gegner:hinhalten:pfarrhof",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:pfarrhof",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:abloesen:muehlwirt",
+     "text": "MUE · LISablösen 26.815 DM",
+     "preis": "-26815"
+    },
+    {
+     "zug": "gegner:hinhalten:muehlwirt",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:muehlwirt",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:abloesen:faehrhaus",
+     "text": "FAE · JVBablösen 24.300 DM",
+     "preis": "-24300"
+    },
+    {
+     "zug": "gegner:hinhalten:faehrhaus",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:faehrhaus",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    }
+   ]
+  },
+  {
+   "kumWoche": 34,
+   "jahr": 1971,
+   "woche": 4,
+   "epoche": 4,
+   "anzahlGreifbar": 9,
+   "liste": [
+    {
+     "zug": "gegner:oeffnen:adler",
+     "text": "Adler-Bräu AG",
+     "preis": null
+    },
+    {
+     "zug": "gegner:hinhalten:pfarrhof",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:pfarrhof",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:abloesen:muehlwirt",
+     "text": "MUE · LISablösen 26.815 DM",
+     "preis": "-26815"
+    },
+    {
+     "zug": "gegner:hinhalten:muehlwirt",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:muehlwirt",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:abloesen:faehrhaus",
+     "text": "FAE · JVBablösen 24.300 DM",
+     "preis": "-24300"
+    },
+    {
+     "zug": "gegner:hinhalten:faehrhaus",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:faehrhaus",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    }
+   ]
+  },
+  {
+   "kumWoche": 35,
+   "jahr": 1971,
+   "woche": 5,
+   "epoche": 4,
+   "anzahlGreifbar": 15,
+   "liste": [
+    {
+     "zug": "gegner:oeffnen:adler",
+     "text": "Adler-Bräu AG",
+     "preis": null
+    },
+    {
+     "zug": "gegner:abloesen:pfarrhof",
+     "text": "PFA · LISablösen 17.010 DM",
+     "preis": "-17010"
+    },
+    {
+     "zug": "gegner:hinhalten:pfarrhof",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:pfarrhof",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:abloesen:muehlwirt",
+     "text": "MUE · LISablösen 26.815 DM",
+     "preis": "-26815"
+    },
+    {
+     "zug": "gegner:hinhalten:muehlwirt",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:muehlwirt",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:hinhalten:brueckenwirt",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:brueckenwirt",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:abloesen:faehrhaus",
+     "text": "FAE · JVBablösen 24.300 DM",
+     "preis": "-24300"
+    },
+    {
+     "zug": "gegner:zuvorkommen:faehrhaus",
+     "text": "wirbt · noch 6 Wo.zuvorkommen 6.561 DM",
+     "preis": "-6561"
+    },
+    {
+     "zug": "gegner:hinhalten:faehrhaus",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:faehrhaus",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:angebot-ja",
+     "text": "Ein Viertel abtreten+410.446 DM",
+     "preis": "410446"
+    },
+    {
+     "zug": "gegner:angebot-nein",
+     "text": "Ausschlagen",
+     "preis": null
+    }
+   ]
+  },
+  {
+   "kumWoche": 36,
+   "jahr": 1971,
+   "woche": 6,
+   "epoche": 4,
+   "anzahlGreifbar": 13,
+   "liste": [
+    {
+     "zug": "gegner:oeffnen:adler",
+     "text": "Adler-Bräu AG",
+     "preis": null
+    },
+    {
+     "zug": "gegner:hinhalten:pfarrhof",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:pfarrhof",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:abloesen:muehlwirt",
+     "text": "MUE · LISablösen 26.815 DM",
+     "preis": "-26815"
+    },
+    {
+     "zug": "gegner:hinhalten:muehlwirt",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:muehlwirt",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:hinhalten:brueckenwirt",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:brueckenwirt",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:abloesen:faehrhaus",
+     "text": "FAE · JVBablösen 24.300 DM",
+     "preis": "-24300"
+    },
+    {
+     "zug": "gegner:hinhalten:faehrhaus",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:faehrhaus",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:angebot-ja",
+     "text": "Ein Viertel abtreten+410.446 DM",
+     "preis": "410446"
+    },
+    {
+     "zug": "gegner:angebot-nein",
+     "text": "Ausschlagen",
+     "preis": null
+    }
+   ]
+  },
+  {
+   "kumWoche": 37,
+   "jahr": 1971,
+   "woche": 7,
+   "epoche": 4,
+   "anzahlGreifbar": 13,
+   "liste": [
+    {
+     "zug": "gegner:oeffnen:adler",
+     "text": "Adler-Bräu AG",
+     "preis": null
+    },
+    {
+     "zug": "gegner:hinhalten:pfarrhof",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:pfarrhof",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:abloesen:muehlwirt",
+     "text": "MUE · LISablösen 26.815 DM",
+     "preis": "-26815"
+    },
+    {
+     "zug": "gegner:hinhalten:muehlwirt",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:muehlwirt",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:hinhalten:brueckenwirt",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:brueckenwirt",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:abloesen:faehrhaus",
+     "text": "FAE · JVBablösen 24.300 DM",
+     "preis": "-24300"
+    },
+    {
+     "zug": "gegner:hinhalten:faehrhaus",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:faehrhaus",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:angebot-ja",
+     "text": "Ein Viertel abtreten+410.446 DM",
+     "preis": "410446"
+    },
+    {
+     "zug": "gegner:angebot-nein",
+     "text": "Ausschlagen",
+     "preis": null
+    }
+   ]
+  },
+  {
+   "kumWoche": 38,
+   "jahr": 1971,
+   "woche": 8,
+   "epoche": 4,
+   "anzahlGreifbar": 14,
+   "liste": [
+    {
+     "zug": "gegner:oeffnen:adler",
+     "text": "Adler-Bräu AG",
+     "preis": null
+    },
+    {
+     "zug": "gegner:abloesen:pfarrhof",
+     "text": "PFA · LISablösen 17.010 DM",
+     "preis": "-17010"
+    },
+    {
+     "zug": "gegner:hinhalten:pfarrhof",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:pfarrhof",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:abloesen:muehlwirt",
+     "text": "MUE · LISablösen 26.815 DM",
+     "preis": "-26815"
+    },
+    {
+     "zug": "gegner:hinhalten:muehlwirt",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:muehlwirt",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:hinhalten:brueckenwirt",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:brueckenwirt",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:abloesen:faehrhaus",
+     "text": "FAE · JVBablösen 24.300 DM",
+     "preis": "-24300"
+    },
+    {
+     "zug": "gegner:hinhalten:faehrhaus",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:faehrhaus",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:angebot-ja",
+     "text": "Ein Viertel abtreten+410.446 DM",
+     "preis": "410446"
+    },
+    {
+     "zug": "gegner:angebot-nein",
+     "text": "Ausschlagen",
+     "preis": null
+    }
+   ]
+  },
+  {
+   "kumWoche": 39,
+   "jahr": 1971,
+   "woche": 9,
+   "epoche": 4,
+   "anzahlGreifbar": 15,
+   "liste": [
+    {
+     "zug": "gegner:oeffnen:adler",
+     "text": "Adler-Bräu AG",
+     "preis": null
+    },
+    {
+     "zug": "gegner:abloesen:pfarrhof",
+     "text": "PFA · LISablösen 17.010 DM",
+     "preis": "-17010"
+    },
+    {
+     "zug": "gegner:hinhalten:pfarrhof",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:pfarrhof",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:abloesen:muehlwirt",
+     "text": "MUE · LISablösen 26.815 DM",
+     "preis": "-26815"
+    },
+    {
+     "zug": "gegner:hinhalten:muehlwirt",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:muehlwirt",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:abwehren:brueckenwirt",
+     "text": "verhandelt · noch 3 Wo.zuvorkommen 16.573 DM",
+     "preis": "-16573"
+    },
+    {
+     "zug": "gegner:hinhalten:brueckenwirt",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:brueckenwirt",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:abloesen:faehrhaus",
+     "text": "FAE · JVBablösen 24.300 DM",
+     "preis": "-24300"
+    },
+    {
+     "zug": "gegner:hinhalten:faehrhaus",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:faehrhaus",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:angebot-ja",
+     "text": "Ein Viertel abtreten+410.446 DM",
+     "preis": "410446"
+    },
+    {
+     "zug": "gegner:angebot-nein",
+     "text": "Ausschlagen",
+     "preis": null
+    }
+   ]
+  },
+  {
+   "kumWoche": 40,
+   "jahr": 1971,
+   "woche": 10,
+   "epoche": 4,
+   "anzahlGreifbar": 11,
+   "liste": [
+    {
+     "zug": "gegner:oeffnen:adler",
+     "text": "Adler-Bräu AG",
+     "preis": null
+    },
+    {
+     "zug": "gegner:hinhalten:pfarrhof",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:pfarrhof",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:hinhalten:muehlwirt",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:muehlwirt",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:hinhalten:brueckenwirt",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:brueckenwirt",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:hinhalten:faehrhaus",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:faehrhaus",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:angebot-ja",
+     "text": "Ein Viertel abtreten+410.446 DM",
+     "preis": "410446"
+    },
+    {
+     "zug": "gegner:angebot-nein",
+     "text": "Ausschlagen",
+     "preis": null
+    }
+   ]
+  },
+  {
+   "kumWoche": 41,
+   "jahr": 1971,
+   "woche": 11,
+   "epoche": 4,
+   "anzahlGreifbar": 12,
+   "liste": [
+    {
+     "zug": "gegner:oeffnen:adler",
+     "text": "Adler-Bräu AG",
+     "preis": null
+    },
+    {
+     "zug": "gegner:hinhalten:pfarrhof",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:pfarrhof",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:hinhalten:muehlwirt",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:muehlwirt",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:hinhalten:brueckenwirt",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:brueckenwirt",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:hinhalten:faehrhaus",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:faehrhaus",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:zuvorkommen:hirsch",
+     "text": "wirbt · noch 7 Wo.zuvorkommen 10.935 DM",
+     "preis": "-10935"
+    },
+    {
+     "zug": "gegner:hinhalten:hirsch",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:hirsch",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    }
+   ]
+  },
+  {
+   "kumWoche": 42,
+   "jahr": 1971,
+   "woche": 12,
+   "epoche": 4,
+   "anzahlGreifbar": 11,
+   "liste": [
+    {
+     "zug": "gegner:oeffnen:adler",
+     "text": "Adler-Bräu AG",
+     "preis": null
+    },
+    {
+     "zug": "gegner:hinhalten:pfarrhof",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:pfarrhof",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:hinhalten:muehlwirt",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:muehlwirt",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:hinhalten:brueckenwirt",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:brueckenwirt",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:hinhalten:faehrhaus",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:faehrhaus",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:hinhalten:hirsch",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:hirsch",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    }
+   ]
+  },
+  {
+   "kumWoche": 43,
+   "jahr": 1971,
+   "woche": 13,
+   "epoche": 4,
+   "anzahlGreifbar": 11,
+   "liste": [
+    {
+     "zug": "gegner:oeffnen:adler",
+     "text": "Adler-Bräu AG",
+     "preis": null
+    },
+    {
+     "zug": "gegner:hinhalten:pfarrhof",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:pfarrhof",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:hinhalten:muehlwirt",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:muehlwirt",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:hinhalten:brueckenwirt",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:brueckenwirt",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:hinhalten:faehrhaus",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:faehrhaus",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:hinhalten:hirsch",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:hirsch",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    }
+   ]
+  },
+  {
+   "kumWoche": 44,
+   "jahr": 1971,
+   "woche": 14,
+   "epoche": 4,
+   "anzahlGreifbar": 11,
+   "liste": [
+    {
+     "zug": "gegner:oeffnen:adler",
+     "text": "Adler-Bräu AG",
+     "preis": null
+    },
+    {
+     "zug": "gegner:hinhalten:pfarrhof",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:pfarrhof",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:hinhalten:muehlwirt",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:muehlwirt",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:hinhalten:brueckenwirt",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:brueckenwirt",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:hinhalten:faehrhaus",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:faehrhaus",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:hinhalten:hirsch",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:hirsch",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    }
+   ]
+  },
+  {
+   "kumWoche": 45,
+   "jahr": 1971,
+   "woche": 15,
+   "epoche": 4,
+   "anzahlGreifbar": 11,
+   "liste": [
+    {
+     "zug": "gegner:oeffnen:adler",
+     "text": "Adler-Bräu AG",
+     "preis": null
+    },
+    {
+     "zug": "gegner:hinhalten:pfarrhof",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:pfarrhof",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:hinhalten:muehlwirt",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:muehlwirt",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:hinhalten:brueckenwirt",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:brueckenwirt",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:hinhalten:faehrhaus",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:faehrhaus",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:hinhalten:hirsch",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:hirsch",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    }
+   ]
+  },
+  {
+   "kumWoche": 46,
+   "jahr": 1971,
+   "woche": 16,
+   "epoche": 4,
+   "anzahlGreifbar": 11,
+   "liste": [
+    {
+     "zug": "gegner:oeffnen:adler",
+     "text": "Adler-Bräu AG",
+     "preis": null
+    },
+    {
+     "zug": "gegner:hinhalten:pfarrhof",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:pfarrhof",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:hinhalten:muehlwirt",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:muehlwirt",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:hinhalten:brueckenwirt",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:brueckenwirt",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:hinhalten:faehrhaus",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:faehrhaus",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:hinhalten:hirsch",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:hirsch",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    }
+   ]
+  },
+  {
+   "kumWoche": 47,
+   "jahr": 1971,
+   "woche": 17,
+   "epoche": 4,
+   "anzahlGreifbar": 11,
+   "liste": [
+    {
+     "zug": "gegner:oeffnen:adler",
+     "text": "Adler-Bräu AG",
+     "preis": null
+    },
+    {
+     "zug": "gegner:hinhalten:pfarrhof",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:pfarrhof",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:hinhalten:muehlwirt",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:muehlwirt",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:hinhalten:brueckenwirt",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:brueckenwirt",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:hinhalten:faehrhaus",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:faehrhaus",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:hinhalten:hirsch",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:hirsch",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    }
+   ]
+  },
+  {
+   "kumWoche": 48,
+   "jahr": 1971,
+   "woche": 18,
+   "epoche": 4,
+   "anzahlGreifbar": 11,
+   "liste": [
+    {
+     "zug": "gegner:oeffnen:adler",
+     "text": "Adler-Bräu AG",
+     "preis": null
+    },
+    {
+     "zug": "gegner:hinhalten:pfarrhof",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:pfarrhof",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:hinhalten:muehlwirt",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:muehlwirt",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:hinhalten:brueckenwirt",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:brueckenwirt",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:hinhalten:faehrhaus",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:faehrhaus",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:hinhalten:hirsch",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:hirsch",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    }
+   ]
+  },
+  {
+   "kumWoche": 49,
+   "jahr": 1971,
+   "woche": 19,
+   "epoche": 4,
+   "anzahlGreifbar": 11,
+   "liste": [
+    {
+     "zug": "gegner:oeffnen:adler",
+     "text": "Adler-Bräu AG",
+     "preis": null
+    },
+    {
+     "zug": "gegner:hinhalten:pfarrhof",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:pfarrhof",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:hinhalten:muehlwirt",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:muehlwirt",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:hinhalten:brueckenwirt",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:brueckenwirt",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:hinhalten:faehrhaus",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:faehrhaus",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:hinhalten:hirsch",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:hirsch",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    }
+   ]
+  },
+  {
+   "kumWoche": 50,
+   "jahr": 1971,
+   "woche": 20,
+   "epoche": 4,
+   "anzahlGreifbar": 11,
+   "liste": [
+    {
+     "zug": "gegner:oeffnen:adler",
+     "text": "Adler-Bräu AG",
+     "preis": null
+    },
+    {
+     "zug": "gegner:hinhalten:pfarrhof",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:pfarrhof",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:hinhalten:muehlwirt",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:muehlwirt",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:hinhalten:brueckenwirt",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:brueckenwirt",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:hinhalten:faehrhaus",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:faehrhaus",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:hinhalten:hirsch",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:hirsch",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    }
+   ]
+  },
+  {
+   "kumWoche": 51,
+   "jahr": 1971,
+   "woche": 21,
+   "epoche": 4,
+   "anzahlGreifbar": 9,
+   "liste": [
+    {
+     "zug": "gegner:oeffnen:adler",
+     "text": "Adler-Bräu AG",
+     "preis": null
+    },
+    {
+     "zug": "gegner:hinhalten:pfarrhof",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:pfarrhof",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:hinhalten:muehlwirt",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:muehlwirt",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:hinhalten:brueckenwirt",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:brueckenwirt",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:hinhalten:faehrhaus",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:faehrhaus",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    }
+   ]
+  },
+  {
+   "kumWoche": 52,
+   "jahr": 1971,
+   "woche": 22,
+   "epoche": 4,
+   "anzahlGreifbar": 9,
+   "liste": [
+    {
+     "zug": "gegner:oeffnen:adler",
+     "text": "Adler-Bräu AG",
+     "preis": null
+    },
+    {
+     "zug": "gegner:hinhalten:pfarrhof",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:pfarrhof",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:hinhalten:muehlwirt",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:muehlwirt",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:hinhalten:brueckenwirt",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:brueckenwirt",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:hinhalten:faehrhaus",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:faehrhaus",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    }
+   ]
+  },
+  {
+   "kumWoche": 53,
+   "jahr": 1971,
+   "woche": 23,
+   "epoche": 4,
+   "anzahlGreifbar": 9,
+   "liste": [
+    {
+     "zug": "gegner:oeffnen:adler",
+     "text": "Adler-Bräu AG",
+     "preis": null
+    },
+    {
+     "zug": "gegner:hinhalten:pfarrhof",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:pfarrhof",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:hinhalten:muehlwirt",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:muehlwirt",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:hinhalten:brueckenwirt",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:brueckenwirt",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:hinhalten:faehrhaus",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:faehrhaus",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    }
+   ]
+  },
+  {
+   "kumWoche": 54,
+   "jahr": 1971,
+   "woche": 24,
+   "epoche": 4,
+   "anzahlGreifbar": 9,
+   "liste": [
+    {
+     "zug": "gegner:oeffnen:adler",
+     "text": "Adler-Bräu AG",
+     "preis": null
+    },
+    {
+     "zug": "gegner:hinhalten:pfarrhof",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:pfarrhof",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:hinhalten:muehlwirt",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:muehlwirt",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:hinhalten:brueckenwirt",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:brueckenwirt",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:hinhalten:faehrhaus",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:faehrhaus",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    }
+   ]
+  },
+  {
+   "kumWoche": 55,
+   "jahr": 1971,
+   "woche": 25,
+   "epoche": 4,
+   "anzahlGreifbar": 9,
+   "liste": [
+    {
+     "zug": "gegner:oeffnen:adler",
+     "text": "Adler-Bräu AG",
+     "preis": null
+    },
+    {
+     "zug": "gegner:hinhalten:pfarrhof",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:pfarrhof",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:hinhalten:muehlwirt",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:muehlwirt",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:hinhalten:brueckenwirt",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:brueckenwirt",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:hinhalten:faehrhaus",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:faehrhaus",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    }
+   ]
+  },
+  {
+   "kumWoche": 56,
+   "jahr": 1971,
+   "woche": 26,
+   "epoche": 4,
+   "anzahlGreifbar": 9,
+   "liste": [
+    {
+     "zug": "gegner:oeffnen:adler",
+     "text": "Adler-Bräu AG",
+     "preis": null
+    },
+    {
+     "zug": "gegner:hinhalten:pfarrhof",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:pfarrhof",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:hinhalten:muehlwirt",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:muehlwirt",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:hinhalten:brueckenwirt",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:brueckenwirt",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:hinhalten:faehrhaus",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:faehrhaus",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    }
+   ]
+  },
+  {
+   "kumWoche": 57,
+   "jahr": 1971,
+   "woche": 27,
+   "epoche": 4,
+   "anzahlGreifbar": 11,
+   "liste": [
+    {
+     "zug": "gegner:oeffnen:adler",
+     "text": "Adler-Bräu AG",
+     "preis": null
+    },
+    {
+     "zug": "gegner:hinhalten:pfarrhof",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:pfarrhof",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:hinhalten:muehlwirt",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:muehlwirt",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:hinhalten:brueckenwirt",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:brueckenwirt",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:hinhalten:faehrhaus",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:faehrhaus",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:hinhalten:hirsch",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:hirsch",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    }
+   ]
+  },
+  {
+   "kumWoche": 58,
+   "jahr": 1971,
+   "woche": 28,
+   "epoche": 4,
+   "anzahlGreifbar": 11,
+   "liste": [
+    {
+     "zug": "gegner:oeffnen:adler",
+     "text": "Adler-Bräu AG",
+     "preis": null
+    },
+    {
+     "zug": "gegner:hinhalten:pfarrhof",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:pfarrhof",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:hinhalten:muehlwirt",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:muehlwirt",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:hinhalten:brueckenwirt",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:brueckenwirt",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:hinhalten:faehrhaus",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:faehrhaus",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:hinhalten:hirsch",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:hirsch",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    }
+   ]
+  },
+  {
+   "kumWoche": 59,
+   "jahr": 1971,
+   "woche": 29,
+   "epoche": 4,
+   "anzahlGreifbar": 11,
+   "liste": [
+    {
+     "zug": "gegner:oeffnen:adler",
+     "text": "Adler-Bräu AG",
+     "preis": null
+    },
+    {
+     "zug": "gegner:hinhalten:pfarrhof",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:pfarrhof",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:hinhalten:muehlwirt",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:muehlwirt",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:hinhalten:brueckenwirt",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:brueckenwirt",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:hinhalten:faehrhaus",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:faehrhaus",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:hinhalten:hirsch",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:hirsch",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    }
+   ]
+  },
+  {
+   "kumWoche": 60,
+   "jahr": 1971,
+   "woche": 30,
+   "epoche": 4,
+   "anzahlGreifbar": 11,
+   "liste": [
+    {
+     "zug": "gegner:oeffnen:adler",
+     "text": "Adler-Bräu AG",
+     "preis": null
+    },
+    {
+     "zug": "gegner:hinhalten:pfarrhof",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:pfarrhof",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:hinhalten:muehlwirt",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:muehlwirt",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:hinhalten:brueckenwirt",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:brueckenwirt",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:hinhalten:faehrhaus",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:faehrhaus",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:hinhalten:hirsch",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:hirsch",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    }
+   ]
+  },
+  {
+   "kumWoche": 61,
+   "jahr": 1972,
+   "woche": 1,
+   "epoche": 4,
+   "anzahlGreifbar": 1,
+   "liste": [
+    {
+     "zug": "gegner:oeffnen:konzern",
+     "text": "Nordstern-Gruppe",
+     "preis": null
+    }
+   ]
+  },
+  {
+   "kumWoche": 62,
+   "jahr": 1972,
+   "woche": 2,
+   "epoche": 4,
+   "anzahlGreifbar": 7,
+   "liste": [
+    {
+     "zug": "gegner:oeffnen:adler",
+     "text": "Adler-Bräu AG",
+     "preis": null
+    },
+    {
+     "zug": "gegner:oeffnen:konzern",
+     "text": "Nordstern-Gruppe",
+     "preis": null
+    },
+    {
+     "zug": "gegner:hinhalten:pfarrhof",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:pfarrhof",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:abloesen:hirsch",
+     "text": "HIR · JVBablösen 40.500 DM",
+     "preis": "-40500"
+    },
+    {
+     "zug": "gegner:hinhalten:hirsch",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:hirsch",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    }
+   ]
+  },
+  {
+   "kumWoche": 63,
+   "jahr": 1972,
+   "woche": 3,
+   "epoche": 4,
+   "anzahlGreifbar": 6,
+   "liste": [
+    {
+     "zug": "gegner:oeffnen:adler",
+     "text": "Adler-Bräu AG",
+     "preis": null
+    },
+    {
+     "zug": "gegner:oeffnen:konzern",
+     "text": "Nordstern-Gruppe",
+     "preis": null
+    },
+    {
+     "zug": "gegner:hinhalten:pfarrhof",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:pfarrhof",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:hinhalten:hirsch",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:hirsch",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    }
+   ]
+  },
+  {
+   "kumWoche": 64,
+   "jahr": 1972,
+   "woche": 4,
+   "epoche": 4,
+   "anzahlGreifbar": 6,
+   "liste": [
+    {
+     "zug": "gegner:oeffnen:adler",
+     "text": "Adler-Bräu AG",
+     "preis": null
+    },
+    {
+     "zug": "gegner:oeffnen:konzern",
+     "text": "Nordstern-Gruppe",
+     "preis": null
+    },
+    {
+     "zug": "gegner:hinhalten:pfarrhof",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:pfarrhof",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:hinhalten:hirsch",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:hirsch",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    }
+   ]
+  },
+  {
+   "kumWoche": 65,
+   "jahr": 1972,
+   "woche": 5,
+   "epoche": 4,
+   "anzahlGreifbar": 6,
+   "liste": [
+    {
+     "zug": "gegner:oeffnen:adler",
+     "text": "Adler-Bräu AG",
+     "preis": null
+    },
+    {
+     "zug": "gegner:oeffnen:konzern",
+     "text": "Nordstern-Gruppe",
+     "preis": null
+    },
+    {
+     "zug": "gegner:hinhalten:pfarrhof",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:pfarrhof",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:hinhalten:hirsch",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:hirsch",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    }
+   ]
+  },
+  {
+   "kumWoche": 66,
+   "jahr": 1972,
+   "woche": 6,
+   "epoche": 4,
+   "anzahlGreifbar": 7,
+   "liste": [
+    {
+     "zug": "gegner:oeffnen:adler",
+     "text": "Adler-Bräu AG",
+     "preis": null
+    },
+    {
+     "zug": "gegner:oeffnen:konzern",
+     "text": "Nordstern-Gruppe",
+     "preis": null
+    },
+    {
+     "zug": "gegner:abwehren:pfarrhof",
+     "text": "verhandelt · noch 2 Wo.zuvorkommen 10.546 DM",
+     "preis": "-10546"
+    },
+    {
+     "zug": "gegner:hinhalten:pfarrhof",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:pfarrhof",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:hinhalten:hirsch",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:hirsch",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    }
+   ]
+  },
+  {
+   "kumWoche": 67,
+   "jahr": 1972,
+   "woche": 7,
+   "epoche": 4,
+   "anzahlGreifbar": 6,
+   "liste": [
+    {
+     "zug": "gegner:oeffnen:adler",
+     "text": "Adler-Bräu AG",
+     "preis": null
+    },
+    {
+     "zug": "gegner:oeffnen:konzern",
+     "text": "Nordstern-Gruppe",
+     "preis": null
+    },
+    {
+     "zug": "gegner:hinhalten:pfarrhof",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:pfarrhof",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:hinhalten:hirsch",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:hirsch",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    }
+   ]
+  },
+  {
+   "kumWoche": 68,
+   "jahr": 1972,
+   "woche": 8,
+   "epoche": 4,
+   "anzahlGreifbar": 6,
+   "liste": [
+    {
+     "zug": "gegner:oeffnen:adler",
+     "text": "Adler-Bräu AG",
+     "preis": null
+    },
+    {
+     "zug": "gegner:oeffnen:konzern",
+     "text": "Nordstern-Gruppe",
+     "preis": null
+    },
+    {
+     "zug": "gegner:hinhalten:pfarrhof",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:pfarrhof",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:hinhalten:hirsch",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:hirsch",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    }
+   ]
+  },
+  {
+   "kumWoche": 69,
+   "jahr": 1972,
+   "woche": 9,
+   "epoche": 4,
+   "anzahlGreifbar": 6,
+   "liste": [
+    {
+     "zug": "gegner:oeffnen:adler",
+     "text": "Adler-Bräu AG",
+     "preis": null
+    },
+    {
+     "zug": "gegner:oeffnen:konzern",
+     "text": "Nordstern-Gruppe",
+     "preis": null
+    },
+    {
+     "zug": "gegner:hinhalten:pfarrhof",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:pfarrhof",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:hinhalten:hirsch",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:hirsch",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    }
+   ]
+  },
+  {
+   "kumWoche": 70,
+   "jahr": 1972,
+   "woche": 10,
+   "epoche": 4,
+   "anzahlGreifbar": 6,
+   "liste": [
+    {
+     "zug": "gegner:oeffnen:adler",
+     "text": "Adler-Bräu AG",
+     "preis": null
+    },
+    {
+     "zug": "gegner:oeffnen:konzern",
+     "text": "Nordstern-Gruppe",
+     "preis": null
+    },
+    {
+     "zug": "gegner:hinhalten:pfarrhof",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:pfarrhof",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:hinhalten:hirsch",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:hirsch",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    }
+   ]
+  },
+  {
+   "kumWoche": 71,
+   "jahr": 1972,
+   "woche": 11,
+   "epoche": 4,
+   "anzahlGreifbar": 6,
+   "liste": [
+    {
+     "zug": "gegner:oeffnen:adler",
+     "text": "Adler-Bräu AG",
+     "preis": null
+    },
+    {
+     "zug": "gegner:oeffnen:konzern",
+     "text": "Nordstern-Gruppe",
+     "preis": null
+    },
+    {
+     "zug": "gegner:hinhalten:pfarrhof",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:pfarrhof",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:hinhalten:hirsch",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:hirsch",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    }
+   ]
+  },
+  {
+   "kumWoche": 72,
+   "jahr": 1972,
+   "woche": 12,
+   "epoche": 4,
+   "anzahlGreifbar": 6,
+   "liste": [
+    {
+     "zug": "gegner:oeffnen:adler",
+     "text": "Adler-Bräu AG",
+     "preis": null
+    },
+    {
+     "zug": "gegner:oeffnen:konzern",
+     "text": "Nordstern-Gruppe",
+     "preis": null
+    },
+    {
+     "zug": "gegner:hinhalten:pfarrhof",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:pfarrhof",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:hinhalten:hirsch",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:hirsch",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    }
+   ]
+  },
+  {
+   "kumWoche": 73,
+   "jahr": 1972,
+   "woche": 13,
+   "epoche": 4,
+   "anzahlGreifbar": 6,
+   "liste": [
+    {
+     "zug": "gegner:oeffnen:adler",
+     "text": "Adler-Bräu AG",
+     "preis": null
+    },
+    {
+     "zug": "gegner:oeffnen:konzern",
+     "text": "Nordstern-Gruppe",
+     "preis": null
+    },
+    {
+     "zug": "gegner:hinhalten:pfarrhof",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:pfarrhof",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:hinhalten:hirsch",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:hirsch",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    }
+   ]
+  },
+  {
+   "kumWoche": 74,
+   "jahr": 1972,
+   "woche": 14,
+   "epoche": 4,
+   "anzahlGreifbar": 6,
+   "liste": [
+    {
+     "zug": "gegner:oeffnen:adler",
+     "text": "Adler-Bräu AG",
+     "preis": null
+    },
+    {
+     "zug": "gegner:oeffnen:konzern",
+     "text": "Nordstern-Gruppe",
+     "preis": null
+    },
+    {
+     "zug": "gegner:hinhalten:pfarrhof",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:pfarrhof",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:hinhalten:hirsch",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:hirsch",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    }
+   ]
+  },
+  {
+   "kumWoche": 75,
+   "jahr": 1972,
+   "woche": 15,
+   "epoche": 4,
+   "anzahlGreifbar": 6,
+   "liste": [
+    {
+     "zug": "gegner:oeffnen:adler",
+     "text": "Adler-Bräu AG",
+     "preis": null
+    },
+    {
+     "zug": "gegner:oeffnen:konzern",
+     "text": "Nordstern-Gruppe",
+     "preis": null
+    },
+    {
+     "zug": "gegner:hinhalten:pfarrhof",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:pfarrhof",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:hinhalten:hirsch",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:hirsch",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    }
+   ]
+  },
+  {
+   "kumWoche": 76,
+   "jahr": 1972,
+   "woche": 16,
+   "epoche": 4,
+   "anzahlGreifbar": 6,
+   "liste": [
+    {
+     "zug": "gegner:oeffnen:adler",
+     "text": "Adler-Bräu AG",
+     "preis": null
+    },
+    {
+     "zug": "gegner:oeffnen:konzern",
+     "text": "Nordstern-Gruppe",
+     "preis": null
+    },
+    {
+     "zug": "gegner:hinhalten:pfarrhof",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:pfarrhof",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:hinhalten:hirsch",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:hirsch",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    }
+   ]
+  },
+  {
+   "kumWoche": 77,
+   "jahr": 1972,
+   "woche": 17,
+   "epoche": 4,
+   "anzahlGreifbar": 6,
+   "liste": [
+    {
+     "zug": "gegner:oeffnen:adler",
+     "text": "Adler-Bräu AG",
+     "preis": null
+    },
+    {
+     "zug": "gegner:oeffnen:konzern",
+     "text": "Nordstern-Gruppe",
+     "preis": null
+    },
+    {
+     "zug": "gegner:hinhalten:pfarrhof",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:pfarrhof",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:hinhalten:hirsch",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:hirsch",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    }
+   ]
+  },
+  {
+   "kumWoche": 78,
+   "jahr": 1972,
+   "woche": 18,
+   "epoche": 4,
+   "anzahlGreifbar": 6,
+   "liste": [
+    {
+     "zug": "gegner:oeffnen:adler",
+     "text": "Adler-Bräu AG",
+     "preis": null
+    },
+    {
+     "zug": "gegner:oeffnen:konzern",
+     "text": "Nordstern-Gruppe",
+     "preis": null
+    },
+    {
+     "zug": "gegner:hinhalten:pfarrhof",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:pfarrhof",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:hinhalten:hirsch",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:hirsch",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    }
+   ]
+  },
+  {
+   "kumWoche": 79,
+   "jahr": 1972,
+   "woche": 19,
+   "epoche": 4,
+   "anzahlGreifbar": 6,
+   "liste": [
+    {
+     "zug": "gegner:oeffnen:adler",
+     "text": "Adler-Bräu AG",
+     "preis": null
+    },
+    {
+     "zug": "gegner:oeffnen:konzern",
+     "text": "Nordstern-Gruppe",
+     "preis": null
+    },
+    {
+     "zug": "gegner:hinhalten:pfarrhof",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:pfarrhof",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:hinhalten:hirsch",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:hirsch",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    }
+   ]
+  },
+  {
+   "kumWoche": 80,
+   "jahr": 1972,
+   "woche": 20,
+   "epoche": 4,
+   "anzahlGreifbar": 7,
+   "liste": [
+    {
+     "zug": "gegner:oeffnen:adler",
+     "text": "Adler-Bräu AG",
+     "preis": null
+    },
+    {
+     "zug": "gegner:oeffnen:konzern",
+     "text": "Nordstern-Gruppe",
+     "preis": null
+    },
+    {
+     "zug": "gegner:abloesen:pfarrhof",
+     "text": "PFA · JVBablösen 28.350 DM",
+     "preis": "-28350"
+    },
+    {
+     "zug": "gegner:hinhalten:pfarrhof",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:pfarrhof",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:hinhalten:hirsch",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:hirsch",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    }
+   ]
+  },
+  {
+   "kumWoche": 81,
+   "jahr": 1972,
+   "woche": 21,
+   "epoche": 4,
+   "anzahlGreifbar": 9,
+   "liste": [
+    {
+     "zug": "gegner:oeffnen:adler",
+     "text": "Adler-Bräu AG",
+     "preis": null
+    },
+    {
+     "zug": "gegner:oeffnen:konzern",
+     "text": "Nordstern-Gruppe",
+     "preis": null
+    },
+    {
+     "zug": "gegner:abloesen:pfarrhof",
+     "text": "PFA · JVBablösen 28.350 DM",
+     "preis": "-28350"
+    },
+    {
+     "zug": "gegner:hinhalten:pfarrhof",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:pfarrhof",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:hinhalten:hirsch",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:hirsch",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:angebot-ja",
+     "text": "Ein Viertel abtreten+490.205 DM",
+     "preis": "490205"
+    },
+    {
+     "zug": "gegner:angebot-nein",
+     "text": "Ausschlagen",
+     "preis": null
+    }
+   ]
+  },
+  {
+   "kumWoche": 82,
+   "jahr": 1972,
+   "woche": 22,
+   "epoche": 4,
+   "anzahlGreifbar": 9,
+   "liste": [
+    {
+     "zug": "gegner:oeffnen:adler",
+     "text": "Adler-Bräu AG",
+     "preis": null
+    },
+    {
+     "zug": "gegner:oeffnen:konzern",
+     "text": "Nordstern-Gruppe",
+     "preis": null
+    },
+    {
+     "zug": "gegner:abloesen:pfarrhof",
+     "text": "PFA · JVBablösen 28.350 DM",
+     "preis": "-28350"
+    },
+    {
+     "zug": "gegner:hinhalten:pfarrhof",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:pfarrhof",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:hinhalten:hirsch",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:hirsch",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:angebot-ja",
+     "text": "Ein Viertel abtreten+490.205 DM",
+     "preis": "490205"
+    },
+    {
+     "zug": "gegner:angebot-nein",
+     "text": "Ausschlagen",
+     "preis": null
+    }
+   ]
+  },
+  {
+   "kumWoche": 83,
+   "jahr": 1972,
+   "woche": 23,
+   "epoche": 4,
+   "anzahlGreifbar": 9,
+   "liste": [
+    {
+     "zug": "gegner:oeffnen:adler",
+     "text": "Adler-Bräu AG",
+     "preis": null
+    },
+    {
+     "zug": "gegner:oeffnen:konzern",
+     "text": "Nordstern-Gruppe",
+     "preis": null
+    },
+    {
+     "zug": "gegner:abloesen:pfarrhof",
+     "text": "PFA · JVBablösen 28.350 DM",
+     "preis": "-28350"
+    },
+    {
+     "zug": "gegner:hinhalten:pfarrhof",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:pfarrhof",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:hinhalten:hirsch",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:hirsch",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:angebot-ja",
+     "text": "Ein Viertel abtreten+490.205 DM",
+     "preis": "490205"
+    },
+    {
+     "zug": "gegner:angebot-nein",
+     "text": "Ausschlagen",
+     "preis": null
+    }
+   ]
+  },
+  {
+   "kumWoche": 84,
+   "jahr": 1972,
+   "woche": 24,
+   "epoche": 4,
+   "anzahlGreifbar": 9,
+   "liste": [
+    {
+     "zug": "gegner:oeffnen:adler",
+     "text": "Adler-Bräu AG",
+     "preis": null
+    },
+    {
+     "zug": "gegner:oeffnen:konzern",
+     "text": "Nordstern-Gruppe",
+     "preis": null
+    },
+    {
+     "zug": "gegner:abloesen:pfarrhof",
+     "text": "PFA · JVBablösen 28.350 DM",
+     "preis": "-28350"
+    },
+    {
+     "zug": "gegner:hinhalten:pfarrhof",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:pfarrhof",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:hinhalten:hirsch",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:hirsch",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:angebot-ja",
+     "text": "Ein Viertel abtreten+490.205 DM",
+     "preis": "490205"
+    },
+    {
+     "zug": "gegner:angebot-nein",
+     "text": "Ausschlagen",
+     "preis": null
+    }
+   ]
+  },
+  {
+   "kumWoche": 85,
+   "jahr": 1972,
+   "woche": 25,
+   "epoche": 4,
+   "anzahlGreifbar": 10,
+   "liste": [
+    {
+     "zug": "gegner:oeffnen:adler",
+     "text": "Adler-Bräu AG",
+     "preis": null
+    },
+    {
+     "zug": "gegner:oeffnen:konzern",
+     "text": "Nordstern-Gruppe",
+     "preis": null
+    },
+    {
+     "zug": "gegner:abloesen:pfarrhof",
+     "text": "PFA · JVBablösen 28.350 DM",
+     "preis": "-28350"
+    },
+    {
+     "zug": "gegner:hinhalten:pfarrhof",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:pfarrhof",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:zuvorkommen:hirsch",
+     "text": "wirbt · noch 4 Wo.zuvorkommen 18.225 DM",
+     "preis": "-18225"
+    },
+    {
+     "zug": "gegner:hinhalten:hirsch",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:hirsch",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:angebot-ja",
+     "text": "Ein Viertel abtreten+490.205 DM",
+     "preis": "490205"
+    },
+    {
+     "zug": "gegner:angebot-nein",
+     "text": "Ausschlagen",
+     "preis": null
+    }
+   ]
+  },
+  {
+   "kumWoche": 86,
+   "jahr": 1972,
+   "woche": 26,
+   "epoche": 4,
+   "anzahlGreifbar": 8,
+   "liste": [
+    {
+     "zug": "gegner:oeffnen:adler",
+     "text": "Adler-Bräu AG",
+     "preis": null
+    },
+    {
+     "zug": "gegner:oeffnen:konzern",
+     "text": "Nordstern-Gruppe",
+     "preis": null
+    },
+    {
+     "zug": "gegner:hinhalten:pfarrhof",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:pfarrhof",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:hinhalten:hirsch",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:hirsch",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:angebot-ja",
+     "text": "Ein Viertel abtreten+490.205 DM",
+     "preis": "490205"
+    },
+    {
+     "zug": "gegner:angebot-nein",
+     "text": "Ausschlagen",
+     "preis": null
+    }
+   ]
+  },
+  {
+   "kumWoche": 87,
+   "jahr": 1972,
+   "woche": 27,
+   "epoche": 4,
+   "anzahlGreifbar": 8,
+   "liste": [
+    {
+     "zug": "gegner:oeffnen:adler",
+     "text": "Adler-Bräu AG",
+     "preis": null
+    },
+    {
+     "zug": "gegner:oeffnen:konzern",
+     "text": "Nordstern-Gruppe",
+     "preis": null
+    },
+    {
+     "zug": "gegner:hinhalten:pfarrhof",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:pfarrhof",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:hinhalten:hirsch",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:hirsch",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:angebot-ja",
+     "text": "Ein Viertel abtreten+490.205 DM",
+     "preis": "490205"
+    },
+    {
+     "zug": "gegner:angebot-nein",
+     "text": "Ausschlagen",
+     "preis": null
+    }
+   ]
+  },
+  {
+   "kumWoche": 88,
+   "jahr": 1972,
+   "woche": 28,
+   "epoche": 4,
+   "anzahlGreifbar": 8,
+   "liste": [
+    {
+     "zug": "gegner:oeffnen:adler",
+     "text": "Adler-Bräu AG",
+     "preis": null
+    },
+    {
+     "zug": "gegner:oeffnen:konzern",
+     "text": "Nordstern-Gruppe",
+     "preis": null
+    },
+    {
+     "zug": "gegner:hinhalten:pfarrhof",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:pfarrhof",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:hinhalten:hirsch",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:hirsch",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:angebot-ja",
+     "text": "Ein Viertel abtreten+490.205 DM",
+     "preis": "490205"
+    },
+    {
+     "zug": "gegner:angebot-nein",
+     "text": "Ausschlagen",
+     "preis": null
+    }
+   ]
+  },
+  {
+   "kumWoche": 89,
+   "jahr": 1972,
+   "woche": 29,
+   "epoche": 4,
+   "anzahlGreifbar": 8,
+   "liste": [
+    {
+     "zug": "gegner:oeffnen:adler",
+     "text": "Adler-Bräu AG",
+     "preis": null
+    },
+    {
+     "zug": "gegner:oeffnen:konzern",
+     "text": "Nordstern-Gruppe",
+     "preis": null
+    },
+    {
+     "zug": "gegner:hinhalten:lindenhof",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:lindenhof",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:hinhalten:pfarrhof",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:pfarrhof",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:hinhalten:hirsch",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:hirsch",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    }
+   ]
+  },
+  {
+   "kumWoche": 90,
+   "jahr": 1972,
+   "woche": 30,
+   "epoche": 4,
+   "anzahlGreifbar": 8,
+   "liste": [
+    {
+     "zug": "gegner:oeffnen:adler",
+     "text": "Adler-Bräu AG",
+     "preis": null
+    },
+    {
+     "zug": "gegner:oeffnen:konzern",
+     "text": "Nordstern-Gruppe",
+     "preis": null
+    },
+    {
+     "zug": "gegner:hinhalten:lindenhof",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:lindenhof",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:hinhalten:pfarrhof",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:pfarrhof",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:hinhalten:hirsch",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:hirsch",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    }
+   ]
+  },
+  {
+   "kumWoche": 91,
+   "jahr": 1973,
+   "woche": 1,
+   "epoche": 4,
+   "anzahlGreifbar": 1,
+   "liste": [
+    {
+     "zug": "gegner:oeffnen:konzern",
+     "text": "Nordstern-Gruppe",
+     "preis": null
+    }
+   ]
+  },
+  {
+   "kumWoche": 92,
+   "jahr": 1973,
+   "woche": 2,
+   "epoche": 4,
+   "anzahlGreifbar": 7,
+   "liste": [
+    {
+     "zug": "gegner:oeffnen:adler",
+     "text": "Adler-Bräu AG",
+     "preis": null
+    },
+    {
+     "zug": "gegner:oeffnen:konzern",
+     "text": "Nordstern-Gruppe",
+     "preis": null
+    },
+    {
+     "zug": "gegner:hinhalten:lindenhof",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:lindenhof",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:zuvorkommen:bahnhofswirt",
+     "text": "wirbt · noch 5 Wo.zuvorkommen 43.740 DM",
+     "preis": "-43740"
+    },
+    {
+     "zug": "gegner:hinhalten:bahnhofswirt",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:bahnhofswirt",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    }
+   ]
+  },
+  {
+   "kumWoche": 93,
+   "jahr": 1973,
+   "woche": 3,
+   "epoche": 4,
+   "anzahlGreifbar": 7,
+   "liste": [
+    {
+     "zug": "gegner:oeffnen:adler",
+     "text": "Adler-Bräu AG",
+     "preis": null
+    },
+    {
+     "zug": "gegner:oeffnen:konzern",
+     "text": "Nordstern-Gruppe",
+     "preis": null
+    },
+    {
+     "zug": "gegner:hinhalten:lindenhof",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:lindenhof",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:zuvorkommen:bahnhofswirt",
+     "text": "wirbt · noch 4 Wo.zuvorkommen 43.740 DM",
+     "preis": "-43740"
+    },
+    {
+     "zug": "gegner:hinhalten:bahnhofswirt",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:bahnhofswirt",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    }
+   ]
+  },
+  {
+   "kumWoche": 94,
+   "jahr": 1973,
+   "woche": 4,
+   "epoche": 4,
+   "anzahlGreifbar": 7,
+   "liste": [
+    {
+     "zug": "gegner:oeffnen:adler",
+     "text": "Adler-Bräu AG",
+     "preis": null
+    },
+    {
+     "zug": "gegner:oeffnen:konzern",
+     "text": "Nordstern-Gruppe",
+     "preis": null
+    },
+    {
+     "zug": "gegner:hinhalten:lindenhof",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:lindenhof",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:zuvorkommen:bahnhofswirt",
+     "text": "wirbt · noch 3 Wo.zuvorkommen 43.740 DM",
+     "preis": "-43740"
+    },
+    {
+     "zug": "gegner:hinhalten:bahnhofswirt",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:bahnhofswirt",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    }
+   ]
+  },
+  {
+   "kumWoche": 95,
+   "jahr": 1973,
+   "woche": 5,
+   "epoche": 4,
+   "anzahlGreifbar": 7,
+   "liste": [
+    {
+     "zug": "gegner:oeffnen:adler",
+     "text": "Adler-Bräu AG",
+     "preis": null
+    },
+    {
+     "zug": "gegner:oeffnen:konzern",
+     "text": "Nordstern-Gruppe",
+     "preis": null
+    },
+    {
+     "zug": "gegner:hinhalten:lindenhof",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:lindenhof",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    },
+    {
+     "zug": "gegner:zuvorkommen:bahnhofswirt",
+     "text": "wirbt · noch 2 Wo.zuvorkommen 43.740 DM",
+     "preis": "-43740"
+    },
+    {
+     "zug": "gegner:hinhalten:bahnhofswirt",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:bahnhofswirt",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    }
+   ]
+  },
+  {
+   "kumWoche": 96,
+   "jahr": 1973,
+   "woche": 6,
+   "epoche": 4,
+   "anzahlGreifbar": 4,
+   "liste": [
+    {
+     "zug": "gegner:oeffnen:adler",
+     "text": "Adler-Bräu AG",
+     "preis": null
+    },
+    {
+     "zug": "gegner:oeffnen:konzern",
+     "text": "Nordstern-Gruppe",
+     "preis": null
+    },
+    {
+     "zug": "gegner:hinhalten:lindenhof",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:lindenhof",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    }
+   ]
+  },
+  {
+   "kumWoche": 97,
+   "jahr": 1973,
+   "woche": 7,
+   "epoche": 4,
+   "anzahlGreifbar": 4,
+   "liste": [
+    {
+     "zug": "gegner:oeffnen:adler",
+     "text": "Adler-Bräu AG",
+     "preis": null
+    },
+    {
+     "zug": "gegner:oeffnen:konzern",
+     "text": "Nordstern-Gruppe",
+     "preis": null
+    },
+    {
+     "zug": "gegner:hinhalten:lindenhof",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    },
+    {
+     "zug": "gegner:zukaufen:lindenhof",
+     "text": "lieber zukaufen4,5 hl · 780 DM",
+     "preis": "-780"
+    }
+   ]
+  },
+  {
+   "kumWoche": 98,
+   "jahr": 1973,
+   "woche": 8,
+   "epoche": 4,
+   "anzahlGreifbar": 3,
+   "liste": [
+    {
+     "zug": "gegner:oeffnen:adler",
+     "text": "Adler-Bräu AG",
+     "preis": null
+    },
+    {
+     "zug": "gegner:oeffnen:konzern",
+     "text": "Nordstern-Gruppe",
+     "preis": null
+    },
+    {
+     "zug": "gegner:hinhalten:lindenhof",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    }
+   ]
+  },
+  {
+   "kumWoche": 99,
+   "jahr": 1973,
+   "woche": 9,
+   "epoche": 4,
+   "anzahlGreifbar": 3,
+   "liste": [
+    {
+     "zug": "gegner:oeffnen:adler",
+     "text": "Adler-Bräu AG",
+     "preis": null
+    },
+    {
+     "zug": "gegner:oeffnen:konzern",
+     "text": "Nordstern-Gruppe",
+     "preis": null
+    },
+    {
+     "zug": "gegner:hinhalten:lindenhof",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    }
+   ]
+  },
+  {
+   "kumWoche": 100,
+   "jahr": 1973,
+   "woche": 10,
+   "epoche": 4,
+   "anzahlGreifbar": 3,
+   "liste": [
+    {
+     "zug": "gegner:oeffnen:adler",
+     "text": "Adler-Bräu AG",
+     "preis": null
+    },
+    {
+     "zug": "gegner:oeffnen:konzern",
+     "text": "Nordstern-Gruppe",
+     "preis": null
+    },
+    {
+     "zug": "gegner:hinhalten:lindenhof",
+     "text": "Zuschuss in Bier4,5 hl statt Geld",
+     "preis": null
+    }
+   ]
+  }
+ ],
+ "tafelProtokoll": [
+  {
+   "kumWoche": 1,
+   "text": "Michaelitafel schließen",
+   "offen": true
+  },
+  {
+   "kumWoche": 2,
+   "text": "Michaelitafel 1970 · 5 Angebote",
+   "offen": true
+  },
+  {
+   "kumWoche": 3,
+   "text": "Michaelitafel 1970 · 5 Angebote",
+   "offen": true
+  },
+  {
+   "kumWoche": 4,
+   "text": "Michaelitafel 1970 · 5 Angebote",
+   "offen": true
+  },
+  {
+   "kumWoche": 5,
+   "text": "Michaelitafel 1970 · 5 Angebote",
+   "offen": true
+  },
+  {
+   "kumWoche": 6,
+   "text": "Michaelitafel 1970 · 5 Angebote",
+   "offen": true
+  },
+  {
+   "kumWoche": 7,
+   "text": "Michaelitafel 1970 · 5 Angebote",
+   "offen": true
+  },
+  {
+   "kumWoche": 8,
+   "text": "Michaelitafel 1970 · 5 Angebote",
+   "offen": true
+  },
+  {
+   "kumWoche": 9,
+   "text": "Michaelitafel 1970 · 5 Angebote",
+   "offen": true
+  },
+  {
+   "kumWoche": 10,
+   "text": "Michaelitafel 1970 · 5 Angebote",
+   "offen": true
+  },
+  {
+   "kumWoche": 11,
+   "text": "Michaelitafel 1970 · 5 Angebote",
+   "offen": true
+  },
+  {
+   "kumWoche": 12,
+   "text": "Michaelitafel 1970 · 5 Angebote",
+   "offen": true
+  },
+  {
+   "kumWoche": 13,
+   "text": "Michaelitafel 1970 · 5 Angebote",
+   "offen": true
+  },
+  {
+   "kumWoche": 14,
+   "text": "Michaelitafel 1970 · 5 Angebote",
+   "offen": true
+  },
+  {
+   "kumWoche": 15,
+   "text": "Michaelitafel 1970 · 5 Angebote",
+   "offen": true
+  },
+  {
+   "kumWoche": 16,
+   "text": "Michaelitafel 1970 · 5 Angebote",
+   "offen": true
+  },
+  {
+   "kumWoche": 17,
+   "text": "Michaelitafel 1970 · 5 Angebote",
+   "offen": true
+  },
+  {
+   "kumWoche": 18,
+   "text": "Michaelitafel 1970 · 5 Angebote",
+   "offen": true
+  },
+  {
+   "kumWoche": 19,
+   "text": "Michaelitafel 1970 · 5 Angebote",
+   "offen": true
+  },
+  {
+   "kumWoche": 20,
+   "text": "Michaelitafel 1970 · 5 Angebote",
+   "offen": true
+  },
+  {
+   "kumWoche": 21,
+   "text": "Michaelitafel 1970 · 5 Angebote",
+   "offen": true
+  },
+  {
+   "kumWoche": 22,
+   "text": "Michaelitafel 1970 · 5 Angebote",
+   "offen": true
+  },
+  {
+   "kumWoche": 23,
+   "text": "Michaelitafel 1970 · 5 Angebote",
+   "offen": true
+  },
+  {
+   "kumWoche": 24,
+   "text": "Michaelitafel 1970 · 5 Angebote",
+   "offen": true
+  },
+  {
+   "kumWoche": 25,
+   "text": "Michaelitafel 1970 · 5 Angebote",
+   "offen": true
+  },
+  {
+   "kumWoche": 26,
+   "text": "Michaelitafel 1970 · 5 Angebote",
+   "offen": true
+  },
+  {
+   "kumWoche": 27,
+   "text": "Michaelitafel 1970 · 5 Angebote",
+   "offen": true
+  },
+  {
+   "kumWoche": 28,
+   "text": "Michaelitafel 1970 · 5 Angebote",
+   "offen": true
+  },
+  {
+   "kumWoche": 29,
+   "text": "Michaelitafel 1970 · 5 Angebote",
+   "offen": true
+  },
+  {
+   "kumWoche": 30,
+   "text": "Michaelitafel 1970 · 5 Angebote",
+   "offen": true
+  },
+  {
+   "kumWoche": 31,
+   "text": "Michaelitafel schließen",
+   "offen": true
+  },
+  {
+   "kumWoche": 32,
+   "text": "Michaelitafel 1971 · 5 Angebote",
+   "offen": true
+  },
+  {
+   "kumWoche": 33,
+   "text": "Michaelitafel 1971 · 5 Angebote",
+   "offen": true
+  },
+  {
+   "kumWoche": 34,
+   "text": "Michaelitafel 1971 · 5 Angebote",
+   "offen": true
+  },
+  {
+   "kumWoche": 35,
+   "text": "Michaelitafel 1971 · 5 Angebote",
+   "offen": true
+  },
+  {
+   "kumWoche": 36,
+   "text": "Michaelitafel 1971 · 5 Angebote",
+   "offen": true
+  },
+  {
+   "kumWoche": 37,
+   "text": "Michaelitafel 1971 · 5 Angebote",
+   "offen": true
+  },
+  {
+   "kumWoche": 38,
+   "text": "Michaelitafel 1971 · 5 Angebote",
+   "offen": true
+  },
+  {
+   "kumWoche": 39,
+   "text": "Michaelitafel 1971 · 5 Angebote",
+   "offen": true
+  },
+  {
+   "kumWoche": 40,
+   "text": "Michaelitafel 1971 · 5 Angebote",
+   "offen": true
+  },
+  {
+   "kumWoche": 41,
+   "text": "Michaelitafel 1971 · 5 Angebote",
+   "offen": true
+  },
+  {
+   "kumWoche": 42,
+   "text": "Michaelitafel 1971 · 5 Angebote",
+   "offen": true
+  },
+  {
+   "kumWoche": 43,
+   "text": "Michaelitafel 1971 · 5 Angebote",
+   "offen": true
+  },
+  {
+   "kumWoche": 44,
+   "text": "Michaelitafel 1971 · 5 Angebote",
+   "offen": true
+  },
+  {
+   "kumWoche": 45,
+   "text": "Michaelitafel 1971 · 5 Angebote",
+   "offen": true
+  },
+  {
+   "kumWoche": 46,
+   "text": "Michaelitafel 1971 · 5 Angebote",
+   "offen": true
+  },
+  {
+   "kumWoche": 47,
+   "text": "Michaelitafel 1971 · 5 Angebote",
+   "offen": true
+  },
+  {
+   "kumWoche": 48,
+   "text": "Michaelitafel 1971 · 5 Angebote",
+   "offen": true
+  },
+  {
+   "kumWoche": 49,
+   "text": "Michaelitafel 1971 · 5 Angebote",
+   "offen": true
+  },
+  {
+   "kumWoche": 50,
+   "text": "Michaelitafel 1971 · 5 Angebote",
+   "offen": true
+  },
+  {
+   "kumWoche": 51,
+   "text": "Michaelitafel 1971 · 5 Angebote",
+   "offen": true
+  },
+  {
+   "kumWoche": 52,
+   "text": "Michaelitafel 1971 · 5 Angebote",
+   "offen": true
+  },
+  {
+   "kumWoche": 53,
+   "text": "Michaelitafel 1971 · 5 Angebote",
+   "offen": true
+  },
+  {
+   "kumWoche": 54,
+   "text": "Michaelitafel 1971 · 5 Angebote",
+   "offen": true
+  },
+  {
+   "kumWoche": 55,
+   "text": "Michaelitafel 1971 · 5 Angebote",
+   "offen": true
+  },
+  {
+   "kumWoche": 56,
+   "text": "Michaelitafel 1971 · 5 Angebote",
+   "offen": true
+  },
+  {
+   "kumWoche": 57,
+   "text": "Michaelitafel 1971 · 5 Angebote",
+   "offen": true
+  },
+  {
+   "kumWoche": 58,
+   "text": "Michaelitafel 1971 · 5 Angebote",
+   "offen": true
+  },
+  {
+   "kumWoche": 59,
+   "text": "Michaelitafel 1971 · 5 Angebote",
+   "offen": true
+  },
+  {
+   "kumWoche": 60,
+   "text": "Michaelitafel 1971 · 5 Angebote",
+   "offen": true
+  },
+  {
+   "kumWoche": 61,
+   "text": "Michaelitafel schließen",
+   "offen": true
+  },
+  {
+   "kumWoche": 62,
+   "text": "Michaelitafel 1972 · 5 Angebote",
+   "offen": true
+  },
+  {
+   "kumWoche": 63,
+   "text": "Michaelitafel 1972 · 5 Angebote",
+   "offen": true
+  },
+  {
+   "kumWoche": 64,
+   "text": "Michaelitafel 1972 · 5 Angebote",
+   "offen": true
+  },
+  {
+   "kumWoche": 65,
+   "text": "Michaelitafel 1972 · 5 Angebote",
+   "offen": true
+  },
+  {
+   "kumWoche": 66,
+   "text": "Michaelitafel 1972 · 5 Angebote",
+   "offen": true
+  },
+  {
+   "kumWoche": 67,
+   "text": "Michaelitafel 1972 · 5 Angebote",
+   "offen": true
+  },
+  {
+   "kumWoche": 68,
+   "text": "Michaelitafel 1972 · 5 Angebote",
+   "offen": true
+  },
+  {
+   "kumWoche": 69,
+   "text": "Michaelitafel 1972 · 5 Angebote",
+   "offen": true
+  },
+  {
+   "kumWoche": 70,
+   "text": "Michaelitafel 1972 · 5 Angebote",
+   "offen": true
+  },
+  {
+   "kumWoche": 71,
+   "text": "Michaelitafel 1972 · 5 Angebote",
+   "offen": true
+  },
+  {
+   "kumWoche": 72,
+   "text": "Michaelitafel 1972 · 5 Angebote",
+   "offen": true
+  },
+  {
+   "kumWoche": 73,
+   "text": "Michaelitafel 1972 · 5 Angebote",
+   "offen": true
+  },
+  {
+   "kumWoche": 74,
+   "text": "Michaelitafel 1972 · 5 Angebote",
+   "offen": true
+  },
+  {
+   "kumWoche": 75,
+   "text": "Michaelitafel 1972 · 5 Angebote",
+   "offen": true
+  },
+  {
+   "kumWoche": 76,
+   "text": "Michaelitafel 1972 · 5 Angebote",
+   "offen": true
+  },
+  {
+   "kumWoche": 77,
+   "text": "Michaelitafel 1972 · 5 Angebote",
+   "offen": true
+  },
+  {
+   "kumWoche": 78,
+   "text": "Michaelitafel 1972 · 5 Angebote",
+   "offen": true
+  },
+  {
+   "kumWoche": 79,
+   "text": "Michaelitafel 1972 · 5 Angebote",
+   "offen": true
+  },
+  {
+   "kumWoche": 80,
+   "text": "Michaelitafel 1972 · 5 Angebote",
+   "offen": true
+  },
+  {
+   "kumWoche": 81,
+   "text": "Michaelitafel 1972 · 5 Angebote",
+   "offen": true
+  },
+  {
+   "kumWoche": 82,
+   "text": "Michaelitafel 1972 · 5 Angebote",
+   "offen": true
+  },
+  {
+   "kumWoche": 83,
+   "text": "Michaelitafel 1972 · 5 Angebote",
+   "offen": true
+  },
+  {
+   "kumWoche": 84,
+   "text": "Michaelitafel 1972 · 5 Angebote",
+   "offen": true
+  },
+  {
+   "kumWoche": 85,
+   "text": "Michaelitafel 1972 · 5 Angebote",
+   "offen": true
+  },
+  {
+   "kumWoche": 86,
+   "text": "Michaelitafel 1972 · 5 Angebote",
+   "offen": true
+  },
+  {
+   "kumWoche": 87,
+   "text": "Michaelitafel 1972 · 5 Angebote",
+   "offen": true
+  },
+  {
+   "kumWoche": 88,
+   "text": "Michaelitafel 1972 · 5 Angebote",
+   "offen": true
+  },
+  {
+   "kumWoche": 89,
+   "text": "Michaelitafel 1972 · 5 Angebote",
+   "offen": true
+  },
+  {
+   "kumWoche": 90,
+   "text": "Michaelitafel 1972 · 5 Angebote",
+   "offen": true
+  },
+  {
+   "kumWoche": 91,
+   "text": "Michaelitafel schließen",
+   "offen": true
+  },
+  {
+   "kumWoche": 92,
+   "text": "Michaelitafel 1973 · 5 Angebote",
+   "offen": true
+  },
+  {
+   "kumWoche": 93,
+   "text": "Michaelitafel 1973 · 5 Angebote",
+   "offen": true
+  },
+  {
+   "kumWoche": 94,
+   "text": "Michaelitafel 1973 · 5 Angebote",
+   "offen": true
+  },
+  {
+   "kumWoche": 95,
+   "text": "Michaelitafel 1973 · 5 Angebote",
+   "offen": true
+  },
+  {
+   "kumWoche": 96,
+   "text": "Michaelitafel 1973 · 5 Angebote",
+   "offen": true
+  },
+  {
+   "kumWoche": 97,
+   "text": "Michaelitafel 1973 · 5 Angebote",
+   "offen": true
+  },
+  {
+   "kumWoche": 98,
+   "text": "Michaelitafel 1973 · 5 Angebote",
+   "offen": true
+  },
+  {
+   "kumWoche": 99,
+   "text": "Michaelitafel 1973 · 5 Angebote",
+   "offen": true
+  },
+  {
+   "kumWoche": 100,
+   "text": "Michaelitafel 1973 · 5 Angebote",
+   "offen": true
+  }
+ ],
+ "reiterSchnappschuss": {
+  "15": {
+   "zug": "stadt:reiter:gegner-amort-gg-band",
+   "text": "Ohne dich geschehen · 18 Zügezugeklappt",
+   "offen": true
+  },
+  "45": {
+   "zug": "stadt:reiter:gegner-amort-gg-band",
+   "text": "Ohne dich geschehen · 55 Zügezugeklappt",
+   "offen": true
+  }
+ },
+ "endZustand": {
+  "jahr": 1973,
+  "woche": 11,
+  "epoche": 4,
+  "ende": false,
+  "kasse": 139,
+  "naechsterZug": {
+   "was": "Ablösung Ausschank am Markt",
+   "preis": 21028,
+   "zug": null,
+   "art": "umkaempft",
+   "rang": 3
+  },
+  "bestesZiel": {
+   "satz": "das Haus weitergeben, solange es steht. Noch 1 Braujahr, dann ist das Haus alt genug für eine Übergabe.",
+   "naehe": 0.9166666666666666
+  }
+ },
+ "lageMax": 0,
+ "lageEintraege": [],
+ "seitenfehler": []
+}

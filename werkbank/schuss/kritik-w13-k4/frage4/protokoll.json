@@ -1,0 +1,78 @@
+{
+ "wechsel": [
+  {
+   "w": 1,
+   "jahr": 1350,
+   "woche": 1,
+   "uebergabeKnopf": null
+  },
+  {
+   "w": 80,
+   "jahr": 1355,
+   "woche": 2,
+   "uebergabeKnopf": {
+    "zug": "fuhre:uebergabe-auf",
+    "text": "DIE ÜBERGABE VOR DEM RAT · noch 3 Wochen",
+    "preis": null,
+    "offen": true,
+    "stueck": "fuhre"
+   }
+  },
+  {
+   "w": 81,
+   "jahr": 1355,
+   "woche": 4,
+   "uebergabeKnopf": {
+    "zug": "fuhre:uebergabe-auf",
+    "text": "DIE ÜBERGABE VOR DEM RAT · noch 1 Woche",
+    "preis": null,
+    "offen": true,
+    "stueck": "fuhre"
+   }
+  },
+  {
+   "w": 82,
+   "jahr": 1355,
+   "woche": 6,
+   "uebergabeKnopf": null
+  },
+  {
+   "w": 96,
+   "jahr": 1356,
+   "woche": 2,
+   "uebergabeKnopf": {
+    "zug": "fuhre:uebergabe-auf",
+    "text": "DIE ÜBERGABE VOR DEM RAT · noch 3 Wochen",
+    "preis": null,
+    "offen": true,
+    "stueck": "fuhre"
+   }
+  },
+  {
+   "w": 97,
+   "jahr": 1356,
+   "woche": 4,
+   "uebergabeKnopf": {
+    "zug": "fuhre:uebergabe-auf",
+    "text": "DIE ÜBERGABE VOR DEM RAT · noch 1 Woche",
+    "preis": null,
+    "offen": true,
+    "stueck": "fuhre"
+   }
+  },
+  {
+   "w": 98,
+   "jahr": 1356,
+   "woche": 6,
+   "uebergabeKnopf": null
+  }
+ ],
+ "endZustand": {
+  "jahr": 1357,
+  "woche": 1,
+  "ende": false,
+  "kasse": 48
+ },
+ "wochenGespielt": 111,
+ "seitenfehler": []
+}
