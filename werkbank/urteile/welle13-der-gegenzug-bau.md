@@ -295,4 +295,107 @@ alle vier Epochen, am laufenden Stand:**
 
 ## 4 · Die Zahlen der Abnahme
 
-*(wird gefüllt, sobald die Läufe durch sind)*
+### 4.1 Wie gemessen wurde, damit die Zahlen etwas heißen
+
+Die vier Builder schreiben gleichzeitig in denselben Baum; eine Zahl aus dem
+Arbeitsbaum misst drei fremde Stücke mit. Gemessen ist deshalb an **zwei
+eingefrorenen Bäumen, die sich ausschließlich in meinen beiden Dateien
+unterscheiden**:
+
+```
+git archive 1bb28ce spiel   →  Hafen 8933   (Ende Welle 12, unverändert)
+dasselbe + gegner.js + gegner-zusatz.css →  Hafen 8934
+```
+
+Damit ist jede Abweichung zwischen den beiden **meine**, und keine ist es
+nicht. `diff -rq` zwischen den Bäumen nennt genau zwei Dateien.
+
+### 4.2 R15 — mit dem Gerät der Aufsicht (`aufsicht/welle13-gegen/probe13.mjs`)
+
+100 Wochen, 1600×900, Saat 1350, `?neu=1`, **ohne einen Reiter anzufassen**.
+
+| | 1350 | 1600 | 1884 | 1970 |
+|---|---|---|---|---|
+| Wochen ohne bezahlbaren Gegenzug, **eng** — vorher | **55** | **60** | 0 | *(s. u.)* |
+| Wochen ohne bezahlbaren Gegenzug, **eng** — nachher | **9** | **0** | **0** | *(s. u.)* |
+| Wochen ohne bezahlbaren Gegenzug, **weit** — vorher | 0 | 3 | 0 | *(s. u.)* |
+| Wochen ohne bezahlbaren Gegenzug, **weit** — nachher | **0** | **0** | **0** | *(s. u.)* |
+| Seitenfehler · `BRAUHAUS.lage` | 0 · 0 | 0 · 0 | 0 · 0 | 0 · 0 |
+
+**Die Latte ist ≤ 10 von 100 in allen vier Epochen.**
+
+### 4.3 Was in 1350 übrig bleibt, und woran es liegt
+
+Die neun Wochen sind **1351/22 bis 1351/30**, und sie sind ein Block. Die
+Kasse läuft dort von 11 Pf auf 3 Pf herunter; der Zukauf kostet 12 Pf.
+Abgelesen, Woche für Woche:
+
+```
+1351/21  Kasse 12  greifbar 6  eng 2  weit 4     ← 12 ≥ 12, es geht gerade noch
+1351/22  Kasse 11  greifbar 4  eng 0  weit 2
+…
+1351/30  Kasse  3  greifbar 4  eng 0  weit 2
+```
+
+**Das ist keine Frage des Gegenzugs mehr, sondern Arithmetik.** Ein Zug mit
+einem Preisschild größer als null ist bei einer Kasse von 3 Pf für jeden Preis
+unbezahlbar. Billiger als 12 Pf kann der Zukauf nicht werden, ohne die Wahl zu
+zerstören, um die es geht: läge er unter dem Wert des eigenen Fasses (9 Pf),
+wäre das eigene Fass nie mehr die richtige Antwort, und die zweite Währung
+wäre Zierde. Ich habe den Preis deshalb **nicht** auf die Latte hin gestellt.
+
+Zwei Dinge stehen in diesen neun Wochen trotzdem greifbar da und sind
+bezahlbar — sie zählen nur unter der **weiten** Lesart: *„Fass an den Wirt ·
+1 Fass statt Geld"* an zwei Adressen. Der Spieler ist in diesen Wochen also
+**nicht** handlungsunfähig; er ist bloß bar.
+
+> **Und ein Fund, der nicht mir gehört, aber diese neun Wochen erklärt:**
+> der Zug, der überhaupt kein Geld kostet — *„Klage vor dem Stadtgericht ·
+> kostet kein Geld · vier Ansehen"*, `gegner:beschwerde-bild`, `data-preis=0` —
+> **steht in diesen Wochen da, ist an, und die Maus trifft ihn nicht.**
+> Abgelesen mit `elementFromPoint` auf seiner Mitte:
+> `pr-hinweis pr-hinweis-oben < pr-karte pr-zuteuer < pr-reihe`.
+> Es ist die **Michaelitafel DES PREISES, die im Vorzustand aufgeschlagen
+> liegen bleibt** (genau der Befund A4/A5 des Kritikers: der Knopf sagt in
+> 71 von 71 Zuständen „schließen"), mit lauter unbezahlbaren Angeboten —
+> `tafelLiegt` ist deshalb `false`, obwohl das Blatt den Kartenmittelpunkt
+> deckt. Sobald DIE JAHRESTAFEL R6/R7/R10 eingelöst hat, ist der Klageknopf in
+> diesen Wochen frei, und dann trägt er sie. **Die 9 sind also eine
+> Obergrenze, gemessen gegen den schlechtestmöglichen Nachbarn.**
+
+### 4.4 Die zweite Messlatte — ρ
+
+`werkbank/schuss/rueckkopplung-r3/linie.mjs <epoche> 400` an beiden Bäumen,
+ausgewertet mit `auswerten.py`. Ablage: `werkbank/schuss/gegenzug-w13/rho/`.
+
+*(Zahlen folgen.)*
+
+### 4.5 Haushalt, Lesbarkeit, Seitenfehler
+
+`/tmp/haushalt.mjs` (12 gespielte Wochen), **vier Epochen × zwei Fenster**:
+
+| | 1600×900 | 2752×1536 |
+|---|---|---|
+| `BRAUHAUS.lage.length` | **0** in allen vier | **0** in allen vier |
+| Seitenfehler | **0** | **0** |
+| `haushalt.tafeln()` — Einträge des Gegners | **leer** | **leer** |
+| `haushalt.ueberRand()` — Einträge des Gegners | **leer** | **leer** |
+| `data-a3zonen` (Beschriftungen + Griffe) | 5 · 5 · 6 · 7 | 5 · 5 · 6 · 7 |
+| davon Griffe (neu) | 1 · 1 · 1 · 1 | 1 · 1 · 1 · 1 |
+
+Vorher standen dort 4 · 4 · 5 · 6 Zonen; die Ausweiche ist also um **genau
+eine** gewachsen, und das ist der Griff DES PREISES.
+
+`werkbank/schuss/aufsicht/lesbarkeit.mjs`, 1600×900, vier Epochen:
+
+| | vorher | nachher |
+|---|---|---|
+| abgeschnittene Kästen | 0 · 1 · 0 · 1 | **0 · 1 · 0 · 1** |
+| aktive Knöpfe unter 24 px | 0 von 78/79/85/81 | **0 von 75/77/81/77** |
+| Textknoten unter 12 px | 59 · 59 · 59 · 60 | 60 · 60 · 60 · 61 |
+
+Der zweite Knopf bringt also **keinen** neuen abgeschnittenen Kasten und
+keinen Knopf unter die 24-px-Grenze.
+
+`werkbank/schuss.mjs`, 2752×1536, alle vier Epochen: **„keine Fehler auf der
+Seite"** (`werkbank/schuss/gegenzug-w13/schuesse/welle13-gegenzug-e1..4.png`).
