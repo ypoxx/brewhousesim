@@ -4590,7 +4590,7 @@
         + 'Das Angebot liegt noch ' + ur + (ur === 1 ? ' Woche' : ' Wochen') + '. '
         + 'Es ist das einzige Ende, nach dem am nächsten Morgen wieder angestellt wird.'));
       band.appendChild(B.knopf({
-        text: 'Die Übergabe vor dem Rat ansehen', zug: 'fuhre:sommer-uebergabe',
+        text: uu.wort + ' ansehen', zug: 'fuhre:sommer-uebergabe',
         klasse: 'gross fu-gut',
         titel: 'Legt dieses Blatt beiseite und schlägt das Angebot auf.',
         tu: function () {

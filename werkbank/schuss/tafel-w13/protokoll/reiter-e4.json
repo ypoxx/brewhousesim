@@ -1,0 +1,67 @@
+{
+ "epoche": 4,
+ "bei": "1970/1",
+ "reiterklicks": 4,
+ "wirklichGetroffen": 4,
+ "blattWeg": 4,
+ "mehrGreifbar": 4,
+ "reihe": [
+  {
+   "schritt": "vorher",
+   "liegt": true,
+   "greifbar": 29,
+   "tafelknoepfe": 9,
+   "kText": "Michaelitafel schließen"
+  },
+  {
+   "schritt": "klick",
+   "reiter": "stadt:reiter:gegner-amort-gg-band",
+   "text": "OHNE DICH GESCHEHEN · 1 ZUG",
+   "unterDemZeiger": "stadt:reiter:gegner-amort-gg-band",
+   "wirklichGetroffen": true,
+   "greifbarVor": 29,
+   "greifbarNach": 45,
+   "blattWeg": true,
+   "tafelknoepfeNach": 2,
+   "kText": "Michaelitafel 1970 · 5 Angebote"
+  },
+  {
+   "schritt": "klick",
+   "reiter": "stadt:reiter:fuhre-fu-brett-fu-haeuser",
+   "text": "DIE HÄUSER",
+   "unterDemZeiger": "stadt:reiter:fuhre-fu-brett-fu-haeuser",
+   "wirklichGetroffen": true,
+   "greifbarVor": 29,
+   "greifbarNach": 55,
+   "blattWeg": true,
+   "tafelknoepfeNach": 2,
+   "kText": "Michaelitafel 1970 · 5 Angebote"
+  },
+  {
+   "schritt": "klick",
+   "reiter": "stadt:reiter:fuhre-fu-brett-fu-schiefer-fu-tafel",
+   "text": "SUDPLAN",
+   "unterDemZeiger": "stadt:reiter:fuhre-fu-brett-fu-schiefer-fu-tafel",
+   "wirklichGetroffen": true,
+   "greifbarVor": 29,
+   "greifbarNach": 59,
+   "blattWeg": true,
+   "tafelknoepfeNach": 2,
+   "kText": "Michaelitafel 1970 · 5 Angebote"
+  },
+  {
+   "schritt": "klick",
+   "reiter": "stadt:reiter:fuhre-fu-brett-fu-keller",
+   "text": "DIE TANKS",
+   "unterDemZeiger": "stadt:reiter:fuhre-fu-brett-fu-keller",
+   "wirklichGetroffen": true,
+   "greifbarVor": 29,
+   "greifbarNach": 59,
+   "blattWeg": true,
+   "tafelknoepfeNach": 2,
+   "kText": "Michaelitafel 1970 · 5 Angebote"
+  }
+ ],
+ "seitenfehler": 0,
+ "lage": 0
+}

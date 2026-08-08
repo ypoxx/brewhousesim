@@ -2436,20 +2436,18 @@
     var uebrig = Math.round(Z.ertrag || 0);
     kasten.appendChild(B.el('span', 'pr-woher-marke', 'HEUTE BRINGT KEIN KNOPF GELD'));
     kasten.appendChild(B.el('span', 'pr-woher-text',
-      'Auf diesem Schirm steht kein Zug mit Preisschild, der etwas in die Lade legt. '
+      'Kein Zug auf diesem Schirm legt Geld in die Lade. '
       + (rate
-          ? 'Das billigste, was in Raten geht, ist „' + rate.a.name + '": '
-            + geld(rate.jetzt) + ' heute, dann ' + rate.n + ' × ' + geld(rate.rate)
-            + ' — auch das ist heute zu teuer. '
+          ? 'In Raten am billigsten: „' + rate.a.name + '", ' + geld(rate.jetzt)
+            + ' heute, dann ' + rate.n + ' × ' + geld(rate.rate) + ' — auch das zu teuer. '
           : '')
       + (uebrig > 0
-          ? 'Das vorige Braujahr hat ' + geld(uebrig) + ' übrig gelassen; bei diesem Gang '
-            + 'liegt die Summe in ' + Math.ceil(fehlt / uebrig)
-            + (Math.ceil(fehlt / uebrig) === 1 ? ' Braujahr' : ' Braujahren') + ' in der Lade.'
-          : 'Das vorige Braujahr hat nichts übrig gelassen. Solange das so bleibt, '
-            + 'kommt diese Summe nicht zusammen — sie kommt aus den Fuhren, nicht aus der Zeit.')
-      + ' Was heute nicht genommen wird, bleibt in der Kasse; die Tafel von '
-      + (Z.tafelJahr + 1) + ' steht am selben Ort.'));
+          ? 'Das vorige Braujahr ließ ' + geld(uebrig) + ' übrig: in '
+            + Math.ceil(fehlt / uebrig)
+            + (Math.ceil(fehlt / uebrig) === 1 ? ' Braujahr' : ' Braujahren')
+            + ' liegt die Summe in der Lade.'
+          : 'Das vorige Braujahr ließ nichts übrig — diese Summe kommt aus den '
+            + 'Fuhren, nicht aus der Zeit.')));
     return kasten;
   }
 

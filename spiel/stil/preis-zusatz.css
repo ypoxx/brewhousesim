@@ -214,7 +214,7 @@
 }
 .pr-tafel .pr-mitte > .pr-knapp {
   flex: 0 1 auto;
-  max-height: calc(var(--s) * 130);
+  max-height: calc(var(--s) * 200);
   overflow-y: auto;
   scrollbar-width: thin;
 }

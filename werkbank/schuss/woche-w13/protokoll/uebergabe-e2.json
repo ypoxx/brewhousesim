@@ -1,0 +1,969 @@
+{
+ "epoche": 2,
+ "wochenGespielt": 82,
+ "reiterKlicks": 0,
+ "letztesJahr": 1607,
+ "wochenMitAngebot": 9,
+ "davonMitGreifbaremKnopf": 6,
+ "davonMitSichtbaremText": 9,
+ "orteDerKnoepfe": {
+  "wochenkarte": 6,
+  "uebergabeblatt": 6
+ },
+ "ersteWoche": {
+  "n": 51,
+  "jahr": 1605,
+  "woche": 1,
+  "liegt": 1605,
+  "imText": 3,
+  "textBeispiel": [
+   "Ziel: Die Übergabe vor der Lade liegt auf dem Tisch — noch 4 Wochen. Das ist das gute Ende. (100 % des Wegs)",
+   "DIE ÜBERGABE VOR DER LADE · 1605",
+   "Die Übergabe vor dem Rat ansehen"
+  ],
+  "knoepfe": []
+ },
+ "fehler": [],
+ "reihe": [
+  {
+   "n": 1,
+   "jahr": 1600,
+   "woche": 1,
+   "liegt": null,
+   "imText": 1,
+   "textBeispiel": [
+    "Ziel: das Haus weitergeben, solange es steht. Noch 5 Braujahre, dann ist das Haus alt genug für eine Übergabe. (33 % des Wegs)"
+   ],
+   "knoepfe": []
+  },
+  {
+   "n": 2,
+   "jahr": 1600,
+   "woche": 2,
+   "liegt": null,
+   "imText": 1,
+   "textBeispiel": [
+    "Ziel: das Haus weitergeben, solange es steht. Noch 5 Braujahre, dann ist das Haus alt genug für eine Übergabe. (33 % des Wegs)"
+   ],
+   "knoepfe": []
+  },
+  {
+   "n": 3,
+   "jahr": 1600,
+   "woche": 3,
+   "liegt": null,
+   "imText": 1,
+   "textBeispiel": [
+    "Ziel: das Haus weitergeben, solange es steht. Noch 5 Braujahre, dann ist das Haus alt genug für eine Übergabe. (33 % des Wegs)"
+   ],
+   "knoepfe": []
+  },
+  {
+   "n": 4,
+   "jahr": 1600,
+   "woche": 9,
+   "liegt": null,
+   "imText": 1,
+   "textBeispiel": [
+    "Ziel: das Haus weitergeben, solange es steht. Noch 5 Braujahre, dann ist das Haus alt genug für eine Übergabe. (33 % des Wegs)"
+   ],
+   "knoepfe": []
+  },
+  {
+   "n": 5,
+   "jahr": 1600,
+   "woche": 15,
+   "liegt": null,
+   "imText": 1,
+   "textBeispiel": [
+    "Ziel: das Haus weitergeben, solange es steht. Noch 5 Braujahre, dann ist das Haus alt genug für eine Übergabe. (33 % des Wegs)"
+   ],
+   "knoepfe": []
+  },
+  {
+   "n": 6,
+   "jahr": 1600,
+   "woche": 21,
+   "liegt": null,
+   "imText": 1,
+   "textBeispiel": [
+    "Ziel: das Haus weitergeben, solange es steht. Noch 5 Braujahre, dann ist das Haus alt genug für eine Übergabe. (33 % des Wegs)"
+   ],
+   "knoepfe": []
+  },
+  {
+   "n": 7,
+   "jahr": 1600,
+   "woche": 27,
+   "liegt": null,
+   "imText": 1,
+   "textBeispiel": [
+    "Ziel: das Haus weitergeben, solange es steht. Noch 5 Braujahre, dann ist das Haus alt genug für eine Übergabe. (33 % des Wegs)"
+   ],
+   "knoepfe": []
+  },
+  {
+   "n": 8,
+   "jahr": 1600,
+   "woche": 30,
+   "liegt": null,
+   "imText": 1,
+   "textBeispiel": [
+    "Ziel: das Haus weitergeben, solange es steht. Noch 5 Braujahre, dann ist das Haus alt genug für eine Übergabe. (33 % des Wegs)"
+   ],
+   "knoepfe": []
+  },
+  {
+   "n": 9,
+   "jahr": 1601,
+   "woche": 1,
+   "liegt": null,
+   "imText": 1,
+   "textBeispiel": [
+    "Ziel: das Haus weitergeben, solange es steht. Noch 4 Braujahre, dann ist das Haus alt genug für eine Übergabe. (73 % des Wegs)"
+   ],
+   "knoepfe": []
+  },
+  {
+   "n": 10,
+   "jahr": 1601,
+   "woche": 2,
+   "liegt": null,
+   "imText": 1,
+   "textBeispiel": [
+    "Ziel: das Haus weitergeben, solange es steht. Noch 4 Braujahre, dann ist das Haus alt genug für eine Übergabe. (73 % des Wegs)"
+   ],
+   "knoepfe": []
+  },
+  {
+   "n": 11,
+   "jahr": 1601,
+   "woche": 3,
+   "liegt": null,
+   "imText": 1,
+   "textBeispiel": [
+    "Ziel: das Haus weitergeben, solange es steht. Noch 4 Braujahre, dann ist das Haus alt genug für eine Übergabe. (73 % des Wegs)"
+   ],
+   "knoepfe": []
+  },
+  {
+   "n": 12,
+   "jahr": 1601,
+   "woche": 9,
+   "liegt": null,
+   "imText": 1,
+   "textBeispiel": [
+    "Ziel: das Haus weitergeben, solange es steht. Noch 4 Braujahre, dann ist das Haus alt genug für eine Übergabe. (73 % des Wegs)"
+   ],
+   "knoepfe": []
+  },
+  {
+   "n": 13,
+   "jahr": 1601,
+   "woche": 15,
+   "liegt": null,
+   "imText": 1,
+   "textBeispiel": [
+    "Ziel: das Haus weitergeben, solange es steht. Noch 4 Braujahre, dann ist das Haus alt genug für eine Übergabe. (73 % des Wegs)"
+   ],
+   "knoepfe": []
+  },
+  {
+   "n": 14,
+   "jahr": 1601,
+   "woche": 21,
+   "liegt": null,
+   "imText": 1,
+   "textBeispiel": [
+    "Ziel: das Haus weitergeben, solange es steht. Noch 4 Braujahre, dann ist das Haus alt genug für eine Übergabe. (73 % des Wegs)"
+   ],
+   "knoepfe": []
+  },
+  {
+   "n": 15,
+   "jahr": 1601,
+   "woche": 27,
+   "liegt": null,
+   "imText": 1,
+   "textBeispiel": [
+    "Ziel: das Haus weitergeben, solange es steht. Noch 4 Braujahre, dann ist das Haus alt genug für eine Übergabe. (73 % des Wegs)"
+   ],
+   "knoepfe": []
+  },
+  {
+   "n": 16,
+   "jahr": 1601,
+   "woche": 30,
+   "liegt": null,
+   "imText": 1,
+   "textBeispiel": [
+    "Ziel: das Haus weitergeben, solange es steht. Noch 4 Braujahre, dann ist das Haus alt genug für eine Übergabe. (73 % des Wegs)"
+   ],
+   "knoepfe": []
+  },
+  {
+   "n": 17,
+   "jahr": 1602,
+   "woche": 1,
+   "liegt": null,
+   "imText": 1,
+   "textBeispiel": [
+    "Ziel: das Haus weitergeben, solange es steht. Noch 3 Braujahre, dann ist das Haus alt genug für eine Übergabe. (80 % des Wegs)"
+   ],
+   "knoepfe": []
+  },
+  {
+   "n": 18,
+   "jahr": 1602,
+   "woche": 2,
+   "liegt": null,
+   "imText": 1,
+   "textBeispiel": [
+    "Ziel: das Haus weitergeben, solange es steht. Noch 3 Braujahre, dann ist das Haus alt genug für eine Übergabe. (80 % des Wegs)"
+   ],
+   "knoepfe": []
+  },
+  {
+   "n": 19,
+   "jahr": 1602,
+   "woche": 3,
+   "liegt": null,
+   "imText": 1,
+   "textBeispiel": [
+    "Ziel: das Haus weitergeben, solange es steht. Noch 3 Braujahre, dann ist das Haus alt genug für eine Übergabe. (80 % des Wegs)"
+   ],
+   "knoepfe": []
+  },
+  {
+   "n": 20,
+   "jahr": 1602,
+   "woche": 4,
+   "liegt": null,
+   "imText": 1,
+   "textBeispiel": [
+    "Ziel: das Haus weitergeben, solange es steht. Noch 3 Braujahre, dann ist das Haus alt genug für eine Übergabe. (80 % des Wegs)"
+   ],
+   "knoepfe": []
+  },
+  {
+   "n": 21,
+   "jahr": 1602,
+   "woche": 5,
+   "liegt": null,
+   "imText": 1,
+   "textBeispiel": [
+    "Ziel: das Haus weitergeben, solange es steht. Noch 3 Braujahre, dann ist das Haus alt genug für eine Übergabe. (80 % des Wegs)"
+   ],
+   "knoepfe": []
+  },
+  {
+   "n": 22,
+   "jahr": 1602,
+   "woche": 6,
+   "liegt": null,
+   "imText": 1,
+   "textBeispiel": [
+    "Ziel: das Haus weitergeben, solange es steht. Noch 3 Braujahre, dann ist das Haus alt genug für eine Übergabe. (80 % des Wegs)"
+   ],
+   "knoepfe": []
+  },
+  {
+   "n": 23,
+   "jahr": 1602,
+   "woche": 12,
+   "liegt": null,
+   "imText": 1,
+   "textBeispiel": [
+    "Ziel: das Haus weitergeben, solange es steht. Noch 3 Braujahre, dann ist das Haus alt genug für eine Übergabe. (80 % des Wegs)"
+   ],
+   "knoepfe": []
+  },
+  {
+   "n": 24,
+   "jahr": 1602,
+   "woche": 18,
+   "liegt": null,
+   "imText": 1,
+   "textBeispiel": [
+    "Ziel: das Haus weitergeben, solange es steht. Noch 3 Braujahre, dann ist das Haus alt genug für eine Übergabe. (80 % des Wegs)"
+   ],
+   "knoepfe": []
+  },
+  {
+   "n": 25,
+   "jahr": 1602,
+   "woche": 24,
+   "liegt": null,
+   "imText": 1,
+   "textBeispiel": [
+    "Ziel: das Haus weitergeben, solange es steht. Noch 3 Braujahre, dann ist das Haus alt genug für eine Übergabe. (80 % des Wegs)"
+   ],
+   "knoepfe": []
+  },
+  {
+   "n": 26,
+   "jahr": 1602,
+   "woche": 30,
+   "liegt": null,
+   "imText": 1,
+   "textBeispiel": [
+    "Ziel: das Haus weitergeben, solange es steht. Noch 3 Braujahre, dann ist das Haus alt genug für eine Übergabe. (80 % des Wegs)"
+   ],
+   "knoepfe": []
+  },
+  {
+   "n": 27,
+   "jahr": 1603,
+   "woche": 1,
+   "liegt": null,
+   "imText": 1,
+   "textBeispiel": [
+    "Ziel: das Haus weitergeben, solange es steht. Noch 2 Braujahre, dann ist das Haus alt genug für eine Übergabe. (87 % des Wegs)"
+   ],
+   "knoepfe": []
+  },
+  {
+   "n": 28,
+   "jahr": 1603,
+   "woche": 2,
+   "liegt": null,
+   "imText": 1,
+   "textBeispiel": [
+    "Ziel: das Haus weitergeben, solange es steht. Noch 2 Braujahre, dann ist das Haus alt genug für eine Übergabe. (87 % des Wegs)"
+   ],
+   "knoepfe": []
+  },
+  {
+   "n": 29,
+   "jahr": 1603,
+   "woche": 3,
+   "liegt": null,
+   "imText": 1,
+   "textBeispiel": [
+    "Ziel: das Haus weitergeben, solange es steht. Noch 2 Braujahre, dann ist das Haus alt genug für eine Übergabe. (87 % des Wegs)"
+   ],
+   "knoepfe": []
+  },
+  {
+   "n": 30,
+   "jahr": 1603,
+   "woche": 4,
+   "liegt": null,
+   "imText": 1,
+   "textBeispiel": [
+    "Ziel: das Haus weitergeben, solange es steht. Noch 2 Braujahre, dann ist das Haus alt genug für eine Übergabe. (87 % des Wegs)"
+   ],
+   "knoepfe": []
+  },
+  {
+   "n": 31,
+   "jahr": 1603,
+   "woche": 5,
+   "liegt": null,
+   "imText": 1,
+   "textBeispiel": [
+    "Ziel: das Haus weitergeben, solange es steht. Noch 2 Braujahre, dann ist das Haus alt genug für eine Übergabe. (87 % des Wegs)"
+   ],
+   "knoepfe": []
+  },
+  {
+   "n": 32,
+   "jahr": 1603,
+   "woche": 6,
+   "liegt": null,
+   "imText": 1,
+   "textBeispiel": [
+    "Ziel: das Haus weitergeben, solange es steht. Noch 2 Braujahre, dann ist das Haus alt genug für eine Übergabe. (87 % des Wegs)"
+   ],
+   "knoepfe": []
+  },
+  {
+   "n": 33,
+   "jahr": 1603,
+   "woche": 7,
+   "liegt": null,
+   "imText": 1,
+   "textBeispiel": [
+    "Ziel: das Haus weitergeben, solange es steht. Noch 2 Braujahre, dann ist das Haus alt genug für eine Übergabe. (87 % des Wegs)"
+   ],
+   "knoepfe": []
+  },
+  {
+   "n": 34,
+   "jahr": 1603,
+   "woche": 8,
+   "liegt": null,
+   "imText": 1,
+   "textBeispiel": [
+    "Ziel: das Haus weitergeben, solange es steht. Noch 2 Braujahre, dann ist das Haus alt genug für eine Übergabe. (87 % des Wegs)"
+   ],
+   "knoepfe": []
+  },
+  {
+   "n": 35,
+   "jahr": 1603,
+   "woche": 9,
+   "liegt": null,
+   "imText": 1,
+   "textBeispiel": [
+    "Ziel: das Haus weitergeben, solange es steht. Noch 2 Braujahre, dann ist das Haus alt genug für eine Übergabe. (87 % des Wegs)"
+   ],
+   "knoepfe": []
+  },
+  {
+   "n": 36,
+   "jahr": 1603,
+   "woche": 10,
+   "liegt": null,
+   "imText": 1,
+   "textBeispiel": [
+    "Ziel: das Haus weitergeben, solange es steht. Noch 2 Braujahre, dann ist das Haus alt genug für eine Übergabe. (87 % des Wegs)"
+   ],
+   "knoepfe": []
+  },
+  {
+   "n": 37,
+   "jahr": 1603,
+   "woche": 11,
+   "liegt": null,
+   "imText": 1,
+   "textBeispiel": [
+    "Ziel: das Haus weitergeben, solange es steht. Noch 2 Braujahre, dann ist das Haus alt genug für eine Übergabe. (87 % des Wegs)"
+   ],
+   "knoepfe": []
+  },
+  {
+   "n": 38,
+   "jahr": 1603,
+   "woche": 12,
+   "liegt": null,
+   "imText": 1,
+   "textBeispiel": [
+    "Ziel: das Haus weitergeben, solange es steht. Noch 2 Braujahre, dann ist das Haus alt genug für eine Übergabe. (87 % des Wegs)"
+   ],
+   "knoepfe": []
+  },
+  {
+   "n": 39,
+   "jahr": 1603,
+   "woche": 18,
+   "liegt": null,
+   "imText": 1,
+   "textBeispiel": [
+    "Ziel: das Haus weitergeben, solange es steht. Noch 2 Braujahre, dann ist das Haus alt genug für eine Übergabe. (87 % des Wegs)"
+   ],
+   "knoepfe": []
+  },
+  {
+   "n": 40,
+   "jahr": 1603,
+   "woche": 24,
+   "liegt": null,
+   "imText": 1,
+   "textBeispiel": [
+    "Ziel: das Haus weitergeben, solange es steht. Noch 2 Braujahre, dann ist das Haus alt genug für eine Übergabe. (87 % des Wegs)"
+   ],
+   "knoepfe": []
+  },
+  {
+   "n": 41,
+   "jahr": 1603,
+   "woche": 30,
+   "liegt": null,
+   "imText": 1,
+   "textBeispiel": [
+    "Ziel: das Haus weitergeben, solange es steht. Noch 2 Braujahre, dann ist das Haus alt genug für eine Übergabe. (87 % des Wegs)"
+   ],
+   "knoepfe": []
+  },
+  {
+   "n": 42,
+   "jahr": 1604,
+   "woche": 1,
+   "liegt": null,
+   "imText": 1,
+   "textBeispiel": [
+    "Ziel: das Haus weitergeben, solange es steht. Noch 1 Braujahr, dann ist das Haus alt genug für eine Übergabe. (93 % des Wegs)"
+   ],
+   "knoepfe": []
+  },
+  {
+   "n": 43,
+   "jahr": 1604,
+   "woche": 2,
+   "liegt": null,
+   "imText": 1,
+   "textBeispiel": [
+    "Ziel: das Haus weitergeben, solange es steht. Noch 1 Braujahr, dann ist das Haus alt genug für eine Übergabe. (93 % des Wegs)"
+   ],
+   "knoepfe": []
+  },
+  {
+   "n": 44,
+   "jahr": 1604,
+   "woche": 3,
+   "liegt": null,
+   "imText": 1,
+   "textBeispiel": [
+    "Ziel: das Haus weitergeben, solange es steht. Noch 1 Braujahr, dann ist das Haus alt genug für eine Übergabe. (93 % des Wegs)"
+   ],
+   "knoepfe": []
+  },
+  {
+   "n": 45,
+   "jahr": 1604,
+   "woche": 4,
+   "liegt": null,
+   "imText": 1,
+   "textBeispiel": [
+    "Ziel: das Haus weitergeben, solange es steht. Noch 1 Braujahr, dann ist das Haus alt genug für eine Übergabe. (93 % des Wegs)"
+   ],
+   "knoepfe": []
+  },
+  {
+   "n": 46,
+   "jahr": 1604,
+   "woche": 10,
+   "liegt": null,
+   "imText": 1,
+   "textBeispiel": [
+    "Ziel: das Haus weitergeben, solange es steht. Noch 1 Braujahr, dann ist das Haus alt genug für eine Übergabe. (93 % des Wegs)"
+   ],
+   "knoepfe": []
+  },
+  {
+   "n": 47,
+   "jahr": 1604,
+   "woche": 16,
+   "liegt": null,
+   "imText": 1,
+   "textBeispiel": [
+    "Ziel: das Haus weitergeben, solange es steht. Noch 1 Braujahr, dann ist das Haus alt genug für eine Übergabe. (93 % des Wegs)"
+   ],
+   "knoepfe": []
+  },
+  {
+   "n": 48,
+   "jahr": 1604,
+   "woche": 22,
+   "liegt": null,
+   "imText": 1,
+   "textBeispiel": [
+    "Ziel: das Haus weitergeben, solange es steht. Noch 1 Braujahr, dann ist das Haus alt genug für eine Übergabe. (93 % des Wegs)"
+   ],
+   "knoepfe": []
+  },
+  {
+   "n": 49,
+   "jahr": 1604,
+   "woche": 28,
+   "liegt": null,
+   "imText": 1,
+   "textBeispiel": [
+    "Ziel: das Haus weitergeben, solange es steht. Noch 1 Braujahr, dann ist das Haus alt genug für eine Übergabe. (93 % des Wegs)"
+   ],
+   "knoepfe": []
+  },
+  {
+   "n": 50,
+   "jahr": 1604,
+   "woche": 30,
+   "liegt": null,
+   "imText": 1,
+   "textBeispiel": [
+    "Ziel: das Haus weitergeben, solange es steht. Noch 1 Braujahr, dann ist das Haus alt genug für eine Übergabe. (93 % des Wegs)"
+   ],
+   "knoepfe": []
+  },
+  {
+   "n": 51,
+   "jahr": 1605,
+   "woche": 1,
+   "liegt": 1605,
+   "imText": 3,
+   "textBeispiel": [
+    "Ziel: Die Übergabe vor der Lade liegt auf dem Tisch — noch 4 Wochen. Das ist das gute Ende. (100 % des Wegs)",
+    "DIE ÜBERGABE VOR DER LADE · 1605",
+    "Die Übergabe vor dem Rat ansehen"
+   ],
+   "knoepfe": []
+  },
+  {
+   "n": 52,
+   "jahr": 1605,
+   "woche": 2,
+   "liegt": 1605,
+   "imText": 6,
+   "textBeispiel": [
+    "DIE ÜBERGABE VOR DER LADE liegt — noch 3 Wochen. Das ist das gute Ende.",
+    "DIE ÜBERGABE VOR DER LADE · noch 3 Wochen",
+    "Ziel: Die Übergabe vor der Lade liegt auf dem Tisch — noch 3 Wochen. Das ist das gute Ende. (100 % des Wegs)"
+   ],
+   "knoepfe": [
+    {
+     "zug": "fuhre:uebergabe-auf",
+     "wo": "wochenkarte",
+     "text": "DIE ÜBERGABE VOR DER LADE · noch 3 Wochen"
+    },
+    {
+     "zug": "fuhre:uebergabe:ja",
+     "wo": "uebergabeblatt",
+     "text": "Das Haus übergeben und aufhören"
+    }
+   ]
+  },
+  {
+   "n": 53,
+   "jahr": 1605,
+   "woche": 3,
+   "liegt": 1605,
+   "imText": 6,
+   "textBeispiel": [
+    "DIE ÜBERGABE VOR DER LADE liegt — noch 2 Wochen. Das ist das gute Ende.",
+    "DIE ÜBERGABE VOR DER LADE · noch 2 Wochen",
+    "Ziel: Die Übergabe vor der Lade liegt auf dem Tisch — noch 2 Wochen. Das ist das gute Ende. (100 % des Wegs)"
+   ],
+   "knoepfe": [
+    {
+     "zug": "fuhre:uebergabe-auf",
+     "wo": "wochenkarte",
+     "text": "DIE ÜBERGABE VOR DER LADE · noch 2 Wochen"
+    },
+    {
+     "zug": "fuhre:uebergabe:ja",
+     "wo": "uebergabeblatt",
+     "text": "Das Haus übergeben und aufhören"
+    }
+   ]
+  },
+  {
+   "n": 54,
+   "jahr": 1605,
+   "woche": 4,
+   "liegt": 1605,
+   "imText": 6,
+   "textBeispiel": [
+    "DIE ÜBERGABE VOR DER LADE liegt — noch 1 Woche. Das ist das gute Ende.",
+    "DIE ÜBERGABE VOR DER LADE · noch 1 Woche",
+    "Ziel: Die Übergabe vor der Lade liegt auf dem Tisch — noch 1 Woche. Das ist das gute Ende. (100 % des Wegs)"
+   ],
+   "knoepfe": [
+    {
+     "zug": "fuhre:uebergabe-auf",
+     "wo": "wochenkarte",
+     "text": "DIE ÜBERGABE VOR DER LADE · noch 1 Woche"
+    },
+    {
+     "zug": "fuhre:uebergabe:ja",
+     "wo": "uebergabeblatt",
+     "text": "Das Haus übergeben und aufhören"
+    }
+   ]
+  },
+  {
+   "n": 55,
+   "jahr": 1605,
+   "woche": 5,
+   "liegt": null,
+   "imText": 0,
+   "textBeispiel": [],
+   "knoepfe": []
+  },
+  {
+   "n": 56,
+   "jahr": 1605,
+   "woche": 6,
+   "liegt": null,
+   "imText": 0,
+   "textBeispiel": [],
+   "knoepfe": []
+  },
+  {
+   "n": 57,
+   "jahr": 1605,
+   "woche": 7,
+   "liegt": null,
+   "imText": 0,
+   "textBeispiel": [],
+   "knoepfe": []
+  },
+  {
+   "n": 58,
+   "jahr": 1605,
+   "woche": 8,
+   "liegt": null,
+   "imText": 0,
+   "textBeispiel": [],
+   "knoepfe": []
+  },
+  {
+   "n": 59,
+   "jahr": 1605,
+   "woche": 9,
+   "liegt": null,
+   "imText": 0,
+   "textBeispiel": [],
+   "knoepfe": []
+  },
+  {
+   "n": 60,
+   "jahr": 1605,
+   "woche": 10,
+   "liegt": null,
+   "imText": 0,
+   "textBeispiel": [],
+   "knoepfe": []
+  },
+  {
+   "n": 61,
+   "jahr": 1605,
+   "woche": 16,
+   "liegt": null,
+   "imText": 0,
+   "textBeispiel": [],
+   "knoepfe": []
+  },
+  {
+   "n": 62,
+   "jahr": 1605,
+   "woche": 22,
+   "liegt": null,
+   "imText": 0,
+   "textBeispiel": [],
+   "knoepfe": []
+  },
+  {
+   "n": 63,
+   "jahr": 1605,
+   "woche": 28,
+   "liegt": null,
+   "imText": 0,
+   "textBeispiel": [],
+   "knoepfe": []
+  },
+  {
+   "n": 64,
+   "jahr": 1605,
+   "woche": 30,
+   "liegt": null,
+   "imText": 0,
+   "textBeispiel": [],
+   "knoepfe": []
+  },
+  {
+   "n": 65,
+   "jahr": 1606,
+   "woche": 1,
+   "liegt": 1606,
+   "imText": 3,
+   "textBeispiel": [
+    "Ziel: Die Übergabe vor der Lade liegt auf dem Tisch — noch 4 Wochen. Das ist das gute Ende. (100 % des Wegs)",
+    "DIE ÜBERGABE VOR DER LADE · 1606",
+    "Die Übergabe vor dem Rat ansehen"
+   ],
+   "knoepfe": []
+  },
+  {
+   "n": 66,
+   "jahr": 1606,
+   "woche": 2,
+   "liegt": 1606,
+   "imText": 6,
+   "textBeispiel": [
+    "DIE ÜBERGABE VOR DER LADE liegt — noch 3 Wochen. Das ist das gute Ende.",
+    "DIE ÜBERGABE VOR DER LADE · noch 3 Wochen",
+    "Ziel: Die Übergabe vor der Lade liegt auf dem Tisch — noch 3 Wochen. Das ist das gute Ende. (100 % des Wegs)"
+   ],
+   "knoepfe": [
+    {
+     "zug": "fuhre:uebergabe-auf",
+     "wo": "wochenkarte",
+     "text": "DIE ÜBERGABE VOR DER LADE · noch 3 Wochen"
+    },
+    {
+     "zug": "fuhre:uebergabe:ja",
+     "wo": "uebergabeblatt",
+     "text": "Das Haus übergeben und aufhören"
+    }
+   ]
+  },
+  {
+   "n": 67,
+   "jahr": 1606,
+   "woche": 3,
+   "liegt": 1606,
+   "imText": 6,
+   "textBeispiel": [
+    "DIE ÜBERGABE VOR DER LADE liegt — noch 2 Wochen. Das ist das gute Ende.",
+    "DIE ÜBERGABE VOR DER LADE · noch 2 Wochen",
+    "Ziel: Die Übergabe vor der Lade liegt auf dem Tisch — noch 2 Wochen. Das ist das gute Ende. (100 % des Wegs)"
+   ],
+   "knoepfe": [
+    {
+     "zug": "fuhre:uebergabe-auf",
+     "wo": "wochenkarte",
+     "text": "DIE ÜBERGABE VOR DER LADE · noch 2 Wochen"
+    },
+    {
+     "zug": "fuhre:uebergabe:ja",
+     "wo": "uebergabeblatt",
+     "text": "Das Haus übergeben und aufhören"
+    }
+   ]
+  },
+  {
+   "n": 68,
+   "jahr": 1606,
+   "woche": 4,
+   "liegt": 1606,
+   "imText": 6,
+   "textBeispiel": [
+    "DIE ÜBERGABE VOR DER LADE liegt — noch 1 Woche. Das ist das gute Ende.",
+    "DIE ÜBERGABE VOR DER LADE · noch 1 Woche",
+    "Ziel: Die Übergabe vor der Lade liegt auf dem Tisch — noch 1 Woche. Das ist das gute Ende. (100 % des Wegs)"
+   ],
+   "knoepfe": [
+    {
+     "zug": "fuhre:uebergabe-auf",
+     "wo": "wochenkarte",
+     "text": "DIE ÜBERGABE VOR DER LADE · noch 1 Woche"
+    },
+    {
+     "zug": "fuhre:uebergabe:ja",
+     "wo": "uebergabeblatt",
+     "text": "Das Haus übergeben und aufhören"
+    }
+   ]
+  },
+  {
+   "n": 69,
+   "jahr": 1606,
+   "woche": 5,
+   "liegt": null,
+   "imText": 0,
+   "textBeispiel": [],
+   "knoepfe": []
+  },
+  {
+   "n": 70,
+   "jahr": 1606,
+   "woche": 6,
+   "liegt": null,
+   "imText": 0,
+   "textBeispiel": [],
+   "knoepfe": []
+  },
+  {
+   "n": 71,
+   "jahr": 1606,
+   "woche": 7,
+   "liegt": null,
+   "imText": 0,
+   "textBeispiel": [],
+   "knoepfe": []
+  },
+  {
+   "n": 72,
+   "jahr": 1606,
+   "woche": 8,
+   "liegt": null,
+   "imText": 0,
+   "textBeispiel": [],
+   "knoepfe": []
+  },
+  {
+   "n": 73,
+   "jahr": 1606,
+   "woche": 9,
+   "liegt": null,
+   "imText": 0,
+   "textBeispiel": [],
+   "knoepfe": []
+  },
+  {
+   "n": 74,
+   "jahr": 1606,
+   "woche": 10,
+   "liegt": null,
+   "imText": 0,
+   "textBeispiel": [],
+   "knoepfe": []
+  },
+  {
+   "n": 75,
+   "jahr": 1606,
+   "woche": 11,
+   "liegt": null,
+   "imText": 0,
+   "textBeispiel": [],
+   "knoepfe": []
+  },
+  {
+   "n": 76,
+   "jahr": 1606,
+   "woche": 12,
+   "liegt": null,
+   "imText": 0,
+   "textBeispiel": [],
+   "knoepfe": []
+  },
+  {
+   "n": 77,
+   "jahr": 1606,
+   "woche": 13,
+   "liegt": null,
+   "imText": 0,
+   "textBeispiel": [],
+   "knoepfe": []
+  },
+  {
+   "n": 78,
+   "jahr": 1606,
+   "woche": 14,
+   "liegt": null,
+   "imText": 0,
+   "textBeispiel": [],
+   "knoepfe": []
+  },
+  {
+   "n": 79,
+   "jahr": 1606,
+   "woche": 20,
+   "liegt": null,
+   "imText": 0,
+   "textBeispiel": [],
+   "knoepfe": []
+  },
+  {
+   "n": 80,
+   "jahr": 1606,
+   "woche": 26,
+   "liegt": null,
+   "imText": 0,
+   "textBeispiel": [],
+   "knoepfe": []
+  },
+  {
+   "n": 81,
+   "jahr": 1606,
+   "woche": 30,
+   "liegt": null,
+   "imText": 0,
+   "textBeispiel": [],
+   "knoepfe": []
+  },
+  {
+   "n": 82,
+   "jahr": 1607,
+   "woche": 1,
+   "liegt": 1607,
+   "imText": 3,
+   "textBeispiel": [
+    "Ziel: Die Übergabe vor der Lade liegt auf dem Tisch — noch 4 Wochen. Das ist das gute Ende. (100 % des Wegs)",
+    "DIE ÜBERGABE VOR DER LADE · 1607",
+    "Die Übergabe vor dem Rat ansehen"
+   ],
+   "knoepfe": []
+  }
+ ]
+}

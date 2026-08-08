@@ -1,0 +1,67 @@
+{
+ "epoche": 1,
+ "bei": "1350/1",
+ "reiterklicks": 4,
+ "wirklichGetroffen": 4,
+ "blattWeg": 4,
+ "mehrGreifbar": 4,
+ "reihe": [
+  {
+   "schritt": "vorher",
+   "liegt": true,
+   "greifbar": 33,
+   "tafelknoepfe": 8,
+   "kText": "Michaelitafel schließen"
+  },
+  {
+   "schritt": "klick",
+   "reiter": "stadt:reiter:gegner-amort-gg-band",
+   "text": "OHNE DICH GESCHEHEN · 1 ZUG",
+   "unterDemZeiger": "stadt:reiter:gegner-amort-gg-band",
+   "wirklichGetroffen": true,
+   "greifbarVor": 33,
+   "greifbarNach": 48,
+   "blattWeg": true,
+   "tafelknoepfeNach": 2,
+   "kText": "Michaelitafel 1350 · 5 Angebote"
+  },
+  {
+   "schritt": "klick",
+   "reiter": "stadt:reiter:fuhre-fu-brett-fu-haeuser",
+   "text": "DIE HÄUSER",
+   "unterDemZeiger": "stadt:reiter:fuhre-fu-brett-fu-haeuser",
+   "wirklichGetroffen": true,
+   "greifbarVor": 33,
+   "greifbarNach": 58,
+   "blattWeg": true,
+   "tafelknoepfeNach": 2,
+   "kText": "Michaelitafel 1350 · 5 Angebote"
+  },
+  {
+   "schritt": "klick",
+   "reiter": "stadt:reiter:fuhre-fu-brett-fu-schiefer-fu-tafel",
+   "text": "ANSCHLAGTAFEL",
+   "unterDemZeiger": "stadt:reiter:fuhre-fu-brett-fu-schiefer-fu-tafel",
+   "wirklichGetroffen": true,
+   "greifbarVor": 33,
+   "greifbarNach": 64,
+   "blattWeg": true,
+   "tafelknoepfeNach": 2,
+   "kText": "Michaelitafel 1350 · 5 Angebote"
+  },
+  {
+   "schritt": "klick",
+   "reiter": "stadt:reiter:fuhre-fu-brett-fu-keller",
+   "text": "DER KELLER",
+   "unterDemZeiger": "stadt:reiter:fuhre-fu-brett-fu-keller",
+   "wirklichGetroffen": true,
+   "greifbarVor": 33,
+   "greifbarNach": 64,
+   "blattWeg": true,
+   "tafelknoepfeNach": 2,
+   "kText": "Michaelitafel 1350 · 5 Angebote"
+  }
+ ],
+ "seitenfehler": 0,
+ "lage": 0
+}

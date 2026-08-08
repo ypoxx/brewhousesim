@@ -363,7 +363,7 @@ liegen (Begründung im Quelltext).
 | Wochenkarte **gemalt** (nur die Chips, kein Papier) | **0,74 % (1350) bis 1,57 % (1970)** der Bühne |
 | Wochenkarte je `stadt-zugeklappt` oder `stadt-verdeckt` | **nie**, in keiner Epoche |
 | Schlussblatt, „nächster Zug"-Zeile, `fuhre:wie-vorige`, `fuhre:fuellen`, `fuhre:leeren`, `fuhre:abschicken` | unverändert, kein Schlüssel umbenannt |
-| `Math.random()` in `fuhre*.js` | **0 Treffer** |
+| `Math.random()` in `fuhre*.js` | **1 Treffer, unverändert und vor dieser Welle da** — `neuesSpiel()`, der Knopf „Von vorn anfangen — dieselbe Stadt, andere Würfel". Er würfelt die **neue** Saat für die **nächste** Partie und wechselt dabei die Adresse; er kann keine laufende Messung stören. Von mir kam kein einziger Zufallsaufruf dazu. |
 | Wanduhrfristen (`setTimeout`) neu eingebaut | **0** — der Reiterhorcher und der Anschlaghorcher senden `zeichne` in derselben Runde |
 
 **Zur zweiten Messlatte (ρ) in 1600:** das Messgerät `rueckkopplung-r3/linie.mjs`
