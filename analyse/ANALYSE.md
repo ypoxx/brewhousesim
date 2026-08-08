@@ -195,6 +195,14 @@ eigenes, voll abgenommenes Kern-Projekt.
 
 ## 7 · Entscheidungen des Auftraggebers (F1–F8)
 
+> **Nachtrag vom 8.8., nach Vorlage dieser Analyse:** Der Auftraggeber hat
+> entschieden — F1 Bogen light, F2 **fünfte spielbare Epoche „Die Gegenwart"**,
+> F3 Wirtschaft heilen mit Schutzprotokoll, F5/F6 Desktop-Browser/Deutsch,
+> F7 Release-Schnitt. Die Festlegungen samt Vorentscheidungen zu F4/F8 stehen
+> in [`../feinkonzept/FEINKONZEPT.md`](../feinkonzept/FEINKONZEPT.md), der Plan in
+> [`../feinkonzept/UMSETZUNGSPLAN.md`](../feinkonzept/UMSETZUNGSPLAN.md). Die
+> Tabelle unten bleibt als Entscheidungsgrundlage stehen.
+
 Vollständig begründet in [`berichte/10-vollstaendigkeitskritik.md`](berichte/10-vollstaendigkeitskritik.md) §4:
 
 | # | Frage | Optionen (Kurzform) |
