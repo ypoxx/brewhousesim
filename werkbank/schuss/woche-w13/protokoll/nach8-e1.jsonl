@@ -412,3 +412,6 @@
 {"t":147.9,"was":"abgeschaltet","zug":"fuhre:abschicken","text":"FUHRE ABSCHICKEN"}
 {"t":148.1,"was":"woche","n":100,"jahr":1354,"woche":6,"kasse":4,"greifbar":43,"mitPreis":6,"deckung":0.07407407407407407,"nenner":"Ablösung Ausschank am Markt","ziel":null,"uebergabeImText":1}
 {"t":148.3,"was":"wahl-der-woche","plaene":1,"sprung":true,"liste":[{"zug":"fuhre:plan:umkaempft","preis":5,"text":"Fahren: wo der Adler wirbt · 3 Fass +5 Pf"}]}
+{"t":149.3,"was":"klick","nr":110,"zug":"fuhre:plan:umkaempft","grund":"Fuhrplan","knopf":{"text":"Fahren: wo der Adler wirbt · 3 Fass +5 Pf","preis":5,"w":239,"h":24},"vor":{"jahr":1354,"woche":6,"kasse":4},"nach":{"jahr":1354,"woche":7,"kasse":1},"dkasse":-3,"lage":0}
+{"t":149.4,"was":"abgeschaltet","zug":"fuhre:abschicken","text":"FUHRE ABSCHICKEN"}
+{"t":150.6,"was":"schluss","jahr":1354,"woche":7,"kasse":1,"klicks":110,"danebengegriffen":4,"lage":0,"fehler":[],"abbruch":null,"gespielt":100,"sprungWochen":32}
