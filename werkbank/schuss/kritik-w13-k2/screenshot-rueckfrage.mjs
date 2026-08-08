@@ -1,0 +1,11 @@
+import { neuerBrowser, neueSeite, adresse, gehezu, klickZug, weiterKlicken } from './lib.mjs';
+const browser = await neuerBrowser();
+const { page, context } = await neueSeite(browser, { breite: 1600, hoehe: 900 });
+await gehezu(page, adresse({ epoche: 1, saat: 1350, neu: false }));
+await klickZug(page, 'kern:anfangen');
+await weiterKlicken(page, 6);
+await klickZug(page, 'kern:neu');
+await page.waitForTimeout(100);
+await page.screenshot({ path: '/home/user/brewhousesim/werkbank/schuss/kritik-w13-k2/rueckfrage-verdeckt-umtrunk.png' });
+await context.close();
+await browser.close();

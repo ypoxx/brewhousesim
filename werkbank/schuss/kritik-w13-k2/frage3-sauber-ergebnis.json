@@ -1,0 +1,948 @@
+[
+  {
+    "epoche": 1,
+    "zettelDa": true,
+    "zettelRect": {
+      "x": 35.1875,
+      "y": 625.5,
+      "w": 576,
+      "h": 232.984375
+    },
+    "gesamtOffenMitFlaeche": 75,
+    "nichtGetroffen": [
+      {
+        "zug": "gegner:blatt",
+        "trifft": false,
+        "unterZettel": false,
+        "topIstAnfangen": false
+      },
+      {
+        "zug": "gegner:beschwerde",
+        "trifft": false,
+        "unterZettel": false,
+        "topIstAnfangen": false
+      },
+      {
+        "zug": "gegner:zeige:1",
+        "trifft": false,
+        "unterZettel": false,
+        "topIstAnfangen": false
+      },
+      {
+        "zug": "fuhre:ziel:bar",
+        "trifft": false,
+        "unterZettel": false,
+        "topIstAnfangen": false
+      },
+      {
+        "zug": "fuhre:ziel:borg",
+        "trifft": false,
+        "unterZettel": false,
+        "topIstAnfangen": false
+      },
+      {
+        "zug": "fuhre:laden:lindenhof",
+        "trifft": false,
+        "unterZettel": false,
+        "topIstAnfangen": false
+      },
+      {
+        "zug": "fuhre:laden:ochse",
+        "trifft": false,
+        "unterZettel": false,
+        "topIstAnfangen": false
+      },
+      {
+        "zug": "fuhre:laden:torschenke",
+        "trifft": false,
+        "unterZettel": false,
+        "topIstAnfangen": false
+      },
+      {
+        "zug": "fuhre:laden:pfarrhof",
+        "trifft": false,
+        "unterZettel": false,
+        "topIstAnfangen": false
+      },
+      {
+        "zug": "fuhre:bann:muehlwirt",
+        "trifft": false,
+        "unterZettel": false,
+        "topIstAnfangen": false
+      },
+      {
+        "zug": "fuhre:bann:brueckenwirt",
+        "trifft": false,
+        "unterZettel": true,
+        "topIstAnfangen": false
+      },
+      {
+        "zug": "fuhre:bann:faehrhaus",
+        "trifft": false,
+        "unterZettel": true,
+        "topIstAnfangen": false
+      },
+      {
+        "zug": "fuhre:bann:hirsch",
+        "trifft": false,
+        "unterZettel": true,
+        "topIstAnfangen": false
+      },
+      {
+        "zug": "fuhre:bann:obernberg",
+        "trifft": false,
+        "unterZettel": true,
+        "topIstAnfangen": false
+      },
+      {
+        "zug": "fuhre:tafel-auf:duenn",
+        "trifft": false,
+        "unterZettel": false,
+        "topIstAnfangen": false
+      },
+      {
+        "zug": "fuhre:tafel-ab:grut",
+        "trifft": false,
+        "unterZettel": false,
+        "topIstAnfangen": false
+      },
+      {
+        "zug": "fuhre:tafel-auf:grut",
+        "trifft": false,
+        "unterZettel": false,
+        "topIstAnfangen": false
+      },
+      {
+        "zug": "fuhre:tafel-auf:stark",
+        "trifft": false,
+        "unterZettel": false,
+        "topIstAnfangen": false
+      },
+      {
+        "zug": "fuhre:tafel-auf:kofent",
+        "trifft": false,
+        "unterZettel": false,
+        "topIstAnfangen": false
+      },
+      {
+        "zug": "fuhre:kauf:budget",
+        "trifft": false,
+        "unterZettel": false,
+        "topIstAnfangen": false
+      },
+      {
+        "zug": "fuhre:kauf:rohstoff",
+        "trifft": false,
+        "unterZettel": false,
+        "topIstAnfangen": false
+      },
+      {
+        "zug": "fuhre:rueckkauf:rohstoff",
+        "trifft": false,
+        "unterZettel": false,
+        "topIstAnfangen": false
+      },
+      {
+        "zug": "fuhre:kauf:fass",
+        "trifft": false,
+        "unterZettel": false,
+        "topIstAnfangen": false
+      },
+      {
+        "zug": "fuhre:fuellen",
+        "trifft": false,
+        "unterZettel": false,
+        "topIstAnfangen": false
+      },
+      {
+        "zug": "name:band",
+        "trifft": false,
+        "unterZettel": false,
+        "topIstAnfangen": false
+      },
+      {
+        "zug": "name:aufgeldbuch",
+        "trifft": false,
+        "unterZettel": false,
+        "topIstAnfangen": false
+      },
+      {
+        "zug": "name:jetzt:umtrunk",
+        "trifft": false,
+        "unterZettel": false,
+        "topIstAnfangen": false
+      },
+      {
+        "zug": "name:jetzt:zunftzeichen",
+        "trifft": false,
+        "unterZettel": false,
+        "topIstAnfangen": false
+      },
+      {
+        "zug": "name:ruhe",
+        "trifft": false,
+        "unterZettel": false,
+        "topIstAnfangen": false
+      },
+      {
+        "zug": "name:herumgehen",
+        "trifft": false,
+        "unterZettel": false,
+        "topIstAnfangen": false
+      },
+      {
+        "zug": "name:blatt",
+        "trifft": false,
+        "unterZettel": false,
+        "topIstAnfangen": false
+      }
+    ],
+    "unterZettelUndGetroffen": 1,
+    "unterZettelUndNichtGetroffen": [
+      {
+        "zug": "fuhre:bann:brueckenwirt",
+        "trifft": false,
+        "unterZettel": true,
+        "topIstAnfangen": false
+      },
+      {
+        "zug": "fuhre:bann:faehrhaus",
+        "trifft": false,
+        "unterZettel": true,
+        "topIstAnfangen": false
+      },
+      {
+        "zug": "fuhre:bann:hirsch",
+        "trifft": false,
+        "unterZettel": true,
+        "topIstAnfangen": false
+      },
+      {
+        "zug": "fuhre:bann:obernberg",
+        "trifft": false,
+        "unterZettel": true,
+        "topIstAnfangen": false
+      }
+    ]
+  },
+  {
+    "epoche": 2,
+    "zettelDa": true,
+    "zettelRect": {
+      "x": 35.1875,
+      "y": 625.5,
+      "w": 576,
+      "h": 232.984375
+    },
+    "gesamtOffenMitFlaeche": 80,
+    "nichtGetroffen": [
+      {
+        "zug": "gegner:abloesen:torschenke",
+        "trifft": false,
+        "unterZettel": false,
+        "topIstAnfangen": false
+      },
+      {
+        "zug": "gegner:zuvorkommen:brueckenwirt",
+        "trifft": false,
+        "unterZettel": false,
+        "topIstAnfangen": false
+      },
+      {
+        "zug": "gegner:blatt",
+        "trifft": false,
+        "unterZettel": false,
+        "topIstAnfangen": false
+      },
+      {
+        "zug": "gegner:beschwerde",
+        "trifft": false,
+        "unterZettel": false,
+        "topIstAnfangen": false
+      },
+      {
+        "zug": "gegner:zeige:1",
+        "trifft": false,
+        "unterZettel": false,
+        "topIstAnfangen": false
+      },
+      {
+        "zug": "fuhre:ziel:bar",
+        "trifft": false,
+        "unterZettel": false,
+        "topIstAnfangen": false
+      },
+      {
+        "zug": "fuhre:ziel:borg",
+        "trifft": false,
+        "unterZettel": false,
+        "topIstAnfangen": false
+      },
+      {
+        "zug": "fuhre:laden:lindenhof",
+        "trifft": false,
+        "unterZettel": false,
+        "topIstAnfangen": false
+      },
+      {
+        "zug": "fuhre:laden:ochse",
+        "trifft": false,
+        "unterZettel": false,
+        "topIstAnfangen": false
+      },
+      {
+        "zug": "fuhre:laden:torschenke",
+        "trifft": false,
+        "unterZettel": false,
+        "topIstAnfangen": false
+      },
+      {
+        "zug": "fuhre:laden:pfarrhof",
+        "trifft": false,
+        "unterZettel": false,
+        "topIstAnfangen": false
+      },
+      {
+        "zug": "fuhre:laden:muehlwirt",
+        "trifft": false,
+        "unterZettel": false,
+        "topIstAnfangen": false
+      },
+      {
+        "zug": "fuhre:laden:brueckenwirt",
+        "trifft": false,
+        "unterZettel": true,
+        "topIstAnfangen": false
+      },
+      {
+        "zug": "fuhre:laden:faehrhaus",
+        "trifft": false,
+        "unterZettel": true,
+        "topIstAnfangen": false
+      },
+      {
+        "zug": "fuhre:laden:hirsch",
+        "trifft": false,
+        "unterZettel": true,
+        "topIstAnfangen": false
+      },
+      {
+        "zug": "fuhre:tafel-auf:schank",
+        "trifft": false,
+        "unterZettel": false,
+        "topIstAnfangen": false
+      },
+      {
+        "zug": "fuhre:tafel-ab:braun",
+        "trifft": false,
+        "unterZettel": false,
+        "topIstAnfangen": false
+      },
+      {
+        "zug": "fuhre:tafel-auf:braun",
+        "trifft": false,
+        "unterZettel": false,
+        "topIstAnfangen": false
+      },
+      {
+        "zug": "fuhre:tafel-auf:maerzen",
+        "trifft": false,
+        "unterZettel": false,
+        "topIstAnfangen": false
+      },
+      {
+        "zug": "fuhre:tafel-auf:nachbier",
+        "trifft": false,
+        "unterZettel": false,
+        "topIstAnfangen": false
+      },
+      {
+        "zug": "fuhre:kauf:budget",
+        "trifft": false,
+        "unterZettel": false,
+        "topIstAnfangen": false
+      },
+      {
+        "zug": "fuhre:kauf:fass",
+        "trifft": false,
+        "unterZettel": false,
+        "topIstAnfangen": false
+      },
+      {
+        "zug": "fuhre:kauf:rohstoff",
+        "trifft": false,
+        "unterZettel": false,
+        "topIstAnfangen": false
+      },
+      {
+        "zug": "fuhre:rueckkauf:rohstoff",
+        "trifft": false,
+        "unterZettel": false,
+        "topIstAnfangen": false
+      },
+      {
+        "zug": "fuhre:fuellen",
+        "trifft": false,
+        "unterZettel": false,
+        "topIstAnfangen": false
+      },
+      {
+        "zug": "name:band",
+        "trifft": false,
+        "unterZettel": false,
+        "topIstAnfangen": false
+      },
+      {
+        "zug": "name:aufgeldbuch",
+        "trifft": false,
+        "unterZettel": false,
+        "topIstAnfangen": false
+      },
+      {
+        "zug": "name:jetzt:kirchweih",
+        "trifft": false,
+        "unterZettel": false,
+        "topIstAnfangen": false
+      },
+      {
+        "zug": "name:jetzt:krug",
+        "trifft": false,
+        "unterZettel": false,
+        "topIstAnfangen": false
+      },
+      {
+        "zug": "name:ruhe",
+        "trifft": false,
+        "unterZettel": false,
+        "topIstAnfangen": false
+      },
+      {
+        "zug": "name:herumgehen",
+        "trifft": false,
+        "unterZettel": false,
+        "topIstAnfangen": false
+      },
+      {
+        "zug": "name:blatt",
+        "trifft": false,
+        "unterZettel": false,
+        "topIstAnfangen": false
+      }
+    ],
+    "unterZettelUndGetroffen": 1,
+    "unterZettelUndNichtGetroffen": [
+      {
+        "zug": "fuhre:laden:brueckenwirt",
+        "trifft": false,
+        "unterZettel": true,
+        "topIstAnfangen": false
+      },
+      {
+        "zug": "fuhre:laden:faehrhaus",
+        "trifft": false,
+        "unterZettel": true,
+        "topIstAnfangen": false
+      },
+      {
+        "zug": "fuhre:laden:hirsch",
+        "trifft": false,
+        "unterZettel": true,
+        "topIstAnfangen": false
+      }
+    ]
+  },
+  {
+    "epoche": 3,
+    "zettelDa": true,
+    "zettelRect": {
+      "x": 35.1875,
+      "y": 625.5,
+      "w": 576,
+      "h": 232.984375
+    },
+    "gesamtOffenMitFlaeche": 81,
+    "nichtGetroffen": [
+      {
+        "zug": "gegner:blatt",
+        "trifft": false,
+        "unterZettel": false,
+        "topIstAnfangen": false
+      },
+      {
+        "zug": "gegner:beschwerde",
+        "trifft": false,
+        "unterZettel": false,
+        "topIstAnfangen": false
+      },
+      {
+        "zug": "gegner:zeige:1",
+        "trifft": false,
+        "unterZettel": false,
+        "topIstAnfangen": false
+      },
+      {
+        "zug": "fuhre:ziel:bar",
+        "trifft": false,
+        "unterZettel": false,
+        "topIstAnfangen": false
+      },
+      {
+        "zug": "fuhre:ziel:borg",
+        "trifft": false,
+        "unterZettel": false,
+        "topIstAnfangen": false
+      },
+      {
+        "zug": "fuhre:laden:lindenhof",
+        "trifft": false,
+        "unterZettel": false,
+        "topIstAnfangen": false
+      },
+      {
+        "zug": "fuhre:laden:ochse",
+        "trifft": false,
+        "unterZettel": false,
+        "topIstAnfangen": false
+      },
+      {
+        "zug": "fuhre:laden:torschenke",
+        "trifft": false,
+        "unterZettel": false,
+        "topIstAnfangen": false
+      },
+      {
+        "zug": "fuhre:laden:pfarrhof",
+        "trifft": false,
+        "unterZettel": false,
+        "topIstAnfangen": false
+      },
+      {
+        "zug": "fuhre:laden:muehlwirt",
+        "trifft": false,
+        "unterZettel": false,
+        "topIstAnfangen": false
+      },
+      {
+        "zug": "fuhre:laden:brueckenwirt",
+        "trifft": false,
+        "unterZettel": true,
+        "topIstAnfangen": false
+      },
+      {
+        "zug": "fuhre:laden:faehrhaus",
+        "trifft": false,
+        "unterZettel": true,
+        "topIstAnfangen": false
+      },
+      {
+        "zug": "fuhre:laden:hirsch",
+        "trifft": false,
+        "unterZettel": true,
+        "topIstAnfangen": false
+      },
+      {
+        "zug": "fuhre:laden:bahnhofswirt",
+        "trifft": false,
+        "unterZettel": true,
+        "topIstAnfangen": false
+      },
+      {
+        "zug": "fuhre:tafel-auf:schank",
+        "trifft": false,
+        "unterZettel": false,
+        "topIstAnfangen": false
+      },
+      {
+        "zug": "fuhre:tafel-ab:lager",
+        "trifft": false,
+        "unterZettel": false,
+        "topIstAnfangen": false
+      },
+      {
+        "zug": "fuhre:tafel-auf:lager",
+        "trifft": false,
+        "unterZettel": false,
+        "topIstAnfangen": false
+      },
+      {
+        "zug": "fuhre:tafel-auf:export",
+        "trifft": false,
+        "unterZettel": false,
+        "topIstAnfangen": false
+      },
+      {
+        "zug": "fuhre:tafel-auf:einfach",
+        "trifft": false,
+        "unterZettel": false,
+        "topIstAnfangen": false
+      },
+      {
+        "zug": "fuhre:kauf:eiskeller",
+        "trifft": false,
+        "unterZettel": false,
+        "topIstAnfangen": false
+      },
+      {
+        "zug": "fuhre:kauf:sudwerk",
+        "trifft": false,
+        "unterZettel": false,
+        "topIstAnfangen": false
+      },
+      {
+        "zug": "fuhre:kauf:rohstoff",
+        "trifft": false,
+        "unterZettel": false,
+        "topIstAnfangen": false
+      },
+      {
+        "zug": "fuhre:fracht:rollfuhr",
+        "trifft": false,
+        "unterZettel": false,
+        "topIstAnfangen": false
+      },
+      {
+        "zug": "fuhre:fracht:stueck",
+        "trifft": false,
+        "unterZettel": false,
+        "topIstAnfangen": false
+      },
+      {
+        "zug": "fuhre:fracht:halb",
+        "trifft": false,
+        "unterZettel": false,
+        "topIstAnfangen": false
+      },
+      {
+        "zug": "fuhre:fracht:ganz",
+        "trifft": false,
+        "unterZettel": false,
+        "topIstAnfangen": false
+      },
+      {
+        "zug": "fuhre:fuellen",
+        "trifft": false,
+        "unterZettel": false,
+        "topIstAnfangen": false
+      },
+      {
+        "zug": "name:band",
+        "trifft": false,
+        "unterZettel": false,
+        "topIstAnfangen": false
+      },
+      {
+        "zug": "name:aufgeldbuch",
+        "trifft": false,
+        "unterZettel": false,
+        "topIstAnfangen": false
+      },
+      {
+        "zug": "name:jetzt:annonce",
+        "trifft": false,
+        "unterZettel": false,
+        "topIstAnfangen": false
+      },
+      {
+        "zug": "name:jetzt:plakat",
+        "trifft": false,
+        "unterZettel": false,
+        "topIstAnfangen": false
+      },
+      {
+        "zug": "name:jetzt:saeule",
+        "trifft": false,
+        "unterZettel": false,
+        "topIstAnfangen": false
+      },
+      {
+        "zug": "name:ruhe",
+        "trifft": false,
+        "unterZettel": false,
+        "topIstAnfangen": false
+      },
+      {
+        "zug": "name:herumgehen",
+        "trifft": false,
+        "unterZettel": false,
+        "topIstAnfangen": false
+      },
+      {
+        "zug": "name:blatt",
+        "trifft": false,
+        "unterZettel": false,
+        "topIstAnfangen": false
+      }
+    ],
+    "unterZettelUndGetroffen": 2,
+    "unterZettelUndNichtGetroffen": [
+      {
+        "zug": "fuhre:laden:brueckenwirt",
+        "trifft": false,
+        "unterZettel": true,
+        "topIstAnfangen": false
+      },
+      {
+        "zug": "fuhre:laden:faehrhaus",
+        "trifft": false,
+        "unterZettel": true,
+        "topIstAnfangen": false
+      },
+      {
+        "zug": "fuhre:laden:hirsch",
+        "trifft": false,
+        "unterZettel": true,
+        "topIstAnfangen": false
+      },
+      {
+        "zug": "fuhre:laden:bahnhofswirt",
+        "trifft": false,
+        "unterZettel": true,
+        "topIstAnfangen": false
+      }
+    ]
+  },
+  {
+    "epoche": 4,
+    "zettelDa": true,
+    "zettelRect": {
+      "x": 35.1875,
+      "y": 625.5,
+      "w": 576,
+      "h": 232.984375
+    },
+    "gesamtOffenMitFlaeche": 76,
+    "nichtGetroffen": [
+      {
+        "zug": "gegner:blatt",
+        "trifft": false,
+        "unterZettel": false,
+        "topIstAnfangen": false
+      },
+      {
+        "zug": "gegner:beschwerde",
+        "trifft": false,
+        "unterZettel": false,
+        "topIstAnfangen": false
+      },
+      {
+        "zug": "gegner:zeige:1",
+        "trifft": false,
+        "unterZettel": false,
+        "topIstAnfangen": false
+      },
+      {
+        "zug": "fuhre:ziel:bar",
+        "trifft": false,
+        "unterZettel": false,
+        "topIstAnfangen": false
+      },
+      {
+        "zug": "fuhre:ziel:borg",
+        "trifft": false,
+        "unterZettel": false,
+        "topIstAnfangen": false
+      },
+      {
+        "zug": "fuhre:laden:lindenhof",
+        "trifft": false,
+        "unterZettel": false,
+        "topIstAnfangen": false
+      },
+      {
+        "zug": "fuhre:laden:ochse",
+        "trifft": false,
+        "unterZettel": false,
+        "topIstAnfangen": false
+      },
+      {
+        "zug": "fuhre:laden:torschenke",
+        "trifft": false,
+        "unterZettel": false,
+        "topIstAnfangen": false
+      },
+      {
+        "zug": "fuhre:laden:pfarrhof",
+        "trifft": false,
+        "unterZettel": false,
+        "topIstAnfangen": false
+      },
+      {
+        "zug": "fuhre:laden:muehlwirt",
+        "trifft": false,
+        "unterZettel": false,
+        "topIstAnfangen": false
+      },
+      {
+        "zug": "fuhre:laden:brueckenwirt",
+        "trifft": false,
+        "unterZettel": true,
+        "topIstAnfangen": false
+      },
+      {
+        "zug": "fuhre:listen:faehrhaus",
+        "trifft": false,
+        "unterZettel": true,
+        "topIstAnfangen": false
+      },
+      {
+        "zug": "fuhre:listen:hirsch",
+        "trifft": false,
+        "unterZettel": true,
+        "topIstAnfangen": false
+      },
+      {
+        "zug": "fuhre:listen:markt",
+        "trifft": false,
+        "unterZettel": true,
+        "topIstAnfangen": false
+      },
+      {
+        "zug": "fuhre:listen:bahnhofswirt",
+        "trifft": false,
+        "unterZettel": true,
+        "topIstAnfangen": false
+      },
+      {
+        "zug": "fuhre:listen:neustadt",
+        "trifft": false,
+        "unterZettel": false,
+        "topIstAnfangen": false
+      },
+      {
+        "zug": "fuhre:tafel-auf:hell",
+        "trifft": false,
+        "unterZettel": false,
+        "topIstAnfangen": false
+      },
+      {
+        "zug": "fuhre:tafel-ab:pils",
+        "trifft": false,
+        "unterZettel": false,
+        "topIstAnfangen": false
+      },
+      {
+        "zug": "fuhre:tafel-auf:pils",
+        "trifft": false,
+        "unterZettel": false,
+        "topIstAnfangen": false
+      },
+      {
+        "zug": "fuhre:tafel-auf:export",
+        "trifft": false,
+        "unterZettel": false,
+        "topIstAnfangen": false
+      },
+      {
+        "zug": "fuhre:tafel-auf:handel",
+        "trifft": false,
+        "unterZettel": false,
+        "topIstAnfangen": false
+      },
+      {
+        "zug": "fuhre:kauf:lastzug",
+        "trifft": false,
+        "unterZettel": false,
+        "topIstAnfangen": false
+      },
+      {
+        "zug": "fuhre:kauf:sudwerk",
+        "trifft": false,
+        "unterZettel": false,
+        "topIstAnfangen": false
+      },
+      {
+        "zug": "fuhre:kauf:rohstoff",
+        "trifft": false,
+        "unterZettel": false,
+        "topIstAnfangen": false
+      },
+      {
+        "zug": "fuhre:fuellen",
+        "trifft": false,
+        "unterZettel": false,
+        "topIstAnfangen": false
+      },
+      {
+        "zug": "name:band",
+        "trifft": false,
+        "unterZettel": false,
+        "topIstAnfangen": false
+      },
+      {
+        "zug": "name:aufgeldbuch",
+        "trifft": false,
+        "unterZettel": false,
+        "topIstAnfangen": false
+      },
+      {
+        "zug": "name:jetzt:bierdeckel",
+        "trifft": false,
+        "unterZettel": false,
+        "topIstAnfangen": false
+      },
+      {
+        "zug": "name:jetzt:kastenaktion",
+        "trifft": false,
+        "unterZettel": false,
+        "topIstAnfangen": false
+      },
+      {
+        "zug": "name:jetzt:anzeige",
+        "trifft": false,
+        "unterZettel": false,
+        "topIstAnfangen": false
+      },
+      {
+        "zug": "name:ruhe",
+        "trifft": false,
+        "unterZettel": false,
+        "topIstAnfangen": false
+      },
+      {
+        "zug": "name:herumgehen",
+        "trifft": false,
+        "unterZettel": false,
+        "topIstAnfangen": false
+      },
+      {
+        "zug": "name:blatt",
+        "trifft": false,
+        "unterZettel": false,
+        "topIstAnfangen": false
+      }
+    ],
+    "unterZettelUndGetroffen": 1,
+    "unterZettelUndNichtGetroffen": [
+      {
+        "zug": "fuhre:laden:brueckenwirt",
+        "trifft": false,
+        "unterZettel": true,
+        "topIstAnfangen": false
+      },
+      {
+        "zug": "fuhre:listen:faehrhaus",
+        "trifft": false,
+        "unterZettel": true,
+        "topIstAnfangen": false
+      },
+      {
+        "zug": "fuhre:listen:hirsch",
+        "trifft": false,
+        "unterZettel": true,
+        "topIstAnfangen": false
+      },
+      {
+        "zug": "fuhre:listen:markt",
+        "trifft": false,
+        "unterZettel": true,
+        "topIstAnfangen": false
+      },
+      {
+        "zug": "fuhre:listen:bahnhofswirt",
+        "trifft": false,
+        "unterZettel": true,
+        "topIstAnfangen": false
+      }
+    ]
+  }
+]

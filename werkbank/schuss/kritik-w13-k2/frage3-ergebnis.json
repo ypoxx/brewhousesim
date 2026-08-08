@@ -1,0 +1,205 @@
+{
+  "startzettel": [
+    {
+      "epoche": 1,
+      "zettelRect": {
+        "rect": {
+          "x": 35.1875,
+          "y": 625.5,
+          "w": 576,
+          "h": 232.984375
+        },
+        "pointerEvents": "none",
+        "knopfPointerEvents": "auto"
+      },
+      "anfangenGeklickt": {
+        "gegriffen": true
+      },
+      "greifbarMitZettel": 44,
+      "greifbarOhneZettel": 32,
+      "gesamtZuegeMitZettel": 99,
+      "gesamtZuegeOhneZettel": 110,
+      "verdecktDurchZettel": [
+        {
+          "zug": "stadt:alles-zuklappen",
+          "text": "Stadt zeigen"
+        }
+      ],
+      "gezielt": {
+        "sud:gaerung:keller": {
+          "existiert": false,
+          "hinweis": "in dieser Epoche/Woche nicht auf dem Brett"
+        },
+        "fuhre:listen:neustadt": {
+          "existiert": false,
+          "hinweis": "in dieser Epoche/Woche nicht auf dem Brett"
+        }
+      }
+    },
+    {
+      "epoche": 2,
+      "zettelRect": {
+        "rect": {
+          "x": 35.1875,
+          "y": 625.5,
+          "w": 576,
+          "h": 232.984375
+        },
+        "pointerEvents": "none",
+        "knopfPointerEvents": "auto"
+      },
+      "anfangenGeklickt": {
+        "gegriffen": true
+      },
+      "greifbarMitZettel": 48,
+      "greifbarOhneZettel": 35,
+      "gesamtZuegeMitZettel": 111,
+      "gesamtZuegeOhneZettel": 126,
+      "verdecktDurchZettel": [
+        {
+          "zug": "stadt:alles-zuklappen",
+          "text": "Stadt zeigen"
+        }
+      ],
+      "gezielt": {
+        "sud:gaerung:keller": {
+          "zug": "sud:gaerung:keller",
+          "text": "Kellergärung im Felsenkeller−260 fl",
+          "offen": false,
+          "existiert": true,
+          "flaeche": true,
+          "trifft": false,
+          "disabled": true
+        },
+        "fuhre:listen:neustadt": {
+          "existiert": false,
+          "hinweis": "in dieser Epoche/Woche nicht auf dem Brett"
+        }
+      }
+    },
+    {
+      "epoche": 3,
+      "zettelRect": {
+        "rect": {
+          "x": 35.1875,
+          "y": 625.5,
+          "w": 576,
+          "h": 232.984375
+        },
+        "pointerEvents": "none",
+        "knopfPointerEvents": "auto"
+      },
+      "anfangenGeklickt": {
+        "gegriffen": true
+      },
+      "greifbarMitZettel": 46,
+      "greifbarOhneZettel": 35,
+      "gesamtZuegeMitZettel": 111,
+      "gesamtZuegeOhneZettel": 125,
+      "verdecktDurchZettel": [
+        {
+          "zug": "stadt:alles-zuklappen",
+          "text": "Stadt zeigen"
+        }
+      ],
+      "gezielt": {
+        "sud:gaerung:keller": {
+          "existiert": false,
+          "hinweis": "in dieser Epoche/Woche nicht auf dem Brett"
+        },
+        "fuhre:listen:neustadt": {
+          "existiert": false,
+          "hinweis": "in dieser Epoche/Woche nicht auf dem Brett"
+        }
+      }
+    },
+    {
+      "epoche": 4,
+      "zettelRect": {
+        "rect": {
+          "x": 35.1875,
+          "y": 625.5,
+          "w": 576,
+          "h": 232.984375
+        },
+        "pointerEvents": "none",
+        "knopfPointerEvents": "auto"
+      },
+      "anfangenGeklickt": {
+        "gegriffen": true
+      },
+      "greifbarMitZettel": 43,
+      "greifbarOhneZettel": 29,
+      "gesamtZuegeMitZettel": 102,
+      "gesamtZuegeOhneZettel": 116,
+      "verdecktDurchZettel": [
+        {
+          "zug": "stadt:alles-zuklappen",
+          "text": "Stadt zeigen"
+        }
+      ],
+      "gezielt": {
+        "sud:gaerung:keller": {
+          "existiert": false,
+          "hinweis": "in dieser Epoche/Woche nicht auf dem Brett"
+        },
+        "fuhre:listen:neustadt": {
+          "zug": "fuhre:listen:neustadt",
+          "text": "Regalmeter−8.573 DM",
+          "offen": true,
+          "existiert": true,
+          "flaeche": true,
+          "trifft": false,
+          "disabled": false
+        }
+      }
+    }
+  ],
+  "rueckfrage": [
+    {
+      "epoche": 1,
+      "neuKnopfDa": true,
+      "klickAufNeu": {
+        "gegriffen": true
+      },
+      "kastenRect": {
+        "x": 537.4453125,
+        "y": 306,
+        "w": 525.109375,
+        "h": 76.859375
+      },
+      "greifbarVorRueckfrage": 48,
+      "greifbarMitRueckfrage": 49,
+      "greifbarNachSchliessen": 48,
+      "verdecktDurchKasten": [
+        {
+          "zug": "name:anschlag:umtrunk",
+          "text": "Umtrunk beim Wirt−9 Pf− 1 Fass"
+        }
+      ],
+      "schliessKlick": {
+        "gegriffen": true
+      }
+    },
+    {
+      "epoche": 4,
+      "neuKnopfDa": true,
+      "klickAufNeu": {
+        "gegriffen": true
+      },
+      "kastenRect": {
+        "x": 537.4453125,
+        "y": 306,
+        "w": 525.109375,
+        "h": 76.859375
+      },
+      "greifbarVorRueckfrage": 52,
+      "greifbarMitRueckfrage": 54,
+      "greifbarNachSchliessen": 52,
+      "verdecktDurchKasten": [],
+      "schliessKlick": {
+        "gegriffen": true
+      }
+    }
+  ]
+}

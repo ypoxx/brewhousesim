@@ -31,8 +31,12 @@ export function adresse({ epoche = 1, saat = 1350, neu = true, extra = '' }) {
 export async function gehezu(page, url) {
   await page.goto(url, { waitUntil: 'load' });
   await page.waitForSelector('#buehne[data-bereit="1"]', { timeout: 10000 });
-  // kurz warten, damit requestAnimationFrame-Nachtraege (Deckung/Ziel) fertig sind
-  await page.waitForTimeout(120);
+  // WARTEZEIT, siehe eigener Befund unten in dieser Kritik: 120 ms reichten bei
+  // 1366x768 in den Epochen 1600/1884 NICHT — der Text zaehlte 590/598 bzw.
+  // 570/576 je nach Zufall der Fontladung. Mit 400 ms sechsmal hintereinander
+  // dieselbe Zahl. requestAnimationFrame-Nachtraege (Deckung/Ziel) sind auch
+  // erst danach sicher fertig.
+  await page.waitForTimeout(400);
 }
 
 // Klickt einen data-zug-Knopf per ECHTEM Mausereignis auf die Mitte seiner
@@ -56,7 +60,12 @@ export async function klickZug(page, zug) {
   await page.mouse.move(info.cx, info.cy);
   await page.mouse.down();
   await page.mouse.up();
-  await page.waitForTimeout(40);
+  // WARTEZEIT nach dem Klick, siehe eigener Befund unten: 40 ms reichten NICHT,
+  // um den requestAnimationFrame-Nachtrag von zeichneZiel()/zeichneDeckung()
+  // (kern/kopf.js) abzuwarten -- die Zielzeile fehlte dann in der Messung,
+  // obwohl sie tatsaechlich (etwas spaeter) da war. Mit 300 ms dreimal
+  // hintereinander verlaesslich da (diagnose-zielsatz-luecke.mjs).
+  await page.waitForTimeout(300);
   return { gegriffen: true };
 }
 
