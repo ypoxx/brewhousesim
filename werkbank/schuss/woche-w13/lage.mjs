@@ -45,5 +45,5 @@ const lage = await seite.evaluate(() => {
   return { jahr: B.welt.zeit.jahr, woche: B.welt.zeit.woche, bretter: raus, reiter,
     lage: B.lage, fuhre: B.fuhre ? B.fuhre.stand() : null };
 });
-console.log(JSON.stringify({ ...lage, fehler }, null, 1).slice(0, 6000));
+console.log(JSON.stringify({ ...lage, fehler }));
 await browser.close();

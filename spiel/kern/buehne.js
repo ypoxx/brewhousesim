@@ -227,7 +227,15 @@
      Stuecke melden ihn im selben Durchgang neu an (B.welt.meldeZug). Diese
      Datei wird vor kern/kopf.js und vor allen Stuecken geladen, also laeuft
      dieser Horcher als erster — der Wert kann nicht veralten. */
-  B.auf('zeichne', function () { if (B.welt) B.welt.naechsterZug = null; });
+  /* WELLE 13: der ZIELSATZ wird genauso vergessen wie der naechste Zug —
+     sonst stuende nach einer Woche, in der niemand meldet, noch der Satz der
+     Vorwoche da. Eine Zeile, die eine Lage beschriftet, die es nicht mehr
+     gibt, ist genau der Fehler, an dem Welle 12 vier Tage gehangen hat. */
+  B.auf('zeichne', function () {
+    if (!B.welt) return;
+    B.welt.naechsterZug = null;
+    B.welt.zielMeldungen = [];
+  });
 
   /* Alle bedienbaren Zuege auf dem Bildschirm — der Kritiker zaehlt damit,
      ohne Quelltext zu lesen: BRAUHAUS.zuege() in der Konsole. */

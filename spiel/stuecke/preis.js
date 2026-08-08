@@ -97,6 +97,13 @@
     leiter: [],            /* {jahr, kasse, billigst, verhaeltnis}        */
     ersteTafel: true,
     erzwungen: false,
+    /* WELLE 13. `geklemmt` haelt fest, ob DIE STADT die Tafel in ihren
+       Reiter geklappt hat — gelesen einmal je Runde, vor dem Leeren des
+       Fachs, ohne jede Wanduhr (siehe `klemmeLesen`). `gesehen` haelt je
+       Braujahr fest, ob die Tafel wirklich vor dem Spieler lag; daran haengt
+       die Abnahme von R7 und die Frage, ob sie sich den Tisch zurueckholt. */
+    geklemmt: false,
+    gesehen: {},
     meldung: null
   };
 
@@ -2705,69 +2712,103 @@
      GELESEN wird fremdes DOM, geschrieben nie. */
   function sommerLaeuft() { return !!document.querySelector('.fu-sommerblatt'); }
 
-  /* DIE STADT haelt den Rahmen: was beim Laden schon dalag, klappt sie in
-     einen Reiter der Werkbank und schneidet es mit .stadt-zugeklappt weg
-     (stil/stadt.css). Fuer DEN PREIS heisst das: die Tafel steht im DOM und
-     ist trotzdem nicht auf dem Tisch. Auch das nur GELESEN, nie geschrieben.
-     GLAETTUNG WELLE 1: ohne diese Zeile stand beim Laden aller vier Epochen
-     "Michaelitafel schließen" an einem Bildschirm, auf dem keine Tafel lag —
-     der erste Klick des Spielers tat dann scheinbar nichts. */
-  function tafelWeggeklappt() {
+  /* ======================================================================
+     AUFLAGE R6 — DIE AUFSCHRIFT WIRD AUS DEM ZUSTAND GERECHNET, IN DEM DER
+     KNOPF GEZEICHNET WIRD.  UND DIE 420-MS-FRIST IST FORT.
+
+     Gemessen am Stand vor dieser Welle (`werkbank/schuss/tafel-w13/
+     protokoll/vorher-e1.json`, 1350, 308 abgelesene Zustaende, kein einziger
+     Reiterklick): der Knopf `preis:tafel` trug in **33 Zustaenden**
+     „Michaelitafel schliessen", waehrend keine Tafel auf dem Tisch lag — alle
+     30 Wochen des Ladejahres und dazu jeder Jahreswechsel.
+
+     DIE KETTE, UND SIE HAT ZWEI GLIEDER, NICHT EINES:
+
+     (a) `tafelWeggeklappt()` fragte `document.querySelector('.pr-tafel')` —
+         IM SELBEN ZEICHENWEG, in dem `B.leere(fach)` genau dieses Element
+         eine Zeile vorher entfernt hatte. Die Abfrage konnte nichts finden
+         und antwortete darum immer „nicht weggeklappt". Der Griff schrieb
+         „schliessen", die Tafel wurde gezeichnet, DIE STADT schnitt sie
+         240 ms spaeter wieder weg (`stadt-zugeklappt`, `clip-path:
+         inset(50%)`, stil/stadt.css). Stabiler Endzustand: Knopf luegt.
+
+     (b) Die Notbremse dagegen war eine WANDUHRFRIST von 420 ms — genau die
+         Stelle, die `spiel/LIESMICH.md` als Verursacher der Bistabilitaet
+         vom 7. August benennt. Sie hat nie gegriffen, weil ihre erste Zeile
+         `clearTimeout` war: jeder Bildaufbau setzte sie zurueck, und dieses
+         Spiel zeichnet oefter als alle 420 ms. Der Wecker, der die Luege
+         haette finden sollen, hat kein einziges Mal geklingelt.
+
+     WAS AN IHRE STELLE TRITT, OHNE JEDE UHR: die Klemmenlage wird EINMAL
+     JE RUNDE gelesen — VOR `B.leere`, also an dem Element, das die vorige
+     Runde hinterlassen hat und das DIE STADT seither beurteilt hat. Danach
+     steht `Z.geklemmt` fest, und `zeichne` faellt genau EINE Entscheidung,
+     die Griff und Tafel gemeinsam tragen. Ein Knopf und ein Blatt, die aus
+     demselben Wert gezeichnet werden, koennen einander nicht widersprechen.
+
+     Warum das ohne Frist reicht: `kern/runde.js` zeichnet nach, sobald sich
+     die KLEMMENLAGE geaendert hat („Klemmenwache", `KLEMMEN`-Abdruck) — der
+     Rundenschluss zieht also von sich aus genau das nach, wofuer die
+     420-ms-Frist gebaut war. Gemessen wird das in `blick.mjs`.
+     ====================================================================== */
+  function klemmeLesen() {
     var t = document.querySelector('.pr-tafel');
-    return !!(t && t.classList.contains('stadt-zugeklappt'));
+    /* Steht keine Tafel im DOM, hat diese Runde nichts Neues zu sagen: die
+       vorige Entscheidung gilt weiter. Sonst zeichnete jede beliebige Runde
+       die Tafel wieder auf, DIE STADT schnitte sie wieder weg, und das Bild
+       flackerte im Takt des Rahmens. */
+    if (!t) return;
+    var weg = t.classList.contains('stadt-zugeklappt')
+           || t.classList.contains('stadt-verdeckt');
+    Z.geklemmt = weg;
+    /* Sie lag wirklich vor dem Spieler. Das ist die Zahl, die R7 abnimmt —
+       und der Grund, aus dem die Tafel danach nicht mehr von selbst
+       wiederkommt (siehe `michaeliHolen`). */
+    if (!weg) Z.gesehen[Z.tafelJahr] = true;
   }
 
   /* Was WIRKLICH auf dem Tisch liegt — nicht, was Z.offen sich wuenscht.
-     Der Griff muss den sichtbaren Zustand beschriften, sonst steht dort
-     "schließen", waehrend nichts zu sehen ist, und der erste Klick tut
-     scheinbar nichts. */
+     Drei Gruende, aus denen die Tafel nicht liegt, und jeder hat seinen
+     eigenen Satz am Griff:
+       Z.offen        — sie ist weggelegt worden ("Das Jahr beginnen")
+       sommerLaeuft() — der Sommerzettel der FUHRE liegt oben und geht vor
+       Z.geklemmt     — DIE STADT hat sie in ihren Reiter geklappt          */
   function tafelSichtbar() {
-    return Z.offen && (!sommerLaeuft() || Z.erzwungen)
-      && !Z.weggeklappt && !tafelWeggeklappt();
+    return !!Z.offen && (!sommerLaeuft() || Z.erzwungen) && !Z.geklemmt;
   }
 
-  /* DIE STADT klappt erst einen Wimpernschlag nach dem Zeichnen zu (ihr
-     Rahmen sieht im Takt nach). Wer den Griff im selben Zug beschriftet,
-     schreibt deshalb immer noch "schließen". Also einmal nachsehen, nachdem
-     der Rahmen dran war — und nur dann neu zeichnen, wenn sich der SICHTBARE
-     Zustand wirklich geaendert hat. Das laeuft genau einmal je Aufschlag. */
-  var rahmenBlick = null;
-  function seheNachRahmen() {
-    if (rahmenBlick) clearTimeout(rahmenBlick);
-    rahmenBlick = setTimeout(function () {
-      rahmenBlick = null;
-      var weg = tafelWeggeklappt();
-      if (weg !== !!Z.weggeklappt) {
-        Z.weggeklappt = weg;
-        B.sende('zeichne', { grund: 'preis-rahmen' });
-      }
-    }, 420);
-  }
+  /* --- Der Griff, wenn die Tafel zu ist ---------------------------------
 
-  /* --- Der Griff, wenn die Tafel zu ist --------------------------------- */
-  function zeichneGriff(fach) {
+     `sichtbar` wird NICHT hier ausgerechnet, sondern kommt aus derselben
+     Entscheidung, aus der `zeichne` gerade die Tafel zeichnet oder nicht
+     (R6). Zwei getrennte Aufrufe von `tafelSichtbar()` in einer Runde waeren
+     zwei Messungen — und genau daran hing die Luege. */
+  function zeichneGriff(fach, sichtbar) {
     var offenZahl = lebendeAngebote().length;
-    var sichtbar = tafelSichtbar();
+    var michaeliHeute = B.welt.zeit.woche === 1 && Z.offen;
     var wartet = !sichtbar && Z.offen && sommerLaeuft();
     var griff = B.el('div', 'pr-griff');
 
     griff.appendChild(B.knopf({
+      /* Die Aufschrift beschreibt, was in DIESER Runde gezeichnet wird, und
+         nichts sonst. Liegt keine Tafel, steht immer Jahr und Zahl da. */
       text: sichtbar
         ? 'Michaelitafel schließen'
         : 'Michaelitafel ' + Z.tafelJahr + ' · ' + offenZahl + ' Angebote'
-          + (wartet ? ' — liegt bereit' : ''),
+          + (wartet ? ' — liegt bereit' : (michaeliHeute ? ' — heute ist Michaeli' : '')),
       zug: 'preis:tafel',
-      klasse: 'pr-griff-knopf' + (wartet ? ' pr-griff-wartet' : ''),
+      klasse: 'pr-griff-knopf' + (wartet ? ' pr-griff-wartet' : '')
+        + (!sichtbar && michaeliHeute ? ' pr-griff-heute' : ''),
       titel: wartet
         ? 'Der Sommerzettel liegt oben. Die Michaelitafel wartet darunter und schlägt auf, sobald er weg ist — oder sofort, auf diesen Klick.'
         : (B.welt.zeit.woche === 1
             ? 'Heute ist Michaeli. Was hier genommen wird, wird heute genommen.'
             : 'Michaeli ist vorüber. Genommen wird zu Michaeli ' + (Z.tafelJahr + 1) + '.'),
       tu: function () {
-        if (tafelSichtbar()) { Z.offen = false; Z.erzwungen = false; }
+        if (sichtbar) { Z.offen = false; Z.erzwungen = false; }
         /* Ein Klick ist eine Hand am Brett: DIE STADT laesst aufgeschlagen,
            was der Spieler selbst geholt hat. Also die Merkmarke loeschen. */
-        else { Z.offen = true; Z.erzwungen = true; Z.weggeklappt = false; }
+        else { Z.offen = true; Z.erzwungen = true; Z.geklemmt = false; }
         Z.seite = 'tafel';
         B.ton.spiele('preis:blatt');
         B.sende('zeichne', { grund: 'preis-griff' });
@@ -2850,10 +2891,30 @@
 
       richteEin(true);
       michaeli(true);
+      horcheAufDieHand();
     },
 
     jahr: function () {
       michaeli(false);
+    },
+
+    /* ======================================================================
+       AUFLAGE R7, zweiter Teil — EINE TAFEL AUSSERHALB VON MICHAELI IST EINE
+       VITRINE UND WIRD WEGGELEGT.
+
+       `nimm()` beginnt mit `if (B.welt.zeit.woche !== 1) return;`, und
+       `angebotKarte` schaltet den Knopf dann auf „Michaeli ist vorüber" und
+       `aus`. Bis zu dieser Welle blieb `Z.offen` trotzdem das ganze Braujahr
+       stehen: wer die Tafel in Woche 1 nicht weglegte, sah bis Woche 30 ein
+       formatfuellendes Blatt mit fuenf abgeschalteten Knoepfen. Genau das
+       nennt das Urteil eine Vitrine. Michaeli ist ein TAG, nicht ein Jahr —
+       also geht die Tafel mit dem Tag.
+       ====================================================================== */
+    woche: function (d) {
+      if (d && d.woche !== 1 && Z.offen) {
+        Z.offen = false;
+        Z.erzwungen = false;
+      }
     },
 
     epoche: function () {
@@ -2869,11 +2930,18 @@
     },
 
     zeichne: function () {
+      /* ZUERST LESEN, DANN LEEREN, DANN EINMAL ENTSCHEIDEN.
+         Die Reihenfolge dieser drei Zeilen ist der ganze Inhalt von R6:
+         `klemmeLesen` sieht das Element der VORIGEN Runde, ueber das DIE
+         STADT inzwischen befunden hat; `B.leere` raeumt es weg; `sichtbar`
+         faellt einmal und traegt Griff und Tafel gemeinsam. */
+      klemmeLesen();
       var fach = B.ebene('blatt', 'preis');
       B.leere(fach);
 
-      zeichneGriff(fach);
-      if (tafelSichtbar()) { zeichneTafel(fach); seheNachRahmen(); }
+      var sichtbar = tafelSichtbar();
+      zeichneGriff(fach, sichtbar);
+      if (sichtbar) zeichneTafel(fach);
 
       meldeZug();
 
