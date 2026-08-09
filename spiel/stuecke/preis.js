@@ -3084,6 +3084,22 @@
 
     if (istReiter(zug)) {
       if (!tafelSichtbar()) return;
+      /* R15.1 — GEPRUEFT UND BEWUSST NICHT HIER GEBAUT.
+         Naheliegend waere, denselben `festlegungWartet()`-Riegel auch hier
+         einzuziehen — der fremde Reiterklick raeumt die Tafel ja genauso
+         unbedingt weg wie frueher der Griff. GEMESSEN, und deshalb wieder
+         verworfen: mit dem Riegel auch hier blieb `Z.offen` ueber mehrere
+         Wochen wahr, DIE STADT klemmte die lang offene Tafel irgendwann von
+         sich aus (`Z.geklemmt`), und genau dafuer gibt es seit Welle 13 die
+         Rueckholung (`darfZurueck`/`holeZurueck`, VERSUCHE=3): sie faengt
+         WEITER ab und legt die Tafel zurueck auf den Tisch, bis zu drei Mal.
+         Die kundige Hand (`rueckkopplung-r3/linie.mjs`) probiert WEITER an
+         dieser Stelle nur zweimal und blieb in Epoche II bei „kein Zug
+         veraendert die Woche" haengen — kein Absturz, aber genau das
+         Einsperren, das dieses Stueck ausdruecklich nicht tun soll. Der
+         Griff-Riegel allein reicht nicht fuer die Zahl aus Abnahme 1; ein
+         Riegel hier waere der falsche Preis dafuer. Schwelle zurueck an die
+         Aufsicht, siehe Baubericht. */
       Z.offen = false;
       Z.erzwungen = false;
       B.ton.spiele('preis:blatt');

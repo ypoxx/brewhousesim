@@ -77,8 +77,72 @@ Konzernvertrag ist laut Befund in ALLEN sechs Braujahren `hit:true`/
 überhaupt" beantwortet; ein längeres Fenster verschiebt die Antwort nicht,
 nur die Wartezeit.
 
-*(Ergebnis der drei sauberen Läufe wird ergänzt, sobald sie durchgelaufen
-sind — jeder einzeln durch `messfenster.sh`, nacheinander.)*
+**Lauf 1 (Saat 4001, 4 Braujahre, 123 echte Wochen):** `konzern` NICHT
+genommen. `festGenommenGesamt: []`.
+
+**Zweiter Fund, gemessen an diesem Fehlschlag:** der Griff ist nicht der
+einzige Auf-Zu-Schalter der Tafel. `handHorcher()`'s `istReiter()`-Zweig
+(Welle 13, „der fremde Reiterklick") räumt die Tafel bei JEDEM Klick auf
+`stadt:reiter:*` / `stadt:ortsmarken` / `stadt:bauhof` /
+`stadt:alles-zuklappen` ebenso unbedingt weg wie früher der Griff — und
+zwar unabhängig davon, ob der Spieler die Tafel selbst berührt hat. Im
+Protokoll von Lauf 1 erscheint `preis:festlege:konzern` **kein einziges
+Mal** als Kandidat, obwohl der Griff 8-mal im gesperrten Zustand
+(„bleibt offen …") gesehen wurde — die Tafel wurde jedes Mal von einem
+fremden Reiterklick wieder zugeklappt, bevor Phase 2 der Hand (die
+Preisschild-Knöpfe) an der Reihe war.
+
+**Versuch, auch diesen Riegel zu setzen — GEMESSEN UND VERWORFEN.** Derselbe
+`festlegungWartet()`-Riegel auch im `istReiter`-Zweig eingebaut, dann
+`rueckkopplung-r3/linie.mjs` (die kundige Hand) noch einmal über alle vier
+Epochen laufen lassen: **Epoche II blieb bei „kein Zug veraendert die
+Woche" hängen**, `1601/1`, nach 31 von 100 verlangten Wochen. Ursache: hält
+`Z.offen` über mehrere Wochen wahr, klemmt DIE STADT die lang offene Tafel
+irgendwann von sich aus (`Z.geklemmt`) — und dafür gibt es seit Welle 13 die
+Rückholung (`darfZurueck`/`holeZurueck`, `VERSUCHE=3`): sie fängt WEITER ab
+und legt die Tafel bis zu dreimal zurück auf den Tisch, bevor ein
+WEITER-Klick wirklich durchgeht. Die kundige Hand probiert WEITER an dieser
+Stelle nur zweimal und blieb hängen — kein Absturz, aber genau das
+**Einsperren**, das dieser Bau ausdrücklich nicht anrichten soll (siehe
+Auftrag: „Was du nicht tust: … oder den Spieler einsperren"). Wieder
+entfernt; der Kommentar an der Stelle (`preis.js`, `handHorcher`) hält beide
+Zahlen fest, damit es niemand unbesehen noch einmal versucht.
+
+**→ SCHWELLE ZURÜCK AN DIE AUFSICHT.** Der Griff-Riegel allein (R15.1 wörtlich
+gelesen) genügt nicht immer für die verlangte Zahl aus Abnahme 1, weil eine
+ZWEITE, von Welle 13 gebaute Schließroute (der fremde Reiterklick) auf
+demselben Zustand (`Z.offen`) sitzt und vom Auftrag nicht benannt ist. Ein
+Riegel dort kollidiert nachweislich mit der Rückholung derselben Welle 13.
+Das ist keine Zahl, die ich verschieben darf — ob die Reiterroute in den
+Geltungsbereich von R15.1 gehört und, wenn ja, wie sie mit der Rückholung
+zusammengeführt wird, gehört der Aufsicht. Ich baue mit dem alleinigen
+Griff-Riegel weiter und messe ehrlich, wie weit er reicht.
+
+**Mit dem alleinigen Griff-Riegel (kein Reiter-Riegel), drei saubere Läufe,
+je 4 Braujahre, sequenziell durch `messfenster.sh`, Hafen 8942:**
+
+| Lauf | Saat | echte Wochen | `konzern` genommen | Braujahr | Seitenfehler |
+|---|---|---|---|---|---|
+| 1 | 4001 | 123 | **NEIN** | — | 0 |
+| 2 | 4002 | 122 | **JA** | 1970 (Michaeli der ersten Woche) | 0 |
+| 3 | 4003 | 123 | **JA** | 1970 (Michaeli der ersten Woche) | 0 |
+
+**ERGEBNIS ABNAHME 1: 2 von 3 Läufen — die Latte (≥ 2 von 3) ist erreicht.**
+Heute (vor diesem Bau): 0 von 3. In beiden erfolgreichen Läufen fiel die
+Entscheidung bereits am allerersten Michaeli (1970, Woche 1) — sobald der
+Griff die Tafel nicht mehr aus Versehen zuklappt, sieht die suchende Hand
+den Konzernvertrag in Phase 2 (Preisschild-Knöpfe, größter Wert zuerst) und
+nimmt ihn, weil er der größte Einzelwert auf dem Bildschirm ist. Lauf 1
+verfehlt ihn dagegen vollständig (`festGenommenGesamt: []` über alle 123
+Wochen) — nicht weil der Griff ihn zuklappt (der hält seit dem Fix stand,
+8-mal im gesperrten Zustand gesehen), sondern weil der fremde Reiterklick
+(siehe oben) ihn stattdessen zuklappt, bevor Phase 2 an der Reihe ist. Das
+ist genau die verbliebene Lücke aus der zurückgestellten Schwelle: der
+Griff-Riegel reicht für 2 von 3, nicht für 3 von 3.
+
+Alle drei Läufe: 0 Seitenfehler, keine `fehler[]`-Einträge, sauber am
+Zeitlimit (`maxWochen-erreicht`) beendet, kein `hand-festgefahren`.
+Protokolle unter `werkbank/schuss/welle15-griff/protokoll/griff-lauf{1,2,3}(-ergebnis).json(l)`.
 
 ## Tor und Kontrakte
 
@@ -125,6 +189,28 @@ partieneutral, gemessen an vier Epochen. Ein längeres Fenster könnte den
 Fall theoretisch noch zeigen; das wird hier ausdrücklich als Grenze der
 Messung benannt, nicht verschwiegen.
 
+Diese Tabelle stammt aus der Messung mit dem alleinigen Griff-Riegel
+(nach dem Verwerfen des Reiter-Riegels, siehe oben). Zur Gegenprobe: mit dem
+(inzwischen entfernten) Reiter-Riegel lief E2 nach nur 31 von 100 Wochen in
+„kein Zug veraendert die Woche"; nach dem Entfernen lief E2 sofort wieder
+sauber über die vollen 100 Wochen mit demselben Ergebnis wie in der Tabelle
+(Kasse 302–2851, Festlegung 1×, 0 Fehler) — der Revert ist vollständig, es
+blieb nichts von der zweiten Änderung im Code hängen außer dem erklärenden
+Kommentar.
+
 ## Schwellen zurück an die Aufsicht
 
-*(bisher keine)*
+**Eine Schwelle**, ausführlich oben unter Abnahme 1 belegt, hier
+zusammengefasst: Die Tafel hat neben dem Griff eine **zweite** unbedingte
+Schließroute — der fremde Reiterklick (`handHorcher`/`istReiter`, Welle 13).
+Ihn ebenfalls mit `festlegungWartet()` zu sperren wurde gebaut, gemessen und
+wieder verworfen, weil es die kundige Hand in Epoche II in ein Zwei-Klick-
+Einsperren lief (`kein Zug veraendert die Woche`, `1601/1`) — Kollision mit
+der Rückholung derselben Welle 13 (`darfZurueck`/`holeZurueck`,
+`VERSUCHE=3`). Mit dem alleinigen Griff-Riegel steht Abnahme 1 bei **2 von
+3** — die Latte ist erreicht, aber nicht mit Rand: ein vierter oder fünfter
+Lauf könnte unter die Latte fallen, wenn der Reiterklick öfter zuschlägt als
+in diesen drei Läufen. Ob die Reiterroute in den Geltungsbereich von R15.1
+gehört, und wenn ja, wie sie mit der Rückholung zusammengeführt wird, ohne
+das Zwei-Klick-Einsperren zu wiederholen, ist eine Frage, die eine Zahl im
+Brief (die 2-von-3) verschiebt — sie gehört der Aufsicht, nicht mir.
