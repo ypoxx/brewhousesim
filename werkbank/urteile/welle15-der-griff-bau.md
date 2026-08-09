@@ -60,11 +60,25 @@ dem Fix (Hafen 8942).
 
 Erste Beobachtung beim Bau: die suchende Hand ist in Epoche IV (viele
 Knöpfe über alle vier Stücke) deutlich langsamer als in Welle 14 gemessen
-(~4 Wochen/Minute statt ~17) — reine Laufzeitfrage, kein Fehlverhalten. Ein
-Lauf über 180 Wochen braucht dadurch bis zu ~60–75 Minuten; `MAXMIN=90`
-gesetzt, damit kein Lauf am Zeitlimit statt am Wocheninhalt abbricht.
+(~4–7 Wochen/Minute statt ~17) — reine Laufzeitfrage, kein Fehlverhalten.
 
-*(Ergebnis der drei Läufe wird ergänzt, sobald sie durchgelaufen sind.)*
+**`nachher-lauf1` (Saat 4001, 6 Braujahre) verworfen — Nebenlast der
+Aufsicht.** Die Aufsicht hatte parallel eigene Läufe auf Hafen 8951
+gestartet, ohne `messfenster.sh` zu benutzen; rund 12 der 18 gemessenen
+Minuten liefen unter dieser Last. Auf eigenen Hinweis der Aufsicht getötet
+und **nicht** als einer der drei Läufe gewertet, obwohl er `konzern` bereits
+in der ersten Woche (Braujahr 1970, Amtszeit 1) genommen hatte — das ist
+ein Datenpunkt, aber keiner, der unter Nebenlast entstand, zählt nicht.
+
+**Fensterlänge ab jetzt: 4 Braujahre (120 Wochen) statt 6**, auf Rat der
+Aufsicht, um drei saubere Läufe statt eines einzigen zu erhalten. Der
+Konzernvertrag ist laut Befund in ALLEN sechs Braujahren `hit:true`/
+`aus:false` — wird er in 4 genommen, ist die Frage „findet die Hand ihn
+überhaupt" beantwortet; ein längeres Fenster verschiebt die Antwort nicht,
+nur die Wartezeit.
+
+*(Ergebnis der drei sauberen Läufe wird ergänzt, sobald sie durchgelaufen
+sind — jeder einzeln durch `messfenster.sh`, nacheinander.)*
 
 ## Tor und Kontrakte
 
