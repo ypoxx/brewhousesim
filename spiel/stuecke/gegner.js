@@ -2270,7 +2270,7 @@
     if (h.k === 'adler' && ep().hofbild) {
       var bh = B.el('div', 'gg-hofbau');
       var bild = B.el('img', 'gg-hofbild');
-      bild.src = BILD + ep().hofbild + '.png';
+      bild.src = BILD + ep().hofbild + '.webp';
       bild.alt = '';
       bh.appendChild(bild);
       B.orte.setze(bh, s.ort, { anker: 'unten', dx: randDx(s.ort, s.dx || 0, 160), dy: -4.5 });
@@ -2856,7 +2856,7 @@
     var p = B.orte.zwischen(w.von, w.nach, t);
     var el = B.el('div', 'gg-wagen');
     var img = B.el('img', 'gg-wagenbild');
-    img.src = BILD + ep().wagenbild + '.png';
+    img.src = BILD + ep().wagenbild + '.webp';
     img.alt = '';
     el.appendChild(img);
     el.appendChild(B.el('span', 'gg-wagenzettel', 'Adler → ' + w.text));

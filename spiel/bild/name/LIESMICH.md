@@ -8,10 +8,10 @@ Verzeichnis aufzählt, um daraus Bauwerke abzuleiten, überspringt diesen Ordner
 
 | Datei | Epoche | Was es ist | Ort aus `kern/orte.js` |
 |---|---|---|---|
-| `zeiger1.png` | 1350 | **Bierzeiger** — Stange mit Strohkranz und Ankerbrett | `sudhaus` |
-| `schild2.png` | 1600 | **Wirtshausschild** — geschmiedeter Ausleger, Anker auf Grün | `lindenhof` und jede Adresse mit Schild |
-| `saeule3.png` | 1884 | **Litfaßsäule** mit lithografischen Plakaten | `marktplatz` |
-| `tafel4.png` | 1970 | **Werbetafel am Straßenrand**, dazu Bierkästen | `strasse` |
+| `zeiger1.webp` | 1350 | **Bierzeiger** — Stange mit Strohkranz und Ankerbrett | `sudhaus` |
+| `schild2.webp` | 1600 | **Wirtshausschild** — geschmiedeter Ausleger, Anker auf Grün | `lindenhof` und jede Adresse mit Schild |
+| `saeule3.webp` | 1884 | **Litfaßsäule** mit lithografischen Plakaten | `marktplatz` |
+| `tafel4.webp` | 1970 | **Werbetafel am Straßenrand**, dazu Bierkästen | `strasse` |
 
 Jedes Bild erscheint **nur, wenn der zugehörige Träger wirklich läuft**
 (`bildWenn` in `stuecke/name-daten.js`) und **nicht**, solange das Zeichen verdeckt ist.

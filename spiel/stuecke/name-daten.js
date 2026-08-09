@@ -79,7 +79,7 @@ var NAME_DATEN = (function () {
         satz: 'Wer den Zeiger aushängt, hat gesagt, dass Bier da ist. Das ist ein '
           + 'Versprechen vor der ganzen Gasse — und es kostet nichts, es zu brechen. Einmal.',
         ort: 'sudhaus',
-        bild: 'zeiger1.png',
+        bild: 'zeiger1.webp',
         bildWenn: 'zeiger',
         breite: 5.5,
         versatz: { dx: 2, dy: -6 },
@@ -109,7 +109,7 @@ var NAME_DATEN = (function () {
         satz: 'Der Name wohnt jetzt in fremden Häusern. Jedes Schild ist ein Versprechen '
           + 'an einen Wirt, dem man nichts befehlen kann.',
         ort: 'lindenhof',
-        bild: 'schild2.png',
+        bild: 'schild2.webp',
         bildWenn: 'schild',
         breite: 2.4,
         versatz: { dx: -5, dy: 12.5 },
@@ -141,7 +141,7 @@ var NAME_DATEN = (function () {
         satz: 'Zum ersten Mal reist der Name ohne das Fass. Und zum ersten Mal kann ihn '
           + 'jemand nachdrucken.',
         ort: 'marktplatz',
-        bild: 'saeule3.png',
+        bild: 'saeule3.webp',
         bildWenn: 'saeule',
         breite: 1.4,
         versatz: { dx: 2.6, dy: 9.5 },
@@ -172,7 +172,7 @@ var NAME_DATEN = (function () {
           + 'auch der Handel nicht, wenn er auslistet: was er räumt, ist das Regal, '
           + 'die Form steht im Glaswerk.',
         ort: 'strasse',
-        bild: 'tafel4.png',
+        bild: 'tafel4.webp',
         bildWenn: 'bande',
         breite: 4.6,
         versatz: { dx: -2, dy: -8 },
