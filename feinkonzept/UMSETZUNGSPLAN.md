@@ -75,10 +75,23 @@ Schwellen sind **Ratchets**: nie schlechter als der letzte eingefrorene Stand.
 |---|---|
 | Wirtschaft/Preise | Stufe 2 vorher/nachher (1600 zuerst) + Wiederholbarkeit + §4-Abgabendeckel, §17/§18 |
 | UI/Layout | wie Wirtschaft (Knopfboden-Lehre: Δρ 0,811 durch Layout!) + Flächenhaushalt + `B.zuege()`-Zählung vorher/nachher |
-| Assets (bild/ton) | Gewichtsveto beidseitig gemessen; neue Fläche nur gegen abgebaute |
+| Assets (bild/ton) | Gewichtsveto beidseitig gemessen; neue Fläche nur gegen abgebaute; **dazu der Kurzlauf-Vergleich über alle Epochen** ¹ |
 | Spielstand | Wiederkehr-Abnahme „ziffernweise gleich" (GEGNER-Vorbild `abweichung []`) + `?neu=1`-Probe + Kurzlauf-Prüfsumme |
 | Bogen/Erbstücke | alles Obige + „Bogen ohne Erbstücke == heutiges Szenario" (Byte-Vergleich) |
 | Texte/Protokolle | Kontrakttests (T0.6) — jede Protokoll-/Chronikzeile ist API |
+
+¹ **Nachgezogen am 9. August 2026, nach T0.4.** Hier stand nur das
+Gewichtsveto — weil niemand für möglich hielt, dass ein Bildtausch die Partie
+bewegt. Beim Tausch PNG→WebP wich 1884 im Kurzlauf ab, und zwölf Läufe waren
+nötig, um die neun Bilder zu entlasten (die Abweichung kam von zwei Messungen,
+die nebeneinander liefen; die Partie ist mit und ohne WebP ziffernweise
+dieselbe, `f017dc12` zwölfmal).
+
+**Der Verdacht war trotzdem berechtigt, und ohne den Kurzlauf hätte ihn
+niemand ausräumen können.** Das Spiel ist layoutempfindlich — der Knopfboden
+hat ρ um 0,811 verschoben, ohne eine Zahl anzufassen —, und ein Bild, das
+früher fertig ist, ist eine Layoutänderung. **Ein Asset-Paket ohne
+Partievergleich ist darum ungeprüft, auch wenn es leichter wird.**
 
 ---
 

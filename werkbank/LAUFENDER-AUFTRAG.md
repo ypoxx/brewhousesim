@@ -23,6 +23,44 @@
 > (das ist T0.1). Die Detailberichte liest die Aufsicht abschnittsweise bei
 > Bedarf; **Builder lesen sie nie** (Tokenregel 2).
 
+> ## PHASE 0 IST DURCH — 9. August 2026
+>
+> Die Welle-13-Abnahme ist abgeschlossen und quittiert
+> ([`urteile/welle13-abnahme-aufsicht.md`](urteile/welle13-abnahme-aufsicht.md)),
+> die zehn P0-Tickets sind erledigt bis auf eine bewusst zurückgestellte Probe.
+> **Welle 14 misst seither** — Brief mit vordatiertem Maß:
+> [`../gauntlet/WELLE-14.md`](../gauntlet/WELLE-14.md).
+>
+> | Ticket | Stand |
+> |---|---|
+> | T0.1 Konzeptmaterial · T0.3 Release-Schnitt · T0.5 `?neu=1` · T0.6 Kontrakttests · T0.7 Kurz-ρ-Eichung · T0.8 Nachtmessung · T0.9 Ballast · T0.10 Kleinfehler | durch |
+> | T0.2 Welle-13-Abnahme | **abgenommen**; R13 gerissen und ab W16 ersetzt |
+> | T0.4 Gewicht | **abgenommen**: 3,63 MB Bilder → 0,65 MB, 1600 von 7,94 auf 7,02 MB |
+> | Vorziehregel-Probe (Schritt 6) | **zurückgestellt**, Skript liegt fertig; die Regel bleibt bis dahin in Kraft |
+>
+> **Die drei Zahlen, auf denen alles Weitere steht:** fünfzehn Läufe zu 400
+> Wochen mit je einer Prüfsumme pro Epoche · Neuladen ziffernweise in 24 von 24
+> Feldern · 0 von 15 Läufen über ρ 0,700.
+>
+> **Zwei Epochen haben jetzt halbe Reserve, nicht mehr eine:** 1600 (+0,538,
+> Reserve 0,162) und **1884 (+0,495, Reserve 0,205)**. Wer dort etwas anfasst,
+> misst zuerst dort.
+>
+> > ### DREIMAL DIESELBE FALLE AN EINEM TAG — und sie steht seit dem 2. August in diesem Blatt
+> >
+> > Ein `pkill -f <muster>` trifft auch die eigene Shell, deren Kommandozeile
+> > das Muster enthält. Einmal hat es meine Warte-Shell erschlagen (Exit 144),
+> > zweimal ließ es einen Warter ewig auf sich selbst warten. **Die
+> > Klammerschreibweise trifft sich nicht selbst:** `pgrep -f "[l]inie"`.
+> >
+> > Und die teurere Schwester davon: **eine Zahl, die unter Nebenlast entstand,
+> > ist keine Zahl.** Beim Bildtausch wich 1884 ab; ich stand kurz davor, neun
+> > unschuldige Bilder zurückzudrehen. Die Ursache war, dass ein abgebrochenes
+> > Kommando seine Kindprozesse überlebt hatte und mein Nachstart einen zweiten
+> > Lauf danebensetzte. Zwölf Läufe später: eine einzige Prüfsumme über beide
+> > Stände. **Wer eine Abweichung findet, fragt zuerst, was sonst noch lief.**
+> > Dafür liegt `messfenster.sh` seit dem 4. August im Repo.
+
 > ### ZWEI AUFSICHTEN AUF EINEM ZWEIG — bemerkt am 8. August, 16:24 UTC
 >
 > Auf `claude/brauhaus-imperium-sim-163s85` erschien ein Commit, der nicht aus

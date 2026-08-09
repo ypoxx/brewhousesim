@@ -1,6 +1,6 @@
 {
- "stand": "2026-08-08T16:24:36+00:00",
- "phase": "Phase 0 des Umsetzungsplans laeuft. Die Welle-13-Abnahme (T0.2) steht bei 12 von 15 Laeufen: 1350 sechsfach, 1600 und 1884 je dreifach, je Epoche EINE Pruefsumme, und die Latte 2 haelt in allen drei Schnitten — 1350 -0,259/-0,236/-0,389, 1600 +0,406/+0,489/+0,538, 1884 +0,343/+0,484/+0,495. Die drei 1970er Laeufe laufen gerade; danach die Gegenmessung und erst dann die vier blinden Kritiker. Nebenher sind vier Tickets durch: der Release-Schnitt trennt den Deploy vom Repo (375 MB auf 24 MB, kein Werkbank-Urteil mehr oeffentlich), der Kurzlauf ist geeicht (100 Wochen genuegen als rho-Waechter — beide bekannten Aenderungen, die rho bewegt haben, liefen in Woche 32 und 61 aus dem Ruder; er gilt als Veto, nicht als Freispruch), die Nachtmessung faehrt die Latte 2 kuenftig ohne Modell daneben, und der Repo-Ballast ist aus dem Deploy.",
+ "stand": "2026-08-09T09:12:31+00:00",
+ "phase": "Phase 0 ist durch, Welle 14 misst. Die Welle-13-Abnahme ist quittiert: fuenfzehn Laeufe zu 400 Wochen mit je einer Pruefsumme pro Epoche, 0 von 15 ueber rho 0,700, das Neuladen stimmt ziffernweise in 24 von 24 Feldern. Der luegende Knopf ist von 97 auf 0 von 100 Wochen, die Wochen ohne bezahlbaren Gegenzug von 68 auf 0/0/1/0. R13 dagegen ist gerissen — der haeufigste Knopf steht beim blinden Kritiker bei 47 bis 64 Prozent, weil ein Klick auf den Fuhrplan die Woche selbst schliesst; die Krankheit ist nicht geheilt, sondern umbenannt, und die Auflage wird ab Welle 16 durch die Wahlquote ersetzt. Von den zehn P0-Tickets sind neun durch: der Deploy traegt 24 statt 375 MB, die Bilder 0,65 statt 3,63 MB (1600 von 7,94 auf 7,02 MB unter dem 8-MB-Veto), vier stille Kopplungen haben Kontrakttests, die jeder einmal rot waren, und der Kurzlauf ist geeicht. Der Befund, der Phase 1 traegt: die Messhand spielt 1970 vierhundert Wochen ohne je in Not zu geraten, der blinde Kritiker war nach 128 Wochen ruiniert. Die Wirtschaft ist nicht zu arm, sie ist unverzeihlich.",
  "latte": "BILD: Playwright-Aufnahme 2752x1536 gegen zielbild/0X-JAHR.jpg, blind, vier Epochen derselbe Ort. SPIEL: Kritiker zählt am Bildschirm Preisschilder nebeneinander, unwiderrufliche Festlegungen, Züge des Gegners ohne ihn — plus Barschaft gegen Preis des nächsten sinnvollen Zuges. Ziel dieser Welle, hart: |rho| unter 0,7 in allen vier Epochen und höchstens ein Jahr von sechs unter 1x. TON: 30 Sekunden blind, Epoche und Vorgang benannt. NEU als vierte Prüfung: erreichbar muss jeder aktive Zug sein — werkbank/schuss/eichung/erreichbar.mjs. Sperrliste design/PRUEFUNG.md disqualifiziert.",
  "zahlen": {
   "Epochen": "4",
@@ -143,10 +143,6 @@
   }
  ],
  "chronik": [
-  {
-   "zeit": "2026-08-01T21:35:49+00:00",
-   "text": "DIE EICHUNG, der zweite Befund: DER MICHAELITAG IST NUR BEZAHLBAR, SOLANGE MAN IHN NICHT BENUTZT. Zweiter Lauf, gleiche Partie, einziger Unterschied — an jedem Michaeli wird das billigste anklickbare Angebot wirklich genommen: E1 3/2/0/0/0, E2 3/2/0/0/0, E3 4/4/2/0/0, E4 3/0/3/0/0. Ab dem dritten Braujahr steht in E1, E2 und E3 'HEUTE NICHT — Die Kasse reicht fuer keines dieser Angebote', in E1 1353 bei Kasse 0 Pf. Beleg: /tmp/eichung/mich-e1-1353.png. Ein Tag, der nur dem standhaelt, der nichts kauft, ist nicht geeicht."
-  },
   {
    "zeit": "2026-08-01T21:35:57+00:00",
    "text": "DIE EICHUNG, der dritte Befund: DIE KENNZAHL DES SPIELS MISST IN ALLEN VIER EPOCHEN GEGEN BEIWERK. Unten rechts stand in 300 von 300 Wochen je Epoche 'naechster Zug: Umtrunk beim Wirt 9 Pf' (E1), 'Freitrunk zur Kirchweih 18 fl' (E2), 'Annonce im Wochenblatt' (E3), 'Bierdeckel drucken lassen' (E4) — alle vier von DEM NAMEN, keiner bewegt Rohstoff, Fass, Adresse, Bau oder Bindung. ZUSTAENDIGKEIT 18 ist entschieden, aber nicht gebaut: fuhre.js uebergibt bereits ein drittes Argument (art), kern/welt.js meldeZug(was, preis) nimmt es nicht entgegen. Die aufgeschriebene Zahl liegt dadurch um das Zwei- bis Sechsfache ueber der gemessenen."
@@ -942,6 +938,10 @@
   {
    "zeit": "2026-08-08T16:24:36+00:00",
    "text": "Abnahme Welle 13, dreizehn von fuenfzehn Laeufen, 0 von 13 ueber 0,700: 1350 sechsmal und 1884 dreimal je eine Pruefsumme, 1600 dreimal eine. 1970 gibt mit -0,112 / -0,236 / -0,304 und Kasse 320 bis 95857 ziffernweise die Zahlen der Welle 12 zurueck. Drei der vier Epochen sind unveraendert; nur 1884 ist gewandert."
+  },
+  {
+   "zeit": "2026-08-09T09:12:31+00:00",
+   "text": "Phase 0 ist durch, Welle 14 misst. Die Welle-13-Abnahme ist quittiert: fuenfzehn Laeufe zu 400 Wochen mit je einer Pruefsumme pro Epoche, 0 von 15 ueber rho 0,700, das Neuladen stimmt ziffernweise in 24 von 24 Feldern. Der luegende Knopf ist von 97 auf 0 von 100 Wochen, die Wochen ohne bezahlbaren Gegenzug von 68 auf 0/0/1/0. R13 dagegen ist gerissen — der haeufigste Knopf steht beim blinden Kritiker bei 47 bis 64 Prozent, weil ein Klick auf den Fuhrplan die Woche selbst schliesst; die Krankheit ist nicht geheilt, sondern umbenannt, und die Auflage wird ab Welle 16 durch die Wahlquote ersetzt. Von den zehn P0-Tickets sind neun durch: der Deploy traegt 24 statt 375 MB, die Bilder 0,65 statt 3,63 MB (1600 von 7,94 auf 7,02 MB unter dem 8-MB-Veto), vier stille Kopplungen haben Kontrakttests, die jeder einmal rot waren, und der Kurzlauf ist geeicht. Der Befund, der Phase 1 traegt: die Messhand spielt 1970 vierhundert Wochen ohne je in Not zu geraten, der blinde Kritiker war nach 128 Wochen ruiniert. Die Wirtschaft ist nicht zu arm, sie ist unverzeihlich."
   }
  ]
 }
