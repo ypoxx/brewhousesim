@@ -1,0 +1,1165 @@
+{
+ "epoche": 3,
+ "saat": "1350",
+ "lauf": "e3-sammel-keine",
+ "festlegeGesucht": "keine",
+ "minuten": 5.3,
+ "aussenrunden": 35,
+ "echteWochenGesamt": 134,
+ "jahrStart": 1884,
+ "jahrEnde": 1889,
+ "wocheEnde": 2,
+ "braujahre": 6,
+ "kasseEnde": 207,
+ "endgrund": null,
+ "abbruch": {
+  "grund": "maxWochen-erreicht",
+  "maxWochen": 130
+ },
+ "festlegungGenommen": null,
+ "klicksNav": 419,
+ "klicksPreis": 117,
+ "klicksWeiter": 35,
+ "fehler": [],
+ "seitenfehlerZahl": 0,
+ "tafelBeobachtungen": [
+  {
+   "jahr": 1884,
+   "woche": 1,
+   "kasse": 14250,
+   "anzahl": 3,
+   "billigsteKosten": 9200,
+   "kasseDurchBilligste": 1.548913043478261,
+   "karten": [
+    {
+     "zug": "preis:festlege:aktien",
+     "text": "Festlegen — Geld herein+11.000 M",
+     "preis": 11000,
+     "aus": false
+    },
+    {
+     "zug": "preis:festlege:bahnvertrag",
+     "text": "Festlegen−32.000 M",
+     "preis": -32000,
+     "aus": true
+    },
+    {
+     "zug": "preis:festlege:konvention",
+     "text": "Festlegen−9.200 M",
+     "preis": -9200,
+     "aus": false
+    }
+   ]
+  },
+  {
+   "jahr": 1885,
+   "woche": 1,
+   "kasse": 153,
+   "anzahl": 4,
+   "billigsteKosten": 7500,
+   "kasseDurchBilligste": 0.0204,
+   "karten": [
+    {
+     "zug": "preis:festlege:aktien",
+     "text": "Festlegen — Geld herein+8.300 M",
+     "preis": 8300,
+     "aus": false
+    },
+    {
+     "zug": "preis:festlege:bahnvertrag",
+     "text": "Festlegen−33.000 M",
+     "preis": -33000,
+     "aus": true
+    },
+    {
+     "zug": "preis:festlege:konvention",
+     "text": "Festlegen−9.700 M",
+     "preis": -9700,
+     "aus": true
+    },
+    {
+     "zug": "preis:festlege:krankenkasse",
+     "text": "Festlegen−7.500 M",
+     "preis": -7500,
+     "aus": true
+    }
+   ]
+  },
+  {
+   "jahr": 1886,
+   "woche": 1,
+   "kasse": 1326,
+   "anzahl": 4,
+   "billigsteKosten": 7800,
+   "kasseDurchBilligste": 0.17,
+   "karten": [
+    {
+     "zug": "preis:festlege:aktien",
+     "text": "Festlegen — Geld herein+6.400 M",
+     "preis": 6400,
+     "aus": false
+    },
+    {
+     "zug": "preis:festlege:bahnvertrag",
+     "text": "Festlegen−35.000 M",
+     "preis": -35000,
+     "aus": true
+    },
+    {
+     "zug": "preis:festlege:konvention",
+     "text": "Festlegen−10.000 M",
+     "preis": -10000,
+     "aus": true
+    },
+    {
+     "zug": "preis:festlege:krankenkasse",
+     "text": "Festlegen−7.800 M",
+     "preis": -7800,
+     "aus": true
+    }
+   ]
+  },
+  {
+   "jahr": 1887,
+   "woche": 1,
+   "kasse": 230,
+   "anzahl": 4,
+   "billigsteKosten": 8200,
+   "kasseDurchBilligste": 0.02804878048780488,
+   "karten": [
+    {
+     "zug": "preis:festlege:aktien",
+     "text": "Festlegen — Geld herein+5.200 M",
+     "preis": 5200,
+     "aus": false
+    },
+    {
+     "zug": "preis:festlege:bahnvertrag",
+     "text": "Festlegen−36.000 M",
+     "preis": -36000,
+     "aus": true
+    },
+    {
+     "zug": "preis:festlege:konvention",
+     "text": "Festlegen−11.000 M",
+     "preis": -11000,
+     "aus": true
+    },
+    {
+     "zug": "preis:festlege:krankenkasse",
+     "text": "Festlegen−8.200 M",
+     "preis": -8200,
+     "aus": true
+    }
+   ]
+  },
+  {
+   "jahr": 1888,
+   "woche": 1,
+   "kasse": 230,
+   "anzahl": 4,
+   "billigsteKosten": 8600,
+   "kasseDurchBilligste": 0.026744186046511628,
+   "karten": [
+    {
+     "zug": "preis:festlege:aktien",
+     "text": "Festlegen — Geld herein+4.300 M",
+     "preis": 4300,
+     "aus": false
+    },
+    {
+     "zug": "preis:festlege:bahnvertrag",
+     "text": "Festlegen−38.000 M",
+     "preis": -38000,
+     "aus": true
+    },
+    {
+     "zug": "preis:festlege:konvention",
+     "text": "Festlegen−11.000 M",
+     "preis": -11000,
+     "aus": true
+    },
+    {
+     "zug": "preis:festlege:krankenkasse",
+     "text": "Festlegen−8.600 M",
+     "preis": -8600,
+     "aus": true
+    }
+   ]
+  },
+  {
+   "jahr": 1889,
+   "woche": 1,
+   "kasse": 230,
+   "anzahl": 4,
+   "billigsteKosten": 9000,
+   "kasseDurchBilligste": 0.025555555555555557,
+   "karten": [
+    {
+     "zug": "preis:festlege:aktien",
+     "text": "Festlegen — Geld herein+5.000 M",
+     "preis": 5000,
+     "aus": false
+    },
+    {
+     "zug": "preis:festlege:bahnvertrag",
+     "text": "Festlegen−40.000 M",
+     "preis": -40000,
+     "aus": true
+    },
+    {
+     "zug": "preis:festlege:konvention",
+     "text": "Festlegen−12.000 M",
+     "preis": -12000,
+     "aus": true
+    },
+    {
+     "zug": "preis:festlege:krankenkasse",
+     "text": "Festlegen−9.000 M",
+     "preis": -9000,
+     "aus": true
+    }
+   ]
+  }
+ ],
+ "wochenReihe": [
+  {
+   "n": 1,
+   "jahr": 1884,
+   "woche": 1,
+   "kasse": 14250,
+   "deckung": 8.352872215709262
+  },
+  {
+   "n": 2,
+   "jahr": 1884,
+   "woche": 2,
+   "kasse": 13664,
+   "deckung": 8.009378663540446
+  },
+  {
+   "n": 3,
+   "jahr": 1884,
+   "woche": 3,
+   "kasse": 13207,
+   "deckung": 7.741500586166471
+  },
+  {
+   "n": 4,
+   "jahr": 1884,
+   "woche": 4,
+   "kasse": 13536,
+   "deckung": 7.934349355216882
+  },
+  {
+   "n": 5,
+   "jahr": 1884,
+   "woche": 5,
+   "kasse": 13464,
+   "deckung": 7.892145369284877
+  },
+  {
+   "n": 6,
+   "jahr": 1884,
+   "woche": 6,
+   "kasse": 13840,
+   "deckung": 4.290142591444513
+  },
+  {
+   "n": 7,
+   "jahr": 1884,
+   "woche": 7,
+   "kasse": 13816,
+   "deckung": 4.282703037817731
+  },
+  {
+   "n": 8,
+   "jahr": 1884,
+   "woche": 13,
+   "kasse": 14433,
+   "deckung": 9.545634920634921
+  },
+  {
+   "n": 9,
+   "jahr": 1884,
+   "woche": 14,
+   "kasse": 4304,
+   "deckung": 1.0155733836715433
+  },
+  {
+   "n": 10,
+   "jahr": 1884,
+   "woche": 15,
+   "kasse": 4445,
+   "deckung": 0.8767258382642998
+  },
+  {
+   "n": 11,
+   "jahr": 1884,
+   "woche": 16,
+   "kasse": 4643,
+   "deckung": 0.9157790927021696
+  },
+  {
+   "n": 12,
+   "jahr": 1884,
+   "woche": 17,
+   "kasse": 4634,
+   "deckung": 0.9140039447731756
+  },
+  {
+   "n": 13,
+   "jahr": 1884,
+   "woche": 18,
+   "kasse": 4550,
+   "deckung": 0.8974358974358975
+  },
+  {
+   "n": 14,
+   "jahr": 1884,
+   "woche": 19,
+   "kasse": 4537,
+   "deckung": 0.8948717948717949
+  },
+  {
+   "n": 15,
+   "jahr": 1884,
+   "woche": 20,
+   "kasse": 4523,
+   "deckung": 0.8921104536489152
+  },
+  {
+   "n": 16,
+   "jahr": 1884,
+   "woche": 21,
+   "kasse": 4499,
+   "deckung": 0.8873767258382643
+  },
+  {
+   "n": 17,
+   "jahr": 1884,
+   "woche": 22,
+   "kasse": 4475,
+   "deckung": 1.534636488340192
+  },
+  {
+   "n": 18,
+   "jahr": 1884,
+   "woche": 23,
+   "kasse": 4259,
+   "deckung": 2.7266325224071704
+  },
+  {
+   "n": 19,
+   "jahr": 1884,
+   "woche": 24,
+   "kasse": 4235,
+   "deckung": 2.711267605633803
+  },
+  {
+   "n": 20,
+   "jahr": 1884,
+   "woche": 25,
+   "kasse": 4211,
+   "deckung": 2.695902688860435
+  },
+  {
+   "n": 21,
+   "jahr": 1884,
+   "woche": 30,
+   "kasse": 4099,
+   "deckung": 3.253174603174603
+  },
+  {
+   "n": 22,
+   "jahr": 1885,
+   "woche": 1,
+   "kasse": 153,
+   "deckung": 0.12142857142857143
+  },
+  {
+   "n": 23,
+   "jahr": 1885,
+   "woche": 2,
+   "kasse": 129,
+   "deckung": 0.04128
+  },
+  {
+   "n": 24,
+   "jahr": 1885,
+   "woche": 3,
+   "kasse": 9,
+   "deckung": 0.00288
+  },
+  {
+   "n": 25,
+   "jahr": 1885,
+   "woche": 4,
+   "kasse": 0,
+   "deckung": 0
+  },
+  {
+   "n": 26,
+   "jahr": 1885,
+   "woche": 5,
+   "kasse": 0,
+   "deckung": 0
+  },
+  {
+   "n": 27,
+   "jahr": 1885,
+   "woche": 6,
+   "kasse": 0,
+   "deckung": 0
+  },
+  {
+   "n": 28,
+   "jahr": 1885,
+   "woche": 7,
+   "kasse": 0,
+   "deckung": 0
+  },
+  {
+   "n": 29,
+   "jahr": 1885,
+   "woche": 8,
+   "kasse": 0,
+   "deckung": 0
+  },
+  {
+   "n": 30,
+   "jahr": 1885,
+   "woche": 9,
+   "kasse": 0,
+   "deckung": 0
+  },
+  {
+   "n": 31,
+   "jahr": 1885,
+   "woche": 15,
+   "kasse": 0,
+   "deckung": 0
+  },
+  {
+   "n": 32,
+   "jahr": 1885,
+   "woche": 16,
+   "kasse": 0,
+   "deckung": 0
+  },
+  {
+   "n": 33,
+   "jahr": 1885,
+   "woche": 17,
+   "kasse": 0,
+   "deckung": 0
+  },
+  {
+   "n": 34,
+   "jahr": 1885,
+   "woche": 18,
+   "kasse": 0,
+   "deckung": 0
+  },
+  {
+   "n": 35,
+   "jahr": 1885,
+   "woche": 19,
+   "kasse": 0,
+   "deckung": 0
+  },
+  {
+   "n": 36,
+   "jahr": 1885,
+   "woche": 20,
+   "kasse": 0,
+   "deckung": 0
+  },
+  {
+   "n": 37,
+   "jahr": 1885,
+   "woche": 21,
+   "kasse": 0,
+   "deckung": 0
+  },
+  {
+   "n": 38,
+   "jahr": 1885,
+   "woche": 22,
+   "kasse": 0,
+   "deckung": 0
+  },
+  {
+   "n": 39,
+   "jahr": 1885,
+   "woche": 23,
+   "kasse": 0,
+   "deckung": 0
+  },
+  {
+   "n": 40,
+   "jahr": 1885,
+   "woche": 24,
+   "kasse": 3,
+   "deckung": 0.0010630758327427356
+  },
+  {
+   "n": 41,
+   "jahr": 1885,
+   "woche": 25,
+   "kasse": 3,
+   "deckung": 0.0010630758327427356
+  },
+  {
+   "n": 42,
+   "jahr": 1885,
+   "woche": 30,
+   "kasse": 9,
+   "deckung": 0.0031892274982282067
+  },
+  {
+   "n": 43,
+   "jahr": 1886,
+   "woche": 1,
+   "kasse": 1326,
+   "deckung": 0.5105891413169041
+  },
+  {
+   "n": 44,
+   "jahr": 1886,
+   "woche": 2,
+   "kasse": 1302,
+   "deckung": 0.5013477088948787
+  },
+  {
+   "n": 45,
+   "jahr": 1886,
+   "woche": 3,
+   "kasse": 1126,
+   "deckung": 0.43357720446669235
+  },
+  {
+   "n": 46,
+   "jahr": 1886,
+   "woche": 4,
+   "kasse": 910,
+   "deckung": 0.3504043126684636
+  },
+  {
+   "n": 47,
+   "jahr": 1886,
+   "woche": 5,
+   "kasse": 886,
+   "deckung": 0.3411628802464382
+  },
+  {
+   "n": 48,
+   "jahr": 1886,
+   "woche": 6,
+   "kasse": 759,
+   "deckung": 0.20686835650040883
+  },
+  {
+   "n": 49,
+   "jahr": 1886,
+   "woche": 7,
+   "kasse": 629,
+   "deckung": 0.17143635868083948
+  },
+  {
+   "n": 50,
+   "jahr": 1886,
+   "woche": 8,
+   "kasse": 452,
+   "deckung": 0.12319433088034887
+  },
+  {
+   "n": 51,
+   "jahr": 1886,
+   "woche": 9,
+   "kasse": 326,
+   "deckung": 0.13279022403258656
+  },
+  {
+   "n": 52,
+   "jahr": 1886,
+   "woche": 10,
+   "kasse": 149,
+   "deckung": 0.06069246435845214
+  },
+  {
+   "n": 53,
+   "jahr": 1886,
+   "woche": 11,
+   "kasse": 0,
+   "deckung": 0
+  },
+  {
+   "n": 54,
+   "jahr": 1886,
+   "woche": 12,
+   "kasse": 0,
+   "deckung": 0
+  },
+  {
+   "n": 55,
+   "jahr": 1886,
+   "woche": 13,
+   "kasse": 0,
+   "deckung": 0
+  },
+  {
+   "n": 56,
+   "jahr": 1886,
+   "woche": 14,
+   "kasse": 0,
+   "deckung": 0
+  },
+  {
+   "n": 57,
+   "jahr": 1886,
+   "woche": 15,
+   "kasse": 0,
+   "deckung": 0
+  },
+  {
+   "n": 58,
+   "jahr": 1886,
+   "woche": 16,
+   "kasse": 0,
+   "deckung": 0
+  },
+  {
+   "n": 59,
+   "jahr": 1886,
+   "woche": 17,
+   "kasse": 0,
+   "deckung": 0
+  },
+  {
+   "n": 60,
+   "jahr": 1886,
+   "woche": 18,
+   "kasse": 0,
+   "deckung": 0
+  },
+  {
+   "n": 61,
+   "jahr": 1886,
+   "woche": 19,
+   "kasse": 0,
+   "deckung": 0
+  },
+  {
+   "n": 62,
+   "jahr": 1886,
+   "woche": 20,
+   "kasse": 0,
+   "deckung": 0
+  },
+  {
+   "n": 63,
+   "jahr": 1886,
+   "woche": 21,
+   "kasse": 0,
+   "deckung": 0
+  },
+  {
+   "n": 64,
+   "jahr": 1886,
+   "woche": 22,
+   "kasse": 0,
+   "deckung": 0
+  },
+  {
+   "n": 65,
+   "jahr": 1886,
+   "woche": 23,
+   "kasse": 0,
+   "deckung": 0
+  },
+  {
+   "n": 66,
+   "jahr": 1886,
+   "woche": 24,
+   "kasse": 0,
+   "deckung": 0
+  },
+  {
+   "n": 67,
+   "jahr": 1886,
+   "woche": 25,
+   "kasse": 0,
+   "deckung": 0
+  },
+  {
+   "n": 68,
+   "jahr": 1886,
+   "woche": 26,
+   "kasse": 0,
+   "deckung": 0
+  },
+  {
+   "n": 69,
+   "jahr": 1886,
+   "woche": 27,
+   "kasse": 7,
+   "deckung": 0.0019078768056691197
+  },
+  {
+   "n": 70,
+   "jahr": 1886,
+   "woche": 28,
+   "kasse": 71,
+   "deckung": 0.019351321886072498
+  },
+  {
+   "n": 71,
+   "jahr": 1886,
+   "woche": 29,
+   "kasse": 105,
+   "deckung": 0.028618152085036794
+  },
+  {
+   "n": 72,
+   "jahr": 1886,
+   "woche": 30,
+   "kasse": 32,
+   "deckung": 0.00872172254020169
+  },
+  {
+   "n": 73,
+   "jahr": 1887,
+   "woche": 1,
+   "kasse": 230,
+   "deckung": 0.06812796208530805
+  },
+  {
+   "n": 74,
+   "jahr": 1887,
+   "woche": 2,
+   "kasse": 206,
+   "deckung": 0.06101895734597156
+  },
+  {
+   "n": 75,
+   "jahr": 1887,
+   "woche": 3,
+   "kasse": 161,
+   "deckung": 0.04768957345971564
+  },
+  {
+   "n": 76,
+   "jahr": 1887,
+   "woche": 4,
+   "kasse": 75,
+   "deckung": 0.02221563981042654
+  },
+  {
+   "n": 77,
+   "jahr": 1887,
+   "woche": 5,
+   "kasse": 51,
+   "deckung": 0.015106635071090047
+  },
+  {
+   "n": 78,
+   "jahr": 1887,
+   "woche": 6,
+   "kasse": 27,
+   "deckung": 0.007997630331753554
+  },
+  {
+   "n": 79,
+   "jahr": 1887,
+   "woche": 7,
+   "kasse": 8,
+   "deckung": 0.002369668246445498
+  },
+  {
+   "n": 80,
+   "jahr": 1887,
+   "woche": 8,
+   "kasse": 0,
+   "deckung": 0
+  },
+  {
+   "n": 81,
+   "jahr": 1887,
+   "woche": 9,
+   "kasse": 0,
+   "deckung": 0
+  },
+  {
+   "n": 82,
+   "jahr": 1887,
+   "woche": 10,
+   "kasse": 0,
+   "deckung": 0
+  },
+  {
+   "n": 83,
+   "jahr": 1887,
+   "woche": 11,
+   "kasse": 0,
+   "deckung": 0
+  },
+  {
+   "n": 84,
+   "jahr": 1887,
+   "woche": 12,
+   "kasse": 0,
+   "deckung": 0
+  },
+  {
+   "n": 85,
+   "jahr": 1887,
+   "woche": 13,
+   "kasse": 0,
+   "deckung": 0
+  },
+  {
+   "n": 86,
+   "jahr": 1887,
+   "woche": 14,
+   "kasse": 0,
+   "deckung": 0
+  },
+  {
+   "n": 87,
+   "jahr": 1887,
+   "woche": 15,
+   "kasse": 0,
+   "deckung": 0
+  },
+  {
+   "n": 88,
+   "jahr": 1887,
+   "woche": 16,
+   "kasse": 0,
+   "deckung": 0
+  },
+  {
+   "n": 89,
+   "jahr": 1887,
+   "woche": 17,
+   "kasse": 0,
+   "deckung": 0
+  },
+  {
+   "n": 90,
+   "jahr": 1887,
+   "woche": 18,
+   "kasse": 0,
+   "deckung": 0
+  },
+  {
+   "n": 91,
+   "jahr": 1887,
+   "woche": 19,
+   "kasse": 0,
+   "deckung": 0
+  },
+  {
+   "n": 92,
+   "jahr": 1887,
+   "woche": 20,
+   "kasse": 0,
+   "deckung": 0
+  },
+  {
+   "n": 93,
+   "jahr": 1887,
+   "woche": 21,
+   "kasse": 0,
+   "deckung": 0
+  },
+  {
+   "n": 94,
+   "jahr": 1887,
+   "woche": 22,
+   "kasse": 0,
+   "deckung": 0
+  },
+  {
+   "n": 95,
+   "jahr": 1887,
+   "woche": 23,
+   "kasse": 0,
+   "deckung": 0
+  },
+  {
+   "n": 96,
+   "jahr": 1887,
+   "woche": 24,
+   "kasse": 0,
+   "deckung": 0
+  },
+  {
+   "n": 97,
+   "jahr": 1887,
+   "woche": 25,
+   "kasse": 0,
+   "deckung": 0
+  },
+  {
+   "n": 98,
+   "jahr": 1887,
+   "woche": 26,
+   "kasse": 0,
+   "deckung": 0
+  },
+  {
+   "n": 99,
+   "jahr": 1887,
+   "woche": 27,
+   "kasse": 0,
+   "deckung": 0
+  },
+  {
+   "n": 100,
+   "jahr": 1887,
+   "woche": 28,
+   "kasse": 0,
+   "deckung": 0
+  },
+  {
+   "n": 101,
+   "jahr": 1887,
+   "woche": 29,
+   "kasse": 14,
+   "deckung": 0.00343811394891945
+  },
+  {
+   "n": 102,
+   "jahr": 1887,
+   "woche": 30,
+   "kasse": 29,
+   "deckung": 0.00712180746561886
+  },
+  {
+   "n": 103,
+   "jahr": 1888,
+   "woche": 1,
+   "kasse": 230,
+   "deckung": 0.06139882541377469
+  },
+  {
+   "n": 104,
+   "jahr": 1888,
+   "woche": 2,
+   "kasse": 207,
+   "deckung": 0.05525894287239722
+  },
+  {
+   "n": 105,
+   "jahr": 1888,
+   "woche": 3,
+   "kasse": 142,
+   "deckung": 0.037907100907634814
+  },
+  {
+   "n": 106,
+   "jahr": 1888,
+   "woche": 4,
+   "kasse": 101,
+   "deckung": 0.026962092899092367
+  },
+  {
+   "n": 107,
+   "jahr": 1888,
+   "woche": 5,
+   "kasse": 10,
+   "deckung": 0.0026695141484249867
+  },
+  {
+   "n": 108,
+   "jahr": 1888,
+   "woche": 6,
+   "kasse": 0,
+   "deckung": 0
+  },
+  {
+   "n": 109,
+   "jahr": 1888,
+   "woche": 7,
+   "kasse": 0,
+   "deckung": 0
+  },
+  {
+   "n": 110,
+   "jahr": 1888,
+   "woche": 8,
+   "kasse": 0,
+   "deckung": 0
+  },
+  {
+   "n": 111,
+   "jahr": 1888,
+   "woche": 9,
+   "kasse": 0,
+   "deckung": 0
+  },
+  {
+   "n": 112,
+   "jahr": 1888,
+   "woche": 10,
+   "kasse": 0,
+   "deckung": 0
+  },
+  {
+   "n": 113,
+   "jahr": 1888,
+   "woche": 11,
+   "kasse": 0,
+   "deckung": 0
+  },
+  {
+   "n": 114,
+   "jahr": 1888,
+   "woche": 12,
+   "kasse": 0,
+   "deckung": 0
+  },
+  {
+   "n": 115,
+   "jahr": 1888,
+   "woche": 13,
+   "kasse": 0,
+   "deckung": 0
+  },
+  {
+   "n": 116,
+   "jahr": 1888,
+   "woche": 14,
+   "kasse": 0,
+   "deckung": 0
+  },
+  {
+   "n": 117,
+   "jahr": 1888,
+   "woche": 15,
+   "kasse": 10,
+   "deckung": 0.0026695141484249867
+  },
+  {
+   "n": 118,
+   "jahr": 1888,
+   "woche": 16,
+   "kasse": 10,
+   "deckung": 0.002663825253063399
+  },
+  {
+   "n": 119,
+   "jahr": 1888,
+   "woche": 17,
+   "kasse": 0,
+   "deckung": 0
+  },
+  {
+   "n": 120,
+   "jahr": 1888,
+   "woche": 18,
+   "kasse": 0,
+   "deckung": 0
+  },
+  {
+   "n": 121,
+   "jahr": 1888,
+   "woche": 19,
+   "kasse": 0,
+   "deckung": 0
+  },
+  {
+   "n": 122,
+   "jahr": 1888,
+   "woche": 20,
+   "kasse": 0,
+   "deckung": 0
+  },
+  {
+   "n": 123,
+   "jahr": 1888,
+   "woche": 21,
+   "kasse": 0,
+   "deckung": 0
+  },
+  {
+   "n": 124,
+   "jahr": 1888,
+   "woche": 22,
+   "kasse": 0,
+   "deckung": 0
+  },
+  {
+   "n": 125,
+   "jahr": 1888,
+   "woche": 23,
+   "kasse": 0,
+   "deckung": 0
+  },
+  {
+   "n": 126,
+   "jahr": 1888,
+   "woche": 24,
+   "kasse": 0,
+   "deckung": 0
+  },
+  {
+   "n": 127,
+   "jahr": 1888,
+   "woche": 25,
+   "kasse": 15,
+   "deckung": 0.0033799008562415502
+  },
+  {
+   "n": 128,
+   "jahr": 1888,
+   "woche": 26,
+   "kasse": 15,
+   "deckung": 0.0033799008562415502
+  },
+  {
+   "n": 129,
+   "jahr": 1888,
+   "woche": 27,
+   "kasse": 0,
+   "deckung": 0
+  },
+  {
+   "n": 130,
+   "jahr": 1888,
+   "woche": 28,
+   "kasse": 0,
+   "deckung": 0
+  },
+  {
+   "n": 131,
+   "jahr": 1888,
+   "woche": 29,
+   "kasse": 0,
+   "deckung": 0
+  },
+  {
+   "n": 132,
+   "jahr": 1888,
+   "woche": 30,
+   "kasse": 14,
+   "deckung": 0.0031545741324921135
+  },
+  {
+   "n": 133,
+   "jahr": 1889,
+   "woche": 1,
+   "kasse": 230,
+   "deckung": 0.051270619705751225
+  },
+  {
+   "n": 134,
+   "jahr": 1889,
+   "woche": 2,
+   "kasse": 207,
+   "deckung": 0.0461435577351761
+  }
+ ]
+}

@@ -1,0 +1,1000 @@
+{
+ "epoche": 4,
+ "saat": "1350",
+ "lauf": "e4-such-1",
+ "fenster": "1600x900",
+ "minuten": 4,
+ "aussenrunden": 27,
+ "echteWochenGesamt": 102,
+ "jahrStart": 1970,
+ "jahrEnde": 1973,
+ "wocheEnde": 26,
+ "braujahre": 4,
+ "kasseEnde": 35686,
+ "endgrund": null,
+ "abbruch": {
+  "grund": "maxWochen-erreicht",
+  "maxWochen": 100
+ },
+ "letzteChronik": {
+  "jahr": 1973,
+  "woche": 26,
+  "art": "gegner",
+  "text": "Aktienbrauerei Waldeck wird verkauft. Der Betrieb geht an die Nordstern-Gruppe; über den Ausschank in der Stadt — Gasthof Lindenhof — wird beim Notar entschieden. Ihr Gebot steht bei 58.320 DM."
+ },
+ "deckungMedian": 1.431928705945397,
+ "wochenMitDeckung": 102,
+ "ersteWocheDauerhaftUnter1x": null,
+ "klicksNav": 268,
+ "klicksPreis": 79,
+ "klicksWeiter": 27,
+ "klicksNotfall": 0,
+ "knoepfeUnterhalbFaltkanteGesehen": 174,
+ "fehler": [],
+ "seitenfehlerZahl": 0,
+ "pruefsumme": "b209b7cb",
+ "pruefsummeWochen": "deced3f2",
+ "tafelBeobachtungen": [
+  {
+   "jahr": 1970,
+   "woche": 1,
+   "kasse": 86000,
+   "anzahl": 4,
+   "billigsteKosten": 55000,
+   "kasseDurchBilligste": 1.5636363636363637,
+   "karten": [
+    {
+     "zug": "preis:festlege:handelsmarke",
+     "text": "Festlegen−110.000 DM",
+     "preis": -110000,
+     "aus": true
+    },
+    {
+     "zug": "preis:festlege:konzern",
+     "text": "Festlegen — Geld herein+65.000 DM",
+     "preis": 65000,
+     "aus": false
+    },
+    {
+     "zug": "preis:festlege:genossenschaft",
+     "text": "Festlegen−110.000 DM",
+     "preis": -110000,
+     "aus": true
+    },
+    {
+     "zug": "preis:festlege:privat",
+     "text": "Festlegen−55.000 DM",
+     "preis": -55000,
+     "aus": false
+    }
+   ]
+  },
+  {
+   "jahr": 1971,
+   "woche": 1,
+   "kasse": 50017,
+   "anzahl": 4,
+   "billigsteKosten": 57000,
+   "kasseDurchBilligste": 0.8774912280701754,
+   "karten": [
+    {
+     "zug": "preis:festlege:handelsmarke",
+     "text": "Festlegen−110.000 DM",
+     "preis": -110000,
+     "aus": true
+    },
+    {
+     "zug": "preis:festlege:konzern",
+     "text": "Festlegen — Geld herein+41.000 DM",
+     "preis": 41000,
+     "aus": false
+    },
+    {
+     "zug": "preis:festlege:genossenschaft",
+     "text": "Festlegen−110.000 DM",
+     "preis": -110000,
+     "aus": true
+    },
+    {
+     "zug": "preis:festlege:privat",
+     "text": "Festlegen−57.000 DM",
+     "preis": -57000,
+     "aus": true
+    }
+   ]
+  },
+  {
+   "jahr": 1972,
+   "woche": 1,
+   "kasse": 50000,
+   "anzahl": 4,
+   "billigsteKosten": 60000,
+   "kasseDurchBilligste": 0.8333333333333334,
+   "karten": [
+    {
+     "zug": "preis:festlege:handelsmarke",
+     "text": "Festlegen−120.000 DM",
+     "preis": -120000,
+     "aus": true
+    },
+    {
+     "zug": "preis:festlege:konzern",
+     "text": "Festlegen — Geld herein+29.000 DM",
+     "preis": 29000,
+     "aus": false
+    },
+    {
+     "zug": "preis:festlege:genossenschaft",
+     "text": "Festlegen−120.000 DM",
+     "preis": -120000,
+     "aus": true
+    },
+    {
+     "zug": "preis:festlege:privat",
+     "text": "Festlegen−60.000 DM",
+     "preis": -60000,
+     "aus": true
+    }
+   ]
+  },
+  {
+   "jahr": 1973,
+   "woche": 1,
+   "kasse": 50000,
+   "anzahl": 4,
+   "billigsteKosten": 48000,
+   "kasseDurchBilligste": 1.0416666666666667,
+   "karten": [
+    {
+     "zug": "preis:festlege:konzern",
+     "text": "Festlegen — Geld herein+86.000 DM",
+     "preis": 86000,
+     "aus": false
+    },
+    {
+     "zug": "preis:festlege:denkmal",
+     "text": "Festlegen−48.000 DM",
+     "preis": -48000,
+     "aus": false
+    },
+    {
+     "zug": "preis:festlege:privat",
+     "text": "Festlegen−63.000 DM",
+     "preis": -63000,
+     "aus": true
+    },
+    {
+     "zug": "preis:festlege:genossenschaft",
+     "text": "Festlegen−130.000 DM",
+     "preis": -130000,
+     "aus": true
+    }
+   ]
+  }
+ ],
+ "wochenReihe": [
+  {
+   "n": 1,
+   "jahr": 1970,
+   "woche": 1,
+   "kasse": 86000,
+   "deckung": 2.2500719499751445,
+   "besterPreis": 38221
+  },
+  {
+   "n": 2,
+   "jahr": 1970,
+   "woche": 2,
+   "kasse": 95757,
+   "deckung": 2.5053504617880225,
+   "besterPreis": 38221
+  },
+  {
+   "n": 3,
+   "jahr": 1970,
+   "woche": 3,
+   "kasse": 92893,
+   "deckung": 2.4304178331283848,
+   "besterPreis": 38221
+  },
+  {
+   "n": 4,
+   "jahr": 1970,
+   "woche": 4,
+   "kasse": 88933,
+   "deckung": 2.3268098689202272,
+   "besterPreis": 38221
+  },
+  {
+   "n": 5,
+   "jahr": 1970,
+   "woche": 5,
+   "kasse": 84133,
+   "deckung": 2.2012244577588236,
+   "besterPreis": 38221
+  },
+  {
+   "n": 6,
+   "jahr": 1970,
+   "woche": 11,
+   "kasse": 95706,
+   "deckung": 3.366255144032922,
+   "besterPreis": 28431,
+   "mehrwochenSprung": 6
+  },
+  {
+   "n": 7,
+   "jahr": 1970,
+   "woche": 12,
+   "kasse": 27086,
+   "deckung": 1.2841835767115495,
+   "besterPreis": 21092
+  },
+  {
+   "n": 8,
+   "jahr": 1970,
+   "woche": 13,
+   "kasse": 26735,
+   "deckung": 1.2675421960933055,
+   "besterPreis": 21092
+  },
+  {
+   "n": 9,
+   "jahr": 1970,
+   "woche": 14,
+   "kasse": 27280,
+   "deckung": 1.2933813768253366,
+   "besterPreis": 21092
+  },
+  {
+   "n": 10,
+   "jahr": 1970,
+   "woche": 15,
+   "kasse": 27830,
+   "deckung": 2.8276773013615117,
+   "besterPreis": 9842
+  },
+  {
+   "n": 11,
+   "jahr": 1970,
+   "woche": 16,
+   "kasse": 27210,
+   "deckung": 2.764681975208291,
+   "besterPreis": 9842
+  },
+  {
+   "n": 12,
+   "jahr": 1970,
+   "woche": 17,
+   "kasse": 27748,
+   "deckung": 2.8193456614509245,
+   "besterPreis": 9842
+  },
+  {
+   "n": 13,
+   "jahr": 1970,
+   "woche": 18,
+   "kasse": 28286,
+   "deckung": 2.8740093476935584,
+   "besterPreis": 9842
+  },
+  {
+   "n": 14,
+   "jahr": 1970,
+   "woche": 19,
+   "kasse": 28824,
+   "deckung": 1.3179698216735254,
+   "besterPreis": 21870
+  },
+  {
+   "n": 15,
+   "jahr": 1970,
+   "woche": 20,
+   "kasse": 28204,
+   "deckung": 1.289620484682213,
+   "besterPreis": 21870
+  },
+  {
+   "n": 16,
+   "jahr": 1970,
+   "woche": 21,
+   "kasse": 28733,
+   "deckung": 1.1311314069758287,
+   "besterPreis": 25402
+  },
+  {
+   "n": 17,
+   "jahr": 1970,
+   "woche": 22,
+   "kasse": 29262,
+   "deckung": 1.032169312169312,
+   "besterPreis": 28350
+  },
+  {
+   "n": 18,
+   "jahr": 1970,
+   "woche": 23,
+   "kasse": 29791,
+   "deckung": 1.0508289241622575,
+   "besterPreis": 28350
+  },
+  {
+   "n": 19,
+   "jahr": 1970,
+   "woche": 24,
+   "kasse": 29171,
+   "deckung": 1.1617283950617283,
+   "besterPreis": 25110
+  },
+  {
+   "n": 20,
+   "jahr": 1970,
+   "woche": 25,
+   "kasse": 29700,
+   "deckung": 1.1827956989247312,
+   "besterPreis": 25110
+  },
+  {
+   "n": 21,
+   "jahr": 1970,
+   "woche": 26,
+   "kasse": 30142,
+   "deckung": 1.2003982477100756,
+   "besterPreis": 25110
+  },
+  {
+   "n": 22,
+   "jahr": 1970,
+   "woche": 27,
+   "kasse": 30584,
+   "deckung": 1.2180007964954203,
+   "besterPreis": 25110
+  },
+  {
+   "n": 23,
+   "jahr": 1970,
+   "woche": 28,
+   "kasse": 29964,
+   "deckung": 1.1933094384707288,
+   "besterPreis": 25110
+  },
+  {
+   "n": 24,
+   "jahr": 1970,
+   "woche": 30,
+   "kasse": 30848,
+   "deckung": 2.925090081547506,
+   "besterPreis": 10546,
+   "mehrwochenSprung": 2
+  },
+  {
+   "n": 25,
+   "jahr": 1971,
+   "woche": 1,
+   "kasse": 50017,
+   "deckung": 4.742746064858714,
+   "besterPreis": 10546,
+   "mehrwochenSprung": 71
+  },
+  {
+   "n": 26,
+   "jahr": 1971,
+   "woche": 2,
+   "kasse": 38839,
+   "deckung": 1.3699823633156967,
+   "besterPreis": 28350
+  },
+  {
+   "n": 27,
+   "jahr": 1971,
+   "woche": 3,
+   "kasse": 39248,
+   "deckung": 1.3844091710758377,
+   "besterPreis": 28350
+  },
+  {
+   "n": 28,
+   "jahr": 1971,
+   "woche": 4,
+   "kasse": 39656,
+   "deckung": 1.3988007054673721,
+   "besterPreis": 28350
+  },
+  {
+   "n": 29,
+   "jahr": 1971,
+   "woche": 5,
+   "kasse": 40107,
+   "deckung": 1.4147089947089948,
+   "besterPreis": 28350
+  },
+  {
+   "n": 30,
+   "jahr": 1971,
+   "woche": 6,
+   "kasse": 39475,
+   "deckung": 2.005537773713357,
+   "besterPreis": 19683
+  },
+  {
+   "n": 31,
+   "jahr": 1971,
+   "woche": 12,
+   "kasse": 41057,
+   "deckung": 1.564433775339125,
+   "besterPreis": 26244,
+   "mehrwochenSprung": 6
+  },
+  {
+   "n": 32,
+   "jahr": 1971,
+   "woche": 13,
+   "kasse": 40830,
+   "deckung": 1.5557841792409695,
+   "besterPreis": 26244
+  },
+  {
+   "n": 33,
+   "jahr": 1971,
+   "woche": 14,
+   "kasse": 41272,
+   "deckung": 1.4558024691358025,
+   "besterPreis": 28350
+  },
+  {
+   "n": 34,
+   "jahr": 1971,
+   "woche": 15,
+   "kasse": 41714,
+   "deckung": 1.4713932980599647,
+   "besterPreis": 28350
+  },
+  {
+   "n": 35,
+   "jahr": 1971,
+   "woche": 16,
+   "kasse": 41082,
+   "deckung": 1.449100529100529,
+   "besterPreis": 28350
+  },
+  {
+   "n": 36,
+   "jahr": 1971,
+   "woche": 17,
+   "kasse": 41021,
+   "deckung": 1.4469488536155204,
+   "besterPreis": 28350
+  },
+  {
+   "n": 37,
+   "jahr": 1971,
+   "woche": 18,
+   "kasse": 31001,
+   "deckung": 1.093509700176367,
+   "besterPreis": 28350
+  },
+  {
+   "n": 38,
+   "jahr": 1971,
+   "woche": 19,
+   "kasse": 30927,
+   "deckung": 1.0908994708994708,
+   "besterPreis": 28350
+  },
+  {
+   "n": 39,
+   "jahr": 1971,
+   "woche": 20,
+   "kasse": 31334,
+   "deckung": 1.1052557319223986,
+   "besterPreis": 28350
+  },
+  {
+   "n": 40,
+   "jahr": 1971,
+   "woche": 21,
+   "kasse": 31741,
+   "deckung": 1.1196119929453263,
+   "besterPreis": 28350
+  },
+  {
+   "n": 41,
+   "jahr": 1971,
+   "woche": 22,
+   "kasse": 31074,
+   "deckung": 1.096084656084656,
+   "besterPreis": 28350
+  },
+  {
+   "n": 42,
+   "jahr": 1971,
+   "woche": 23,
+   "kasse": 31481,
+   "deckung": 1.5994004978915817,
+   "besterPreis": 19683
+  },
+  {
+   "n": 43,
+   "jahr": 1971,
+   "woche": 24,
+   "kasse": 31888,
+   "deckung": 1.620078240105675,
+   "besterPreis": 19683
+  },
+  {
+   "n": 44,
+   "jahr": 1971,
+   "woche": 25,
+   "kasse": 32295,
+   "deckung": 1.6407559823197684,
+   "besterPreis": 19683
+  },
+  {
+   "n": 45,
+   "jahr": 1971,
+   "woche": 26,
+   "kasse": 31628,
+   "deckung": 4.820606614845298,
+   "besterPreis": 6561
+  },
+  {
+   "n": 46,
+   "jahr": 1971,
+   "woche": 30,
+   "kasse": 33130,
+   "deckung": 5.049535131839659,
+   "besterPreis": 6561,
+   "mehrwochenSprung": 4
+  },
+  {
+   "n": 47,
+   "jahr": 1972,
+   "woche": 1,
+   "kasse": 50000,
+   "deckung": 7.620789513793629,
+   "besterPreis": 6561,
+   "mehrwochenSprung": 71
+  },
+  {
+   "n": 48,
+   "jahr": 1972,
+   "woche": 2,
+   "kasse": 41978,
+   "deckung": 0.9597165066300869,
+   "besterPreis": 43740
+  },
+  {
+   "n": 49,
+   "jahr": 1972,
+   "woche": 3,
+   "kasse": 42362,
+   "deckung": 0.9684956561499771,
+   "besterPreis": 43740
+  },
+  {
+   "n": 50,
+   "jahr": 1972,
+   "woche": 4,
+   "kasse": 40121,
+   "deckung": 0.6733067060481976,
+   "besterPreis": 59588
+  },
+  {
+   "n": 51,
+   "jahr": 1972,
+   "woche": 5,
+   "kasse": 40548,
+   "deckung": 0.6804725783714842,
+   "besterPreis": 59588
+  },
+  {
+   "n": 52,
+   "jahr": 1972,
+   "woche": 6,
+   "kasse": 40975,
+   "deckung": 0.6876384506947708,
+   "besterPreis": 59588
+  },
+  {
+   "n": 53,
+   "jahr": 1972,
+   "woche": 7,
+   "kasse": 40223,
+   "deckung": 0.9195930498399634,
+   "besterPreis": 43740
+  },
+  {
+   "n": 54,
+   "jahr": 1972,
+   "woche": 8,
+   "kasse": 39542,
+   "deckung": 0.9040237768632831,
+   "besterPreis": 43740
+  },
+  {
+   "n": 55,
+   "jahr": 1972,
+   "woche": 9,
+   "kasse": 39927,
+   "deckung": 0.9128257887517147,
+   "besterPreis": 43740
+  },
+  {
+   "n": 56,
+   "jahr": 1972,
+   "woche": 10,
+   "kasse": 40354,
+   "deckung": 3.354726078643279,
+   "besterPreis": 12029
+  },
+  {
+   "n": 57,
+   "jahr": 1972,
+   "woche": 11,
+   "kasse": 40781,
+   "deckung": 3.390223626236595,
+   "besterPreis": 12029
+  },
+  {
+   "n": 58,
+   "jahr": 1972,
+   "woche": 12,
+   "kasse": 40100,
+   "deckung": 3.333610441433203,
+   "besterPreis": 12029
+  },
+  {
+   "n": 59,
+   "jahr": 1972,
+   "woche": 13,
+   "kasse": 39502,
+   "deckung": 3.2838972483165683,
+   "besterPreis": 12029
+  },
+  {
+   "n": 60,
+   "jahr": 1972,
+   "woche": 14,
+   "kasse": 39929,
+   "deckung": 3.3193947959098846,
+   "besterPreis": 12029
+  },
+  {
+   "n": 61,
+   "jahr": 1972,
+   "woche": 15,
+   "kasse": 40356,
+   "deckung": 2.4602816557946716,
+   "besterPreis": 16403
+  },
+  {
+   "n": 62,
+   "jahr": 1972,
+   "woche": 16,
+   "kasse": 39675,
+   "deckung": 2.4187648600865694,
+   "besterPreis": 16403
+  },
+  {
+   "n": 63,
+   "jahr": 1972,
+   "woche": 17,
+   "kasse": 40060,
+   "deckung": 2.4422361763092115,
+   "besterPreis": 16403
+  },
+  {
+   "n": 64,
+   "jahr": 1972,
+   "woche": 18,
+   "kasse": 40142,
+   "deckung": 2.447235261842346,
+   "besterPreis": 16403
+  },
+  {
+   "n": 65,
+   "jahr": 1972,
+   "woche": 19,
+   "kasse": 40569,
+   "deckung": 2.4732670852892764,
+   "besterPreis": 16403
+  },
+  {
+   "n": 66,
+   "jahr": 1972,
+   "woche": 20,
+   "kasse": 39888,
+   "deckung": 1.4922558922558922,
+   "besterPreis": 26730
+  },
+  {
+   "n": 67,
+   "jahr": 1972,
+   "woche": 21,
+   "kasse": 40315,
+   "deckung": 1.508230452674897,
+   "besterPreis": 26730
+  },
+  {
+   "n": 68,
+   "jahr": 1972,
+   "woche": 22,
+   "kasse": 40742,
+   "deckung": 1.185497715832048,
+   "besterPreis": 34367
+  },
+  {
+   "n": 69,
+   "jahr": 1972,
+   "woche": 23,
+   "kasse": 41169,
+   "deckung": 1.197922425582681,
+   "besterPreis": 34367
+  },
+  {
+   "n": 70,
+   "jahr": 1972,
+   "woche": 24,
+   "kasse": 40488,
+   "deckung": 1.178106904879681,
+   "besterPreis": 34367
+  },
+  {
+   "n": 71,
+   "jahr": 1972,
+   "woche": 25,
+   "kasse": 40915,
+   "deckung": 1.190531614630314,
+   "besterPreis": 34367
+  },
+  {
+   "n": 72,
+   "jahr": 1972,
+   "woche": 26,
+   "kasse": 41342,
+   "deckung": 1.4541169849811826,
+   "besterPreis": 28431
+  },
+  {
+   "n": 73,
+   "jahr": 1972,
+   "woche": 27,
+   "kasse": 41769,
+   "deckung": 1.4691358024691359,
+   "besterPreis": 28431
+  },
+  {
+   "n": 74,
+   "jahr": 1972,
+   "woche": 28,
+   "kasse": 41088,
+   "deckung": 1.4451830748127044,
+   "besterPreis": 28431
+  },
+  {
+   "n": 75,
+   "jahr": 1972,
+   "woche": 29,
+   "kasse": 40258,
+   "deckung": 1.415989588829095,
+   "besterPreis": 28431
+  },
+  {
+   "n": 76,
+   "jahr": 1972,
+   "woche": 30,
+   "kasse": 40685,
+   "deckung": 1.1708250597139487,
+   "besterPreis": 34749
+  },
+  {
+   "n": 77,
+   "jahr": 1973,
+   "woche": 1,
+   "kasse": 50000,
+   "deckung": 1.4388903277792167,
+   "besterPreis": 34749,
+   "mehrwochenSprung": 71
+  },
+  {
+   "n": 78,
+   "jahr": 1973,
+   "woche": 2,
+   "kasse": 49306,
+   "deckung": 0.8695943562610229,
+   "besterPreis": 56700
+  },
+  {
+   "n": 79,
+   "jahr": 1973,
+   "woche": 3,
+   "kasse": 48384,
+   "deckung": 0.8533333333333334,
+   "besterPreis": 56700
+  },
+  {
+   "n": 80,
+   "jahr": 1973,
+   "woche": 4,
+   "kasse": 47461,
+   "deckung": 0.8370546737213403,
+   "besterPreis": 56700
+  },
+  {
+   "n": 81,
+   "jahr": 1973,
+   "woche": 5,
+   "kasse": 46538,
+   "deckung": 1.4249670841115771,
+   "besterPreis": 32659
+  },
+  {
+   "n": 82,
+   "jahr": 1973,
+   "woche": 6,
+   "kasse": 45844,
+   "deckung": 1.4037171989344437,
+   "besterPreis": 32659
+  },
+  {
+   "n": 83,
+   "jahr": 1973,
+   "woche": 7,
+   "kasse": 44921,
+   "deckung": 1.375455464037478,
+   "besterPreis": 32659
+  },
+  {
+   "n": 84,
+   "jahr": 1973,
+   "woche": 8,
+   "kasse": 43998,
+   "deckung": 1.3471937291405125,
+   "besterPreis": 32659
+  },
+  {
+   "n": 85,
+   "jahr": 1973,
+   "woche": 9,
+   "kasse": 43075,
+   "deckung": 3.5809294205669633,
+   "besterPreis": 12029
+  },
+  {
+   "n": 86,
+   "jahr": 1973,
+   "woche": 10,
+   "kasse": 42381,
+   "deckung": 3.5232355141740794,
+   "besterPreis": 12029
+  },
+  {
+   "n": 87,
+   "jahr": 1973,
+   "woche": 11,
+   "kasse": 41458,
+   "deckung": 3.446504281320143,
+   "besterPreis": 12029
+  },
+  {
+   "n": 88,
+   "jahr": 1973,
+   "woche": 12,
+   "kasse": 40535,
+   "deckung": 1.5164609053497942,
+   "besterPreis": 26730
+  },
+  {
+   "n": 89,
+   "jahr": 1973,
+   "woche": 13,
+   "kasse": 39612,
+   "deckung": 1.4819304152637487,
+   "besterPreis": 26730
+  },
+  {
+   "n": 90,
+   "jahr": 1973,
+   "woche": 14,
+   "kasse": 38918,
+   "deckung": 3.2353479092193864,
+   "besterPreis": 12029
+  },
+  {
+   "n": 91,
+   "jahr": 1973,
+   "woche": 15,
+   "kasse": 37995,
+   "deckung": 3.15861667636545,
+   "besterPreis": 12029
+  },
+  {
+   "n": 92,
+   "jahr": 1973,
+   "woche": 16,
+   "kasse": 37072,
+   "deckung": 3.081885443511514,
+   "besterPreis": 12029
+  },
+  {
+   "n": 93,
+   "jahr": 1973,
+   "woche": 17,
+   "kasse": 36149,
+   "deckung": 3.0051542106575777,
+   "besterPreis": 12029
+  },
+  {
+   "n": 94,
+   "jahr": 1973,
+   "woche": 18,
+   "kasse": 35455,
+   "deckung": 2.947460304264694,
+   "besterPreis": 12029
+  },
+  {
+   "n": 95,
+   "jahr": 1973,
+   "woche": 19,
+   "kasse": 35070,
+   "deckung": 1.3120089786756453,
+   "besterPreis": 26730
+  },
+  {
+   "n": 96,
+   "jahr": 1973,
+   "woche": 20,
+   "kasse": 35519,
+   "deckung": 1.3534141137021796,
+   "besterPreis": 26244
+  },
+  {
+   "n": 97,
+   "jahr": 1973,
+   "woche": 21,
+   "kasse": 35968,
+   "deckung": 1.3705227861606462,
+   "besterPreis": 26244
+  },
+  {
+   "n": 98,
+   "jahr": 1973,
+   "woche": 22,
+   "kasse": 35274,
+   "deckung": 1.3440786465477823,
+   "besterPreis": 26244
+  },
+  {
+   "n": 99,
+   "jahr": 1973,
+   "woche": 23,
+   "kasse": 35572,
+   "deckung": 1.3554336229233348,
+   "besterPreis": 26244
+  },
+  {
+   "n": 100,
+   "jahr": 1973,
+   "woche": 24,
+   "kasse": 35976,
+   "deckung": 1.370827617741198,
+   "besterPreis": 26244
+  },
+  {
+   "n": 101,
+   "jahr": 1973,
+   "woche": 25,
+   "kasse": 36380,
+   "deckung": 1.3862216125590612,
+   "besterPreis": 26244
+  },
+  {
+   "n": 102,
+   "jahr": 1973,
+   "woche": 26,
+   "kasse": 35686,
+   "deckung": 1.3597774729461973,
+   "besterPreis": 26244
+  }
+ ]
+}

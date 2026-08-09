@@ -1,0 +1,984 @@
+{
+ "epoche": 2,
+ "saat": "1350",
+ "lauf": "e2-such-1",
+ "fenster": "1600x900",
+ "minuten": 3.5,
+ "aussenrunden": 26,
+ "echteWochenGesamt": 100,
+ "jahrStart": 1600,
+ "jahrEnde": 1603,
+ "wocheEnde": 22,
+ "braujahre": 4,
+ "kasseEnde": 45,
+ "endgrund": null,
+ "abbruch": {
+  "grund": "maxWochen-erreicht",
+  "maxWochen": 100
+ },
+ "letzteChronik": {
+  "jahr": 1603,
+  "woche": 22,
+  "art": "gegner",
+  "text": "Pfarrschenke St. Michael geht an Braustatt Adler. Gebunden mit Zunftbrief bis 1609. Ablösen kostet 189 fl."
+ },
+ "deckungMedian": 1.507936507936508,
+ "wochenMitDeckung": 100,
+ "ersteWocheDauerhaftUnter1x": 80,
+ "klicksNav": 257,
+ "klicksPreis": 77,
+ "klicksWeiter": 26,
+ "klicksNotfall": 0,
+ "knoepfeUnterhalbFaltkanteGesehen": 14,
+ "fehler": [],
+ "seitenfehlerZahl": 0,
+ "pruefsumme": "c57671bf",
+ "pruefsummeWochen": "1866d82b",
+ "tafelBeobachtungen": [
+  {
+   "jahr": 1600,
+   "woche": 1,
+   "kasse": 640,
+   "anzahl": 4,
+   "billigsteKosten": 280,
+   "kasseDurchBilligste": 2.2857142857142856,
+   "karten": [
+    {
+     "zug": "preis:festlege:eigentum",
+     "text": "Festlegen−6.700 fl",
+     "preis": -6700,
+     "aus": true
+    },
+    {
+     "zug": "preis:festlege:reinheit",
+     "text": "Festlegen−280 fl",
+     "preis": -280,
+     "aus": false
+    },
+    {
+     "zug": "preis:festlege:ratssitz",
+     "text": "Festlegen−5.300 fl",
+     "preis": -5300,
+     "aus": true
+    },
+    {
+     "zug": "preis:festlege:bierbann",
+     "text": "Festlegen−7.800 fl",
+     "preis": -7800,
+     "aus": true
+    }
+   ]
+  },
+  {
+   "jahr": 1601,
+   "woche": 1,
+   "kasse": 309,
+   "anzahl": 4,
+   "billigsteKosten": 290,
+   "kasseDurchBilligste": 1.0655172413793104,
+   "karten": [
+    {
+     "zug": "preis:festlege:reinheit",
+     "text": "Festlegen−290 fl",
+     "preis": -290,
+     "aus": false
+    },
+    {
+     "zug": "preis:festlege:stadtguelt",
+     "text": "Festlegen−440 fl",
+     "preis": -440,
+     "aus": true
+    },
+    {
+     "zug": "preis:festlege:ratssitz",
+     "text": "Festlegen−5.500 fl",
+     "preis": -5500,
+     "aus": true
+    },
+    {
+     "zug": "preis:festlege:bierbann",
+     "text": "Festlegen−8.100 fl",
+     "preis": -8100,
+     "aus": true
+    }
+   ]
+  },
+  {
+   "jahr": 1602,
+   "woche": 1,
+   "kasse": 313,
+   "anzahl": 4,
+   "billigsteKosten": 300,
+   "kasseDurchBilligste": 1.0433333333333332,
+   "karten": [
+    {
+     "zug": "preis:festlege:reinheit",
+     "text": "Festlegen−300 fl",
+     "preis": -300,
+     "aus": false
+    },
+    {
+     "zug": "preis:festlege:stadtguelt",
+     "text": "Festlegen−450 fl",
+     "preis": -450,
+     "aus": true
+    },
+    {
+     "zug": "preis:festlege:ratssitz",
+     "text": "Festlegen−5.700 fl",
+     "preis": -5700,
+     "aus": true
+    },
+    {
+     "zug": "preis:festlege:bierbann",
+     "text": "Festlegen−8.400 fl",
+     "preis": -8400,
+     "aus": true
+    }
+   ]
+  },
+  {
+   "jahr": 1603,
+   "woche": 1,
+   "kasse": 280,
+   "anzahl": 4,
+   "billigsteKosten": 310,
+   "kasseDurchBilligste": 0.9032258064516129,
+   "karten": [
+    {
+     "zug": "preis:festlege:gueltbrief",
+     "text": "Festlegen — Geld herein+750 fl",
+     "preis": 750,
+     "aus": false
+    },
+    {
+     "zug": "preis:festlege:reinheit",
+     "text": "Festlegen−310 fl",
+     "preis": -310,
+     "aus": true
+    },
+    {
+     "zug": "preis:festlege:stadtguelt",
+     "text": "Festlegen−470 fl",
+     "preis": -470,
+     "aus": true
+    },
+    {
+     "zug": "preis:festlege:bierbann",
+     "text": "Festlegen−8.800 fl",
+     "preis": -8800,
+     "aus": true
+    }
+   ]
+  }
+ ],
+ "wochenReihe": [
+  {
+   "n": 1,
+   "jahr": 1600,
+   "woche": 1,
+   "kasse": 640,
+   "deckung": 3.764705882352941,
+   "besterPreis": 170
+  },
+  {
+   "n": 2,
+   "jahr": 1600,
+   "woche": 2,
+   "kasse": 660,
+   "deckung": 3.8823529411764706,
+   "besterPreis": 170
+  },
+  {
+   "n": 3,
+   "jahr": 1600,
+   "woche": 3,
+   "kasse": 642,
+   "deckung": 3.776470588235294,
+   "besterPreis": 170
+  },
+  {
+   "n": 4,
+   "jahr": 1600,
+   "woche": 4,
+   "kasse": 676,
+   "deckung": 3.976470588235294,
+   "besterPreis": 170
+  },
+  {
+   "n": 5,
+   "jahr": 1600,
+   "woche": 5,
+   "kasse": 654,
+   "deckung": 5.589743589743589,
+   "besterPreis": 117
+  },
+  {
+   "n": 6,
+   "jahr": 1600,
+   "woche": 11,
+   "kasse": 836,
+   "deckung": 7.145299145299146,
+   "besterPreis": 117,
+   "mehrwochenSprung": 6
+  },
+  {
+   "n": 7,
+   "jahr": 1600,
+   "woche": 12,
+   "kasse": 261,
+   "deckung": 2.230769230769231,
+   "besterPreis": 117
+  },
+  {
+   "n": 8,
+   "jahr": 1600,
+   "woche": 13,
+   "kasse": 282,
+   "deckung": 3.3176470588235296,
+   "besterPreis": 85
+  },
+  {
+   "n": 9,
+   "jahr": 1600,
+   "woche": 14,
+   "kasse": 282,
+   "deckung": 3.3176470588235296,
+   "besterPreis": 85
+  },
+  {
+   "n": 10,
+   "jahr": 1600,
+   "woche": 15,
+   "kasse": 284,
+   "deckung": 3.3411764705882354,
+   "besterPreis": 85
+  },
+  {
+   "n": 11,
+   "jahr": 1600,
+   "woche": 16,
+   "kasse": 282,
+   "deckung": 3.357142857142857,
+   "besterPreis": 84
+  },
+  {
+   "n": 12,
+   "jahr": 1600,
+   "woche": 17,
+   "kasse": 281,
+   "deckung": 3.3452380952380953,
+   "besterPreis": 84
+  },
+  {
+   "n": 13,
+   "jahr": 1600,
+   "woche": 18,
+   "kasse": 282,
+   "deckung": 3.357142857142857,
+   "besterPreis": 84
+  },
+  {
+   "n": 14,
+   "jahr": 1600,
+   "woche": 19,
+   "kasse": 284,
+   "deckung": 3.380952380952381,
+   "besterPreis": 84
+  },
+  {
+   "n": 15,
+   "jahr": 1600,
+   "woche": 20,
+   "kasse": 282,
+   "deckung": 3.357142857142857,
+   "besterPreis": 84
+  },
+  {
+   "n": 16,
+   "jahr": 1600,
+   "woche": 21,
+   "kasse": 283,
+   "deckung": 3.369047619047619,
+   "besterPreis": 84
+  },
+  {
+   "n": 17,
+   "jahr": 1600,
+   "woche": 22,
+   "kasse": 285,
+   "deckung": 3,
+   "besterPreis": 95
+  },
+  {
+   "n": 18,
+   "jahr": 1600,
+   "woche": 23,
+   "kasse": 286,
+   "deckung": 3.0105263157894737,
+   "besterPreis": 95
+  },
+  {
+   "n": 19,
+   "jahr": 1600,
+   "woche": 24,
+   "kasse": 284,
+   "deckung": 1.5026455026455026,
+   "besterPreis": 189
+  },
+  {
+   "n": 20,
+   "jahr": 1600,
+   "woche": 25,
+   "kasse": 285,
+   "deckung": 1.507936507936508,
+   "besterPreis": 189
+  },
+  {
+   "n": 21,
+   "jahr": 1600,
+   "woche": 26,
+   "kasse": 286,
+   "deckung": 1.8940397350993377,
+   "besterPreis": 151
+  },
+  {
+   "n": 22,
+   "jahr": 1600,
+   "woche": 27,
+   "kasse": 286,
+   "deckung": 1.8940397350993377,
+   "besterPreis": 151
+  },
+  {
+   "n": 23,
+   "jahr": 1600,
+   "woche": 28,
+   "kasse": 284,
+   "deckung": 1.880794701986755,
+   "besterPreis": 151
+  },
+  {
+   "n": 24,
+   "jahr": 1600,
+   "woche": 30,
+   "kasse": 285,
+   "deckung": 1.6764705882352942,
+   "besterPreis": 170,
+   "mehrwochenSprung": 2
+  },
+  {
+   "n": 25,
+   "jahr": 1601,
+   "woche": 1,
+   "kasse": 309,
+   "deckung": 1.8176470588235294,
+   "besterPreis": 170,
+   "mehrwochenSprung": 71
+  },
+  {
+   "n": 26,
+   "jahr": 1601,
+   "woche": 2,
+   "kasse": 307,
+   "deckung": 1.8058823529411765,
+   "besterPreis": 170
+  },
+  {
+   "n": 27,
+   "jahr": 1601,
+   "woche": 3,
+   "kasse": 302,
+   "deckung": 1.597883597883598,
+   "besterPreis": 189
+  },
+  {
+   "n": 28,
+   "jahr": 1601,
+   "woche": 4,
+   "kasse": 291,
+   "deckung": 1.5396825396825398,
+   "besterPreis": 189
+  },
+  {
+   "n": 29,
+   "jahr": 1601,
+   "woche": 5,
+   "kasse": 285,
+   "deckung": 1.507936507936508,
+   "besterPreis": 189
+  },
+  {
+   "n": 30,
+   "jahr": 1601,
+   "woche": 6,
+   "kasse": 283,
+   "deckung": 1.4973544973544974,
+   "besterPreis": 189
+  },
+  {
+   "n": 31,
+   "jahr": 1601,
+   "woche": 12,
+   "kasse": 260,
+   "deckung": 1.2380952380952381,
+   "besterPreis": 210,
+   "mehrwochenSprung": 6
+  },
+  {
+   "n": 32,
+   "jahr": 1601,
+   "woche": 13,
+   "kasse": 255,
+   "deckung": 1.2142857142857142,
+   "besterPreis": 210
+  },
+  {
+   "n": 33,
+   "jahr": 1601,
+   "woche": 14,
+   "kasse": 248,
+   "deckung": 1.180952380952381,
+   "besterPreis": 210
+  },
+  {
+   "n": 34,
+   "jahr": 1601,
+   "woche": 15,
+   "kasse": 242,
+   "deckung": 1.2804232804232805,
+   "besterPreis": 189
+  },
+  {
+   "n": 35,
+   "jahr": 1601,
+   "woche": 16,
+   "kasse": 240,
+   "deckung": 1.2698412698412698,
+   "besterPreis": 189
+  },
+  {
+   "n": 36,
+   "jahr": 1601,
+   "woche": 17,
+   "kasse": 236,
+   "deckung": 1.2486772486772486,
+   "besterPreis": 189
+  },
+  {
+   "n": 37,
+   "jahr": 1601,
+   "woche": 18,
+   "kasse": 234,
+   "deckung": 1.7462686567164178,
+   "besterPreis": 134
+  },
+  {
+   "n": 38,
+   "jahr": 1601,
+   "woche": 19,
+   "kasse": 232,
+   "deckung": 1.7313432835820894,
+   "besterPreis": 134
+  },
+  {
+   "n": 39,
+   "jahr": 1601,
+   "woche": 20,
+   "kasse": 230,
+   "deckung": 1.7164179104477613,
+   "besterPreis": 134
+  },
+  {
+   "n": 40,
+   "jahr": 1601,
+   "woche": 21,
+   "kasse": 221,
+   "deckung": 1.6492537313432836,
+   "besterPreis": 134
+  },
+  {
+   "n": 41,
+   "jahr": 1601,
+   "woche": 22,
+   "kasse": 219,
+   "deckung": 1.6343283582089552,
+   "besterPreis": 134
+  },
+  {
+   "n": 42,
+   "jahr": 1601,
+   "woche": 23,
+   "kasse": 216,
+   "deckung": 1.6119402985074627,
+   "besterPreis": 134
+  },
+  {
+   "n": 43,
+   "jahr": 1601,
+   "woche": 24,
+   "kasse": 214,
+   "deckung": 1.1322751322751323,
+   "besterPreis": 189
+  },
+  {
+   "n": 44,
+   "jahr": 1601,
+   "woche": 25,
+   "kasse": 212,
+   "deckung": 0.9814814814814815,
+   "besterPreis": 216
+  },
+  {
+   "n": 45,
+   "jahr": 1601,
+   "woche": 26,
+   "kasse": 209,
+   "deckung": 1.1483516483516483,
+   "besterPreis": 182
+  },
+  {
+   "n": 46,
+   "jahr": 1601,
+   "woche": 27,
+   "kasse": 207,
+   "deckung": 1.1373626373626373,
+   "besterPreis": 182
+  },
+  {
+   "n": 47,
+   "jahr": 1601,
+   "woche": 28,
+   "kasse": 205,
+   "deckung": 1.1263736263736264,
+   "besterPreis": 182
+  },
+  {
+   "n": 48,
+   "jahr": 1601,
+   "woche": 30,
+   "kasse": 200,
+   "deckung": 0.6802721088435374,
+   "besterPreis": 294,
+   "mehrwochenSprung": 2
+  },
+  {
+   "n": 49,
+   "jahr": 1602,
+   "woche": 1,
+   "kasse": 313,
+   "deckung": 1.064625850340136,
+   "besterPreis": 294,
+   "mehrwochenSprung": 71
+  },
+  {
+   "n": 50,
+   "jahr": 1602,
+   "woche": 2,
+   "kasse": 282,
+   "deckung": 3.357142857142857,
+   "besterPreis": 84
+  },
+  {
+   "n": 51,
+   "jahr": 1602,
+   "woche": 3,
+   "kasse": 280,
+   "deckung": 3.3333333333333335,
+   "besterPreis": 84
+  },
+  {
+   "n": 52,
+   "jahr": 1602,
+   "woche": 4,
+   "kasse": 278,
+   "deckung": 3.3095238095238093,
+   "besterPreis": 84
+  },
+  {
+   "n": 53,
+   "jahr": 1602,
+   "woche": 5,
+   "kasse": 271,
+   "deckung": 3.2261904761904763,
+   "besterPreis": 84
+  },
+  {
+   "n": 54,
+   "jahr": 1602,
+   "woche": 6,
+   "kasse": 269,
+   "deckung": 3.2023809523809526,
+   "besterPreis": 84
+  },
+  {
+   "n": 55,
+   "jahr": 1602,
+   "woche": 7,
+   "kasse": 267,
+   "deckung": 2.8105263157894735,
+   "besterPreis": 95
+  },
+  {
+   "n": 56,
+   "jahr": 1602,
+   "woche": 8,
+   "kasse": 261,
+   "deckung": 2.7473684210526317,
+   "besterPreis": 95
+  },
+  {
+   "n": 57,
+   "jahr": 1602,
+   "woche": 9,
+   "kasse": 254,
+   "deckung": 2.6736842105263157,
+   "besterPreis": 95
+  },
+  {
+   "n": 58,
+   "jahr": 1602,
+   "woche": 10,
+   "kasse": 252,
+   "deckung": 1.8805970149253732,
+   "besterPreis": 134
+  },
+  {
+   "n": 59,
+   "jahr": 1602,
+   "woche": 11,
+   "kasse": 246,
+   "deckung": 1.835820895522388,
+   "besterPreis": 134
+  },
+  {
+   "n": 60,
+   "jahr": 1602,
+   "woche": 12,
+   "kasse": 240,
+   "deckung": 1.1428571428571428,
+   "besterPreis": 210
+  },
+  {
+   "n": 61,
+   "jahr": 1602,
+   "woche": 13,
+   "kasse": 236,
+   "deckung": 1.1238095238095238,
+   "besterPreis": 210
+  },
+  {
+   "n": 62,
+   "jahr": 1602,
+   "woche": 14,
+   "kasse": 234,
+   "deckung": 1.1142857142857143,
+   "besterPreis": 210
+  },
+  {
+   "n": 63,
+   "jahr": 1602,
+   "woche": 15,
+   "kasse": 227,
+   "deckung": 1.0809523809523809,
+   "besterPreis": 210
+  },
+  {
+   "n": 64,
+   "jahr": 1602,
+   "woche": 16,
+   "kasse": 225,
+   "deckung": 1.0714285714285714,
+   "besterPreis": 210
+  },
+  {
+   "n": 65,
+   "jahr": 1602,
+   "woche": 17,
+   "kasse": 219,
+   "deckung": 1.042857142857143,
+   "besterPreis": 210
+  },
+  {
+   "n": 66,
+   "jahr": 1602,
+   "woche": 18,
+   "kasse": 217,
+   "deckung": 1.0333333333333334,
+   "besterPreis": 210
+  },
+  {
+   "n": 67,
+   "jahr": 1602,
+   "woche": 19,
+   "kasse": 213,
+   "deckung": 1.0142857142857142,
+   "besterPreis": 210
+  },
+  {
+   "n": 68,
+   "jahr": 1602,
+   "woche": 20,
+   "kasse": 210,
+   "deckung": 2.210526315789474,
+   "besterPreis": 95
+  },
+  {
+   "n": 69,
+   "jahr": 1602,
+   "woche": 21,
+   "kasse": 208,
+   "deckung": 2.1894736842105265,
+   "besterPreis": 95
+  },
+  {
+   "n": 70,
+   "jahr": 1602,
+   "woche": 22,
+   "kasse": 206,
+   "deckung": 2.168421052631579,
+   "besterPreis": 95
+  },
+  {
+   "n": 71,
+   "jahr": 1602,
+   "woche": 23,
+   "kasse": 203,
+   "deckung": 2.136842105263158,
+   "besterPreis": 95
+  },
+  {
+   "n": 72,
+   "jahr": 1602,
+   "woche": 24,
+   "kasse": 204,
+   "deckung": 2.1473684210526316,
+   "besterPreis": 95
+  },
+  {
+   "n": 73,
+   "jahr": 1602,
+   "woche": 25,
+   "kasse": 205,
+   "deckung": 2.1578947368421053,
+   "besterPreis": 95
+  },
+  {
+   "n": 74,
+   "jahr": 1602,
+   "woche": 26,
+   "kasse": 203,
+   "deckung": 0.9666666666666667,
+   "besterPreis": 210
+  },
+  {
+   "n": 75,
+   "jahr": 1602,
+   "woche": 27,
+   "kasse": 205,
+   "deckung": 0.9761904761904762,
+   "besterPreis": 210
+  },
+  {
+   "n": 76,
+   "jahr": 1602,
+   "woche": 28,
+   "kasse": 206,
+   "deckung": 0.9809523809523809,
+   "besterPreis": 210
+  },
+  {
+   "n": 77,
+   "jahr": 1602,
+   "woche": 29,
+   "kasse": 207,
+   "deckung": 1.1373626373626373,
+   "besterPreis": 182
+  },
+  {
+   "n": 78,
+   "jahr": 1602,
+   "woche": 30,
+   "kasse": 205,
+   "deckung": 1.1263736263736264,
+   "besterPreis": 182
+  },
+  {
+   "n": 79,
+   "jahr": 1603,
+   "woche": 1,
+   "kasse": 280,
+   "deckung": 1.5384615384615385,
+   "besterPreis": 182,
+   "mehrwochenSprung": 71
+  },
+  {
+   "n": 80,
+   "jahr": 1603,
+   "woche": 2,
+   "kasse": 69,
+   "deckung": 0.3791208791208791,
+   "besterPreis": 182
+  },
+  {
+   "n": 81,
+   "jahr": 1603,
+   "woche": 3,
+   "kasse": 60,
+   "deckung": 0.32967032967032966,
+   "besterPreis": 182
+  },
+  {
+   "n": 82,
+   "jahr": 1603,
+   "woche": 4,
+   "kasse": 37,
+   "deckung": 0.1761904761904762,
+   "besterPreis": 210
+  },
+  {
+   "n": 83,
+   "jahr": 1603,
+   "woche": 5,
+   "kasse": 42,
+   "deckung": 0.2,
+   "besterPreis": 210
+  },
+  {
+   "n": 84,
+   "jahr": 1603,
+   "woche": 6,
+   "kasse": 40,
+   "deckung": 0.19230769230769232,
+   "besterPreis": 208
+  },
+  {
+   "n": 85,
+   "jahr": 1603,
+   "woche": 7,
+   "kasse": 41,
+   "deckung": 0.1971153846153846,
+   "besterPreis": 208
+  },
+  {
+   "n": 86,
+   "jahr": 1603,
+   "woche": 8,
+   "kasse": 35,
+   "deckung": 0.16826923076923078,
+   "besterPreis": 208
+  },
+  {
+   "n": 87,
+   "jahr": 1603,
+   "woche": 9,
+   "kasse": 11,
+   "deckung": 0.052884615384615384,
+   "besterPreis": 208
+  },
+  {
+   "n": 88,
+   "jahr": 1603,
+   "woche": 10,
+   "kasse": 9,
+   "deckung": 0.030612244897959183,
+   "besterPreis": 294
+  },
+  {
+   "n": 89,
+   "jahr": 1603,
+   "woche": 11,
+   "kasse": 14,
+   "deckung": 0.041666666666666664,
+   "besterPreis": 336
+  },
+  {
+   "n": 90,
+   "jahr": 1603,
+   "woche": 12,
+   "kasse": 15,
+   "deckung": 0.11363636363636363,
+   "besterPreis": 132
+  },
+  {
+   "n": 91,
+   "jahr": 1603,
+   "woche": 13,
+   "kasse": 74,
+   "deckung": 0.5692307692307692,
+   "besterPreis": 130
+  },
+  {
+   "n": 92,
+   "jahr": 1603,
+   "woche": 14,
+   "kasse": 72,
+   "deckung": 0.5538461538461539,
+   "besterPreis": 130
+  },
+  {
+   "n": 93,
+   "jahr": 1603,
+   "woche": 15,
+   "kasse": 67,
+   "deckung": 0.5153846153846153,
+   "besterPreis": 130
+  },
+  {
+   "n": 94,
+   "jahr": 1603,
+   "woche": 16,
+   "kasse": 68,
+   "deckung": 0.5230769230769231,
+   "besterPreis": 130
+  },
+  {
+   "n": 95,
+   "jahr": 1603,
+   "woche": 17,
+   "kasse": 58,
+   "deckung": 0.30687830687830686,
+   "besterPreis": 189
+  },
+  {
+   "n": 96,
+   "jahr": 1603,
+   "woche": 18,
+   "kasse": 41,
+   "deckung": 0.12202380952380952,
+   "besterPreis": 336
+  },
+  {
+   "n": 97,
+   "jahr": 1603,
+   "woche": 19,
+   "kasse": 36,
+   "deckung": 0.10714285714285714,
+   "besterPreis": 336
+  },
+  {
+   "n": 98,
+   "jahr": 1603,
+   "woche": 20,
+   "kasse": 59,
+   "deckung": 0.5042735042735043,
+   "besterPreis": 117
+  },
+  {
+   "n": 99,
+   "jahr": 1603,
+   "woche": 21,
+   "kasse": 47,
+   "deckung": 0.4017094017094017,
+   "besterPreis": 117
+  },
+  {
+   "n": 100,
+   "jahr": 1603,
+   "woche": 22,
+   "kasse": 45,
+   "deckung": 0.3409090909090909,
+   "besterPreis": 132
+  }
+ ]
+}

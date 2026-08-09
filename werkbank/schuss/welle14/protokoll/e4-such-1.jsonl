@@ -1,0 +1,375 @@
+{"t":2.7,"was":"laden","url":"http://127.0.0.1:8936/spiel/?epoche=4&saat=1350&neu=1","fenster":"1600x900"}
+{"t":4.6,"was":"klick-nav","zug":"gegner:oeffnen:adler","text":"Adler-Bräu AG","jahr":1970,"woche":1,"kasse":86000,"ende":false,"endgrund":null}
+{"t":5.2,"was":"klick-nav","zug":"gegner:oeffnen:konzern","text":"Nordstern-Gruppe","jahr":1970,"woche":1,"kasse":86000,"ende":false,"endgrund":null}
+{"t":6,"was":"klick-nav","zug":"stadt:marke:fuhre-muehle","text":"MUE","jahr":1970,"woche":1,"kasse":86000,"ende":false,"endgrund":null}
+{"t":6.6,"was":"klick-nav","zug":"stadt:marke:fuhre-bruecke-unten","text":"BRU","jahr":1970,"woche":1,"kasse":86000,"ende":false,"endgrund":null}
+{"t":7.3,"was":"klick-nav","zug":"stadt:marke:fuhre-bahnhof","text":"BHF","jahr":1970,"woche":1,"kasse":86000,"ende":false,"endgrund":null}
+{"t":8,"was":"klick-nav","zug":"kern:chronik","text":"Chronik4","jahr":1970,"woche":1,"kasse":86000,"ende":false,"endgrund":null}
+{"t":8.4,"was":"klick-nav","zug":"kern:protokoll","text":"Buch1","jahr":1970,"woche":1,"kasse":86000,"ende":false,"endgrund":null}
+{"t":9.3,"was":"klick-nav","zug":"kern:anfangen","text":"Anfangen","jahr":1970,"woche":1,"kasse":86000,"ende":false,"endgrund":null}
+{"t":9.8,"was":"klick-nav","zug":"klang:ton","text":"♪","jahr":1970,"woche":1,"kasse":86000,"ende":false,"endgrund":null}
+{"t":10.6,"was":"klick-nav","zug":"stadt:bauhof","text":"BAUHOF4 offen · ab 9.570 DM · 4 bezahlbar","jahr":1970,"woche":1,"kasse":86000,"ende":false,"endgrund":null}
+{"t":11.5,"was":"klick-nav","zug":"stadt:reiter:gegner-amort-gg-band","text":"Ohne dich geschehen · 1 Zugzugeklappt","jahr":1970,"woche":1,"kasse":86000,"ende":false,"endgrund":null}
+{"t":12.2,"was":"klick-nav","zug":"stadt:reiter:fuhre-fu-brett-fu-haeuser","text":"DIE HÄUSERwollen 534 · im Keller liegen 210 hl","jahr":1970,"woche":1,"kasse":86000,"ende":false,"endgrund":null}
+{"t":12.9,"was":"klick-nav","zug":"stadt:reiter:fuhre-fu-brett-fu-schiefer-fu-tafel","text":"SUDPLANim Schaltraum, auf Formica","jahr":1970,"woche":1,"kasse":86000,"ende":false,"endgrund":null}
+{"t":13.3,"was":"klick-nav","zug":"stadt:reiter:fuhre-fu-brett-fu-keller","text":"DIE TANKS210 von 600 hl · 210 reif","jahr":1970,"woche":1,"kasse":86000,"ende":false,"endgrund":null}
+{"t":13.8,"was":"klick-nav","zug":"stadt:reiter:fuhre-fu-brett-fu-wagen","text":"LASTZUG0,0 von 450 hl · 0 von 3 Halten","jahr":1970,"woche":1,"kasse":86000,"ende":false,"endgrund":null}
+{"t":14.2,"was":"klick-nav","zug":"stadt:reiter:sud-sud-brett","text":"DAS SUDHAUSzugeklappt","jahr":1970,"woche":1,"kasse":86000,"ende":false,"endgrund":null}
+{"t":14.7,"was":"klick-nav","zug":"stadt:reiter:name-nm-band","text":"DER RUF DES HAUSESKronkorken, Bandenwerbung, Fernsehspot","jahr":1970,"woche":1,"kasse":86000,"ende":false,"endgrund":null}
+{"t":15.2,"was":"klick-nav","zug":"stadt:ortsmarken","text":"Ortsmarken6 auf dem Pflock","jahr":1970,"woche":1,"kasse":86000,"ende":false,"endgrund":null}
+{"t":16.2,"was":"klick-nav","zug":"preis:tafel","text":"Michaelitafel 1970 · 5 Angebote — heute ist Michaeli","jahr":1970,"woche":1,"kasse":86000,"ende":false,"endgrund":null}
+{"t":16.9,"was":"klick-nav","zug":"stadt:reiter:preis-pr-stil-offset-pr-tafel","text":"MICHAELI 1970Der Preis steht im Regal, und das Regal gehö","jahr":1970,"woche":1,"kasse":86000,"ende":false,"endgrund":null}
+{"t":17.8,"was":"klick-nav","zug":"stadt:alles-zuklappen","text":"Stadt zeigen","jahr":1970,"woche":1,"kasse":86000,"ende":false,"endgrund":null}
+{"t":18.3,"was":"klick-nav","zug":"kern:blatt-zu","text":"Schließen","jahr":1970,"woche":1,"kasse":86000,"ende":false,"endgrund":null}
+{"t":19,"was":"klick-preis","zug":"fuhre:plan:umkaempft","text":"Fahren: wo der Adler wirbt · 180 hl+21.064 DM","preis":21064,"kasseVor":86000,"kasseNach":95757,"jahr":1970,"woche":2,"ende":false,"endgrund":null}
+{"t":19.6,"was":"klick-preis","zug":"fuhre:plan:umkaempft","text":"Fahren: wo der Adler wirbt · 30 hl+3.486 DM","preis":3486,"kasseVor":95757,"kasseNach":92893,"jahr":1970,"woche":3,"ende":false,"endgrund":null}
+{"t":20.2,"was":"klick-preis","zug":"fuhre:plan:umkaempft","text":"Fahren: wo der Adler wirbt · 90 hl+1.914 DM","preis":1914,"kasseVor":92893,"kasseNach":88933,"jahr":1970,"woche":4,"ende":false,"endgrund":null}
+{"t":20.8,"was":"runde-ende","runde":1,"jahr":1970,"woche":5,"kasse":84133,"deckung":2.2012244577588236,"besterPreis":38221,"ende":false,"endgrund":null,"echteWochenGesamt":5}
+{"t":21.4,"was":"klick-nav","zug":"gegner:hinhalten:ochse","text":"Zuschuss in Bier4,5 hl statt Geld","jahr":1970,"woche":5,"kasse":84133,"ende":false,"endgrund":null}
+{"t":22,"was":"klick-nav","zug":"sud:zettel-anstich","text":"Hefe ziehen · +8 · ohne Fass","jahr":1970,"woche":5,"kasse":84133,"ende":false,"endgrund":null}
+{"t":22.9,"was":"klick-nav","zug":"fuhre:sprung","text":"Weiter wie zuletzt · bis zu 6 Wochen","jahr":1970,"woche":11,"kasse":95706,"ende":false,"endgrund":null}
+{"t":23.4,"was":"klick-nav","zug":"kern:chronik","text":"Chronik6","jahr":1970,"woche":11,"kasse":95706,"ende":false,"endgrund":null}
+{"t":23.9,"was":"klick-nav","zug":"kern:protokoll","text":"Buch61","jahr":1970,"woche":11,"kasse":95706,"ende":false,"endgrund":null}
+{"t":24.3,"was":"klick-nav","zug":"klang:ton","text":"—","jahr":1970,"woche":11,"kasse":95706,"ende":false,"endgrund":null}
+{"t":25,"was":"klick-nav","zug":"stadt:reiter:gegner-amort-gg-band","text":"Ohne dich geschehen · 6 Zügezugeklappt","jahr":1970,"woche":11,"kasse":95706,"ende":false,"endgrund":null}
+{"t":25.7,"was":"klick-nav","zug":"stadt:reiter:fuhre-fu-brett-fu-haeuser","text":"DIE HÄUSERwollen 893 · im Keller liegen 120 hl","jahr":1970,"woche":11,"kasse":95706,"ende":false,"endgrund":null}
+{"t":26.4,"was":"klick-nav","zug":"stadt:reiter:fuhre-fu-brett-fu-keller","text":"DIE TANKS120 von 600 hl · 120 reif","jahr":1970,"woche":11,"kasse":95706,"ende":false,"endgrund":null}
+{"t":27.1,"was":"klick-nav","zug":"stadt:ortsmarken","text":"Ortsmarken6 im Bild","jahr":1970,"woche":11,"kasse":95706,"ende":false,"endgrund":null}
+{"t":28.4,"was":"klick-nav","zug":"preis:tafel","text":"Michaelitafel 1970 · 5 Angebote","jahr":1970,"woche":11,"kasse":95706,"ende":false,"endgrund":null}
+{"t":29.3,"was":"klick-preis","zug":"sud:zettel-wechsel-kauf","text":"Kieselgurfilter−26.000 DMlässt Exportbier zu","preis":-26000,"kasseVor":95706,"kasseNach":69706,"jahr":1970,"woche":11,"ende":false,"endgrund":null}
+{"t":30.1,"was":"klick-preis","zug":"sud:zettel-wechsel-kauf","text":"Betriebslabor, Stammwürze und Bittereinheiten−42.000 DMlässt Exportbier zu","preis":-42000,"kasseVor":69706,"kasseNach":27706,"jahr":1970,"woche":11,"ende":false,"endgrund":null}
+{"t":31.2,"was":"runde-ende","runde":2,"jahr":1970,"woche":12,"kasse":27086,"deckung":1.2841835767115495,"besterPreis":21092,"ende":false,"endgrund":null,"echteWochenGesamt":7}
+{"t":32.1,"was":"klick-nav","zug":"gegner:hinhalten:lindenhof","text":"Zuschuss in Bier4,5 hl statt Geld","jahr":1970,"woche":12,"kasse":27086,"ende":false,"endgrund":null}
+{"t":32.8,"was":"klick-nav","zug":"gegner:hinhalten:neustadt","text":"Zuschuss in Bier4,5 hl statt Geld","jahr":1970,"woche":12,"kasse":27086,"ende":false,"endgrund":null}
+{"t":33.6,"was":"klick-nav","zug":"gegner:blatt","text":"Das Haus gegenüber","jahr":1970,"woche":12,"kasse":27086,"ende":false,"endgrund":null}
+{"t":34.3,"was":"klick-nav","zug":"sud:zettel-anstich","text":"Frisches Fass · +14 · 1,5 hl","jahr":1970,"woche":12,"kasse":27086,"ende":false,"endgrund":null}
+{"t":35.1,"was":"klick-nav","zug":"sud:zettel-wechsel-frei","text":"Naturtrüb, unfiltriertnur Pilsner","jahr":1970,"woche":12,"kasse":27086,"ende":false,"endgrund":null}
+{"t":35.7,"was":"klick-nav","zug":"sud:zettel-wechsel-frei2","text":"Schönen mit Kieselsolnur Pilsner","jahr":1970,"woche":12,"kasse":27086,"ende":false,"endgrund":null}
+{"t":36.3,"was":"klick-nav","zug":"kern:chronik","text":"Chronik18","jahr":1970,"woche":12,"kasse":27086,"ende":false,"endgrund":null}
+{"t":36.8,"was":"klick-nav","zug":"kern:protokoll","text":"Buch164","jahr":1970,"woche":12,"kasse":27086,"ende":false,"endgrund":null}
+{"t":37.3,"was":"klick-nav","zug":"klang:ton","text":"♪","jahr":1970,"woche":12,"kasse":27086,"ende":false,"endgrund":null}
+{"t":38.2,"was":"klick-nav","zug":"stadt:reiter:gegner-amort-gg-band","text":"Ohne dich geschehen · 19 Zügeliegt auf","jahr":1970,"woche":12,"kasse":27086,"ende":false,"endgrund":null}
+{"t":38.9,"was":"klick-nav","zug":"stadt:reiter:fuhre-fu-brett-fu-haeuser","text":"DIE HÄUSERwollen 1.130 · im Keller liegen 30 hl","jahr":1970,"woche":12,"kasse":27086,"ende":false,"endgrund":null}
+{"t":39.6,"was":"klick-nav","zug":"stadt:reiter:fuhre-fu-brett-fu-keller","text":"DIE TANKS30 von 600 hl · 30 reif","jahr":1970,"woche":12,"kasse":27086,"ende":false,"endgrund":null}
+{"t":40.2,"was":"klick-nav","zug":"stadt:ortsmarken","text":"Ortsmarken6 auf dem Pflock","jahr":1970,"woche":12,"kasse":27086,"ende":false,"endgrund":null}
+{"t":40.9,"was":"klick-nav","zug":"gegner:hinhalten:muehlwirt","text":"Zuschuss in Bier4,5 hl statt Geld","jahr":1970,"woche":12,"kasse":27086,"ende":false,"endgrund":null}
+{"t":41.5,"was":"klick-preis","zug":"fuhre:plan:mager","text":"Fahren: die mageren Häuser · 15 hl+458 DM","preis":458,"kasseVor":27086,"kasseNach":26735,"jahr":1970,"woche":13,"ende":false,"endgrund":null}
+{"t":42.1,"was":"klick-preis","zug":"fuhre:plan:mager","text":"Fahren: die mageren Häuser · 45 hl+1.734 DM","preis":1734,"kasseVor":26735,"kasseNach":27280,"jahr":1970,"woche":14,"ende":false,"endgrund":null}
+{"t":42.7,"was":"klick-preis","zug":"fuhre:plan:mager","text":"Fahren: die mageren Häuser · 45 hl+1.734 DM","preis":1734,"kasseVor":27280,"kasseNach":27830,"jahr":1970,"woche":15,"ende":false,"endgrund":null}
+{"t":43.3,"was":"runde-ende","runde":3,"jahr":1970,"woche":16,"kasse":27210,"deckung":2.764681975208291,"besterPreis":9842,"ende":false,"endgrund":null,"echteWochenGesamt":11}
+{"t":43.8,"was":"klick-nav","zug":"kern:chronik","text":"Chronik23","jahr":1970,"woche":16,"kasse":27210,"ende":false,"endgrund":null}
+{"t":44.3,"was":"klick-nav","zug":"kern:protokoll","text":"Buch197","jahr":1970,"woche":16,"kasse":27210,"ende":false,"endgrund":null}
+{"t":44.8,"was":"klick-nav","zug":"klang:ton","text":"—","jahr":1970,"woche":16,"kasse":27210,"ende":false,"endgrund":null}
+{"t":45.5,"was":"klick-nav","zug":"stadt:reiter:gegner-amort-gg-band","text":"Ohne dich geschehen · 23 Zügezugeklappt","jahr":1970,"woche":16,"kasse":27210,"ende":false,"endgrund":null}
+{"t":46.2,"was":"klick-nav","zug":"stadt:reiter:fuhre-fu-brett-fu-haeuser","text":"DIE HÄUSERwollen 1.203 · im Keller liegen 45 hl","jahr":1970,"woche":16,"kasse":27210,"ende":false,"endgrund":null}
+{"t":46.8,"was":"klick-nav","zug":"stadt:reiter:fuhre-fu-brett-fu-keller","text":"DIE TANKS45 von 600 hl · 45 reif","jahr":1970,"woche":16,"kasse":27210,"ende":false,"endgrund":null}
+{"t":47.4,"was":"klick-nav","zug":"stadt:ortsmarken","text":"Ortsmarken6 im Bild","jahr":1970,"woche":16,"kasse":27210,"ende":false,"endgrund":null}
+{"t":48.1,"was":"klick-nav","zug":"gegner:zeige:23","text":"zeigen","jahr":1970,"woche":16,"kasse":27210,"ende":false,"endgrund":null}
+{"t":49.1,"was":"klick-preis","zug":"fuhre:plan:mager","text":"Fahren: die mageren Häuser · 45 hl+1.734 DM","preis":1734,"kasseVor":27210,"kasseNach":27748,"jahr":1970,"woche":17,"ende":false,"endgrund":null}
+{"t":49.7,"was":"klick-preis","zug":"fuhre:plan:mager","text":"Fahren: die mageren Häuser · 45 hl+1.734 DM","preis":1734,"kasseVor":27748,"kasseNach":28286,"jahr":1970,"woche":18,"ende":false,"endgrund":null}
+{"t":50.3,"was":"klick-preis","zug":"fuhre:plan:mager","text":"Fahren: die mageren Häuser · 45 hl+1.734 DM","preis":1734,"kasseVor":28286,"kasseNach":28824,"jahr":1970,"woche":19,"ende":false,"endgrund":null}
+{"t":51.1,"was":"runde-ende","runde":4,"jahr":1970,"woche":20,"kasse":28204,"deckung":1.289620484682213,"besterPreis":21870,"ende":false,"endgrund":null,"echteWochenGesamt":15}
+{"t":51.7,"was":"klick-nav","zug":"gegner:zeige:30","text":"zeigen","jahr":1970,"woche":20,"kasse":28204,"ende":false,"endgrund":null}
+{"t":52.2,"was":"klick-nav","zug":"stadt:marke:gegner-bruecke-unten","text":"frei geworden","jahr":1970,"woche":20,"kasse":28204,"ende":false,"endgrund":null}
+{"t":52.9,"was":"klick-nav","zug":"kern:chronik","text":"Chronik26","jahr":1970,"woche":20,"kasse":28204,"ende":false,"endgrund":null}
+{"t":53.4,"was":"klick-nav","zug":"kern:protokoll","text":"Buch230","jahr":1970,"woche":20,"kasse":28204,"ende":false,"endgrund":null}
+{"t":53.8,"was":"klick-nav","zug":"klang:ton","text":"♪","jahr":1970,"woche":20,"kasse":28204,"ende":false,"endgrund":null}
+{"t":54.4,"was":"klick-nav","zug":"stadt:reiter:gegner-amort-gg-gzblock-gg-gzgebot","text":"MITBIETEN · PFARRSCHENKE ST. Mliegt auf","jahr":1970,"woche":20,"kasse":28204,"ende":false,"endgrund":null}
+{"t":55,"was":"klick-nav","zug":"stadt:reiter:gegner-amort-gg-band","text":"Ohne dich geschehen · 30 Zügeliegt auf","jahr":1970,"woche":20,"kasse":28204,"ende":false,"endgrund":null}
+{"t":55.6,"was":"klick-nav","zug":"stadt:reiter:fuhre-fu-brett-fu-haeuser","text":"DIE HÄUSERwollen 1.257 · im Keller liegen 45 hl","jahr":1970,"woche":20,"kasse":28204,"ende":false,"endgrund":null}
+{"t":56.1,"was":"klick-nav","zug":"stadt:ortsmarken","text":"Ortsmarken7 auf dem Pflock","jahr":1970,"woche":20,"kasse":28204,"ende":false,"endgrund":null}
+{"t":56.7,"was":"klick-preis","zug":"fuhre:plan:mager","text":"Fahren: die mageren Häuser · 45 hl+1.734 DM","preis":1734,"kasseVor":28204,"kasseNach":28733,"jahr":1970,"woche":21,"ende":false,"endgrund":null}
+{"t":57.4,"was":"klick-preis","zug":"fuhre:plan:mager","text":"Fahren: die mageren Häuser · 45 hl+1.734 DM","preis":1734,"kasseVor":28733,"kasseNach":29262,"jahr":1970,"woche":22,"ende":false,"endgrund":null}
+{"t":57.9,"was":"klick-preis","zug":"fuhre:plan:mager","text":"Fahren: die mageren Häuser · 45 hl+1.734 DM","preis":1734,"kasseVor":29262,"kasseNach":29791,"jahr":1970,"woche":23,"ende":false,"endgrund":null}
+{"t":58.5,"was":"runde-ende","runde":5,"jahr":1970,"woche":24,"kasse":29171,"deckung":1.1617283950617283,"besterPreis":25110,"ende":false,"endgrund":null,"echteWochenGesamt":19}
+{"t":59,"was":"klick-nav","zug":"stadt:marke:gegner-lindenhof","text":"frei geworden","jahr":1970,"woche":24,"kasse":29171,"ende":false,"endgrund":null}
+{"t":59.6,"was":"klick-nav","zug":"stadt:marke:gegner-muehle","text":"frei geworden","jahr":1970,"woche":24,"kasse":29171,"ende":false,"endgrund":null}
+{"t":60.3,"was":"klick-nav","zug":"kern:chronik","text":"Chronik28","jahr":1970,"woche":24,"kasse":29171,"ende":false,"endgrund":null}
+{"t":60.7,"was":"klick-nav","zug":"kern:protokoll","text":"Buch261","jahr":1970,"woche":24,"kasse":29171,"ende":false,"endgrund":null}
+{"t":61.2,"was":"klick-nav","zug":"klang:ton","text":"—","jahr":1970,"woche":24,"kasse":29171,"ende":false,"endgrund":null}
+{"t":61.8,"was":"klick-nav","zug":"stadt:reiter:gegner-amort-gg-band","text":"Ohne dich geschehen · 36 Zügezugeklappt","jahr":1970,"woche":24,"kasse":29171,"ende":false,"endgrund":null}
+{"t":62.3,"was":"klick-nav","zug":"stadt:ortsmarken","text":"Ortsmarken8 im Bild","jahr":1970,"woche":24,"kasse":29171,"ende":false,"endgrund":null}
+{"t":62.9,"was":"klick-nav","zug":"gegner:zeige:36","text":"zeigen","jahr":1970,"woche":24,"kasse":29171,"ende":false,"endgrund":null}
+{"t":63.5,"was":"klick-preis","zug":"fuhre:plan:mager","text":"Fahren: die mageren Häuser · 45 hl+1.734 DM","preis":1734,"kasseVor":29171,"kasseNach":29700,"jahr":1970,"woche":25,"ende":false,"endgrund":null}
+{"t":64.1,"was":"klick-preis","zug":"fuhre:plan:mager","text":"Fahren: die mageren Häuser · 45 hl+1.734 DM","preis":1734,"kasseVor":29700,"kasseNach":30142,"jahr":1970,"woche":26,"ende":false,"endgrund":null}
+{"t":64.7,"was":"klick-preis","zug":"fuhre:plan:mager","text":"Fahren: die mageren Häuser · 45 hl+1.734 DM","preis":1734,"kasseVor":30142,"kasseNach":30584,"jahr":1970,"woche":27,"ende":false,"endgrund":null}
+{"t":65.3,"was":"runde-ende","runde":6,"jahr":1970,"woche":28,"kasse":29964,"deckung":1.1933094384707288,"besterPreis":25110,"ende":false,"endgrund":null,"echteWochenGesamt":23}
+{"t":65.9,"was":"klick-nav","zug":"gegner:angebot-nein","text":"Ausschlagen","jahr":1970,"woche":28,"kasse":29964,"ende":false,"endgrund":null}
+{"t":66.4,"was":"klick-nav","zug":"gegner:zeige:39","text":"zeigen","jahr":1970,"woche":28,"kasse":29964,"ende":false,"endgrund":null}
+{"t":67,"was":"klick-nav","zug":"fuhre:sprung","text":"Weiter wie zuletzt · bis zu 2 Wochen","jahr":1970,"woche":30,"kasse":30848,"ende":false,"endgrund":null}
+{"t":67.5,"was":"klick-nav","zug":"kern:chronik","text":"Chronik31","jahr":1970,"woche":30,"kasse":30848,"ende":false,"endgrund":null}
+{"t":67.9,"was":"klick-nav","zug":"kern:protokoll","text":"Buch289","jahr":1970,"woche":30,"kasse":30848,"ende":false,"endgrund":null}
+{"t":68.3,"was":"klick-nav","zug":"klang:ton","text":"♪","jahr":1970,"woche":30,"kasse":30848,"ende":false,"endgrund":null}
+{"t":69,"was":"klick-nav","zug":"stadt:reiter:gegner-amort-gg-band","text":"Ohne dich geschehen · 39 Zügeliegt auf","jahr":1970,"woche":30,"kasse":30848,"ende":false,"endgrund":null}
+{"t":69.6,"was":"klick-nav","zug":"stadt:reiter:name-nm-band","text":"DER RUF DES HAUSESGENOMMEN von Der Handel bis 1973","jahr":1970,"woche":30,"kasse":30848,"ende":false,"endgrund":null}
+{"t":70,"was":"klick-nav","zug":"stadt:ortsmarken","text":"Ortsmarken6 auf dem Pflock","jahr":1970,"woche":30,"kasse":30848,"ende":false,"endgrund":null}
+{"t":70.8,"was":"klick-nav","zug":"name:aufgeldbuch","text":"Das Aufgeld nachrechnen","jahr":1970,"woche":30,"kasse":30848,"ende":false,"endgrund":null}
+{"t":71.3,"was":"klick-nav","zug":"name:liefern","text":"Unter dem Zeichen ausliefern","jahr":1970,"woche":30,"kasse":30848,"ende":false,"endgrund":null}
+{"t":72.1,"was":"klick-nav","zug":"name:zurueckhalten","text":"Das Zeichen einziehen","jahr":1970,"woche":30,"kasse":30848,"ende":false,"endgrund":null}
+{"t":72.8,"was":"klick-nav","zug":"name:ruhe","text":"Das Zeichen verdecken","jahr":1970,"woche":30,"kasse":30848,"ende":false,"endgrund":null}
+{"t":73.3,"was":"klick-nav","zug":"name:herumgehen","text":"Herumgehen und den Namen sagen","jahr":1970,"woche":30,"kasse":30848,"ende":false,"endgrund":null}
+{"t":74,"was":"klick-nav","zug":"name:blatt","text":"Das Zeichen und das Register","jahr":1970,"woche":30,"kasse":30848,"ende":false,"endgrund":null}
+{"t":74.7,"was":"klick-nav","zug":"stadt:reiter:fuhre-fu-brett-fu-haeuser","text":"DIE HÄUSERwollen 1.227 · im Keller liegen 45 hl","jahr":1970,"woche":30,"kasse":30848,"ende":false,"endgrund":null}
+{"t":75.6,"was":"klick-nav","zug":"preis:chronik-auf","text":"Chronik des Hauses · 1 Festlegung · 0 von dieser Tafel · 0 Bauten stehen","jahr":1970,"woche":30,"kasse":30848,"ende":false,"endgrund":null}
+{"t":76.5,"was":"klick-nav","zug":"preis:tafel","text":"Michaelitafel schließen","jahr":1970,"woche":30,"kasse":30848,"ende":false,"endgrund":null}
+{"t":78,"was":"klick-preis","zug":"fuhre:plan:mager","text":"Fahren: die mageren Häuser · 45 hl+1.734 DM","preis":1734,"kasseVor":30848,"kasseNach":50017,"jahr":1971,"woche":1,"ende":false,"endgrund":null}
+{"t":79.1,"was":"klick-preis","zug":"gegner:abwehren:pfarrhof","text":"verhandelt · noch 3 Wo.zuvorkommen 10.546 DM","preis":-10546,"kasseVor":50017,"kasseNach":39471,"jahr":1971,"woche":1,"ende":false,"endgrund":null}
+{"t":80.2,"was":"runde-ende","runde":7,"jahr":1971,"woche":2,"kasse":38839,"deckung":1.3699823633156967,"besterPreis":28350,"ende":false,"endgrund":null,"echteWochenGesamt":26}
+{"t":80.9,"was":"klick-nav","zug":"kern:chronik","text":"Chronik40","jahr":1971,"woche":2,"kasse":38839,"ende":false,"endgrund":null}
+{"t":81.6,"was":"klick-nav","zug":"kern:protokoll","text":"Buch322","jahr":1971,"woche":2,"kasse":38839,"ende":false,"endgrund":null}
+{"t":82.2,"was":"klick-nav","zug":"klang:ton","text":"—","jahr":1971,"woche":2,"kasse":38839,"ende":false,"endgrund":null}
+{"t":83.1,"was":"klick-nav","zug":"stadt:reiter:gegner-amort-gg-band","text":"Ohne dich geschehen · 41 Zügezugeklappt","jahr":1971,"woche":2,"kasse":38839,"ende":false,"endgrund":null}
+{"t":83.9,"was":"klick-nav","zug":"stadt:reiter:fuhre-fu-brett-fu-haeuser","text":"DIE HÄUSERwollen 1.253 · im Keller liegen 45 hl","jahr":1971,"woche":2,"kasse":38839,"ende":false,"endgrund":null}
+{"t":84.5,"was":"klick-nav","zug":"stadt:ortsmarken","text":"Ortsmarken6 im Bild","jahr":1971,"woche":2,"kasse":38839,"ende":false,"endgrund":null}
+{"t":86.6,"was":"klick-nav","zug":"preis:tafel","text":"Michaelitafel 1971 · 5 Angebote","jahr":1971,"woche":2,"kasse":38839,"ende":false,"endgrund":null}
+{"t":87.4,"was":"klick-nav","zug":"stadt:reiter:preis-pr-stil-offset-pr-tafel","text":"MICHAELI 1971Der Preis steht im Regal, und das Regal gehö","jahr":1971,"woche":2,"kasse":38839,"ende":false,"endgrund":null}
+{"t":88.1,"was":"klick-nav","zug":"gegner:zeige:41","text":"zeigen","jahr":1971,"woche":2,"kasse":38839,"ende":false,"endgrund":null}
+{"t":88.7,"was":"klick-nav","zug":"fuhre:ziel:bar","text":"So verabreden","jahr":1971,"woche":2,"kasse":38839,"ende":false,"endgrund":null}
+{"t":89.3,"was":"klick-nav","zug":"fuhre:ziel:ziel","text":"So verabreden","jahr":1971,"woche":2,"kasse":38839,"ende":false,"endgrund":null}
+{"t":90,"was":"klick-preis","zug":"fuhre:plan:umkaempft","text":"Fahren: wo der Adler wirbt · 45 hl+1.790 DM","preis":1790,"kasseVor":38839,"kasseNach":39248,"jahr":1971,"woche":3,"ende":false,"endgrund":null}
+{"t":90.6,"was":"klick-preis","zug":"fuhre:plan:umkaempft","text":"Fahren: wo der Adler wirbt · 45 hl+1.790 DM","preis":1790,"kasseVor":39248,"kasseNach":39656,"jahr":1971,"woche":4,"ende":false,"endgrund":null}
+{"t":91.2,"was":"klick-preis","zug":"fuhre:plan:durst","text":"Fahren: nach Durst · 45 hl+1.790 DM","preis":1790,"kasseVor":39656,"kasseNach":40107,"jahr":1971,"woche":5,"ende":false,"endgrund":null}
+{"t":91.8,"was":"runde-ende","runde":8,"jahr":1971,"woche":6,"kasse":39475,"deckung":2.005537773713357,"besterPreis":19683,"ende":false,"endgrund":null,"echteWochenGesamt":30}
+{"t":92.5,"was":"klick-nav","zug":"gegner:zeige:47","text":"zeigen","jahr":1971,"woche":6,"kasse":39475,"ende":false,"endgrund":null}
+{"t":93.4,"was":"klick-nav","zug":"fuhre:sprung","text":"Weiter wie zuletzt · bis zu 6 Wochen","jahr":1971,"woche":12,"kasse":41057,"ende":false,"endgrund":null}
+{"t":93.8,"was":"klick-nav","zug":"kern:chronik","text":"Chronik46","jahr":1971,"woche":12,"kasse":41057,"ende":false,"endgrund":null}
+{"t":94.3,"was":"klick-nav","zug":"kern:protokoll","text":"Buch355","jahr":1971,"woche":12,"kasse":41057,"ende":false,"endgrund":null}
+{"t":94.8,"was":"klick-nav","zug":"klang:ton","text":"♪","jahr":1971,"woche":12,"kasse":41057,"ende":false,"endgrund":null}
+{"t":95.5,"was":"klick-nav","zug":"stadt:reiter:gegner-amort-gg-band","text":"Ohne dich geschehen · 47 Zügeliegt auf","jahr":1971,"woche":12,"kasse":41057,"ende":false,"endgrund":null}
+{"t":96.2,"was":"klick-nav","zug":"stadt:reiter:fuhre-fu-brett-fu-haeuser","text":"DIE HÄUSERwollen 1.257 · im Keller liegen 45 hl","jahr":1971,"woche":12,"kasse":41057,"ende":false,"endgrund":null}
+{"t":96.6,"was":"klick-nav","zug":"stadt:ortsmarken","text":"Ortsmarken6 auf dem Pflock","jahr":1971,"woche":12,"kasse":41057,"ende":false,"endgrund":null}
+{"t":97.3,"was":"klick-nav","zug":"stadt:reiter:fuhre-fu-brett-fu-keller","text":"DIE TANKS90 von 600 hl · 90 reif","jahr":1971,"woche":12,"kasse":41057,"ende":false,"endgrund":null}
+{"t":98,"was":"klick-preis","zug":"fuhre:plan:umkaempft","text":"Fahren: wo der Adler wirbt · 90 hl+2.040 DM","preis":2040,"kasseVor":41057,"kasseNach":40830,"jahr":1971,"woche":13,"ende":false,"endgrund":null}
+{"t":98.6,"was":"klick-preis","zug":"fuhre:plan:durst","text":"Fahren: nach Durst · 45 hl+1.790 DM","preis":1790,"kasseVor":40830,"kasseNach":41272,"jahr":1971,"woche":14,"ende":false,"endgrund":null}
+{"t":99.3,"was":"klick-preis","zug":"fuhre:plan:durst","text":"Fahren: nach Durst · 45 hl+1.790 DM","preis":1790,"kasseVor":41272,"kasseNach":41714,"jahr":1971,"woche":15,"ende":false,"endgrund":null}
+{"t":99.9,"was":"runde-ende","runde":9,"jahr":1971,"woche":16,"kasse":41082,"deckung":1.449100529100529,"besterPreis":28350,"ende":false,"endgrund":null,"echteWochenGesamt":35}
+{"t":100.5,"was":"klick-nav","zug":"sud:zettel-anstich","text":"Hefe ziehen · +8 · ohne Fass","jahr":1971,"woche":16,"kasse":41082,"ende":false,"endgrund":null}
+{"t":101.2,"was":"klick-nav","zug":"sud:zettel-charge-frei","text":"Freigeben · Charge 34 · ±6 %","jahr":1971,"woche":16,"kasse":41082,"ende":false,"endgrund":null}
+{"t":101.6,"was":"klick-nav","zug":"kern:chronik","text":"Chronik52","jahr":1971,"woche":16,"kasse":41082,"ende":false,"endgrund":null}
+{"t":102.1,"was":"klick-nav","zug":"kern:protokoll","text":"Buch440","jahr":1971,"woche":16,"kasse":41082,"ende":false,"endgrund":null}
+{"t":102.5,"was":"klick-nav","zug":"klang:ton","text":"—","jahr":1971,"woche":16,"kasse":41082,"ende":false,"endgrund":null}
+{"t":103.1,"was":"klick-nav","zug":"stadt:reiter:gegner-amort-gg-adler-gg-stand","text":"ADLER-BRÄU AGliegt auf","jahr":1971,"woche":16,"kasse":41082,"ende":false,"endgrund":null}
+{"t":103.7,"was":"klick-nav","zug":"stadt:reiter:gegner-amort-gg-band","text":"Ohne dich geschehen · 60 Zügezugeklappt","jahr":1971,"woche":16,"kasse":41082,"ende":false,"endgrund":null}
+{"t":104.3,"was":"klick-nav","zug":"stadt:reiter:fuhre-fu-brett-fu-keller","text":"DIE TANKS45 von 600 hl · 45 reif","jahr":1971,"woche":16,"kasse":41082,"ende":false,"endgrund":null}
+{"t":104.8,"was":"klick-nav","zug":"stadt:ortsmarken","text":"Ortsmarken7 im Bild","jahr":1971,"woche":16,"kasse":41082,"ende":false,"endgrund":null}
+{"t":105.4,"was":"klick-nav","zug":"gegner:zeige:60","text":"zeigen","jahr":1971,"woche":16,"kasse":41082,"ende":false,"endgrund":null}
+{"t":106,"was":"klick-nav","zug":"stadt:reiter:fuhre-fu-brett-fu-haeuser","text":"DIE HÄUSERwollen 1.257 · im Keller liegen 90 hl","jahr":1971,"woche":16,"kasse":41082,"ende":false,"endgrund":null}
+{"t":106.8,"was":"klick-preis","zug":"fuhre:plan:umkaempft","text":"Fahren: wo der Adler wirbt · 90 hl+2.040 DM","preis":2040,"kasseVor":41082,"kasseNach":41021,"jahr":1971,"woche":17,"ende":false,"endgrund":null}
+{"t":107.4,"was":"klick-preis","zug":"gegner:zukaufen:neustadt","text":"lieber zukaufen4,5 hl · 780 DM","preis":-780,"kasseVor":41021,"kasseNach":40241,"jahr":1971,"woche":17,"ende":false,"endgrund":null}
+{"t":108,"was":"klick-preis","zug":"fuhre:listen:hirsch","text":"Regalmeter−8.573 DM","preis":-8573,"kasseVor":40241,"kasseNach":31668,"jahr":1971,"woche":17,"ende":false,"endgrund":null}
+{"t":108.6,"was":"runde-ende","runde":10,"jahr":1971,"woche":18,"kasse":31001,"deckung":1.093509700176367,"besterPreis":28350,"ende":false,"endgrund":null,"echteWochenGesamt":37}
+{"t":109.2,"was":"klick-nav","zug":"gegner:zeige:62","text":"zeigen","jahr":1971,"woche":18,"kasse":31001,"ende":false,"endgrund":null}
+{"t":109.8,"was":"klick-nav","zug":"sud:zettel-charge-frei","text":"Freigeben · Charge 36 · ±6 %","jahr":1971,"woche":18,"kasse":31001,"ende":false,"endgrund":null}
+{"t":110.2,"was":"klick-nav","zug":"kern:chronik","text":"Chronik56","jahr":1971,"woche":18,"kasse":31001,"ende":false,"endgrund":null}
+{"t":110.6,"was":"klick-nav","zug":"kern:protokoll","text":"Buch464","jahr":1971,"woche":18,"kasse":31001,"ende":false,"endgrund":null}
+{"t":111.1,"was":"klick-nav","zug":"klang:ton","text":"♪","jahr":1971,"woche":18,"kasse":31001,"ende":false,"endgrund":null}
+{"t":111.7,"was":"klick-nav","zug":"stadt:reiter:gegner-amort-gg-band","text":"Ohne dich geschehen · 62 Zügeliegt auf","jahr":1971,"woche":18,"kasse":31001,"ende":false,"endgrund":null}
+{"t":112.3,"was":"klick-nav","zug":"stadt:reiter:fuhre-fu-brett-fu-haeuser","text":"DIE HÄUSERwollen 1.239 · im Keller liegen 45 hl","jahr":1971,"woche":18,"kasse":31001,"ende":false,"endgrund":null}
+{"t":112.7,"was":"klick-nav","zug":"stadt:ortsmarken","text":"Ortsmarken7 auf dem Pflock","jahr":1971,"woche":18,"kasse":31001,"ende":false,"endgrund":null}
+{"t":113.3,"was":"klick-nav","zug":"sud:zettel-anstich","text":"Frisches Fass · +14 · 1,5 hl","jahr":1971,"woche":18,"kasse":31001,"ende":false,"endgrund":null}
+{"t":113.9,"was":"klick-nav","zug":"stadt:reiter:fuhre-fu-brett-fu-keller","text":"DIE TANKS90 von 600 hl · 90 reif","jahr":1971,"woche":18,"kasse":31001,"ende":false,"endgrund":null}
+{"t":114.5,"was":"klick-preis","zug":"fuhre:plan:umkaempft","text":"Fahren: wo der Adler wirbt · 89 hl+1.981 DM","preis":1981,"kasseVor":31001,"kasseNach":30927,"jahr":1971,"woche":19,"ende":false,"endgrund":null}
+{"t":115,"was":"klick-preis","zug":"fuhre:plan:durst","text":"Fahren: nach Durst · 45 hl+1.790 DM","preis":1790,"kasseVor":30927,"kasseNach":31334,"jahr":1971,"woche":20,"ende":false,"endgrund":null}
+{"t":115.5,"was":"klick-preis","zug":"fuhre:plan:durst","text":"Fahren: nach Durst · 45 hl+1.790 DM","preis":1790,"kasseVor":31334,"kasseNach":31741,"jahr":1971,"woche":21,"ende":false,"endgrund":null}
+{"t":116.1,"was":"runde-ende","runde":11,"jahr":1971,"woche":22,"kasse":31074,"deckung":1.096084656084656,"besterPreis":28350,"ende":false,"endgrund":null,"echteWochenGesamt":41}
+{"t":116.6,"was":"klick-nav","zug":"stadt:marke:gegner-bahnhof","text":"frei geworden","jahr":1971,"woche":22,"kasse":31074,"ende":false,"endgrund":null}
+{"t":117.2,"was":"klick-nav","zug":"kern:chronik","text":"Chronik59","jahr":1971,"woche":22,"kasse":31074,"ende":false,"endgrund":null}
+{"t":117.6,"was":"klick-nav","zug":"kern:protokoll","text":"Buch497","jahr":1971,"woche":22,"kasse":31074,"ende":false,"endgrund":null}
+{"t":118,"was":"klick-nav","zug":"klang:ton","text":"—","jahr":1971,"woche":22,"kasse":31074,"ende":false,"endgrund":null}
+{"t":118.6,"was":"klick-nav","zug":"stadt:reiter:gegner-amort-gg-band","text":"Ohne dich geschehen · 64 Zügezugeklappt","jahr":1971,"woche":22,"kasse":31074,"ende":false,"endgrund":null}
+{"t":119.3,"was":"klick-nav","zug":"stadt:reiter:fuhre-fu-brett-fu-haeuser","text":"DIE HÄUSERwollen 1.256 · im Keller liegen 45 hl","jahr":1971,"woche":22,"kasse":31074,"ende":false,"endgrund":null}
+{"t":119.9,"was":"klick-nav","zug":"stadt:reiter:fuhre-fu-brett-fu-keller","text":"DIE TANKS45 von 600 hl · 45 reif","jahr":1971,"woche":22,"kasse":31074,"ende":false,"endgrund":null}
+{"t":120.4,"was":"klick-nav","zug":"stadt:ortsmarken","text":"Ortsmarken7 im Bild","jahr":1971,"woche":22,"kasse":31074,"ende":false,"endgrund":null}
+{"t":120.9,"was":"klick-nav","zug":"gegner:zeige:64","text":"zeigen","jahr":1971,"woche":22,"kasse":31074,"ende":false,"endgrund":null}
+{"t":121.6,"was":"klick-preis","zug":"fuhre:plan:durst","text":"Fahren: nach Durst · 45 hl+1.790 DM","preis":1790,"kasseVor":31074,"kasseNach":31481,"jahr":1971,"woche":23,"ende":false,"endgrund":null}
+{"t":122.4,"was":"klick-preis","zug":"fuhre:plan:umkaempft","text":"Fahren: wo der Adler wirbt · 45 hl+1.790 DM","preis":1790,"kasseVor":31481,"kasseNach":31888,"jahr":1971,"woche":24,"ende":false,"endgrund":null}
+{"t":123.1,"was":"klick-preis","zug":"fuhre:plan:umkaempft","text":"Fahren: wo der Adler wirbt · 45 hl+1.790 DM","preis":1790,"kasseVor":31888,"kasseNach":32295,"jahr":1971,"woche":25,"ende":false,"endgrund":null}
+{"t":123.7,"was":"runde-ende","runde":12,"jahr":1971,"woche":26,"kasse":31628,"deckung":4.820606614845298,"besterPreis":6561,"ende":false,"endgrund":null,"echteWochenGesamt":45}
+{"t":124.3,"was":"klick-nav","zug":"gegner:hinhalten:faehrhaus","text":"Zuschuss in Bier4,5 hl statt Geld","jahr":1971,"woche":26,"kasse":31628,"ende":false,"endgrund":null}
+{"t":125.1,"was":"klick-nav","zug":"fuhre:sprung","text":"Weiter wie zuletzt · bis zu 4 Wochen","jahr":1971,"woche":30,"kasse":33130,"ende":false,"endgrund":null}
+{"t":125.7,"was":"klick-nav","zug":"kern:chronik","text":"Chronik61","jahr":1971,"woche":30,"kasse":33130,"ende":false,"endgrund":null}
+{"t":126.2,"was":"klick-nav","zug":"kern:protokoll","text":"Buch526","jahr":1971,"woche":30,"kasse":33130,"ende":false,"endgrund":null}
+{"t":126.7,"was":"klick-nav","zug":"klang:ton","text":"♪","jahr":1971,"woche":30,"kasse":33130,"ende":false,"endgrund":null}
+{"t":127.4,"was":"klick-nav","zug":"stadt:reiter:gegner-amort-gg-band","text":"Ohne dich geschehen · 70 Zügeliegt auf","jahr":1971,"woche":30,"kasse":33130,"ende":false,"endgrund":null}
+{"t":128.1,"was":"klick-nav","zug":"stadt:reiter:fuhre-fu-brett-fu-haeuser","text":"DIE HÄUSERwollen 1.257 · im Keller liegen 45 hl","jahr":1971,"woche":30,"kasse":33130,"ende":false,"endgrund":null}
+{"t":128.6,"was":"klick-nav","zug":"stadt:ortsmarken","text":"Ortsmarken6 auf dem Pflock","jahr":1971,"woche":30,"kasse":33130,"ende":false,"endgrund":null}
+{"t":130.1,"was":"klick-preis","zug":"fuhre:plan:umkaempft","text":"Fahren: wo der Adler wirbt · 45 hl+1.790 DM","preis":1790,"kasseVor":33130,"kasseNach":50000,"jahr":1972,"woche":1,"ende":false,"endgrund":null}
+{"t":131,"was":"klick-preis","zug":"gegner:zukaufen:faehrhaus","text":"lieber zukaufen4,5 hl · 780 DM","preis":-780,"kasseVor":50000,"kasseNach":49220,"jahr":1972,"woche":1,"ende":false,"endgrund":null}
+{"t":131.7,"was":"klick-preis","zug":"gegner:zuvorkommen:faehrhaus","text":"wirbt · noch 6 Wo.zuvorkommen 6.561 DM","preis":-6561,"kasseVor":49220,"kasseNach":42659,"jahr":1972,"woche":1,"ende":false,"endgrund":null}
+{"t":132.3,"was":"runde-ende","runde":13,"jahr":1972,"woche":2,"kasse":41978,"deckung":0.9597165066300869,"besterPreis":43740,"ende":false,"endgrund":null,"echteWochenGesamt":48}
+{"t":132.8,"was":"klick-nav","zug":"stadt:marke:gegner-fluss","text":"zurückgeholt — unser H","jahr":1972,"woche":2,"kasse":41978,"ende":false,"endgrund":null}
+{"t":133.5,"was":"klick-nav","zug":"kern:chronik","text":"Chronik77","jahr":1972,"woche":2,"kasse":41978,"ende":false,"endgrund":null}
+{"t":133.9,"was":"klick-nav","zug":"kern:protokoll","text":"Buch589","jahr":1972,"woche":2,"kasse":41978,"ende":false,"endgrund":null}
+{"t":134.4,"was":"klick-nav","zug":"klang:ton","text":"—","jahr":1972,"woche":2,"kasse":41978,"ende":false,"endgrund":null}
+{"t":135,"was":"klick-nav","zug":"stadt:reiter:gegner-amort-gg-band","text":"Ohne dich geschehen · 76 Zügezugeklappt","jahr":1972,"woche":2,"kasse":41978,"ende":false,"endgrund":null}
+{"t":135.6,"was":"klick-nav","zug":"stadt:reiter:fuhre-fu-brett-fu-haeuser","text":"DIE HÄUSERwollen 753 · im Keller liegen 45 hl","jahr":1972,"woche":2,"kasse":41978,"ende":false,"endgrund":null}
+{"t":136.1,"was":"klick-nav","zug":"stadt:ortsmarken","text":"Ortsmarken7 im Bild","jahr":1972,"woche":2,"kasse":41978,"ende":false,"endgrund":null}
+{"t":137.1,"was":"klick-nav","zug":"preis:tafel","text":"Michaelitafel 1972 · 5 Angebote","jahr":1972,"woche":2,"kasse":41978,"ende":false,"endgrund":null}
+{"t":137.9,"was":"klick-nav","zug":"stadt:reiter:preis-pr-stil-offset-pr-tafel","text":"MICHAELI 1972Der Preis steht im Regal, und das Regal gehö","jahr":1972,"woche":2,"kasse":41978,"ende":false,"endgrund":null}
+{"t":138.5,"was":"klick-nav","zug":"gegner:zeige:76","text":"zeigen","jahr":1972,"woche":2,"kasse":41978,"ende":false,"endgrund":null}
+{"t":139.2,"was":"klick-preis","zug":"fuhre:plan:umkaempft","text":"Fahren: wo der Adler wirbt · 45 hl+1.845 DM","preis":1845,"kasseVor":41978,"kasseNach":42362,"jahr":1972,"woche":3,"ende":false,"endgrund":null}
+{"t":139.8,"was":"klick-preis","zug":"gegner:zukaufen:lindenhof","text":"lieber zukaufen4,5 hl · 780 DM","preis":-780,"kasseVor":42362,"kasseNach":41582,"jahr":1972,"woche":3,"ende":false,"endgrund":null}
+{"t":140.4,"was":"klick-preis","zug":"gegner:zukaufen:neustadt","text":"lieber zukaufen4,5 hl · 780 DM","preis":-780,"kasseVor":41582,"kasseNach":40802,"jahr":1972,"woche":3,"ende":false,"endgrund":null}
+{"t":140.9,"was":"runde-ende","runde":14,"jahr":1972,"woche":4,"kasse":40121,"deckung":0.6733067060481976,"besterPreis":59588,"ende":false,"endgrund":null,"echteWochenGesamt":50}
+{"t":141.6,"was":"klick-nav","zug":"gegner:zeige:77","text":"zeigen","jahr":1972,"woche":4,"kasse":40121,"ende":false,"endgrund":null}
+{"t":142.1,"was":"klick-nav","zug":"sud:zettel-anstich","text":"Hefe ziehen · +8 · ohne Fass","jahr":1972,"woche":4,"kasse":40121,"ende":false,"endgrund":null}
+{"t":142.7,"was":"klick-nav","zug":"sud:zettel-charge-frei","text":"Freigeben · Charge 49 · ±6 %","jahr":1972,"woche":4,"kasse":40121,"ende":false,"endgrund":null}
+{"t":143.2,"was":"klick-nav","zug":"kern:chronik","text":"Chronik79","jahr":1972,"woche":4,"kasse":40121,"ende":false,"endgrund":null}
+{"t":143.6,"was":"klick-nav","zug":"kern:protokoll","text":"Buch603","jahr":1972,"woche":4,"kasse":40121,"ende":false,"endgrund":null}
+{"t":144,"was":"klick-nav","zug":"klang:ton","text":"♪","jahr":1972,"woche":4,"kasse":40121,"ende":false,"endgrund":null}
+{"t":144.6,"was":"klick-nav","zug":"stadt:reiter:gegner-amort-gg-band","text":"Ohne dich geschehen · 77 Zügeliegt auf","jahr":1972,"woche":4,"kasse":40121,"ende":false,"endgrund":null}
+{"t":145.2,"was":"klick-nav","zug":"stadt:reiter:fuhre-fu-brett-fu-haeuser","text":"DIE HÄUSERwollen 753 · im Keller liegen 0,0 hl","jahr":1972,"woche":4,"kasse":40121,"ende":false,"endgrund":null}
+{"t":145.8,"was":"klick-nav","zug":"stadt:reiter:fuhre-fu-brett-fu-keller","text":"DIE TANKS0,0 von 600 hl · 0,0 reif","jahr":1972,"woche":4,"kasse":40121,"ende":false,"endgrund":null}
+{"t":146.3,"was":"klick-nav","zug":"stadt:ortsmarken","text":"Ortsmarken7 auf dem Pflock","jahr":1972,"woche":4,"kasse":40121,"ende":false,"endgrund":null}
+{"t":147.1,"was":"klick-preis","zug":"fuhre:plan:umkaempft","text":"Fahren: wo der Adler wirbt · 45 hl+1.845 DM","preis":1845,"kasseVor":40121,"kasseNach":40548,"jahr":1972,"woche":5,"ende":false,"endgrund":null}
+{"t":147.8,"was":"klick-preis","zug":"fuhre:plan:umkaempft","text":"Fahren: wo der Adler wirbt · 45 hl+1.845 DM","preis":1845,"kasseVor":40548,"kasseNach":40975,"jahr":1972,"woche":6,"ende":false,"endgrund":null}
+{"t":148.6,"was":"klick-preis","zug":"fuhre:plan:umkaempft","text":"Fahren: wo der Adler wirbt · 90 hl+2.101 DM","preis":2101,"kasseVor":40975,"kasseNach":40223,"jahr":1972,"woche":7,"ende":false,"endgrund":null}
+{"t":149.5,"was":"runde-ende","runde":15,"jahr":1972,"woche":8,"kasse":39542,"deckung":0.9040237768632831,"besterPreis":43740,"ende":false,"endgrund":null,"echteWochenGesamt":54}
+{"t":151.2,"was":"klick-nav","zug":"sud:zettel-anstich","text":"Frisches Fass · +14 · 1,5 hl","jahr":1972,"woche":8,"kasse":39542,"ende":false,"endgrund":null}
+{"t":151.6,"was":"klick-nav","zug":"kern:chronik","text":"Chronik82","jahr":1972,"woche":8,"kasse":39542,"ende":false,"endgrund":null}
+{"t":152.1,"was":"klick-nav","zug":"kern:protokoll","text":"Buch637","jahr":1972,"woche":8,"kasse":39542,"ende":false,"endgrund":null}
+{"t":152.5,"was":"klick-nav","zug":"klang:ton","text":"—","jahr":1972,"woche":8,"kasse":39542,"ende":false,"endgrund":null}
+{"t":153.2,"was":"klick-nav","zug":"stadt:reiter:gegner-amort-gg-band","text":"Ohne dich geschehen · 80 Zügezugeklappt","jahr":1972,"woche":8,"kasse":39542,"ende":false,"endgrund":null}
+{"t":153.8,"was":"klick-nav","zug":"stadt:reiter:fuhre-fu-brett-fu-haeuser","text":"DIE HÄUSERwollen 729 · im Keller liegen 45 hl","jahr":1972,"woche":8,"kasse":39542,"ende":false,"endgrund":null}
+{"t":154.4,"was":"klick-nav","zug":"stadt:reiter:fuhre-fu-brett-fu-keller","text":"DIE TANKS45 von 600 hl · 45 reif","jahr":1972,"woche":8,"kasse":39542,"ende":false,"endgrund":null}
+{"t":154.8,"was":"klick-nav","zug":"stadt:ortsmarken","text":"Ortsmarken7 im Bild","jahr":1972,"woche":8,"kasse":39542,"ende":false,"endgrund":null}
+{"t":155.4,"was":"klick-nav","zug":"gegner:zeige:80","text":"zeigen","jahr":1972,"woche":8,"kasse":39542,"ende":false,"endgrund":null}
+{"t":156,"was":"klick-nav","zug":"fuhre:probe:faehrhaus","text":"Aktionsware · 30 hl · 0/4","jahr":1972,"woche":8,"kasse":39542,"ende":false,"endgrund":null}
+{"t":156.6,"was":"klick-nav","zug":"stadt:reiter:fuhre-fu-brett-fu-wagen","text":"LASTZUG30 von 450 hl · 1 von 3 Halten","jahr":1972,"woche":8,"kasse":39542,"ende":false,"endgrund":null}
+{"t":157.2,"was":"klick-nav","zug":"fuhre:leeren","text":"Lastzug leeren","jahr":1972,"woche":8,"kasse":39542,"ende":false,"endgrund":null}
+{"t":157.9,"was":"klick-preis","zug":"fuhre:plan:umkaempft","text":"Fahren: wo der Adler wirbt · 44 hl+1.778 DM","preis":1778,"kasseVor":39542,"kasseNach":39927,"jahr":1972,"woche":9,"ende":false,"endgrund":null}
+{"t":158.5,"was":"klick-preis","zug":"fuhre:plan:umkaempft","text":"Fahren: wo der Adler wirbt · 45 hl+1.845 DM","preis":1845,"kasseVor":39927,"kasseNach":40354,"jahr":1972,"woche":10,"ende":false,"endgrund":null}
+{"t":159,"was":"klick-preis","zug":"fuhre:plan:umkaempft","text":"Fahren: wo der Adler wirbt · 45 hl+1.845 DM","preis":1845,"kasseVor":40354,"kasseNach":40781,"jahr":1972,"woche":11,"ende":false,"endgrund":null}
+{"t":159.6,"was":"runde-ende","runde":16,"jahr":1972,"woche":12,"kasse":40100,"deckung":3.333610441433203,"besterPreis":12029,"ende":false,"endgrund":null,"echteWochenGesamt":58}
+{"t":160.2,"was":"klick-nav","zug":"gegner:zeige:86","text":"zeigen","jahr":1972,"woche":12,"kasse":40100,"ende":false,"endgrund":null}
+{"t":160.8,"was":"klick-nav","zug":"sud:zettel-anstich","text":"Hefe ziehen · +8 · ohne Fass","jahr":1972,"woche":12,"kasse":40100,"ende":false,"endgrund":null}
+{"t":161.5,"was":"klick-nav","zug":"sud:zettel-charge-frei","text":"Freigeben · Charge 56 · ±4 %","jahr":1972,"woche":12,"kasse":40100,"ende":false,"endgrund":null}
+{"t":161.9,"was":"klick-nav","zug":"kern:chronik","text":"Chronik85","jahr":1972,"woche":12,"kasse":40100,"ende":false,"endgrund":null}
+{"t":162.4,"was":"klick-nav","zug":"kern:protokoll","text":"Buch667","jahr":1972,"woche":12,"kasse":40100,"ende":false,"endgrund":null}
+{"t":162.9,"was":"klick-nav","zug":"klang:ton","text":"♪","jahr":1972,"woche":12,"kasse":40100,"ende":false,"endgrund":null}
+{"t":163.5,"was":"klick-nav","zug":"stadt:reiter:gegner-amort-gg-band","text":"Ohne dich geschehen · 86 Zügeliegt auf","jahr":1972,"woche":12,"kasse":40100,"ende":false,"endgrund":null}
+{"t":164.1,"was":"klick-nav","zug":"stadt:reiter:fuhre-fu-brett-fu-haeuser","text":"DIE HÄUSERwollen 753 · im Keller liegen 45 hl","jahr":1972,"woche":12,"kasse":40100,"ende":false,"endgrund":null}
+{"t":164.8,"was":"klick-nav","zug":"stadt:reiter:fuhre-fu-brett-fu-wagen","text":"LASTZUG0,0 von 450 hl · 0 von 3 Halten","jahr":1972,"woche":12,"kasse":40100,"ende":false,"endgrund":null}
+{"t":165.3,"was":"klick-nav","zug":"stadt:ortsmarken","text":"Ortsmarken7 auf dem Pflock","jahr":1972,"woche":12,"kasse":40100,"ende":false,"endgrund":null}
+{"t":165.8,"was":"klick-nav","zug":"stadt:reiter:fuhre-fu-brett-fu-keller","text":"DIE TANKS90 von 600 hl · 90 reif","jahr":1972,"woche":12,"kasse":40100,"ende":false,"endgrund":null}
+{"t":166.4,"was":"klick-preis","zug":"fuhre:plan:umkaempft","text":"Fahren: wo der Adler wirbt · 90 hl+2.101 DM","preis":2101,"kasseVor":40100,"kasseNach":39502,"jahr":1972,"woche":13,"ende":false,"endgrund":null}
+{"t":167,"was":"klick-preis","zug":"fuhre:plan:umkaempft","text":"Fahren: wo der Adler wirbt · 45 hl+1.845 DM","preis":1845,"kasseVor":39502,"kasseNach":39929,"jahr":1972,"woche":14,"ende":false,"endgrund":null}
+{"t":167.8,"was":"klick-preis","zug":"fuhre:plan:umkaempft","text":"Fahren: wo der Adler wirbt · 45 hl+1.845 DM","preis":1845,"kasseVor":39929,"kasseNach":40356,"jahr":1972,"woche":15,"ende":false,"endgrund":null}
+{"t":168.6,"was":"runde-ende","runde":17,"jahr":1972,"woche":16,"kasse":39675,"deckung":2.4187648600865694,"besterPreis":16403,"ende":false,"endgrund":null,"echteWochenGesamt":62}
+{"t":169.2,"was":"klick-nav","zug":"sud:zettel-anstich","text":"Frisches Fass · +14 · 1,5 hl","jahr":1972,"woche":16,"kasse":39675,"ende":false,"endgrund":null}
+{"t":169.7,"was":"klick-nav","zug":"kern:chronik","text":"Chronik89","jahr":1972,"woche":16,"kasse":39675,"ende":false,"endgrund":null}
+{"t":170.3,"was":"klick-nav","zug":"kern:protokoll","text":"Buch706","jahr":1972,"woche":16,"kasse":39675,"ende":false,"endgrund":null}
+{"t":170.8,"was":"klick-nav","zug":"klang:ton","text":"—","jahr":1972,"woche":16,"kasse":39675,"ende":false,"endgrund":null}
+{"t":171.8,"was":"klick-nav","zug":"stadt:reiter:gegner-amort-gg-gzblock-gg-gzgebot","text":"MITBIETEN · ZUM GOLDENEN OCHSEliegt auf","jahr":1972,"woche":16,"kasse":39675,"ende":false,"endgrund":null}
+{"t":172.5,"was":"klick-nav","zug":"stadt:reiter:gegner-amort-gg-band","text":"Ohne dich geschehen · 93 Zügezugeklappt","jahr":1972,"woche":16,"kasse":39675,"ende":false,"endgrund":null}
+{"t":173.1,"was":"klick-nav","zug":"stadt:reiter:fuhre-fu-brett-fu-keller","text":"DIE TANKS45 von 600 hl · 45 reif","jahr":1972,"woche":16,"kasse":39675,"ende":false,"endgrund":null}
+{"t":173.7,"was":"klick-nav","zug":"stadt:ortsmarken","text":"Ortsmarken6 im Bild","jahr":1972,"woche":16,"kasse":39675,"ende":false,"endgrund":null}
+{"t":174.4,"was":"klick-nav","zug":"gegner:zeige:93","text":"zeigen","jahr":1972,"woche":16,"kasse":39675,"ende":false,"endgrund":null}
+{"t":175,"was":"klick-nav","zug":"stadt:reiter:fuhre-fu-brett-fu-haeuser","text":"DIE HÄUSERwollen 753 · im Keller liegen 44 hl","jahr":1972,"woche":16,"kasse":39675,"ende":false,"endgrund":null}
+{"t":175.7,"was":"klick-preis","zug":"fuhre:plan:umkaempft","text":"Fahren: wo der Adler wirbt · 44 hl+1.778 DM","preis":1778,"kasseVor":39675,"kasseNach":40060,"jahr":1972,"woche":17,"ende":false,"endgrund":null}
+{"t":176.3,"was":"klick-preis","zug":"fuhre:plan:durst","text":"Fahren: nach Durst · 33 hl+1.303 DM","preis":1303,"kasseVor":40060,"kasseNach":40142,"jahr":1972,"woche":18,"ende":false,"endgrund":null}
+{"t":176.9,"was":"klick-preis","zug":"fuhre:plan:durst","text":"Fahren: nach Durst · 45 hl+1.845 DM","preis":1845,"kasseVor":40142,"kasseNach":40569,"jahr":1972,"woche":19,"ende":false,"endgrund":null}
+{"t":177.6,"was":"runde-ende","runde":18,"jahr":1972,"woche":20,"kasse":39888,"deckung":1.4922558922558922,"besterPreis":26730,"ende":false,"endgrund":null,"echteWochenGesamt":66}
+{"t":178.2,"was":"klick-nav","zug":"gegner:zeige:99","text":"zeigen","jahr":1972,"woche":20,"kasse":39888,"ende":false,"endgrund":null}
+{"t":178.7,"was":"klick-nav","zug":"kern:chronik","text":"Chronik96","jahr":1972,"woche":20,"kasse":39888,"ende":false,"endgrund":null}
+{"t":179.1,"was":"klick-nav","zug":"kern:protokoll","text":"Buch737","jahr":1972,"woche":20,"kasse":39888,"ende":false,"endgrund":null}
+{"t":179.6,"was":"klick-nav","zug":"klang:ton","text":"♪","jahr":1972,"woche":20,"kasse":39888,"ende":false,"endgrund":null}
+{"t":180.1,"was":"klick-nav","zug":"stadt:reiter:gegner-amort-gg-band","text":"Ohne dich geschehen · 99 Zügeliegt auf","jahr":1972,"woche":20,"kasse":39888,"ende":false,"endgrund":null}
+{"t":180.7,"was":"klick-nav","zug":"stadt:reiter:fuhre-fu-brett-fu-haeuser","text":"DIE HÄUSERwollen 753 · im Keller liegen 45 hl","jahr":1972,"woche":20,"kasse":39888,"ende":false,"endgrund":null}
+{"t":181.2,"was":"klick-nav","zug":"stadt:ortsmarken","text":"Ortsmarken6 auf dem Pflock","jahr":1972,"woche":20,"kasse":39888,"ende":false,"endgrund":null}
+{"t":181.7,"was":"klick-preis","zug":"fuhre:plan:durst","text":"Fahren: nach Durst · 45 hl+1.845 DM","preis":1845,"kasseVor":39888,"kasseNach":40315,"jahr":1972,"woche":21,"ende":false,"endgrund":null}
+{"t":182.3,"was":"klick-preis","zug":"fuhre:plan:durst","text":"Fahren: nach Durst · 45 hl+1.845 DM","preis":1845,"kasseVor":40315,"kasseNach":40742,"jahr":1972,"woche":22,"ende":false,"endgrund":null}
+{"t":182.8,"was":"klick-preis","zug":"fuhre:plan:durst","text":"Fahren: nach Durst · 45 hl+1.845 DM","preis":1845,"kasseVor":40742,"kasseNach":41169,"jahr":1972,"woche":23,"ende":false,"endgrund":null}
+{"t":183.4,"was":"runde-ende","runde":19,"jahr":1972,"woche":24,"kasse":40488,"deckung":1.178106904879681,"besterPreis":34367,"ende":false,"endgrund":null,"echteWochenGesamt":70}
+{"t":183.8,"was":"klick-nav","zug":"kern:chronik","text":"Chronik98","jahr":1972,"woche":24,"kasse":40488,"ende":false,"endgrund":null}
+{"t":184.3,"was":"klick-nav","zug":"kern:protokoll","text":"Buch764","jahr":1972,"woche":24,"kasse":40488,"ende":false,"endgrund":null}
+{"t":184.7,"was":"klick-nav","zug":"klang:ton","text":"—","jahr":1972,"woche":24,"kasse":40488,"ende":false,"endgrund":null}
+{"t":185.3,"was":"klick-nav","zug":"stadt:reiter:gegner-amort-gg-band","text":"Ohne dich geschehen · 103 Zügezugeklappt","jahr":1972,"woche":24,"kasse":40488,"ende":false,"endgrund":null}
+{"t":185.7,"was":"klick-nav","zug":"stadt:ortsmarken","text":"Ortsmarken6 im Bild","jahr":1972,"woche":24,"kasse":40488,"ende":false,"endgrund":null}
+{"t":186.4,"was":"klick-nav","zug":"gegner:zeige:103","text":"zeigen","jahr":1972,"woche":24,"kasse":40488,"ende":false,"endgrund":null}
+{"t":187,"was":"klick-preis","zug":"fuhre:plan:durst","text":"Fahren: nach Durst · 45 hl+1.845 DM","preis":1845,"kasseVor":40488,"kasseNach":40915,"jahr":1972,"woche":25,"ende":false,"endgrund":null}
+{"t":187.6,"was":"klick-preis","zug":"fuhre:plan:durst","text":"Fahren: nach Durst · 45 hl+1.845 DM","preis":1845,"kasseVor":40915,"kasseNach":41342,"jahr":1972,"woche":26,"ende":false,"endgrund":null}
+{"t":188.2,"was":"klick-preis","zug":"fuhre:plan:durst","text":"Fahren: nach Durst · 45 hl+1.845 DM","preis":1845,"kasseVor":41342,"kasseNach":41769,"jahr":1972,"woche":27,"ende":false,"endgrund":null}
+{"t":188.8,"was":"runde-ende","runde":20,"jahr":1972,"woche":28,"kasse":41088,"deckung":1.4451830748127044,"besterPreis":28431,"ende":false,"endgrund":null,"echteWochenGesamt":74}
+{"t":189.5,"was":"klick-nav","zug":"gegner:zeige:109","text":"zeigen","jahr":1972,"woche":28,"kasse":41088,"ende":false,"endgrund":null}
+{"t":190,"was":"klick-nav","zug":"sud:zettel-anstich","text":"Hefe ziehen · +8 · ohne Fass","jahr":1972,"woche":28,"kasse":41088,"ende":false,"endgrund":null}
+{"t":190.6,"was":"klick-nav","zug":"sud:zettel-charge-frei","text":"Freigeben · Charge 69 · ±6 %","jahr":1972,"woche":28,"kasse":41088,"ende":false,"endgrund":null}
+{"t":191.1,"was":"klick-nav","zug":"kern:chronik","text":"Chronik101","jahr":1972,"woche":28,"kasse":41088,"ende":false,"endgrund":null}
+{"t":191.5,"was":"klick-nav","zug":"kern:protokoll","text":"Buch794","jahr":1972,"woche":28,"kasse":41088,"ende":false,"endgrund":null}
+{"t":191.9,"was":"klick-nav","zug":"klang:ton","text":"♪","jahr":1972,"woche":28,"kasse":41088,"ende":false,"endgrund":null}
+{"t":192.6,"was":"klick-nav","zug":"stadt:reiter:gegner-amort-gg-band","text":"Ohne dich geschehen · 109 Zügeliegt auf","jahr":1972,"woche":28,"kasse":41088,"ende":false,"endgrund":null}
+{"t":193,"was":"klick-nav","zug":"stadt:ortsmarken","text":"Ortsmarken6 auf dem Pflock","jahr":1972,"woche":28,"kasse":41088,"ende":false,"endgrund":null}
+{"t":193.7,"was":"klick-nav","zug":"stadt:reiter:fuhre-fu-brett-fu-haeuser","text":"DIE HÄUSERwollen 753 · im Keller liegen 90 hl","jahr":1972,"woche":28,"kasse":41088,"ende":false,"endgrund":null}
+{"t":194.3,"was":"klick-nav","zug":"stadt:reiter:fuhre-fu-brett-fu-keller","text":"DIE TANKS90 von 600 hl · 90 reif","jahr":1972,"woche":28,"kasse":41088,"ende":false,"endgrund":null}
+{"t":194.9,"was":"klick-preis","zug":"fuhre:plan:umkaempft","text":"Fahren: wo der Adler wirbt · 90 hl+2.101 DM","preis":2101,"kasseVor":41088,"kasseNach":40258,"jahr":1972,"woche":29,"ende":false,"endgrund":null}
+{"t":195.5,"was":"klick-preis","zug":"fuhre:plan:durst","text":"Fahren: nach Durst · 45 hl+1.845 DM","preis":1845,"kasseVor":40258,"kasseNach":40685,"jahr":1972,"woche":30,"ende":false,"endgrund":null}
+{"t":197,"was":"klick-preis","zug":"fuhre:plan:durst","text":"Fahren: nach Durst · 45 hl+1.845 DM","preis":1845,"kasseVor":40685,"kasseNach":50000,"jahr":1973,"woche":1,"ende":false,"endgrund":null}
+{"t":198.1,"was":"runde-ende","runde":21,"jahr":1973,"woche":2,"kasse":49306,"deckung":0.8695943562610229,"besterPreis":56700,"ende":false,"endgrund":null,"echteWochenGesamt":78}
+{"t":198.7,"was":"klick-nav","zug":"sud:zettel-anstich","text":"Frisches Fass · +14 · 1,5 hl","jahr":1973,"woche":2,"kasse":49306,"ende":false,"endgrund":null}
+{"t":199.2,"was":"klick-nav","zug":"kern:chronik","text":"Chronik112","jahr":1973,"woche":2,"kasse":49306,"ende":false,"endgrund":null}
+{"t":199.7,"was":"klick-nav","zug":"kern:protokoll","text":"Buch849","jahr":1973,"woche":2,"kasse":49306,"ende":false,"endgrund":null}
+{"t":200.1,"was":"klick-nav","zug":"klang:ton","text":"—","jahr":1973,"woche":2,"kasse":49306,"ende":false,"endgrund":null}
+{"t":200.8,"was":"klick-nav","zug":"stadt:reiter:gegner-amort-gg-band","text":"Ohne dich geschehen · 115 Zügezugeklappt","jahr":1973,"woche":2,"kasse":49306,"ende":false,"endgrund":null}
+{"t":201.4,"was":"klick-nav","zug":"stadt:reiter:fuhre-fu-brett-fu-haeuser","text":"DIE HÄUSERwollen 488 · im Keller liegen 45 hl","jahr":1973,"woche":2,"kasse":49306,"ende":false,"endgrund":null}
+{"t":202.1,"was":"klick-nav","zug":"stadt:reiter:fuhre-fu-brett-fu-keller","text":"DIE TANKS45 von 600 hl · 45 reif","jahr":1973,"woche":2,"kasse":49306,"ende":false,"endgrund":null}
+{"t":202.6,"was":"klick-nav","zug":"stadt:ortsmarken","text":"Ortsmarken6 im Bild","jahr":1973,"woche":2,"kasse":49306,"ende":false,"endgrund":null}
+{"t":203.9,"was":"klick-nav","zug":"preis:tafel","text":"Michaelitafel 1973 · 5 Angebote","jahr":1973,"woche":2,"kasse":49306,"ende":false,"endgrund":null}
+{"t":204.7,"was":"klick-nav","zug":"stadt:reiter:preis-pr-stil-offset-pr-tafel","text":"MICHAELI 1973Der Preis steht im Regal, und das Regal gehö","jahr":1973,"woche":2,"kasse":49306,"ende":false,"endgrund":null}
+{"t":205.4,"was":"klick-nav","zug":"gegner:zeige:115","text":"zeigen","jahr":1973,"woche":2,"kasse":49306,"ende":false,"endgrund":null}
+{"t":206.2,"was":"klick-preis","zug":"fuhre:plan:durst","text":"Fahren: nach Durst · 44 hl+1.831 DM","preis":1831,"kasseVor":49306,"kasseNach":48384,"jahr":1973,"woche":3,"ende":false,"endgrund":null}
+{"t":207,"was":"klick-preis","zug":"fuhre:plan:durst","text":"Fahren: nach Durst · 45 hl+1.901 DM","preis":1901,"kasseVor":48384,"kasseNach":47461,"jahr":1973,"woche":4,"ende":false,"endgrund":null}
+{"t":207.8,"was":"klick-preis","zug":"fuhre:plan:durst","text":"Fahren: nach Durst · 45 hl+1.901 DM","preis":1901,"kasseVor":47461,"kasseNach":46538,"jahr":1973,"woche":5,"ende":false,"endgrund":null}
+{"t":209,"was":"runde-ende","runde":22,"jahr":1973,"woche":6,"kasse":45844,"deckung":1.4037171989344437,"besterPreis":32659,"ende":false,"endgrund":null,"echteWochenGesamt":82}
+{"t":209.7,"was":"klick-nav","zug":"gegner:zeige:118","text":"zeigen","jahr":1973,"woche":6,"kasse":45844,"ende":false,"endgrund":null}
+{"t":210.2,"was":"klick-nav","zug":"kern:chronik","text":"Chronik114","jahr":1973,"woche":6,"kasse":45844,"ende":false,"endgrund":null}
+{"t":210.6,"was":"klick-nav","zug":"kern:protokoll","text":"Buch869","jahr":1973,"woche":6,"kasse":45844,"ende":false,"endgrund":null}
+{"t":211,"was":"klick-nav","zug":"klang:ton","text":"♪","jahr":1973,"woche":6,"kasse":45844,"ende":false,"endgrund":null}
+{"t":211.7,"was":"klick-nav","zug":"stadt:reiter:gegner-amort-gg-band","text":"Ohne dich geschehen · 118 Zügeliegt auf","jahr":1973,"woche":6,"kasse":45844,"ende":false,"endgrund":null}
+{"t":212.2,"was":"klick-nav","zug":"stadt:ortsmarken","text":"Ortsmarken6 auf dem Pflock","jahr":1973,"woche":6,"kasse":45844,"ende":false,"endgrund":null}
+{"t":212.9,"was":"klick-preis","zug":"fuhre:plan:durst","text":"Fahren: nach Durst · 45 hl+1.901 DM","preis":1901,"kasseVor":45844,"kasseNach":44921,"jahr":1973,"woche":7,"ende":false,"endgrund":null}
+{"t":213.6,"was":"klick-preis","zug":"fuhre:plan:durst","text":"Fahren: nach Durst · 45 hl+1.901 DM","preis":1901,"kasseVor":44921,"kasseNach":43998,"jahr":1973,"woche":8,"ende":false,"endgrund":null}
+{"t":214.4,"was":"klick-preis","zug":"fuhre:plan:umkaempft","text":"Fahren: wo der Adler wirbt · 45 hl+1.901 DM","preis":1901,"kasseVor":43998,"kasseNach":43075,"jahr":1973,"woche":9,"ende":false,"endgrund":null}
+{"t":215,"was":"runde-ende","runde":23,"jahr":1973,"woche":10,"kasse":42381,"deckung":3.5232355141740794,"besterPreis":12029,"ende":false,"endgrund":null,"echteWochenGesamt":86}
+{"t":215.5,"was":"klick-nav","zug":"kern:chronik","text":"Chronik119","jahr":1973,"woche":10,"kasse":42381,"ende":false,"endgrund":null}
+{"t":216,"was":"klick-nav","zug":"kern:protokoll","text":"Buch893","jahr":1973,"woche":10,"kasse":42381,"ende":false,"endgrund":null}
+{"t":216.4,"was":"klick-nav","zug":"klang:ton","text":"—","jahr":1973,"woche":10,"kasse":42381,"ende":false,"endgrund":null}
+{"t":217,"was":"klick-nav","zug":"stadt:reiter:gegner-amort-gg-band","text":"Ohne dich geschehen · 125 Zügezugeklappt","jahr":1973,"woche":10,"kasse":42381,"ende":false,"endgrund":null}
+{"t":217.5,"was":"klick-nav","zug":"stadt:ortsmarken","text":"Ortsmarken6 im Bild","jahr":1973,"woche":10,"kasse":42381,"ende":false,"endgrund":null}
+{"t":218.1,"was":"klick-nav","zug":"gegner:zeige:125","text":"zeigen","jahr":1973,"woche":10,"kasse":42381,"ende":false,"endgrund":null}
+{"t":218.7,"was":"klick-preis","zug":"fuhre:plan:durst","text":"Fahren: nach Durst · 45 hl+1.901 DM","preis":1901,"kasseVor":42381,"kasseNach":41458,"jahr":1973,"woche":11,"ende":false,"endgrund":null}
+{"t":219.3,"was":"klick-preis","zug":"fuhre:plan:durst","text":"Fahren: nach Durst · 45 hl+1.901 DM","preis":1901,"kasseVor":41458,"kasseNach":40535,"jahr":1973,"woche":12,"ende":false,"endgrund":null}
+{"t":219.8,"was":"klick-preis","zug":"fuhre:plan:durst","text":"Fahren: nach Durst · 45 hl+1.901 DM","preis":1901,"kasseVor":40535,"kasseNach":39612,"jahr":1973,"woche":13,"ende":false,"endgrund":null}
+{"t":220.4,"was":"runde-ende","runde":24,"jahr":1973,"woche":14,"kasse":38918,"deckung":3.2353479092193864,"besterPreis":12029,"ende":false,"endgrund":null,"echteWochenGesamt":90}
+{"t":221,"was":"klick-nav","zug":"gegner:zeige:130","text":"zeigen","jahr":1973,"woche":14,"kasse":38918,"ende":false,"endgrund":null}
+{"t":221.5,"was":"klick-nav","zug":"kern:chronik","text":"Chronik121","jahr":1973,"woche":14,"kasse":38918,"ende":false,"endgrund":null}
+{"t":222,"was":"klick-nav","zug":"kern:protokoll","text":"Buch915","jahr":1973,"woche":14,"kasse":38918,"ende":false,"endgrund":null}
+{"t":222.4,"was":"klick-nav","zug":"klang:ton","text":"♪","jahr":1973,"woche":14,"kasse":38918,"ende":false,"endgrund":null}
+{"t":223,"was":"klick-nav","zug":"stadt:reiter:gegner-amort-gg-band","text":"Ohne dich geschehen · 130 Zügeliegt auf","jahr":1973,"woche":14,"kasse":38918,"ende":false,"endgrund":null}
+{"t":223.4,"was":"klick-nav","zug":"stadt:ortsmarken","text":"Ortsmarken7 auf dem Pflock","jahr":1973,"woche":14,"kasse":38918,"ende":false,"endgrund":null}
+{"t":224.1,"was":"klick-preis","zug":"fuhre:plan:durst","text":"Fahren: nach Durst · 45 hl+1.901 DM","preis":1901,"kasseVor":38918,"kasseNach":37995,"jahr":1973,"woche":15,"ende":false,"endgrund":null}
+{"t":224.6,"was":"klick-preis","zug":"fuhre:plan:durst","text":"Fahren: nach Durst · 45 hl+1.901 DM","preis":1901,"kasseVor":37995,"kasseNach":37072,"jahr":1973,"woche":16,"ende":false,"endgrund":null}
+{"t":225.2,"was":"klick-preis","zug":"fuhre:plan:durst","text":"Fahren: nach Durst · 45 hl+1.901 DM","preis":1901,"kasseVor":37072,"kasseNach":36149,"jahr":1973,"woche":17,"ende":false,"endgrund":null}
+{"t":225.8,"was":"runde-ende","runde":25,"jahr":1973,"woche":18,"kasse":35455,"deckung":2.947460304264694,"besterPreis":12029,"ende":false,"endgrund":null,"echteWochenGesamt":94}
+{"t":226.3,"was":"klick-nav","zug":"kern:chronik","text":"Chronik122","jahr":1973,"woche":18,"kasse":35455,"ende":false,"endgrund":null}
+{"t":226.7,"was":"klick-nav","zug":"kern:protokoll","text":"Buch938","jahr":1973,"woche":18,"kasse":35455,"ende":false,"endgrund":null}
+{"t":227.2,"was":"klick-nav","zug":"klang:ton","text":"—","jahr":1973,"woche":18,"kasse":35455,"ende":false,"endgrund":null}
+{"t":227.9,"was":"klick-nav","zug":"stadt:reiter:gegner-amort-gg-band","text":"Ohne dich geschehen · 137 Zügezugeklappt","jahr":1973,"woche":18,"kasse":35455,"ende":false,"endgrund":null}
+{"t":228.3,"was":"klick-nav","zug":"stadt:ortsmarken","text":"Ortsmarken6 im Bild","jahr":1973,"woche":18,"kasse":35455,"ende":false,"endgrund":null}
+{"t":228.9,"was":"klick-nav","zug":"gegner:zeige:137","text":"zeigen","jahr":1973,"woche":18,"kasse":35455,"ende":false,"endgrund":null}
+{"t":229.6,"was":"klick-preis","zug":"fuhre:plan:durst","text":"Fahren: nach Durst · 45 hl+1.901 DM","preis":1901,"kasseVor":35455,"kasseNach":35070,"jahr":1973,"woche":19,"ende":false,"endgrund":null}
+{"t":230.2,"was":"klick-preis","zug":"fuhre:plan:durst","text":"Fahren: nach Durst · 45 hl+1.901 DM","preis":1901,"kasseVor":35070,"kasseNach":35519,"jahr":1973,"woche":20,"ende":false,"endgrund":null}
+{"t":230.9,"was":"klick-preis","zug":"fuhre:plan:durst","text":"Fahren: nach Durst · 45 hl+1.901 DM","preis":1901,"kasseVor":35519,"kasseNach":35968,"jahr":1973,"woche":21,"ende":false,"endgrund":null}
+{"t":231.5,"was":"runde-ende","runde":26,"jahr":1973,"woche":22,"kasse":35274,"deckung":1.3440786465477823,"besterPreis":26244,"ende":false,"endgrund":null,"echteWochenGesamt":98}
+{"t":232.2,"was":"klick-nav","zug":"gegner:zeige:144","text":"zeigen","jahr":1973,"woche":22,"kasse":35274,"ende":false,"endgrund":null}
+{"t":232.9,"was":"klick-nav","zug":"fuhre:probe:faehrhaus","text":"Aktionsware · 30 hl · 0/6","jahr":1973,"woche":22,"kasse":35274,"ende":false,"endgrund":null}
+{"t":233.3,"was":"klick-nav","zug":"kern:chronik","text":"Chronik125","jahr":1973,"woche":22,"kasse":35274,"ende":false,"endgrund":null}
+{"t":233.8,"was":"klick-nav","zug":"kern:protokoll","text":"Buch968","jahr":1973,"woche":22,"kasse":35274,"ende":false,"endgrund":null}
+{"t":234.3,"was":"klick-nav","zug":"klang:ton","text":"♪","jahr":1973,"woche":22,"kasse":35274,"ende":false,"endgrund":null}
+{"t":234.9,"was":"klick-nav","zug":"stadt:reiter:gegner-amort-gg-band","text":"Ohne dich geschehen · 144 Zügeliegt auf","jahr":1973,"woche":22,"kasse":35274,"ende":false,"endgrund":null}
+{"t":235.3,"was":"klick-nav","zug":"stadt:ortsmarken","text":"Ortsmarken6 auf dem Pflock","jahr":1973,"woche":22,"kasse":35274,"ende":false,"endgrund":null}
+{"t":236,"was":"klick-nav","zug":"stadt:reiter:fuhre-fu-brett-fu-haeuser","text":"DIE HÄUSERwollen 488 · im Keller liegen 15 hl","jahr":1973,"woche":22,"kasse":35274,"ende":false,"endgrund":null}
+{"t":236.6,"was":"klick-nav","zug":"stadt:reiter:fuhre-fu-brett-fu-wagen","text":"LASTZUG30 von 450 hl · 1 von 3 Halten","jahr":1973,"woche":22,"kasse":35274,"ende":false,"endgrund":null}
+{"t":237.2,"was":"klick-preis","zug":"fuhre:plan:umkaempft","text":"Fahren: wo der Adler wirbt · 45 hl+1.901 DM","preis":1901,"kasseVor":35274,"kasseNach":35572,"jahr":1973,"woche":23,"ende":false,"endgrund":null}
+{"t":237.8,"was":"klick-preis","zug":"fuhre:plan:umkaempft","text":"Fahren: wo der Adler wirbt · 45 hl+1.901 DM","preis":1901,"kasseVor":35572,"kasseNach":35976,"jahr":1973,"woche":24,"ende":false,"endgrund":null}
+{"t":238.4,"was":"klick-preis","zug":"fuhre:plan:umkaempft","text":"Fahren: wo der Adler wirbt · 45 hl+1.901 DM","preis":1901,"kasseVor":35976,"kasseNach":36380,"jahr":1973,"woche":25,"ende":false,"endgrund":null}
+{"t":239,"was":"runde-ende","runde":27,"jahr":1973,"woche":26,"kasse":35686,"deckung":1.3597774729461973,"besterPreis":26244,"ende":false,"endgrund":null,"echteWochenGesamt":102}

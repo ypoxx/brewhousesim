@@ -1,0 +1,1311 @@
+{
+ "epoche": 4,
+ "saat": "1350",
+ "lauf": "e4-sammel-keine",
+ "festlegeGesucht": "keine",
+ "minuten": 5,
+ "aussenrunden": 30,
+ "echteWochenGesamt": 154,
+ "jahrStart": 1970,
+ "jahrEnde": 1975,
+ "wocheEnde": 9,
+ "braujahre": 6,
+ "kasseEnde": 45720,
+ "endgrund": null,
+ "abbruch": {
+  "grund": "maxWochen-erreicht",
+  "maxWochen": 150
+ },
+ "festlegungGenommen": null,
+ "klicksNav": 287,
+ "klicksPreis": 137,
+ "klicksWeiter": 30,
+ "fehler": [],
+ "seitenfehlerZahl": 0,
+ "tafelBeobachtungen": [
+  {
+   "jahr": 1970,
+   "woche": 1,
+   "kasse": 86000,
+   "anzahl": 4,
+   "billigsteKosten": 55000,
+   "kasseDurchBilligste": 1.5636363636363637,
+   "karten": [
+    {
+     "zug": "preis:festlege:handelsmarke",
+     "text": "Festlegen−110.000 DM",
+     "preis": -110000,
+     "aus": true
+    },
+    {
+     "zug": "preis:festlege:konzern",
+     "text": "Festlegen — Geld herein+65.000 DM",
+     "preis": 65000,
+     "aus": false
+    },
+    {
+     "zug": "preis:festlege:genossenschaft",
+     "text": "Festlegen−110.000 DM",
+     "preis": -110000,
+     "aus": true
+    },
+    {
+     "zug": "preis:festlege:privat",
+     "text": "Festlegen−55.000 DM",
+     "preis": -55000,
+     "aus": false
+    }
+   ]
+  },
+  {
+   "jahr": 1971,
+   "woche": 1,
+   "kasse": 44002,
+   "anzahl": 4,
+   "billigsteKosten": 57000,
+   "kasseDurchBilligste": 0.7719649122807017,
+   "karten": [
+    {
+     "zug": "preis:festlege:handelsmarke",
+     "text": "Festlegen−110.000 DM",
+     "preis": -110000,
+     "aus": true
+    },
+    {
+     "zug": "preis:festlege:konzern",
+     "text": "Festlegen — Geld herein+40.000 DM",
+     "preis": 40000,
+     "aus": false
+    },
+    {
+     "zug": "preis:festlege:genossenschaft",
+     "text": "Festlegen−110.000 DM",
+     "preis": -110000,
+     "aus": true
+    },
+    {
+     "zug": "preis:festlege:privat",
+     "text": "Festlegen−57.000 DM",
+     "preis": -57000,
+     "aus": true
+    }
+   ]
+  },
+  {
+   "jahr": 1972,
+   "woche": 1,
+   "kasse": 45643,
+   "anzahl": 4,
+   "billigsteKosten": 60000,
+   "kasseDurchBilligste": 0.7607166666666667,
+   "karten": [
+    {
+     "zug": "preis:festlege:handelsmarke",
+     "text": "Festlegen−120.000 DM",
+     "preis": -120000,
+     "aus": true
+    },
+    {
+     "zug": "preis:festlege:konzern",
+     "text": "Festlegen — Geld herein+52.000 DM",
+     "preis": 52000,
+     "aus": false
+    },
+    {
+     "zug": "preis:festlege:genossenschaft",
+     "text": "Festlegen−120.000 DM",
+     "preis": -120000,
+     "aus": true
+    },
+    {
+     "zug": "preis:festlege:privat",
+     "text": "Festlegen−60.000 DM",
+     "preis": -60000,
+     "aus": true
+    }
+   ]
+  },
+  {
+   "jahr": 1973,
+   "woche": 1,
+   "kasse": 44002,
+   "anzahl": 4,
+   "billigsteKosten": 48000,
+   "kasseDurchBilligste": 0.9167083333333333,
+   "karten": [
+    {
+     "zug": "preis:festlege:konzern",
+     "text": "Festlegen — Geld herein+29.000 DM",
+     "preis": 29000,
+     "aus": false
+    },
+    {
+     "zug": "preis:festlege:denkmal",
+     "text": "Festlegen−48.000 DM",
+     "preis": -48000,
+     "aus": true
+    },
+    {
+     "zug": "preis:festlege:privat",
+     "text": "Festlegen−63.000 DM",
+     "preis": -63000,
+     "aus": true
+    },
+    {
+     "zug": "preis:festlege:genossenschaft",
+     "text": "Festlegen−130.000 DM",
+     "preis": -130000,
+     "aus": true
+    }
+   ]
+  },
+  {
+   "jahr": 1974,
+   "woche": 1,
+   "kasse": 44659,
+   "anzahl": 4,
+   "billigsteKosten": 51000,
+   "kasseDurchBilligste": 0.8756666666666667,
+   "karten": [
+    {
+     "zug": "preis:festlege:konzern",
+     "text": "Festlegen — Geld herein+60.000 DM",
+     "preis": 60000,
+     "aus": false
+    },
+    {
+     "zug": "preis:festlege:denkmal",
+     "text": "Festlegen−51.000 DM",
+     "preis": -51000,
+     "aus": true
+    },
+    {
+     "zug": "preis:festlege:privat",
+     "text": "Festlegen−66.000 DM",
+     "preis": -66000,
+     "aus": true
+    },
+    {
+     "zug": "preis:festlege:genossenschaft",
+     "text": "Festlegen−130.000 DM",
+     "preis": -130000,
+     "aus": true
+    }
+   ]
+  },
+  {
+   "jahr": 1975,
+   "woche": 1,
+   "kasse": 52628,
+   "anzahl": 4,
+   "billigsteKosten": 53000,
+   "kasseDurchBilligste": 0.9929811320754717,
+   "karten": [
+    {
+     "zug": "preis:festlege:konzern",
+     "text": "Festlegen — Geld herein+99.000 DM",
+     "preis": 99000,
+     "aus": false
+    },
+    {
+     "zug": "preis:festlege:denkmal",
+     "text": "Festlegen−53.000 DM",
+     "preis": -53000,
+     "aus": true
+    },
+    {
+     "zug": "preis:festlege:privat",
+     "text": "Festlegen−69.000 DM",
+     "preis": -69000,
+     "aus": true
+    },
+    {
+     "zug": "preis:festlege:genossenschaft",
+     "text": "Festlegen−140.000 DM",
+     "preis": -140000,
+     "aus": true
+    }
+   ]
+  }
+ ],
+ "wochenReihe": [
+  {
+   "n": 1,
+   "jahr": 1970,
+   "woche": 1,
+   "kasse": 86000,
+   "deckung": 2.2500719499751445
+  },
+  {
+   "n": 2,
+   "jahr": 1970,
+   "woche": 2,
+   "kasse": 95757,
+   "deckung": 2.5053504617880225
+  },
+  {
+   "n": 3,
+   "jahr": 1970,
+   "woche": 3,
+   "kasse": 92893,
+   "deckung": 2.4304178331283848
+  },
+  {
+   "n": 4,
+   "jahr": 1970,
+   "woche": 4,
+   "kasse": 88933,
+   "deckung": 2.3268098689202272
+  },
+  {
+   "n": 5,
+   "jahr": 1970,
+   "woche": 5,
+   "kasse": 88663,
+   "deckung": 2.319745689542398
+  },
+  {
+   "n": 6,
+   "jahr": 1970,
+   "woche": 6,
+   "kasse": 87885,
+   "deckung": 2.299390387483321
+  },
+  {
+   "n": 7,
+   "jahr": 1970,
+   "woche": 7,
+   "kasse": 87415,
+   "deckung": 4.144462355395411
+  },
+  {
+   "n": 8,
+   "jahr": 1970,
+   "woche": 8,
+   "kasse": 86795,
+   "deckung": 4.115067324103926
+  },
+  {
+   "n": 9,
+   "jahr": 1970,
+   "woche": 14,
+   "kasse": 96343,
+   "deckung": 4.567750805992794
+  },
+  {
+   "n": 10,
+   "jahr": 1970,
+   "woche": 15,
+   "kasse": 95723,
+   "deckung": 4.538355774701309
+  },
+  {
+   "n": 11,
+   "jahr": 1970,
+   "woche": 16,
+   "kasse": 95192,
+   "deckung": 3.3481762864478912
+  },
+  {
+   "n": 12,
+   "jahr": 1970,
+   "woche": 17,
+   "kasse": 95733,
+   "deckung": 3.367204811649256
+  },
+  {
+   "n": 13,
+   "jahr": 1970,
+   "woche": 18,
+   "kasse": 96274,
+   "deckung": 3.386233336850621
+  },
+  {
+   "n": 14,
+   "jahr": 1970,
+   "woche": 19,
+   "kasse": 96815,
+   "deckung": 2.8458259847148737
+  },
+  {
+   "n": 15,
+   "jahr": 1970,
+   "woche": 20,
+   "kasse": 97326,
+   "deckung": 2.8608465608465607
+  },
+  {
+   "n": 16,
+   "jahr": 1970,
+   "woche": 21,
+   "kasse": 97827,
+   "deckung": 2.875573192239859
+  },
+  {
+   "n": 17,
+   "jahr": 1970,
+   "woche": 22,
+   "kasse": 97207,
+   "deckung": 2.8573486184597296
+  },
+  {
+   "n": 18,
+   "jahr": 1970,
+   "woche": 23,
+   "kasse": 33407,
+   "deckung": 0.9819811875367431
+  },
+  {
+   "n": 19,
+   "jahr": 1970,
+   "woche": 24,
+   "kasse": 33776,
+   "deckung": 0.9928277483833039
+  },
+  {
+   "n": 20,
+   "jahr": 1970,
+   "woche": 25,
+   "kasse": 34270,
+   "deckung": 1.0073486184597296
+  },
+  {
+   "n": 21,
+   "jahr": 1970,
+   "woche": 26,
+   "kasse": 34703,
+   "deckung": 1.0200764256319812
+  },
+  {
+   "n": 22,
+   "jahr": 1970,
+   "woche": 27,
+   "kasse": 35136,
+   "deckung": 1.0328042328042328
+  },
+  {
+   "n": 23,
+   "jahr": 1970,
+   "woche": 28,
+   "kasse": 35567,
+   "deckung": 1.0454732510288065
+  },
+  {
+   "n": 24,
+   "jahr": 1970,
+   "woche": 29,
+   "kasse": 35998,
+   "deckung": 1.0581422692533804
+  },
+  {
+   "n": 25,
+   "jahr": 1970,
+   "woche": 30,
+   "kasse": 35378,
+   "deckung": 0.808824874256973
+  },
+  {
+   "n": 26,
+   "jahr": 1971,
+   "woche": 1,
+   "kasse": 44002,
+   "deckung": 1.0059899405578419
+  },
+  {
+   "n": 27,
+   "jahr": 1971,
+   "woche": 2,
+   "kasse": 43370,
+   "deckung": 2.2034242747548647
+  },
+  {
+   "n": 28,
+   "jahr": 1971,
+   "woche": 3,
+   "kasse": 42738,
+   "deckung": 2.1713153482700807
+  },
+  {
+   "n": 29,
+   "jahr": 1971,
+   "woche": 4,
+   "kasse": 43675,
+   "deckung": 2.218919880099578
+  },
+  {
+   "n": 30,
+   "jahr": 1971,
+   "woche": 5,
+   "kasse": 44612,
+   "deckung": 2.2665244119290757
+  },
+  {
+   "n": 31,
+   "jahr": 1971,
+   "woche": 6,
+   "kasse": 45549,
+   "deckung": 1.041358024691358
+  },
+  {
+   "n": 32,
+   "jahr": 1971,
+   "woche": 7,
+   "kasse": 46485,
+   "deckung": 1.0456641547632437
+  },
+  {
+   "n": 33,
+   "jahr": 1971,
+   "woche": 8,
+   "kasse": 47422,
+   "deckung": 1.066741648858396
+  },
+  {
+   "n": 34,
+   "jahr": 1971,
+   "woche": 9,
+   "kasse": 48359,
+   "deckung": 2.5513875699060886
+  },
+  {
+   "n": 35,
+   "jahr": 1971,
+   "woche": 10,
+   "kasse": 47727,
+   "deckung": 2.5180436847103516
+  },
+  {
+   "n": 36,
+   "jahr": 1971,
+   "woche": 11,
+   "kasse": 48487,
+   "deckung": 2.5581407618444656
+  },
+  {
+   "n": 37,
+   "jahr": 1971,
+   "woche": 12,
+   "kasse": 49424,
+   "deckung": 2.607576237205867
+  },
+  {
+   "n": 38,
+   "jahr": 1971,
+   "woche": 13,
+   "kasse": 50361,
+   "deckung": 2.657011712567268
+  },
+  {
+   "n": 39,
+   "jahr": 1971,
+   "woche": 14,
+   "kasse": 51298,
+   "deckung": 2.7064471879286693
+  },
+  {
+   "n": 40,
+   "jahr": 1971,
+   "woche": 15,
+   "kasse": 52234,
+   "deckung": 2.7558299039780523
+  },
+  {
+   "n": 41,
+   "jahr": 1971,
+   "woche": 16,
+   "kasse": 53171,
+   "deckung": 5.881747787610619
+  },
+  {
+   "n": 42,
+   "jahr": 1971,
+   "woche": 17,
+   "kasse": 52539,
+   "deckung": 5.811836283185841
+  },
+  {
+   "n": 43,
+   "jahr": 1971,
+   "woche": 18,
+   "kasse": 53476,
+   "deckung": 3.667764060356653
+  },
+  {
+   "n": 44,
+   "jahr": 1971,
+   "woche": 19,
+   "kasse": 54412,
+   "deckung": 3.7319615912208506
+  },
+  {
+   "n": 45,
+   "jahr": 1971,
+   "woche": 20,
+   "kasse": 55349,
+   "deckung": 3.796227709190672
+  },
+  {
+   "n": 46,
+   "jahr": 1971,
+   "woche": 21,
+   "kasse": 56286,
+   "deckung": 3.860493827160494
+  },
+  {
+   "n": 47,
+   "jahr": 1971,
+   "woche": 22,
+   "kasse": 57222,
+   "deckung": 3.9246913580246914
+  },
+  {
+   "n": 48,
+   "jahr": 1971,
+   "woche": 23,
+   "kasse": 58159,
+   "deckung": 3.9889574759945132
+  },
+  {
+   "n": 49,
+   "jahr": 1971,
+   "woche": 24,
+   "kasse": 57527,
+   "deckung": 3.945610425240055
+  },
+  {
+   "n": 50,
+   "jahr": 1971,
+   "woche": 25,
+   "kasse": 58464,
+   "deckung": 4.009876543209876
+  },
+  {
+   "n": 51,
+   "jahr": 1971,
+   "woche": 26,
+   "kasse": 59401,
+   "deckung": 4.074142661179698
+  },
+  {
+   "n": 52,
+   "jahr": 1971,
+   "woche": 27,
+   "kasse": 60337,
+   "deckung": 4.138340192043896
+  },
+  {
+   "n": 53,
+   "jahr": 1971,
+   "woche": 28,
+   "kasse": 61274,
+   "deckung": 4.202606310013717
+  },
+  {
+   "n": 54,
+   "jahr": 1971,
+   "woche": 29,
+   "kasse": 62211,
+   "deckung": 4.2668724279835395
+  },
+  {
+   "n": 55,
+   "jahr": 1971,
+   "woche": 30,
+   "kasse": 63147,
+   "deckung": 4.331069958847737
+  },
+  {
+   "n": 56,
+   "jahr": 1972,
+   "woche": 1,
+   "kasse": 45643,
+   "deckung": 3.1305212620027434
+  },
+  {
+   "n": 57,
+   "jahr": 1972,
+   "woche": 2,
+   "kasse": 29638,
+   "deckung": 1.1667585229509487
+  },
+  {
+   "n": 58,
+   "jahr": 1972,
+   "woche": 3,
+   "kasse": 30058,
+   "deckung": 1.1832926541217228
+  },
+  {
+   "n": 59,
+   "jahr": 1972,
+   "woche": 4,
+   "kasse": 30478,
+   "deckung": 1.1998267852924966
+  },
+  {
+   "n": 60,
+   "jahr": 1972,
+   "woche": 5,
+   "kasse": 30897,
+   "deckung": 1.5411512370311253
+  },
+  {
+   "n": 61,
+   "jahr": 1972,
+   "woche": 6,
+   "kasse": 31317,
+   "deckung": 1.5621009577015164
+  },
+  {
+   "n": 62,
+   "jahr": 1972,
+   "woche": 7,
+   "kasse": 31736,
+   "deckung": 1.583000798084597
+  },
+  {
+   "n": 63,
+   "jahr": 1972,
+   "woche": 8,
+   "kasse": 32156,
+   "deckung": 1.603950518754988
+  },
+  {
+   "n": 64,
+   "jahr": 1972,
+   "woche": 9,
+   "kasse": 31511,
+   "deckung": 0.9020410500100192
+  },
+  {
+   "n": 65,
+   "jahr": 1972,
+   "woche": 10,
+   "kasse": 31930,
+   "deckung": 0.9140354392694586
+  },
+  {
+   "n": 66,
+   "jahr": 1972,
+   "woche": 11,
+   "kasse": 32350,
+   "deckung": 0.9260584547562477
+  },
+  {
+   "n": 67,
+   "jahr": 1972,
+   "woche": 12,
+   "kasse": 32769,
+   "deckung": 0.9380528440156872
+  },
+  {
+   "n": 68,
+   "jahr": 1972,
+   "woche": 13,
+   "kasse": 32981,
+   "deckung": 0.9441216042137807
+  },
+  {
+   "n": 69,
+   "jahr": 1972,
+   "woche": 14,
+   "kasse": 33401,
+   "deckung": 0.7736189924724957
+  },
+  {
+   "n": 70,
+   "jahr": 1972,
+   "woche": 15,
+   "kasse": 33820,
+   "deckung": 2.0406685572919807
+  },
+  {
+   "n": 71,
+   "jahr": 1972,
+   "woche": 16,
+   "kasse": 33175,
+   "deckung": 2.0017498340674593
+  },
+  {
+   "n": 72,
+   "jahr": 1972,
+   "woche": 17,
+   "kasse": 33595,
+   "deckung": 2.027092258492729
+  },
+  {
+   "n": 73,
+   "jahr": 1972,
+   "woche": 18,
+   "kasse": 34014,
+   "deckung": 2.052374343812225
+  },
+  {
+   "n": 74,
+   "jahr": 1972,
+   "woche": 19,
+   "kasse": 34434,
+   "deckung": 1.2882154882154881
+  },
+  {
+   "n": 75,
+   "jahr": 1972,
+   "woche": 20,
+   "kasse": 34853,
+   "deckung": 1.303890759446315
+  },
+  {
+   "n": 76,
+   "jahr": 1972,
+   "woche": 21,
+   "kasse": 35273,
+   "deckung": 1.3196034418256641
+  },
+  {
+   "n": 77,
+   "jahr": 1972,
+   "woche": 22,
+   "kasse": 35552,
+   "deckung": 1.3300411522633744
+  },
+  {
+   "n": 78,
+   "jahr": 1972,
+   "woche": 23,
+   "kasse": 34907,
+   "deckung": 1.0159788113394261
+  },
+  {
+   "n": 79,
+   "jahr": 1972,
+   "woche": 24,
+   "kasse": 35326,
+   "deckung": 1.0281739332906457
+  },
+  {
+   "n": 80,
+   "jahr": 1972,
+   "woche": 25,
+   "kasse": 35746,
+   "deckung": 1.0403981605448513
+  },
+  {
+   "n": 81,
+   "jahr": 1972,
+   "woche": 26,
+   "kasse": 36165,
+   "deckung": 1.0525932824960709
+  },
+  {
+   "n": 82,
+   "jahr": 1972,
+   "woche": 27,
+   "kasse": 36585,
+   "deckung": 1.0648175097502766
+  },
+  {
+   "n": 83,
+   "jahr": 1972,
+   "woche": 28,
+   "kasse": 37004,
+   "deckung": 1.077012631701496
+  },
+  {
+   "n": 84,
+   "jahr": 1972,
+   "woche": 29,
+   "kasse": 37424,
+   "deckung": 1.0892368589557018
+  },
+  {
+   "n": 85,
+   "jahr": 1972,
+   "woche": 30,
+   "kasse": 36779,
+   "deckung": 4.804572175048987
+  },
+  {
+   "n": 86,
+   "jahr": 1973,
+   "woche": 1,
+   "kasse": 44002,
+   "deckung": 5.748138471587198
+  },
+  {
+   "n": 87,
+   "jahr": 1973,
+   "woche": 2,
+   "kasse": 43344,
+   "deckung": 5.662181580666231
+  },
+  {
+   "n": 88,
+   "jahr": 1973,
+   "woche": 3,
+   "kasse": 43785,
+   "deckung": 5.719790986283475
+  },
+  {
+   "n": 89,
+   "jahr": 1973,
+   "woche": 4,
+   "kasse": 44225,
+   "deckung": 5.777269758327891
+  },
+  {
+   "n": 90,
+   "jahr": 1973,
+   "woche": 5,
+   "kasse": 44665,
+   "deckung": 2.6258083480305703
+  },
+  {
+   "n": 91,
+   "jahr": 1973,
+   "woche": 6,
+   "kasse": 45106,
+   "deckung": 2.651734273956496
+  },
+  {
+   "n": 92,
+   "jahr": 1973,
+   "woche": 7,
+   "kasse": 45546,
+   "deckung": 2.677601410934744
+  },
+  {
+   "n": 93,
+   "jahr": 1973,
+   "woche": 8,
+   "kasse": 45986,
+   "deckung": 2.7034685479129923
+  },
+  {
+   "n": 94,
+   "jahr": 1973,
+   "woche": 9,
+   "kasse": 45328,
+   "deckung": 2.664785420340976
+  },
+  {
+   "n": 95,
+   "jahr": 1973,
+   "woche": 10,
+   "kasse": 45768,
+   "deckung": 2.690652557319224
+  },
+  {
+   "n": 96,
+   "jahr": 1973,
+   "woche": 11,
+   "kasse": 46209,
+   "deckung": 2.71657848324515
+  },
+  {
+   "n": 97,
+   "jahr": 1973,
+   "woche": 12,
+   "kasse": 46649,
+   "deckung": 2.742445620223398
+  },
+  {
+   "n": 98,
+   "jahr": 1973,
+   "woche": 13,
+   "kasse": 47089,
+   "deckung": 2.768312757201646
+  },
+  {
+   "n": 99,
+   "jahr": 1973,
+   "woche": 14,
+   "kasse": 47529,
+   "deckung": 2.7941798941798943
+  },
+  {
+   "n": 100,
+   "jahr": 1973,
+   "woche": 15,
+   "kasse": 47970,
+   "deckung": 2.82010582010582
+  },
+  {
+   "n": 101,
+   "jahr": 1973,
+   "woche": 16,
+   "kasse": 47312,
+   "deckung": 2.7814226925338037
+  },
+  {
+   "n": 102,
+   "jahr": 1973,
+   "woche": 17,
+   "kasse": 47752,
+   "deckung": 1.3583660465380896
+  },
+  {
+   "n": 103,
+   "jahr": 1973,
+   "woche": 18,
+   "kasse": 48237,
+   "deckung": 0.8507407407407407
+  },
+  {
+   "n": 104,
+   "jahr": 1973,
+   "woche": 19,
+   "kasse": 48722,
+   "deckung": 0.8592945326278659
+  },
+  {
+   "n": 105,
+   "jahr": 1973,
+   "woche": 20,
+   "kasse": 49207,
+   "deckung": 0.8678483245149912
+  },
+  {
+   "n": 106,
+   "jahr": 1973,
+   "woche": 21,
+   "kasse": 49692,
+   "deckung": 0.8764021164021164
+  },
+  {
+   "n": 107,
+   "jahr": 1973,
+   "woche": 22,
+   "kasse": 50177,
+   "deckung": 0.8849559082892416
+  },
+  {
+   "n": 108,
+   "jahr": 1973,
+   "woche": 23,
+   "kasse": 49519,
+   "deckung": 0.8733509700176367
+  },
+  {
+   "n": 109,
+   "jahr": 1973,
+   "woche": 24,
+   "kasse": 49736,
+   "deckung": 0.8771781305114639
+  },
+  {
+   "n": 110,
+   "jahr": 1973,
+   "woche": 25,
+   "kasse": 50176,
+   "deckung": 0.8849382716049383
+  },
+  {
+   "n": 111,
+   "jahr": 1973,
+   "woche": 26,
+   "kasse": 50616,
+   "deckung": 0.8926984126984127
+  },
+  {
+   "n": 112,
+   "jahr": 1973,
+   "woche": 27,
+   "kasse": 51056,
+   "deckung": 0.9004585537918871
+  },
+  {
+   "n": 113,
+   "jahr": 1973,
+   "woche": 28,
+   "kasse": 51497,
+   "deckung": 0.9082363315696649
+  },
+  {
+   "n": 114,
+   "jahr": 1973,
+   "woche": 29,
+   "kasse": 51937,
+   "deckung": 0.9159964726631393
+  },
+  {
+   "n": 115,
+   "jahr": 1973,
+   "woche": 30,
+   "kasse": 51279,
+   "deckung": 0.9043915343915344
+  },
+  {
+   "n": 116,
+   "jahr": 1974,
+   "woche": 1,
+   "kasse": 44659,
+   "deckung": 0.787636684303351
+  },
+  {
+   "n": 117,
+   "jahr": 1974,
+   "woche": 2,
+   "kasse": 43988,
+   "deckung": 0.9732289039338023
+  },
+  {
+   "n": 118,
+   "jahr": 1974,
+   "woche": 3,
+   "kasse": 44448,
+   "deckung": 0.9834063454135139
+  },
+  {
+   "n": 119,
+   "jahr": 1974,
+   "woche": 4,
+   "kasse": 44907,
+   "deckung": 0.9935616620204434
+  },
+  {
+   "n": 120,
+   "jahr": 1974,
+   "woche": 5,
+   "kasse": 45366,
+   "deckung": 1.003716978627373
+  },
+  {
+   "n": 121,
+   "jahr": 1974,
+   "woche": 6,
+   "kasse": 45825,
+   "deckung": 0.6286008230452675
+  },
+  {
+   "n": 122,
+   "jahr": 1974,
+   "woche": 7,
+   "kasse": 46284,
+   "deckung": 0.47617283950617284
+  },
+  {
+   "n": 123,
+   "jahr": 1974,
+   "woche": 8,
+   "kasse": 46743,
+   "deckung": 2.1138244471577803
+  },
+  {
+   "n": 124,
+   "jahr": 1974,
+   "woche": 9,
+   "kasse": 46072,
+   "deckung": 2.083480305702528
+  },
+  {
+   "n": 125,
+   "jahr": 1974,
+   "woche": 10,
+   "kasse": 41261,
+   "deckung": 7.5459034381858086
+  },
+  {
+   "n": 126,
+   "jahr": 1974,
+   "woche": 11,
+   "kasse": 41720,
+   "deckung": 7.629846378931968
+  },
+  {
+   "n": 127,
+   "jahr": 1974,
+   "woche": 12,
+   "kasse": 42179,
+   "deckung": 7.713789319678127
+  },
+  {
+   "n": 128,
+   "jahr": 1974,
+   "woche": 13,
+   "kasse": 42638,
+   "deckung": 7.7977322604242865
+  },
+  {
+   "n": 129,
+   "jahr": 1974,
+   "woche": 14,
+   "kasse": 43097,
+   "deckung": 7.881675201170446
+  },
+  {
+   "n": 130,
+   "jahr": 1974,
+   "woche": 15,
+   "kasse": 43556,
+   "deckung": 2.8912047792897444
+  },
+  {
+   "n": 131,
+   "jahr": 1974,
+   "woche": 16,
+   "kasse": 44015,
+   "deckung": 2.9216727514105543
+  },
+  {
+   "n": 132,
+   "jahr": 1974,
+   "woche": 17,
+   "kasse": 43344,
+   "deckung": 1.7063223368238722
+  },
+  {
+   "n": 133,
+   "jahr": 1974,
+   "woche": 18,
+   "kasse": 42673,
+   "deckung": 1.679907093929612
+  },
+  {
+   "n": 134,
+   "jahr": 1974,
+   "woche": 19,
+   "kasse": 43132,
+   "deckung": 1.5214109347442681
+  },
+  {
+   "n": 135,
+   "jahr": 1974,
+   "woche": 20,
+   "kasse": 43591,
+   "deckung": 1.5376014109347442
+  },
+  {
+   "n": 136,
+   "jahr": 1974,
+   "woche": 21,
+   "kasse": 44050,
+   "deckung": 1.5537918871252205
+  },
+  {
+   "n": 137,
+   "jahr": 1974,
+   "woche": 22,
+   "kasse": 44509,
+   "deckung": 3.488712964414485
+  },
+  {
+   "n": 138,
+   "jahr": 1974,
+   "woche": 23,
+   "kasse": 44968,
+   "deckung": 3.524690390343314
+  },
+  {
+   "n": 139,
+   "jahr": 1974,
+   "woche": 24,
+   "kasse": 45427,
+   "deckung": 3.560667816272143
+  },
+  {
+   "n": 140,
+   "jahr": 1974,
+   "woche": 25,
+   "kasse": 44756,
+   "deckung": 3.5080733657313057
+  },
+  {
+   "n": 141,
+   "jahr": 1974,
+   "woche": 26,
+   "kasse": 45261,
+   "deckung": 3.5476563724721744
+  },
+  {
+   "n": 142,
+   "jahr": 1974,
+   "woche": 27,
+   "kasse": 45766,
+   "deckung": 1.614320987654321
+  },
+  {
+   "n": 143,
+   "jahr": 1974,
+   "woche": 28,
+   "kasse": 46271,
+   "deckung": 2.3508103439516335
+  },
+  {
+   "n": 144,
+   "jahr": 1974,
+   "woche": 29,
+   "kasse": 46776,
+   "deckung": 2.376467001981405
+  },
+  {
+   "n": 145,
+   "jahr": 1974,
+   "woche": 30,
+   "kasse": 47281,
+   "deckung": 2.4021236600111773
+  },
+  {
+   "n": 146,
+   "jahr": 1975,
+   "woche": 1,
+   "kasse": 52628,
+   "deckung": 2.6737794035462072
+  },
+  {
+   "n": 147,
+   "jahr": 1975,
+   "woche": 2,
+   "kasse": 51943,
+   "deckung": 2.638977798099883
+  },
+  {
+   "n": 148,
+   "jahr": 1975,
+   "woche": 3,
+   "kasse": 51020,
+   "deckung": 1.9996080736821478
+  },
+  {
+   "n": 149,
+   "jahr": 1975,
+   "woche": 4,
+   "kasse": 50097,
+   "deckung": 1.9634332745443857
+  },
+  {
+   "n": 150,
+   "jahr": 1975,
+   "woche": 5,
+   "kasse": 49174,
+   "deckung": 1.7345326278659612
+  },
+  {
+   "n": 151,
+   "jahr": 1975,
+   "woche": 6,
+   "kasse": 48251,
+   "deckung": 1.7019753086419753
+  },
+  {
+   "n": 152,
+   "jahr": 1975,
+   "woche": 7,
+   "kasse": 47328,
+   "deckung": 3.490522899918873
+  },
+  {
+   "n": 153,
+   "jahr": 1975,
+   "woche": 8,
+   "kasse": 46405,
+   "deckung": 4.7149969518390575
+  },
+  {
+   "n": 154,
+   "jahr": 1975,
+   "woche": 9,
+   "kasse": 45720,
+   "deckung": 4.645397276976224
+  }
+ ]
+}

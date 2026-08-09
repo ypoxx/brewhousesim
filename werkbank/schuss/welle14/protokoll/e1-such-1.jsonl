@@ -1,0 +1,686 @@
+{"t":2.6,"was":"laden","url":"http://127.0.0.1:8936/spiel/?epoche=1&saat=1350&neu=1","fenster":"1600x900"}
+{"t":4.4,"was":"klick-nav","zug":"gegner:oeffnen:adler","text":"Brauhaus zum Adler","jahr":1350,"woche":1,"kasse":112,"ende":false,"endgrund":null}
+{"t":5.1,"was":"klick-nav","zug":"gegner:hinhalten:faehrhaus","text":"Fass an den Wirt1 Fass statt Geld","jahr":1350,"woche":1,"kasse":112,"ende":false,"endgrund":null}
+{"t":5.9,"was":"klick-nav","zug":"gegner:hinhalten:obernberg","text":"Fass an den Wirt1 Fass statt Geld","jahr":1350,"woche":1,"kasse":112,"ende":false,"endgrund":null}
+{"t":6.7,"was":"klick-nav","zug":"stadt:marke:fuhre-muehle","text":"MUE","jahr":1350,"woche":1,"kasse":112,"ende":false,"endgrund":null}
+{"t":7.3,"was":"klick-nav","zug":"stadt:marke:fuhre-bruecke-unten","text":"BRU","jahr":1350,"woche":1,"kasse":112,"ende":false,"endgrund":null}
+{"t":7.9,"was":"klick-nav","zug":"stadt:marke:fuhre-bruecke-oben","text":"OBE","jahr":1350,"woche":1,"kasse":112,"ende":false,"endgrund":null}
+{"t":8.8,"was":"klick-nav","zug":"kern:chronik","text":"Chronik4","jahr":1350,"woche":1,"kasse":112,"ende":false,"endgrund":null}
+{"t":9.2,"was":"klick-nav","zug":"kern:protokoll","text":"Buch1","jahr":1350,"woche":1,"kasse":112,"ende":false,"endgrund":null}
+{"t":10.1,"was":"klick-nav","zug":"kern:anfangen","text":"Anfangen","jahr":1350,"woche":1,"kasse":112,"ende":false,"endgrund":null}
+{"t":10.6,"was":"klick-nav","zug":"klang:ton","text":"♪","jahr":1350,"woche":1,"kasse":112,"ende":false,"endgrund":null}
+{"t":11.3,"was":"klick-nav","zug":"stadt:bauhof","text":"BAUHOF5 offen · ab 13 Pf · 5 bezahlbar","jahr":1350,"woche":1,"kasse":112,"ende":false,"endgrund":null}
+{"t":12,"was":"klick-nav","zug":"stadt:reiter:gegner-amort-gg-band","text":"Ohne dich geschehen · 1 Zugzugeklappt","jahr":1350,"woche":1,"kasse":112,"ende":false,"endgrund":null}
+{"t":12.6,"was":"klick-nav","zug":"stadt:reiter:fuhre-fu-brett-fu-haeuser","text":"DIE HÄUSERwollen 15 · im Keller liegen 4 Fass","jahr":1350,"woche":1,"kasse":112,"ende":false,"endgrund":null}
+{"t":13.2,"was":"klick-nav","zug":"stadt:reiter:fuhre-fu-brett-fu-schiefer-fu-tafel","text":"ANSCHLAGTAFELmit Kreide an der Sudhauswand","jahr":1350,"woche":1,"kasse":112,"ende":false,"endgrund":null}
+{"t":13.7,"was":"klick-nav","zug":"stadt:reiter:fuhre-fu-brett-fu-keller","text":"DER KELLER4 von 12 Fass · 4 reif","jahr":1350,"woche":1,"kasse":112,"ende":false,"endgrund":null}
+{"t":14.1,"was":"klick-nav","zug":"stadt:reiter:fuhre-fu-brett-fu-wagen","text":"OCHSENKARREN0 von 5 Fass · 0 von 4 Halten","jahr":1350,"woche":1,"kasse":112,"ende":false,"endgrund":null}
+{"t":14.6,"was":"klick-nav","zug":"stadt:reiter:sud-sud-brett","text":"DAS SUDHAUSzugeklappt","jahr":1350,"woche":1,"kasse":112,"ende":false,"endgrund":null}
+{"t":15,"was":"klick-nav","zug":"stadt:reiter:name-nm-band","text":"DER RUF DES HAUSESBierzeiger und Zunftzeichen","jahr":1350,"woche":1,"kasse":112,"ende":false,"endgrund":null}
+{"t":15.4,"was":"klick-nav","zug":"stadt:ortsmarken","text":"Ortsmarken7 auf dem Pflock","jahr":1350,"woche":1,"kasse":112,"ende":false,"endgrund":null}
+{"t":16.3,"was":"klick-nav","zug":"preis:tafel","text":"Michaelitafel 1350 · 5 Angebote — heute ist Michaeli","jahr":1350,"woche":1,"kasse":112,"ende":false,"endgrund":null}
+{"t":16.9,"was":"klick-nav","zug":"stadt:reiter:preis-pr-stil-pergament-pr-tafel","text":"MICHAELI 1350Der Rat setzt den Bierpfennig. Wer darüber g","jahr":1350,"woche":1,"kasse":112,"ende":false,"endgrund":null}
+{"t":17.6,"was":"klick-nav","zug":"stadt:alles-zuklappen","text":"Stadt zeigen","jahr":1350,"woche":1,"kasse":112,"ende":false,"endgrund":null}
+{"t":18,"was":"klick-nav","zug":"kern:blatt-zu","text":"Schließen","jahr":1350,"woche":1,"kasse":112,"ende":false,"endgrund":null}
+{"t":18.6,"was":"klick-preis","zug":"fuhre:plan:durst","text":"Fahren: nach Durst · 2 Fass+16 Pf","preis":16,"kasseVor":112,"kasseNach":109,"jahr":1350,"woche":2,"ende":false,"endgrund":null}
+{"t":19.1,"was":"klick-preis","zug":"fuhre:plan:mager","text":"Fahren: die mageren Häuser · 4 Fass+31 Pf","preis":31,"kasseVor":109,"kasseNach":109,"jahr":1350,"woche":3,"ende":false,"endgrund":null}
+{"t":19.6,"was":"klick-preis","zug":"fuhre:plan:mager","text":"Fahren: die mageren Häuser · 4 Fass+30 Pf","preis":30,"kasseVor":109,"kasseNach":110,"jahr":1350,"woche":4,"ende":false,"endgrund":null}
+{"t":20.1,"was":"runde-ende","runde":1,"jahr":1350,"woche":5,"kasse":101,"deckung":5.315789473684211,"besterPreis":19,"ende":false,"endgrund":null,"echteWochenGesamt":5}
+{"t":20.7,"was":"klick-nav","zug":"gegner:hinhalten:ochse","text":"Fass an den Wirt1 Fass statt Geld","jahr":1350,"woche":5,"kasse":101,"ende":false,"endgrund":null}
+{"t":21.4,"was":"klick-nav","zug":"fuhre:sprung","text":"Weiter wie zuletzt · bis zu 6 Wochen","jahr":1350,"woche":11,"kasse":104,"ende":false,"endgrund":null}
+{"t":21.9,"was":"klick-nav","zug":"kern:chronik","text":"Chronik7","jahr":1350,"woche":11,"kasse":104,"ende":false,"endgrund":null}
+{"t":22.3,"was":"klick-nav","zug":"kern:protokoll","text":"Buch44","jahr":1350,"woche":11,"kasse":104,"ende":false,"endgrund":null}
+{"t":22.7,"was":"klick-nav","zug":"klang:ton","text":"—","jahr":1350,"woche":11,"kasse":104,"ende":false,"endgrund":null}
+{"t":23.4,"was":"klick-nav","zug":"stadt:reiter:gegner-amort-gg-band","text":"Ohne dich geschehen · 4 Zügezugeklappt","jahr":1350,"woche":11,"kasse":104,"ende":false,"endgrund":null}
+{"t":24,"was":"klick-nav","zug":"stadt:reiter:fuhre-fu-brett-fu-haeuser","text":"DIE HÄUSERwollen 28 · im Keller liegen 8 Fass","jahr":1350,"woche":11,"kasse":104,"ende":false,"endgrund":null}
+{"t":24.6,"was":"klick-nav","zug":"stadt:reiter:fuhre-fu-brett-fu-keller","text":"DER KELLER8 von 12 Fass · 8 reif","jahr":1350,"woche":11,"kasse":104,"ende":false,"endgrund":null}
+{"t":25.1,"was":"klick-nav","zug":"stadt:ortsmarken","text":"Ortsmarken7 im Bild","jahr":1350,"woche":11,"kasse":104,"ende":false,"endgrund":null}
+{"t":26.2,"was":"klick-nav","zug":"preis:tafel","text":"Michaelitafel 1350 · 5 Angebote","jahr":1350,"woche":11,"kasse":104,"ende":false,"endgrund":null}
+{"t":27,"was":"klick-nav","zug":"gegner:hinhalten:muehlwirt","text":"Fass an den Wirt1 Fass statt Geld","jahr":1350,"woche":11,"kasse":104,"ende":false,"endgrund":null}
+{"t":27.8,"was":"klick-preis","zug":"gegner:abloesen:obernberg","text":"OBE · GEVablösen 42 Pf","preis":-42,"kasseVor":104,"kasseNach":62,"jahr":1350,"woche":11,"ende":false,"endgrund":null}
+{"t":28.6,"was":"runde-ende","runde":2,"jahr":1350,"woche":12,"kasse":53,"deckung":0.9464285714285714,"besterPreis":56,"ende":false,"endgrund":null,"echteWochenGesamt":7}
+{"t":29.3,"was":"klick-nav","zug":"gegner:hinhalten:lindenhof","text":"Fass an den Wirt1 Fass statt Geld","jahr":1350,"woche":12,"kasse":53,"ende":false,"endgrund":null}
+{"t":29.9,"was":"klick-nav","zug":"gegner:blatt","text":"Das Haus gegenüber","jahr":1350,"woche":12,"kasse":53,"ende":false,"endgrund":null}
+{"t":30.5,"was":"klick-nav","zug":"stadt:marke:gegner-bruecke-oben","text":"zurückgeholt — unser H","jahr":1350,"woche":12,"kasse":53,"ende":false,"endgrund":null}
+{"t":31.2,"was":"klick-nav","zug":"kern:chronik","text":"Chronik13","jahr":1350,"woche":12,"kasse":53,"ende":false,"endgrund":null}
+{"t":31.7,"was":"klick-nav","zug":"kern:protokoll","text":"Buch140","jahr":1350,"woche":12,"kasse":53,"ende":false,"endgrund":null}
+{"t":32.1,"was":"klick-nav","zug":"klang:ton","text":"♪","jahr":1350,"woche":12,"kasse":53,"ende":false,"endgrund":null}
+{"t":32.9,"was":"klick-nav","zug":"stadt:reiter:gegner-amort-gg-band","text":"Ohne dich geschehen · 11 Zügeliegt auf","jahr":1350,"woche":12,"kasse":53,"ende":false,"endgrund":null}
+{"t":33.5,"was":"klick-nav","zug":"stadt:reiter:fuhre-fu-brett-fu-haeuser","text":"DIE HÄUSERwollen 32 · im Keller liegen 10 Fass","jahr":1350,"woche":12,"kasse":53,"ende":false,"endgrund":null}
+{"t":34.1,"was":"klick-nav","zug":"stadt:reiter:fuhre-fu-brett-fu-keller","text":"DER KELLER10 von 12 Fass · 10 reif","jahr":1350,"woche":12,"kasse":53,"ende":false,"endgrund":null}
+{"t":34.5,"was":"klick-nav","zug":"stadt:ortsmarken","text":"Ortsmarken8 auf dem Pflock","jahr":1350,"woche":12,"kasse":53,"ende":false,"endgrund":null}
+{"t":35.1,"was":"klick-preis","zug":"fuhre:plan:mager","text":"Fahren: die mageren Häuser · 5 Fass+41 Pf","preis":41,"kasseVor":53,"kasseNach":57,"jahr":1350,"woche":13,"ende":false,"endgrund":null}
+{"t":35.7,"was":"klick-preis","zug":"fuhre:plan:mager","text":"Fahren: die mageren Häuser · 5 Fass+39 Pf","preis":39,"kasseVor":57,"kasseNach":59,"jahr":1350,"woche":14,"ende":false,"endgrund":null}
+{"t":36.2,"was":"klick-preis","zug":"fuhre:plan:mager","text":"Fahren: die mageren Häuser · 5 Fass+41 Pf","preis":41,"kasseVor":59,"kasseNach":71,"jahr":1350,"woche":15,"ende":false,"endgrund":null}
+{"t":36.6,"was":"runde-ende","runde":3,"jahr":1350,"woche":16,"kasse":70,"deckung":2.3333333333333335,"besterPreis":30,"ende":false,"endgrund":null,"echteWochenGesamt":11}
+{"t":37.1,"was":"klick-nav","zug":"kern:chronik","text":"Chronik20","jahr":1350,"woche":16,"kasse":70,"ende":false,"endgrund":null}
+{"t":37.5,"was":"klick-nav","zug":"kern:protokoll","text":"Buch180","jahr":1350,"woche":16,"kasse":70,"ende":false,"endgrund":null}
+{"t":37.9,"was":"klick-nav","zug":"klang:ton","text":"—","jahr":1350,"woche":16,"kasse":70,"ende":false,"endgrund":null}
+{"t":38.5,"was":"klick-nav","zug":"stadt:reiter:gegner-amort-gg-band","text":"Ohne dich geschehen · 14 Zügezugeklappt","jahr":1350,"woche":16,"kasse":70,"ende":false,"endgrund":null}
+{"t":39,"was":"klick-nav","zug":"stadt:reiter:fuhre-fu-brett-fu-haeuser","text":"DIE HÄUSERwollen 28 · im Keller liegen 1 Fass","jahr":1350,"woche":16,"kasse":70,"ende":false,"endgrund":null}
+{"t":39.5,"was":"klick-nav","zug":"stadt:reiter:fuhre-fu-brett-fu-keller","text":"DER KELLER1 von 12 Fass · 1 reif","jahr":1350,"woche":16,"kasse":70,"ende":false,"endgrund":null}
+{"t":39.9,"was":"klick-nav","zug":"stadt:ortsmarken","text":"Ortsmarken7 im Bild","jahr":1350,"woche":16,"kasse":70,"ende":false,"endgrund":null}
+{"t":40.5,"was":"klick-nav","zug":"gegner:zeige:14","text":"zeigen","jahr":1350,"woche":16,"kasse":70,"ende":false,"endgrund":null}
+{"t":41.2,"was":"klick-preis","zug":"fuhre:plan:mager","text":"Fahren: die mageren Häuser · 1 Fass+8 Pf","preis":8,"kasseVor":70,"kasseNach":72,"jahr":1350,"woche":17,"ende":false,"endgrund":null}
+{"t":41.8,"was":"klick-preis","zug":"fuhre:plan:rechnung","text":"Fahren: nach Rechnung · 3 Fass+6 Pf","preis":6,"kasseVor":72,"kasseNach":70,"jahr":1350,"woche":18,"ende":false,"endgrund":null}
+{"t":42.3,"was":"klick-preis","zug":"fuhre:plan:mager","text":"Fahren: die mageren Häuser · 2 Fass+3 Pf","preis":3,"kasseVor":70,"kasseNach":69,"jahr":1350,"woche":19,"ende":false,"endgrund":null}
+{"t":42.9,"was":"runde-ende","runde":4,"jahr":1350,"woche":20,"kasse":68,"deckung":1.4166666666666667,"besterPreis":48,"ende":false,"endgrund":null,"echteWochenGesamt":15}
+{"t":43.4,"was":"klick-nav","zug":"gegner:zeige:17","text":"zeigen","jahr":1350,"woche":20,"kasse":68,"ende":false,"endgrund":null}
+{"t":43.8,"was":"klick-nav","zug":"kern:chronik","text":"Chronik22","jahr":1350,"woche":20,"kasse":68,"ende":false,"endgrund":null}
+{"t":44.3,"was":"klick-nav","zug":"kern:protokoll","text":"Buch205","jahr":1350,"woche":20,"kasse":68,"ende":false,"endgrund":null}
+{"t":44.7,"was":"klick-nav","zug":"klang:ton","text":"♪","jahr":1350,"woche":20,"kasse":68,"ende":false,"endgrund":null}
+{"t":45.2,"was":"klick-nav","zug":"stadt:reiter:gegner-amort-gg-band","text":"Ohne dich geschehen · 17 Zügeliegt auf","jahr":1350,"woche":20,"kasse":68,"ende":false,"endgrund":null}
+{"t":45.8,"was":"klick-nav","zug":"stadt:reiter:fuhre-fu-brett-fu-haeuser","text":"DIE HÄUSERwollen 27 · im Keller liegen 1 Fass","jahr":1350,"woche":20,"kasse":68,"ende":false,"endgrund":null}
+{"t":46.2,"was":"klick-nav","zug":"stadt:ortsmarken","text":"Ortsmarken7 auf dem Pflock","jahr":1350,"woche":20,"kasse":68,"ende":false,"endgrund":null}
+{"t":46.8,"was":"klick-nav","zug":"gegner:hinhalten:markt","text":"Fass an den Wirt1 Fass statt Geld","jahr":1350,"woche":20,"kasse":68,"ende":false,"endgrund":null}
+{"t":47.3,"was":"klick-nav","zug":"stadt:reiter:fuhre-fu-brett-fu-keller","text":"DER KELLER0 von 12 Fass · 0 reif","jahr":1350,"woche":20,"kasse":68,"ende":false,"endgrund":null}
+{"t":47.9,"was":"klick-preis","zug":"erbe:uebergabe:leibgeding","text":"Leibgeding−5 Pf","preis":-5,"kasseVor":68,"kasseNach":68,"jahr":1350,"woche":20,"ende":false,"endgrund":null}
+{"t":48.4,"was":"klick-preis","zug":"erbe:uebergabe:leibgeding","text":"Leibgeding−7 Pf","preis":-7,"kasseVor":68,"kasseNach":68,"jahr":1350,"woche":20,"ende":false,"endgrund":null}
+{"t":48.9,"was":"klick-preis","zug":"erbe:uebergabe:leibgeding","text":"Leibgeding−10 Pf","preis":-10,"kasseVor":68,"kasseNach":68,"jahr":1350,"woche":20,"ende":false,"endgrund":null}
+{"t":49.4,"was":"runde-ende","runde":5,"jahr":1350,"woche":21,"kasse":67,"deckung":1.3958333333333333,"besterPreis":48,"ende":false,"endgrund":null,"echteWochenGesamt":16}
+{"t":49.9,"was":"klick-nav","zug":"kern:chronik","text":"Chronik33","jahr":1350,"woche":21,"kasse":67,"ende":false,"endgrund":null}
+{"t":50.3,"was":"klick-nav","zug":"kern:protokoll","text":"Buch209","jahr":1350,"woche":21,"kasse":67,"ende":false,"endgrund":null}
+{"t":50.7,"was":"klick-nav","zug":"klang:ton","text":"—","jahr":1350,"woche":21,"kasse":67,"ende":false,"endgrund":null}
+{"t":51.3,"was":"klick-nav","zug":"stadt:reiter:gegner-amort-gg-band","text":"Ohne dich geschehen · 18 Zügezugeklappt","jahr":1350,"woche":21,"kasse":67,"ende":false,"endgrund":null}
+{"t":51.8,"was":"klick-nav","zug":"stadt:reiter:fuhre-fu-brett-fu-haeuser","text":"DIE HÄUSERwollen 28 · im Keller liegen 3 Fass","jahr":1350,"woche":21,"kasse":67,"ende":false,"endgrund":null}
+{"t":52.4,"was":"klick-nav","zug":"stadt:reiter:fuhre-fu-brett-fu-keller","text":"DER KELLER3 von 12 Fass · 3 reif","jahr":1350,"woche":21,"kasse":67,"ende":false,"endgrund":null}
+{"t":52.8,"was":"klick-nav","zug":"stadt:ortsmarken","text":"Ortsmarken7 im Bild","jahr":1350,"woche":21,"kasse":67,"ende":false,"endgrund":null}
+{"t":53.7,"was":"klick-nav","zug":"preis:chronik-auf","text":"Chronik des Hauses · 3 Festlegungen · 0 von dieser Tafel · 0 Bauten stehen","jahr":1350,"woche":21,"kasse":67,"ende":false,"endgrund":null}
+{"t":54.3,"was":"klick-nav","zug":"preis:tafel","text":"Michaelitafel schließen","jahr":1350,"woche":21,"kasse":67,"ende":false,"endgrund":null}
+{"t":54.8,"was":"klick-nav","zug":"gegner:zeige:18","text":"zeigen","jahr":1350,"woche":21,"kasse":67,"ende":false,"endgrund":null}
+{"t":55.4,"was":"klick-preis","zug":"fuhre:plan:mager","text":"Fahren: die mageren Häuser · 3 Fass+6 Pf","preis":6,"kasseVor":67,"kasseNach":66,"jahr":1350,"woche":22,"ende":false,"endgrund":null}
+{"t":56,"was":"klick-preis","zug":"fuhre:plan:mager","text":"Fahren: die mageren Häuser · 3 Fass+5 Pf","preis":5,"kasseVor":66,"kasseNach":65,"jahr":1350,"woche":23,"ende":false,"endgrund":null}
+{"t":56.5,"was":"klick-preis","zug":"fuhre:plan:mager","text":"Fahren: die mageren Häuser · 1 Fass+2 Pf","preis":2,"kasseVor":65,"kasseNach":64,"jahr":1350,"woche":24,"ende":false,"endgrund":null}
+{"t":57,"was":"runde-ende","runde":6,"jahr":1350,"woche":25,"kasse":63,"deckung":1.3125,"besterPreis":48,"ende":false,"endgrund":null,"echteWochenGesamt":20}
+{"t":57.5,"was":"klick-nav","zug":"gegner:zeige:20","text":"zeigen","jahr":1350,"woche":25,"kasse":63,"ende":false,"endgrund":null}
+{"t":58.4,"was":"klick-nav","zug":"fuhre:sprung","text":"Weiter wie zuletzt · bis zu 5 Wochen","jahr":1350,"woche":30,"kasse":58,"ende":false,"endgrund":null}
+{"t":58.8,"was":"klick-nav","zug":"kern:protokoll","text":"Buch233","jahr":1350,"woche":30,"kasse":58,"ende":false,"endgrund":null}
+{"t":59.3,"was":"klick-nav","zug":"klang:ton","text":"♪","jahr":1350,"woche":30,"kasse":58,"ende":false,"endgrund":null}
+{"t":59.8,"was":"klick-nav","zug":"stadt:reiter:gegner-amort-gg-band","text":"Ohne dich geschehen · 20 Zügeliegt auf","jahr":1350,"woche":30,"kasse":58,"ende":false,"endgrund":null}
+{"t":60.3,"was":"klick-nav","zug":"stadt:reiter:fuhre-fu-brett-fu-haeuser","text":"DIE HÄUSERwollen 27 · im Keller liegen 2 Fass","jahr":1350,"woche":30,"kasse":58,"ende":false,"endgrund":null}
+{"t":60.9,"was":"klick-nav","zug":"stadt:reiter:fuhre-fu-brett-fu-keller","text":"DER KELLER2 von 12 Fass · 2 reif","jahr":1350,"woche":30,"kasse":58,"ende":false,"endgrund":null}
+{"t":61.4,"was":"klick-nav","zug":"stadt:ortsmarken","text":"Ortsmarken7 auf dem Pflock","jahr":1350,"woche":30,"kasse":58,"ende":false,"endgrund":null}
+{"t":62.2,"was":"klick-nav","zug":"preis:tafel","text":"Michaelitafel 1350 · 5 Angebote","jahr":1350,"woche":30,"kasse":58,"ende":false,"endgrund":null}
+{"t":62.7,"was":"klick-nav","zug":"kern:chronik","text":"Chronik38","jahr":1350,"woche":30,"kasse":58,"ende":false,"endgrund":null}
+{"t":63.3,"was":"klick-nav","zug":"stadt:reiter:name-nm-band","text":"DER RUF DES HAUSESGENOMMEN von Der Rat bis 1353","jahr":1350,"woche":30,"kasse":58,"ende":false,"endgrund":null}
+{"t":63.8,"was":"klick-nav","zug":"gegner:abloesen:markt","text":"MKT · RATnicht ablösbar","jahr":1350,"woche":30,"kasse":58,"ende":false,"endgrund":null}
+{"t":64.3,"was":"klick-nav","zug":"stadt:marke:gegner-kirche","text":"frei geworden","jahr":1350,"woche":30,"kasse":58,"ende":false,"endgrund":null}
+{"t":64.9,"was":"klick-nav","zug":"name:aufgeldbuch","text":"Das Aufgeld nachrechnen","jahr":1350,"woche":30,"kasse":58,"ende":false,"endgrund":null}
+{"t":65.4,"was":"klick-nav","zug":"name:ruhe","text":"Das Zeichen verdecken","jahr":1350,"woche":30,"kasse":58,"ende":false,"endgrund":null}
+{"t":66,"was":"klick-nav","zug":"name:herumgehen","text":"Herumgehen und den Namen sagen","jahr":1350,"woche":30,"kasse":58,"ende":false,"endgrund":null}
+{"t":66.6,"was":"klick-nav","zug":"name:blatt","text":"Das Zeichen und das Register","jahr":1350,"woche":30,"kasse":58,"ende":false,"endgrund":null}
+{"t":68,"was":"klick-preis","zug":"fuhre:plan:mager","text":"Fahren: die mageren Häuser · 3 Fass+5 Pf","preis":5,"kasseVor":58,"kasseNach":44,"jahr":1351,"woche":1,"ende":false,"endgrund":null}
+{"t":69.2,"was":"klick-preis","zug":"gegner:zukaufen:muehlwirt","text":"lieber zukaufen1 Fass · 12 Pf","preis":-12,"kasseVor":44,"kasseNach":32,"jahr":1351,"woche":1,"ende":false,"endgrund":null}
+{"t":69.8,"was":"klick-preis","zug":"gegner:zukaufen:faehrhaus","text":"lieber zukaufen1 Fass · 12 Pf","preis":-12,"kasseVor":32,"kasseNach":20,"jahr":1351,"woche":1,"ende":false,"endgrund":null}
+{"t":70.5,"was":"runde-ende","runde":7,"jahr":1351,"woche":2,"kasse":19,"deckung":0.2261904761904762,"besterPreis":84,"ende":false,"endgrund":null,"echteWochenGesamt":23}
+{"t":71.1,"was":"klick-nav","zug":"sud:zettel-wechsel-frei2","text":"Wasser aus dem Ziehbrunnenlässt Starkbier zu","jahr":1351,"woche":2,"kasse":19,"ende":false,"endgrund":null}
+{"t":71.6,"was":"klick-nav","zug":"stadt:marke:gegner-fluss","text":"frei geworden","jahr":1351,"woche":2,"kasse":19,"ende":false,"endgrund":null}
+{"t":72.3,"was":"klick-nav","zug":"kern:chronik","text":"Chronik49","jahr":1351,"woche":2,"kasse":19,"ende":false,"endgrund":null}
+{"t":72.7,"was":"klick-nav","zug":"kern:protokoll","text":"Buch288","jahr":1351,"woche":2,"kasse":19,"ende":false,"endgrund":null}
+{"t":73.2,"was":"klick-nav","zug":"klang:ton","text":"—","jahr":1351,"woche":2,"kasse":19,"ende":false,"endgrund":null}
+{"t":73.7,"was":"klick-nav","zug":"stadt:bauhof","text":"BAUHOF5 offen · ab 13 Pf · 3 bezahlbar","jahr":1351,"woche":2,"kasse":19,"ende":false,"endgrund":null}
+{"t":74.6,"was":"klick-nav","zug":"stadt:reiter:gegner-amort-gg-band","text":"Ohne dich geschehen · 25 Zügezugeklappt","jahr":1351,"woche":2,"kasse":19,"ende":false,"endgrund":null}
+{"t":75.2,"was":"klick-nav","zug":"stadt:reiter:fuhre-fu-brett-fu-haeuser","text":"DIE HÄUSERwollen 28 · im Keller liegen 3 Fass","jahr":1351,"woche":2,"kasse":19,"ende":false,"endgrund":null}
+{"t":75.8,"was":"klick-nav","zug":"stadt:reiter:fuhre-fu-brett-fu-keller","text":"DER KELLER3 von 12 Fass · 3 reif","jahr":1351,"woche":2,"kasse":19,"ende":false,"endgrund":null}
+{"t":76.4,"was":"klick-nav","zug":"stadt:ortsmarken","text":"Ortsmarken8 im Bild","jahr":1351,"woche":2,"kasse":19,"ende":false,"endgrund":null}
+{"t":77.5,"was":"klick-nav","zug":"preis:tafel","text":"Michaelitafel 1351 · 5 Angebote","jahr":1351,"woche":2,"kasse":19,"ende":false,"endgrund":null}
+{"t":78.2,"was":"klick-nav","zug":"stadt:reiter:preis-pr-stil-pergament-pr-tafel","text":"MICHAELI 1351Der Rat setzt den Bierpfennig. Wer darüber g","jahr":1351,"woche":2,"kasse":19,"ende":false,"endgrund":null}
+{"t":78.9,"was":"klick-nav","zug":"gegner:zeige:25","text":"zeigen","jahr":1351,"woche":2,"kasse":19,"ende":false,"endgrund":null}
+{"t":79.4,"was":"klick-nav","zug":"fuhre:ziel:bar","text":"So verabreden","jahr":1351,"woche":2,"kasse":19,"ende":false,"endgrund":null}
+{"t":80,"was":"klick-nav","zug":"fuhre:ziel:ziel","text":"So verabreden","jahr":1351,"woche":2,"kasse":19,"ende":false,"endgrund":null}
+{"t":80.7,"was":"klick-preis","zug":"fuhre:plan:mager","text":"Fahren: die mageren Häuser · 3 Fass+5 Pf","preis":5,"kasseVor":19,"kasseNach":15,"jahr":1351,"woche":3,"ende":false,"endgrund":null}
+{"t":81.3,"was":"klick-preis","zug":"fuhre:plan:mager","text":"Fahren: die mageren Häuser · 3 Fass+4 Pf","preis":4,"kasseVor":15,"kasseNach":12,"jahr":1351,"woche":4,"ende":false,"endgrund":null}
+{"t":81.9,"was":"klick-preis","zug":"fuhre:plan:mager","text":"Fahren: die mageren Häuser · 3 Fass+6 Pf","preis":6,"kasseVor":12,"kasseNach":12,"jahr":1351,"woche":5,"ende":false,"endgrund":null}
+{"t":82.5,"was":"runde-ende","runde":8,"jahr":1351,"woche":6,"kasse":11,"deckung":0.13095238095238096,"besterPreis":84,"ende":false,"endgrund":null,"echteWochenGesamt":27}
+{"t":83,"was":"klick-nav","zug":"gegner:zeige:27","text":"zeigen","jahr":1351,"woche":6,"kasse":11,"ende":false,"endgrund":null}
+{"t":83.6,"was":"klick-nav","zug":"sud:zettel-wechsel-frei2","text":"Wasser aus dem Stadtbachlässt Starkbier zu","jahr":1351,"woche":6,"kasse":11,"ende":false,"endgrund":null}
+{"t":84.4,"was":"klick-nav","zug":"fuhre:sprung","text":"Weiter wie zuletzt · bis zu 6 Wochen","jahr":1351,"woche":12,"kasse":11,"ende":false,"endgrund":null}
+{"t":84.9,"was":"klick-nav","zug":"kern:chronik","text":"Chronik52","jahr":1351,"woche":12,"kasse":11,"ende":false,"endgrund":null}
+{"t":85.4,"was":"klick-nav","zug":"kern:protokoll","text":"Buch319","jahr":1351,"woche":12,"kasse":11,"ende":false,"endgrund":null}
+{"t":85.8,"was":"klick-nav","zug":"klang:ton","text":"♪","jahr":1351,"woche":12,"kasse":11,"ende":false,"endgrund":null}
+{"t":86.4,"was":"klick-nav","zug":"stadt:bauhof","text":"BAUHOF5 offen · ab 13 Pf · keiner bezahlbar","jahr":1351,"woche":12,"kasse":11,"ende":false,"endgrund":null}
+{"t":87.1,"was":"klick-nav","zug":"stadt:reiter:gegner-amort-gg-band","text":"Ohne dich geschehen · 27 Zügeliegt auf","jahr":1351,"woche":12,"kasse":11,"ende":false,"endgrund":null}
+{"t":87.7,"was":"klick-nav","zug":"stadt:reiter:fuhre-fu-brett-fu-haeuser","text":"DIE HÄUSERwollen 24 · im Keller liegen 3 Fass","jahr":1351,"woche":12,"kasse":11,"ende":false,"endgrund":null}
+{"t":88.1,"was":"klick-nav","zug":"stadt:ortsmarken","text":"Ortsmarken7 auf dem Pflock","jahr":1351,"woche":12,"kasse":11,"ende":false,"endgrund":null}
+{"t":88.7,"was":"klick-nav","zug":"gegner:zeige:29","text":"zeigen","jahr":1351,"woche":12,"kasse":11,"ende":false,"endgrund":null}
+{"t":89.3,"was":"klick-preis","zug":"fuhre:plan:mager","text":"Fahren: die mageren Häuser · 3 Fass+4 Pf","preis":4,"kasseVor":11,"kasseNach":7,"jahr":1351,"woche":13,"ende":false,"endgrund":null}
+{"t":89.8,"was":"klick-preis","zug":"fuhre:plan:mager","text":"Fahren: die mageren Häuser · 3 Fass+5 Pf","preis":5,"kasseVor":7,"kasseNach":3,"jahr":1351,"woche":14,"ende":false,"endgrund":null}
+{"t":90.3,"was":"klick-preis","zug":"fuhre:plan:mager","text":"Fahren: die mageren Häuser · 3 Fass+4 Pf","preis":4,"kasseVor":3,"kasseNach":0,"jahr":1351,"woche":15,"ende":false,"endgrund":null}
+{"t":90.8,"was":"runde-ende","runde":9,"jahr":1351,"woche":16,"kasse":0,"deckung":0,"besterPreis":51,"ende":false,"endgrund":null,"echteWochenGesamt":32}
+{"t":91.4,"was":"klick-nav","zug":"gegner:hinhalten:brueckenwirt","text":"Fass an den Wirt1 Fass statt Geld","jahr":1351,"woche":16,"kasse":0,"ende":false,"endgrund":null}
+{"t":92,"was":"klick-nav","zug":"sud:zettel-wechsel-frei2","text":"Wasser aus dem Ziehbrunnenlässt Starkbier zu","jahr":1351,"woche":16,"kasse":0,"ende":false,"endgrund":null}
+{"t":92.4,"was":"klick-nav","zug":"kern:chronik","text":"Chronik55","jahr":1351,"woche":16,"kasse":0,"ende":false,"endgrund":null}
+{"t":92.9,"was":"klick-nav","zug":"kern:protokoll","text":"Buch380","jahr":1351,"woche":16,"kasse":0,"ende":false,"endgrund":null}
+{"t":93.3,"was":"klick-nav","zug":"klang:ton","text":"—","jahr":1351,"woche":16,"kasse":0,"ende":false,"endgrund":null}
+{"t":93.9,"was":"klick-nav","zug":"stadt:reiter:gegner-amort-gg-band","text":"Ohne dich geschehen · 33 Zügeliegt auf","jahr":1351,"woche":16,"kasse":0,"ende":false,"endgrund":null}
+{"t":94.4,"was":"klick-nav","zug":"stadt:ortsmarken","text":"Ortsmarken8 im Bild","jahr":1351,"woche":16,"kasse":0,"ende":false,"endgrund":null}
+{"t":95,"was":"klick-nav","zug":"stadt:reiter:fuhre-fu-brett-fu-haeuser","text":"DIE HÄUSERwollen 24 · im Keller liegen 2 Fass","jahr":1351,"woche":16,"kasse":0,"ende":false,"endgrund":null}
+{"t":95.5,"was":"klick-nav","zug":"stadt:reiter:fuhre-fu-brett-fu-keller","text":"DER KELLER2 von 12 Fass · 2 reif","jahr":1351,"woche":16,"kasse":0,"ende":false,"endgrund":null}
+{"t":96.1,"was":"klick-preis","zug":"fuhre:plan:mager","text":"Fahren: die mageren Häuser · 2 Fass+4 Pf","preis":4,"kasseVor":0,"kasseNach":0,"jahr":1351,"woche":17,"ende":false,"endgrund":null}
+{"t":96.6,"was":"klick-preis","zug":"fuhre:plan:mager","text":"Fahren: die mageren Häuser · 1 Fass+1 Pf","preis":1,"kasseVor":0,"kasseNach":0,"jahr":1351,"woche":18,"ende":false,"endgrund":null}
+{"t":97.2,"was":"klick-preis","zug":"fuhre:plan:mager","text":"Fahren: die mageren Häuser · 2 Fass+3 Pf","preis":3,"kasseVor":0,"kasseNach":0,"jahr":1351,"woche":19,"ende":false,"endgrund":null}
+{"t":97.7,"was":"runde-ende","runde":10,"jahr":1351,"woche":20,"kasse":0,"deckung":0,"besterPreis":32,"ende":false,"endgrund":null,"echteWochenGesamt":36}
+{"t":98.3,"was":"klick-nav","zug":"sud:zettel-wechsel-frei2","text":"Wasser aus dem Stadtbachlässt Starkbier zu","jahr":1351,"woche":20,"kasse":0,"ende":false,"endgrund":null}
+{"t":98.7,"was":"klick-nav","zug":"kern:chronik","text":"Chronik56","jahr":1351,"woche":20,"kasse":0,"ende":false,"endgrund":null}
+{"t":99.1,"was":"klick-nav","zug":"kern:protokoll","text":"Buch405","jahr":1351,"woche":20,"kasse":0,"ende":false,"endgrund":null}
+{"t":99.6,"was":"klick-nav","zug":"klang:ton","text":"♪","jahr":1351,"woche":20,"kasse":0,"ende":false,"endgrund":null}
+{"t":100.1,"was":"klick-nav","zug":"stadt:reiter:gegner-amort-gg-band","text":"Ohne dich geschehen · 34 Zügezugeklappt","jahr":1351,"woche":20,"kasse":0,"ende":false,"endgrund":null}
+{"t":100.7,"was":"klick-nav","zug":"stadt:reiter:fuhre-fu-brett-fu-haeuser","text":"DIE HÄUSERwollen 24 · im Keller liegen 3 Fass","jahr":1351,"woche":20,"kasse":0,"ende":false,"endgrund":null}
+{"t":101.2,"was":"klick-nav","zug":"stadt:reiter:fuhre-fu-brett-fu-keller","text":"DER KELLER3 von 12 Fass · 3 reif","jahr":1351,"woche":20,"kasse":0,"ende":false,"endgrund":null}
+{"t":101.6,"was":"klick-nav","zug":"stadt:ortsmarken","text":"Ortsmarken7 auf dem Pflock","jahr":1351,"woche":20,"kasse":0,"ende":false,"endgrund":null}
+{"t":102.1,"was":"klick-nav","zug":"gegner:zeige:34","text":"zeigen","jahr":1351,"woche":20,"kasse":0,"ende":false,"endgrund":null}
+{"t":102.7,"was":"klick-preis","zug":"fuhre:plan:mager","text":"Fahren: die mageren Häuser · 3 Fass+5 Pf","preis":5,"kasseVor":0,"kasseNach":0,"jahr":1351,"woche":21,"ende":false,"endgrund":null}
+{"t":103.3,"was":"klick-preis","zug":"fuhre:plan:mager","text":"Fahren: die mageren Häuser · 2 Fass+3 Pf","preis":3,"kasseVor":0,"kasseNach":0,"jahr":1351,"woche":22,"ende":false,"endgrund":null}
+{"t":103.9,"was":"runde-ende","runde":11,"jahr":1351,"woche":23,"kasse":0,"deckung":0,"besterPreis":84,"ende":false,"endgrund":null,"echteWochenGesamt":39}
+{"t":104.5,"was":"klick-nav","zug":"gegner:zeige:38","text":"zeigen","jahr":1351,"woche":23,"kasse":0,"ende":false,"endgrund":null}
+{"t":105,"was":"klick-nav","zug":"sud:zettel-wechsel-frei2","text":"Wasser aus dem Ziehbrunnenlässt Starkbier zu","jahr":1351,"woche":23,"kasse":0,"ende":false,"endgrund":null}
+{"t":105.5,"was":"klick-nav","zug":"stadt:marke:gegner-muehle","text":"frei geworden","jahr":1351,"woche":23,"kasse":0,"ende":false,"endgrund":null}
+{"t":106,"was":"klick-nav","zug":"kern:chronik","text":"Chronik59","jahr":1351,"woche":23,"kasse":0,"ende":false,"endgrund":null}
+{"t":106.5,"was":"klick-nav","zug":"kern:protokoll","text":"Buch423","jahr":1351,"woche":23,"kasse":0,"ende":false,"endgrund":null}
+{"t":106.9,"was":"klick-nav","zug":"klang:ton","text":"—","jahr":1351,"woche":23,"kasse":0,"ende":false,"endgrund":null}
+{"t":107.5,"was":"klick-nav","zug":"stadt:reiter:gegner-amort-gg-band","text":"Ohne dich geschehen · 38 Zügeliegt auf","jahr":1351,"woche":23,"kasse":0,"ende":false,"endgrund":null}
+{"t":108.1,"was":"klick-nav","zug":"stadt:reiter:fuhre-fu-brett-fu-haeuser","text":"DIE HÄUSERwollen 24 · im Keller liegen 1 Fass","jahr":1351,"woche":23,"kasse":0,"ende":false,"endgrund":null}
+{"t":108.7,"was":"klick-nav","zug":"stadt:reiter:fuhre-fu-brett-fu-keller","text":"DER KELLER1 von 12 Fass · 1 reif","jahr":1351,"woche":23,"kasse":0,"ende":false,"endgrund":null}
+{"t":109.2,"was":"klick-nav","zug":"stadt:ortsmarken","text":"Ortsmarken9 im Bild","jahr":1351,"woche":23,"kasse":0,"ende":false,"endgrund":null}
+{"t":109.9,"was":"klick-preis","zug":"fuhre:plan:mager","text":"Fahren: die mageren Häuser · 1 Fass+2 Pf","preis":2,"kasseVor":0,"kasseNach":0,"jahr":1351,"woche":24,"ende":false,"endgrund":null}
+{"t":110.4,"was":"klick-preis","zug":"fuhre:plan:mager","text":"Fahren: die mageren Häuser · 3 Fass+5 Pf","preis":5,"kasseVor":0,"kasseNach":0,"jahr":1351,"woche":25,"ende":false,"endgrund":null}
+{"t":110.9,"was":"klick-preis","zug":"fuhre:plan:mager","text":"Fahren: die mageren Häuser · 1 Fass+1 Pf","preis":1,"kasseVor":0,"kasseNach":0,"jahr":1351,"woche":26,"ende":false,"endgrund":null}
+{"t":111.5,"was":"runde-ende","runde":12,"jahr":1351,"woche":27,"kasse":0,"deckung":0,"besterPreis":22,"ende":false,"endgrund":null,"echteWochenGesamt":43}
+{"t":112.1,"was":"klick-nav","zug":"sud:zettel-wechsel-frei2","text":"Wasser aus dem Stadtbachlässt Starkbier zu","jahr":1351,"woche":27,"kasse":0,"ende":false,"endgrund":null}
+{"t":112.7,"was":"klick-nav","zug":"fuhre:sprung","text":"Weiter wie zuletzt · bis zu 3 Wochen","jahr":1351,"woche":30,"kasse":0,"ende":false,"endgrund":null}
+{"t":113.1,"was":"klick-nav","zug":"kern:protokoll","text":"Buch446","jahr":1351,"woche":30,"kasse":0,"ende":false,"endgrund":null}
+{"t":113.6,"was":"klick-nav","zug":"klang:ton","text":"♪","jahr":1351,"woche":30,"kasse":0,"ende":false,"endgrund":null}
+{"t":114.1,"was":"klick-nav","zug":"stadt:reiter:gegner-amort-gg-band","text":"Ohne dich geschehen · 41 Zügezugeklappt","jahr":1351,"woche":30,"kasse":0,"ende":false,"endgrund":null}
+{"t":114.7,"was":"klick-nav","zug":"stadt:reiter:fuhre-fu-brett-fu-haeuser","text":"DIE HÄUSERwollen 24 · im Keller liegen 2 Fass","jahr":1351,"woche":30,"kasse":0,"ende":false,"endgrund":null}
+{"t":115.3,"was":"klick-nav","zug":"stadt:reiter:fuhre-fu-brett-fu-keller","text":"DER KELLER2 von 12 Fass · 2 reif","jahr":1351,"woche":30,"kasse":0,"ende":false,"endgrund":null}
+{"t":115.8,"was":"klick-nav","zug":"stadt:ortsmarken","text":"Ortsmarken7 auf dem Pflock","jahr":1351,"woche":30,"kasse":0,"ende":false,"endgrund":null}
+{"t":116.3,"was":"klick-nav","zug":"gegner:beschwerde","text":"Klage vor dem Stadtgericht","jahr":1351,"woche":30,"kasse":0,"ende":false,"endgrund":null}
+{"t":116.8,"was":"klick-nav","zug":"gegner:zeige:42","text":"zeigen","jahr":1351,"woche":30,"kasse":0,"ende":false,"endgrund":null}
+{"t":117.4,"was":"klick-nav","zug":"fuhre:laden:ochse","text":"+ 1 Fass","jahr":1351,"woche":30,"kasse":0,"ende":false,"endgrund":null}
+{"t":117.9,"was":"klick-nav","zug":"fuhre:laden:torschenke","text":"+ 1 Fass","jahr":1351,"woche":30,"kasse":0,"ende":false,"endgrund":null}
+{"t":118.4,"was":"klick-nav","zug":"kern:chronik","text":"Chronik62","jahr":1351,"woche":30,"kasse":0,"ende":false,"endgrund":null}
+{"t":118.9,"was":"klick-nav","zug":"stadt:reiter:fuhre-fu-brett-fu-wagen","text":"OCHSENKARREN2 von 5 Fass · 2 von 4 Halten","jahr":1351,"woche":30,"kasse":0,"ende":false,"endgrund":null}
+{"t":119.5,"was":"klick-nav","zug":"fuhre:leeren","text":"Karren leeren","jahr":1351,"woche":30,"kasse":0,"ende":false,"endgrund":null}
+{"t":120.9,"was":"klick-preis","zug":"fuhre:plan:mager","text":"Fahren: die mageren Häuser · 2 Fass+4 Pf","preis":4,"kasseVor":0,"kasseNach":26,"jahr":1352,"woche":1,"ende":false,"endgrund":null}
+{"t":122,"was":"klick-preis","zug":"gegner:zukaufen:brueckenwirt","text":"lieber zukaufen1 Fass · 12 Pf","preis":-12,"kasseVor":26,"kasseNach":14,"jahr":1352,"woche":1,"ende":false,"endgrund":null}
+{"t":122.7,"was":"runde-ende","runde":13,"jahr":1352,"woche":2,"kasse":13,"deckung":0.3611111111111111,"besterPreis":36,"ende":false,"endgrund":null,"echteWochenGesamt":46}
+{"t":123.3,"was":"klick-nav","zug":"sud:zettel-wechsel-frei2","text":"Wasser aus dem Ziehbrunnenlässt Starkbier zu","jahr":1352,"woche":2,"kasse":13,"ende":false,"endgrund":null}
+{"t":123.8,"was":"klick-nav","zug":"kern:chronik","text":"Chronik75","jahr":1352,"woche":2,"kasse":13,"ende":false,"endgrund":null}
+{"t":124.2,"was":"klick-nav","zug":"kern:protokoll","text":"Buch481","jahr":1352,"woche":2,"kasse":13,"ende":false,"endgrund":null}
+{"t":124.6,"was":"klick-nav","zug":"klang:ton","text":"—","jahr":1352,"woche":2,"kasse":13,"ende":false,"endgrund":null}
+{"t":125.3,"was":"klick-nav","zug":"stadt:bauhof","text":"BAUHOF5 offen · ab 13 Pf · 1 bezahlbar","jahr":1352,"woche":2,"kasse":13,"ende":false,"endgrund":null}
+{"t":126,"was":"klick-nav","zug":"stadt:reiter:gegner-amort-gg-band","text":"Ohne dich geschehen · 43 Zügezugeklappt","jahr":1352,"woche":2,"kasse":13,"ende":false,"endgrund":null}
+{"t":126.6,"was":"klick-nav","zug":"stadt:reiter:fuhre-fu-brett-fu-haeuser","text":"DIE HÄUSERwollen 19 · im Keller liegen 3 Fass","jahr":1352,"woche":2,"kasse":13,"ende":false,"endgrund":null}
+{"t":127.2,"was":"klick-nav","zug":"stadt:reiter:fuhre-fu-brett-fu-keller","text":"DER KELLER3 von 12 Fass · 3 reif","jahr":1352,"woche":2,"kasse":13,"ende":false,"endgrund":null}
+{"t":127.7,"was":"klick-nav","zug":"stadt:reiter:fuhre-fu-brett-fu-wagen","text":"OCHSENKARREN0 von 5 Fass · 0 von 4 Halten","jahr":1352,"woche":2,"kasse":13,"ende":false,"endgrund":null}
+{"t":128.1,"was":"klick-nav","zug":"stadt:ortsmarken","text":"Ortsmarken7 im Bild","jahr":1352,"woche":2,"kasse":13,"ende":false,"endgrund":null}
+{"t":129.1,"was":"klick-nav","zug":"preis:tafel","text":"Michaelitafel 1352 · 5 Angebote","jahr":1352,"woche":2,"kasse":13,"ende":false,"endgrund":null}
+{"t":129.8,"was":"klick-nav","zug":"stadt:reiter:preis-pr-stil-pergament-pr-tafel","text":"MICHAELI 1352Der Rat setzt den Bierpfennig. Wer darüber g","jahr":1352,"woche":2,"kasse":13,"ende":false,"endgrund":null}
+{"t":130.4,"was":"klick-nav","zug":"gegner:zeige:43","text":"zeigen","jahr":1352,"woche":2,"kasse":13,"ende":false,"endgrund":null}
+{"t":131,"was":"klick-preis","zug":"fuhre:plan:mager","text":"Fahren: die mageren Häuser · 3 Fass+5 Pf","preis":5,"kasseVor":13,"kasseNach":10,"jahr":1352,"woche":3,"ende":false,"endgrund":null}
+{"t":131.6,"was":"klick-preis","zug":"fuhre:plan:mager","text":"Fahren: die mageren Häuser · 3 Fass+5 Pf","preis":5,"kasseVor":10,"kasseNach":8,"jahr":1352,"woche":4,"ende":false,"endgrund":null}
+{"t":132.3,"was":"klick-preis","zug":"fuhre:plan:mager","text":"Fahren: die mageren Häuser · 3 Fass+6 Pf","preis":6,"kasseVor":8,"kasseNach":6,"jahr":1352,"woche":5,"ende":false,"endgrund":null}
+{"t":132.8,"was":"runde-ende","runde":14,"jahr":1352,"woche":6,"kasse":5,"deckung":0.1388888888888889,"besterPreis":36,"ende":false,"endgrund":null,"echteWochenGesamt":50}
+{"t":133.5,"was":"klick-nav","zug":"gegner:zeige:46","text":"zeigen","jahr":1352,"woche":6,"kasse":5,"ende":false,"endgrund":null}
+{"t":134,"was":"klick-nav","zug":"sud:zettel-wechsel-frei2","text":"Wasser aus dem Stadtbachlässt Starkbier zu","jahr":1352,"woche":6,"kasse":5,"ende":false,"endgrund":null}
+{"t":135,"was":"klick-nav","zug":"fuhre:sprung","text":"Weiter wie zuletzt · bis zu 6 Wochen","jahr":1352,"woche":12,"kasse":0,"ende":false,"endgrund":null}
+{"t":135.4,"was":"klick-nav","zug":"kern:chronik","text":"Chronik77","jahr":1352,"woche":12,"kasse":0,"ende":false,"endgrund":null}
+{"t":135.8,"was":"klick-nav","zug":"kern:protokoll","text":"Buch518","jahr":1352,"woche":12,"kasse":0,"ende":false,"endgrund":null}
+{"t":136.2,"was":"klick-nav","zug":"klang:ton","text":"♪","jahr":1352,"woche":12,"kasse":0,"ende":false,"endgrund":null}
+{"t":136.8,"was":"klick-nav","zug":"stadt:bauhof","text":"BAUHOF5 offen · ab 13 Pf · keiner bezahlbar","jahr":1352,"woche":12,"kasse":0,"ende":false,"endgrund":null}
+{"t":137.5,"was":"klick-nav","zug":"stadt:reiter:gegner-amort-gg-band","text":"Ohne dich geschehen · 46 Zügeliegt auf","jahr":1352,"woche":12,"kasse":0,"ende":false,"endgrund":null}
+{"t":138,"was":"klick-nav","zug":"stadt:reiter:fuhre-fu-brett-fu-haeuser","text":"DIE HÄUSERwollen 15 · im Keller liegen 3 Fass","jahr":1352,"woche":12,"kasse":0,"ende":false,"endgrund":null}
+{"t":138.5,"was":"klick-nav","zug":"stadt:ortsmarken","text":"Ortsmarken7 auf dem Pflock","jahr":1352,"woche":12,"kasse":0,"ende":false,"endgrund":null}
+{"t":139,"was":"klick-nav","zug":"gegner:zeige:48","text":"zeigen","jahr":1352,"woche":12,"kasse":0,"ende":false,"endgrund":null}
+{"t":139.6,"was":"klick-preis","zug":"fuhre:plan:mager","text":"Fahren: die mageren Häuser · 3 Fass+6 Pf","preis":6,"kasseVor":0,"kasseNach":0,"jahr":1352,"woche":13,"ende":false,"endgrund":null}
+{"t":140.2,"was":"klick-preis","zug":"fuhre:plan:mager","text":"Fahren: die mageren Häuser · 1 Fass+1 Pf","preis":1,"kasseVor":0,"kasseNach":0,"jahr":1352,"woche":14,"ende":false,"endgrund":null}
+{"t":140.7,"was":"klick-preis","zug":"fuhre:plan:mager","text":"Fahren: die mageren Häuser · 1 Fass+1 Pf","preis":1,"kasseVor":0,"kasseNach":0,"jahr":1352,"woche":15,"ende":false,"endgrund":null}
+{"t":141.3,"was":"runde-ende","runde":15,"jahr":1352,"woche":16,"kasse":0,"deckung":0,"besterPreis":36,"ende":false,"endgrund":null,"echteWochenGesamt":55}
+{"t":142.3,"was":"klick-nav","zug":"gegner:zeige:49","text":"zeigen","jahr":1352,"woche":16,"kasse":0,"ende":false,"endgrund":null}
+{"t":142.8,"was":"klick-nav","zug":"sud:zettel-wechsel-frei2","text":"Wasser aus dem Ziehbrunnenlässt Starkbier zu","jahr":1352,"woche":16,"kasse":0,"ende":false,"endgrund":null}
+{"t":143.2,"was":"klick-nav","zug":"kern:chronik","text":"Chronik79","jahr":1352,"woche":16,"kasse":0,"ende":false,"endgrund":null}
+{"t":143.6,"was":"klick-nav","zug":"kern:protokoll","text":"Buch573","jahr":1352,"woche":16,"kasse":0,"ende":false,"endgrund":null}
+{"t":144.1,"was":"klick-nav","zug":"klang:ton","text":"—","jahr":1352,"woche":16,"kasse":0,"ende":false,"endgrund":null}
+{"t":144.7,"was":"klick-nav","zug":"stadt:reiter:gegner-amort-gg-band","text":"Ohne dich geschehen · 49 Zügeliegt auf","jahr":1352,"woche":16,"kasse":0,"ende":false,"endgrund":null}
+{"t":145.3,"was":"klick-nav","zug":"stadt:reiter:fuhre-fu-brett-fu-haeuser","text":"DIE HÄUSERwollen 17 · im Keller liegen 1 Fass","jahr":1352,"woche":16,"kasse":0,"ende":false,"endgrund":null}
+{"t":145.9,"was":"klick-nav","zug":"stadt:reiter:fuhre-fu-brett-fu-keller","text":"DER KELLER1 von 12 Fass · 1 reif","jahr":1352,"woche":16,"kasse":0,"ende":false,"endgrund":null}
+{"t":146.3,"was":"klick-nav","zug":"stadt:ortsmarken","text":"Ortsmarken7 im Bild","jahr":1352,"woche":16,"kasse":0,"ende":false,"endgrund":null}
+{"t":146.9,"was":"klick-preis","zug":"fuhre:plan:mager","text":"Fahren: die mageren Häuser · 1 Fass+2 Pf","preis":2,"kasseVor":0,"kasseNach":0,"jahr":1352,"woche":17,"ende":false,"endgrund":null}
+{"t":147.4,"was":"klick-preis","zug":"fuhre:plan:mager","text":"Fahren: die mageren Häuser · 2 Fass+3 Pf","preis":3,"kasseVor":0,"kasseNach":0,"jahr":1352,"woche":18,"ende":false,"endgrund":null}
+{"t":147.9,"was":"klick-preis","zug":"fuhre:plan:mager","text":"Fahren: die mageren Häuser · 3 Fass+5 Pf","preis":5,"kasseVor":0,"kasseNach":0,"jahr":1352,"woche":19,"ende":false,"endgrund":null}
+{"t":148.5,"was":"runde-ende","runde":16,"jahr":1352,"woche":20,"kasse":0,"deckung":0,"besterPreis":36,"ende":false,"endgrund":null,"echteWochenGesamt":59}
+{"t":149,"was":"klick-nav","zug":"sud:zettel-wechsel-frei2","text":"Wasser aus dem Stadtbachlässt Starkbier zu","jahr":1352,"woche":20,"kasse":0,"ende":false,"endgrund":null}
+{"t":149.4,"was":"klick-nav","zug":"kern:chronik","text":"Chronik85","jahr":1352,"woche":20,"kasse":0,"ende":false,"endgrund":null}
+{"t":149.8,"was":"klick-nav","zug":"kern:protokoll","text":"Buch603","jahr":1352,"woche":20,"kasse":0,"ende":false,"endgrund":null}
+{"t":150.3,"was":"klick-nav","zug":"klang:ton","text":"♪","jahr":1352,"woche":20,"kasse":0,"ende":false,"endgrund":null}
+{"t":150.8,"was":"klick-nav","zug":"stadt:reiter:gegner-amort-gg-band","text":"Ohne dich geschehen · 50 Zügezugeklappt","jahr":1352,"woche":20,"kasse":0,"ende":false,"endgrund":null}
+{"t":151.3,"was":"klick-nav","zug":"stadt:reiter:fuhre-fu-brett-fu-haeuser","text":"DIE HÄUSERwollen 15 · im Keller liegen 3 Fass","jahr":1352,"woche":20,"kasse":0,"ende":false,"endgrund":null}
+{"t":151.8,"was":"klick-nav","zug":"stadt:reiter:fuhre-fu-brett-fu-keller","text":"DER KELLER3 von 12 Fass · 3 reif","jahr":1352,"woche":20,"kasse":0,"ende":false,"endgrund":null}
+{"t":152.3,"was":"klick-nav","zug":"stadt:ortsmarken","text":"Ortsmarken7 auf dem Pflock","jahr":1352,"woche":20,"kasse":0,"ende":false,"endgrund":null}
+{"t":152.8,"was":"klick-nav","zug":"gegner:zeige:50","text":"zeigen","jahr":1352,"woche":20,"kasse":0,"ende":false,"endgrund":null}
+{"t":153.4,"was":"klick-preis","zug":"fuhre:plan:mager","text":"Fahren: die mageren Häuser · 3 Fass+6 Pf","preis":6,"kasseVor":0,"kasseNach":0,"jahr":1352,"woche":21,"ende":false,"endgrund":null}
+{"t":153.9,"was":"klick-preis","zug":"fuhre:plan:mager","text":"Fahren: die mageren Häuser · 1 Fass+2 Pf","preis":2,"kasseVor":0,"kasseNach":0,"jahr":1352,"woche":22,"ende":false,"endgrund":null}
+{"t":154.4,"was":"klick-preis","zug":"fuhre:plan:mager","text":"Fahren: die mageren Häuser · 2 Fass+3 Pf","preis":3,"kasseVor":0,"kasseNach":0,"jahr":1352,"woche":23,"ende":false,"endgrund":null}
+{"t":155,"was":"runde-ende","runde":17,"jahr":1352,"woche":24,"kasse":0,"deckung":0,"besterPreis":56,"ende":false,"endgrund":null,"echteWochenGesamt":63}
+{"t":155.6,"was":"klick-nav","zug":"gegner:zeige:52","text":"zeigen","jahr":1352,"woche":24,"kasse":0,"ende":false,"endgrund":null}
+{"t":156.1,"was":"klick-nav","zug":"sud:zettel-wechsel-frei2","text":"Wasser aus dem Ziehbrunnenlässt Starkbier zu","jahr":1352,"woche":24,"kasse":0,"ende":false,"endgrund":null}
+{"t":156.5,"was":"klick-nav","zug":"kern:chronik","text":"Chronik86","jahr":1352,"woche":24,"kasse":0,"ende":false,"endgrund":null}
+{"t":156.9,"was":"klick-nav","zug":"kern:protokoll","text":"Buch623","jahr":1352,"woche":24,"kasse":0,"ende":false,"endgrund":null}
+{"t":157.4,"was":"klick-nav","zug":"klang:ton","text":"—","jahr":1352,"woche":24,"kasse":0,"ende":false,"endgrund":null}
+{"t":157.9,"was":"klick-nav","zug":"stadt:reiter:gegner-amort-gg-band","text":"Ohne dich geschehen · 52 Zügeliegt auf","jahr":1352,"woche":24,"kasse":0,"ende":false,"endgrund":null}
+{"t":158.4,"was":"klick-nav","zug":"stadt:ortsmarken","text":"Ortsmarken8 im Bild","jahr":1352,"woche":24,"kasse":0,"ende":false,"endgrund":null}
+{"t":158.9,"was":"klick-preis","zug":"fuhre:plan:mager","text":"Fahren: die mageren Häuser · 3 Fass+5 Pf","preis":5,"kasseVor":0,"kasseNach":0,"jahr":1352,"woche":25,"ende":false,"endgrund":null}
+{"t":159.5,"was":"klick-preis","zug":"fuhre:plan:mager","text":"Fahren: die mageren Häuser · 1 Fass+1 Pf","preis":1,"kasseVor":0,"kasseNach":0,"jahr":1352,"woche":26,"ende":false,"endgrund":null}
+{"t":160,"was":"klick-preis","zug":"fuhre:plan:mager","text":"Fahren: die mageren Häuser · 1 Fass+1 Pf","preis":1,"kasseVor":0,"kasseNach":0,"jahr":1352,"woche":27,"ende":false,"endgrund":null}
+{"t":160.6,"was":"runde-ende","runde":18,"jahr":1352,"woche":28,"kasse":0,"deckung":0,"besterPreis":36,"ende":false,"endgrund":null,"echteWochenGesamt":67}
+{"t":161.1,"was":"klick-nav","zug":"sud:zettel-wechsel-frei2","text":"Wasser aus dem Stadtbachlässt Starkbier zu","jahr":1352,"woche":28,"kasse":0,"ende":false,"endgrund":null}
+{"t":161.7,"was":"klick-nav","zug":"fuhre:sprung","text":"Weiter wie zuletzt · bis zu 2 Wochen","jahr":1352,"woche":30,"kasse":0,"ende":false,"endgrund":null}
+{"t":162.2,"was":"klick-nav","zug":"kern:chronik","text":"Chronik89","jahr":1352,"woche":30,"kasse":0,"ende":false,"endgrund":null}
+{"t":162.7,"was":"klick-nav","zug":"kern:protokoll","text":"Buch648","jahr":1352,"woche":30,"kasse":0,"ende":false,"endgrund":null}
+{"t":163.1,"was":"klick-nav","zug":"klang:ton","text":"♪","jahr":1352,"woche":30,"kasse":0,"ende":false,"endgrund":null}
+{"t":163.7,"was":"klick-nav","zug":"stadt:reiter:gegner-amort-gg-band","text":"Ohne dich geschehen · 55 Zügezugeklappt","jahr":1352,"woche":30,"kasse":0,"ende":false,"endgrund":null}
+{"t":164.2,"was":"klick-nav","zug":"stadt:reiter:fuhre-fu-brett-fu-haeuser","text":"DIE HÄUSERwollen 15 · im Keller liegen 1 Fass","jahr":1352,"woche":30,"kasse":0,"ende":false,"endgrund":null}
+{"t":164.8,"was":"klick-nav","zug":"stadt:reiter:fuhre-fu-brett-fu-keller","text":"DER KELLER1 von 12 Fass · 1 reif","jahr":1352,"woche":30,"kasse":0,"ende":false,"endgrund":null}
+{"t":165.2,"was":"klick-nav","zug":"stadt:ortsmarken","text":"Ortsmarken7 auf dem Pflock","jahr":1352,"woche":30,"kasse":0,"ende":false,"endgrund":null}
+{"t":165.8,"was":"klick-nav","zug":"gegner:zeige:56","text":"zeigen","jahr":1352,"woche":30,"kasse":0,"ende":false,"endgrund":null}
+{"t":166.9,"was":"klick-preis","zug":"fuhre:plan:mager","text":"Fahren: die mageren Häuser · 2 Fass+3 Pf","preis":3,"kasseVor":0,"kasseNach":26,"jahr":1353,"woche":1,"ende":false,"endgrund":null}
+{"t":168.4,"was":"klick-preis","zug":"gegner:zukaufen:brueckenwirt","text":"lieber zukaufen1 Fass · 12 Pf","preis":-12,"kasseVor":26,"kasseNach":14,"jahr":1353,"woche":1,"ende":false,"endgrund":null}
+{"t":169.1,"was":"runde-ende","runde":19,"jahr":1353,"woche":2,"kasse":13,"deckung":0.3611111111111111,"besterPreis":36,"ende":false,"endgrund":null,"echteWochenGesamt":70}
+{"t":169.6,"was":"klick-nav","zug":"sud:zettel-wechsel-frei2","text":"Wasser aus dem Ziehbrunnenlässt Starkbier zu","jahr":1353,"woche":2,"kasse":13,"ende":false,"endgrund":null}
+{"t":170,"was":"klick-nav","zug":"kern:chronik","text":"Chronik99","jahr":1353,"woche":2,"kasse":13,"ende":false,"endgrund":null}
+{"t":170.4,"was":"klick-nav","zug":"kern:protokoll","text":"Buch683","jahr":1353,"woche":2,"kasse":13,"ende":false,"endgrund":null}
+{"t":170.9,"was":"klick-nav","zug":"klang:ton","text":"—","jahr":1353,"woche":2,"kasse":13,"ende":false,"endgrund":null}
+{"t":171.4,"was":"klick-nav","zug":"stadt:bauhof","text":"BAUHOF5 offen · ab 13 Pf · 1 bezahlbar","jahr":1353,"woche":2,"kasse":13,"ende":false,"endgrund":null}
+{"t":172.1,"was":"klick-nav","zug":"stadt:reiter:gegner-amort-gg-band","text":"Ohne dich geschehen · 57 Zügezugeklappt","jahr":1353,"woche":2,"kasse":13,"ende":false,"endgrund":null}
+{"t":172.7,"was":"klick-nav","zug":"stadt:reiter:fuhre-fu-brett-fu-haeuser","text":"DIE HÄUSERwollen 12 · im Keller liegen 3 Fass","jahr":1353,"woche":2,"kasse":13,"ende":false,"endgrund":null}
+{"t":173.3,"was":"klick-nav","zug":"stadt:reiter:fuhre-fu-brett-fu-keller","text":"DER KELLER3 von 12 Fass · 3 reif","jahr":1353,"woche":2,"kasse":13,"ende":false,"endgrund":null}
+{"t":173.7,"was":"klick-nav","zug":"stadt:ortsmarken","text":"Ortsmarken7 im Bild","jahr":1353,"woche":2,"kasse":13,"ende":false,"endgrund":null}
+{"t":174.7,"was":"klick-nav","zug":"preis:tafel","text":"Michaelitafel 1353 · 5 Angebote","jahr":1353,"woche":2,"kasse":13,"ende":false,"endgrund":null}
+{"t":175.3,"was":"klick-nav","zug":"stadt:reiter:preis-pr-stil-pergament-pr-tafel","text":"MICHAELI 1353Der Rat setzt den Bierpfennig. Wer darüber g","jahr":1353,"woche":2,"kasse":13,"ende":false,"endgrund":null}
+{"t":176,"was":"klick-nav","zug":"gegner:zeige:57","text":"zeigen","jahr":1353,"woche":2,"kasse":13,"ende":false,"endgrund":null}
+{"t":176.6,"was":"klick-preis","zug":"fuhre:plan:mager","text":"Fahren: die mageren Häuser · 3 Fass+5 Pf","preis":5,"kasseVor":13,"kasseNach":9,"jahr":1353,"woche":3,"ende":false,"endgrund":null}
+{"t":177.2,"was":"klick-preis","zug":"fuhre:plan:mager","text":"Fahren: die mageren Häuser · 2 Fass+3 Pf","preis":3,"kasseVor":9,"kasseNach":6,"jahr":1353,"woche":4,"ende":false,"endgrund":null}
+{"t":177.8,"was":"klick-preis","zug":"fuhre:plan:durst","text":"Fahren: nach Durst · 1 Fass+2 Pf","preis":2,"kasseVor":6,"kasseNach":4,"jahr":1353,"woche":5,"ende":false,"endgrund":null}
+{"t":178.5,"was":"runde-ende","runde":20,"jahr":1353,"woche":6,"kasse":3,"deckung":0.08333333333333333,"besterPreis":36,"ende":false,"endgrund":null,"echteWochenGesamt":74}
+{"t":179.1,"was":"klick-nav","zug":"gegner:zeige:58","text":"zeigen","jahr":1353,"woche":6,"kasse":3,"ende":false,"endgrund":null}
+{"t":179.6,"was":"klick-nav","zug":"sud:zettel-wechsel-frei2","text":"Wasser aus dem Stadtbachlässt Starkbier zu","jahr":1353,"woche":6,"kasse":3,"ende":false,"endgrund":null}
+{"t":180.4,"was":"klick-nav","zug":"fuhre:sprung","text":"Weiter wie zuletzt · bis zu 6 Wochen","jahr":1353,"woche":12,"kasse":0,"ende":false,"endgrund":null}
+{"t":180.8,"was":"klick-nav","zug":"kern:chronik","text":"Chronik100","jahr":1353,"woche":12,"kasse":0,"ende":false,"endgrund":null}
+{"t":181.2,"was":"klick-nav","zug":"kern:protokoll","text":"Buch707","jahr":1353,"woche":12,"kasse":0,"ende":false,"endgrund":null}
+{"t":181.7,"was":"klick-nav","zug":"klang:ton","text":"♪","jahr":1353,"woche":12,"kasse":0,"ende":false,"endgrund":null}
+{"t":182.3,"was":"klick-nav","zug":"stadt:bauhof","text":"BAUHOF5 offen · ab 13 Pf · keiner bezahlbar","jahr":1353,"woche":12,"kasse":0,"ende":false,"endgrund":null}
+{"t":183,"was":"klick-nav","zug":"stadt:reiter:gegner-amort-gg-band","text":"Ohne dich geschehen · 58 Zügeliegt auf","jahr":1353,"woche":12,"kasse":0,"ende":false,"endgrund":null}
+{"t":183.4,"was":"klick-nav","zug":"stadt:ortsmarken","text":"Ortsmarken8 auf dem Pflock","jahr":1353,"woche":12,"kasse":0,"ende":false,"endgrund":null}
+{"t":184,"was":"klick-nav","zug":"gegner:zeige:59","text":"zeigen","jahr":1353,"woche":12,"kasse":0,"ende":false,"endgrund":null}
+{"t":184.5,"was":"klick-nav","zug":"stadt:reiter:fuhre-fu-brett-fu-haeuser","text":"DIE HÄUSERwollen 16 · im Keller liegen 3 Fass","jahr":1353,"woche":12,"kasse":0,"ende":false,"endgrund":null}
+{"t":185.1,"was":"klick-preis","zug":"fuhre:plan:mager","text":"Fahren: die mageren Häuser · 3 Fass+5 Pf","preis":5,"kasseVor":0,"kasseNach":0,"jahr":1353,"woche":13,"ende":false,"endgrund":null}
+{"t":185.6,"was":"klick-preis","zug":"fuhre:plan:mager","text":"Fahren: die mageren Häuser · 3 Fass+5 Pf","preis":5,"kasseVor":0,"kasseNach":0,"jahr":1353,"woche":14,"ende":false,"endgrund":null}
+{"t":186.1,"was":"klick-preis","zug":"fuhre:plan:mager","text":"Fahren: die mageren Häuser · 3 Fass+5 Pf","preis":5,"kasseVor":0,"kasseNach":0,"jahr":1353,"woche":15,"ende":false,"endgrund":null}
+{"t":186.7,"was":"runde-ende","runde":21,"jahr":1353,"woche":16,"kasse":0,"deckung":0,"besterPreis":54,"ende":false,"endgrund":null,"echteWochenGesamt":79}
+{"t":187.2,"was":"klick-nav","zug":"gegner:zeige:62","text":"zeigen","jahr":1353,"woche":16,"kasse":0,"ende":false,"endgrund":null}
+{"t":187.8,"was":"klick-nav","zug":"sud:zettel-wechsel-frei2","text":"Wasser aus dem Ziehbrunnenlässt Starkbier zu","jahr":1353,"woche":16,"kasse":0,"ende":false,"endgrund":null}
+{"t":188.2,"was":"klick-nav","zug":"kern:chronik","text":"Chronik106","jahr":1353,"woche":16,"kasse":0,"ende":false,"endgrund":null}
+{"t":188.6,"was":"klick-nav","zug":"kern:protokoll","text":"Buch754","jahr":1353,"woche":16,"kasse":0,"ende":false,"endgrund":null}
+{"t":189.1,"was":"klick-nav","zug":"klang:ton","text":"—","jahr":1353,"woche":16,"kasse":0,"ende":false,"endgrund":null}
+{"t":189.7,"was":"klick-nav","zug":"stadt:reiter:gegner-amort-gg-band","text":"Ohne dich geschehen · 62 Zügeliegt auf","jahr":1353,"woche":16,"kasse":0,"ende":false,"endgrund":null}
+{"t":190.3,"was":"klick-nav","zug":"stadt:reiter:fuhre-fu-brett-fu-haeuser","text":"DIE HÄUSERwollen 14 · im Keller liegen 3 Fass","jahr":1353,"woche":16,"kasse":0,"ende":false,"endgrund":null}
+{"t":190.7,"was":"klick-nav","zug":"stadt:ortsmarken","text":"Ortsmarken8 im Bild","jahr":1353,"woche":16,"kasse":0,"ende":false,"endgrund":null}
+{"t":191.3,"was":"klick-preis","zug":"fuhre:plan:mager","text":"Fahren: die mageren Häuser · 3 Fass+6 Pf","preis":6,"kasseVor":0,"kasseNach":0,"jahr":1353,"woche":17,"ende":false,"endgrund":null}
+{"t":191.9,"was":"klick-preis","zug":"fuhre:plan:mager","text":"Fahren: die mageren Häuser · 2 Fass+4 Pf","preis":4,"kasseVor":0,"kasseNach":0,"jahr":1353,"woche":18,"ende":false,"endgrund":null}
+{"t":192.4,"was":"klick-preis","zug":"fuhre:plan:durst","text":"Fahren: nach Durst · 1 Fass+2 Pf","preis":2,"kasseVor":0,"kasseNach":0,"jahr":1353,"woche":19,"ende":false,"endgrund":null}
+{"t":193,"was":"runde-ende","runde":22,"jahr":1353,"woche":20,"kasse":0,"deckung":0,"besterPreis":54,"ende":false,"endgrund":null,"echteWochenGesamt":83}
+{"t":193.6,"was":"klick-nav","zug":"sud:zettel-wechsel-frei2","text":"Wasser aus dem Stadtbachlässt Starkbier zu","jahr":1353,"woche":20,"kasse":0,"ende":false,"endgrund":null}
+{"t":194.1,"was":"klick-nav","zug":"kern:protokoll","text":"Buch776","jahr":1353,"woche":20,"kasse":0,"ende":false,"endgrund":null}
+{"t":194.5,"was":"klick-nav","zug":"klang:ton","text":"♪","jahr":1353,"woche":20,"kasse":0,"ende":false,"endgrund":null}
+{"t":195,"was":"klick-nav","zug":"stadt:reiter:gegner-amort-gg-band","text":"Ohne dich geschehen · 63 Zügezugeklappt","jahr":1353,"woche":20,"kasse":0,"ende":false,"endgrund":null}
+{"t":195.6,"was":"klick-nav","zug":"stadt:reiter:fuhre-fu-brett-fu-haeuser","text":"DIE HÄUSERwollen 11 · im Keller liegen 3 Fass","jahr":1353,"woche":20,"kasse":0,"ende":false,"endgrund":null}
+{"t":196,"was":"klick-nav","zug":"stadt:ortsmarken","text":"Ortsmarken7 auf dem Pflock","jahr":1353,"woche":20,"kasse":0,"ende":false,"endgrund":null}
+{"t":196.6,"was":"klick-nav","zug":"gegner:zeige:63","text":"zeigen","jahr":1353,"woche":20,"kasse":0,"ende":false,"endgrund":null}
+{"t":197.1,"was":"klick-preis","zug":"fuhre:plan:mager","text":"Fahren: die mageren Häuser · 3 Fass+5 Pf","preis":5,"kasseVor":0,"kasseNach":0,"jahr":1353,"woche":21,"ende":false,"endgrund":null}
+{"t":197.7,"was":"klick-preis","zug":"fuhre:plan:mager","text":"Fahren: die mageren Häuser · 2 Fass+3 Pf","preis":3,"kasseVor":0,"kasseNach":0,"jahr":1353,"woche":22,"ende":false,"endgrund":null}
+{"t":198.2,"was":"klick-preis","zug":"fuhre:plan:mager","text":"Fahren: die mageren Häuser · 1 Fass+1 Pf","preis":1,"kasseVor":0,"kasseNach":0,"jahr":1353,"woche":23,"ende":false,"endgrund":null}
+{"t":198.7,"was":"runde-ende","runde":23,"jahr":1353,"woche":24,"kasse":0,"deckung":0,"besterPreis":30,"ende":false,"endgrund":null,"echteWochenGesamt":87}
+{"t":199.3,"was":"klick-nav","zug":"gegner:zeige:66","text":"zeigen","jahr":1353,"woche":24,"kasse":0,"ende":false,"endgrund":null}
+{"t":199.9,"was":"klick-nav","zug":"sud:zettel-wechsel-frei2","text":"Wasser aus dem Ziehbrunnenlässt Starkbier zu","jahr":1353,"woche":24,"kasse":0,"ende":false,"endgrund":null}
+{"t":200.3,"was":"klick-nav","zug":"kern:chronik","text":"Chronik107","jahr":1353,"woche":24,"kasse":0,"ende":false,"endgrund":null}
+{"t":200.7,"was":"klick-nav","zug":"kern:protokoll","text":"Buch799","jahr":1353,"woche":24,"kasse":0,"ende":false,"endgrund":null}
+{"t":201.1,"was":"klick-nav","zug":"klang:ton","text":"—","jahr":1353,"woche":24,"kasse":0,"ende":false,"endgrund":null}
+{"t":201.8,"was":"klick-nav","zug":"stadt:reiter:gegner-amort-gg-band","text":"Ohne dich geschehen · 66 Zügeliegt auf","jahr":1353,"woche":24,"kasse":0,"ende":false,"endgrund":null}
+{"t":202.2,"was":"klick-nav","zug":"stadt:ortsmarken","text":"Ortsmarken7 im Bild","jahr":1353,"woche":24,"kasse":0,"ende":false,"endgrund":null}
+{"t":202.8,"was":"klick-preis","zug":"fuhre:plan:mager","text":"Fahren: die mageren Häuser · 3 Fass+5 Pf","preis":5,"kasseVor":0,"kasseNach":0,"jahr":1353,"woche":25,"ende":false,"endgrund":null}
+{"t":203.4,"was":"klick-preis","zug":"fuhre:plan:mager","text":"Fahren: die mageren Häuser · 1 Fass+1 Pf","preis":1,"kasseVor":0,"kasseNach":0,"jahr":1353,"woche":26,"ende":false,"endgrund":null}
+{"t":203.9,"was":"klick-preis","zug":"fuhre:plan:mager","text":"Fahren: die mageren Häuser · 2 Fass+3 Pf","preis":3,"kasseVor":0,"kasseNach":0,"jahr":1353,"woche":27,"ende":false,"endgrund":null}
+{"t":204.4,"was":"runde-ende","runde":24,"jahr":1353,"woche":28,"kasse":0,"deckung":0,"besterPreis":30,"ende":false,"endgrund":null,"echteWochenGesamt":91}
+{"t":205,"was":"klick-nav","zug":"sud:zettel-wechsel-frei2","text":"Wasser aus dem Stadtbachlässt Starkbier zu","jahr":1353,"woche":28,"kasse":0,"ende":false,"endgrund":null}
+{"t":205.6,"was":"klick-nav","zug":"fuhre:sprung","text":"Weiter wie zuletzt · bis zu 2 Wochen","jahr":1353,"woche":30,"kasse":0,"ende":false,"endgrund":null}
+{"t":206.1,"was":"klick-nav","zug":"kern:chronik","text":"Chronik110","jahr":1353,"woche":30,"kasse":0,"ende":false,"endgrund":null}
+{"t":206.5,"was":"klick-nav","zug":"kern:protokoll","text":"Buch830","jahr":1353,"woche":30,"kasse":0,"ende":false,"endgrund":null}
+{"t":207,"was":"klick-nav","zug":"klang:ton","text":"♪","jahr":1353,"woche":30,"kasse":0,"ende":false,"endgrund":null}
+{"t":207.5,"was":"klick-nav","zug":"stadt:reiter:gegner-amort-gg-band","text":"Ohne dich geschehen · 70 Zügezugeklappt","jahr":1353,"woche":30,"kasse":0,"ende":false,"endgrund":null}
+{"t":208,"was":"klick-nav","zug":"stadt:ortsmarken","text":"Ortsmarken7 auf dem Pflock","jahr":1353,"woche":30,"kasse":0,"ende":false,"endgrund":null}
+{"t":208.5,"was":"klick-nav","zug":"gegner:zeige:72","text":"zeigen","jahr":1353,"woche":30,"kasse":0,"ende":false,"endgrund":null}
+{"t":209.1,"was":"klick-nav","zug":"stadt:reiter:fuhre-fu-brett-fu-haeuser","text":"DIE HÄUSERwollen 13 · im Keller liegen 3 Fass","jahr":1353,"woche":30,"kasse":0,"ende":false,"endgrund":null}
+{"t":210.4,"was":"klick-preis","zug":"fuhre:plan:mager","text":"Fahren: die mageren Häuser · 3 Fass+5 Pf","preis":5,"kasseVor":0,"kasseNach":27,"jahr":1354,"woche":1,"ende":false,"endgrund":null}
+{"t":211.6,"was":"klick-preis","zug":"gegner:zukaufen:brueckenwirt","text":"lieber zukaufen1 Fass · 12 Pf","preis":-12,"kasseVor":27,"kasseNach":15,"jahr":1354,"woche":1,"ende":false,"endgrund":null}
+{"t":212.2,"was":"klick-preis","zug":"gegner:zukaufen:faehrhaus","text":"lieber zukaufen1 Fass · 12 Pf","preis":-12,"kasseVor":15,"kasseNach":3,"jahr":1354,"woche":1,"ende":false,"endgrund":null}
+{"t":212.8,"was":"runde-ende","runde":25,"jahr":1354,"woche":2,"kasse":2,"deckung":0.041666666666666664,"besterPreis":48,"ende":false,"endgrund":null,"echteWochenGesamt":94}
+{"t":213.4,"was":"klick-nav","zug":"sud:zettel-wechsel-frei2","text":"Wasser aus dem Ziehbrunnenlässt Starkbier zu","jahr":1354,"woche":2,"kasse":2,"ende":false,"endgrund":null}
+{"t":213.8,"was":"klick-nav","zug":"kern:chronik","text":"Chronik122","jahr":1354,"woche":2,"kasse":2,"ende":false,"endgrund":null}
+{"t":214.2,"was":"klick-nav","zug":"kern:protokoll","text":"Buch872","jahr":1354,"woche":2,"kasse":2,"ende":false,"endgrund":null}
+{"t":214.7,"was":"klick-nav","zug":"klang:ton","text":"—","jahr":1354,"woche":2,"kasse":2,"ende":false,"endgrund":null}
+{"t":215.2,"was":"klick-nav","zug":"stadt:reiter:gegner-amort-gg-band","text":"Ohne dich geschehen · 73 Zügezugeklappt","jahr":1354,"woche":2,"kasse":2,"ende":false,"endgrund":null}
+{"t":215.8,"was":"klick-nav","zug":"stadt:reiter:fuhre-fu-brett-fu-haeuser","text":"DIE HÄUSERwollen 8 · im Keller liegen 3 Fass","jahr":1354,"woche":2,"kasse":2,"ende":false,"endgrund":null}
+{"t":216.3,"was":"klick-nav","zug":"stadt:reiter:name-nm-band","text":"DER RUF DES HAUSESBierzeiger und Zunftzeichen","jahr":1354,"woche":2,"kasse":2,"ende":false,"endgrund":null}
+{"t":216.8,"was":"klick-nav","zug":"stadt:ortsmarken","text":"Ortsmarken7 im Bild","jahr":1354,"woche":2,"kasse":2,"ende":false,"endgrund":null}
+{"t":217.7,"was":"klick-nav","zug":"preis:tafel","text":"Michaelitafel 1354 · 5 Angebote","jahr":1354,"woche":2,"kasse":2,"ende":false,"endgrund":null}
+{"t":218.3,"was":"klick-nav","zug":"stadt:reiter:preis-pr-stil-pergament-pr-tafel","text":"MICHAELI 1354Der Rat setzt den Bierpfennig. Wer darüber g","jahr":1354,"woche":2,"kasse":2,"ende":false,"endgrund":null}
+{"t":218.8,"was":"klick-nav","zug":"gegner:zeige:73","text":"zeigen","jahr":1354,"woche":2,"kasse":2,"ende":false,"endgrund":null}
+{"t":219.4,"was":"klick-nav","zug":"name:ruhe","text":"Das Zeichen wieder zeigen","jahr":1354,"woche":2,"kasse":2,"ende":false,"endgrund":null}
+{"t":220,"was":"klick-nav","zug":"name:liefern","text":"Unter dem Zeichen ausliefern","jahr":1354,"woche":2,"kasse":2,"ende":false,"endgrund":null}
+{"t":220.6,"was":"klick-nav","zug":"name:zurueckhalten","text":"Das Zeichen einziehen","jahr":1354,"woche":2,"kasse":2,"ende":false,"endgrund":null}
+{"t":221.2,"was":"klick-preis","zug":"fuhre:plan:umkaempft","text":"Fahren: wo der Adler wirbt · 3 Fass+5 Pf","preis":5,"kasseVor":2,"kasseNach":0,"jahr":1354,"woche":3,"ende":false,"endgrund":null}
+{"t":221.8,"was":"klick-preis","zug":"fuhre:plan:umkaempft","text":"Fahren: wo der Adler wirbt · 3 Fass+6 Pf","preis":6,"kasseVor":0,"kasseNach":0,"jahr":1354,"woche":4,"ende":false,"endgrund":null}
+{"t":222.3,"was":"klick-preis","zug":"fuhre:plan:umkaempft","text":"Fahren: wo der Adler wirbt · 3 Fass+5 Pf","preis":5,"kasseVor":0,"kasseNach":0,"jahr":1354,"woche":5,"ende":false,"endgrund":null}
+{"t":222.9,"was":"runde-ende","runde":26,"jahr":1354,"woche":6,"kasse":0,"deckung":0,"besterPreis":22,"ende":false,"endgrund":null,"echteWochenGesamt":98}
+{"t":223.5,"was":"klick-nav","zug":"gegner:zeige:75","text":"zeigen","jahr":1354,"woche":6,"kasse":0,"ende":false,"endgrund":null}
+{"t":224.1,"was":"klick-nav","zug":"sud:zettel-wechsel-frei2","text":"Wasser aus dem Stadtbachlässt Starkbier zu","jahr":1354,"woche":6,"kasse":0,"ende":false,"endgrund":null}
+{"t":224.5,"was":"klick-nav","zug":"kern:chronik","text":"Chronik123","jahr":1354,"woche":6,"kasse":0,"ende":false,"endgrund":null}
+{"t":224.9,"was":"klick-nav","zug":"kern:protokoll","text":"Buch903","jahr":1354,"woche":6,"kasse":0,"ende":false,"endgrund":null}
+{"t":225.3,"was":"klick-nav","zug":"klang:ton","text":"♪","jahr":1354,"woche":6,"kasse":0,"ende":false,"endgrund":null}
+{"t":225.9,"was":"klick-nav","zug":"stadt:reiter:gegner-amort-gg-band","text":"Ohne dich geschehen · 75 Zügeliegt auf","jahr":1354,"woche":6,"kasse":0,"ende":false,"endgrund":null}
+{"t":226.4,"was":"klick-nav","zug":"stadt:reiter:fuhre-fu-brett-fu-haeuser","text":"DIE HÄUSERwollen 7 · im Keller liegen 3 Fass","jahr":1354,"woche":6,"kasse":0,"ende":false,"endgrund":null}
+{"t":226.8,"was":"klick-nav","zug":"stadt:ortsmarken","text":"Ortsmarken8 auf dem Pflock","jahr":1354,"woche":6,"kasse":0,"ende":false,"endgrund":null}
+{"t":227.4,"was":"klick-preis","zug":"fuhre:plan:umkaempft","text":"Fahren: wo der Adler wirbt · 3 Fass+5 Pf","preis":5,"kasseVor":0,"kasseNach":0,"jahr":1354,"woche":7,"ende":false,"endgrund":null}
+{"t":228,"was":"klick-preis","zug":"fuhre:plan:umkaempft","text":"Fahren: wo der Adler wirbt · 3 Fass+6 Pf","preis":6,"kasseVor":0,"kasseNach":0,"jahr":1354,"woche":8,"ende":false,"endgrund":null}
+{"t":228.5,"was":"klick-preis","zug":"fuhre:plan:umkaempft","text":"Fahren: wo der Adler wirbt · 3 Fass+5 Pf","preis":5,"kasseVor":0,"kasseNach":0,"jahr":1354,"woche":9,"ende":false,"endgrund":null}
+{"t":229.1,"was":"runde-ende","runde":27,"jahr":1354,"woche":10,"kasse":0,"deckung":0,"besterPreis":56,"ende":false,"endgrund":null,"echteWochenGesamt":102}
+{"t":229.6,"was":"klick-nav","zug":"sud:zettel-wechsel-frei2","text":"Wasser aus dem Ziehbrunnenlässt Starkbier zu","jahr":1354,"woche":10,"kasse":0,"ende":false,"endgrund":null}
+{"t":230.1,"was":"klick-nav","zug":"kern:chronik","text":"Chronik124","jahr":1354,"woche":10,"kasse":0,"ende":false,"endgrund":null}
+{"t":230.5,"was":"klick-nav","zug":"kern:protokoll","text":"Buch928","jahr":1354,"woche":10,"kasse":0,"ende":false,"endgrund":null}
+{"t":230.9,"was":"klick-nav","zug":"klang:ton","text":"—","jahr":1354,"woche":10,"kasse":0,"ende":false,"endgrund":null}
+{"t":231.5,"was":"klick-nav","zug":"stadt:reiter:gegner-amort-gg-band","text":"Ohne dich geschehen · 80 Zügezugeklappt","jahr":1354,"woche":10,"kasse":0,"ende":false,"endgrund":null}
+{"t":231.9,"was":"klick-nav","zug":"stadt:ortsmarken","text":"Ortsmarken7 im Bild","jahr":1354,"woche":10,"kasse":0,"ende":false,"endgrund":null}
+{"t":232.5,"was":"klick-nav","zug":"gegner:zeige:80","text":"zeigen","jahr":1354,"woche":10,"kasse":0,"ende":false,"endgrund":null}
+{"t":233,"was":"klick-preis","zug":"fuhre:plan:umkaempft","text":"Fahren: wo der Adler wirbt · 3 Fass+6 Pf","preis":6,"kasseVor":0,"kasseNach":0,"jahr":1354,"woche":11,"ende":false,"endgrund":null}
+{"t":233.6,"was":"klick-preis","zug":"fuhre:plan:umkaempft","text":"Fahren: wo der Adler wirbt · 3 Fass+5 Pf","preis":5,"kasseVor":0,"kasseNach":0,"jahr":1354,"woche":12,"ende":false,"endgrund":null}
+{"t":234.1,"was":"klick-preis","zug":"fuhre:plan:umkaempft","text":"Fahren: wo der Adler wirbt · 3 Fass+5 Pf","preis":5,"kasseVor":0,"kasseNach":0,"jahr":1354,"woche":13,"ende":false,"endgrund":null}
+{"t":234.7,"was":"runde-ende","runde":28,"jahr":1354,"woche":14,"kasse":0,"deckung":0,"besterPreis":56,"ende":false,"endgrund":null,"echteWochenGesamt":106}
+{"t":235.3,"was":"klick-nav","zug":"gegner:zeige:83","text":"zeigen","jahr":1354,"woche":14,"kasse":0,"ende":false,"endgrund":null}
+{"t":235.8,"was":"klick-nav","zug":"sud:zettel-wechsel-frei2","text":"Wasser aus dem Stadtbachlässt Starkbier zu","jahr":1354,"woche":14,"kasse":0,"ende":false,"endgrund":null}
+{"t":236.3,"was":"klick-nav","zug":"stadt:marke:gegner-bruecke-oben","text":"frei geworden","jahr":1354,"woche":14,"kasse":0,"ende":false,"endgrund":null}
+{"t":236.7,"was":"klick-nav","zug":"kern:chronik","text":"Chronik127","jahr":1354,"woche":14,"kasse":0,"ende":false,"endgrund":null}
+{"t":237.2,"was":"klick-nav","zug":"kern:protokoll","text":"Buch959","jahr":1354,"woche":14,"kasse":0,"ende":false,"endgrund":null}
+{"t":237.6,"was":"klick-nav","zug":"klang:ton","text":"♪","jahr":1354,"woche":14,"kasse":0,"ende":false,"endgrund":null}
+{"t":238.2,"was":"klick-nav","zug":"stadt:reiter:gegner-amort-gg-band","text":"Ohne dich geschehen · 83 Zügeliegt auf","jahr":1354,"woche":14,"kasse":0,"ende":false,"endgrund":null}
+{"t":238.6,"was":"klick-nav","zug":"stadt:ortsmarken","text":"Ortsmarken8 auf dem Pflock","jahr":1354,"woche":14,"kasse":0,"ende":false,"endgrund":null}
+{"t":239.2,"was":"klick-preis","zug":"fuhre:plan:umkaempft","text":"Fahren: wo der Adler wirbt · 3 Fass+5 Pf","preis":5,"kasseVor":0,"kasseNach":0,"jahr":1354,"woche":15,"ende":false,"endgrund":null}
+{"t":239.7,"was":"klick-preis","zug":"fuhre:plan:umkaempft","text":"Fahren: wo der Adler wirbt · 3 Fass+5 Pf","preis":5,"kasseVor":0,"kasseNach":0,"jahr":1354,"woche":16,"ende":false,"endgrund":null}
+{"t":240.3,"was":"klick-preis","zug":"fuhre:plan:umkaempft","text":"Fahren: wo der Adler wirbt · 2 Fass+3 Pf","preis":3,"kasseVor":0,"kasseNach":0,"jahr":1354,"woche":17,"ende":false,"endgrund":null}
+{"t":240.8,"was":"runde-ende","runde":29,"jahr":1354,"woche":18,"kasse":0,"deckung":0,"besterPreis":56,"ende":false,"endgrund":null,"echteWochenGesamt":110}
+{"t":241.4,"was":"klick-nav","zug":"sud:zettel-wechsel-frei2","text":"Wasser aus dem Ziehbrunnenlässt Starkbier zu","jahr":1354,"woche":18,"kasse":0,"ende":false,"endgrund":null}
+{"t":241.8,"was":"klick-nav","zug":"kern:chronik","text":"Chronik132","jahr":1354,"woche":18,"kasse":0,"ende":false,"endgrund":null}
+{"t":242.2,"was":"klick-nav","zug":"kern:protokoll","text":"Buch982","jahr":1354,"woche":18,"kasse":0,"ende":false,"endgrund":null}
+{"t":242.6,"was":"klick-nav","zug":"klang:ton","text":"—","jahr":1354,"woche":18,"kasse":0,"ende":false,"endgrund":null}
+{"t":243.2,"was":"klick-nav","zug":"stadt:reiter:gegner-amort-gg-band","text":"Ohne dich geschehen · 84 Zügezugeklappt","jahr":1354,"woche":18,"kasse":0,"ende":false,"endgrund":null}
+{"t":243.7,"was":"klick-nav","zug":"stadt:reiter:fuhre-fu-brett-fu-haeuser","text":"DIE HÄUSERwollen 8 · im Keller liegen 3 Fass","jahr":1354,"woche":18,"kasse":0,"ende":false,"endgrund":null}
+{"t":244.2,"was":"klick-nav","zug":"stadt:ortsmarken","text":"Ortsmarken7 im Bild","jahr":1354,"woche":18,"kasse":0,"ende":false,"endgrund":null}
+{"t":244.7,"was":"klick-nav","zug":"gegner:zeige:84","text":"zeigen","jahr":1354,"woche":18,"kasse":0,"ende":false,"endgrund":null}
+{"t":245.3,"was":"klick-preis","zug":"fuhre:plan:umkaempft","text":"Fahren: wo der Adler wirbt · 3 Fass+5 Pf","preis":5,"kasseVor":0,"kasseNach":0,"jahr":1354,"woche":19,"ende":false,"endgrund":null}
+{"t":245.8,"was":"klick-preis","zug":"fuhre:plan:umkaempft","text":"Fahren: wo der Adler wirbt · 3 Fass+5 Pf","preis":5,"kasseVor":0,"kasseNach":0,"jahr":1354,"woche":20,"ende":false,"endgrund":null}
+{"t":246.2,"was":"klick-preis","zug":"fuhre:plan:umkaempft","text":"Fahren: wo der Adler wirbt · 3 Fass+5 Pf","preis":5,"kasseVor":0,"kasseNach":0,"jahr":1354,"woche":21,"ende":false,"endgrund":null}
+{"t":246.7,"was":"runde-ende","runde":30,"jahr":1354,"woche":22,"kasse":0,"deckung":0,"besterPreis":56,"ende":false,"endgrund":null,"echteWochenGesamt":114}
+{"t":247.7,"was":"klick-nav","zug":"sud:zettel-wechsel-frei2","text":"Wasser aus dem Stadtbachlässt Starkbier zu","jahr":1354,"woche":22,"kasse":0,"ende":false,"endgrund":null}
+{"t":248.1,"was":"klick-nav","zug":"kern:protokoll","text":"Buch1010","jahr":1354,"woche":22,"kasse":0,"ende":false,"endgrund":null}
+{"t":248.6,"was":"klick-nav","zug":"klang:ton","text":"♪","jahr":1354,"woche":22,"kasse":0,"ende":false,"endgrund":null}
+{"t":249.1,"was":"klick-nav","zug":"stadt:reiter:gegner-amort-gg-band","text":"Ohne dich geschehen · 84 Zügeliegt auf","jahr":1354,"woche":22,"kasse":0,"ende":false,"endgrund":null}
+{"t":249.5,"was":"klick-nav","zug":"stadt:ortsmarken","text":"Ortsmarken7 auf dem Pflock","jahr":1354,"woche":22,"kasse":0,"ende":false,"endgrund":null}
+{"t":250,"was":"klick-nav","zug":"gegner:abloesen:ochse","text":"OCH · RATnicht ablösbar","jahr":1354,"woche":22,"kasse":0,"ende":false,"endgrund":null}
+{"t":250.5,"was":"klick-nav","zug":"gegner:hinhalten:pfarrhof","text":"Fass an den Wirt1 Fass statt Geld","jahr":1354,"woche":22,"kasse":0,"ende":false,"endgrund":null}
+{"t":251,"was":"klick-nav","zug":"fuhre:plan:probe","text":"Fahren: ohne Rechnung · 2 Fass","jahr":1354,"woche":23,"kasse":0,"ende":false,"endgrund":null}
+{"t":251.4,"was":"klick-nav","zug":"kern:chronik","text":"Chronik133","jahr":1354,"woche":23,"kasse":0,"ende":false,"endgrund":null}
+{"t":252,"was":"klick-nav","zug":"stadt:reiter:fuhre-fu-brett-fu-haeuser","text":"DIE HÄUSERwollen 8 · im Keller liegen 2 Fass","jahr":1354,"woche":23,"kasse":0,"ende":false,"endgrund":null}
+{"t":252.5,"was":"klick-nav","zug":"stadt:reiter:fuhre-fu-brett-fu-keller","text":"DER KELLER2 von 12 Fass · 2 reif","jahr":1354,"woche":23,"kasse":0,"ende":false,"endgrund":null}
+{"t":253.1,"was":"klick-preis","zug":"fuhre:plan:umkaempft","text":"Fahren: wo der Adler wirbt · 3 Fass+5 Pf","preis":5,"kasseVor":0,"kasseNach":0,"jahr":1354,"woche":24,"ende":false,"endgrund":null}
+{"t":253.7,"was":"klick-preis","zug":"fuhre:plan:umkaempft","text":"Fahren: wo der Adler wirbt · 3 Fass+5 Pf","preis":5,"kasseVor":0,"kasseNach":0,"jahr":1354,"woche":25,"ende":false,"endgrund":null}
+{"t":254.2,"was":"klick-preis","zug":"fuhre:plan:umkaempft","text":"Fahren: wo der Adler wirbt · 3 Fass+6 Pf","preis":6,"kasseVor":0,"kasseNach":0,"jahr":1354,"woche":26,"ende":false,"endgrund":null}
+{"t":254.8,"was":"runde-ende","runde":31,"jahr":1354,"woche":27,"kasse":0,"deckung":0,"besterPreis":27,"ende":false,"endgrund":null,"echteWochenGesamt":119}
+{"t":255.3,"was":"klick-nav","zug":"sud:zettel-wechsel-frei2","text":"Wasser aus dem Ziehbrunnenlässt Starkbier zu","jahr":1354,"woche":27,"kasse":0,"ende":false,"endgrund":null}
+{"t":255.8,"was":"klick-nav","zug":"kern:chronik","text":"Chronik134","jahr":1354,"woche":27,"kasse":0,"ende":false,"endgrund":null}
+{"t":256.2,"was":"klick-nav","zug":"kern:protokoll","text":"Buch1043","jahr":1354,"woche":27,"kasse":0,"ende":false,"endgrund":null}
+{"t":256.6,"was":"klick-nav","zug":"klang:ton","text":"—","jahr":1354,"woche":27,"kasse":0,"ende":false,"endgrund":null}
+{"t":257.2,"was":"klick-nav","zug":"stadt:reiter:gegner-amort-gg-band","text":"Ohne dich geschehen · 88 Zügezugeklappt","jahr":1354,"woche":27,"kasse":0,"ende":false,"endgrund":null}
+{"t":257.7,"was":"klick-nav","zug":"stadt:reiter:fuhre-fu-brett-fu-haeuser","text":"DIE HÄUSERwollen 9 · im Keller liegen 3 Fass","jahr":1354,"woche":27,"kasse":0,"ende":false,"endgrund":null}
+{"t":258.3,"was":"klick-nav","zug":"stadt:reiter:fuhre-fu-brett-fu-keller","text":"DER KELLER3 von 12 Fass · 3 reif","jahr":1354,"woche":27,"kasse":0,"ende":false,"endgrund":null}
+{"t":258.7,"was":"klick-nav","zug":"stadt:ortsmarken","text":"Ortsmarken7 im Bild","jahr":1354,"woche":27,"kasse":0,"ende":false,"endgrund":null}
+{"t":259.3,"was":"klick-nav","zug":"gegner:zeige:88","text":"zeigen","jahr":1354,"woche":27,"kasse":0,"ende":false,"endgrund":null}
+{"t":259.8,"was":"klick-preis","zug":"fuhre:plan:umkaempft","text":"Fahren: wo der Adler wirbt · 3 Fass+5 Pf","preis":5,"kasseVor":0,"kasseNach":0,"jahr":1354,"woche":28,"ende":false,"endgrund":null}
+{"t":260.3,"was":"klick-preis","zug":"fuhre:plan:umkaempft","text":"Fahren: wo der Adler wirbt · 3 Fass+5 Pf","preis":5,"kasseVor":0,"kasseNach":0,"jahr":1354,"woche":29,"ende":false,"endgrund":null}
+{"t":260.8,"was":"klick-preis","zug":"fuhre:plan:umkaempft","text":"Fahren: wo der Adler wirbt · 3 Fass+5 Pf","preis":5,"kasseVor":0,"kasseNach":0,"jahr":1354,"woche":30,"ende":false,"endgrund":null}
+{"t":262.2,"was":"runde-ende","runde":32,"jahr":1355,"woche":1,"kasse":26,"deckung":0.9629629629629629,"besterPreis":27,"ende":false,"endgrund":null,"echteWochenGesamt":123}
+{"t":262.9,"was":"klick-nav","zug":"kern:chronik","text":"Chronik144","jahr":1355,"woche":1,"kasse":26,"ende":false,"endgrund":null}
+{"t":263.4,"was":"klick-nav","zug":"kern:protokoll","text":"Buch1091","jahr":1355,"woche":1,"kasse":26,"ende":false,"endgrund":null}
+{"t":263.8,"was":"klick-nav","zug":"klang:ton","text":"♪","jahr":1355,"woche":1,"kasse":26,"ende":false,"endgrund":null}
+{"t":264.6,"was":"klick-nav","zug":"stadt:bauhof","text":"BAUHOF5 offen · ab 13 Pf · 5 bezahlbar","jahr":1355,"woche":1,"kasse":26,"ende":false,"endgrund":null}
+{"t":265.2,"was":"klick-nav","zug":"stadt:reiter:gegner-amort-gg-band","text":"Ohne dich geschehen · 89 Zügezugeklappt","jahr":1355,"woche":1,"kasse":26,"ende":false,"endgrund":null}
+{"t":265.8,"was":"klick-nav","zug":"stadt:reiter:fuhre-fu-brett-fu-haeuser","text":"DIE HÄUSERwollen 9 · im Keller liegen 0 Fass","jahr":1355,"woche":1,"kasse":26,"ende":false,"endgrund":null}
+{"t":266.4,"was":"klick-nav","zug":"stadt:reiter:fuhre-fu-brett-fu-keller","text":"DER KELLER0 von 12 Fass · 0 reif","jahr":1355,"woche":1,"kasse":26,"ende":false,"endgrund":null}
+{"t":266.9,"was":"klick-nav","zug":"stadt:ortsmarken","text":"Ortsmarken7 auf dem Pflock","jahr":1355,"woche":1,"kasse":26,"ende":false,"endgrund":null}
+{"t":267.8,"was":"klick-nav","zug":"preis:tafel","text":"Michaelitafel schließen","jahr":1355,"woche":1,"kasse":26,"ende":false,"endgrund":null}
+{"t":268.5,"was":"klick-preis","zug":"gegner:zukaufen:brueckenwirt","text":"lieber zukaufen1 Fass · 12 Pf","preis":-12,"kasseVor":26,"kasseNach":14,"jahr":1355,"woche":1,"ende":false,"endgrund":null}
+{"t":269.1,"was":"klick-preis","zug":"gegner:zukaufen:faehrhaus","text":"lieber zukaufen1 Fass · 12 Pf","preis":-12,"kasseVor":14,"kasseNach":2,"jahr":1355,"woche":1,"ende":false,"endgrund":null}
+{"t":269.7,"was":"runde-ende","runde":33,"jahr":1355,"woche":2,"kasse":1,"deckung":0.015151515151515152,"besterPreis":66,"ende":false,"endgrund":null,"echteWochenGesamt":124}
+{"t":270.3,"was":"klick-nav","zug":"gegner:zeige:90","text":"zeigen","jahr":1355,"woche":2,"kasse":1,"ende":false,"endgrund":null}
+{"t":271,"was":"klick-nav","zug":"sud:zettel-wechsel-frei2","text":"Wasser aus dem Stadtbachlässt Starkbier zu","jahr":1355,"woche":2,"kasse":1,"ende":false,"endgrund":null}
+{"t":271.6,"was":"klick-nav","zug":"fuhre:uebergabe-auf","text":"DIE ÜBERGABE VOR DEM RAT · noch 3 Wochen","jahr":1355,"woche":2,"kasse":1,"ende":false,"endgrund":null}
+{"t":272.1,"was":"klick-nav","zug":"kern:chronik","text":"Chronik148","jahr":1355,"woche":2,"kasse":1,"ende":false,"endgrund":null}
+{"t":272.5,"was":"klick-nav","zug":"kern:protokoll","text":"Buch1100","jahr":1355,"woche":2,"kasse":1,"ende":false,"endgrund":null}
+{"t":272.9,"was":"klick-nav","zug":"klang:ton","text":"—","jahr":1355,"woche":2,"kasse":1,"ende":false,"endgrund":null}
+{"t":273.7,"was":"klick-nav","zug":"stadt:bauhof","text":"BAUHOF5 offen · ab 13 Pf · keiner bezahlbar","jahr":1355,"woche":2,"kasse":1,"ende":false,"endgrund":null}
+{"t":274.5,"was":"klick-nav","zug":"stadt:reiter:gegner-amort-gg-band","text":"Ohne dich geschehen · 90 Zügeliegt auf","jahr":1355,"woche":2,"kasse":1,"ende":false,"endgrund":null}
+{"t":275,"was":"klick-nav","zug":"stadt:reiter:fuhre-fu-brett-fu-haeuser","text":"DIE HÄUSERwollen 11 · im Keller liegen 3 Fass","jahr":1355,"woche":2,"kasse":1,"ende":false,"endgrund":null}
+{"t":275.6,"was":"klick-nav","zug":"stadt:reiter:fuhre-fu-brett-fu-keller","text":"DER KELLER3 von 12 Fass · 3 reif","jahr":1355,"woche":2,"kasse":1,"ende":false,"endgrund":null}
+{"t":276,"was":"klick-nav","zug":"stadt:ortsmarken","text":"Ortsmarken7 im Bild","jahr":1355,"woche":2,"kasse":1,"ende":false,"endgrund":null}
+{"t":276.9,"was":"klick-nav","zug":"preis:tafel","text":"Michaelitafel 1355 · 5 Angebote","jahr":1355,"woche":2,"kasse":1,"ende":false,"endgrund":null}
+{"t":277.6,"was":"runde-ende","runde":34,"jahr":1355,"woche":3,"kasse":0,"deckung":0,"besterPreis":66,"ende":false,"endgrund":null,"echteWochenGesamt":125}
+{"t":278.1,"was":"klick-nav","zug":"gegner:zeige:91","text":"zeigen","jahr":1355,"woche":3,"kasse":0,"ende":false,"endgrund":null}
+{"t":278.8,"was":"klick-nav","zug":"sud:zettel-wechsel-frei2","text":"Wasser aus dem Ziehbrunnenlässt Starkbier zu","jahr":1355,"woche":3,"kasse":0,"ende":false,"endgrund":null}
+{"t":279.2,"was":"klick-nav","zug":"stadt:marke:gegner-bruecke-unten","text":"frei geworden","jahr":1355,"woche":3,"kasse":0,"ende":false,"endgrund":null}
+{"t":280,"was":"klick-nav","zug":"fuhre:uebergabe-auf","text":"DIE ÜBERGABE VOR DEM RAT · noch 2 Wochen","jahr":1355,"woche":3,"kasse":0,"ende":false,"endgrund":null}
+{"t":280.5,"was":"klick-nav","zug":"kern:chronik","text":"Chronik149","jahr":1355,"woche":3,"kasse":0,"ende":false,"endgrund":null}
+{"t":280.9,"was":"klick-nav","zug":"kern:protokoll","text":"Buch1102","jahr":1355,"woche":3,"kasse":0,"ende":false,"endgrund":null}
+{"t":281.3,"was":"klick-nav","zug":"klang:ton","text":"♪","jahr":1355,"woche":3,"kasse":0,"ende":false,"endgrund":null}
+{"t":282,"was":"klick-nav","zug":"stadt:reiter:gegner-amort-gg-band","text":"Ohne dich geschehen · 91 Zügeliegt auf","jahr":1355,"woche":3,"kasse":0,"ende":false,"endgrund":null}
+{"t":282.5,"was":"klick-nav","zug":"stadt:ortsmarken","text":"Ortsmarken8 auf dem Pflock","jahr":1355,"woche":3,"kasse":0,"ende":false,"endgrund":null}
+{"t":283,"was":"klick-preis","zug":"fuhre:plan:umkaempft","text":"Fahren: wo der Adler wirbt · 3 Fass+5 Pf","preis":5,"kasseVor":0,"kasseNach":0,"jahr":1355,"woche":4,"ende":false,"endgrund":null}
+{"t":283.6,"was":"klick-preis","zug":"fuhre:plan:umkaempft","text":"Fahren: wo der Adler wirbt · 3 Fass+4 Pf","preis":4,"kasseVor":0,"kasseNach":0,"jahr":1355,"woche":5,"ende":false,"endgrund":null}
+{"t":284.1,"was":"klick-preis","zug":"fuhre:plan:umkaempft","text":"Fahren: wo der Adler wirbt · 3 Fass+5 Pf","preis":5,"kasseVor":0,"kasseNach":0,"jahr":1355,"woche":6,"ende":false,"endgrund":null}
+{"t":284.7,"was":"runde-ende","runde":35,"jahr":1355,"woche":7,"kasse":0,"deckung":0,"besterPreis":64,"ende":false,"endgrund":null,"echteWochenGesamt":129}
+{"t":285.3,"was":"klick-nav","zug":"gegner:zeige:93","text":"zeigen","jahr":1355,"woche":7,"kasse":0,"ende":false,"endgrund":null}
+{"t":285.8,"was":"klick-nav","zug":"sud:zettel-wechsel-frei2","text":"Wasser aus dem Stadtbachlässt Starkbier zu","jahr":1355,"woche":7,"kasse":0,"ende":false,"endgrund":null}
+{"t":286.2,"was":"klick-nav","zug":"kern:chronik","text":"Chronik151","jahr":1355,"woche":7,"kasse":0,"ende":false,"endgrund":null}
+{"t":286.7,"was":"klick-nav","zug":"kern:protokoll","text":"Buch1135","jahr":1355,"woche":7,"kasse":0,"ende":false,"endgrund":null}
+{"t":287.1,"was":"klick-nav","zug":"klang:ton","text":"—","jahr":1355,"woche":7,"kasse":0,"ende":false,"endgrund":null}
+{"t":287.7,"was":"klick-nav","zug":"stadt:reiter:gegner-amort-gg-band","text":"Ohne dich geschehen · 93 Zügeliegt auf","jahr":1355,"woche":7,"kasse":0,"ende":false,"endgrund":null}
+{"t":288.2,"was":"klick-nav","zug":"stadt:reiter:fuhre-fu-brett-fu-haeuser","text":"DIE HÄUSERwollen 10 · im Keller liegen 3 Fass","jahr":1355,"woche":7,"kasse":0,"ende":false,"endgrund":null}
+{"t":288.7,"was":"klick-nav","zug":"stadt:ortsmarken","text":"Ortsmarken7 im Bild","jahr":1355,"woche":7,"kasse":0,"ende":false,"endgrund":null}
+{"t":289.3,"was":"klick-preis","zug":"fuhre:plan:umkaempft","text":"Fahren: wo der Adler wirbt · 3 Fass+5 Pf","preis":5,"kasseVor":0,"kasseNach":0,"jahr":1355,"woche":8,"ende":false,"endgrund":null}
+{"t":289.8,"was":"klick-preis","zug":"fuhre:plan:umkaempft","text":"Fahren: wo der Adler wirbt · 3 Fass+5 Pf","preis":5,"kasseVor":0,"kasseNach":0,"jahr":1355,"woche":9,"ende":false,"endgrund":null}
+{"t":290.2,"was":"klick-preis","zug":"fuhre:plan:umkaempft","text":"Fahren: wo der Adler wirbt · 3 Fass+5 Pf","preis":5,"kasseVor":0,"kasseNach":0,"jahr":1355,"woche":10,"ende":false,"endgrund":null}
+{"t":290.7,"was":"runde-ende","runde":36,"jahr":1355,"woche":11,"kasse":0,"deckung":0,"besterPreis":64,"ende":false,"endgrund":null,"echteWochenGesamt":133}
+{"t":291.3,"was":"klick-nav","zug":"sud:zettel-wechsel-frei2","text":"Wasser aus dem Ziehbrunnenlässt Starkbier zu","jahr":1355,"woche":11,"kasse":0,"ende":false,"endgrund":null}
+{"t":291.7,"was":"klick-nav","zug":"kern:protokoll","text":"Buch1157","jahr":1355,"woche":11,"kasse":0,"ende":false,"endgrund":null}
+{"t":292.1,"was":"klick-nav","zug":"klang:ton","text":"♪","jahr":1355,"woche":11,"kasse":0,"ende":false,"endgrund":null}
+{"t":292.7,"was":"klick-nav","zug":"stadt:reiter:gegner-amort-gg-band","text":"Ohne dich geschehen · 94 Zügezugeklappt","jahr":1355,"woche":11,"kasse":0,"ende":false,"endgrund":null}
+{"t":293.1,"was":"klick-nav","zug":"stadt:ortsmarken","text":"Ortsmarken7 auf dem Pflock","jahr":1355,"woche":11,"kasse":0,"ende":false,"endgrund":null}
+{"t":293.6,"was":"klick-nav","zug":"gegner:zeige:94","text":"zeigen","jahr":1355,"woche":11,"kasse":0,"ende":false,"endgrund":null}
+{"t":294.1,"was":"klick-preis","zug":"fuhre:plan:umkaempft","text":"Fahren: wo der Adler wirbt · 3 Fass+5 Pf","preis":5,"kasseVor":0,"kasseNach":0,"jahr":1355,"woche":12,"ende":false,"endgrund":null}
+{"t":294.6,"was":"klick-preis","zug":"fuhre:plan:umkaempft","text":"Fahren: wo der Adler wirbt · 3 Fass+5 Pf","preis":5,"kasseVor":0,"kasseNach":0,"jahr":1355,"woche":13,"ende":false,"endgrund":null}
+{"t":295.1,"was":"klick-preis","zug":"fuhre:plan:umkaempft","text":"Fahren: wo der Adler wirbt · 3 Fass+6 Pf","preis":6,"kasseVor":0,"kasseNach":0,"jahr":1355,"woche":14,"ende":false,"endgrund":null}
+{"t":295.6,"was":"runde-ende","runde":37,"jahr":1355,"woche":15,"kasse":0,"deckung":0,"besterPreis":22,"ende":false,"endgrund":null,"echteWochenGesamt":137}
+{"t":296.1,"was":"klick-nav","zug":"gegner:zeige:95","text":"zeigen","jahr":1355,"woche":15,"kasse":0,"ende":false,"endgrund":null}
+{"t":296.6,"was":"klick-nav","zug":"sud:zettel-wechsel-frei2","text":"Wasser aus dem Stadtbachlässt Starkbier zu","jahr":1355,"woche":15,"kasse":0,"ende":false,"endgrund":null}
+{"t":297.1,"was":"klick-nav","zug":"kern:protokoll","text":"Buch1187","jahr":1355,"woche":15,"kasse":0,"ende":false,"endgrund":null}
+{"t":297.5,"was":"klick-nav","zug":"klang:ton","text":"—","jahr":1355,"woche":15,"kasse":0,"ende":false,"endgrund":null}
+{"t":298.1,"was":"klick-nav","zug":"stadt:reiter:gegner-amort-gg-band","text":"Ohne dich geschehen · 95 Zügeliegt auf","jahr":1355,"woche":15,"kasse":0,"ende":false,"endgrund":null}
+{"t":298.7,"was":"klick-nav","zug":"stadt:reiter:fuhre-fu-brett-fu-haeuser","text":"DIE HÄUSERwollen 11 · im Keller liegen 3 Fass","jahr":1355,"woche":15,"kasse":0,"ende":false,"endgrund":null}
+{"t":299.1,"was":"klick-nav","zug":"stadt:ortsmarken","text":"Ortsmarken7 im Bild","jahr":1355,"woche":15,"kasse":0,"ende":false,"endgrund":null}
+{"t":299.7,"was":"klick-preis","zug":"fuhre:plan:umkaempft","text":"Fahren: wo der Adler wirbt · 3 Fass+5 Pf","preis":5,"kasseVor":0,"kasseNach":0,"jahr":1355,"woche":16,"ende":false,"endgrund":null}
+{"t":300.2,"was":"klick-preis","zug":"fuhre:plan:umkaempft","text":"Fahren: wo der Adler wirbt · 3 Fass+6 Pf","preis":6,"kasseVor":0,"kasseNach":0,"jahr":1355,"woche":17,"ende":false,"endgrund":null}
+{"t":300.7,"was":"klick-preis","zug":"fuhre:plan:umkaempft","text":"Fahren: wo der Adler wirbt · 3 Fass+5 Pf","preis":5,"kasseVor":0,"kasseNach":0,"jahr":1355,"woche":18,"ende":false,"endgrund":null}
+{"t":301.3,"was":"runde-ende","runde":38,"jahr":1355,"woche":19,"kasse":0,"deckung":0,"besterPreis":36,"ende":false,"endgrund":null,"echteWochenGesamt":141}
+{"t":301.8,"was":"klick-nav","zug":"sud:zettel-wechsel-frei2","text":"Wasser aus dem Ziehbrunnenlässt Starkbier zu","jahr":1355,"woche":19,"kasse":0,"ende":false,"endgrund":null}
+{"t":302.2,"was":"klick-nav","zug":"kern:chronik","text":"Chronik152","jahr":1355,"woche":19,"kasse":0,"ende":false,"endgrund":null}
+{"t":302.7,"was":"klick-nav","zug":"kern:protokoll","text":"Buch1210","jahr":1355,"woche":19,"kasse":0,"ende":false,"endgrund":null}
+{"t":303.1,"was":"klick-nav","zug":"klang:ton","text":"♪","jahr":1355,"woche":19,"kasse":0,"ende":false,"endgrund":null}
+{"t":303.6,"was":"klick-nav","zug":"stadt:reiter:gegner-amort-gg-band","text":"Ohne dich geschehen · 97 Zügezugeklappt","jahr":1355,"woche":19,"kasse":0,"ende":false,"endgrund":null}
+{"t":304.1,"was":"klick-nav","zug":"stadt:reiter:fuhre-fu-brett-fu-haeuser","text":"DIE HÄUSERwollen 12 · im Keller liegen 3 Fass","jahr":1355,"woche":19,"kasse":0,"ende":false,"endgrund":null}
+{"t":304.6,"was":"klick-nav","zug":"stadt:ortsmarken","text":"Ortsmarken8 auf dem Pflock","jahr":1355,"woche":19,"kasse":0,"ende":false,"endgrund":null}
+{"t":305.1,"was":"klick-nav","zug":"gegner:zeige:97","text":"zeigen","jahr":1355,"woche":19,"kasse":0,"ende":false,"endgrund":null}
+{"t":305.6,"was":"klick-preis","zug":"fuhre:plan:umkaempft","text":"Fahren: wo der Adler wirbt · 3 Fass+5 Pf","preis":5,"kasseVor":0,"kasseNach":0,"jahr":1355,"woche":20,"ende":false,"endgrund":null}
+{"t":306.2,"was":"klick-preis","zug":"fuhre:plan:umkaempft","text":"Fahren: wo der Adler wirbt · 3 Fass+6 Pf","preis":6,"kasseVor":0,"kasseNach":0,"jahr":1355,"woche":21,"ende":false,"endgrund":null}
+{"t":306.8,"was":"klick-preis","zug":"fuhre:plan:umkaempft","text":"Fahren: wo der Adler wirbt · 3 Fass+5 Pf","preis":5,"kasseVor":0,"kasseNach":0,"jahr":1355,"woche":22,"ende":false,"endgrund":null}
+{"t":307.3,"was":"runde-ende","runde":39,"jahr":1355,"woche":23,"kasse":0,"deckung":0,"besterPreis":36,"ende":false,"endgrund":null,"echteWochenGesamt":145}
+{"t":307.8,"was":"klick-nav","zug":"gegner:zeige:98","text":"zeigen","jahr":1355,"woche":23,"kasse":0,"ende":false,"endgrund":null}
+{"t":308.4,"was":"klick-nav","zug":"sud:zettel-wechsel-frei2","text":"Wasser aus dem Stadtbachlässt Starkbier zu","jahr":1355,"woche":23,"kasse":0,"ende":false,"endgrund":null}
+{"t":308.8,"was":"klick-nav","zug":"kern:protokoll","text":"Buch1240","jahr":1355,"woche":23,"kasse":0,"ende":false,"endgrund":null}
+{"t":309.2,"was":"klick-nav","zug":"klang:ton","text":"—","jahr":1355,"woche":23,"kasse":0,"ende":false,"endgrund":null}
+{"t":309.7,"was":"klick-nav","zug":"stadt:reiter:gegner-amort-gg-band","text":"Ohne dich geschehen · 98 Zügeliegt auf","jahr":1355,"woche":23,"kasse":0,"ende":false,"endgrund":null}
+{"t":310.2,"was":"klick-nav","zug":"stadt:reiter:fuhre-fu-brett-fu-haeuser","text":"DIE HÄUSERwollen 10 · im Keller liegen 3 Fass","jahr":1355,"woche":23,"kasse":0,"ende":false,"endgrund":null}
+{"t":310.7,"was":"klick-nav","zug":"stadt:ortsmarken","text":"Ortsmarken7 im Bild","jahr":1355,"woche":23,"kasse":0,"ende":false,"endgrund":null}
+{"t":311.2,"was":"klick-nav","zug":"fuhre:probe:lindenhof","text":"auf Probe · 1 Fass · 1/4","jahr":1355,"woche":23,"kasse":0,"ende":false,"endgrund":null}
+{"t":311.8,"was":"klick-nav","zug":"stadt:reiter:fuhre-fu-brett-fu-wagen","text":"OCHSENKARREN1 von 5 Fass · 1 von 4 Halten","jahr":1355,"woche":23,"kasse":0,"ende":false,"endgrund":null}
+{"t":312.3,"was":"klick-nav","zug":"fuhre:fuellen","text":"Nach Durst füllen","jahr":1355,"woche":23,"kasse":0,"ende":false,"endgrund":null}
+{"t":312.9,"was":"klick-nav","zug":"fuhre:wie-vorige","text":"Wie vorige Woche","jahr":1355,"woche":23,"kasse":0,"ende":false,"endgrund":null}
+{"t":313.4,"was":"klick-nav","zug":"fuhre:abladen:ochse","text":"−","jahr":1355,"woche":23,"kasse":0,"ende":false,"endgrund":null}
+{"t":313.9,"was":"klick-nav","zug":"fuhre:abladen:torschenke","text":"−","jahr":1355,"woche":23,"kasse":0,"ende":false,"endgrund":null}
+{"t":314.5,"was":"klick-preis","zug":"fuhre:plan:umkaempft","text":"Fahren: wo der Adler wirbt · 3 Fass+4 Pf","preis":4,"kasseVor":0,"kasseNach":0,"jahr":1355,"woche":24,"ende":false,"endgrund":null}
+{"t":315,"was":"klick-preis","zug":"fuhre:plan:umkaempft","text":"Fahren: wo der Adler wirbt · 3 Fass+5 Pf","preis":5,"kasseVor":0,"kasseNach":0,"jahr":1355,"woche":25,"ende":false,"endgrund":null}
+{"t":315.5,"was":"klick-preis","zug":"fuhre:plan:umkaempft","text":"Fahren: wo der Adler wirbt · 3 Fass+6 Pf","preis":6,"kasseVor":0,"kasseNach":0,"jahr":1355,"woche":26,"ende":false,"endgrund":null}
+{"t":316,"was":"runde-ende","runde":40,"jahr":1355,"woche":27,"kasse":0,"deckung":0,"besterPreis":36,"ende":false,"endgrund":null,"echteWochenGesamt":149}
+{"t":316.6,"was":"klick-nav","zug":"sud:zettel-wechsel-frei2","text":"Wasser aus dem Ziehbrunnenlässt Starkbier zu","jahr":1355,"woche":27,"kasse":0,"ende":false,"endgrund":null}
+{"t":317,"was":"klick-nav","zug":"stadt:marke:gegner-marktplatz-4","text":"frei geworden","jahr":1355,"woche":27,"kasse":0,"ende":false,"endgrund":null}
+{"t":317.5,"was":"klick-nav","zug":"kern:chronik","text":"Chronik154","jahr":1355,"woche":27,"kasse":0,"ende":false,"endgrund":null}
+{"t":317.9,"was":"klick-nav","zug":"kern:protokoll","text":"Buch1264","jahr":1355,"woche":27,"kasse":0,"ende":false,"endgrund":null}
+{"t":318.3,"was":"klick-nav","zug":"klang:ton","text":"♪","jahr":1355,"woche":27,"kasse":0,"ende":false,"endgrund":null}
+{"t":318.9,"was":"klick-nav","zug":"stadt:reiter:gegner-amort-gg-band","text":"Ohne dich geschehen · 100 Zügezugeklappt","jahr":1355,"woche":27,"kasse":0,"ende":false,"endgrund":null}
+{"t":319.5,"was":"klick-nav","zug":"stadt:reiter:fuhre-fu-brett-fu-haeuser","text":"DIE HÄUSERwollen 11 · im Keller liegen 3 Fass","jahr":1355,"woche":27,"kasse":0,"ende":false,"endgrund":null}
+{"t":320,"was":"klick-nav","zug":"stadt:reiter:fuhre-fu-brett-fu-wagen","text":"OCHSENKARREN0 von 5 Fass · 0 von 4 Halten","jahr":1355,"woche":27,"kasse":0,"ende":false,"endgrund":null}
+{"t":320.4,"was":"klick-nav","zug":"stadt:ortsmarken","text":"Ortsmarken8 auf dem Pflock","jahr":1355,"woche":27,"kasse":0,"ende":false,"endgrund":null}
+{"t":321,"was":"klick-nav","zug":"gegner:zeige:100","text":"zeigen","jahr":1355,"woche":27,"kasse":0,"ende":false,"endgrund":null}
+{"t":321.7,"was":"klick-preis","zug":"fuhre:plan:umkaempft","text":"Fahren: wo der Adler wirbt · 3 Fass+5 Pf","preis":5,"kasseVor":0,"kasseNach":0,"jahr":1355,"woche":28,"ende":false,"endgrund":null}
+{"t":322.3,"was":"klick-preis","zug":"fuhre:plan:umkaempft","text":"Fahren: wo der Adler wirbt · 3 Fass+6 Pf","preis":6,"kasseVor":0,"kasseNach":0,"jahr":1355,"woche":29,"ende":false,"endgrund":null}
+{"t":322.8,"was":"klick-preis","zug":"fuhre:plan:umkaempft","text":"Fahren: wo der Adler wirbt · 3 Fass+5 Pf","preis":5,"kasseVor":0,"kasseNach":0,"jahr":1355,"woche":30,"ende":false,"endgrund":null}
+{"t":324.1,"was":"runde-ende","runde":41,"jahr":1356,"woche":1,"kasse":91,"deckung":2.5277777777777777,"besterPreis":36,"ende":false,"endgrund":null,"echteWochenGesamt":153}
+{"t":324.9,"was":"klick-nav","zug":"kern:chronik","text":"Chronik162","jahr":1356,"woche":1,"kasse":91,"ende":false,"endgrund":null}
+{"t":325.3,"was":"klick-nav","zug":"kern:protokoll","text":"Buch1309","jahr":1356,"woche":1,"kasse":91,"ende":false,"endgrund":null}
+{"t":325.7,"was":"klick-nav","zug":"klang:ton","text":"—","jahr":1356,"woche":1,"kasse":91,"ende":false,"endgrund":null}
+{"t":326.5,"was":"klick-nav","zug":"stadt:bauhof","text":"BAUHOF5 offen · ab 13 Pf · 5 bezahlbar","jahr":1356,"woche":1,"kasse":91,"ende":false,"endgrund":null}
+{"t":327.2,"was":"klick-nav","zug":"stadt:reiter:gegner-amort-gg-band","text":"Ohne dich geschehen · 101 Zügezugeklappt","jahr":1356,"woche":1,"kasse":91,"ende":false,"endgrund":null}
+{"t":327.7,"was":"klick-nav","zug":"stadt:reiter:fuhre-fu-brett-fu-haeuser","text":"DIE HÄUSERwollen 11 · im Keller liegen 0 Fass","jahr":1356,"woche":1,"kasse":91,"ende":false,"endgrund":null}
+{"t":328.3,"was":"klick-nav","zug":"stadt:reiter:fuhre-fu-brett-fu-keller","text":"DER KELLER0 von 12 Fass · 0 reif","jahr":1356,"woche":1,"kasse":91,"ende":false,"endgrund":null}
+{"t":328.7,"was":"klick-nav","zug":"stadt:ortsmarken","text":"Ortsmarken7 im Bild","jahr":1356,"woche":1,"kasse":91,"ende":false,"endgrund":null}
+{"t":329.7,"was":"klick-nav","zug":"preis:tafel","text":"Michaelitafel schließen","jahr":1356,"woche":1,"kasse":91,"ende":false,"endgrund":null}
+{"t":330.4,"was":"klick-preis","zug":"gegner:zukaufen:faehrhaus","text":"lieber zukaufen1 Fass · 12 Pf","preis":-12,"kasseVor":91,"kasseNach":79,"jahr":1356,"woche":1,"ende":false,"endgrund":null}
+{"t":331,"was":"klick-preis","zug":"gegner:abloesen:faehrhaus","text":"FAE · BANablösen 66 Pf","preis":-66,"kasseVor":79,"kasseNach":13,"jahr":1356,"woche":1,"ende":false,"endgrund":null}
+{"t":331.7,"was":"runde-ende","runde":42,"jahr":1356,"woche":2,"kasse":12,"deckung":0.3333333333333333,"besterPreis":36,"ende":false,"endgrund":null,"echteWochenGesamt":154}
+{"t":332.2,"was":"klick-nav","zug":"gegner:zeige:102","text":"zeigen","jahr":1356,"woche":2,"kasse":12,"ende":false,"endgrund":null}
+{"t":332.7,"was":"klick-nav","zug":"sud:zettel-wechsel-frei2","text":"Wasser aus dem Stadtbachlässt Starkbier zu","jahr":1356,"woche":2,"kasse":12,"ende":false,"endgrund":null}
+{"t":333.2,"was":"klick-nav","zug":"stadt:marke:gegner-fluss","text":"zurückgeholt — unser H","jahr":1356,"woche":2,"kasse":12,"ende":false,"endgrund":null}
+{"t":334,"was":"klick-nav","zug":"fuhre:uebergabe-auf","text":"DIE ÜBERGABE VOR DEM RAT · noch 3 Wochen","jahr":1356,"woche":2,"kasse":12,"ende":false,"endgrund":null}
+{"t":334.4,"was":"klick-nav","zug":"kern:chronik","text":"Chronik165","jahr":1356,"woche":2,"kasse":12,"ende":false,"endgrund":null}
+{"t":334.8,"was":"klick-nav","zug":"kern:protokoll","text":"Buch1317","jahr":1356,"woche":2,"kasse":12,"ende":false,"endgrund":null}
+{"t":335.3,"was":"klick-nav","zug":"klang:ton","text":"♪","jahr":1356,"woche":2,"kasse":12,"ende":false,"endgrund":null}
+{"t":336,"was":"klick-nav","zug":"stadt:bauhof","text":"BAUHOF5 offen · ab 13 Pf · keiner bezahlbar","jahr":1356,"woche":2,"kasse":12,"ende":false,"endgrund":null}
+{"t":336.7,"was":"klick-nav","zug":"stadt:reiter:gegner-amort-gg-band","text":"Ohne dich geschehen · 102 Zügeliegt auf","jahr":1356,"woche":2,"kasse":12,"ende":false,"endgrund":null}
+{"t":337.2,"was":"klick-nav","zug":"stadt:reiter:fuhre-fu-brett-fu-haeuser","text":"DIE HÄUSERwollen 12 · im Keller liegen 3 Fass","jahr":1356,"woche":2,"kasse":12,"ende":false,"endgrund":null}
+{"t":337.8,"was":"klick-nav","zug":"stadt:reiter:fuhre-fu-brett-fu-keller","text":"DER KELLER3 von 12 Fass · 3 reif","jahr":1356,"woche":2,"kasse":12,"ende":false,"endgrund":null}
+{"t":338.2,"was":"klick-nav","zug":"stadt:ortsmarken","text":"Ortsmarken8 auf dem Pflock","jahr":1356,"woche":2,"kasse":12,"ende":false,"endgrund":null}
+{"t":339,"was":"klick-nav","zug":"preis:tafel","text":"Michaelitafel 1356 · 5 Angebote","jahr":1356,"woche":2,"kasse":12,"ende":false,"endgrund":null}
+{"t":339.8,"was":"runde-ende","runde":43,"jahr":1356,"woche":3,"kasse":11,"deckung":0.3055555555555556,"besterPreis":36,"ende":false,"endgrund":null,"echteWochenGesamt":155}
+{"t":340.4,"was":"klick-nav","zug":"gegner:zeige:103","text":"zeigen","jahr":1356,"woche":3,"kasse":11,"ende":false,"endgrund":null}
+{"t":340.9,"was":"klick-nav","zug":"sud:zettel-wechsel-frei2","text":"Wasser aus dem Ziehbrunnenlässt Starkbier zu","jahr":1356,"woche":3,"kasse":11,"ende":false,"endgrund":null}
+{"t":341.6,"was":"klick-nav","zug":"fuhre:uebergabe-auf","text":"DIE ÜBERGABE VOR DEM RAT · noch 2 Wochen","jahr":1356,"woche":3,"kasse":11,"ende":false,"endgrund":null}
+{"t":342,"was":"klick-nav","zug":"kern:protokoll","text":"Buch1319","jahr":1356,"woche":3,"kasse":11,"ende":false,"endgrund":null}
+{"t":342.4,"was":"klick-nav","zug":"klang:ton","text":"—","jahr":1356,"woche":3,"kasse":11,"ende":false,"endgrund":null}
+{"t":343,"was":"klick-nav","zug":"stadt:reiter:gegner-amort-gg-band","text":"Ohne dich geschehen · 103 Zügeliegt auf","jahr":1356,"woche":3,"kasse":11,"ende":false,"endgrund":null}
+{"t":343.5,"was":"klick-nav","zug":"stadt:reiter:fuhre-fu-brett-fu-haeuser","text":"DIE HÄUSERwollen 13 · im Keller liegen 3 Fass","jahr":1356,"woche":3,"kasse":11,"ende":false,"endgrund":null}
+{"t":343.9,"was":"klick-nav","zug":"stadt:ortsmarken","text":"Ortsmarken8 im Bild","jahr":1356,"woche":3,"kasse":11,"ende":false,"endgrund":null}
+{"t":344.5,"was":"klick-preis","zug":"fuhre:plan:mager","text":"Fahren: die mageren Häuser · 3 Fass+4 Pf","preis":4,"kasseVor":11,"kasseNach":6,"jahr":1356,"woche":4,"ende":false,"endgrund":null}
+{"t":345,"was":"klick-preis","zug":"fuhre:plan:mager","text":"Fahren: die mageren Häuser · 3 Fass+4 Pf","preis":4,"kasseVor":6,"kasseNach":1,"jahr":1356,"woche":5,"ende":false,"endgrund":null}
+{"t":345.5,"was":"klick-preis","zug":"fuhre:plan:mager","text":"Fahren: die mageren Häuser · 3 Fass+5 Pf","preis":5,"kasseVor":1,"kasseNach":0,"jahr":1356,"woche":6,"ende":false,"endgrund":null}
+{"t":346,"was":"runde-ende","runde":44,"jahr":1356,"woche":7,"kasse":0,"deckung":0,"besterPreis":36,"ende":false,"endgrund":null,"echteWochenGesamt":159}
+{"t":346.6,"was":"klick-nav","zug":"gegner:hinhalten:hirsch","text":"Fass an den Wirt1 Fass statt Geld","jahr":1356,"woche":7,"kasse":0,"ende":false,"endgrund":null}
+{"t":347.2,"was":"klick-nav","zug":"sud:zettel-wechsel-frei2","text":"Wasser aus dem Stadtbachlässt Starkbier zu","jahr":1356,"woche":7,"kasse":0,"ende":false,"endgrund":null}
+{"t":347.7,"was":"klick-nav","zug":"stadt:marke:gegner-marktplatz-5","text":"frei geworden","jahr":1356,"woche":7,"kasse":0,"ende":false,"endgrund":null}
+{"t":348.2,"was":"klick-nav","zug":"kern:chronik","text":"Chronik166","jahr":1356,"woche":7,"kasse":0,"ende":false,"endgrund":null}
+{"t":348.6,"was":"klick-nav","zug":"kern:protokoll","text":"Buch1348","jahr":1356,"woche":7,"kasse":0,"ende":false,"endgrund":null}
+{"t":349,"was":"klick-nav","zug":"klang:ton","text":"♪","jahr":1356,"woche":7,"kasse":0,"ende":false,"endgrund":null}
+{"t":349.6,"was":"klick-nav","zug":"stadt:reiter:gegner-amort-gg-band","text":"Ohne dich geschehen · 107 Zügeliegt auf","jahr":1356,"woche":7,"kasse":0,"ende":false,"endgrund":null}
+{"t":350.2,"was":"klick-nav","zug":"stadt:reiter:fuhre-fu-brett-fu-haeuser","text":"DIE HÄUSERwollen 10 · im Keller liegen 3 Fass","jahr":1356,"woche":7,"kasse":0,"ende":false,"endgrund":null}
+{"t":350.6,"was":"klick-nav","zug":"stadt:ortsmarken","text":"Ortsmarken8 auf dem Pflock","jahr":1356,"woche":7,"kasse":0,"ende":false,"endgrund":null}
+{"t":351.2,"was":"klick-nav","zug":"stadt:reiter:fuhre-fu-brett-fu-keller","text":"DER KELLER2 von 12 Fass · 2 reif","jahr":1356,"woche":7,"kasse":0,"ende":false,"endgrund":null}
+{"t":351.8,"was":"klick-preis","zug":"fuhre:plan:mager","text":"Fahren: die mageren Häuser · 2 Fass+3 Pf","preis":3,"kasseVor":0,"kasseNach":0,"jahr":1356,"woche":8,"ende":false,"endgrund":null}
+{"t":352.3,"was":"klick-preis","zug":"fuhre:plan:mager","text":"Fahren: die mageren Häuser · 3 Fass+5 Pf","preis":5,"kasseVor":0,"kasseNach":0,"jahr":1356,"woche":9,"ende":false,"endgrund":null}
+{"t":352.9,"was":"klick-preis","zug":"fuhre:plan:mager","text":"Fahren: die mageren Häuser · 3 Fass+5 Pf","preis":5,"kasseVor":0,"kasseNach":0,"jahr":1356,"woche":10,"ende":false,"endgrund":null}
+{"t":353.4,"was":"runde-ende","runde":45,"jahr":1356,"woche":11,"kasse":0,"deckung":0,"besterPreis":72,"ende":false,"endgrund":null,"echteWochenGesamt":163}
+{"t":354.4,"was":"klick-nav","zug":"sud:zettel-wechsel-frei2","text":"Wasser aus dem Ziehbrunnenlässt Starkbier zu","jahr":1356,"woche":11,"kasse":0,"ende":false,"endgrund":null}
+{"t":354.8,"was":"klick-nav","zug":"kern:chronik","text":"Chronik168","jahr":1356,"woche":11,"kasse":0,"ende":false,"endgrund":null}
+{"t":355.3,"was":"klick-nav","zug":"kern:protokoll","text":"Buch1369","jahr":1356,"woche":11,"kasse":0,"ende":false,"endgrund":null}
+{"t":355.7,"was":"klick-nav","zug":"klang:ton","text":"—","jahr":1356,"woche":11,"kasse":0,"ende":false,"endgrund":null}
+{"t":356.3,"was":"klick-nav","zug":"stadt:reiter:gegner-amort-gg-band","text":"Ohne dich geschehen · 110 Zügezugeklappt","jahr":1356,"woche":11,"kasse":0,"ende":false,"endgrund":null}
+{"t":356.8,"was":"klick-nav","zug":"stadt:reiter:fuhre-fu-brett-fu-haeuser","text":"DIE HÄUSERwollen 11 · im Keller liegen 3 Fass","jahr":1356,"woche":11,"kasse":0,"ende":false,"endgrund":null}
+{"t":357.4,"was":"klick-nav","zug":"stadt:reiter:fuhre-fu-brett-fu-keller","text":"DER KELLER3 von 12 Fass · 3 reif","jahr":1356,"woche":11,"kasse":0,"ende":false,"endgrund":null}
+{"t":357.8,"was":"klick-nav","zug":"stadt:ortsmarken","text":"Ortsmarken7 im Bild","jahr":1356,"woche":11,"kasse":0,"ende":false,"endgrund":null}
+{"t":358.3,"was":"klick-nav","zug":"gegner:zeige:110","text":"zeigen","jahr":1356,"woche":11,"kasse":0,"ende":false,"endgrund":null}
+{"t":358.9,"was":"klick-preis","zug":"fuhre:plan:mager","text":"Fahren: die mageren Häuser · 3 Fass+4 Pf","preis":4,"kasseVor":0,"kasseNach":0,"jahr":1356,"woche":12,"ende":false,"endgrund":null}
+{"t":359.5,"was":"klick-preis","zug":"fuhre:plan:mager","text":"Fahren: die mageren Häuser · 3 Fass+5 Pf","preis":5,"kasseVor":0,"kasseNach":0,"jahr":1356,"woche":13,"ende":false,"endgrund":null}
+{"t":359.9,"was":"klick-preis","zug":"fuhre:plan:mager","text":"Fahren: die mageren Häuser · 3 Fass+5 Pf","preis":5,"kasseVor":0,"kasseNach":0,"jahr":1356,"woche":14,"ende":false,"endgrund":null}
+{"t":360.4,"was":"runde-ende","runde":46,"jahr":1356,"woche":15,"kasse":0,"deckung":0,"besterPreis":72,"ende":false,"endgrund":null,"echteWochenGesamt":167}
+{"t":361,"was":"klick-nav","zug":"sud:zettel-wechsel-frei2","text":"Wasser aus dem Stadtbachlässt Starkbier zu","jahr":1356,"woche":15,"kasse":0,"ende":false,"endgrund":null}
+{"t":361.4,"was":"klick-nav","zug":"kern:chronik","text":"Chronik169","jahr":1356,"woche":15,"kasse":0,"ende":false,"endgrund":null}
+{"t":361.8,"was":"klick-nav","zug":"kern:protokoll","text":"Buch1397","jahr":1356,"woche":15,"kasse":0,"ende":false,"endgrund":null}
+{"t":362.2,"was":"klick-nav","zug":"klang:ton","text":"♪","jahr":1356,"woche":15,"kasse":0,"ende":false,"endgrund":null}
+{"t":362.8,"was":"klick-nav","zug":"stadt:reiter:gegner-amort-gg-band","text":"Ohne dich geschehen · 110 Zügeliegt auf","jahr":1356,"woche":15,"kasse":0,"ende":false,"endgrund":null}
+{"t":363.3,"was":"klick-nav","zug":"stadt:reiter:fuhre-fu-brett-fu-haeuser","text":"DIE HÄUSERwollen 11 · im Keller liegen 2 Fass","jahr":1356,"woche":15,"kasse":0,"ende":false,"endgrund":null}
+{"t":363.9,"was":"klick-nav","zug":"stadt:reiter:fuhre-fu-brett-fu-keller","text":"DER KELLER2 von 12 Fass · 2 reif","jahr":1356,"woche":15,"kasse":0,"ende":false,"endgrund":null}
+{"t":364.3,"was":"klick-nav","zug":"stadt:ortsmarken","text":"Ortsmarken7 auf dem Pflock","jahr":1356,"woche":15,"kasse":0,"ende":false,"endgrund":null}
+{"t":364.9,"was":"klick-preis","zug":"fuhre:plan:mager","text":"Fahren: die mageren Häuser · 2 Fass+3 Pf","preis":3,"kasseVor":0,"kasseNach":0,"jahr":1356,"woche":16,"ende":false,"endgrund":null}
+{"t":365.5,"was":"klick-preis","zug":"fuhre:plan:mager","text":"Fahren: die mageren Häuser · 3 Fass+5 Pf","preis":5,"kasseVor":0,"kasseNach":0,"jahr":1356,"woche":17,"ende":false,"endgrund":null}
+{"t":366,"was":"klick-preis","zug":"fuhre:plan:mager","text":"Fahren: die mageren Häuser · 2 Fass+2 Pf","preis":2,"kasseVor":0,"kasseNach":0,"jahr":1356,"woche":18,"ende":false,"endgrund":null}
+{"t":366.5,"was":"runde-ende","runde":47,"jahr":1356,"woche":19,"kasse":0,"deckung":0,"besterPreis":84,"ende":false,"endgrund":null,"echteWochenGesamt":171}
+{"t":367.1,"was":"klick-nav","zug":"sud:zettel-wechsel-frei2","text":"Wasser aus dem Ziehbrunnenlässt Starkbier zu","jahr":1356,"woche":19,"kasse":0,"ende":false,"endgrund":null}
+{"t":367.5,"was":"klick-nav","zug":"kern:chronik","text":"Chronik175","jahr":1356,"woche":19,"kasse":0,"ende":false,"endgrund":null}
+{"t":367.9,"was":"klick-nav","zug":"kern:protokoll","text":"Buch1424","jahr":1356,"woche":19,"kasse":0,"ende":false,"endgrund":null}
+{"t":368.3,"was":"klick-nav","zug":"klang:ton","text":"—","jahr":1356,"woche":19,"kasse":0,"ende":false,"endgrund":null}
+{"t":368.9,"was":"klick-nav","zug":"stadt:reiter:gegner-amort-gg-band","text":"Ohne dich geschehen · 115 Zügezugeklappt","jahr":1356,"woche":19,"kasse":0,"ende":false,"endgrund":null}
+{"t":369.4,"was":"klick-nav","zug":"stadt:reiter:fuhre-fu-brett-fu-haeuser","text":"DIE HÄUSERwollen 11 · im Keller liegen 3 Fass","jahr":1356,"woche":19,"kasse":0,"ende":false,"endgrund":null}
+{"t":370,"was":"klick-nav","zug":"stadt:reiter:fuhre-fu-brett-fu-keller","text":"DER KELLER3 von 12 Fass · 3 reif","jahr":1356,"woche":19,"kasse":0,"ende":false,"endgrund":null}
+{"t":370.4,"was":"klick-nav","zug":"stadt:ortsmarken","text":"Ortsmarken8 im Bild","jahr":1356,"woche":19,"kasse":0,"ende":false,"endgrund":null}
+{"t":371,"was":"klick-nav","zug":"gegner:zeige:115","text":"zeigen","jahr":1356,"woche":19,"kasse":0,"ende":false,"endgrund":null}
+{"t":371.5,"was":"klick-preis","zug":"fuhre:plan:mager","text":"Fahren: die mageren Häuser · 3 Fass+5 Pf","preis":5,"kasseVor":0,"kasseNach":0,"jahr":1356,"woche":20,"ende":false,"endgrund":null}
+{"t":372.1,"was":"klick-preis","zug":"fuhre:plan:mager","text":"Fahren: die mageren Häuser · 3 Fass+5 Pf","preis":5,"kasseVor":0,"kasseNach":0,"jahr":1356,"woche":21,"ende":false,"endgrund":null}
+{"t":372.7,"was":"klick-preis","zug":"fuhre:plan:mager","text":"Fahren: die mageren Häuser · 3 Fass+4 Pf","preis":4,"kasseVor":0,"kasseNach":0,"jahr":1356,"woche":22,"ende":false,"endgrund":null}
+{"t":373.3,"was":"runde-ende","runde":48,"jahr":1356,"woche":23,"kasse":0,"deckung":0,"besterPreis":36,"ende":false,"endgrund":null,"echteWochenGesamt":175}
+{"t":373.8,"was":"klick-nav","zug":"gegner:zeige:118","text":"zeigen","jahr":1356,"woche":23,"kasse":0,"ende":false,"endgrund":null}
+{"t":374.4,"was":"klick-nav","zug":"sud:zettel-wechsel-frei2","text":"Wasser aus dem Stadtbachlässt Starkbier zu","jahr":1356,"woche":23,"kasse":0,"ende":false,"endgrund":null}
+{"t":374.9,"was":"klick-nav","zug":"kern:chronik","text":"Chronik177","jahr":1356,"woche":23,"kasse":0,"ende":false,"endgrund":null}
+{"t":375.3,"was":"klick-nav","zug":"kern:protokoll","text":"Buch1456","jahr":1356,"woche":23,"kasse":0,"ende":false,"endgrund":null}
+{"t":375.7,"was":"klick-nav","zug":"klang:ton","text":"♪","jahr":1356,"woche":23,"kasse":0,"ende":false,"endgrund":null}
+{"t":376.3,"was":"klick-nav","zug":"stadt:reiter:gegner-amort-gg-band","text":"Ohne dich geschehen · 118 Zügeliegt auf","jahr":1356,"woche":23,"kasse":0,"ende":false,"endgrund":null}
+{"t":376.9,"was":"klick-nav","zug":"stadt:reiter:fuhre-fu-brett-fu-haeuser","text":"DIE HÄUSERwollen 10 · im Keller liegen 3 Fass","jahr":1356,"woche":23,"kasse":0,"ende":false,"endgrund":null}
+{"t":377.4,"was":"klick-nav","zug":"stadt:ortsmarken","text":"Ortsmarken7 auf dem Pflock","jahr":1356,"woche":23,"kasse":0,"ende":false,"endgrund":null}
+{"t":378,"was":"klick-preis","zug":"fuhre:plan:mager","text":"Fahren: die mageren Häuser · 3 Fass+5 Pf","preis":5,"kasseVor":0,"kasseNach":0,"jahr":1356,"woche":24,"ende":false,"endgrund":null}
+{"t":378.6,"was":"klick-preis","zug":"fuhre:plan:mager","text":"Fahren: die mageren Häuser · 3 Fass+5 Pf","preis":5,"kasseVor":0,"kasseNach":0,"jahr":1356,"woche":25,"ende":false,"endgrund":null}
+{"t":379.1,"was":"klick-preis","zug":"fuhre:plan:mager","text":"Fahren: die mageren Häuser · 3 Fass+4 Pf","preis":4,"kasseVor":0,"kasseNach":0,"jahr":1356,"woche":26,"ende":false,"endgrund":null}
+{"t":379.6,"was":"runde-ende","runde":49,"jahr":1356,"woche":27,"kasse":0,"deckung":0,"besterPreis":84,"ende":false,"endgrund":null,"echteWochenGesamt":179}
+{"t":380.2,"was":"klick-nav","zug":"sud:zettel-wechsel-frei2","text":"Wasser aus dem Ziehbrunnenlässt Starkbier zu","jahr":1356,"woche":27,"kasse":0,"ende":false,"endgrund":null}
+{"t":380.6,"was":"klick-nav","zug":"kern:chronik","text":"Chronik180","jahr":1356,"woche":27,"kasse":0,"ende":false,"endgrund":null}
+{"t":381,"was":"klick-nav","zug":"kern:protokoll","text":"Buch1481","jahr":1356,"woche":27,"kasse":0,"ende":false,"endgrund":null}
+{"t":381.5,"was":"klick-nav","zug":"klang:ton","text":"—","jahr":1356,"woche":27,"kasse":0,"ende":false,"endgrund":null}
+{"t":382.1,"was":"klick-nav","zug":"stadt:reiter:gegner-amort-gg-band","text":"Ohne dich geschehen · 124 Zügezugeklappt","jahr":1356,"woche":27,"kasse":0,"ende":false,"endgrund":null}
+{"t":382.5,"was":"klick-nav","zug":"stadt:ortsmarken","text":"Ortsmarken8 im Bild","jahr":1356,"woche":27,"kasse":0,"ende":false,"endgrund":null}
+{"t":383,"was":"klick-nav","zug":"gegner:zeige:124","text":"zeigen","jahr":1356,"woche":27,"kasse":0,"ende":false,"endgrund":null}
+{"t":383.6,"was":"klick-preis","zug":"fuhre:plan:mager","text":"Fahren: die mageren Häuser · 3 Fass+5 Pf","preis":5,"kasseVor":0,"kasseNach":0,"jahr":1356,"woche":28,"ende":false,"endgrund":null}
+{"t":384.2,"was":"klick-preis","zug":"fuhre:plan:mager","text":"Fahren: die mageren Häuser · 3 Fass+5 Pf","preis":5,"kasseVor":0,"kasseNach":0,"jahr":1356,"woche":29,"ende":false,"endgrund":null}
+{"t":384.7,"was":"klick-preis","zug":"fuhre:plan:mager","text":"Fahren: die mageren Häuser · 3 Fass+5 Pf","preis":5,"kasseVor":0,"kasseNach":0,"jahr":1356,"woche":30,"ende":false,"endgrund":null}
+{"t":386.1,"was":"runde-ende","runde":50,"jahr":1357,"woche":1,"kasse":26,"deckung":1.1818181818181819,"besterPreis":22,"ende":false,"endgrund":null,"echteWochenGesamt":183}

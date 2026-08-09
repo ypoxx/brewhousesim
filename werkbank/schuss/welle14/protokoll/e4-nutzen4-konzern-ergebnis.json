@@ -1,0 +1,39 @@
+{
+ "epoche": 4,
+ "festlegeKey": "konzern",
+ "braujahre": 6,
+ "lauf": "e4-nutzen4-konzern",
+ "vor": {
+  "jahr": 1970,
+  "woche": 1,
+  "kasse": 86000,
+  "ende": false,
+  "endgrund": null
+ },
+ "festlegungOk": {
+  "griffOk": true,
+  "vorKlick": {
+   "aus": false,
+   "preis": "65000",
+   "text": "Festlegen — Geld herein+65.000 DM"
+  },
+  "geklickt": true,
+  "kasseVor": 86000,
+  "kasseNach": 151000
+ },
+ "sprung": {
+  "runden": 84,
+  "sprungKlicks": 21,
+  "weiterKlicks": 6,
+  "tafelZuKlicks": 0
+ },
+ "nach": {
+  "jahr": 1975,
+  "woche": 30,
+  "kasse": 138938,
+  "ende": false,
+  "endgrund": null
+ },
+ "kasseDelta": 52938,
+ "fehler": []
+}

@@ -1,0 +1,1318 @@
+{
+ "epoche": 2,
+ "saat": "1350",
+ "lauf": "e2-sammel-keine",
+ "festlegeGesucht": "keine",
+ "minuten": 4.4,
+ "aussenrunden": 25,
+ "echteWochenGesamt": 155,
+ "jahrStart": 1600,
+ "jahrEnde": 1605,
+ "wocheEnde": 16,
+ "braujahre": 6,
+ "kasseEnde": 84,
+ "endgrund": null,
+ "abbruch": {
+  "grund": "maxWochen-erreicht",
+  "maxWochen": 150
+ },
+ "festlegungGenommen": null,
+ "klicksNav": 245,
+ "klicksPreis": 141,
+ "klicksWeiter": 25,
+ "fehler": [],
+ "seitenfehlerZahl": 0,
+ "tafelBeobachtungen": [
+  {
+   "jahr": 1600,
+   "woche": 1,
+   "kasse": 640,
+   "anzahl": 4,
+   "billigsteKosten": 280,
+   "kasseDurchBilligste": 2.2857142857142856,
+   "karten": [
+    {
+     "zug": "preis:festlege:eigentum",
+     "text": "Festlegen−6.700 fl",
+     "preis": -6700,
+     "aus": true
+    },
+    {
+     "zug": "preis:festlege:reinheit",
+     "text": "Festlegen−280 fl",
+     "preis": -280,
+     "aus": false
+    },
+    {
+     "zug": "preis:festlege:ratssitz",
+     "text": "Festlegen−5.300 fl",
+     "preis": -5300,
+     "aus": true
+    },
+    {
+     "zug": "preis:festlege:bierbann",
+     "text": "Festlegen−7.800 fl",
+     "preis": -7800,
+     "aus": true
+    }
+   ]
+  },
+  {
+   "jahr": 1601,
+   "woche": 1,
+   "kasse": 410,
+   "anzahl": 4,
+   "billigsteKosten": 290,
+   "kasseDurchBilligste": 1.4137931034482758,
+   "karten": [
+    {
+     "zug": "preis:festlege:reinheit",
+     "text": "Festlegen−290 fl",
+     "preis": -290,
+     "aus": false
+    },
+    {
+     "zug": "preis:festlege:stadtguelt",
+     "text": "Festlegen−440 fl",
+     "preis": -440,
+     "aus": true
+    },
+    {
+     "zug": "preis:festlege:ratssitz",
+     "text": "Festlegen−5.500 fl",
+     "preis": -5500,
+     "aus": true
+    },
+    {
+     "zug": "preis:festlege:bierbann",
+     "text": "Festlegen−8.100 fl",
+     "preis": -8100,
+     "aus": true
+    }
+   ]
+  },
+  {
+   "jahr": 1602,
+   "woche": 1,
+   "kasse": 286,
+   "anzahl": 4,
+   "billigsteKosten": 300,
+   "kasseDurchBilligste": 0.9533333333333334,
+   "karten": [
+    {
+     "zug": "preis:festlege:reinheit",
+     "text": "Festlegen−300 fl",
+     "preis": -300,
+     "aus": true
+    },
+    {
+     "zug": "preis:festlege:stadtguelt",
+     "text": "Festlegen−450 fl",
+     "preis": -450,
+     "aus": true
+    },
+    {
+     "zug": "preis:festlege:ratssitz",
+     "text": "Festlegen−5.700 fl",
+     "preis": -5700,
+     "aus": true
+    },
+    {
+     "zug": "preis:festlege:bierbann",
+     "text": "Festlegen−8.400 fl",
+     "preis": -8400,
+     "aus": true
+    }
+   ]
+  },
+  {
+   "jahr": 1603,
+   "woche": 1,
+   "kasse": 280,
+   "anzahl": 4,
+   "billigsteKosten": 310,
+   "kasseDurchBilligste": 0.9032258064516129,
+   "karten": [
+    {
+     "zug": "preis:festlege:gueltbrief",
+     "text": "Festlegen — Geld herein+350 fl",
+     "preis": 350,
+     "aus": false
+    },
+    {
+     "zug": "preis:festlege:reinheit",
+     "text": "Festlegen−310 fl",
+     "preis": -310,
+     "aus": true
+    },
+    {
+     "zug": "preis:festlege:stadtguelt",
+     "text": "Festlegen−470 fl",
+     "preis": -470,
+     "aus": true
+    },
+    {
+     "zug": "preis:festlege:bierbann",
+     "text": "Festlegen−8.800 fl",
+     "preis": -8800,
+     "aus": true
+    }
+   ]
+  },
+  {
+   "jahr": 1604,
+   "woche": 1,
+   "kasse": 280,
+   "anzahl": 4,
+   "billigsteKosten": 330,
+   "kasseDurchBilligste": 0.8484848484848485,
+   "karten": [
+    {
+     "zug": "preis:festlege:gueltbrief",
+     "text": "Festlegen — Geld herein+330 fl",
+     "preis": 330,
+     "aus": false
+    },
+    {
+     "zug": "preis:festlege:reinheit",
+     "text": "Festlegen−330 fl",
+     "preis": -330,
+     "aus": true
+    },
+    {
+     "zug": "preis:festlege:stadtguelt",
+     "text": "Festlegen−490 fl",
+     "preis": -490,
+     "aus": true
+    },
+    {
+     "zug": "preis:festlege:bierbann",
+     "text": "Festlegen−9.100 fl",
+     "preis": -9100,
+     "aus": true
+    }
+   ]
+  },
+  {
+   "jahr": 1605,
+   "woche": 1,
+   "kasse": 280,
+   "anzahl": 4,
+   "billigsteKosten": 340,
+   "kasseDurchBilligste": 0.8235294117647058,
+   "karten": [
+    {
+     "zug": "preis:festlege:gueltbrief",
+     "text": "Festlegen — Geld herein+900 fl",
+     "preis": 900,
+     "aus": false
+    },
+    {
+     "zug": "preis:festlege:reinheit",
+     "text": "Festlegen−340 fl",
+     "preis": -340,
+     "aus": true
+    },
+    {
+     "zug": "preis:festlege:stadtguelt",
+     "text": "Festlegen−510 fl",
+     "preis": -510,
+     "aus": true
+    },
+    {
+     "zug": "preis:festlege:bierbann",
+     "text": "Festlegen−9.400 fl",
+     "preis": -9400,
+     "aus": true
+    }
+   ]
+  }
+ ],
+ "wochenReihe": [
+  {
+   "n": 1,
+   "jahr": 1600,
+   "woche": 1,
+   "kasse": 640,
+   "deckung": 3.764705882352941
+  },
+  {
+   "n": 2,
+   "jahr": 1600,
+   "woche": 2,
+   "kasse": 660,
+   "deckung": 3.8823529411764706
+  },
+  {
+   "n": 3,
+   "jahr": 1600,
+   "woche": 3,
+   "kasse": 642,
+   "deckung": 3.776470588235294
+  },
+  {
+   "n": 4,
+   "jahr": 1600,
+   "woche": 4,
+   "kasse": 676,
+   "deckung": 3.976470588235294
+  },
+  {
+   "n": 5,
+   "jahr": 1600,
+   "woche": 5,
+   "kasse": 699,
+   "deckung": 5.9743589743589745
+  },
+  {
+   "n": 6,
+   "jahr": 1600,
+   "woche": 6,
+   "kasse": 682,
+   "deckung": 5.829059829059829
+  },
+  {
+   "n": 7,
+   "jahr": 1600,
+   "woche": 7,
+   "kasse": 710,
+   "deckung": 6.068376068376068
+  },
+  {
+   "n": 8,
+   "jahr": 1600,
+   "woche": 8,
+   "kasse": 688,
+   "deckung": 5.880341880341881
+  },
+  {
+   "n": 9,
+   "jahr": 1600,
+   "woche": 14,
+   "kasse": 856,
+   "deckung": 11.263157894736842
+  },
+  {
+   "n": 10,
+   "jahr": 1600,
+   "woche": 15,
+   "kasse": 856,
+   "deckung": 11.263157894736842
+  },
+  {
+   "n": 11,
+   "jahr": 1600,
+   "woche": 16,
+   "kasse": 858,
+   "deckung": 11.289473684210526
+  },
+  {
+   "n": 12,
+   "jahr": 1600,
+   "woche": 17,
+   "kasse": 859,
+   "deckung": 10.226190476190476
+  },
+  {
+   "n": 13,
+   "jahr": 1600,
+   "woche": 18,
+   "kasse": 859,
+   "deckung": 6.362962962962963
+  },
+  {
+   "n": 14,
+   "jahr": 1600,
+   "woche": 19,
+   "kasse": 861,
+   "deckung": 6.377777777777778
+  },
+  {
+   "n": 15,
+   "jahr": 1600,
+   "woche": 20,
+   "kasse": 861,
+   "deckung": 6.377777777777778
+  },
+  {
+   "n": 16,
+   "jahr": 1600,
+   "woche": 21,
+   "kasse": 859,
+   "deckung": 6.362962962962963
+  },
+  {
+   "n": 17,
+   "jahr": 1600,
+   "woche": 22,
+   "kasse": 860,
+   "deckung": 6.37037037037037
+  },
+  {
+   "n": 18,
+   "jahr": 1600,
+   "woche": 23,
+   "kasse": 862,
+   "deckung": 8.62
+  },
+  {
+   "n": 19,
+   "jahr": 1600,
+   "woche": 24,
+   "kasse": 862,
+   "deckung": 8.62
+  },
+  {
+   "n": 20,
+   "jahr": 1600,
+   "woche": 25,
+   "kasse": 863,
+   "deckung": 8.63
+  },
+  {
+   "n": 21,
+   "jahr": 1600,
+   "woche": 26,
+   "kasse": 864,
+   "deckung": 8.64
+  },
+  {
+   "n": 22,
+   "jahr": 1600,
+   "woche": 27,
+   "kasse": 865,
+   "deckung": 8.65
+  },
+  {
+   "n": 23,
+   "jahr": 1600,
+   "woche": 28,
+   "kasse": 863,
+   "deckung": 5.327160493827161
+  },
+  {
+   "n": 24,
+   "jahr": 1600,
+   "woche": 30,
+   "kasse": 864,
+   "deckung": 5.333333333333333
+  },
+  {
+   "n": 25,
+   "jahr": 1601,
+   "woche": 1,
+   "kasse": 410,
+   "deckung": 2.5308641975308643
+  },
+  {
+   "n": 26,
+   "jahr": 1601,
+   "woche": 2,
+   "kasse": 159,
+   "deckung": 0.8736263736263736
+  },
+  {
+   "n": 27,
+   "jahr": 1601,
+   "woche": 3,
+   "kasse": 156,
+   "deckung": 0.6753246753246753
+  },
+  {
+   "n": 28,
+   "jahr": 1601,
+   "woche": 4,
+   "kasse": 147,
+   "deckung": 0.6363636363636364
+  },
+  {
+   "n": 29,
+   "jahr": 1601,
+   "woche": 5,
+   "kasse": 144,
+   "deckung": 0.6923076923076923
+  },
+  {
+   "n": 30,
+   "jahr": 1601,
+   "woche": 6,
+   "kasse": 137,
+   "deckung": 0.6586538461538461
+  },
+  {
+   "n": 31,
+   "jahr": 1601,
+   "woche": 7,
+   "kasse": 131,
+   "deckung": 0.6298076923076923
+  },
+  {
+   "n": 32,
+   "jahr": 1601,
+   "woche": 8,
+   "kasse": 124,
+   "deckung": 0.5961538461538461
+  },
+  {
+   "n": 33,
+   "jahr": 1601,
+   "woche": 9,
+   "kasse": 122,
+   "deckung": 0.5865384615384616
+  },
+  {
+   "n": 34,
+   "jahr": 1601,
+   "woche": 15,
+   "kasse": 86,
+   "deckung": 1.0238095238095237
+  },
+  {
+   "n": 35,
+   "jahr": 1601,
+   "woche": 16,
+   "kasse": 70,
+   "deckung": 0.8333333333333334
+  },
+  {
+   "n": 36,
+   "jahr": 1601,
+   "woche": 17,
+   "kasse": 84,
+   "deckung": 0.2857142857142857
+  },
+  {
+   "n": 37,
+   "jahr": 1601,
+   "woche": 18,
+   "kasse": 78,
+   "deckung": 0.2653061224489796
+  },
+  {
+   "n": 38,
+   "jahr": 1601,
+   "woche": 19,
+   "kasse": 75,
+   "deckung": 0.26223776223776224
+  },
+  {
+   "n": 39,
+   "jahr": 1601,
+   "woche": 20,
+   "kasse": 72,
+   "deckung": 0.2517482517482518
+  },
+  {
+   "n": 40,
+   "jahr": 1601,
+   "woche": 21,
+   "kasse": 71,
+   "deckung": 0.24825174825174826
+  },
+  {
+   "n": 41,
+   "jahr": 1601,
+   "woche": 22,
+   "kasse": 69,
+   "deckung": 0.24125874125874125
+  },
+  {
+   "n": 42,
+   "jahr": 1601,
+   "woche": 23,
+   "kasse": 68,
+   "deckung": 0.23776223776223776
+  },
+  {
+   "n": 43,
+   "jahr": 1601,
+   "woche": 24,
+   "kasse": 65,
+   "deckung": 0.5555555555555556
+  },
+  {
+   "n": 44,
+   "jahr": 1601,
+   "woche": 25,
+   "kasse": 62,
+   "deckung": 0.5299145299145299
+  },
+  {
+   "n": 45,
+   "jahr": 1601,
+   "woche": 26,
+   "kasse": 62,
+   "deckung": 0.5299145299145299
+  },
+  {
+   "n": 46,
+   "jahr": 1601,
+   "woche": 27,
+   "kasse": 59,
+   "deckung": 0.5042735042735043
+  },
+  {
+   "n": 47,
+   "jahr": 1601,
+   "woche": 28,
+   "kasse": 62,
+   "deckung": 0.5299145299145299
+  },
+  {
+   "n": 48,
+   "jahr": 1601,
+   "woche": 29,
+   "kasse": 60,
+   "deckung": 0.31746031746031744
+  },
+  {
+   "n": 49,
+   "jahr": 1601,
+   "woche": 30,
+   "kasse": 58,
+   "deckung": 0.30687830687830686
+  },
+  {
+   "n": 50,
+   "jahr": 1602,
+   "woche": 1,
+   "kasse": 286,
+   "deckung": 1.5132275132275133
+  },
+  {
+   "n": 51,
+   "jahr": 1602,
+   "woche": 2,
+   "kasse": 226,
+   "deckung": 1.1957671957671958
+  },
+  {
+   "n": 52,
+   "jahr": 1602,
+   "woche": 3,
+   "kasse": 224,
+   "deckung": 1.1851851851851851
+  },
+  {
+   "n": 53,
+   "jahr": 1602,
+   "woche": 4,
+   "kasse": 218,
+   "deckung": 1.1534391534391535
+  },
+  {
+   "n": 54,
+   "jahr": 1602,
+   "woche": 5,
+   "kasse": 215,
+   "deckung": 1.1375661375661377
+  },
+  {
+   "n": 55,
+   "jahr": 1602,
+   "woche": 6,
+   "kasse": 208,
+   "deckung": 1.1005291005291005
+  },
+  {
+   "n": 56,
+   "jahr": 1602,
+   "woche": 7,
+   "kasse": 203,
+   "deckung": 1.5615384615384615
+  },
+  {
+   "n": 57,
+   "jahr": 1602,
+   "woche": 8,
+   "kasse": 192,
+   "deckung": 1.476923076923077
+  },
+  {
+   "n": 58,
+   "jahr": 1602,
+   "woche": 9,
+   "kasse": 190,
+   "deckung": 1.4615384615384615
+  },
+  {
+   "n": 59,
+   "jahr": 1602,
+   "woche": 10,
+   "kasse": 188,
+   "deckung": 1.4461538461538461
+  },
+  {
+   "n": 60,
+   "jahr": 1602,
+   "woche": 11,
+   "kasse": 186,
+   "deckung": 0.8857142857142857
+  },
+  {
+   "n": 61,
+   "jahr": 1602,
+   "woche": 12,
+   "kasse": 176,
+   "deckung": 0.8380952380952381
+  },
+  {
+   "n": 62,
+   "jahr": 1602,
+   "woche": 13,
+   "kasse": 173,
+   "deckung": 0.8238095238095238
+  },
+  {
+   "n": 63,
+   "jahr": 1602,
+   "woche": 14,
+   "kasse": 166,
+   "deckung": 0.7904761904761904
+  },
+  {
+   "n": 64,
+   "jahr": 1602,
+   "woche": 15,
+   "kasse": 159,
+   "deckung": 0.7571428571428571
+  },
+  {
+   "n": 65,
+   "jahr": 1602,
+   "woche": 16,
+   "kasse": 157,
+   "deckung": 0.7476190476190476
+  },
+  {
+   "n": 66,
+   "jahr": 1602,
+   "woche": 17,
+   "kasse": 150,
+   "deckung": 0.8241758241758241
+  },
+  {
+   "n": 67,
+   "jahr": 1602,
+   "woche": 18,
+   "kasse": 148,
+   "deckung": 0.8131868131868132
+  },
+  {
+   "n": 68,
+   "jahr": 1602,
+   "woche": 19,
+   "kasse": 146,
+   "deckung": 0.8021978021978022
+  },
+  {
+   "n": 69,
+   "jahr": 1602,
+   "woche": 20,
+   "kasse": 138,
+   "deckung": 0.7582417582417582
+  },
+  {
+   "n": 70,
+   "jahr": 1602,
+   "woche": 21,
+   "kasse": 132,
+   "deckung": 0.4489795918367347
+  },
+  {
+   "n": 71,
+   "jahr": 1602,
+   "woche": 22,
+   "kasse": 127,
+   "deckung": 0.43197278911564624
+  },
+  {
+   "n": 72,
+   "jahr": 1602,
+   "woche": 23,
+   "kasse": 125,
+   "deckung": 0.42517006802721086
+  },
+  {
+   "n": 73,
+   "jahr": 1602,
+   "woche": 24,
+   "kasse": 119,
+   "deckung": 0.9153846153846154
+  },
+  {
+   "n": 74,
+   "jahr": 1602,
+   "woche": 25,
+   "kasse": 120,
+   "deckung": 0.9230769230769231
+  },
+  {
+   "n": 75,
+   "jahr": 1602,
+   "woche": 26,
+   "kasse": 117,
+   "deckung": 0.3979591836734694
+  },
+  {
+   "n": 76,
+   "jahr": 1602,
+   "woche": 27,
+   "kasse": 114,
+   "deckung": 0.7549668874172185
+  },
+  {
+   "n": 77,
+   "jahr": 1602,
+   "woche": 28,
+   "kasse": 111,
+   "deckung": 0.7350993377483444
+  },
+  {
+   "n": 78,
+   "jahr": 1602,
+   "woche": 29,
+   "kasse": 111,
+   "deckung": 0.7350993377483444
+  },
+  {
+   "n": 79,
+   "jahr": 1602,
+   "woche": 30,
+   "kasse": 109,
+   "deckung": 0.7218543046357616
+  },
+  {
+   "n": 80,
+   "jahr": 1603,
+   "woche": 1,
+   "kasse": 280,
+   "deckung": 1.8543046357615893
+  },
+  {
+   "n": 81,
+   "jahr": 1603,
+   "woche": 2,
+   "kasse": 40,
+   "deckung": 0.47619047619047616
+  },
+  {
+   "n": 82,
+   "jahr": 1603,
+   "woche": 3,
+   "kasse": 33,
+   "deckung": 0.39285714285714285
+  },
+  {
+   "n": 83,
+   "jahr": 1603,
+   "woche": 4,
+   "kasse": 28,
+   "deckung": 0.2074074074074074
+  },
+  {
+   "n": 84,
+   "jahr": 1603,
+   "woche": 5,
+   "kasse": 26,
+   "deckung": 0.1925925925925926
+  },
+  {
+   "n": 85,
+   "jahr": 1603,
+   "woche": 6,
+   "kasse": 18,
+   "deckung": 0.13333333333333333
+  },
+  {
+   "n": 86,
+   "jahr": 1603,
+   "woche": 7,
+   "kasse": 16,
+   "deckung": 0.11940298507462686
+  },
+  {
+   "n": 87,
+   "jahr": 1603,
+   "woche": 8,
+   "kasse": 8,
+   "deckung": 0.05970149253731343
+  },
+  {
+   "n": 88,
+   "jahr": 1603,
+   "woche": 9,
+   "kasse": 6,
+   "deckung": 0.04477611940298507
+  },
+  {
+   "n": 89,
+   "jahr": 1603,
+   "woche": 10,
+   "kasse": 4,
+   "deckung": 0.029850746268656716
+  },
+  {
+   "n": 90,
+   "jahr": 1603,
+   "woche": 11,
+   "kasse": 0,
+   "deckung": 0
+  },
+  {
+   "n": 91,
+   "jahr": 1603,
+   "woche": 12,
+   "kasse": 0,
+   "deckung": 0
+  },
+  {
+   "n": 92,
+   "jahr": 1603,
+   "woche": 13,
+   "kasse": 0,
+   "deckung": 0
+  },
+  {
+   "n": 93,
+   "jahr": 1603,
+   "woche": 14,
+   "kasse": 0,
+   "deckung": 0
+  },
+  {
+   "n": 94,
+   "jahr": 1603,
+   "woche": 15,
+   "kasse": 0,
+   "deckung": 0
+  },
+  {
+   "n": 95,
+   "jahr": 1603,
+   "woche": 16,
+   "kasse": 0,
+   "deckung": 0
+  },
+  {
+   "n": 96,
+   "jahr": 1603,
+   "woche": 17,
+   "kasse": 0,
+   "deckung": 0
+  },
+  {
+   "n": 97,
+   "jahr": 1603,
+   "woche": 18,
+   "kasse": 0,
+   "deckung": 0
+  },
+  {
+   "n": 98,
+   "jahr": 1603,
+   "woche": 19,
+   "kasse": 0,
+   "deckung": 0
+  },
+  {
+   "n": 99,
+   "jahr": 1603,
+   "woche": 20,
+   "kasse": 0,
+   "deckung": 0
+  },
+  {
+   "n": 100,
+   "jahr": 1603,
+   "woche": 21,
+   "kasse": 0,
+   "deckung": 0
+  },
+  {
+   "n": 101,
+   "jahr": 1603,
+   "woche": 22,
+   "kasse": 0,
+   "deckung": 0
+  },
+  {
+   "n": 102,
+   "jahr": 1603,
+   "woche": 23,
+   "kasse": 0,
+   "deckung": 0
+  },
+  {
+   "n": 103,
+   "jahr": 1603,
+   "woche": 24,
+   "kasse": 0,
+   "deckung": 0
+  },
+  {
+   "n": 104,
+   "jahr": 1603,
+   "woche": 25,
+   "kasse": 0,
+   "deckung": 0
+  },
+  {
+   "n": 105,
+   "jahr": 1603,
+   "woche": 26,
+   "kasse": 0,
+   "deckung": 0
+  },
+  {
+   "n": 106,
+   "jahr": 1603,
+   "woche": 27,
+   "kasse": 0,
+   "deckung": 0
+  },
+  {
+   "n": 107,
+   "jahr": 1603,
+   "woche": 28,
+   "kasse": 0,
+   "deckung": 0
+  },
+  {
+   "n": 108,
+   "jahr": 1603,
+   "woche": 29,
+   "kasse": 0,
+   "deckung": 0
+  },
+  {
+   "n": 109,
+   "jahr": 1603,
+   "woche": 30,
+   "kasse": 0,
+   "deckung": 0
+  },
+  {
+   "n": 110,
+   "jahr": 1604,
+   "woche": 1,
+   "kasse": 280,
+   "deckung": 1.9047619047619047
+  },
+  {
+   "n": 111,
+   "jahr": 1604,
+   "woche": 2,
+   "kasse": 220,
+   "deckung": 1.4965986394557824
+  },
+  {
+   "n": 112,
+   "jahr": 1604,
+   "woche": 3,
+   "kasse": 220,
+   "deckung": 1.4965986394557824
+  },
+  {
+   "n": 113,
+   "jahr": 1604,
+   "woche": 4,
+   "kasse": 222,
+   "deckung": 1.510204081632653
+  },
+  {
+   "n": 114,
+   "jahr": 1604,
+   "woche": 5,
+   "kasse": 219,
+   "deckung": 1.489795918367347
+  },
+  {
+   "n": 115,
+   "jahr": 1604,
+   "woche": 6,
+   "kasse": 220,
+   "deckung": 1.4965986394557824
+  },
+  {
+   "n": 116,
+   "jahr": 1604,
+   "woche": 7,
+   "kasse": 215,
+   "deckung": 1.6538461538461537
+  },
+  {
+   "n": 117,
+   "jahr": 1604,
+   "woche": 8,
+   "kasse": 216,
+   "deckung": 1.6615384615384616
+  },
+  {
+   "n": 118,
+   "jahr": 1604,
+   "woche": 9,
+   "kasse": 214,
+   "deckung": 1.4557823129251701
+  },
+  {
+   "n": 119,
+   "jahr": 1604,
+   "woche": 10,
+   "kasse": 216,
+   "deckung": 1.469387755102041
+  },
+  {
+   "n": 120,
+   "jahr": 1604,
+   "woche": 11,
+   "kasse": 213,
+   "deckung": 1.4489795918367347
+  },
+  {
+   "n": 121,
+   "jahr": 1604,
+   "woche": 12,
+   "kasse": 214,
+   "deckung": 1.4557823129251701
+  },
+  {
+   "n": 122,
+   "jahr": 1604,
+   "woche": 13,
+   "kasse": 214,
+   "deckung": 1.4557823129251701
+  },
+  {
+   "n": 123,
+   "jahr": 1604,
+   "woche": 14,
+   "kasse": 210,
+   "deckung": 1.4285714285714286
+  },
+  {
+   "n": 124,
+   "jahr": 1604,
+   "woche": 15,
+   "kasse": 206,
+   "deckung": 1.401360544217687
+  },
+  {
+   "n": 125,
+   "jahr": 1604,
+   "woche": 16,
+   "kasse": 204,
+   "deckung": 2.4285714285714284
+  },
+  {
+   "n": 126,
+   "jahr": 1604,
+   "woche": 17,
+   "kasse": 206,
+   "deckung": 2.4523809523809526
+  },
+  {
+   "n": 127,
+   "jahr": 1604,
+   "woche": 18,
+   "kasse": 207,
+   "deckung": 1.5333333333333334
+  },
+  {
+   "n": 128,
+   "jahr": 1604,
+   "woche": 19,
+   "kasse": 204,
+   "deckung": 1.511111111111111
+  },
+  {
+   "n": 129,
+   "jahr": 1604,
+   "woche": 20,
+   "kasse": 200,
+   "deckung": 1.4814814814814814
+  },
+  {
+   "n": 130,
+   "jahr": 1604,
+   "woche": 21,
+   "kasse": 197,
+   "deckung": 1.4592592592592593
+  },
+  {
+   "n": 131,
+   "jahr": 1604,
+   "woche": 22,
+   "kasse": 193,
+   "deckung": 1.4296296296296296
+  },
+  {
+   "n": 132,
+   "jahr": 1604,
+   "woche": 23,
+   "kasse": 191,
+   "deckung": 1.4148148148148147
+  },
+  {
+   "n": 133,
+   "jahr": 1604,
+   "woche": 24,
+   "kasse": 193,
+   "deckung": 1.4296296296296296
+  },
+  {
+   "n": 134,
+   "jahr": 1604,
+   "woche": 25,
+   "kasse": 194,
+   "deckung": 1.4370370370370371
+  },
+  {
+   "n": 135,
+   "jahr": 1604,
+   "woche": 26,
+   "kasse": 191,
+   "deckung": 1.4148148148148147
+  },
+  {
+   "n": 136,
+   "jahr": 1604,
+   "woche": 27,
+   "kasse": 192,
+   "deckung": 2.2588235294117647
+  },
+  {
+   "n": 137,
+   "jahr": 1604,
+   "woche": 28,
+   "kasse": 189,
+   "deckung": 2.223529411764706
+  },
+  {
+   "n": 138,
+   "jahr": 1604,
+   "woche": 29,
+   "kasse": 191,
+   "deckung": 2.2470588235294118
+  },
+  {
+   "n": 139,
+   "jahr": 1604,
+   "woche": 30,
+   "kasse": 189,
+   "deckung": 2.223529411764706
+  },
+  {
+   "n": 140,
+   "jahr": 1605,
+   "woche": 1,
+   "kasse": 280,
+   "deckung": 3.2941176470588234
+  },
+  {
+   "n": 141,
+   "jahr": 1605,
+   "woche": 2,
+   "kasse": 135,
+   "deckung": 1
+  },
+  {
+   "n": 142,
+   "jahr": 1605,
+   "woche": 3,
+   "kasse": 133,
+   "deckung": 0.9851851851851852
+  },
+  {
+   "n": 143,
+   "jahr": 1605,
+   "woche": 4,
+   "kasse": 126,
+   "deckung": 0.9333333333333333
+  },
+  {
+   "n": 144,
+   "jahr": 1605,
+   "woche": 5,
+   "kasse": 128,
+   "deckung": 0.9481481481481482
+  },
+  {
+   "n": 145,
+   "jahr": 1605,
+   "woche": 6,
+   "kasse": 120,
+   "deckung": 0.8888888888888888
+  },
+  {
+   "n": 146,
+   "jahr": 1605,
+   "woche": 7,
+   "kasse": 117,
+   "deckung": 0.8666666666666667
+  },
+  {
+   "n": 147,
+   "jahr": 1605,
+   "woche": 8,
+   "kasse": 109,
+   "deckung": 0.8074074074074075
+  },
+  {
+   "n": 148,
+   "jahr": 1605,
+   "woche": 9,
+   "kasse": 107,
+   "deckung": 0.7925925925925926
+  },
+  {
+   "n": 149,
+   "jahr": 1605,
+   "woche": 10,
+   "kasse": 105,
+   "deckung": 0.7777777777777778
+  },
+  {
+   "n": 150,
+   "jahr": 1605,
+   "woche": 11,
+   "kasse": 107,
+   "deckung": 0.7925925925925926
+  },
+  {
+   "n": 151,
+   "jahr": 1605,
+   "woche": 12,
+   "kasse": 100,
+   "deckung": 0.7407407407407407
+  },
+  {
+   "n": 152,
+   "jahr": 1605,
+   "woche": 13,
+   "kasse": 91,
+   "deckung": 0.674074074074074
+  },
+  {
+   "n": 153,
+   "jahr": 1605,
+   "woche": 14,
+   "kasse": 89,
+   "deckung": 0.6592592592592592
+  },
+  {
+   "n": 154,
+   "jahr": 1605,
+   "woche": 15,
+   "kasse": 86,
+   "deckung": 0.6370370370370371
+  },
+  {
+   "n": 155,
+   "jahr": 1605,
+   "woche": 16,
+   "kasse": 84,
+   "deckung": 0.6222222222222222
+  }
+ ]
+}

@@ -1,0 +1,29 @@
+{
+ "epoche": 4,
+ "festlegeKey": "keine",
+ "braujahre": 6,
+ "lauf": "e4-nutzen3-ohne",
+ "vor": {
+  "jahr": 1970,
+  "woche": 1,
+  "kasse": 86000,
+  "ende": false,
+  "endgrund": null
+ },
+ "festlegungOk": null,
+ "sprung": {
+  "runden": 100,
+  "sprungKlicks": 0,
+  "weiterKlicks": 99,
+  "tafelZuKlicks": 0
+ },
+ "nach": {
+  "jahr": 1973,
+  "woche": 9,
+  "kasse": 61776,
+  "ende": true,
+  "endgrund": "brauereisterben"
+ },
+ "kasseDelta": -24224,
+ "fehler": []
+}

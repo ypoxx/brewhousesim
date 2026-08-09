@@ -1,0 +1,547 @@
+{"t":2.5,"was":"laden","url":"http://127.0.0.1:8936/spiel/?epoche=3&saat=1350&neu=1","fenster":"1600x900"}
+{"t":4.2,"was":"klick-nav","zug":"gegner:oeffnen:adler","text":"Brauerei Adler","jahr":1884,"woche":1,"kasse":14250,"ende":false,"endgrund":null}
+{"t":4.8,"was":"klick-nav","zug":"gegner:hinhalten:brueckenwirt","text":"Freibier3,0 hl statt Geld","jahr":1884,"woche":1,"kasse":14250,"ende":false,"endgrund":null}
+{"t":5.4,"was":"klick-nav","zug":"sud:zettel-anstich","text":"Hefe abernten · +8 · ohne Fass","jahr":1884,"woche":1,"kasse":14250,"ende":false,"endgrund":null}
+{"t":6.1,"was":"klick-nav","zug":"sud:zettel-wechsel-frei","text":"Ohne Kühlung durchgären lassennur Schankbier","jahr":1884,"woche":1,"kasse":14250,"ende":false,"endgrund":null}
+{"t":6.7,"was":"klick-nav","zug":"stadt:marke:fuhre-muehle","text":"MUE","jahr":1884,"woche":1,"kasse":14250,"ende":false,"endgrund":null}
+{"t":7.2,"was":"klick-nav","zug":"stadt:marke:fuhre-bruecke-unten","text":"BRU","jahr":1884,"woche":1,"kasse":14250,"ende":false,"endgrund":null}
+{"t":7.7,"was":"klick-nav","zug":"stadt:marke:fuhre-bahnhof","text":"BHF","jahr":1884,"woche":1,"kasse":14250,"ende":false,"endgrund":null}
+{"t":8.3,"was":"klick-nav","zug":"kern:chronik","text":"Chronik4","jahr":1884,"woche":1,"kasse":14250,"ende":false,"endgrund":null}
+{"t":8.7,"was":"klick-nav","zug":"kern:protokoll","text":"Buch1","jahr":1884,"woche":1,"kasse":14250,"ende":false,"endgrund":null}
+{"t":9.5,"was":"klick-nav","zug":"kern:anfangen","text":"Anfangen","jahr":1884,"woche":1,"kasse":14250,"ende":false,"endgrund":null}
+{"t":10,"was":"klick-nav","zug":"klang:ton","text":"♪","jahr":1884,"woche":1,"kasse":14250,"ende":false,"endgrund":null}
+{"t":10.6,"was":"klick-nav","zug":"stadt:bauhof","text":"BAUHOF5 offen · ab 1.406 M · 5 bezahlbar","jahr":1884,"woche":1,"kasse":14250,"ende":false,"endgrund":null}
+{"t":11.3,"was":"klick-nav","zug":"stadt:reiter:gegner-amort-gg-band","text":"Ohne dich geschehen · 1 Zugzugeklappt","jahr":1884,"woche":1,"kasse":14250,"ende":false,"endgrund":null}
+{"t":11.9,"was":"klick-nav","zug":"stadt:reiter:fuhre-fu-brett-fu-haeuser","text":"DIE HÄUSERwollen 146 · im Keller liegen 11 hl","jahr":1884,"woche":1,"kasse":14250,"ende":false,"endgrund":null}
+{"t":12.5,"was":"klick-nav","zug":"stadt:reiter:fuhre-fu-brett-fu-schiefer-fu-tafel","text":"SUDPLANam schwarzen Brett der Mälzerei","jahr":1884,"woche":1,"kasse":14250,"ende":false,"endgrund":null}
+{"t":12.9,"was":"klick-nav","zug":"stadt:reiter:fuhre-fu-brett-fu-keller","text":"DER EISKELLER11 von 135 hl · 11 reif","jahr":1884,"woche":1,"kasse":14250,"ende":false,"endgrund":null}
+{"t":13.4,"was":"klick-nav","zug":"stadt:reiter:fuhre-fu-brett-fu-wagen","text":"HALBER WAGEN0,0 von 60 hl · 0 von 10 Halten","jahr":1884,"woche":1,"kasse":14250,"ende":false,"endgrund":null}
+{"t":13.8,"was":"klick-nav","zug":"stadt:reiter:sud-sud-brett","text":"DAS SUDHAUSzugeklappt","jahr":1884,"woche":1,"kasse":14250,"ende":false,"endgrund":null}
+{"t":14.2,"was":"klick-nav","zug":"stadt:reiter:name-nm-band","text":"DER RUF DES HAUSESEtikett, Plakat, Litfaßsäule","jahr":1884,"woche":1,"kasse":14250,"ende":false,"endgrund":null}
+{"t":14.6,"was":"klick-nav","zug":"stadt:ortsmarken","text":"Ortsmarken6 auf dem Pflock","jahr":1884,"woche":1,"kasse":14250,"ende":false,"endgrund":null}
+{"t":15.4,"was":"klick-nav","zug":"preis:tafel","text":"Michaelitafel 1884 · 5 Angebote — heute ist Michaeli","jahr":1884,"woche":1,"kasse":14250,"ende":false,"endgrund":null}
+{"t":16,"was":"klick-nav","zug":"gegner:hinhalten:muehlwirt","text":"Freibier3,0 hl statt Geld","jahr":1884,"woche":1,"kasse":14250,"ende":false,"endgrund":null}
+{"t":16.6,"was":"klick-nav","zug":"stadt:reiter:preis-pr-stil-kontor-pr-tafel","text":"MICHAELI 1884Jetzt entscheidet die Menge, nicht der Rat.","jahr":1884,"woche":1,"kasse":14250,"ende":false,"endgrund":null}
+{"t":17.3,"was":"klick-nav","zug":"stadt:alles-zuklappen","text":"Stadt zeigen","jahr":1884,"woche":1,"kasse":14250,"ende":false,"endgrund":null}
+{"t":17.8,"was":"klick-nav","zug":"kern:blatt-zu","text":"Schließen","jahr":1884,"woche":1,"kasse":14250,"ende":false,"endgrund":null}
+{"t":18.4,"was":"klick-preis","zug":"gegner:beschwerde-bild","text":"Dem Wirt die Restschuld nachrechnenkostet kein Geld · vier Ansehengegen Brückenwirt","preis":0,"kasseVor":14250,"kasseNach":14250,"jahr":1884,"woche":1,"ende":false,"endgrund":null}
+{"t":19,"was":"klick-preis","zug":"fuhre:plan:rechnung","text":"Fahren: nach Rechnung · 4,5 hl−67 M","preis":-67,"kasseVor":14250,"kasseNach":13664,"jahr":1884,"woche":2,"ende":false,"endgrund":null}
+{"t":19.5,"was":"klick-preis","zug":"fuhre:plan:durst","text":"Fahren: nach Durst · 24 hl+147 M","preis":147,"kasseVor":13664,"kasseNach":13207,"jahr":1884,"woche":3,"ende":false,"endgrund":null}
+{"t":20.1,"was":"runde-ende","runde":1,"jahr":1884,"woche":4,"kasse":12735,"deckung":7.464830011723329,"besterPreis":1706,"ende":false,"endgrund":null,"echteWochenGesamt":4}
+{"t":20.7,"was":"klick-nav","zug":"gegner:hinhalten:ochse","text":"Freibier3,0 hl statt Geld","jahr":1884,"woche":4,"kasse":12735,"ende":false,"endgrund":null}
+{"t":21.2,"was":"klick-nav","zug":"sud:zettel-wechsel-frei","text":"Natureis aus dem Flusslässt Exportbier zu","jahr":1884,"woche":4,"kasse":12735,"ende":false,"endgrund":null}
+{"t":21.7,"was":"klick-nav","zug":"stadt:marke:gegner-bruecke-unten","text":"frei geworden","jahr":1884,"woche":4,"kasse":12735,"ende":false,"endgrund":null}
+{"t":22.5,"was":"klick-nav","zug":"fuhre:sprung","text":"Weiter wie zuletzt · bis zu 6 Wochen","jahr":1884,"woche":10,"kasse":13695,"ende":false,"endgrund":null}
+{"t":23,"was":"klick-nav","zug":"kern:chronik","text":"Chronik9","jahr":1884,"woche":10,"kasse":13695,"ende":false,"endgrund":null}
+{"t":23.5,"was":"klick-nav","zug":"kern:protokoll","text":"Buch46","jahr":1884,"woche":10,"kasse":13695,"ende":false,"endgrund":null}
+{"t":23.9,"was":"klick-nav","zug":"klang:ton","text":"—","jahr":1884,"woche":10,"kasse":13695,"ende":false,"endgrund":null}
+{"t":24.6,"was":"klick-nav","zug":"stadt:reiter:gegner-amort-gg-band","text":"Ohne dich geschehen · 4 Zügezugeklappt","jahr":1884,"woche":10,"kasse":13695,"ende":false,"endgrund":null}
+{"t":25.1,"was":"klick-nav","zug":"stadt:reiter:fuhre-fu-brett-fu-haeuser","text":"DIE HÄUSERwollen 213 · im Keller liegen 72 hl","jahr":1884,"woche":10,"kasse":13695,"ende":false,"endgrund":null}
+{"t":25.8,"was":"klick-nav","zug":"stadt:reiter:fuhre-fu-brett-fu-keller","text":"DER EISKELLER108 von 135 hl · 72 reif","jahr":1884,"woche":10,"kasse":13695,"ende":false,"endgrund":null}
+{"t":26.3,"was":"klick-nav","zug":"stadt:ortsmarken","text":"Ortsmarken7 im Bild","jahr":1884,"woche":10,"kasse":13695,"ende":false,"endgrund":null}
+{"t":27.3,"was":"klick-nav","zug":"preis:tafel","text":"Michaelitafel 1884 · 5 Angebote","jahr":1884,"woche":10,"kasse":13695,"ende":false,"endgrund":null}
+{"t":28.2,"was":"klick-nav","zug":"sud:zettel-anstich","text":"Junges Fass · +14 · 1,5 hl","jahr":1884,"woche":10,"kasse":13695,"ende":false,"endgrund":null}
+{"t":29,"was":"klick-preis","zug":"sud:zettel-wechsel-kauf","text":"Reinzuchthefe nach Hansen−3.400 Mlässt Exportbier zu","preis":-3400,"kasseVor":13695,"kasseNach":10295,"jahr":1884,"woche":10,"ende":false,"endgrund":null}
+{"t":29.7,"was":"klick-preis","zug":"gegner:abloesen:muehlwirt","text":"MUE · DEPablösen 5.193 M","preis":-5193,"kasseVor":10295,"kasseNach":5102,"jahr":1884,"woche":10,"ende":false,"endgrund":null}
+{"t":30.5,"was":"runde-ende","runde":2,"jahr":1884,"woche":11,"kasse":5078,"deckung":3.2509603072983353,"besterPreis":1562,"ende":false,"endgrund":null,"echteWochenGesamt":6}
+{"t":31.3,"was":"klick-nav","zug":"gegner:blatt","text":"Das Haus gegenüber","jahr":1884,"woche":11,"kasse":5078,"ende":false,"endgrund":null}
+{"t":32,"was":"klick-nav","zug":"gegner:zeige:11","text":"zeigen","jahr":1884,"woche":11,"kasse":5078,"ende":false,"endgrund":null}
+{"t":32.6,"was":"klick-nav","zug":"sud:zettel-wechsel-frei","text":"Ohne Kühlung durchgären lassennur Schankbier","jahr":1884,"woche":11,"kasse":5078,"ende":false,"endgrund":null}
+{"t":33.4,"was":"klick-nav","zug":"stadt:marke:gegner-muehle","text":"zurückgeholt — unser H","jahr":1884,"woche":11,"kasse":5078,"ende":false,"endgrund":null}
+{"t":34,"was":"klick-nav","zug":"kern:chronik","text":"Chronik15","jahr":1884,"woche":11,"kasse":5078,"ende":false,"endgrund":null}
+{"t":34.4,"was":"klick-nav","zug":"kern:protokoll","text":"Buch172","jahr":1884,"woche":11,"kasse":5078,"ende":false,"endgrund":null}
+{"t":34.9,"was":"klick-nav","zug":"klang:ton","text":"♪","jahr":1884,"woche":11,"kasse":5078,"ende":false,"endgrund":null}
+{"t":35.5,"was":"klick-nav","zug":"stadt:reiter:gegner-amort-gg-band","text":"Ohne dich geschehen · 11 Zügeliegt auf","jahr":1884,"woche":11,"kasse":5078,"ende":false,"endgrund":null}
+{"t":36.1,"was":"klick-nav","zug":"stadt:reiter:fuhre-fu-brett-fu-haeuser","text":"DIE HÄUSERwollen 200 · im Keller liegen 32 hl","jahr":1884,"woche":11,"kasse":5078,"ende":false,"endgrund":null}
+{"t":36.7,"was":"klick-nav","zug":"stadt:reiter:fuhre-fu-brett-fu-keller","text":"DER EISKELLER32 von 135 hl · 32 reif","jahr":1884,"woche":11,"kasse":5078,"ende":false,"endgrund":null}
+{"t":37.2,"was":"klick-nav","zug":"stadt:ortsmarken","text":"Ortsmarken7 auf dem Pflock","jahr":1884,"woche":11,"kasse":5078,"ende":false,"endgrund":null}
+{"t":37.8,"was":"klick-preis","zug":"fuhre:plan:umkaempft","text":"Fahren: wo der Adler wirbt · 32 hl+1.251 M","preis":1251,"kasseVor":5078,"kasseNach":5645,"jahr":1884,"woche":12,"ende":false,"endgrund":null}
+{"t":38.4,"was":"klick-preis","zug":"fuhre:plan:umkaempft","text":"Fahren: wo der Adler wirbt · 24 hl+142 M","preis":142,"kasseVor":5645,"kasseNach":5590,"jahr":1884,"woche":13,"ende":false,"endgrund":null}
+{"t":39,"was":"klick-preis","zug":"fuhre:plan:umkaempft","text":"Fahren: wo der Adler wirbt · 24 hl+144 M","preis":144,"kasseVor":5590,"kasseNach":5570,"jahr":1884,"woche":14,"ende":false,"endgrund":null}
+{"t":39.5,"was":"runde-ende","runde":3,"jahr":1884,"woche":15,"kasse":5546,"deckung":3.2508792497069168,"besterPreis":1706,"ende":false,"endgrund":null,"echteWochenGesamt":10}
+{"t":40.1,"was":"klick-nav","zug":"sud:zettel-wechsel-frei","text":"Natureis aus dem Flusslässt Exportbier zu","jahr":1884,"woche":15,"kasse":5546,"ende":false,"endgrund":null}
+{"t":40.5,"was":"klick-nav","zug":"kern:chronik","text":"Chronik18","jahr":1884,"woche":15,"kasse":5546,"ende":false,"endgrund":null}
+{"t":40.9,"was":"klick-nav","zug":"kern:protokoll","text":"Buch250","jahr":1884,"woche":15,"kasse":5546,"ende":false,"endgrund":null}
+{"t":41.4,"was":"klick-nav","zug":"klang:ton","text":"—","jahr":1884,"woche":15,"kasse":5546,"ende":false,"endgrund":null}
+{"t":42,"was":"klick-nav","zug":"stadt:reiter:gegner-amort-gg-band","text":"Ohne dich geschehen · 15 Zügezugeklappt","jahr":1884,"woche":15,"kasse":5546,"ende":false,"endgrund":null}
+{"t":42.6,"was":"klick-nav","zug":"stadt:reiter:fuhre-fu-brett-fu-haeuser","text":"DIE HÄUSERwollen 203 · im Keller liegen 24 hl","jahr":1884,"woche":15,"kasse":5546,"ende":false,"endgrund":null}
+{"t":43.2,"was":"klick-nav","zug":"stadt:reiter:fuhre-fu-brett-fu-keller","text":"DER EISKELLER24 von 135 hl · 24 reif","jahr":1884,"woche":15,"kasse":5546,"ende":false,"endgrund":null}
+{"t":43.7,"was":"klick-nav","zug":"stadt:ortsmarken","text":"Ortsmarken6 im Bild","jahr":1884,"woche":15,"kasse":5546,"ende":false,"endgrund":null}
+{"t":44.3,"was":"klick-nav","zug":"gegner:zeige:15","text":"zeigen","jahr":1884,"woche":15,"kasse":5546,"ende":false,"endgrund":null}
+{"t":44.9,"was":"klick-nav","zug":"gegner:zeige:14","text":"zeigen","jahr":1884,"woche":15,"kasse":5546,"ende":false,"endgrund":null}
+{"t":45.6,"was":"klick-preis","zug":"fuhre:plan:durst","text":"Fahren: nach Durst · 24 hl+147 M","preis":147,"kasseVor":5546,"kasseNach":5524,"jahr":1884,"woche":16,"ende":false,"endgrund":null}
+{"t":46.2,"was":"klick-preis","zug":"gegner:zukaufen:lindenhof","text":"lieber zukaufen3,0 hl · 192 M","preis":-192,"kasseVor":5524,"kasseNach":5332,"jahr":1884,"woche":16,"ende":false,"endgrund":null}
+{"t":46.8,"was":"klick-preis","zug":"erbe:uebergabe:leibgeding","text":"Leibrente−1.606 M","preis":-1606,"kasseVor":5332,"kasseNach":5332,"jahr":1884,"woche":16,"ende":false,"endgrund":null}
+{"t":47.4,"was":"runde-ende","runde":4,"jahr":1884,"woche":17,"kasse":5308,"deckung":3.11137162954279,"besterPreis":1706,"ende":false,"endgrund":null,"echteWochenGesamt":12}
+{"t":48,"was":"klick-nav","zug":"gegner:zeige:16","text":"zeigen","jahr":1884,"woche":17,"kasse":5308,"ende":false,"endgrund":null}
+{"t":48.6,"was":"klick-nav","zug":"sud:zettel-anstich","text":"Hefe abernten · +8 · ohne Fass","jahr":1884,"woche":17,"kasse":5308,"ende":false,"endgrund":null}
+{"t":49.2,"was":"klick-nav","zug":"sud:zettel-wechsel-frei","text":"Ohne Kühlung durchgären lassennur Schankbier","jahr":1884,"woche":17,"kasse":5308,"ende":false,"endgrund":null}
+{"t":49.7,"was":"klick-nav","zug":"kern:chronik","text":"Chronik22","jahr":1884,"woche":17,"kasse":5308,"ende":false,"endgrund":null}
+{"t":50.1,"was":"klick-nav","zug":"kern:protokoll","text":"Buch275","jahr":1884,"woche":17,"kasse":5308,"ende":false,"endgrund":null}
+{"t":50.6,"was":"klick-nav","zug":"klang:ton","text":"♪","jahr":1884,"woche":17,"kasse":5308,"ende":false,"endgrund":null}
+{"t":51.3,"was":"klick-nav","zug":"stadt:reiter:gegner-amort-gg-band","text":"Ohne dich geschehen · 16 Zügeliegt auf","jahr":1884,"woche":17,"kasse":5308,"ende":false,"endgrund":null}
+{"t":51.8,"was":"klick-nav","zug":"stadt:reiter:fuhre-fu-brett-fu-haeuser","text":"DIE HÄUSERwollen 210 · im Keller liegen 0,0 hl","jahr":1884,"woche":17,"kasse":5308,"ende":false,"endgrund":null}
+{"t":52.4,"was":"klick-nav","zug":"stadt:reiter:fuhre-fu-brett-fu-keller","text":"DER EISKELLER0,0 von 135 hl · 0,0 reif","jahr":1884,"woche":17,"kasse":5308,"ende":false,"endgrund":null}
+{"t":52.9,"was":"klick-nav","zug":"stadt:ortsmarken","text":"Ortsmarken6 auf dem Pflock","jahr":1884,"woche":17,"kasse":5308,"ende":false,"endgrund":null}
+{"t":53.6,"was":"klick-nav","zug":"preis:chronik-auf","text":"Chronik des Hauses · 1 Festlegung · 0 von dieser Tafel · 0 Bauten stehen","jahr":1884,"woche":17,"kasse":5308,"ende":false,"endgrund":null}
+{"t":54.2,"was":"klick-nav","zug":"preis:tafel","text":"Michaelitafel schließen","jahr":1884,"woche":17,"kasse":5308,"ende":false,"endgrund":null}
+{"t":54.8,"was":"klick-preis","zug":"gegner:zukaufen:markt","text":"lieber zukaufen3,0 hl · 192 M","preis":-192,"kasseVor":5308,"kasseNach":5116,"jahr":1884,"woche":17,"ende":false,"endgrund":null}
+{"t":55.3,"was":"klick-preis","zug":"erbe:uebergabe:leibgeding","text":"Leibrente−1.605 M","preis":-1605,"kasseVor":5116,"kasseNach":5116,"jahr":1884,"woche":17,"ende":false,"endgrund":null}
+{"t":55.8,"was":"klick-preis","zug":"erbe:uebergabe:leibgeding","text":"Leibrente−1.605 M","preis":-1605,"kasseVor":5116,"kasseNach":5116,"jahr":1884,"woche":17,"ende":false,"endgrund":null}
+{"t":56.4,"was":"runde-ende","runde":5,"jahr":1884,"woche":18,"kasse":5092,"deckung":2.984759671746776,"besterPreis":1706,"ende":false,"endgrund":null,"echteWochenGesamt":13}
+{"t":57,"was":"klick-nav","zug":"sud:zettel-anstich","text":"Junges Fass · +14 · 1,5 hl","jahr":1884,"woche":18,"kasse":5092,"ende":false,"endgrund":null}
+{"t":57.5,"was":"klick-nav","zug":"sud:zettel-wechsel-frei","text":"Natureis aus dem Flusslässt Exportbier zu","jahr":1884,"woche":18,"kasse":5092,"ende":false,"endgrund":null}
+{"t":57.9,"was":"klick-nav","zug":"kern:chronik","text":"Chronik30","jahr":1884,"woche":18,"kasse":5092,"ende":false,"endgrund":null}
+{"t":58.4,"was":"klick-nav","zug":"kern:protokoll","text":"Buch284","jahr":1884,"woche":18,"kasse":5092,"ende":false,"endgrund":null}
+{"t":58.8,"was":"klick-nav","zug":"klang:ton","text":"—","jahr":1884,"woche":18,"kasse":5092,"ende":false,"endgrund":null}
+{"t":59.4,"was":"klick-nav","zug":"stadt:reiter:gegner-amort-gg-band","text":"Ohne dich geschehen · 17 Zügezugeklappt","jahr":1884,"woche":18,"kasse":5092,"ende":false,"endgrund":null}
+{"t":60,"was":"klick-nav","zug":"stadt:reiter:fuhre-fu-brett-fu-haeuser","text":"DIE HÄUSERwollen 225 · im Keller liegen 48 hl","jahr":1884,"woche":18,"kasse":5092,"ende":false,"endgrund":null}
+{"t":60.6,"was":"klick-nav","zug":"stadt:reiter:fuhre-fu-brett-fu-keller","text":"DER EISKELLER48 von 135 hl · 48 reif","jahr":1884,"woche":18,"kasse":5092,"ende":false,"endgrund":null}
+{"t":61,"was":"klick-nav","zug":"stadt:ortsmarken","text":"Ortsmarken6 im Bild","jahr":1884,"woche":18,"kasse":5092,"ende":false,"endgrund":null}
+{"t":61.9,"was":"klick-nav","zug":"preis:tafel","text":"Michaelitafel 1884 · 5 Angebote","jahr":1884,"woche":18,"kasse":5092,"ende":false,"endgrund":null}
+{"t":62.7,"was":"klick-nav","zug":"preis:chronik","text":"Chronik des Hauses · 3 Festlegungen · 0 von dieser Tafel","jahr":1884,"woche":18,"kasse":5092,"ende":false,"endgrund":null}
+{"t":63.4,"was":"runde-ende","runde":6,"jahr":1884,"woche":19,"kasse":5068,"deckung":2.148367952522255,"besterPreis":2359,"ende":false,"endgrund":null,"echteWochenGesamt":14}
+{"t":64,"was":"klick-nav","zug":"gegner:zeige:18","text":"zeigen","jahr":1884,"woche":19,"kasse":5068,"ende":false,"endgrund":null}
+{"t":64.6,"was":"klick-nav","zug":"gegner:zeige:17","text":"zeigen","jahr":1884,"woche":19,"kasse":5068,"ende":false,"endgrund":null}
+{"t":65.2,"was":"klick-nav","zug":"sud:zettel-wechsel-frei","text":"Ohne Kühlung durchgären lassennur Schankbier","jahr":1884,"woche":19,"kasse":5068,"ende":false,"endgrund":null}
+{"t":65.6,"was":"klick-nav","zug":"kern:protokoll","text":"Buch287","jahr":1884,"woche":19,"kasse":5068,"ende":false,"endgrund":null}
+{"t":66.1,"was":"klick-nav","zug":"klang:ton","text":"♪","jahr":1884,"woche":19,"kasse":5068,"ende":false,"endgrund":null}
+{"t":66.7,"was":"klick-nav","zug":"stadt:reiter:gegner-amort-gg-band","text":"Ohne dich geschehen · 18 Zügeliegt auf","jahr":1884,"woche":19,"kasse":5068,"ende":false,"endgrund":null}
+{"t":67.2,"was":"klick-nav","zug":"stadt:reiter:fuhre-fu-brett-fu-haeuser","text":"DIE HÄUSERwollen 243 · im Keller liegen 47 hl","jahr":1884,"woche":19,"kasse":5068,"ende":false,"endgrund":null}
+{"t":67.8,"was":"klick-nav","zug":"stadt:reiter:fuhre-fu-brett-fu-keller","text":"DER EISKELLER47 von 135 hl · 47 reif","jahr":1884,"woche":19,"kasse":5068,"ende":false,"endgrund":null}
+{"t":68.2,"was":"klick-nav","zug":"stadt:ortsmarken","text":"Ortsmarken6 auf dem Pflock","jahr":1884,"woche":19,"kasse":5068,"ende":false,"endgrund":null}
+{"t":68.7,"was":"klick-nav","zug":"gegner:hinhalten:pfarrhof","text":"Freibier3,0 hl statt Geld","jahr":1884,"woche":19,"kasse":5068,"ende":false,"endgrund":null}
+{"t":69.2,"was":"klick-nav","zug":"gegner:hinhalten:hirsch","text":"Freibier3,0 hl statt Geld","jahr":1884,"woche":19,"kasse":5068,"ende":false,"endgrund":null}
+{"t":69.7,"was":"klick-nav","zug":"kern:chronik","text":"Chronik32","jahr":1884,"woche":19,"kasse":5068,"ende":false,"endgrund":null}
+{"t":70.3,"was":"klick-preis","zug":"fuhre:plan:rechnung","text":"Fahren: nach Rechnung · 41 hl+383 M","preis":383,"kasseVor":5068,"kasseNach":5190,"jahr":1884,"woche":20,"ende":false,"endgrund":null}
+{"t":70.8,"was":"klick-preis","zug":"fuhre:plan:rechnung","text":"Fahren: nach Rechnung · 24 hl+155 M","preis":155,"kasseVor":5190,"kasseNach":5179,"jahr":1884,"woche":21,"ende":false,"endgrund":null}
+{"t":71.4,"was":"klick-preis","zug":"fuhre:plan:rechnung","text":"Fahren: nach Rechnung · 24 hl+155 M","preis":155,"kasseVor":5179,"kasseNach":5169,"jahr":1884,"woche":22,"ende":false,"endgrund":null}
+{"t":71.9,"was":"runde-ende","runde":7,"jahr":1884,"woche":23,"kasse":5145,"deckung":2.1810089020771515,"besterPreis":2359,"ende":false,"endgrund":null,"echteWochenGesamt":18}
+{"t":72.5,"was":"klick-nav","zug":"sud:zettel-wechsel-frei","text":"Natureis aus dem Flusslässt Exportbier zu","jahr":1884,"woche":23,"kasse":5145,"ende":false,"endgrund":null}
+{"t":72.9,"was":"klick-nav","zug":"kern:chronik","text":"Chronik33","jahr":1884,"woche":23,"kasse":5145,"ende":false,"endgrund":null}
+{"t":73.3,"was":"klick-nav","zug":"kern:protokoll","text":"Buch365","jahr":1884,"woche":23,"kasse":5145,"ende":false,"endgrund":null}
+{"t":73.8,"was":"klick-nav","zug":"klang:ton","text":"—","jahr":1884,"woche":23,"kasse":5145,"ende":false,"endgrund":null}
+{"t":74.3,"was":"klick-nav","zug":"stadt:reiter:gegner-amort-gg-band","text":"Ohne dich geschehen · 20 Zügezugeklappt","jahr":1884,"woche":23,"kasse":5145,"ende":false,"endgrund":null}
+{"t":74.9,"was":"klick-nav","zug":"stadt:reiter:fuhre-fu-brett-fu-haeuser","text":"DIE HÄUSERwollen 224 · im Keller liegen 24 hl","jahr":1884,"woche":23,"kasse":5145,"ende":false,"endgrund":null}
+{"t":75.5,"was":"klick-nav","zug":"stadt:reiter:fuhre-fu-brett-fu-keller","text":"DER EISKELLER24 von 135 hl · 24 reif","jahr":1884,"woche":23,"kasse":5145,"ende":false,"endgrund":null}
+{"t":76,"was":"klick-nav","zug":"stadt:ortsmarken","text":"Ortsmarken6 im Bild","jahr":1884,"woche":23,"kasse":5145,"ende":false,"endgrund":null}
+{"t":76.5,"was":"klick-nav","zug":"gegner:zeige:20","text":"zeigen","jahr":1884,"woche":23,"kasse":5145,"ende":false,"endgrund":null}
+{"t":77.1,"was":"klick-nav","zug":"gegner:zeige:19","text":"zeigen","jahr":1884,"woche":23,"kasse":5145,"ende":false,"endgrund":null}
+{"t":77.7,"was":"klick-preis","zug":"fuhre:plan:rechnung","text":"Fahren: nach Rechnung · 24 hl+155 M","preis":155,"kasseVor":5145,"kasseNach":5135,"jahr":1884,"woche":24,"ende":false,"endgrund":null}
+{"t":78.3,"was":"klick-preis","zug":"erbe:uebergabe:leibgeding","text":"Leibrente−1.605 M","preis":-1605,"kasseVor":5135,"kasseNach":5135,"jahr":1884,"woche":24,"ende":false,"endgrund":null}
+{"t":78.9,"was":"klick-preis","zug":"erbe:uebergabe:leibgeding","text":"Leibrente−1.605 M","preis":-1605,"kasseVor":5135,"kasseNach":5135,"jahr":1884,"woche":24,"ende":false,"endgrund":null}
+{"t":79.5,"was":"runde-ende","runde":8,"jahr":1884,"woche":25,"kasse":5111,"deckung":2.1665960152607036,"besterPreis":2359,"ende":false,"endgrund":null,"echteWochenGesamt":20}
+{"t":80.1,"was":"klick-nav","zug":"gegner:zeige:21","text":"zeigen","jahr":1884,"woche":25,"kasse":5111,"ende":false,"endgrund":null}
+{"t":80.7,"was":"klick-nav","zug":"sud:zettel-anstich","text":"Hefe abernten · +8 · ohne Fass","jahr":1884,"woche":25,"kasse":5111,"ende":false,"endgrund":null}
+{"t":81.3,"was":"klick-nav","zug":"sud:zettel-wechsel-frei","text":"Ohne Kühlung durchgären lassennur Schankbier","jahr":1884,"woche":25,"kasse":5111,"ende":false,"endgrund":null}
+{"t":82,"was":"klick-nav","zug":"fuhre:sprung","text":"Weiter wie zuletzt · bis zu 5 Wochen","jahr":1884,"woche":30,"kasse":5035,"ende":false,"endgrund":null}
+{"t":82.5,"was":"klick-nav","zug":"kern:chronik","text":"Chronik40","jahr":1884,"woche":30,"kasse":5035,"ende":false,"endgrund":null}
+{"t":82.9,"was":"klick-nav","zug":"kern:protokoll","text":"Buch388","jahr":1884,"woche":30,"kasse":5035,"ende":false,"endgrund":null}
+{"t":83.4,"was":"klick-nav","zug":"klang:ton","text":"♪","jahr":1884,"woche":30,"kasse":5035,"ende":false,"endgrund":null}
+{"t":84,"was":"klick-nav","zug":"stadt:reiter:gegner-amort-gg-band","text":"Ohne dich geschehen · 21 Zügeliegt auf","jahr":1884,"woche":30,"kasse":5035,"ende":false,"endgrund":null}
+{"t":84.6,"was":"klick-nav","zug":"stadt:reiter:fuhre-fu-brett-fu-haeuser","text":"DIE HÄUSERwollen 227 · im Keller liegen 0,0 hl","jahr":1884,"woche":30,"kasse":5035,"ende":false,"endgrund":null}
+{"t":85.2,"was":"klick-nav","zug":"stadt:reiter:fuhre-fu-brett-fu-keller","text":"DER EISKELLER0,0 von 135 hl · 0,0 reif","jahr":1884,"woche":30,"kasse":5035,"ende":false,"endgrund":null}
+{"t":85.6,"was":"klick-nav","zug":"stadt:ortsmarken","text":"Ortsmarken6 auf dem Pflock","jahr":1884,"woche":30,"kasse":5035,"ende":false,"endgrund":null}
+{"t":86.4,"was":"klick-nav","zug":"preis:chronik-auf","text":"Chronik des Hauses · 5 Festlegungen · 0 von dieser Tafel · 0 Bauten stehen","jahr":1884,"woche":30,"kasse":5035,"ende":false,"endgrund":null}
+{"t":87.2,"was":"klick-nav","zug":"preis:tafel","text":"Michaelitafel schließen","jahr":1884,"woche":30,"kasse":5035,"ende":false,"endgrund":null}
+{"t":88.6,"was":"klick-preis","zug":"fuhre:plan:rechnung","text":"Fahren: nach Rechnung · 24 hl+155 M","preis":155,"kasseVor":5035,"kasseNach":455,"jahr":1885,"woche":1,"ende":false,"endgrund":null}
+{"t":89.7,"was":"runde-ende","runde":9,"jahr":1885,"woche":2,"kasse":431,"deckung":0.17267628205128205,"besterPreis":2496,"ende":false,"endgrund":null,"echteWochenGesamt":23}
+{"t":90.3,"was":"klick-nav","zug":"sud:kaelte:natureis","text":"Natureis aus dem Fluss","jahr":1885,"woche":2,"kasse":431,"ende":false,"endgrund":null}
+{"t":90.7,"was":"klick-nav","zug":"kern:chronik","text":"Chronik54","jahr":1885,"woche":2,"kasse":431,"ende":false,"endgrund":null}
+{"t":91.1,"was":"klick-nav","zug":"kern:protokoll","text":"Buch511","jahr":1885,"woche":2,"kasse":431,"ende":false,"endgrund":null}
+{"t":91.6,"was":"klick-nav","zug":"klang:ton","text":"—","jahr":1885,"woche":2,"kasse":431,"ende":false,"endgrund":null}
+{"t":92.3,"was":"klick-nav","zug":"stadt:bauhof","text":"BAUHOF5 offen · ab 1.406 M · keiner bezahlbar","jahr":1885,"woche":2,"kasse":431,"ende":false,"endgrund":null}
+{"t":93.1,"was":"klick-nav","zug":"stadt:reiter:gegner-amort-gg-band","text":"Ohne dich geschehen · 25 Zügezugeklappt","jahr":1885,"woche":2,"kasse":431,"ende":false,"endgrund":null}
+{"t":93.7,"was":"klick-nav","zug":"stadt:reiter:fuhre-fu-brett-fu-haeuser","text":"DIE HÄUSERwollen 218 · im Keller liegen 24 hl","jahr":1885,"woche":2,"kasse":431,"ende":false,"endgrund":null}
+{"t":94.3,"was":"klick-nav","zug":"stadt:reiter:fuhre-fu-brett-fu-keller","text":"DER EISKELLER24 von 135 hl · 24 reif","jahr":1885,"woche":2,"kasse":431,"ende":false,"endgrund":null}
+{"t":94.8,"was":"klick-nav","zug":"stadt:reiter:sud-sud-brett","text":"DAS SUDHAUSliegt auf","jahr":1885,"woche":2,"kasse":431,"ende":false,"endgrund":null}
+{"t":95.3,"was":"klick-nav","zug":"stadt:reiter:name-nm-band","text":"DER RUF DES HAUSESGENOMMEN von Das Amtsgericht bis 1887","jahr":1885,"woche":2,"kasse":431,"ende":false,"endgrund":null}
+{"t":95.7,"was":"klick-nav","zug":"stadt:ortsmarken","text":"Ortsmarken6 im Bild","jahr":1885,"woche":2,"kasse":431,"ende":false,"endgrund":null}
+{"t":96.5,"was":"klick-nav","zug":"preis:tafel","text":"Michaelitafel 1885 · 5 Angebote","jahr":1885,"woche":2,"kasse":431,"ende":false,"endgrund":null}
+{"t":97.1,"was":"klick-nav","zug":"sud:zettel-anstich","text":"Junges Fass · +14 · 1,5 hl","jahr":1885,"woche":2,"kasse":431,"ende":false,"endgrund":null}
+{"t":97.8,"was":"klick-nav","zug":"stadt:reiter:preis-pr-stil-kontor-pr-tafel","text":"MICHAELI 1885Jetzt entscheidet die Menge, nicht der Rat.","jahr":1885,"woche":2,"kasse":431,"ende":false,"endgrund":null}
+{"t":98.3,"was":"klick-nav","zug":"gegner:zeige:25","text":"zeigen","jahr":1885,"woche":2,"kasse":431,"ende":false,"endgrund":null}
+{"t":99,"was":"klick-nav","zug":"name:aufgeldbuch","text":"Das Aufgeld nachrechnen","jahr":1885,"woche":2,"kasse":431,"ende":false,"endgrund":null}
+{"t":99.5,"was":"klick-nav","zug":"name:liefern","text":"Unter dem Zeichen ausliefern","jahr":1885,"woche":2,"kasse":431,"ende":false,"endgrund":null}
+{"t":100.1,"was":"klick-nav","zug":"name:zurueckhalten","text":"Das Zeichen einziehen","jahr":1885,"woche":2,"kasse":431,"ende":false,"endgrund":null}
+{"t":100.6,"was":"klick-nav","zug":"name:ruhe","text":"Das Zeichen verdecken","jahr":1885,"woche":2,"kasse":431,"ende":false,"endgrund":null}
+{"t":101.2,"was":"klick-nav","zug":"name:herumgehen","text":"Herumgehen und den Namen sagen","jahr":1885,"woche":2,"kasse":431,"ende":false,"endgrund":null}
+{"t":101.8,"was":"klick-nav","zug":"name:blatt","text":"Das Zeichen und das Register","jahr":1885,"woche":2,"kasse":431,"ende":false,"endgrund":null}
+{"t":102.4,"was":"klick-preis","zug":"fuhre:plan:rechnung","text":"Fahren: nach Rechnung · 23 hl+139 M","preis":139,"kasseVor":431,"kasseNach":298,"jahr":1885,"woche":3,"ende":false,"endgrund":null}
+{"t":102.9,"was":"klick-preis","zug":"gegner:zukaufen:lindenhof","text":"lieber zukaufen3,0 hl · 192 M","preis":-192,"kasseVor":298,"kasseNach":106,"jahr":1885,"woche":3,"ende":false,"endgrund":null}
+{"t":103.5,"was":"runde-ende","runde":10,"jahr":1885,"woche":4,"kasse":82,"deckung":0.032852564102564104,"besterPreis":2496,"ende":false,"endgrund":null,"echteWochenGesamt":25}
+{"t":104.1,"was":"klick-nav","zug":"sud:zettel-anstich","text":"Hefe abernten · +8 · ohne Fass","jahr":1885,"woche":4,"kasse":82,"ende":false,"endgrund":null}
+{"t":104.9,"was":"klick-nav","zug":"fuhre:sprung","text":"Weiter wie zuletzt · bis zu 6 Wochen","jahr":1885,"woche":10,"kasse":0,"ende":false,"endgrund":null}
+{"t":105.3,"was":"klick-nav","zug":"kern:chronik","text":"Chronik55","jahr":1885,"woche":10,"kasse":0,"ende":false,"endgrund":null}
+{"t":105.8,"was":"klick-nav","zug":"kern:protokoll","text":"Buch529","jahr":1885,"woche":10,"kasse":0,"ende":false,"endgrund":null}
+{"t":106.2,"was":"klick-nav","zug":"klang:ton","text":"♪","jahr":1885,"woche":10,"kasse":0,"ende":false,"endgrund":null}
+{"t":106.8,"was":"klick-nav","zug":"stadt:reiter:fuhre-fu-brett-fu-haeuser","text":"DIE HÄUSERwollen 224 · im Keller liegen 12 hl","jahr":1885,"woche":10,"kasse":0,"ende":false,"endgrund":null}
+{"t":107.4,"was":"klick-nav","zug":"stadt:reiter:fuhre-fu-brett-fu-keller","text":"DER EISKELLER12 von 135 hl · 12 reif","jahr":1885,"woche":10,"kasse":0,"ende":false,"endgrund":null}
+{"t":108,"was":"klick-nav","zug":"stadt:reiter:sud-sud-brett","text":"DAS SUDHAUSzugeklappt","jahr":1885,"woche":10,"kasse":0,"ende":false,"endgrund":null}
+{"t":108.5,"was":"klick-nav","zug":"stadt:ortsmarken","text":"Ortsmarken6 auf dem Pflock","jahr":1885,"woche":10,"kasse":0,"ende":false,"endgrund":null}
+{"t":109,"was":"klick-nav","zug":"sud:kaelte:warm","text":"Ohne Kühlung durchgären lassen","jahr":1885,"woche":10,"kasse":0,"ende":false,"endgrund":null}
+{"t":109.6,"was":"klick-nav","zug":"stadt:reiter:gegner-amort-gg-band","text":"Ohne dich geschehen · 28 Zügezugeklappt","jahr":1885,"woche":10,"kasse":0,"ende":false,"endgrund":null}
+{"t":110.2,"was":"klick-nav","zug":"gegner:zeige:28","text":"zeigen","jahr":1885,"woche":10,"kasse":0,"ende":false,"endgrund":null}
+{"t":110.8,"was":"runde-ende","runde":11,"jahr":1885,"woche":11,"kasse":0,"deckung":0,"besterPreis":2496,"ende":false,"endgrund":null,"echteWochenGesamt":27}
+{"t":111.4,"was":"klick-nav","zug":"gegner:zeige:29","text":"zeigen","jahr":1885,"woche":11,"kasse":0,"ende":false,"endgrund":null}
+{"t":111.9,"was":"klick-nav","zug":"kern:chronik","text":"Chronik58","jahr":1885,"woche":11,"kasse":0,"ende":false,"endgrund":null}
+{"t":112.3,"was":"klick-nav","zug":"kern:protokoll","text":"Buch588","jahr":1885,"woche":11,"kasse":0,"ende":false,"endgrund":null}
+{"t":112.8,"was":"klick-nav","zug":"klang:ton","text":"—","jahr":1885,"woche":11,"kasse":0,"ende":false,"endgrund":null}
+{"t":113.4,"was":"klick-nav","zug":"stadt:reiter:gegner-amort-gg-band","text":"Ohne dich geschehen · 29 Zügeliegt auf","jahr":1885,"woche":11,"kasse":0,"ende":false,"endgrund":null}
+{"t":114,"was":"klick-nav","zug":"stadt:reiter:fuhre-fu-brett-fu-haeuser","text":"DIE HÄUSERwollen 240 · im Keller liegen 24 hl","jahr":1885,"woche":11,"kasse":0,"ende":false,"endgrund":null}
+{"t":114.6,"was":"klick-nav","zug":"stadt:reiter:fuhre-fu-brett-fu-keller","text":"DER EISKELLER24 von 135 hl · 24 reif","jahr":1885,"woche":11,"kasse":0,"ende":false,"endgrund":null}
+{"t":115.1,"was":"klick-nav","zug":"stadt:reiter:sud-sud-brett","text":"DAS SUDHAUSliegt auf","jahr":1885,"woche":11,"kasse":0,"ende":false,"endgrund":null}
+{"t":115.5,"was":"klick-nav","zug":"stadt:ortsmarken","text":"Ortsmarken6 im Bild","jahr":1885,"woche":11,"kasse":0,"ende":false,"endgrund":null}
+{"t":116.2,"was":"klick-preis","zug":"fuhre:plan:rechnung","text":"Fahren: nach Rechnung · 24 hl+161 M","preis":161,"kasseVor":0,"kasseNach":0,"jahr":1885,"woche":12,"ende":false,"endgrund":null}
+{"t":116.8,"was":"klick-preis","zug":"fuhre:plan:rechnung","text":"Fahren: nach Rechnung · 24 hl+161 M","preis":161,"kasseVor":0,"kasseNach":0,"jahr":1885,"woche":13,"ende":false,"endgrund":null}
+{"t":117.3,"was":"klick-preis","zug":"fuhre:plan:umkaempft","text":"Fahren: wo der Adler wirbt · 24 hl+153 M","preis":153,"kasseVor":0,"kasseNach":0,"jahr":1885,"woche":14,"ende":false,"endgrund":null}
+{"t":117.9,"was":"runde-ende","runde":12,"jahr":1885,"woche":15,"kasse":0,"deckung":0,"besterPreis":2496,"ende":false,"endgrund":null,"echteWochenGesamt":31}
+{"t":118.3,"was":"klick-nav","zug":"kern:chronik","text":"Chronik61","jahr":1885,"woche":15,"kasse":0,"ende":false,"endgrund":null}
+{"t":118.8,"was":"klick-nav","zug":"kern:protokoll","text":"Buch638","jahr":1885,"woche":15,"kasse":0,"ende":false,"endgrund":null}
+{"t":119.2,"was":"klick-nav","zug":"klang:ton","text":"♪","jahr":1885,"woche":15,"kasse":0,"ende":false,"endgrund":null}
+{"t":119.8,"was":"klick-nav","zug":"stadt:reiter:gegner-amort-gg-band","text":"Ohne dich geschehen · 29 Zügezugeklappt","jahr":1885,"woche":15,"kasse":0,"ende":false,"endgrund":null}
+{"t":120.5,"was":"klick-nav","zug":"stadt:reiter:fuhre-fu-brett-fu-haeuser","text":"DIE HÄUSERwollen 224 · im Keller liegen 24 hl","jahr":1885,"woche":15,"kasse":0,"ende":false,"endgrund":null}
+{"t":120.9,"was":"klick-nav","zug":"stadt:ortsmarken","text":"Ortsmarken6 auf dem Pflock","jahr":1885,"woche":15,"kasse":0,"ende":false,"endgrund":null}
+{"t":121.4,"was":"klick-nav","zug":"sud:zettel-anstich","text":"Junges Fass · +14 · 1,5 hl","jahr":1885,"woche":15,"kasse":0,"ende":false,"endgrund":null}
+{"t":122,"was":"klick-nav","zug":"sud:zettel-wechsel-frei","text":"Natureis aus dem Flusslässt Exportbier zu","jahr":1885,"woche":15,"kasse":0,"ende":false,"endgrund":null}
+{"t":122.6,"was":"klick-nav","zug":"stadt:reiter:sud-sud-brett","text":"DAS SUDHAUSzugeklappt","jahr":1885,"woche":15,"kasse":0,"ende":false,"endgrund":null}
+{"t":123.2,"was":"klick-nav","zug":"stadt:reiter:fuhre-fu-brett-fu-keller","text":"DER EISKELLER23 von 135 hl · 23 reif","jahr":1885,"woche":15,"kasse":0,"ende":false,"endgrund":null}
+{"t":123.8,"was":"klick-preis","zug":"fuhre:plan:durst","text":"Fahren: nach Durst · 23 hl+132 M","preis":132,"kasseVor":0,"kasseNach":0,"jahr":1885,"woche":16,"ende":false,"endgrund":null}
+{"t":124.3,"was":"runde-ende","runde":13,"jahr":1885,"woche":17,"kasse":0,"deckung":0,"besterPreis":2496,"ende":false,"endgrund":null,"echteWochenGesamt":33}
+{"t":124.9,"was":"klick-nav","zug":"sud:zettel-anstich","text":"Hefe abernten · +8 · ohne Fass","jahr":1885,"woche":17,"kasse":0,"ende":false,"endgrund":null}
+{"t":125.4,"was":"klick-nav","zug":"sud:zettel-wechsel-frei","text":"Ohne Kühlung durchgären lassennur Schankbier","jahr":1885,"woche":17,"kasse":0,"ende":false,"endgrund":null}
+{"t":125.8,"was":"klick-nav","zug":"kern:chronik","text":"Chronik62","jahr":1885,"woche":17,"kasse":0,"ende":false,"endgrund":null}
+{"t":126.3,"was":"klick-nav","zug":"kern:protokoll","text":"Buch654","jahr":1885,"woche":17,"kasse":0,"ende":false,"endgrund":null}
+{"t":126.7,"was":"klick-nav","zug":"klang:ton","text":"—","jahr":1885,"woche":17,"kasse":0,"ende":false,"endgrund":null}
+{"t":127.3,"was":"klick-nav","zug":"stadt:reiter:gegner-amort-gg-band","text":"Ohne dich geschehen · 29 Zügeliegt auf","jahr":1885,"woche":17,"kasse":0,"ende":false,"endgrund":null}
+{"t":127.9,"was":"klick-nav","zug":"stadt:reiter:fuhre-fu-brett-fu-haeuser","text":"DIE HÄUSERwollen 233 · im Keller liegen 0,0 hl","jahr":1885,"woche":17,"kasse":0,"ende":false,"endgrund":null}
+{"t":128.5,"was":"klick-nav","zug":"stadt:reiter:fuhre-fu-brett-fu-keller","text":"DER EISKELLER0,0 von 135 hl · 0,0 reif","jahr":1885,"woche":17,"kasse":0,"ende":false,"endgrund":null}
+{"t":128.9,"was":"klick-nav","zug":"stadt:ortsmarken","text":"Ortsmarken6 im Bild","jahr":1885,"woche":17,"kasse":0,"ende":false,"endgrund":null}
+{"t":129.5,"was":"runde-ende","runde":14,"jahr":1885,"woche":18,"kasse":0,"deckung":0,"besterPreis":2496,"ende":false,"endgrund":null,"echteWochenGesamt":34}
+{"t":130,"was":"klick-nav","zug":"sud:zettel-hefe-fass","text":"Junges Fass · +14 · 1,5 hl","jahr":1885,"woche":18,"kasse":0,"ende":false,"endgrund":null}
+{"t":130.5,"was":"klick-nav","zug":"sud:zettel-wechsel-frei","text":"Natureis aus dem Flusslässt Exportbier zu","jahr":1885,"woche":18,"kasse":0,"ende":false,"endgrund":null}
+{"t":131,"was":"klick-nav","zug":"kern:protokoll","text":"Buch659","jahr":1885,"woche":18,"kasse":0,"ende":false,"endgrund":null}
+{"t":131.4,"was":"klick-nav","zug":"klang:ton","text":"♪","jahr":1885,"woche":18,"kasse":0,"ende":false,"endgrund":null}
+{"t":132,"was":"klick-nav","zug":"stadt:reiter:gegner-amort-gg-band","text":"Ohne dich geschehen · 29 Zügezugeklappt","jahr":1885,"woche":18,"kasse":0,"ende":false,"endgrund":null}
+{"t":132.5,"was":"klick-nav","zug":"stadt:reiter:fuhre-fu-brett-fu-haeuser","text":"DIE HÄUSERwollen 248 · im Keller liegen 48 hl","jahr":1885,"woche":18,"kasse":0,"ende":false,"endgrund":null}
+{"t":133.1,"was":"klick-nav","zug":"stadt:reiter:fuhre-fu-brett-fu-keller","text":"DER EISKELLER48 von 135 hl · 48 reif","jahr":1885,"woche":18,"kasse":0,"ende":false,"endgrund":null}
+{"t":133.5,"was":"klick-nav","zug":"stadt:ortsmarken","text":"Ortsmarken6 auf dem Pflock","jahr":1885,"woche":18,"kasse":0,"ende":false,"endgrund":null}
+{"t":134.1,"was":"klick-nav","zug":"gegner:beschwerde","text":"Dem Wirt die Restschuld nachrechnen","jahr":1885,"woche":18,"kasse":0,"ende":false,"endgrund":null}
+{"t":134.5,"was":"klick-nav","zug":"kern:chronik","text":"Chronik63","jahr":1885,"woche":18,"kasse":0,"ende":false,"endgrund":null}
+{"t":135.1,"was":"klick-preis","zug":"fuhre:plan:mager","text":"Fahren: die mageren Häuser · 47 hl+484 M","preis":484,"kasseVor":0,"kasseNach":0,"jahr":1885,"woche":19,"ende":false,"endgrund":null}
+{"t":135.7,"was":"klick-preis","zug":"fuhre:plan:durst","text":"Fahren: nach Durst · 24 hl+160 M","preis":160,"kasseVor":0,"kasseNach":0,"jahr":1885,"woche":20,"ende":false,"endgrund":null}
+{"t":136.3,"was":"runde-ende","runde":15,"jahr":1885,"woche":21,"kasse":0,"deckung":0,"besterPreis":2496,"ende":false,"endgrund":null,"echteWochenGesamt":37}
+{"t":137.4,"was":"klick-nav","zug":"gegner:zeige:32","text":"zeigen","jahr":1885,"woche":21,"kasse":0,"ende":false,"endgrund":null}
+{"t":138,"was":"klick-nav","zug":"gegner:zeige:31","text":"zeigen","jahr":1885,"woche":21,"kasse":0,"ende":false,"endgrund":null}
+{"t":138.5,"was":"klick-nav","zug":"sud:zettel-wechsel-frei","text":"Ohne Kühlung durchgären lassennur Schankbier","jahr":1885,"woche":21,"kasse":0,"ende":false,"endgrund":null}
+{"t":139,"was":"klick-nav","zug":"kern:protokoll","text":"Buch699","jahr":1885,"woche":21,"kasse":0,"ende":false,"endgrund":null}
+{"t":139.4,"was":"klick-nav","zug":"klang:ton","text":"—","jahr":1885,"woche":21,"kasse":0,"ende":false,"endgrund":null}
+{"t":140,"was":"klick-nav","zug":"stadt:reiter:gegner-amort-gg-band","text":"Ohne dich geschehen · 32 Zügeliegt auf","jahr":1885,"woche":21,"kasse":0,"ende":false,"endgrund":null}
+{"t":140.6,"was":"klick-nav","zug":"stadt:reiter:fuhre-fu-brett-fu-haeuser","text":"DIE HÄUSERwollen 227 · im Keller liegen 24 hl","jahr":1885,"woche":21,"kasse":0,"ende":false,"endgrund":null}
+{"t":141.1,"was":"klick-nav","zug":"stadt:reiter:fuhre-fu-brett-fu-keller","text":"DER EISKELLER24 von 135 hl · 24 reif","jahr":1885,"woche":21,"kasse":0,"ende":false,"endgrund":null}
+{"t":141.6,"was":"klick-nav","zug":"stadt:ortsmarken","text":"Ortsmarken6 im Bild","jahr":1885,"woche":21,"kasse":0,"ende":false,"endgrund":null}
+{"t":142.1,"was":"klick-preis","zug":"fuhre:plan:durst","text":"Fahren: nach Durst · 24 hl+161 M","preis":161,"kasseVor":0,"kasseNach":0,"jahr":1885,"woche":22,"ende":false,"endgrund":null}
+{"t":142.7,"was":"klick-preis","zug":"fuhre:plan:umkaempft","text":"Fahren: wo der Adler wirbt · 48 hl+507 M","preis":507,"kasseVor":0,"kasseNach":28,"jahr":1885,"woche":23,"ende":false,"endgrund":null}
+{"t":143.3,"was":"klick-preis","zug":"fuhre:plan:mager","text":"Fahren: die mageren Häuser · 48 hl+507 M","preis":507,"kasseVor":28,"kasseNach":118,"jahr":1885,"woche":24,"ende":false,"endgrund":null}
+{"t":143.8,"was":"runde-ende","runde":16,"jahr":1885,"woche":25,"kasse":94,"deckung":0.033180374161666075,"besterPreis":2833,"ende":false,"endgrund":null,"echteWochenGesamt":41}
+{"t":144.4,"was":"klick-nav","zug":"sud:zettel-anstich","text":"Junges Fass · +14 · 1,5 hl","jahr":1885,"woche":25,"kasse":94,"ende":false,"endgrund":null}
+{"t":144.9,"was":"klick-nav","zug":"sud:zettel-wechsel-frei","text":"Natureis aus dem Flusslässt Exportbier zu","jahr":1885,"woche":25,"kasse":94,"ende":false,"endgrund":null}
+{"t":145.6,"was":"klick-nav","zug":"fuhre:sprung","text":"Weiter wie zuletzt · bis zu 5 Wochen","jahr":1885,"woche":30,"kasse":0,"ende":false,"endgrund":null}
+{"t":146.1,"was":"klick-nav","zug":"kern:chronik","text":"Chronik64","jahr":1885,"woche":30,"kasse":0,"ende":false,"endgrund":null}
+{"t":146.5,"was":"klick-nav","zug":"kern:protokoll","text":"Buch768","jahr":1885,"woche":30,"kasse":0,"ende":false,"endgrund":null}
+{"t":147,"was":"klick-nav","zug":"klang:ton","text":"♪","jahr":1885,"woche":30,"kasse":0,"ende":false,"endgrund":null}
+{"t":147.6,"was":"klick-nav","zug":"stadt:reiter:gegner-amort-gg-band","text":"Ohne dich geschehen · 34 Zügezugeklappt","jahr":1885,"woche":30,"kasse":0,"ende":false,"endgrund":null}
+{"t":148.2,"was":"klick-nav","zug":"stadt:reiter:fuhre-fu-brett-fu-haeuser","text":"DIE HÄUSERwollen 183 · im Keller liegen 24 hl","jahr":1885,"woche":30,"kasse":0,"ende":false,"endgrund":null}
+{"t":148.6,"was":"klick-nav","zug":"stadt:ortsmarken","text":"Ortsmarken6 auf dem Pflock","jahr":1885,"woche":30,"kasse":0,"ende":false,"endgrund":null}
+{"t":149.1,"was":"klick-nav","zug":"gegner:hinhalten:faehrhaus","text":"Freibier3,0 hl statt Geld","jahr":1885,"woche":30,"kasse":0,"ende":false,"endgrund":null}
+{"t":149.7,"was":"klick-nav","zug":"gegner:zeige:36","text":"zeigen","jahr":1885,"woche":30,"kasse":0,"ende":false,"endgrund":null}
+{"t":150.1,"was":"klick-nav","zug":"stadt:marke:gegner-bahnhof","text":"frei geworden","jahr":1885,"woche":30,"kasse":0,"ende":false,"endgrund":null}
+{"t":150.8,"was":"klick-nav","zug":"stadt:reiter:fuhre-fu-brett-fu-keller","text":"DER EISKELLER36 von 135 hl · 36 reif","jahr":1885,"woche":30,"kasse":0,"ende":false,"endgrund":null}
+{"t":152.2,"was":"klick-preis","zug":"fuhre:plan:mager","text":"Fahren: die mageren Häuser · 33 hl+289 M","preis":289,"kasseVor":0,"kasseNach":989,"jahr":1886,"woche":1,"ende":false,"endgrund":null}
+{"t":153.2,"was":"klick-preis","zug":"gegner:zukaufen:faehrhaus","text":"lieber zukaufen3,0 hl · 192 M","preis":-192,"kasseVor":989,"kasseNach":797,"jahr":1886,"woche":1,"ende":false,"endgrund":null}
+{"t":153.9,"was":"runde-ende","runde":17,"jahr":1886,"woche":2,"kasse":773,"deckung":0.3472596585804133,"besterPreis":2226,"ende":false,"endgrund":null,"echteWochenGesamt":44}
+{"t":154.4,"was":"klick-nav","zug":"sud:zettel-anstich","text":"Hefe abernten · +8 · ohne Fass","jahr":1886,"woche":2,"kasse":773,"ende":false,"endgrund":null}
+{"t":155,"was":"klick-nav","zug":"sud:zettel-wechsel-frei","text":"Ohne Kühlung durchgären lassennur Schankbier","jahr":1886,"woche":2,"kasse":773,"ende":false,"endgrund":null}
+{"t":155.6,"was":"klick-nav","zug":"fuhre:sprung","text":"Weiter wie zuletzt · bis zu 6 Wochen","jahr":1886,"woche":3,"kasse":749,"ende":false,"endgrund":null}
+{"t":156,"was":"klick-nav","zug":"kern:chronik","text":"Chronik83","jahr":1886,"woche":3,"kasse":749,"ende":false,"endgrund":null}
+{"t":156.4,"was":"klick-nav","zug":"kern:protokoll","text":"Buch859","jahr":1886,"woche":3,"kasse":749,"ende":false,"endgrund":null}
+{"t":156.9,"was":"klick-nav","zug":"klang:ton","text":"—","jahr":1886,"woche":3,"kasse":749,"ende":false,"endgrund":null}
+{"t":157.5,"was":"klick-nav","zug":"stadt:reiter:gegner-amort-gg-band","text":"Ohne dich geschehen · 37 Zügezugeklappt","jahr":1886,"woche":3,"kasse":749,"ende":false,"endgrund":null}
+{"t":158.1,"was":"klick-nav","zug":"stadt:reiter:fuhre-fu-brett-fu-haeuser","text":"DIE HÄUSERwollen 168 · im Keller liegen 0,0 hl","jahr":1886,"woche":3,"kasse":749,"ende":false,"endgrund":null}
+{"t":158.7,"was":"klick-nav","zug":"stadt:reiter:fuhre-fu-brett-fu-keller","text":"DER EISKELLER0,0 von 135 hl · 0,0 reif","jahr":1886,"woche":3,"kasse":749,"ende":false,"endgrund":null}
+{"t":159.2,"was":"klick-nav","zug":"stadt:ortsmarken","text":"Ortsmarken7 auf dem Pflock","jahr":1886,"woche":3,"kasse":749,"ende":false,"endgrund":null}
+{"t":160.3,"was":"klick-nav","zug":"preis:tafel","text":"Michaelitafel 1886 · 5 Angebote","jahr":1886,"woche":3,"kasse":749,"ende":false,"endgrund":null}
+{"t":161,"was":"klick-nav","zug":"sud:zettel-hefe-fass","text":"Junges Fass · +14 · 1,5 hl","jahr":1886,"woche":3,"kasse":749,"ende":false,"endgrund":null}
+{"t":161.7,"was":"klick-nav","zug":"stadt:reiter:preis-pr-stil-kontor-pr-tafel","text":"MICHAELI 1886Jetzt entscheidet die Menge, nicht der Rat.","jahr":1886,"woche":3,"kasse":749,"ende":false,"endgrund":null}
+{"t":162.3,"was":"klick-nav","zug":"gegner:zeige:37","text":"zeigen","jahr":1886,"woche":3,"kasse":749,"ende":false,"endgrund":null}
+{"t":162.9,"was":"klick-nav","zug":"fuhre:ziel:bar","text":"So verabreden","jahr":1886,"woche":3,"kasse":749,"ende":false,"endgrund":null}
+{"t":163.5,"was":"klick-nav","zug":"fuhre:probe:hirsch","text":"Probefass · 6,0 hl · 0/6","jahr":1886,"woche":3,"kasse":749,"ende":false,"endgrund":null}
+{"t":164.2,"was":"klick-nav","zug":"fuhre:ziel:ziel","text":"So verabreden","jahr":1886,"woche":3,"kasse":749,"ende":false,"endgrund":null}
+{"t":164.9,"was":"klick-nav","zug":"stadt:reiter:fuhre-fu-brett-fu-wagen","text":"HALBER WAGEN6,0 von 60 hl · 1 von 10 Halten","jahr":1886,"woche":3,"kasse":749,"ende":false,"endgrund":null}
+{"t":165.5,"was":"klick-nav","zug":"fuhre:leeren","text":"Rampe räumen","jahr":1886,"woche":3,"kasse":749,"ende":false,"endgrund":null}
+{"t":166.2,"was":"klick-preis","zug":"fuhre:plan:durst","text":"Fahren: nach Durst · 23 hl+148 M","preis":148,"kasseVor":749,"kasseNach":619,"jahr":1886,"woche":4,"ende":false,"endgrund":null}
+{"t":166.8,"was":"klick-preis","zug":"fuhre:plan:mager","text":"Fahren: die mageren Häuser · 48 hl+529 M","preis":529,"kasseVor":619,"kasseNach":593,"jahr":1886,"woche":5,"ende":false,"endgrund":null}
+{"t":167.3,"was":"klick-preis","zug":"fuhre:plan:durst","text":"Fahren: nach Durst · 24 hl+170 M","preis":170,"kasseVor":593,"kasseNach":475,"jahr":1886,"woche":6,"ende":false,"endgrund":null}
+{"t":167.9,"was":"runde-ende","runde":18,"jahr":1886,"woche":7,"kasse":451,"deckung":0.20260557053009884,"besterPreis":2226,"ende":false,"endgrund":null,"echteWochenGesamt":49}
+{"t":168.6,"was":"klick-nav","zug":"gegner:zeige:40","text":"zeigen","jahr":1886,"woche":7,"kasse":451,"ende":false,"endgrund":null}
+{"t":169.2,"was":"klick-nav","zug":"sud:zettel-anstich","text":"Junges Fass · +14 · 1,5 hl","jahr":1886,"woche":7,"kasse":451,"ende":false,"endgrund":null}
+{"t":169.8,"was":"klick-nav","zug":"sud:zettel-wechsel-frei","text":"Natureis aus dem Flusslässt Exportbier zu","jahr":1886,"woche":7,"kasse":451,"ende":false,"endgrund":null}
+{"t":170.2,"was":"klick-nav","zug":"kern:chronik","text":"Chronik87","jahr":1886,"woche":7,"kasse":451,"ende":false,"endgrund":null}
+{"t":170.7,"was":"klick-nav","zug":"kern:protokoll","text":"Buch919","jahr":1886,"woche":7,"kasse":451,"ende":false,"endgrund":null}
+{"t":171.1,"was":"klick-nav","zug":"klang:ton","text":"♪","jahr":1886,"woche":7,"kasse":451,"ende":false,"endgrund":null}
+{"t":171.8,"was":"klick-nav","zug":"stadt:reiter:gegner-amort-gg-band","text":"Ohne dich geschehen · 40 Zügeliegt auf","jahr":1886,"woche":7,"kasse":451,"ende":false,"endgrund":null}
+{"t":172.4,"was":"klick-nav","zug":"stadt:reiter:fuhre-fu-brett-fu-haeuser","text":"DIE HÄUSERwollen 146 · im Keller liegen 24 hl","jahr":1886,"woche":7,"kasse":451,"ende":false,"endgrund":null}
+{"t":173,"was":"klick-nav","zug":"stadt:reiter:fuhre-fu-brett-fu-keller","text":"DER EISKELLER24 von 135 hl · 24 reif","jahr":1886,"woche":7,"kasse":451,"ende":false,"endgrund":null}
+{"t":173.5,"was":"klick-nav","zug":"stadt:reiter:fuhre-fu-brett-fu-wagen","text":"HALBER WAGEN0,0 von 60 hl · 0 von 10 Halten","jahr":1886,"woche":7,"kasse":451,"ende":false,"endgrund":null}
+{"t":173.9,"was":"klick-nav","zug":"stadt:ortsmarken","text":"Ortsmarken6 auf dem Pflock","jahr":1886,"woche":7,"kasse":451,"ende":false,"endgrund":null}
+{"t":174.6,"was":"klick-preis","zug":"fuhre:plan:durst","text":"Fahren: nach Durst · 23 hl+149 M","preis":149,"kasseVor":451,"kasseNach":278,"jahr":1886,"woche":8,"ende":false,"endgrund":null}
+{"t":175.1,"was":"klick-preis","zug":"gegner:zukaufen:lindenhof","text":"lieber zukaufen3,0 hl · 192 M","preis":-192,"kasseVor":278,"kasseNach":86,"jahr":1886,"woche":8,"ende":false,"endgrund":null}
+{"t":175.7,"was":"runde-ende","runde":19,"jahr":1886,"woche":9,"kasse":62,"deckung":0.027852650494159928,"besterPreis":2226,"ende":false,"endgrund":null,"echteWochenGesamt":51}
+{"t":176.2,"was":"klick-nav","zug":"sud:zettel-anstich","text":"Hefe abernten · +8 · ohne Fass","jahr":1886,"woche":9,"kasse":62,"ende":false,"endgrund":null}
+{"t":176.8,"was":"klick-nav","zug":"sud:zettel-wechsel-frei","text":"Ohne Kühlung durchgären lassennur Schankbier","jahr":1886,"woche":9,"kasse":62,"ende":false,"endgrund":null}
+{"t":177.2,"was":"klick-nav","zug":"kern:chronik","text":"Chronik89","jahr":1886,"woche":9,"kasse":62,"ende":false,"endgrund":null}
+{"t":177.7,"was":"klick-nav","zug":"kern:protokoll","text":"Buch937","jahr":1886,"woche":9,"kasse":62,"ende":false,"endgrund":null}
+{"t":178.1,"was":"klick-nav","zug":"klang:ton","text":"—","jahr":1886,"woche":9,"kasse":62,"ende":false,"endgrund":null}
+{"t":178.7,"was":"klick-nav","zug":"stadt:reiter:gegner-amort-gg-band","text":"Ohne dich geschehen · 42 Zügezugeklappt","jahr":1886,"woche":9,"kasse":62,"ende":false,"endgrund":null}
+{"t":179.3,"was":"klick-nav","zug":"stadt:reiter:fuhre-fu-brett-fu-haeuser","text":"DIE HÄUSERwollen 158 · im Keller liegen 0,0 hl","jahr":1886,"woche":9,"kasse":62,"ende":false,"endgrund":null}
+{"t":179.9,"was":"klick-nav","zug":"stadt:reiter:fuhre-fu-brett-fu-keller","text":"DER EISKELLER0,0 von 135 hl · 0,0 reif","jahr":1886,"woche":9,"kasse":62,"ende":false,"endgrund":null}
+{"t":180.3,"was":"klick-nav","zug":"stadt:ortsmarken","text":"Ortsmarken6 im Bild","jahr":1886,"woche":9,"kasse":62,"ende":false,"endgrund":null}
+{"t":181,"was":"klick-nav","zug":"gegner:zeige:42","text":"zeigen","jahr":1886,"woche":9,"kasse":62,"ende":false,"endgrund":null}
+{"t":181.6,"was":"runde-ende","runde":20,"jahr":1886,"woche":10,"kasse":38,"deckung":0.014032496307237814,"besterPreis":2708,"ende":false,"endgrund":null,"echteWochenGesamt":52}
+{"t":182.2,"was":"klick-nav","zug":"gegner:zeige:43","text":"zeigen","jahr":1886,"woche":10,"kasse":38,"ende":false,"endgrund":null}
+{"t":182.8,"was":"klick-nav","zug":"sud:zettel-hefe-fass","text":"Junges Fass · +14 · 1,5 hl","jahr":1886,"woche":10,"kasse":38,"ende":false,"endgrund":null}
+{"t":183.4,"was":"klick-nav","zug":"sud:zettel-wechsel-frei","text":"Natureis aus dem Flusslässt Exportbier zu","jahr":1886,"woche":10,"kasse":38,"ende":false,"endgrund":null}
+{"t":183.8,"was":"klick-nav","zug":"kern:protokoll","text":"Buch943","jahr":1886,"woche":10,"kasse":38,"ende":false,"endgrund":null}
+{"t":184.2,"was":"klick-nav","zug":"klang:ton","text":"♪","jahr":1886,"woche":10,"kasse":38,"ende":false,"endgrund":null}
+{"t":184.8,"was":"klick-nav","zug":"stadt:reiter:gegner-amort-gg-band","text":"Ohne dich geschehen · 43 Zügeliegt auf","jahr":1886,"woche":10,"kasse":38,"ende":false,"endgrund":null}
+{"t":185.4,"was":"klick-nav","zug":"stadt:reiter:fuhre-fu-brett-fu-haeuser","text":"DIE HÄUSERwollen 168 · im Keller liegen 48 hl","jahr":1886,"woche":10,"kasse":38,"ende":false,"endgrund":null}
+{"t":186,"was":"klick-nav","zug":"stadt:reiter:fuhre-fu-brett-fu-keller","text":"DER EISKELLER48 von 135 hl · 48 reif","jahr":1886,"woche":10,"kasse":38,"ende":false,"endgrund":null}
+{"t":186.4,"was":"klick-nav","zug":"stadt:ortsmarken","text":"Ortsmarken6 auf dem Pflock","jahr":1886,"woche":10,"kasse":38,"ende":false,"endgrund":null}
+{"t":187,"was":"klick-preis","zug":"fuhre:plan:umkaempft","text":"Fahren: wo der Adler wirbt · 47 hl+505 M","preis":505,"kasseVor":38,"kasseNach":55,"jahr":1886,"woche":11,"ende":false,"endgrund":null}
+{"t":187.5,"was":"klick-preis","zug":"fuhre:plan:durst","text":"Fahren: nach Durst · 24 hl+173 M","preis":173,"kasseVor":55,"kasseNach":0,"jahr":1886,"woche":12,"ende":false,"endgrund":null}
+{"t":188,"was":"klick-preis","zug":"gegner:beschwerde-bild","text":"Dem Wirt die Restschuld nachrechnenkostet kein Geld · vier Ansehengegen Gasthof Lindenhof","preis":0,"kasseVor":0,"kasseNach":0,"jahr":1886,"woche":12,"ende":false,"endgrund":null}
+{"t":188.5,"was":"runde-ende","runde":21,"jahr":1886,"woche":13,"kasse":0,"deckung":0,"besterPreis":3196,"ende":false,"endgrund":null,"echteWochenGesamt":55}
+{"t":189.1,"was":"klick-nav","zug":"sud:zettel-wechsel-frei","text":"Ohne Kühlung durchgären lassennur Schankbier","jahr":1886,"woche":13,"kasse":0,"ende":false,"endgrund":null}
+{"t":189.5,"was":"klick-nav","zug":"kern:chronik","text":"Chronik95","jahr":1886,"woche":13,"kasse":0,"ende":false,"endgrund":null}
+{"t":189.9,"was":"klick-nav","zug":"kern:protokoll","text":"Buch988","jahr":1886,"woche":13,"kasse":0,"ende":false,"endgrund":null}
+{"t":190.4,"was":"klick-nav","zug":"klang:ton","text":"—","jahr":1886,"woche":13,"kasse":0,"ende":false,"endgrund":null}
+{"t":191,"was":"klick-nav","zug":"stadt:reiter:gegner-amort-gg-band","text":"Ohne dich geschehen · 44 Zügezugeklappt","jahr":1886,"woche":13,"kasse":0,"ende":false,"endgrund":null}
+{"t":191.6,"was":"klick-nav","zug":"stadt:reiter:fuhre-fu-brett-fu-haeuser","text":"DIE HÄUSERwollen 150 · im Keller liegen 20 hl","jahr":1886,"woche":13,"kasse":0,"ende":false,"endgrund":null}
+{"t":192.2,"was":"klick-nav","zug":"stadt:reiter:fuhre-fu-brett-fu-keller","text":"DER EISKELLER20 von 135 hl · 20 reif","jahr":1886,"woche":13,"kasse":0,"ende":false,"endgrund":null}
+{"t":192.7,"was":"klick-nav","zug":"stadt:ortsmarken","text":"Ortsmarken6 im Bild","jahr":1886,"woche":13,"kasse":0,"ende":false,"endgrund":null}
+{"t":193.3,"was":"klick-nav","zug":"gegner:zeige:44","text":"zeigen","jahr":1886,"woche":13,"kasse":0,"ende":false,"endgrund":null}
+{"t":194,"was":"klick-preis","zug":"fuhre:plan:durst","text":"Fahren: nach Durst · 20 hl+101 M","preis":101,"kasseVor":0,"kasseNach":0,"jahr":1886,"woche":14,"ende":false,"endgrund":null}
+{"t":194.7,"was":"klick-preis","zug":"fuhre:plan:umkaempft","text":"Fahren: wo der Adler wirbt · 48 hl+529 M","preis":529,"kasseVor":0,"kasseNach":30,"jahr":1886,"woche":15,"ende":false,"endgrund":null}
+{"t":195.4,"was":"klick-preis","zug":"fuhre:plan:mager","text":"Fahren: die mageren Häuser · 48 hl+529 M","preis":529,"kasseVor":30,"kasseNach":56,"jahr":1886,"woche":16,"ende":false,"endgrund":null}
+{"t":196,"was":"runde-ende","runde":22,"jahr":1886,"woche":17,"kasse":32,"deckung":0.010012515644555695,"besterPreis":3196,"ende":false,"endgrund":null,"echteWochenGesamt":59}
+{"t":196.7,"was":"klick-nav","zug":"gegner:zeige:47","text":"zeigen","jahr":1886,"woche":17,"kasse":32,"ende":false,"endgrund":null}
+{"t":197.3,"was":"klick-nav","zug":"gegner:zeige:46","text":"zeigen","jahr":1886,"woche":17,"kasse":32,"ende":false,"endgrund":null}
+{"t":197.9,"was":"klick-nav","zug":"sud:zettel-anstich","text":"Junges Fass · +14 · 1,5 hl","jahr":1886,"woche":17,"kasse":32,"ende":false,"endgrund":null}
+{"t":198.5,"was":"klick-nav","zug":"sud:zettel-wechsel-frei","text":"Natureis aus dem Flusslässt Exportbier zu","jahr":1886,"woche":17,"kasse":32,"ende":false,"endgrund":null}
+{"t":198.9,"was":"klick-nav","zug":"kern:chronik","text":"Chronik97","jahr":1886,"woche":17,"kasse":32,"ende":false,"endgrund":null}
+{"t":199.4,"was":"klick-nav","zug":"kern:protokoll","text":"Buch1049","jahr":1886,"woche":17,"kasse":32,"ende":false,"endgrund":null}
+{"t":199.8,"was":"klick-nav","zug":"klang:ton","text":"♪","jahr":1886,"woche":17,"kasse":32,"ende":false,"endgrund":null}
+{"t":200.5,"was":"klick-nav","zug":"stadt:reiter:gegner-amort-gg-band","text":"Ohne dich geschehen · 47 Zügeliegt auf","jahr":1886,"woche":17,"kasse":32,"ende":false,"endgrund":null}
+{"t":201,"was":"klick-nav","zug":"stadt:reiter:fuhre-fu-brett-fu-haeuser","text":"DIE HÄUSERwollen 111 · im Keller liegen 24 hl","jahr":1886,"woche":17,"kasse":32,"ende":false,"endgrund":null}
+{"t":201.6,"was":"klick-nav","zug":"stadt:reiter:fuhre-fu-brett-fu-keller","text":"DER EISKELLER24 von 135 hl · 24 reif","jahr":1886,"woche":17,"kasse":32,"ende":false,"endgrund":null}
+{"t":202.1,"was":"klick-nav","zug":"stadt:ortsmarken","text":"Ortsmarken7 auf dem Pflock","jahr":1886,"woche":17,"kasse":32,"ende":false,"endgrund":null}
+{"t":202.7,"was":"klick-preis","zug":"fuhre:plan:durst","text":"Fahren: nach Durst · 23 hl+151 M","preis":151,"kasseVor":32,"kasseNach":0,"jahr":1886,"woche":18,"ende":false,"endgrund":null}
+{"t":203.2,"was":"runde-ende","runde":23,"jahr":1886,"woche":19,"kasse":0,"deckung":0,"besterPreis":3196,"ende":false,"endgrund":null,"echteWochenGesamt":61}
+{"t":203.8,"was":"klick-nav","zug":"sud:zettel-anstich","text":"Hefe abernten · +8 · ohne Fass","jahr":1886,"woche":19,"kasse":0,"ende":false,"endgrund":null}
+{"t":204.3,"was":"klick-nav","zug":"sud:zettel-wechsel-frei","text":"Ohne Kühlung durchgären lassennur Schankbier","jahr":1886,"woche":19,"kasse":0,"ende":false,"endgrund":null}
+{"t":204.8,"was":"klick-nav","zug":"kern:chronik","text":"Chronik98","jahr":1886,"woche":19,"kasse":0,"ende":false,"endgrund":null}
+{"t":205.2,"was":"klick-nav","zug":"kern:protokoll","text":"Buch1066","jahr":1886,"woche":19,"kasse":0,"ende":false,"endgrund":null}
+{"t":205.7,"was":"klick-nav","zug":"klang:ton","text":"—","jahr":1886,"woche":19,"kasse":0,"ende":false,"endgrund":null}
+{"t":206.3,"was":"klick-nav","zug":"stadt:reiter:gegner-amort-gg-band","text":"Ohne dich geschehen · 49 Zügezugeklappt","jahr":1886,"woche":19,"kasse":0,"ende":false,"endgrund":null}
+{"t":206.9,"was":"klick-nav","zug":"stadt:reiter:fuhre-fu-brett-fu-haeuser","text":"DIE HÄUSERwollen 119 · im Keller liegen 0,0 hl","jahr":1886,"woche":19,"kasse":0,"ende":false,"endgrund":null}
+{"t":207.5,"was":"klick-nav","zug":"stadt:reiter:fuhre-fu-brett-fu-keller","text":"DER EISKELLER0,0 von 135 hl · 0,0 reif","jahr":1886,"woche":19,"kasse":0,"ende":false,"endgrund":null}
+{"t":207.9,"was":"klick-nav","zug":"stadt:ortsmarken","text":"Ortsmarken8 im Bild","jahr":1886,"woche":19,"kasse":0,"ende":false,"endgrund":null}
+{"t":208.6,"was":"klick-nav","zug":"gegner:zeige:49","text":"zeigen","jahr":1886,"woche":19,"kasse":0,"ende":false,"endgrund":null}
+{"t":209.2,"was":"klick-nav","zug":"gegner:zeige:48","text":"zeigen","jahr":1886,"woche":19,"kasse":0,"ende":false,"endgrund":null}
+{"t":209.9,"was":"runde-ende","runde":24,"jahr":1886,"woche":20,"kasse":0,"deckung":0,"besterPreis":3196,"ende":false,"endgrund":null,"echteWochenGesamt":62}
+{"t":210.6,"was":"klick-nav","zug":"gegner:zeige:50","text":"zeigen","jahr":1886,"woche":20,"kasse":0,"ende":false,"endgrund":null}
+{"t":211.1,"was":"klick-nav","zug":"sud:zettel-hefe-fass","text":"Junges Fass · +14 · 1,5 hl","jahr":1886,"woche":20,"kasse":0,"ende":false,"endgrund":null}
+{"t":211.8,"was":"klick-nav","zug":"sud:zettel-wechsel-frei","text":"Natureis aus dem Flusslässt Exportbier zu","jahr":1886,"woche":20,"kasse":0,"ende":false,"endgrund":null}
+{"t":212.2,"was":"klick-nav","zug":"kern:protokoll","text":"Buch1072","jahr":1886,"woche":20,"kasse":0,"ende":false,"endgrund":null}
+{"t":212.7,"was":"klick-nav","zug":"klang:ton","text":"♪","jahr":1886,"woche":20,"kasse":0,"ende":false,"endgrund":null}
+{"t":213.3,"was":"klick-nav","zug":"stadt:reiter:gegner-amort-gg-band","text":"Ohne dich geschehen · 50 Zügeliegt auf","jahr":1886,"woche":20,"kasse":0,"ende":false,"endgrund":null}
+{"t":213.9,"was":"klick-nav","zug":"stadt:reiter:fuhre-fu-brett-fu-haeuser","text":"DIE HÄUSERwollen 137 · im Keller liegen 48 hl","jahr":1886,"woche":20,"kasse":0,"ende":false,"endgrund":null}
+{"t":214.4,"was":"klick-nav","zug":"stadt:reiter:fuhre-fu-brett-fu-keller","text":"DER EISKELLER48 von 135 hl · 48 reif","jahr":1886,"woche":20,"kasse":0,"ende":false,"endgrund":null}
+{"t":214.9,"was":"klick-nav","zug":"stadt:ortsmarken","text":"Ortsmarken7 auf dem Pflock","jahr":1886,"woche":20,"kasse":0,"ende":false,"endgrund":null}
+{"t":215.4,"was":"klick-nav","zug":"gegner:hinhalten:torschenke","text":"Freibier3,0 hl statt Geld","jahr":1886,"woche":20,"kasse":0,"ende":false,"endgrund":null}
+{"t":215.8,"was":"klick-nav","zug":"stadt:marke:gegner-kirche","text":"frei geworden","jahr":1886,"woche":20,"kasse":0,"ende":false,"endgrund":null}
+{"t":216.4,"was":"klick-nav","zug":"kern:chronik","text":"Chronik99","jahr":1886,"woche":20,"kasse":0,"ende":false,"endgrund":null}
+{"t":216.9,"was":"klick-preis","zug":"fuhre:plan:mager","text":"Fahren: die mageren Häuser · 44 hl+457 M","preis":457,"kasseVor":0,"kasseNach":43,"jahr":1886,"woche":21,"ende":false,"endgrund":null}
+{"t":217.5,"was":"klick-preis","zug":"fuhre:plan:durst","text":"Fahren: nach Durst · 24 hl+173 M","preis":173,"kasseVor":43,"kasseNach":1,"jahr":1886,"woche":22,"ende":false,"endgrund":null}
+{"t":218.1,"was":"runde-ende","runde":25,"jahr":1886,"woche":23,"kasse":1,"deckung":0.00031289111389236547,"besterPreis":3196,"ende":false,"endgrund":null,"echteWochenGesamt":65}
+{"t":218.7,"was":"klick-nav","zug":"sud:zettel-wechsel-frei","text":"Ohne Kühlung durchgären lassennur Schankbier","jahr":1886,"woche":23,"kasse":1,"ende":false,"endgrund":null}
+{"t":219.2,"was":"klick-nav","zug":"kern:protokoll","text":"Buch1116","jahr":1886,"woche":23,"kasse":1,"ende":false,"endgrund":null}
+{"t":219.6,"was":"klick-nav","zug":"klang:ton","text":"—","jahr":1886,"woche":23,"kasse":1,"ende":false,"endgrund":null}
+{"t":220.2,"was":"klick-nav","zug":"stadt:reiter:gegner-amort-gg-band","text":"Ohne dich geschehen · 52 Zügezugeklappt","jahr":1886,"woche":23,"kasse":1,"ende":false,"endgrund":null}
+{"t":220.8,"was":"klick-nav","zug":"stadt:reiter:fuhre-fu-brett-fu-haeuser","text":"DIE HÄUSERwollen 122 · im Keller liegen 24 hl","jahr":1886,"woche":23,"kasse":1,"ende":false,"endgrund":null}
+{"t":221.4,"was":"klick-nav","zug":"stadt:reiter:fuhre-fu-brett-fu-keller","text":"DER EISKELLER24 von 135 hl · 24 reif","jahr":1886,"woche":23,"kasse":1,"ende":false,"endgrund":null}
+{"t":221.9,"was":"klick-nav","zug":"stadt:ortsmarken","text":"Ortsmarken6 im Bild","jahr":1886,"woche":23,"kasse":1,"ende":false,"endgrund":null}
+{"t":222.5,"was":"klick-nav","zug":"gegner:zeige:52","text":"zeigen","jahr":1886,"woche":23,"kasse":1,"ende":false,"endgrund":null}
+{"t":223.2,"was":"klick-nav","zug":"gegner:zeige:51","text":"zeigen","jahr":1886,"woche":23,"kasse":1,"ende":false,"endgrund":null}
+{"t":223.9,"was":"klick-preis","zug":"fuhre:plan:durst","text":"Fahren: nach Durst · 24 hl+173 M","preis":173,"kasseVor":1,"kasseNach":0,"jahr":1886,"woche":24,"ende":false,"endgrund":null}
+{"t":224.6,"was":"klick-preis","zug":"fuhre:plan:mager","text":"Fahren: die mageren Häuser · 48 hl+529 M","preis":529,"kasseVor":0,"kasseNach":173,"jahr":1886,"woche":25,"ende":false,"endgrund":null}
+{"t":225.1,"was":"klick-preis","zug":"fuhre:plan:mager","text":"Fahren: die mageren Häuser · 48 hl+529 M","preis":529,"kasseVor":173,"kasseNach":362,"jahr":1886,"woche":26,"ende":false,"endgrund":null}
+{"t":225.7,"was":"runde-ende","runde":26,"jahr":1886,"woche":27,"kasse":338,"deckung":0.10477371357718537,"besterPreis":3226,"ende":false,"endgrund":null,"echteWochenGesamt":69}
+{"t":226.3,"was":"klick-nav","zug":"gegner:zeige:56","text":"zeigen","jahr":1886,"woche":27,"kasse":338,"ende":false,"endgrund":null}
+{"t":226.9,"was":"klick-nav","zug":"gegner:zeige:55","text":"zeigen","jahr":1886,"woche":27,"kasse":338,"ende":false,"endgrund":null}
+{"t":227.4,"was":"klick-nav","zug":"sud:zettel-anstich","text":"Junges Fass · +14 · 1,5 hl","jahr":1886,"woche":27,"kasse":338,"ende":false,"endgrund":null}
+{"t":228,"was":"klick-nav","zug":"sud:zettel-wechsel-frei","text":"Natureis aus dem Flusslässt Exportbier zu","jahr":1886,"woche":27,"kasse":338,"ende":false,"endgrund":null}
+{"t":228.5,"was":"klick-nav","zug":"kern:chronik","text":"Chronik101","jahr":1886,"woche":27,"kasse":338,"ende":false,"endgrund":null}
+{"t":228.9,"was":"klick-nav","zug":"kern:protokoll","text":"Buch1195","jahr":1886,"woche":27,"kasse":338,"ende":false,"endgrund":null}
+{"t":229.4,"was":"klick-nav","zug":"klang:ton","text":"♪","jahr":1886,"woche":27,"kasse":338,"ende":false,"endgrund":null}
+{"t":229.9,"was":"klick-nav","zug":"stadt:reiter:gegner-amort-gg-band","text":"Ohne dich geschehen · 56 Zügeliegt auf","jahr":1886,"woche":27,"kasse":338,"ende":false,"endgrund":null}
+{"t":230.5,"was":"klick-nav","zug":"stadt:reiter:fuhre-fu-brett-fu-haeuser","text":"DIE HÄUSERwollen 95 · im Keller liegen 24 hl","jahr":1886,"woche":27,"kasse":338,"ende":false,"endgrund":null}
+{"t":230.9,"was":"klick-nav","zug":"stadt:ortsmarken","text":"Ortsmarken6 auf dem Pflock","jahr":1886,"woche":27,"kasse":338,"ende":false,"endgrund":null}
+{"t":231.5,"was":"klick-nav","zug":"stadt:reiter:fuhre-fu-brett-fu-keller","text":"DER EISKELLER23 von 135 hl · 23 reif","jahr":1886,"woche":27,"kasse":338,"ende":false,"endgrund":null}
+{"t":232.1,"was":"klick-preis","zug":"fuhre:plan:durst","text":"Fahren: nach Durst · 23 hl+149 M","preis":149,"kasseVor":338,"kasseNach":307,"jahr":1886,"woche":28,"ende":false,"endgrund":null}
+{"t":232.7,"was":"klick-preis","zug":"gegner:zukaufen:brueckenwirt","text":"lieber zukaufen3,0 hl · 192 M","preis":-192,"kasseVor":307,"kasseNach":115,"jahr":1886,"woche":28,"ende":false,"endgrund":null}
+{"t":233.2,"was":"runde-ende","runde":27,"jahr":1886,"woche":29,"kasse":91,"deckung":0.028208307501549908,"besterPreis":3226,"ende":false,"endgrund":null,"echteWochenGesamt":71}
+{"t":233.8,"was":"klick-nav","zug":"sud:zettel-anstich","text":"Hefe abernten · +8 · ohne Fass","jahr":1886,"woche":29,"kasse":91,"ende":false,"endgrund":null}
+{"t":234.3,"was":"klick-nav","zug":"sud:zettel-wechsel-frei","text":"Ohne Kühlung durchgären lassennur Schankbier","jahr":1886,"woche":29,"kasse":91,"ende":false,"endgrund":null}
+{"t":234.8,"was":"klick-nav","zug":"kern:chronik","text":"Chronik102","jahr":1886,"woche":29,"kasse":91,"ende":false,"endgrund":null}
+{"t":235.2,"was":"klick-nav","zug":"kern:protokoll","text":"Buch1220","jahr":1886,"woche":29,"kasse":91,"ende":false,"endgrund":null}
+{"t":235.7,"was":"klick-nav","zug":"klang:ton","text":"—","jahr":1886,"woche":29,"kasse":91,"ende":false,"endgrund":null}
+{"t":236.3,"was":"klick-nav","zug":"stadt:reiter:gegner-amort-gg-band","text":"Ohne dich geschehen · 58 Zügezugeklappt","jahr":1886,"woche":29,"kasse":91,"ende":false,"endgrund":null}
+{"t":236.9,"was":"klick-nav","zug":"stadt:reiter:fuhre-fu-brett-fu-haeuser","text":"DIE HÄUSERwollen 110 · im Keller liegen 12 hl","jahr":1886,"woche":29,"kasse":91,"ende":false,"endgrund":null}
+{"t":237.5,"was":"klick-nav","zug":"stadt:reiter:fuhre-fu-brett-fu-keller","text":"DER EISKELLER12 von 135 hl · 12 reif","jahr":1886,"woche":29,"kasse":91,"ende":false,"endgrund":null}
+{"t":237.9,"was":"klick-nav","zug":"stadt:ortsmarken","text":"Ortsmarken6 im Bild","jahr":1886,"woche":29,"kasse":91,"ende":false,"endgrund":null}
+{"t":238.5,"was":"klick-nav","zug":"gegner:zeige:58","text":"zeigen","jahr":1886,"woche":29,"kasse":91,"ende":false,"endgrund":null}
+{"t":239,"was":"klick-nav","zug":"gegner:zeige:57","text":"zeigen","jahr":1886,"woche":29,"kasse":91,"ende":false,"endgrund":null}
+{"t":239.7,"was":"klick-preis","zug":"fuhre:plan:umkaempft","text":"Fahren: wo der Adler wirbt · 12 hl−6 M","preis":-6,"kasseVor":91,"kasseNach":0,"jahr":1886,"woche":30,"ende":false,"endgrund":null}
+{"t":240.7,"was":"klick-preis","zug":"fuhre:plan:umkaempft","text":"Fahren: wo der Adler wirbt · 48 hl+529 M","preis":529,"kasseVor":0,"kasseNach":989,"jahr":1887,"woche":1,"ende":false,"endgrund":null}
+{"t":242.2,"was":"klick-preis","zug":"gegner:zukaufen:brueckenwirt","text":"lieber zukaufen3,0 hl · 192 M","preis":-192,"kasseVor":989,"kasseNach":797,"jahr":1887,"woche":1,"ende":false,"endgrund":null}
+{"t":242.8,"was":"runde-ende","runde":28,"jahr":1887,"woche":2,"kasse":773,"deckung":0.26044474393531,"besterPreis":2968,"ende":false,"endgrund":null,"echteWochenGesamt":74}
+{"t":243.4,"was":"klick-nav","zug":"sud:zettel-anstich","text":"Junges Fass · +14 · 1,5 hl","jahr":1887,"woche":2,"kasse":773,"ende":false,"endgrund":null}
+{"t":244,"was":"klick-nav","zug":"sud:zettel-wechsel-frei","text":"Natureis aus dem Flusslässt Exportbier zu","jahr":1887,"woche":2,"kasse":773,"ende":false,"endgrund":null}
+{"t":244.4,"was":"klick-nav","zug":"kern:chronik","text":"Chronik113","jahr":1887,"woche":2,"kasse":773,"ende":false,"endgrund":null}
+{"t":244.9,"was":"klick-nav","zug":"kern:protokoll","text":"Buch1272","jahr":1887,"woche":2,"kasse":773,"ende":false,"endgrund":null}
+{"t":245.3,"was":"klick-nav","zug":"klang:ton","text":"♪","jahr":1887,"woche":2,"kasse":773,"ende":false,"endgrund":null}
+{"t":245.9,"was":"klick-nav","zug":"stadt:reiter:gegner-amort-gg-band","text":"Ohne dich geschehen · 59 Zügezugeklappt","jahr":1887,"woche":2,"kasse":773,"ende":false,"endgrund":null}
+{"t":246.4,"was":"klick-nav","zug":"stadt:reiter:fuhre-fu-brett-fu-haeuser","text":"DIE HÄUSERwollen 47 · im Keller liegen 12 hl","jahr":1887,"woche":2,"kasse":773,"ende":false,"endgrund":null}
+{"t":247,"was":"klick-nav","zug":"stadt:reiter:fuhre-fu-brett-fu-wagen","text":"STÜCKGUT0,0 von 18 hl · 0 von 10 Halten","jahr":1887,"woche":2,"kasse":773,"ende":false,"endgrund":null}
+{"t":247.4,"was":"klick-nav","zug":"stadt:ortsmarken","text":"Ortsmarken6 auf dem Pflock","jahr":1887,"woche":2,"kasse":773,"ende":false,"endgrund":null}
+{"t":248.3,"was":"klick-nav","zug":"preis:tafel","text":"Michaelitafel 1887 · 5 Angebote","jahr":1887,"woche":2,"kasse":773,"ende":false,"endgrund":null}
+{"t":249,"was":"klick-nav","zug":"stadt:reiter:fuhre-fu-brett-fu-keller","text":"DER EISKELLER11 von 135 hl · 11 reif","jahr":1887,"woche":2,"kasse":773,"ende":false,"endgrund":null}
+{"t":249.6,"was":"klick-nav","zug":"gegner:zeige:59","text":"zeigen","jahr":1887,"woche":2,"kasse":773,"ende":false,"endgrund":null}
+{"t":250.1,"was":"klick-preis","zug":"fuhre:plan:rechnung","text":"Fahren: nach Rechnung · 11 hl+82 M","preis":82,"kasseVor":773,"kasseNach":758,"jahr":1887,"woche":3,"ende":false,"endgrund":null}
+{"t":250.6,"was":"klick-preis","zug":"fuhre:fracht:stueck","text":"Stückgut · bis 18 hl−52 M","preis":-52,"kasseVor":758,"kasseNach":758,"jahr":1887,"woche":3,"ende":false,"endgrund":null}
+{"t":251.2,"was":"klick-preis","zug":"fuhre:fracht:stueck","text":"Stückgut · bis 18 hl−52 M","preis":-52,"kasseVor":758,"kasseNach":758,"jahr":1887,"woche":3,"ende":false,"endgrund":null}
+{"t":251.7,"was":"runde-ende","runde":29,"jahr":1887,"woche":4,"kasse":734,"deckung":0.2473045822102426,"besterPreis":2968,"ende":false,"endgrund":null,"echteWochenGesamt":76}
+{"t":252.3,"was":"klick-nav","zug":"gegner:zeige:60","text":"zeigen","jahr":1887,"woche":4,"kasse":734,"ende":false,"endgrund":null}
+{"t":252.9,"was":"klick-nav","zug":"sud:zettel-anstich","text":"Hefe abernten · +8 · ohne Fass","jahr":1887,"woche":4,"kasse":734,"ende":false,"endgrund":null}
+{"t":253.4,"was":"klick-nav","zug":"sud:zettel-wechsel-frei","text":"Ohne Kühlung durchgären lassennur Schankbier","jahr":1887,"woche":4,"kasse":734,"ende":false,"endgrund":null}
+{"t":253.9,"was":"klick-nav","zug":"kern:chronik","text":"Chronik114","jahr":1887,"woche":4,"kasse":734,"ende":false,"endgrund":null}
+{"t":254.3,"was":"klick-nav","zug":"kern:protokoll","text":"Buch1287","jahr":1887,"woche":4,"kasse":734,"ende":false,"endgrund":null}
+{"t":254.7,"was":"klick-nav","zug":"klang:ton","text":"—","jahr":1887,"woche":4,"kasse":734,"ende":false,"endgrund":null}
+{"t":255.3,"was":"klick-nav","zug":"stadt:reiter:gegner-amort-gg-band","text":"Ohne dich geschehen · 60 Zügeliegt auf","jahr":1887,"woche":4,"kasse":734,"ende":false,"endgrund":null}
+{"t":255.9,"was":"klick-nav","zug":"stadt:reiter:fuhre-fu-brett-fu-haeuser","text":"DIE HÄUSERwollen 74 · im Keller liegen 12 hl","jahr":1887,"woche":4,"kasse":734,"ende":false,"endgrund":null}
+{"t":256.5,"was":"klick-nav","zug":"stadt:reiter:fuhre-fu-brett-fu-keller","text":"DER EISKELLER12 von 135 hl · 12 reif","jahr":1887,"woche":4,"kasse":734,"ende":false,"endgrund":null}
+{"t":256.9,"was":"klick-nav","zug":"stadt:ortsmarken","text":"Ortsmarken6 im Bild","jahr":1887,"woche":4,"kasse":734,"ende":false,"endgrund":null}
+{"t":257.5,"was":"klick-preis","zug":"fuhre:plan:rechnung","text":"Fahren: nach Rechnung · 12 hl+100 M","preis":100,"kasseVor":734,"kasseNach":724,"jahr":1887,"woche":5,"ende":false,"endgrund":null}
+{"t":258,"was":"klick-preis","zug":"fuhre:plan:rechnung","text":"Fahren: nach Rechnung · 18 hl+164 M","preis":164,"kasseVor":724,"kasseNach":737,"jahr":1887,"woche":6,"ende":false,"endgrund":null}
+{"t":258.6,"was":"klick-preis","zug":"fuhre:plan:rechnung","text":"Fahren: nach Rechnung · 18 hl+164 M","preis":164,"kasseVor":737,"kasseNach":751,"jahr":1887,"woche":7,"ende":false,"endgrund":null}
+{"t":259.1,"was":"runde-ende","runde":30,"jahr":1887,"woche":8,"kasse":727,"deckung":0.24494609164420486,"besterPreis":2968,"ende":false,"endgrund":null,"echteWochenGesamt":80}
+{"t":260.2,"was":"klick-nav","zug":"sud:zettel-anstich","text":"Junges Fass · +14 · 1,5 hl","jahr":1887,"woche":8,"kasse":727,"ende":false,"endgrund":null}
+{"t":260.8,"was":"klick-nav","zug":"sud:zettel-wechsel-frei","text":"Natureis aus dem Flusslässt Exportbier zu","jahr":1887,"woche":8,"kasse":727,"ende":false,"endgrund":null}
+{"t":261.2,"was":"klick-nav","zug":"kern:chronik","text":"Chronik116","jahr":1887,"woche":8,"kasse":727,"ende":false,"endgrund":null}
+{"t":261.6,"was":"klick-nav","zug":"kern:protokoll","text":"Buch1333","jahr":1887,"woche":8,"kasse":727,"ende":false,"endgrund":null}
+{"t":262.1,"was":"klick-nav","zug":"klang:ton","text":"♪","jahr":1887,"woche":8,"kasse":727,"ende":false,"endgrund":null}
+{"t":262.6,"was":"klick-nav","zug":"stadt:reiter:gegner-amort-gg-band","text":"Ohne dich geschehen · 64 Zügezugeklappt","jahr":1887,"woche":8,"kasse":727,"ende":false,"endgrund":null}
+{"t":263.2,"was":"klick-nav","zug":"stadt:reiter:fuhre-fu-brett-fu-haeuser","text":"DIE HÄUSERwollen 90 · im Keller liegen 24 hl","jahr":1887,"woche":8,"kasse":727,"ende":false,"endgrund":null}
+{"t":263.8,"was":"klick-nav","zug":"stadt:reiter:fuhre-fu-brett-fu-keller","text":"DER EISKELLER24 von 135 hl · 24 reif","jahr":1887,"woche":8,"kasse":727,"ende":false,"endgrund":null}
+{"t":264.3,"was":"klick-nav","zug":"stadt:ortsmarken","text":"Ortsmarken6 auf dem Pflock","jahr":1887,"woche":8,"kasse":727,"ende":false,"endgrund":null}
+{"t":264.8,"was":"klick-nav","zug":"gegner:zeige:64","text":"zeigen","jahr":1887,"woche":8,"kasse":727,"ende":false,"endgrund":null}
+{"t":265.4,"was":"klick-preis","zug":"fuhre:plan:rechnung","text":"Fahren: nach Rechnung · 18 hl+164 M","preis":164,"kasseVor":727,"kasseNach":741,"jahr":1887,"woche":9,"ende":false,"endgrund":null}
+{"t":266,"was":"klick-preis","zug":"fuhre:plan:rechnung","text":"Fahren: nach Rechnung · 4,5 hl+13 M","preis":13,"kasseVor":741,"kasseNach":698,"jahr":1887,"woche":10,"ende":false,"endgrund":null}
+{"t":266.6,"was":"klick-preis","zug":"fuhre:fracht:stueck","text":"Stückgut · bis 18 hl−52 M","preis":-52,"kasseVor":698,"kasseNach":698,"jahr":1887,"woche":10,"ende":false,"endgrund":null}
+{"t":267.1,"was":"runde-ende","runde":31,"jahr":1887,"woche":11,"kasse":674,"deckung":0.17727511835875856,"besterPreis":3802,"ende":false,"endgrund":null,"echteWochenGesamt":83}
+{"t":267.7,"was":"klick-nav","zug":"gegner:zeige:65","text":"zeigen","jahr":1887,"woche":11,"kasse":674,"ende":false,"endgrund":null}
+{"t":268.3,"was":"klick-nav","zug":"sud:zettel-anstich","text":"Hefe abernten · +8 · ohne Fass","jahr":1887,"woche":11,"kasse":674,"ende":false,"endgrund":null}
+{"t":268.8,"was":"klick-nav","zug":"sud:zettel-wechsel-frei","text":"Ohne Kühlung durchgären lassennur Schankbier","jahr":1887,"woche":11,"kasse":674,"ende":false,"endgrund":null}
+{"t":269.3,"was":"klick-nav","zug":"kern:protokoll","text":"Buch1357","jahr":1887,"woche":11,"kasse":674,"ende":false,"endgrund":null}
+{"t":269.7,"was":"klick-nav","zug":"klang:ton","text":"—","jahr":1887,"woche":11,"kasse":674,"ende":false,"endgrund":null}
+{"t":270.3,"was":"klick-nav","zug":"stadt:reiter:gegner-amort-gg-band","text":"Ohne dich geschehen · 65 Zügeliegt auf","jahr":1887,"woche":11,"kasse":674,"ende":false,"endgrund":null}
+{"t":270.8,"was":"klick-nav","zug":"stadt:reiter:fuhre-fu-brett-fu-haeuser","text":"DIE HÄUSERwollen 95 · im Keller liegen 0,0 hl","jahr":1887,"woche":11,"kasse":674,"ende":false,"endgrund":null}
+{"t":271.4,"was":"klick-nav","zug":"stadt:reiter:fuhre-fu-brett-fu-keller","text":"DER EISKELLER0,0 von 135 hl · 0,0 reif","jahr":1887,"woche":11,"kasse":674,"ende":false,"endgrund":null}
+{"t":271.8,"was":"klick-nav","zug":"stadt:ortsmarken","text":"Ortsmarken6 im Bild","jahr":1887,"woche":11,"kasse":674,"ende":false,"endgrund":null}
+{"t":272.3,"was":"klick-nav","zug":"fuhre:fuellen","text":"Nach Durst füllen","jahr":1887,"woche":11,"kasse":674,"ende":false,"endgrund":null}
+{"t":272.8,"was":"klick-nav","zug":"fuhre:wie-vorige","text":"Wie vorige Woche","jahr":1887,"woche":11,"kasse":674,"ende":false,"endgrund":null}
+{"t":273.4,"was":"klick-preis","zug":"gegner:beschwerde-bild","text":"Dem Wirt die Restschuld nachrechnenkostet kein Geld · vier Ansehengegen Gasthof Lindenhof","preis":0,"kasseVor":674,"kasseNach":674,"jahr":1887,"woche":11,"ende":false,"endgrund":null}
+{"t":274.1,"was":"klick-preis","zug":"fuhre:fracht:stueck","text":"Stückgut · bis 18 hl−52 M","preis":-52,"kasseVor":674,"kasseNach":674,"jahr":1887,"woche":11,"ende":false,"endgrund":null}
+{"t":274.6,"was":"klick-preis","zug":"fuhre:fracht:stueck","text":"Stückgut · bis 18 hl−52 M","preis":-52,"kasseVor":674,"kasseNach":674,"jahr":1887,"woche":11,"ende":false,"endgrund":null}
+{"t":275.1,"was":"runde-ende","runde":32,"jahr":1887,"woche":12,"kasse":650,"deckung":0.17096265123619148,"besterPreis":3802,"ende":false,"endgrund":null,"echteWochenGesamt":84}
+{"t":275.7,"was":"klick-nav","zug":"sud:zettel-hefe-fass","text":"Junges Fass · +14 · 1,5 hl","jahr":1887,"woche":12,"kasse":650,"ende":false,"endgrund":null}
+{"t":276.3,"was":"klick-nav","zug":"sud:zettel-wechsel-frei","text":"Natureis aus dem Flusslässt Exportbier zu","jahr":1887,"woche":12,"kasse":650,"ende":false,"endgrund":null}
+{"t":276.7,"was":"klick-nav","zug":"kern:chronik","text":"Chronik118","jahr":1887,"woche":12,"kasse":650,"ende":false,"endgrund":null}
+{"t":277.1,"was":"klick-nav","zug":"kern:protokoll","text":"Buch1364","jahr":1887,"woche":12,"kasse":650,"ende":false,"endgrund":null}
+{"t":277.6,"was":"klick-nav","zug":"klang:ton","text":"♪","jahr":1887,"woche":12,"kasse":650,"ende":false,"endgrund":null}
+{"t":278.1,"was":"klick-nav","zug":"stadt:reiter:gegner-amort-gg-band","text":"Ohne dich geschehen · 66 Zügezugeklappt","jahr":1887,"woche":12,"kasse":650,"ende":false,"endgrund":null}
+{"t":278.7,"was":"klick-nav","zug":"stadt:reiter:fuhre-fu-brett-fu-haeuser","text":"DIE HÄUSERwollen 128 · im Keller liegen 48 hl","jahr":1887,"woche":12,"kasse":650,"ende":false,"endgrund":null}
+{"t":279.4,"was":"klick-nav","zug":"stadt:reiter:fuhre-fu-brett-fu-keller","text":"DER EISKELLER48 von 135 hl · 48 reif","jahr":1887,"woche":12,"kasse":650,"ende":false,"endgrund":null}
+{"t":279.8,"was":"klick-nav","zug":"stadt:ortsmarken","text":"Ortsmarken6 auf dem Pflock","jahr":1887,"woche":12,"kasse":650,"ende":false,"endgrund":null}
+{"t":280.4,"was":"klick-nav","zug":"gegner:zeige:66","text":"zeigen","jahr":1887,"woche":12,"kasse":650,"ende":false,"endgrund":null}
+{"t":281.1,"was":"klick-preis","zug":"fuhre:plan:umkaempft","text":"Fahren: wo der Adler wirbt · 18 hl+164 M","preis":164,"kasseVor":650,"kasseNach":614,"jahr":1887,"woche":13,"ende":false,"endgrund":null}
+{"t":281.8,"was":"klick-preis","zug":"fuhre:plan:rechnung","text":"Fahren: nach Rechnung · 18 hl+164 M","preis":164,"kasseVor":614,"kasseNach":630,"jahr":1887,"woche":14,"ende":false,"endgrund":null}
+{"t":282.3,"was":"klick-preis","zug":"fuhre:plan:rechnung","text":"Fahren: nach Rechnung · 18 hl+164 M","preis":164,"kasseVor":630,"kasseNach":645,"jahr":1887,"woche":15,"ende":false,"endgrund":null}
+{"t":282.8,"was":"runde-ende","runde":33,"jahr":1887,"woche":16,"kasse":621,"deckung":0.16333508679642295,"besterPreis":3802,"ende":false,"endgrund":null,"echteWochenGesamt":88}
+{"t":283.4,"was":"klick-nav","zug":"gegner:zeige:68","text":"zeigen","jahr":1887,"woche":16,"kasse":621,"ende":false,"endgrund":null}
+{"t":283.9,"was":"klick-nav","zug":"gegner:zeige:67","text":"zeigen","jahr":1887,"woche":16,"kasse":621,"ende":false,"endgrund":null}
+{"t":284.5,"was":"klick-nav","zug":"sud:zettel-anstich","text":"Junges Fass · +14 · 1,5 hl","jahr":1887,"woche":16,"kasse":621,"ende":false,"endgrund":null}
+{"t":285,"was":"klick-nav","zug":"sud:zettel-wechsel-frei","text":"Ohne Kühlung durchgären lassennur Schankbier","jahr":1887,"woche":16,"kasse":621,"ende":false,"endgrund":null}
+{"t":285.5,"was":"klick-nav","zug":"kern:chronik","text":"Chronik119","jahr":1887,"woche":16,"kasse":621,"ende":false,"endgrund":null}
+{"t":285.9,"was":"klick-nav","zug":"kern:protokoll","text":"Buch1404","jahr":1887,"woche":16,"kasse":621,"ende":false,"endgrund":null}
+{"t":286.4,"was":"klick-nav","zug":"klang:ton","text":"—","jahr":1887,"woche":16,"kasse":621,"ende":false,"endgrund":null}
+{"t":286.9,"was":"klick-nav","zug":"stadt:reiter:gegner-amort-gg-band","text":"Ohne dich geschehen · 68 Zügeliegt auf","jahr":1887,"woche":16,"kasse":621,"ende":false,"endgrund":null}
+{"t":287.5,"was":"klick-nav","zug":"stadt:reiter:fuhre-fu-brett-fu-haeuser","text":"DIE HÄUSERwollen 90 · im Keller liegen 17 hl","jahr":1887,"woche":16,"kasse":621,"ende":false,"endgrund":null}
+{"t":288.1,"was":"klick-nav","zug":"stadt:reiter:fuhre-fu-brett-fu-keller","text":"DER EISKELLER17 von 135 hl · 17 reif","jahr":1887,"woche":16,"kasse":621,"ende":false,"endgrund":null}
+{"t":288.5,"was":"klick-nav","zug":"stadt:ortsmarken","text":"Ortsmarken6 im Bild","jahr":1887,"woche":16,"kasse":621,"ende":false,"endgrund":null}
+{"t":289.1,"was":"klick-preis","zug":"fuhre:plan:rechnung","text":"Fahren: nach Rechnung · 15 hl+132 M","preis":132,"kasseVor":621,"kasseNach":622,"jahr":1887,"woche":17,"ende":false,"endgrund":null}
+{"t":289.6,"was":"klick-preis","zug":"fuhre:plan:rechnung","text":"Fahren: nach Rechnung · 18 hl+164 M","preis":164,"kasseVor":622,"kasseNach":637,"jahr":1887,"woche":18,"ende":false,"endgrund":null}
+{"t":290.1,"was":"klick-preis","zug":"fuhre:plan:rechnung","text":"Fahren: nach Rechnung · 6,0 hl+31 M","preis":31,"kasseVor":637,"kasseNach":598,"jahr":1887,"woche":19,"ende":false,"endgrund":null}
+{"t":290.7,"was":"runde-ende","runde":34,"jahr":1887,"woche":20,"kasse":574,"deckung":0.1509731720147291,"besterPreis":3802,"ende":false,"endgrund":null,"echteWochenGesamt":92}
+{"t":291.4,"was":"klick-nav","zug":"sud:zettel-wechsel-frei","text":"Natureis aus dem Flusslässt Exportbier zu","jahr":1887,"woche":20,"kasse":574,"ende":false,"endgrund":null}
+{"t":291.9,"was":"klick-nav","zug":"kern:chronik","text":"Chronik120","jahr":1887,"woche":20,"kasse":574,"ende":false,"endgrund":null}
+{"t":292.4,"was":"klick-nav","zug":"kern:protokoll","text":"Buch1442","jahr":1887,"woche":20,"kasse":574,"ende":false,"endgrund":null}
+{"t":292.8,"was":"klick-nav","zug":"klang:ton","text":"♪","jahr":1887,"woche":20,"kasse":574,"ende":false,"endgrund":null}
+{"t":293.4,"was":"klick-nav","zug":"stadt:reiter:gegner-amort-gg-band","text":"Ohne dich geschehen · 70 Zügezugeklappt","jahr":1887,"woche":20,"kasse":574,"ende":false,"endgrund":null}
+{"t":294.1,"was":"klick-nav","zug":"stadt:reiter:fuhre-fu-brett-fu-haeuser","text":"DIE HÄUSERwollen 96 · im Keller liegen 24 hl","jahr":1887,"woche":20,"kasse":574,"ende":false,"endgrund":null}
+{"t":294.8,"was":"klick-nav","zug":"stadt:reiter:fuhre-fu-brett-fu-keller","text":"DER EISKELLER24 von 135 hl · 24 reif","jahr":1887,"woche":20,"kasse":574,"ende":false,"endgrund":null}
+{"t":295.3,"was":"klick-nav","zug":"stadt:ortsmarken","text":"Ortsmarken6 auf dem Pflock","jahr":1887,"woche":20,"kasse":574,"ende":false,"endgrund":null}
+{"t":295.9,"was":"klick-nav","zug":"gegner:zeige:70","text":"zeigen","jahr":1887,"woche":20,"kasse":574,"ende":false,"endgrund":null}
+{"t":296.5,"was":"klick-nav","zug":"gegner:zeige:69","text":"zeigen","jahr":1887,"woche":20,"kasse":574,"ende":false,"endgrund":null}
+{"t":297,"was":"klick-preis","zug":"fuhre:plan:rechnung","text":"Fahren: nach Rechnung · 18 hl+164 M","preis":164,"kasseVor":574,"kasseNach":592,"jahr":1887,"woche":21,"ende":false,"endgrund":null}
+{"t":297.6,"was":"klick-preis","zug":"fuhre:plan:rechnung","text":"Fahren: nach Rechnung · 6,0 hl+31 M","preis":31,"kasseVor":592,"kasseNach":552,"jahr":1887,"woche":22,"ende":false,"endgrund":null}
+{"t":298.1,"was":"klick-preis","zug":"fuhre:fracht:stueck","text":"Stückgut · bis 18 hl−52 M","preis":-52,"kasseVor":552,"kasseNach":552,"jahr":1887,"woche":22,"ende":false,"endgrund":null}
+{"t":298.7,"was":"runde-ende","runde":35,"jahr":1887,"woche":23,"kasse":528,"deckung":0.13887427669647553,"besterPreis":3802,"ende":false,"endgrund":null,"echteWochenGesamt":95}
+{"t":299.3,"was":"klick-nav","zug":"gegner:zeige:71","text":"zeigen","jahr":1887,"woche":23,"kasse":528,"ende":false,"endgrund":null}
+{"t":299.8,"was":"klick-nav","zug":"sud:zettel-anstich","text":"Hefe abernten · +8 · ohne Fass","jahr":1887,"woche":23,"kasse":528,"ende":false,"endgrund":null}
+{"t":300.4,"was":"klick-nav","zug":"sud:zettel-wechsel-frei","text":"Ohne Kühlung durchgären lassennur Schankbier","jahr":1887,"woche":23,"kasse":528,"ende":false,"endgrund":null}
+{"t":300.8,"was":"klick-nav","zug":"kern:chronik","text":"Chronik121","jahr":1887,"woche":23,"kasse":528,"ende":false,"endgrund":null}
+{"t":301.3,"was":"klick-nav","zug":"kern:protokoll","text":"Buch1465","jahr":1887,"woche":23,"kasse":528,"ende":false,"endgrund":null}
+{"t":301.7,"was":"klick-nav","zug":"klang:ton","text":"—","jahr":1887,"woche":23,"kasse":528,"ende":false,"endgrund":null}
+{"t":302.3,"was":"klick-nav","zug":"stadt:reiter:gegner-amort-gg-band","text":"Ohne dich geschehen · 71 Zügeliegt auf","jahr":1887,"woche":23,"kasse":528,"ende":false,"endgrund":null}
+{"t":302.8,"was":"klick-nav","zug":"stadt:reiter:fuhre-fu-brett-fu-haeuser","text":"DIE HÄUSERwollen 99 · im Keller liegen 0,0 hl","jahr":1887,"woche":23,"kasse":528,"ende":false,"endgrund":null}
+{"t":303.4,"was":"klick-nav","zug":"stadt:reiter:fuhre-fu-brett-fu-keller","text":"DER EISKELLER0,0 von 135 hl · 0,0 reif","jahr":1887,"woche":23,"kasse":528,"ende":false,"endgrund":null}
+{"t":303.8,"was":"klick-nav","zug":"stadt:ortsmarken","text":"Ortsmarken6 im Bild","jahr":1887,"woche":23,"kasse":528,"ende":false,"endgrund":null}
+{"t":304.4,"was":"klick-preis","zug":"fuhre:fracht:stueck","text":"Stückgut · bis 18 hl−52 M","preis":-52,"kasseVor":528,"kasseNach":528,"jahr":1887,"woche":23,"ende":false,"endgrund":null}
+{"t":304.9,"was":"klick-preis","zug":"fuhre:fracht:stueck","text":"Stückgut · bis 18 hl−52 M","preis":-52,"kasseVor":528,"kasseNach":528,"jahr":1887,"woche":23,"ende":false,"endgrund":null}
+{"t":305.5,"was":"klick-preis","zug":"fuhre:fracht:stueck","text":"Stückgut · bis 18 hl−52 M","preis":-52,"kasseVor":528,"kasseNach":528,"jahr":1887,"woche":23,"ende":false,"endgrund":null}
+{"t":306,"was":"runde-ende","runde":36,"jahr":1887,"woche":24,"kasse":504,"deckung":0.13256180957390848,"besterPreis":3802,"ende":false,"endgrund":null,"echteWochenGesamt":96}
+{"t":306.6,"was":"klick-nav","zug":"sud:zettel-anstich","text":"Junges Fass · +14 · 1,5 hl","jahr":1887,"woche":24,"kasse":504,"ende":false,"endgrund":null}
+{"t":307.1,"was":"klick-nav","zug":"sud:zettel-wechsel-frei","text":"Natureis aus dem Flusslässt Exportbier zu","jahr":1887,"woche":24,"kasse":504,"ende":false,"endgrund":null}
+{"t":307.5,"was":"klick-nav","zug":"kern:chronik","text":"Chronik122","jahr":1887,"woche":24,"kasse":504,"ende":false,"endgrund":null}
+{"t":307.9,"was":"klick-nav","zug":"kern:protokoll","text":"Buch1471","jahr":1887,"woche":24,"kasse":504,"ende":false,"endgrund":null}
+{"t":308.4,"was":"klick-nav","zug":"klang:ton","text":"♪","jahr":1887,"woche":24,"kasse":504,"ende":false,"endgrund":null}
+{"t":308.9,"was":"klick-nav","zug":"stadt:reiter:gegner-amort-gg-band","text":"Ohne dich geschehen · 71 Zügezugeklappt","jahr":1887,"woche":24,"kasse":504,"ende":false,"endgrund":null}
+{"t":309.5,"was":"klick-nav","zug":"stadt:reiter:fuhre-fu-brett-fu-haeuser","text":"DIE HÄUSERwollen 134 · im Keller liegen 48 hl","jahr":1887,"woche":24,"kasse":504,"ende":false,"endgrund":null}
+{"t":310.1,"was":"klick-nav","zug":"stadt:reiter:fuhre-fu-brett-fu-keller","text":"DER EISKELLER48 von 135 hl · 48 reif","jahr":1887,"woche":24,"kasse":504,"ende":false,"endgrund":null}
+{"t":310.5,"was":"klick-nav","zug":"stadt:ortsmarken","text":"Ortsmarken6 auf dem Pflock","jahr":1887,"woche":24,"kasse":504,"ende":false,"endgrund":null}
+{"t":311.1,"was":"klick-preis","zug":"fuhre:plan:rechnung","text":"Fahren: nach Rechnung · 18 hl+164 M","preis":164,"kasseVor":504,"kasseNach":522,"jahr":1887,"woche":25,"ende":false,"endgrund":null}
+{"t":311.7,"was":"klick-preis","zug":"fuhre:plan:rechnung","text":"Fahren: nach Rechnung · 18 hl+164 M","preis":164,"kasseVor":522,"kasseNach":537,"jahr":1887,"woche":26,"ende":false,"endgrund":null}
+{"t":312.2,"was":"klick-preis","zug":"fuhre:plan:rechnung","text":"Fahren: nach Rechnung · 11 hl+82 M","preis":82,"kasseVor":537,"kasseNach":517,"jahr":1887,"woche":27,"ende":false,"endgrund":null}
+{"t":312.8,"was":"runde-ende","runde":37,"jahr":1887,"woche":28,"kasse":493,"deckung":0.12966859547606524,"besterPreis":3802,"ende":false,"endgrund":null,"echteWochenGesamt":100}

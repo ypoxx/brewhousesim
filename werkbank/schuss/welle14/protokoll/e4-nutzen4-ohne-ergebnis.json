@@ -1,0 +1,29 @@
+{
+ "epoche": 4,
+ "festlegeKey": "keine",
+ "braujahre": 6,
+ "lauf": "e4-nutzen4-ohne",
+ "vor": {
+  "jahr": 1970,
+  "woche": 1,
+  "kasse": 86000,
+  "ende": false,
+  "endgrund": null
+ },
+ "festlegungOk": null,
+ "sprung": {
+  "runden": 85,
+  "sprungKlicks": 21,
+  "weiterKlicks": 7,
+  "tafelZuKlicks": 0
+ },
+ "nach": {
+  "jahr": 1975,
+  "woche": 30,
+  "kasse": 38844,
+  "ende": false,
+  "endgrund": null
+ },
+ "kasseDelta": -47156,
+ "fehler": []
+}
