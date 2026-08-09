@@ -53,7 +53,13 @@ for E in 1 2 3 4; do
 done
 
 echo "--- 3/5 · Vergleich gegen die Abnahmereihe b098fc6, Felder der Klasse Partie" | tee -a "$LOG"
-python3 - "$D" 2>&1 | tee -a "$LOG" <<'PY'
+# DAS HERE-DOKUMENT GEHOERT AN python3, NICHT AN tee. Ohne die Klammern haengt
+# es am LETZTEN Glied der Roehre: `tee` schreibt dann den Quelltext ins
+# Protokoll, `python3` liest ein leeres stdin, und die Auswertung faellt STILL
+# aus. Genau das ist beim ersten Lauf am 9. August passiert — die Messungen
+# liefen alle, nur die zwei Urteile fehlten, und im Protokoll stand statt
+# ihrer der Python-Quelltext.
+{ python3 - "$D" <<'PY'
 import json, sys, hashlib, os
 D = sys.argv[1]
 PARTIE = ('jahr','woche','kasse','rohstoff','faesser','plaetze','amtszeit')
@@ -81,6 +87,7 @@ print()
 print('URTEIL: die Partie hat sich nicht bewegt' if not riss
       else f'URTEIL: {riss} Epoche(n) abgewichen — VOLLE ABNAHME noetig, der Kurzlauf ist ein Veto')
 PY
+} 2>&1 | tee -a "$LOG"
 
 echo "--- 4/5 · E3-Doppelbuchung: wiederkehr sechsfach (GEGENZUG-Warnzettel)" | tee -a "$LOG"
 for L in A B C D E F; do
@@ -90,7 +97,13 @@ for L in A B C D E F; do
   cp werkbank/schuss/spiel-w12/protokoll/wiederkehr-e3.json "$Z" 2>/dev/null
   echo "e3-$L: $( [ -s "$Z" ] && md5sum < "$Z" | cut -c1-12 || echo GESCHEITERT )" | tee -a "$LOG"
 done
-python3 - "$D" 2>&1 | tee -a "$LOG" <<'PY'
+# DAS HERE-DOKUMENT GEHOERT AN python3, NICHT AN tee. Ohne die Klammern haengt
+# es am LETZTEN Glied der Roehre: `tee` schreibt dann den Quelltext ins
+# Protokoll, `python3` liest ein leeres stdin, und die Auswertung faellt STILL
+# aus. Genau das ist beim ersten Lauf am 9. August passiert — die Messungen
+# liefen alle, nur die zwei Urteile fehlten, und im Protokoll stand statt
+# ihrer der Python-Quelltext.
+{ python3 - "$D" <<'PY'
 import json, glob, sys
 fs = sorted(glob.glob(f'{sys.argv[1]}/wiederkehr-e3-*.json'))
 schief = []
@@ -105,6 +118,7 @@ print('URTEIL: der E3-Verdacht ist ausgeraeumt' if fs and not schief
       else 'URTEIL: der E3-Verdacht BESTEHT — Doppelbuchung beim Fortsetzen' if schief
       else 'URTEIL: keine Messung')
 PY
+} 2>&1 | tee -a "$LOG"
 
 echo "--- 5/5 · Gewichtsveto, beide Lesarten" | tee -a "$LOG"
 HAFEN=$HAFEN node "$A/gewicht-gegenprobe.mjs" 2>&1 | tee -a "$LOG" | tail -12
