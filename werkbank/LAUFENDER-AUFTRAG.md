@@ -60,6 +60,18 @@
 > > Lauf danebensetzte. Zwölf Läufe später: eine einzige Prüfsumme über beide
 > > Stände. **Wer eine Abweichung findet, fragt zuerst, was sonst noch lief.**
 > > Dafür liegt `messfenster.sh` seit dem 4. August im Repo.
+> >
+> > **Und dann noch einmal, sechs Stunden später, mit vertauschten Rollen.**
+> > Der Builder DER GRIFF hatte seinen Wirkungslauf korrekt durchs Messfenster
+> > gesperrt. Die **Aufsicht** hat daneben drei eigene Läufe derselben Hand
+> > gestartet — **ohne die Sperre**, weil sie es eilig hatte, seine Zahl
+> > nachzuholen. Zwölf von achtzehn Minuten seines Laufs standen unter meiner
+> > Last; der Lauf ist verworfen.
+> >
+> > **Die Sperre ist nicht für die Builder da, sie ist für alle da.** Wer
+> > misst, misst durch `messfenster.sh` — auch und gerade die Aufsicht, die
+> > als einzige die Übersicht hat und deshalb als einzige glauben könnte, sie
+> > brauche sie nicht.
 
 > ### ZWEI AUFSICHTEN AUF EINEM ZWEIG — bemerkt am 8. August, 16:24 UTC
 >
