@@ -74,7 +74,7 @@ while (w < MAX) {
     }
     return true;
   }
-  async function klick(zug) { if (await greifbar(zug)) { await echterKlick(zug); await seite.waitForTimeout(60); return true; } return false; }
+  async function klick(zug) { if (await greifbar(zug)) { const r = await echterKlick(zug); await seite.waitForTimeout(60); return r.ok; } return false; }
 
   if (!(await klick('sud:zettel-anstich'))) await klick('sud:zettel-hefe-fass');
 

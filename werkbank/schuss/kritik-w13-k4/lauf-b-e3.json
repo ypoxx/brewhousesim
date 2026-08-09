@@ -21,17 +21,17 @@
   },
   {
    "kumWoche": 1,
-   "zug": "fuhre:plan:durst",
-   "ergebnis": "nicht-gegriffen:nicht-unter-zeiger",
-   "quelle": "fuhre-woche-zufall",
-   "kasseVorher": 14250
-  },
-  {
-   "kumWoche": 1,
    "zug": "gegner:zuvorkommen:brueckenwirt",
    "ergebnis": "geklickt",
    "quelle": "gegenzug",
    "kasseVorher": 14250
+  },
+  {
+   "kumWoche": 1,
+   "zug": "fuhre:plan:durst",
+   "ergebnis": "nicht-gegriffen:nicht-unter-zeiger",
+   "quelle": "fuhre-woche-zufall",
+   "kasseVorher": 12468
   },
   {
    "kumWoche": 1,
@@ -55,1531 +55,964 @@
    "kasseVorher": 11996
   },
   {
-   "kumWoche": 2,
-   "zug": "weiter",
+   "kumWoche": 3,
+   "zug": "sud:zettel-anstich",
    "ergebnis": "geklickt",
-   "quelle": "pflicht",
+   "quelle": "sud-anzapfen",
    "kasseVorher": 11616
   },
   {
    "kumWoche": 3,
-   "zug": "sud:zettel-anstich",
-   "ergebnis": "geklickt",
-   "quelle": "sud-anzapfen",
-   "kasseVorher": 11144
-  },
-  {
-   "kumWoche": 3,
    "zug": "fuhre:plan:durst",
    "ergebnis": "geklickt",
    "quelle": "fuhre-woche-zufall",
-   "kasseVorher": 11144
-  },
-  {
-   "kumWoche": 3,
-   "zug": "gegner:abwehren:torschenke",
-   "ergebnis": "nicht-gegriffen:nicht-unter-zeiger",
-   "quelle": "gegenzug",
-   "kasseVorher": 11452
-  },
-  {
-   "kumWoche": 3,
-   "zug": "weiter",
-   "ergebnis": "geklickt",
-   "quelle": "pflicht",
-   "kasseVorher": 11452
+   "kasseVorher": 11616
   },
   {
    "kumWoche": 4,
    "zug": "sud:zettel-anstich",
    "ergebnis": "geklickt",
    "quelle": "sud-anzapfen",
-   "kasseVorher": 11428
+   "kasseVorher": 11929
   },
   {
    "kumWoche": 4,
-   "zug": "fuhre:plan:umkaempft",
+   "zug": "gegner:abwehren:pfarrhof",
    "ergebnis": "geklickt",
-   "quelle": "fuhre-woche-zufall",
-   "kasseVorher": 11428
-  },
-  {
-   "kumWoche": 4,
-   "zug": "gegner:abwehren:torschenke",
-   "ergebnis": "nicht-gegriffen:nicht-im-dom",
    "quelle": "gegenzug",
-   "kasseVorher": 12172
+   "kasseVorher": 11929
   },
   {
    "kumWoche": 4,
    "zug": "weiter",
    "ergebnis": "geklickt",
    "quelle": "pflicht",
-   "kasseVorher": 12172
+   "kasseVorher": 10367
   },
   {
    "kumWoche": 5,
    "zug": "sud:zettel-anstich",
    "ergebnis": "geklickt",
    "quelle": "sud-anzapfen",
-   "kasseVorher": 12148
-  },
-  {
-   "kumWoche": 5,
-   "zug": "fuhre:plan:durst",
-   "ergebnis": "geklickt",
-   "quelle": "fuhre-woche-zufall",
-   "kasseVorher": 12148
-  },
-  {
-   "kumWoche": 5,
-   "zug": "gegner:zuvorkommen:torschenke",
-   "ergebnis": "geklickt",
-   "quelle": "gegenzug",
-   "kasseVorher": 12861
+   "kasseVorher": 9895
   },
   {
    "kumWoche": 5,
    "zug": "weiter",
    "ergebnis": "geklickt",
    "quelle": "pflicht",
-   "kasseVorher": 10845
+   "kasseVorher": 9895
   },
   {
    "kumWoche": 6,
    "zug": "sud:zettel-anstich",
    "ergebnis": "geklickt",
    "quelle": "sud-anzapfen",
-   "kasseVorher": 10821
+   "kasseVorher": 9871
   },
   {
    "kumWoche": 6,
    "zug": "fuhre:plan:mager",
    "ergebnis": "geklickt",
    "quelle": "fuhre-woche-zufall",
-   "kasseVorher": 10821
-  },
-  {
-   "kumWoche": 6,
-   "zug": "weiter",
-   "ergebnis": "geklickt",
-   "quelle": "pflicht",
-   "kasseVorher": 11564
+   "kasseVorher": 9871
   },
   {
    "kumWoche": 7,
    "zug": "sud:zettel-anstich",
    "ergebnis": "geklickt",
    "quelle": "sud-anzapfen",
-   "kasseVorher": 11540
+   "kasseVorher": 10599
   },
   {
    "kumWoche": 7,
-   "zug": "fuhre:plan:rechnung",
-   "ergebnis": "geklickt",
-   "quelle": "fuhre-woche-zufall",
-   "kasseVorher": 11540
-  },
-  {
-   "kumWoche": 7,
-   "zug": "gegner:abwehren:faehrhaus",
-   "ergebnis": "geklickt",
-   "quelle": "gegenzug",
-   "kasseVorher": 12507
-  },
-  {
-   "kumWoche": 7,
-   "zug": "weiter",
-   "ergebnis": "geklickt",
-   "quelle": "pflicht",
-   "kasseVorher": 11168
-  },
-  {
-   "kumWoche": 8,
-   "zug": "sud:zettel-anstich",
-   "ergebnis": "geklickt",
-   "quelle": "sud-anzapfen",
-   "kasseVorher": 11144
-  },
-  {
-   "kumWoche": 8,
-   "zug": "fuhre:plan:umkaempft",
-   "ergebnis": "geklickt",
-   "quelle": "fuhre-woche-zufall",
-   "kasseVorher": 11144
-  },
-  {
-   "kumWoche": 8,
-   "zug": "weiter",
-   "ergebnis": "geklickt",
-   "quelle": "pflicht",
-   "kasseVorher": 11118
-  },
-  {
-   "kumWoche": 9,
-   "zug": "sud:zettel-anstich",
-   "ergebnis": "geklickt",
-   "quelle": "sud-anzapfen",
-   "kasseVorher": 11094
-  },
-  {
-   "kumWoche": 9,
-   "zug": "fuhre:plan:mager",
-   "ergebnis": "geklickt",
-   "quelle": "fuhre-woche-zufall",
-   "kasseVorher": 11094
-  },
-  {
-   "kumWoche": 9,
    "zug": "gegner:zuvorkommen:ochse",
    "ergebnis": "geklickt",
    "quelle": "gegenzug",
-   "kasseVorher": 11061
+   "kasseVorher": 10599
+  },
+  {
+   "kumWoche": 7,
+   "zug": "fuhre:plan:nah",
+   "ergebnis": "nicht-gegriffen:nicht-im-dom",
+   "quelle": "fuhre-woche-zufall",
+   "kasseVorher": 5055
+  },
+  {
+   "kumWoche": 7,
+   "zug": "weiter",
+   "ergebnis": "geklickt",
+   "quelle": "pflicht",
+   "kasseVorher": 5055
+  },
+  {
+   "kumWoche": 8,
+   "zug": "sud:zettel-anstich",
+   "ergebnis": "geklickt",
+   "quelle": "sud-anzapfen",
+   "kasseVorher": 5031
+  },
+  {
+   "kumWoche": 8,
+   "zug": "fuhre:plan:umkaempft",
+   "ergebnis": "geklickt",
+   "quelle": "fuhre-woche-zufall",
+   "kasseVorher": 5031
   },
   {
    "kumWoche": 9,
-   "zug": "weiter",
+   "zug": "sud:zettel-anstich",
    "ergebnis": "geklickt",
-   "quelle": "pflicht",
-   "kasseVorher": 8793
+   "quelle": "sud-anzapfen",
+   "kasseVorher": 5787
+  },
+  {
+   "kumWoche": 9,
+   "zug": "fuhre:plan:mager",
+   "ergebnis": "geklickt",
+   "quelle": "fuhre-woche-zufall",
+   "kasseVorher": 5787
   },
   {
    "kumWoche": 10,
    "zug": "sud:zettel-anstich",
    "ergebnis": "geklickt",
    "quelle": "sud-anzapfen",
-   "kasseVorher": 8769
+   "kasseVorher": 6516
   },
   {
    "kumWoche": 10,
-   "zug": "fuhre:plan:durst",
+   "zug": "fuhre:plan:rechnung",
    "ergebnis": "geklickt",
    "quelle": "fuhre-woche-zufall",
-   "kasseVorher": 8769
-  },
-  {
-   "kumWoche": 10,
-   "zug": "weiter",
-   "ergebnis": "geklickt",
-   "quelle": "pflicht",
-   "kasseVorher": 8681
+   "kasseVorher": 6516
   },
   {
    "kumWoche": 11,
    "zug": "sud:zettel-anstich",
    "ergebnis": "geklickt",
    "quelle": "sud-anzapfen",
-   "kasseVorher": 8657
+   "kasseVorher": 6406
   },
   {
    "kumWoche": 11,
+   "zug": "fuhre:plan:mager",
+   "ergebnis": "geklickt",
+   "quelle": "fuhre-woche-zufall",
+   "kasseVorher": 6406
+  },
+  {
+   "kumWoche": 12,
+   "zug": "sud:zettel-anstich",
+   "ergebnis": "geklickt",
+   "quelle": "sud-anzapfen",
+   "kasseVorher": 7376
+  },
+  {
+   "kumWoche": 12,
+   "zug": "gegner:abwehren:bahnhofswirt",
+   "ergebnis": "geklickt",
+   "quelle": "gegenzug",
+   "kasseVorher": 7376
+  },
+  {
+   "kumWoche": 12,
    "zug": "fuhre:plan:durst",
    "ergebnis": "geklickt",
    "quelle": "fuhre-woche-zufall",
-   "kasseVorher": 8657
-  },
-  {
-   "kumWoche": 11,
-   "zug": "weiter",
-   "ergebnis": "geklickt",
-   "quelle": "pflicht",
-   "kasseVorher": 8649
-  },
-  {
-   "kumWoche": 12,
-   "zug": "sud:zettel-anstich",
-   "ergebnis": "geklickt",
-   "quelle": "sud-anzapfen",
-   "kasseVorher": 8625
-  },
-  {
-   "kumWoche": 12,
-   "zug": "fuhre:plan:umkaempft",
-   "ergebnis": "geklickt",
-   "quelle": "fuhre-woche-zufall",
-   "kasseVorher": 8625
-  },
-  {
-   "kumWoche": 12,
-   "zug": "weiter",
-   "ergebnis": "geklickt",
-   "quelle": "pflicht",
-   "kasseVorher": 8596
+   "kasseVorher": 2019
   },
   {
    "kumWoche": 13,
    "zug": "sud:zettel-anstich",
    "ergebnis": "geklickt",
    "quelle": "sud-anzapfen",
-   "kasseVorher": 8572
+   "kasseVorher": 1911
   },
   {
    "kumWoche": 13,
    "zug": "fuhre:plan:umkaempft",
    "ergebnis": "geklickt",
    "quelle": "fuhre-woche-zufall",
-   "kasseVorher": 8572
-  },
-  {
-   "kumWoche": 13,
-   "zug": "weiter",
-   "ergebnis": "geklickt",
-   "quelle": "pflicht",
-   "kasseVorher": 8551
+   "kasseVorher": 1911
   },
   {
    "kumWoche": 14,
    "zug": "sud:zettel-anstich",
    "ergebnis": "geklickt",
    "quelle": "sud-anzapfen",
-   "kasseVorher": 8527
+   "kasseVorher": 1861
   },
   {
    "kumWoche": 14,
    "zug": "fuhre:plan:umkaempft",
    "ergebnis": "geklickt",
    "quelle": "fuhre-woche-zufall",
-   "kasseVorher": 8527
-  },
-  {
-   "kumWoche": 14,
-   "zug": "weiter",
-   "ergebnis": "geklickt",
-   "quelle": "pflicht",
-   "kasseVorher": 8505
+   "kasseVorher": 1861
   },
   {
    "kumWoche": 15,
    "zug": "sud:zettel-anstich",
    "ergebnis": "geklickt",
    "quelle": "sud-anzapfen",
-   "kasseVorher": 8481
+   "kasseVorher": 1836
   },
   {
    "kumWoche": 15,
    "zug": "fuhre:plan:umkaempft",
    "ergebnis": "geklickt",
    "quelle": "fuhre-woche-zufall",
-   "kasseVorher": 8481
-  },
-  {
-   "kumWoche": 15,
-   "zug": "gegner:abwehren:pfarrhof",
-   "ergebnis": "geklickt",
-   "quelle": "gegenzug",
-   "kasseVorher": 8452
-  },
-  {
-   "kumWoche": 15,
-   "zug": "weiter",
-   "ergebnis": "geklickt",
-   "quelle": "pflicht",
-   "kasseVorher": 6890
+   "kasseVorher": 1836
   },
   {
    "kumWoche": 16,
    "zug": "sud:zettel-anstich",
    "ergebnis": "geklickt",
    "quelle": "sud-anzapfen",
-   "kasseVorher": 6866
+   "kasseVorher": 1822
   },
   {
    "kumWoche": 16,
-   "zug": "fuhre:plan:durst",
+   "zug": "fuhre:plan:umkaempft",
    "ergebnis": "geklickt",
    "quelle": "fuhre-woche-zufall",
-   "kasseVorher": 6866
+   "kasseVorher": 1822
   },
   {
-   "kumWoche": 16,
-   "zug": "gegner:zuvorkommen:bahnhofswirt",
-   "ergebnis": "nicht-gegriffen:keine-flaeche",
-   "quelle": "gegenzug",
-   "kasseVorher": 9770
-  },
-  {
-   "kumWoche": 16,
-   "zug": "weiter",
+   "kumWoche": 17,
+   "zug": "sud:zettel-anstich",
    "ergebnis": "geklickt",
-   "quelle": "pflicht",
-   "kasseVorher": 9770
+   "quelle": "sud-anzapfen",
+   "kasseVorher": 1795
   },
   {
    "kumWoche": 17,
    "zug": "fuhre:plan:umkaempft",
    "ergebnis": "geklickt",
    "quelle": "fuhre-woche-zufall",
-   "kasseVorher": 9746
+   "kasseVorher": 1795
   },
   {
-   "kumWoche": 17,
-   "zug": "gegner:zuvorkommen:hirsch",
+   "kumWoche": 18,
+   "zug": "sud:zettel-anstich",
    "ergebnis": "geklickt",
-   "quelle": "gegenzug",
-   "kasseVorher": 9616
-  },
-  {
-   "kumWoche": 17,
-   "zug": "weiter",
-   "ergebnis": "geklickt",
-   "quelle": "pflicht",
-   "kasseVorher": 7996
+   "quelle": "sud-anzapfen",
+   "kasseVorher": 1701
   },
   {
    "kumWoche": 18,
    "zug": "fuhre:plan:durst",
    "ergebnis": "geklickt",
    "quelle": "fuhre-woche-zufall",
-   "kasseVorher": 7972
-  },
-  {
-   "kumWoche": 18,
-   "zug": "weiter",
-   "ergebnis": "geklickt",
-   "quelle": "pflicht",
-   "kasseVorher": 7972
+   "kasseVorher": 1701
   },
   {
    "kumWoche": 19,
-   "zug": "weiter",
+   "zug": "sud:zettel-anstich",
    "ergebnis": "geklickt",
-   "quelle": "pflicht",
-   "kasseVorher": 7948
+   "quelle": "sud-anzapfen",
+   "kasseVorher": 1693
+  },
+  {
+   "kumWoche": 19,
+   "zug": "fuhre:plan:durst",
+   "ergebnis": "geklickt",
+   "quelle": "fuhre-woche-zufall",
+   "kasseVorher": 1693
+  },
+  {
+   "kumWoche": 20,
+   "zug": "sud:zettel-anstich",
+   "ergebnis": "geklickt",
+   "quelle": "sud-anzapfen",
+   "kasseVorher": 1685
   },
   {
    "kumWoche": 20,
    "zug": "fuhre:plan:umkaempft",
    "ergebnis": "geklickt",
    "quelle": "fuhre-woche-zufall",
-   "kasseVorher": 7924
+   "kasseVorher": 1685
   },
   {
-   "kumWoche": 20,
-   "zug": "weiter",
+   "kumWoche": 21,
+   "zug": "sud:zettel-anstich",
    "ergebnis": "geklickt",
-   "quelle": "pflicht",
-   "kasseVorher": 7794
+   "quelle": "sud-anzapfen",
+   "kasseVorher": 1646
   },
   {
    "kumWoche": 21,
    "zug": "fuhre:plan:durst",
    "ergebnis": "geklickt",
    "quelle": "fuhre-woche-zufall",
-   "kasseVorher": 7770
-  },
-  {
-   "kumWoche": 21,
-   "zug": "weiter",
-   "ergebnis": "geklickt",
-   "quelle": "pflicht",
-   "kasseVorher": 7687
+   "kasseVorher": 1646
   },
   {
    "kumWoche": 22,
-   "zug": "weiter",
+   "zug": "sud:zettel-anstich",
    "ergebnis": "geklickt",
-   "quelle": "pflicht",
-   "kasseVorher": 7663
+   "quelle": "sud-anzapfen",
+   "kasseVorher": 1638
+  },
+  {
+   "kumWoche": 22,
+   "zug": "fuhre:plan:durst",
+   "ergebnis": "geklickt",
+   "quelle": "fuhre-woche-zufall",
+   "kasseVorher": 1638
+  },
+  {
+   "kumWoche": 23,
+   "zug": "sud:zettel-anstich",
+   "ergebnis": "geklickt",
+   "quelle": "sud-anzapfen",
+   "kasseVorher": 1610
   },
   {
    "kumWoche": 23,
    "zug": "fuhre:plan:mager",
    "ergebnis": "geklickt",
    "quelle": "fuhre-woche-zufall",
-   "kasseVorher": 7639
+   "kasseVorher": 1610
   },
   {
-   "kumWoche": 23,
-   "zug": "weiter",
+   "kumWoche": 24,
+   "zug": "sud:zettel-anstich",
    "ergebnis": "geklickt",
-   "quelle": "pflicht",
-   "kasseVorher": 7460
+   "quelle": "sud-anzapfen",
+   "kasseVorher": 1579
   },
   {
    "kumWoche": 24,
    "zug": "fuhre:plan:umkaempft",
    "ergebnis": "geklickt",
    "quelle": "fuhre-woche-zufall",
-   "kasseVorher": 7436
-  },
-  {
-   "kumWoche": 24,
-   "zug": "weiter",
-   "ergebnis": "geklickt",
-   "quelle": "pflicht",
-   "kasseVorher": 7304
+   "kasseVorher": 1579
   },
   {
    "kumWoche": 25,
-   "zug": "weiter",
+   "zug": "sud:zettel-anstich",
    "ergebnis": "geklickt",
-   "quelle": "pflicht",
-   "kasseVorher": 7280
+   "quelle": "sud-anzapfen",
+   "kasseVorher": 1567
+  },
+  {
+   "kumWoche": 25,
+   "zug": "fuhre:plan:umkaempft",
+   "ergebnis": "geklickt",
+   "quelle": "fuhre-woche-zufall",
+   "kasseVorher": 1567
   },
   {
    "kumWoche": 26,
-   "zug": "weiter",
+   "zug": "sud:zettel-anstich",
    "ergebnis": "geklickt",
-   "quelle": "pflicht",
-   "kasseVorher": 7256
+   "quelle": "sud-anzapfen",
+   "kasseVorher": 1539
+  },
+  {
+   "kumWoche": 26,
+   "zug": "fuhre:plan:mager",
+   "ergebnis": "geklickt",
+   "quelle": "fuhre-woche-zufall",
+   "kasseVorher": 1539
+  },
+  {
+   "kumWoche": 27,
+   "zug": "sud:zettel-anstich",
+   "ergebnis": "geklickt",
+   "quelle": "sud-anzapfen",
+   "kasseVorher": 1564
   },
   {
    "kumWoche": 27,
    "zug": "fuhre:plan:mager",
    "ergebnis": "geklickt",
    "quelle": "fuhre-woche-zufall",
-   "kasseVorher": 7232
-  },
-  {
-   "kumWoche": 27,
-   "zug": "weiter",
-   "ergebnis": "geklickt",
-   "quelle": "pflicht",
-   "kasseVorher": 7053
+   "kasseVorher": 1564
   },
   {
    "kumWoche": 28,
-   "zug": "fuhre:plan:durst",
+   "zug": "sud:zettel-anstich",
    "ergebnis": "geklickt",
-   "quelle": "fuhre-woche-zufall",
-   "kasseVorher": 7029
+   "quelle": "sud-anzapfen",
+   "kasseVorher": 1577
   },
   {
    "kumWoche": 28,
-   "zug": "weiter",
-   "ergebnis": "geklickt",
-   "quelle": "pflicht",
-   "kasseVorher": 6952
-  },
-  {
-   "kumWoche": 29,
-   "zug": "fuhre:plan:durst",
+   "zug": "fuhre:plan:rechnung",
    "ergebnis": "geklickt",
    "quelle": "fuhre-woche-zufall",
-   "kasseVorher": 6928
+   "kasseVorher": 1577
   },
   {
    "kumWoche": 29,
-   "zug": "weiter",
+   "zug": "sud:zettel-anstich",
    "ergebnis": "geklickt",
-   "quelle": "pflicht",
-   "kasseVorher": 6759
+   "quelle": "sud-anzapfen",
+   "kasseVorher": 1461
+  },
+  {
+   "kumWoche": 29,
+   "zug": "fuhre:plan:rechnung",
+   "ergebnis": "geklickt",
+   "quelle": "fuhre-woche-zufall",
+   "kasseVorher": 1461
+  },
+  {
+   "kumWoche": 30,
+   "zug": "sud:zettel-anstich",
+   "ergebnis": "geklickt",
+   "quelle": "sud-anzapfen",
+   "kasseVorher": 1345
   },
   {
    "kumWoche": 30,
    "zug": "fuhre:plan:durst",
-   "ergebnis": "geklickt",
+   "ergebnis": "nicht-gegriffen:nicht-im-dom",
    "quelle": "fuhre-woche-zufall",
-   "kasseVorher": 6735
+   "kasseVorher": 1345
   },
   {
    "kumWoche": 30,
    "zug": "weiter",
    "ergebnis": "geklickt",
    "quelle": "pflicht",
-   "kasseVorher": 6659
+   "kasseVorher": 1345
   },
   {
    "kumWoche": 31,
+   "zug": "sud:zettel-anstich",
+   "ergebnis": "geklickt",
+   "quelle": "sud-anzapfen",
+   "kasseVorher": 6702
+  },
+  {
+   "kumWoche": 31,
+   "zug": "weiter",
+   "ergebnis": "geklickt",
+   "quelle": "pflicht",
+   "kasseVorher": 6702
+  },
+  {
+   "kumWoche": 32,
    "zug": "fuhre:plan:durst",
    "ergebnis": "geklickt",
    "quelle": "fuhre-woche-zufall",
-   "kasseVorher": 6635
-  },
-  {
-   "kumWoche": 31,
-   "zug": "weiter",
-   "ergebnis": "geklickt",
-   "quelle": "pflicht",
-   "kasseVorher": 6545
-  },
-  {
-   "kumWoche": 32,
-   "zug": "fuhre:plan:umkaempft",
-   "ergebnis": "geklickt",
-   "quelle": "fuhre-woche-zufall",
-   "kasseVorher": 6521
-  },
-  {
-   "kumWoche": 32,
-   "zug": "weiter",
-   "ergebnis": "geklickt",
-   "quelle": "pflicht",
-   "kasseVorher": 6494
-  },
-  {
-   "kumWoche": 33,
-   "zug": "fuhre:plan:nah",
-   "ergebnis": "geklickt",
-   "quelle": "fuhre-woche-zufall",
-   "kasseVorher": 6470
-  },
-  {
-   "kumWoche": 33,
-   "zug": "gegner:zuvorkommen:lindenhof",
-   "ergebnis": "geklickt",
-   "quelle": "gegenzug",
-   "kasseVorher": 6347
+   "kasseVorher": 6678
   },
   {
    "kumWoche": 33,
    "zug": "weiter",
    "ergebnis": "geklickt",
    "quelle": "pflicht",
-   "kasseVorher": 1811
+   "kasseVorher": 6495
   },
   {
    "kumWoche": 34,
-   "zug": "weiter",
-   "ergebnis": "geklickt",
-   "quelle": "pflicht",
-   "kasseVorher": 4200
-  },
-  {
-   "kumWoche": 35,
-   "zug": "fuhre:plan:probe",
-   "ergebnis": "geklickt",
-   "quelle": "fuhre-woche-zufall",
-   "kasseVorher": 4176
-  },
-  {
-   "kumWoche": 35,
-   "zug": "weiter",
-   "ergebnis": "geklickt",
-   "quelle": "pflicht",
-   "kasseVorher": 4028
-  },
-  {
-   "kumWoche": 36,
-   "zug": "fuhre:plan:durst",
-   "ergebnis": "geklickt",
-   "quelle": "fuhre-woche-zufall",
-   "kasseVorher": 4004
-  },
-  {
-   "kumWoche": 36,
-   "zug": "weiter",
-   "ergebnis": "geklickt",
-   "quelle": "pflicht",
-   "kasseVorher": 3911
-  },
-  {
-   "kumWoche": 37,
-   "zug": "weiter",
-   "ergebnis": "geklickt",
-   "quelle": "pflicht",
-   "kasseVorher": 3887
-  },
-  {
-   "kumWoche": 38,
-   "zug": "fuhre:plan:umkaempft",
-   "ergebnis": "geklickt",
-   "quelle": "fuhre-woche-zufall",
-   "kasseVorher": 3863
-  },
-  {
-   "kumWoche": 38,
-   "zug": "weiter",
-   "ergebnis": "geklickt",
-   "quelle": "pflicht",
-   "kasseVorher": 3805
-  },
-  {
-   "kumWoche": 39,
    "zug": "fuhre:plan:mager",
    "ergebnis": "geklickt",
    "quelle": "fuhre-woche-zufall",
-   "kasseVorher": 3781
+   "kasseVorher": 6471
   },
   {
-   "kumWoche": 39,
-   "zug": "weiter",
-   "ergebnis": "geklickt",
-   "quelle": "pflicht",
-   "kasseVorher": 3623
-  },
-  {
-   "kumWoche": 40,
-   "zug": "fuhre:plan:durst",
+   "kumWoche": 35,
+   "zug": "fuhre:plan:mager",
    "ergebnis": "geklickt",
    "quelle": "fuhre-woche-zufall",
-   "kasseVorher": 3599
+   "kasseVorher": 6291
   },
   {
-   "kumWoche": 40,
-   "zug": "weiter",
-   "ergebnis": "geklickt",
-   "quelle": "pflicht",
-   "kasseVorher": 3478
-  },
-  {
-   "kumWoche": 41,
-   "zug": "weiter",
-   "ergebnis": "geklickt",
-   "quelle": "pflicht",
-   "kasseVorher": 3454
-  },
-  {
-   "kumWoche": 42,
-   "zug": "fuhre:plan:durst",
-   "ergebnis": "geklickt",
-   "quelle": "fuhre-woche-zufall",
-   "kasseVorher": 3430
-  },
-  {
-   "kumWoche": 42,
-   "zug": "weiter",
-   "ergebnis": "geklickt",
-   "quelle": "pflicht",
-   "kasseVorher": 3278
-  },
-  {
-   "kumWoche": 43,
+   "kumWoche": 36,
    "zug": "fuhre:plan:nah",
    "ergebnis": "geklickt",
    "quelle": "fuhre-woche-zufall",
-   "kasseVorher": 3254
+   "kasseVorher": 6068
+  },
+  {
+   "kumWoche": 37,
+   "zug": "fuhre:plan:durst",
+   "ergebnis": "geklickt",
+   "quelle": "fuhre-woche-zufall",
+   "kasseVorher": 5898
+  },
+  {
+   "kumWoche": 38,
+   "zug": "fuhre:plan:umkaempft",
+   "ergebnis": "geklickt",
+   "quelle": "fuhre-woche-zufall",
+   "kasseVorher": 5722
+  },
+  {
+   "kumWoche": 39,
+   "zug": "fuhre:plan:mager",
+   "ergebnis": "geklickt",
+   "quelle": "fuhre-woche-zufall",
+   "kasseVorher": 5592
+  },
+  {
+   "kumWoche": 40,
+   "zug": "fuhre:plan:rechnung",
+   "ergebnis": "geklickt",
+   "quelle": "fuhre-woche-zufall",
+   "kasseVorher": 5359
+  },
+  {
+   "kumWoche": 41,
+   "zug": "fuhre:plan:durst",
+   "ergebnis": "geklickt",
+   "quelle": "fuhre-woche-zufall",
+   "kasseVorher": 5136
+  },
+  {
+   "kumWoche": 42,
+   "zug": "fuhre:plan:rechnung",
+   "ergebnis": "geklickt",
+   "quelle": "fuhre-woche-zufall",
+   "kasseVorher": 4955
   },
   {
    "kumWoche": 43,
-   "zug": "weiter",
-   "ergebnis": "geklickt",
-   "quelle": "pflicht",
-   "kasseVorher": 3152
-  },
-  {
-   "kumWoche": 44,
-   "zug": "fuhre:plan:probe",
+   "zug": "fuhre:plan:rechnung",
    "ergebnis": "geklickt",
    "quelle": "fuhre-woche-zufall",
-   "kasseVorher": 3128
+   "kasseVorher": 4732
+  },
+  {
+   "kumWoche": 44,
+   "zug": "gegner:zuvorkommen:faehrhaus",
+   "ergebnis": "geklickt",
+   "quelle": "gegenzug",
+   "kasseVorher": 4515
   },
   {
    "kumWoche": 44,
    "zug": "weiter",
    "ergebnis": "geklickt",
    "quelle": "pflicht",
-   "kasseVorher": 2980
+   "kasseVorher": 2139
+  },
+  {
+   "kumWoche": 45,
+   "zug": "gegner:abwehren:torschenke",
+   "ergebnis": "nicht-gegriffen:nicht-unter-zeiger",
+   "quelle": "gegenzug",
+   "kasseVorher": 2115
   },
   {
    "kumWoche": 45,
    "zug": "fuhre:plan:mager",
    "ergebnis": "geklickt",
    "quelle": "fuhre-woche-zufall",
-   "kasseVorher": 2956
-  },
-  {
-   "kumWoche": 45,
-   "zug": "weiter",
-   "ergebnis": "geklickt",
-   "quelle": "pflicht",
-   "kasseVorher": 2860
+   "kasseVorher": 2115
   },
   {
    "kumWoche": 46,
-   "zug": "weiter",
+   "zug": "gegner:abwehren:torschenke",
+   "ergebnis": "nicht-gegriffen:nicht-unter-zeiger",
+   "quelle": "gegenzug",
+   "kasseVorher": 1980
+  },
+  {
+   "kumWoche": 46,
+   "zug": "fuhre:plan:mager",
    "ergebnis": "geklickt",
-   "quelle": "pflicht",
-   "kasseVorher": 2836
+   "quelle": "fuhre-woche-zufall",
+   "kasseVorher": 1980
+  },
+  {
+   "kumWoche": 47,
+   "zug": "gegner:abwehren:torschenke",
+   "ergebnis": "nicht-gegriffen:nicht-unter-zeiger",
+   "quelle": "gegenzug",
+   "kasseVorher": 1854
   },
   {
    "kumWoche": 47,
    "zug": "fuhre:plan:umkaempft",
    "ergebnis": "geklickt",
    "quelle": "fuhre-woche-zufall",
-   "kasseVorher": 2812
-  },
-  {
-   "kumWoche": 47,
-   "zug": "weiter",
-   "ergebnis": "geklickt",
-   "quelle": "pflicht",
-   "kasseVorher": 2800
+   "kasseVorher": 1854
   },
   {
    "kumWoche": 48,
-   "zug": "fuhre:plan:probe",
+   "zug": "fuhre:plan:mager",
    "ergebnis": "geklickt",
    "quelle": "fuhre-woche-zufall",
-   "kasseVorher": 2776
-  },
-  {
-   "kumWoche": 48,
-   "zug": "weiter",
-   "ergebnis": "geklickt",
-   "quelle": "pflicht",
-   "kasseVorher": 2633
+   "kasseVorher": 1724
   },
   {
    "kumWoche": 49,
-   "zug": "fuhre:plan:probe",
+   "zug": "fuhre:plan:mager",
    "ergebnis": "geklickt",
    "quelle": "fuhre-woche-zufall",
-   "kasseVorher": 2609
-  },
-  {
-   "kumWoche": 49,
-   "zug": "weiter",
-   "ergebnis": "geklickt",
-   "quelle": "pflicht",
-   "kasseVorher": 2488
+   "kasseVorher": 1549
   },
   {
    "kumWoche": 50,
    "zug": "fuhre:plan:durst",
    "ergebnis": "geklickt",
    "quelle": "fuhre-woche-zufall",
-   "kasseVorher": 2464
-  },
-  {
-   "kumWoche": 50,
-   "zug": "weiter",
-   "ergebnis": "geklickt",
-   "quelle": "pflicht",
-   "kasseVorher": 2395
+   "kasseVorher": 1417
   },
   {
    "kumWoche": 51,
-   "zug": "weiter",
-   "ergebnis": "geklickt",
-   "quelle": "pflicht",
-   "kasseVorher": 4200
-  },
-  {
-   "kumWoche": 52,
-   "zug": "fuhre:plan:durst",
+   "zug": "fuhre:plan:mager",
    "ergebnis": "geklickt",
    "quelle": "fuhre-woche-zufall",
-   "kasseVorher": 4176
+   "kasseVorher": 1291
   },
   {
    "kumWoche": 52,
-   "zug": "gegner:zuvorkommen:torschenke",
-   "ergebnis": "nicht-gegriffen:nicht-unter-zeiger",
-   "quelle": "gegenzug",
-   "kasseVorher": 4123
-  },
-  {
-   "kumWoche": 52,
-   "zug": "weiter",
+   "zug": "fuhre:plan:rechnung",
    "ergebnis": "geklickt",
-   "quelle": "pflicht",
-   "kasseVorher": 4123
+   "quelle": "fuhre-woche-zufall",
+   "kasseVorher": 1179
   },
   {
    "kumWoche": 53,
    "zug": "fuhre:plan:umkaempft",
    "ergebnis": "geklickt",
    "quelle": "fuhre-woche-zufall",
-   "kasseVorher": 4099
-  },
-  {
-   "kumWoche": 53,
-   "zug": "gegner:zuvorkommen:torschenke",
-   "ergebnis": "nicht-gegriffen:nicht-im-dom",
-   "quelle": "gegenzug",
-   "kasseVorher": 4121
-  },
-  {
-   "kumWoche": 53,
-   "zug": "weiter",
-   "ergebnis": "geklickt",
-   "quelle": "pflicht",
-   "kasseVorher": 4121
+   "kasseVorher": 1138
   },
   {
    "kumWoche": 54,
-   "zug": "gegner:abwehren:ochse",
+   "zug": "fuhre:plan:umkaempft",
    "ergebnis": "geklickt",
-   "quelle": "gegenzug",
-   "kasseVorher": 4097
-  },
-  {
-   "kumWoche": 54,
-   "zug": "weiter",
-   "ergebnis": "geklickt",
-   "quelle": "pflicht",
-   "kasseVorher": 972
+   "quelle": "fuhre-woche-zufall",
+   "kasseVorher": 1108
   },
   {
    "kumWoche": 55,
-   "zug": "weiter",
-   "ergebnis": "geklickt",
-   "quelle": "pflicht",
-   "kasseVorher": 948
-  },
-  {
-   "kumWoche": 56,
-   "zug": "fuhre:plan:mager",
+   "zug": "fuhre:plan:umkaempft",
    "ergebnis": "geklickt",
    "quelle": "fuhre-woche-zufall",
-   "kasseVorher": 924
+   "kasseVorher": 1087
   },
   {
    "kumWoche": 56,
-   "zug": "weiter",
+   "zug": "fuhre:plan:umkaempft",
    "ergebnis": "geklickt",
-   "quelle": "pflicht",
-   "kasseVorher": 853
+   "quelle": "fuhre-woche-zufall",
+   "kasseVorher": 1058
   },
   {
    "kumWoche": 57,
    "zug": "fuhre:plan:mager",
    "ergebnis": "geklickt",
    "quelle": "fuhre-woche-zufall",
-   "kasseVorher": 829
-  },
-  {
-   "kumWoche": 57,
-   "zug": "weiter",
-   "ergebnis": "geklickt",
-   "quelle": "pflicht",
-   "kasseVorher": 802
+   "kasseVorher": 937
   },
   {
    "kumWoche": 58,
-   "zug": "fuhre:plan:durst",
+   "zug": "fuhre:plan:nah",
    "ergebnis": "geklickt",
    "quelle": "fuhre-woche-zufall",
-   "kasseVorher": 778
-  },
-  {
-   "kumWoche": 58,
-   "zug": "weiter",
-   "ergebnis": "geklickt",
-   "quelle": "pflicht",
-   "kasseVorher": 725
+   "kasseVorher": 918
   },
   {
    "kumWoche": 59,
-   "zug": "fuhre:plan:durst",
+   "zug": "fuhre:plan:rechnung",
    "ergebnis": "geklickt",
    "quelle": "fuhre-woche-zufall",
-   "kasseVorher": 701
-  },
-  {
-   "kumWoche": 59,
-   "zug": "weiter",
-   "ergebnis": "geklickt",
-   "quelle": "pflicht",
-   "kasseVorher": 648
+   "kasseVorher": 896
   },
   {
    "kumWoche": 60,
-   "zug": "weiter",
+   "zug": "fuhre:plan:rechnung",
    "ergebnis": "geklickt",
-   "quelle": "pflicht",
-   "kasseVorher": 624
+   "quelle": "fuhre-woche-zufall",
+   "kasseVorher": 896
   },
   {
    "kumWoche": 61,
-   "zug": "fuhre:plan:umkaempft",
+   "zug": "fuhre:plan:rechnung",
    "ergebnis": "geklickt",
    "quelle": "fuhre-woche-zufall",
-   "kasseVorher": 600
-  },
-  {
-   "kumWoche": 61,
-   "zug": "weiter",
-   "ergebnis": "geklickt",
-   "quelle": "pflicht",
-   "kasseVorher": 529
+   "kasseVorher": 896
   },
   {
    "kumWoche": 62,
-   "zug": "fuhre:plan:probe",
+   "zug": "fuhre:plan:mager",
    "ergebnis": "geklickt",
    "quelle": "fuhre-woche-zufall",
-   "kasseVorher": 505
-  },
-  {
-   "kumWoche": 62,
-   "zug": "weiter",
-   "ergebnis": "geklickt",
-   "quelle": "pflicht",
-   "kasseVorher": 370
+   "kasseVorher": 896
   },
   {
    "kumWoche": 63,
-   "zug": "fuhre:plan:probe",
+   "zug": "fuhre:plan:mager",
    "ergebnis": "geklickt",
    "quelle": "fuhre-woche-zufall",
-   "kasseVorher": 346
-  },
-  {
-   "kumWoche": 63,
-   "zug": "weiter",
-   "ergebnis": "geklickt",
-   "quelle": "pflicht",
-   "kasseVorher": 211
+   "kasseVorher": 896
   },
   {
    "kumWoche": 64,
    "zug": "fuhre:plan:umkaempft",
    "ergebnis": "geklickt",
    "quelle": "fuhre-woche-zufall",
-   "kasseVorher": 187
-  },
-  {
-   "kumWoche": 64,
-   "zug": "weiter",
-   "ergebnis": "geklickt",
-   "quelle": "pflicht",
-   "kasseVorher": 116
+   "kasseVorher": 896
   },
   {
    "kumWoche": 65,
-   "zug": "weiter",
+   "zug": "fuhre:plan:umkaempft",
    "ergebnis": "geklickt",
-   "quelle": "pflicht",
-   "kasseVorher": 92
+   "quelle": "fuhre-woche-zufall",
+   "kasseVorher": 896
   },
   {
    "kumWoche": 66,
    "zug": "fuhre:plan:mager",
    "ergebnis": "geklickt",
    "quelle": "fuhre-woche-zufall",
-   "kasseVorher": 68
-  },
-  {
-   "kumWoche": 66,
-   "zug": "weiter",
-   "ergebnis": "geklickt",
-   "quelle": "pflicht",
-   "kasseVorher": 41
+   "kasseVorher": 896
   },
   {
    "kumWoche": 67,
    "zug": "fuhre:plan:umkaempft",
    "ergebnis": "geklickt",
    "quelle": "fuhre-woche-zufall",
-   "kasseVorher": 17
-  },
-  {
-   "kumWoche": 67,
-   "zug": "weiter",
-   "ergebnis": "geklickt",
-   "quelle": "pflicht",
-   "kasseVorher": 21
+   "kasseVorher": 896
   },
   {
    "kumWoche": 68,
-   "zug": "fuhre:plan:probe",
+   "zug": "fuhre:plan:mager",
    "ergebnis": "geklickt",
    "quelle": "fuhre-woche-zufall",
-   "kasseVorher": 21
-  },
-  {
-   "kumWoche": 68,
-   "zug": "weiter",
-   "ergebnis": "nicht-gegriffen:keine-flaeche",
-   "quelle": "pflicht",
-   "kasseVorher": 4200
+   "kasseVorher": 896
   },
   {
    "kumWoche": 69,
-   "zug": "weiter",
+   "zug": "fuhre:plan:rechnung",
    "ergebnis": "geklickt",
-   "quelle": "pflicht",
-   "kasseVorher": 4200
+   "quelle": "fuhre-woche-zufall",
+   "kasseVorher": 896
   },
   {
    "kumWoche": 70,
-   "zug": "weiter",
-   "ergebnis": "geklickt",
-   "quelle": "pflicht",
-   "kasseVorher": 4177
-  },
-  {
-   "kumWoche": 71,
-   "zug": "fuhre:plan:probe",
-   "ergebnis": "geklickt",
-   "quelle": "fuhre-woche-zufall",
-   "kasseVorher": 4154
-  },
-  {
-   "kumWoche": 71,
-   "zug": "weiter",
-   "ergebnis": "geklickt",
-   "quelle": "pflicht",
-   "kasseVorher": 4021
-  },
-  {
-   "kumWoche": 72,
    "zug": "fuhre:plan:mager",
    "ergebnis": "geklickt",
    "quelle": "fuhre-woche-zufall",
-   "kasseVorher": 3998
+   "kasseVorher": 896
   },
   {
-   "kumWoche": 72,
-   "zug": "weiter",
-   "ergebnis": "geklickt",
-   "quelle": "pflicht",
-   "kasseVorher": 3995
-  },
-  {
-   "kumWoche": 73,
+   "kumWoche": 71,
    "zug": "fuhre:plan:mager",
    "ergebnis": "geklickt",
    "quelle": "fuhre-woche-zufall",
-   "kasseVorher": 3972
+   "kasseVorher": 896
+  },
+  {
+   "kumWoche": 72,
+   "zug": "fuhre:plan:umkaempft",
+   "ergebnis": "geklickt",
+   "quelle": "fuhre-woche-zufall",
+   "kasseVorher": 896
   },
   {
    "kumWoche": 73,
-   "zug": "weiter",
-   "ergebnis": "geklickt",
-   "quelle": "pflicht",
-   "kasseVorher": 3997
-  },
-  {
-   "kumWoche": 74,
-   "zug": "fuhre:plan:probe",
+   "zug": "fuhre:plan:umkaempft",
    "ergebnis": "geklickt",
    "quelle": "fuhre-woche-zufall",
-   "kasseVorher": 3974
+   "kasseVorher": 896
   },
   {
    "kumWoche": 74,
-   "zug": "weiter",
+   "zug": "fuhre:plan:mager",
    "ergebnis": "geklickt",
-   "quelle": "pflicht",
-   "kasseVorher": 3866
+   "quelle": "fuhre-woche-zufall",
+   "kasseVorher": 896
   },
   {
    "kumWoche": 75,
-   "zug": "weiter",
+   "zug": "fuhre:plan:mager",
    "ergebnis": "geklickt",
-   "quelle": "pflicht",
-   "kasseVorher": 3843
+   "quelle": "fuhre-woche-zufall",
+   "kasseVorher": 896
   },
   {
    "kumWoche": 76,
-   "zug": "weiter",
-   "ergebnis": "geklickt",
-   "quelle": "pflicht",
-   "kasseVorher": 3820
-  },
-  {
-   "kumWoche": 77,
-   "zug": "fuhre:plan:probe",
-   "ergebnis": "geklickt",
-   "quelle": "fuhre-woche-zufall",
-   "kasseVorher": 3797
-  },
-  {
-   "kumWoche": 77,
-   "zug": "weiter",
-   "ergebnis": "geklickt",
-   "quelle": "pflicht",
-   "kasseVorher": 3689
-  },
-  {
-   "kumWoche": 78,
    "zug": "fuhre:plan:umkaempft",
    "ergebnis": "geklickt",
    "quelle": "fuhre-woche-zufall",
-   "kasseVorher": 3666
+   "kasseVorher": 896
   },
   {
-   "kumWoche": 78,
-   "zug": "weiter",
-   "ergebnis": "geklickt",
-   "quelle": "pflicht",
-   "kasseVorher": 3705
-  },
-  {
-   "kumWoche": 79,
+   "kumWoche": 77,
    "zug": "fuhre:plan:mager",
    "ergebnis": "geklickt",
    "quelle": "fuhre-woche-zufall",
-   "kasseVorher": 3682
+   "kasseVorher": 896
+  },
+  {
+   "kumWoche": 78,
+   "zug": "fuhre:plan:rechnung",
+   "ergebnis": "geklickt",
+   "quelle": "fuhre-woche-zufall",
+   "kasseVorher": 896
   },
   {
    "kumWoche": 79,
-   "zug": "weiter",
-   "ergebnis": "geklickt",
-   "quelle": "pflicht",
-   "kasseVorher": 3711
-  },
-  {
-   "kumWoche": 80,
-   "zug": "fuhre:plan:durst",
+   "zug": "fuhre:plan:umkaempft",
    "ergebnis": "geklickt",
    "quelle": "fuhre-woche-zufall",
-   "kasseVorher": 3688
+   "kasseVorher": 896
   },
   {
    "kumWoche": 80,
-   "zug": "weiter",
+   "zug": "fuhre:plan:rechnung",
    "ergebnis": "geklickt",
-   "quelle": "pflicht",
-   "kasseVorher": 3664
+   "quelle": "fuhre-woche-zufall",
+   "kasseVorher": 896
   },
   {
    "kumWoche": 81,
-   "zug": "weiter",
+   "zug": "fuhre:plan:mager",
    "ergebnis": "geklickt",
-   "quelle": "pflicht",
-   "kasseVorher": 3641
+   "quelle": "fuhre-woche-zufall",
+   "kasseVorher": 896
   },
   {
    "kumWoche": 82,
-   "zug": "weiter",
+   "zug": "fuhre:plan:mager",
    "ergebnis": "geklickt",
-   "quelle": "pflicht",
-   "kasseVorher": 3618
+   "quelle": "fuhre-woche-zufall",
+   "kasseVorher": 896
   },
   {
    "kumWoche": 83,
-   "zug": "fuhre:plan:probe",
+   "zug": "fuhre:plan:mager",
    "ergebnis": "geklickt",
    "quelle": "fuhre-woche-zufall",
-   "kasseVorher": 3595
-  },
-  {
-   "kumWoche": 83,
-   "zug": "weiter",
-   "ergebnis": "geklickt",
-   "quelle": "pflicht",
-   "kasseVorher": 3487
+   "kasseVorher": 896
   },
   {
    "kumWoche": 84,
-   "zug": "fuhre:plan:durst",
+   "zug": "fuhre:plan:rechnung",
    "ergebnis": "geklickt",
    "quelle": "fuhre-woche-zufall",
-   "kasseVorher": 3464
-  },
-  {
-   "kumWoche": 84,
-   "zug": "weiter",
-   "ergebnis": "geklickt",
-   "quelle": "pflicht",
-   "kasseVorher": 3500
+   "kasseVorher": 896
   },
   {
    "kumWoche": 85,
+   "zug": "fuhre:plan:umkaempft",
+   "ergebnis": "geklickt",
+   "quelle": "fuhre-woche-zufall",
+   "kasseVorher": 896
+  },
+  {
+   "kumWoche": 86,
    "zug": "fuhre:plan:mager",
    "ergebnis": "geklickt",
    "quelle": "fuhre-woche-zufall",
-   "kasseVorher": 3477
-  },
-  {
-   "kumWoche": 85,
-   "zug": "gegner:abwehren:pfarrhof",
-   "ergebnis": "nicht-gegriffen:nicht-unter-zeiger",
-   "quelle": "gegenzug",
-   "kasseVorher": 3508
-  },
-  {
-   "kumWoche": 85,
-   "zug": "weiter",
-   "ergebnis": "geklickt",
-   "quelle": "pflicht",
-   "kasseVorher": 3508
-  },
-  {
-   "kumWoche": 86,
-   "zug": "fuhre:plan:probe",
-   "ergebnis": "geklickt",
-   "quelle": "fuhre-woche-zufall",
-   "kasseVorher": 3485
-  },
-  {
-   "kumWoche": 86,
-   "zug": "gegner:abwehren:pfarrhof",
-   "ergebnis": "nicht-gegriffen:nicht-im-dom",
-   "quelle": "gegenzug",
-   "kasseVorher": 3436
-  },
-  {
-   "kumWoche": 86,
-   "zug": "weiter",
-   "ergebnis": "geklickt",
-   "quelle": "pflicht",
-   "kasseVorher": 3436
+   "kasseVorher": 896
   },
   {
    "kumWoche": 87,
-   "zug": "gegner:zuvorkommen:pfarrhof",
-   "ergebnis": "nicht-gegriffen:nicht-unter-zeiger",
-   "quelle": "gegenzug",
-   "kasseVorher": 4200
-  },
-  {
-   "kumWoche": 87,
-   "zug": "weiter",
-   "ergebnis": "geklickt",
-   "quelle": "pflicht",
-   "kasseVorher": 4200
-  },
-  {
-   "kumWoche": 88,
-   "zug": "sud:zettel-anstich",
-   "ergebnis": "geklickt",
-   "quelle": "sud-anzapfen",
-   "kasseVorher": 4177
-  },
-  {
-   "kumWoche": 88,
-   "zug": "fuhre:plan:mager",
-   "ergebnis": "geklickt",
-   "quelle": "fuhre-woche-zufall",
-   "kasseVorher": 4177
-  },
-  {
-   "kumWoche": 88,
-   "zug": "weiter",
-   "ergebnis": "geklickt",
-   "quelle": "pflicht",
-   "kasseVorher": 4196
-  },
-  {
-   "kumWoche": 89,
-   "zug": "sud:zettel-anstich",
-   "ergebnis": "geklickt",
-   "quelle": "sud-anzapfen",
-   "kasseVorher": 4173
-  },
-  {
-   "kumWoche": 89,
    "zug": "fuhre:plan:umkaempft",
    "ergebnis": "geklickt",
    "quelle": "fuhre-woche-zufall",
-   "kasseVorher": 4173
+   "kasseVorher": 896
+  },
+  {
+   "kumWoche": 88,
+   "zug": "fuhre:plan:umkaempft",
+   "ergebnis": "geklickt",
+   "quelle": "fuhre-woche-zufall",
+   "kasseVorher": 896
   },
   {
    "kumWoche": 89,
-   "zug": "weiter",
+   "zug": "fuhre:plan:rechnung",
    "ergebnis": "geklickt",
-   "quelle": "pflicht",
-   "kasseVorher": 4176
+   "quelle": "fuhre-woche-zufall",
+   "kasseVorher": 896
   },
   {
    "kumWoche": 90,
-   "zug": "sud:zettel-anstich",
-   "ergebnis": "geklickt",
-   "quelle": "sud-anzapfen",
-   "kasseVorher": 4153
-  },
-  {
-   "kumWoche": 90,
-   "zug": "weiter",
-   "ergebnis": "geklickt",
-   "quelle": "pflicht",
-   "kasseVorher": 4153
-  },
-  {
-   "kumWoche": 91,
-   "zug": "sud:zettel-anstich",
-   "ergebnis": "geklickt",
-   "quelle": "sud-anzapfen",
-   "kasseVorher": 4130
-  },
-  {
-   "kumWoche": 91,
-   "zug": "fuhre:plan:probe",
-   "ergebnis": "geklickt",
-   "quelle": "fuhre-woche-zufall",
-   "kasseVorher": 4130
-  },
-  {
-   "kumWoche": 91,
-   "zug": "weiter",
-   "ergebnis": "geklickt",
-   "quelle": "pflicht",
-   "kasseVorher": 4078
-  },
-  {
-   "kumWoche": 92,
-   "zug": "sud:zettel-anstich",
-   "ergebnis": "geklickt",
-   "quelle": "sud-anzapfen",
-   "kasseVorher": 4055
-  },
-  {
-   "kumWoche": 92,
-   "zug": "fuhre:plan:durst",
-   "ergebnis": "geklickt",
-   "quelle": "fuhre-woche-zufall",
-   "kasseVorher": 4055
-  },
-  {
-   "kumWoche": 92,
-   "zug": "gegner:abwehren:faehrhaus",
-   "ergebnis": "geklickt",
-   "quelle": "gegenzug",
-   "kasseVorher": 4057
-  },
-  {
-   "kumWoche": 92,
-   "zug": "weiter",
-   "ergebnis": "geklickt",
-   "quelle": "pflicht",
-   "kasseVorher": 2718
-  },
-  {
-   "kumWoche": 93,
-   "zug": "sud:zettel-anstich",
-   "ergebnis": "geklickt",
-   "quelle": "sud-anzapfen",
-   "kasseVorher": 2695
-  },
-  {
-   "kumWoche": 93,
-   "zug": "fuhre:plan:durst",
-   "ergebnis": "geklickt",
-   "quelle": "fuhre-woche-zufall",
-   "kasseVorher": 2695
-  },
-  {
-   "kumWoche": 93,
-   "zug": "weiter",
-   "ergebnis": "geklickt",
-   "quelle": "pflicht",
-   "kasseVorher": 2697
-  },
-  {
-   "kumWoche": 94,
-   "zug": "sud:zettel-anstich",
-   "ergebnis": "geklickt",
-   "quelle": "sud-anzapfen",
-   "kasseVorher": 2674
-  },
-  {
-   "kumWoche": 94,
    "zug": "fuhre:plan:mager",
    "ergebnis": "geklickt",
    "quelle": "fuhre-woche-zufall",
-   "kasseVorher": 2674
+   "kasseVorher": 896
+  },
+  {
+   "kumWoche": 91,
+   "zug": "fuhre:plan:mager",
+   "ergebnis": "geklickt",
+   "quelle": "fuhre-woche-zufall",
+   "kasseVorher": 896
+  },
+  {
+   "kumWoche": 92,
+   "zug": "fuhre:plan:rechnung",
+   "ergebnis": "geklickt",
+   "quelle": "fuhre-woche-zufall",
+   "kasseVorher": 896
+  },
+  {
+   "kumWoche": 93,
+   "zug": "fuhre:plan:rechnung",
+   "ergebnis": "geklickt",
+   "quelle": "fuhre-woche-zufall",
+   "kasseVorher": 896
   },
   {
    "kumWoche": 94,
-   "zug": "weiter",
+   "zug": "fuhre:plan:umkaempft",
    "ergebnis": "geklickt",
-   "quelle": "pflicht",
-   "kasseVorher": 2680
+   "quelle": "fuhre-woche-zufall",
+   "kasseVorher": 896
   },
   {
    "kumWoche": 95,
-   "zug": "sud:zettel-anstich",
+   "zug": "fuhre:plan:umkaempft",
    "ergebnis": "geklickt",
-   "quelle": "sud-anzapfen",
-   "kasseVorher": 2657
-  },
-  {
-   "kumWoche": 95,
-   "zug": "weiter",
-   "ergebnis": "geklickt",
-   "quelle": "pflicht",
-   "kasseVorher": 2657
+   "quelle": "fuhre-woche-zufall",
+   "kasseVorher": 896
   },
   {
    "kumWoche": 96,
-   "zug": "sud:zettel-anstich",
+   "zug": "fuhre:plan:mager",
    "ergebnis": "geklickt",
-   "quelle": "sud-anzapfen",
-   "kasseVorher": 2634
-  },
-  {
-   "kumWoche": 96,
-   "zug": "weiter",
-   "ergebnis": "geklickt",
-   "quelle": "pflicht",
-   "kasseVorher": 2634
-  },
-  {
-   "kumWoche": 97,
-   "zug": "sud:zettel-anstich",
-   "ergebnis": "geklickt",
-   "quelle": "sud-anzapfen",
-   "kasseVorher": 2611
+   "quelle": "fuhre-woche-zufall",
+   "kasseVorher": 896
   },
   {
    "kumWoche": 97,
    "zug": "fuhre:plan:umkaempft",
    "ergebnis": "geklickt",
    "quelle": "fuhre-woche-zufall",
-   "kasseVorher": 2611
-  },
-  {
-   "kumWoche": 97,
-   "zug": "weiter",
-   "ergebnis": "geklickt",
-   "quelle": "pflicht",
-   "kasseVorher": 2665
+   "kasseVorher": 896
   },
   {
    "kumWoche": 98,
-   "zug": "sud:zettel-anstich",
-   "ergebnis": "geklickt",
-   "quelle": "sud-anzapfen",
-   "kasseVorher": 2642
-  },
-  {
-   "kumWoche": 98,
-   "zug": "fuhre:plan:probe",
+   "zug": "fuhre:plan:mager",
    "ergebnis": "geklickt",
    "quelle": "fuhre-woche-zufall",
-   "kasseVorher": 2642
-  },
-  {
-   "kumWoche": 98,
-   "zug": "weiter",
-   "ergebnis": "geklickt",
-   "quelle": "pflicht",
-   "kasseVorher": 2590
+   "kasseVorher": 896
   },
   {
    "kumWoche": 99,
-   "zug": "sud:zettel-anstich",
-   "ergebnis": "geklickt",
-   "quelle": "sud-anzapfen",
-   "kasseVorher": 2567
-  },
-  {
-   "kumWoche": 99,
-   "zug": "fuhre:plan:durst",
+   "zug": "fuhre:plan:rechnung",
    "ergebnis": "geklickt",
    "quelle": "fuhre-woche-zufall",
-   "kasseVorher": 2567
-  },
-  {
-   "kumWoche": 99,
-   "zug": "weiter",
-   "ergebnis": "geklickt",
-   "quelle": "pflicht",
-   "kasseVorher": 2609
-  },
-  {
-   "kumWoche": 100,
-   "zug": "sud:zettel-anstich",
-   "ergebnis": "geklickt",
-   "quelle": "sud-anzapfen",
-   "kasseVorher": 2586
+   "kasseVorher": 896
   },
   {
    "kumWoche": 100,
    "zug": "fuhre:plan:umkaempft",
    "ergebnis": "geklickt",
    "quelle": "fuhre-woche-zufall",
-   "kasseVorher": 2586
-  },
-  {
-   "kumWoche": 100,
-   "zug": "weiter",
-   "ergebnis": "geklickt",
-   "quelle": "pflicht",
-   "kasseVorher": 2641
+   "kasseVorher": 896
   }
  ],
  "endZustand": {
-  "jahr": 1889,
-  "woche": 25,
+  "jahr": 1885,
+  "woche": 29,
   "epoche": 3,
   "ende": false,
-  "kasse": 2618
+  "kasse": 896
  },
  "lageMax": 0,
  "seitenfehler": []
