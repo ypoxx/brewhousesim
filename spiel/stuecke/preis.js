@@ -1829,6 +1829,33 @@
 
   function festPreis(f) { return f.anteil ? rundePreis(f.anteil * festBasis()) : 0; }
 
+  /* ======================================================================
+     R15.1 — WELLE 15, DER GRIFF. Liegt gerade eine bezahlbare, ungenommene
+     Festlegung auf dem Tisch?
+
+     GEMESSEN, nicht vermutet (Analyst, Welle 15): der Konzernvertrag in 1970
+     kostet nichts, liegt einen Klick weit hinter dem Griff, ist in allen
+     sechs Braujahren `hit:true` und `aus:false` — und wurde in drei Laeufen
+     ueber 400 echte Wochen kein einziges Mal genommen. Der Grund ist keine
+     Preis- und keine Sichtbarkeitsfrage: `preis:tafel` ist ein Auf-Zu-
+     Schalter, und die suchende Hand klappt ihn beim naechsten Rundgang
+     wieder zu, bevor die Festlegung ueberhaupt an der Reihe war (siehe
+     `zeichneGriff` unten und werkbank/urteile/welle15-der-griff-bau.md).
+
+     Dieselbe Pruefung, die `spalteAngebote()` fuer den Satz "heute N zu
+     haben" schon rechnet (dort `offenJetzt`), entscheidet hier, ob der
+     Griff sich noch als Schliessknopf verhalten darf. */
+  function festlegungWartet() {
+    if (!festlegungOffen()) return false;
+    if (B.welt.zeit.woche !== 1) return false;
+    var l = festlegungenTafel();
+    for (var i = 0; i < l.length; i++) {
+      var p = festPreis(l[i]);
+      if (p === 0 || B.welt.kann(p)) return true;
+    }
+    return false;
+  }
+
   /* Alles, was in der Chronik des Hauses unabaenderlich steht — gleich,
      welches Stueck es hineingeschrieben hat. DER GEGNER, DIE FUHRE und DAS
      ERBE schreiben mit `art='festlegung'`; dieses Stueck ebenfalls. Die
@@ -3095,30 +3122,57 @@
      `sichtbar` wird NICHT hier ausgerechnet, sondern kommt aus derselben
      Entscheidung, aus der `zeichne` gerade die Tafel zeichnet oder nicht
      (R6). Zwei getrennte Aufrufe von `tafelSichtbar()` in einer Runde waeren
-     zwei Messungen — und genau daran hing die Luege. */
+     zwei Messungen — und genau daran hing die Luege.
+
+     R15.1 — WELLE 15, DER GRIFF: derselbe Knopf trug bisher beide Richtungen
+     — auf UND zu — unter demselben `data-zug`. Eine Hand, die alle
+     greifbaren Knoepfe der Reihe nach anfasst, oeffnet die Tafel mit dem
+     einen Griff und klappt sie mit dem naechsten Griff wieder zu, bevor die
+     Festlegung je an der Reihe war (gemessen: 0 von 3 Laeufen nahmen den
+     Konzernvertrag in 1970). Genau wie Welle 13 es fuer den fremden
+     Reiterklick entschieden hat: das Schliessen einer Tafel, auf der etwas
+     Ungenommenes liegt, braucht einen EIGENEN Knopf mit eigenem `data-zug` —
+     hier sind das bereits `preis:nichts` ("Nichts nehmen") und
+     `preis:tafel-zu` ("Das Jahr beginnen") im Fuss der Tafel, beides
+     erklaerte Entscheidungen. Der Griff selbst wird waehrend `haeltFest`
+     zum reinen OEFFNER: sein Klick tut nichts, solange die Festlegung noch
+     nicht getroffen und nicht bezahlbar-verweigert ist. Eingesperrt wird
+     dabei niemand — beide Fusszeilen bleiben unveraendert anklickbar. */
   function zeichneGriff(fach, sichtbar) {
     var offenZahl = lebendeAngebote().length;
     var michaeliHeute = B.welt.zeit.woche === 1 && Z.offen;
     var wartet = !sichtbar && Z.offen && sommerLaeuft();
+    var haeltFest = sichtbar && festlegungWartet();
     var griff = B.el('div', 'pr-griff');
 
     griff.appendChild(B.knopf({
       /* Die Aufschrift beschreibt, was in DIESER Runde gezeichnet wird, und
          nichts sonst. Liegt keine Tafel, steht immer Jahr und Zahl da. */
       text: sichtbar
-        ? 'Michaelitafel schließen'
+        ? (haeltFest
+            ? 'Michaelitafel bleibt offen — erst festlegen oder unten schließen'
+            : 'Michaelitafel schließen')
         : 'Michaelitafel ' + Z.tafelJahr + ' · ' + offenZahl + ' Angebote'
           + (wartet ? ' — liegt bereit' : (michaeliHeute ? ' — heute ist Michaeli' : '')),
       zug: 'preis:tafel',
       klasse: 'pr-griff-knopf' + (wartet ? ' pr-griff-wartet' : '')
-        + (!sichtbar && michaeliHeute ? ' pr-griff-heute' : ''),
-      titel: wartet
-        ? 'Der Sommerzettel liegt oben. Die Michaelitafel wartet darunter und schlägt auf, sobald er weg ist — oder sofort, auf diesen Klick.'
-        : (B.welt.zeit.woche === 1
-            ? 'Heute ist Michaeli. Was hier genommen wird, wird heute genommen.'
-            : 'Michaeli ist vorüber. Genommen wird zu Michaeli ' + (Z.tafelJahr + 1) + '.'),
+        + (!sichtbar && michaeliHeute ? ' pr-griff-heute' : '')
+        + (haeltFest ? ' pr-griff-haelt' : ''),
+      titel: haeltFest
+        ? 'Eine Festlegung liegt bereit und ist noch nicht getroffen. Dieser Knopf öffnet nur — '
+          + 'zum Schließen unten auf der Tafel „Nichts nehmen" oder „Das Jahr beginnen" wählen.'
+        : (wartet
+            ? 'Der Sommerzettel liegt oben. Die Michaelitafel wartet darunter und schlägt auf, sobald er weg ist — oder sofort, auf diesen Klick.'
+            : (B.welt.zeit.woche === 1
+                ? 'Heute ist Michaeli. Was hier genommen wird, wird heute genommen.'
+                : 'Michaeli ist vorüber. Genommen wird zu Michaeli ' + (Z.tafelJahr + 1) + '.')),
       tu: function () {
-        if (sichtbar) { Z.offen = false; Z.erzwungen = false; }
+        if (sichtbar) {
+          /* R15.1: solange eine bezahlbare Festlegung ungenommen daliegt,
+             raeumt der Griff sie nicht durch Danebengreifen weg. */
+          if (haeltFest) return;
+          Z.offen = false; Z.erzwungen = false;
+        }
         /* Ein Klick ist eine Hand am Brett: DIE STADT laesst aufgeschlagen,
            was der Spieler selbst geholt hat. Also die Merkmarke loeschen. */
         else { Z.offen = true; Z.erzwungen = true; Z.geklemmt = false; }

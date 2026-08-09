@@ -241,6 +241,22 @@
 }
 
 /* --------------------------------------------------------------------------
+   R15.1 — WELLE 15, DER GRIFF: „bleibt offen" statt „schließen".
+
+   Solange eine bezahlbare Festlegung ungenommen daliegt, tut der Griff
+   keinen Schließ-Klick mehr (siehe stuecke/preis.js, `zeichneGriff`,
+   `festlegungWartet`). Er bleibt anklickbar — ein Klick ist kein Fehler,
+   er tut nur nichts — bekommt aber eine eigene, grüne Kante, damit er sich
+   von „schließen" (kein Rahmen) und „heute ist Michaeli" (rot) sichtbar
+   unterscheidet: hier ist nicht Eile die Botschaft, sondern „lässt sich von
+   hier aus nicht wegräumen". */
+.knopf.pr-griff-haelt {
+  border-color: var(--pr-gruen, #3d5b3a);
+  box-shadow: 0 0 0 calc(var(--s) * 2) rgba(61, 91, 58, 0.22);
+  cursor: default;
+}
+
+/* --------------------------------------------------------------------------
    DIE CHRONIK — drei Spalten statt einer leeren Seite
 
    Sie war eine große leere Fläche, solange nichts darin stand. Jetzt trägt
