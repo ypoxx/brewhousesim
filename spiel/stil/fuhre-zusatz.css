@@ -18,6 +18,15 @@
    DIE ANSCHLAGTAFEL WIRD ENGER — dieselbe Flaeche, zwei Zeilen mehr
    -------------------------------------------------------------------------- */
 .fu-tafel { gap: calc(var(--s) * 4); padding-top: calc(var(--s) * 8); }
+/* WELLE 15, R15.2 — die Unterschrift der Tafel traegt jetzt die verplante
+   Wochenkapazitaet und den Kammerbestand mit (fuhre.js, zeichneTafel) — laenger
+   als der alte, feste Satz. Die Tafel ist mit 23,2 % Buehnenbreite das
+   schmalste Brett des Stuecks (stil/fuhre.css); anders als die uebrigen
+   Koepfe, die erst unter der Entwurfsleinwand umbrechen, darf dieser hier
+   IMMER umbrechen — sonst liefe die neue Zahl am Rand hinaus, gerade auf der
+   Flaeche, auf der sie am meisten zaehlt. */
+.fu-tafel .fu-kopf { flex-wrap: wrap; row-gap: calc(var(--s) * 2); }
+.fu-tafel .fu-kopf span { white-space: normal; }
 .fu-tafel .fu-budget { padding: calc(var(--s) * 2) calc(var(--s) * 8); }
 .fu-tafel .fu-budget b { font-size: max(12px, calc(var(--s) * 19)); }
 .fu-tafel .fu-budget span { font-size: max(12px, calc(var(--s) * 14)); }

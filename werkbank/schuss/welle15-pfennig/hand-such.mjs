@@ -7,21 +7,24 @@
    Wie sie waehlt, in zwei Saetzen:
    1. Jede Aussenrunde klappt sie zuerst alle sichtbaren, freien Knoepfe OHNE
       Preisschild auf (das sind strukturell die Bretter/Reiter) — erneut, sobald
-      sich deren sichtbarer Text seit dem letzten Versuch geaendert hat.
+      ihr sichtbarer Text einen Stand zeigt, den diese Hand bei diesem Knopf
+      noch nie gesehen hat.
    2. Danach nimmt sie aus den sichtbaren, freien Knoepfen MIT Preisschild den
       mit dem groessten Zahlenwert zuerst (Einnahme vor Ausgabe, billige Ausgabe
       vor teurer), bis zu drei je Runde, nur wenn die Kasse eine Ausgabe deckt,
       und schliesst die Woche mit dem einen Knopf, der in jeder Epoche
       unveraendert existiert (zug:'weiter').
 
-   Zusatz gegenueber einer reinen Einmal-Erkundung: WIEDERHOLBARE Knoepfe ohne
-   Preisschild, deren Text sich NICHT aendert (z.B. "+ 1 Fass" bleibt "+ 1
-   Fass", auch wenn der Wagen dadurch voller wird), werden trotzdem bis zu
-   MEHRFACH_GRENZE mal je Woche versucht — sonst waere jeder Mehrfach-Knopf
-   (laden, fuellen, kaufen) strukturell auf einen Klick je Woche begrenzt, nur
-   weil sein Text stabil bleibt. Das ist keine Kenntnis eines Namens: die Hand
-   behandelt jeden textstabilen freien Knopf gleich, unabhaengig davon, wie er
-   heisst.
+   EINE GEGENPROBE GEGENUEBER DER REINEN "LETZTER TEXT"-REGEL: gemerkt wird
+   die MENGE aller je gesehenen Texte eines Knopfes (nicht nur der letzte).
+   Ein Auf/Zu-Schalter, dessen Text zwischen genau zwei Staenden hin und her
+   springt ("N Angebote" / "schließen"), wird damit zweimal versucht und dann
+   nicht mehr endlos hin- und hergeklickt — das ist keine Kenntnis eines
+   Namens, sondern dieselbe Regel fuer jeden Knopf: nur ein wirklich neuer
+   Anblick ist einen Klick wert. Ohne diese Gegenprobe blieb die Hand an genau
+   solchen Schaltern haengen (gemessen bei diesem Bau: eine Spielwoche fraß
+   mehr als eine Minute Wanduhrzeit allein durch das Wechselspiel weniger
+   Auf/Zu-Knoepfe), was keine Erkundung mehr ist, sondern ein Leerlauf.
 
    HAFEN=8942 SAAT=1350 node hand-such.mjs <epoche> <lauf-name> [maxWochen] [maxMinuten]
 */
@@ -37,7 +40,6 @@ const HAFEN     = process.env.HAFEN || '8942';
 const SAAT      = process.env.SAAT || '1350';
 const BR        = +(process.env.BREITE || 1600);
 const HO        = +(process.env.HOEHE || 900);
-const MEHRFACH_GRENZE = +(process.env.MEHRFACH || 8);
 const WURZ      = '/home/user/brewhousesim/werkbank/schuss/welle15-pfennig';
 const PROT      = `${WURZ}/protokoll/${LAUF}.jsonl`;
 const SCHUSS    = `${WURZ}/schuesse`;
@@ -124,21 +126,20 @@ let letzteWoche = null;
 let echteWochenGesamt = 0;
 const wochenReihe = [];
 
-/* Erkundung ueber die GANZE Partie gemerkt (zug -> zuletzt gesehener Text UND
-   zuletzt gesehene Wochenkennung), nicht je Woche zurueckgesetzt: ein Brett,
-   das schon offen ist, muss nicht jede Woche neu aufgeklappt werden. Erneut
-   versucht wird ein Knopf, wenn entweder sein sichtbarer Text sich geaendert
-   hat, ODER eine neue Woche begonnen hat (dann darf ein textstabiler
-   Mehrfach-Knopf wieder MEHRFACH_GRENZE mal versucht werden). */
-const navGesehenText = new Map();
-const navVersucheDieseWoche = new Map();
+/* Erkundung ueber die GANZE Partie gemerkt (zug -> Menge aller je gesehenen
+   Texte), nicht je Woche zurueckgesetzt: ein Brett, das schon offen ist, muss
+   nicht jede Woche neu aufgeklappt werden. Erneut versucht wird ein Knopf nur,
+   wenn sein sichtbarer Text ein Stand ist, den diese Hand bei GENAU DIESEM
+   Knopf noch nie gesehen hat — das faengt sowohl echten Fortschritt (ein
+   Zaehler, der weiterlaeuft) als auch einen einfachen Auf/Zu-Schalter ab
+   (zwei Staende, zwei Versuche, dann Ruhe). */
+const navGesehenTexte = new Map();   // zug -> Set<text>
 
 function merkeWoche(snap) {
   const kennung = snap.jahr * 100 + snap.woche;
   if (kennung === letzteWoche) return;
   letzteWoche = kennung;
   echteWochenGesamt++;
-  navVersucheDieseWoche.clear();
   wochenReihe.push({ n: echteWochenGesamt, jahr: snap.jahr, woche: snap.woche,
     kasse: snap.kasse, deckung: snap.deckung });
 }
@@ -171,9 +172,9 @@ while (echteWochenGesamt < MAXWOCHEN) {
 
   /* PHASE 1 — Erkundung: alle sichtbaren, freien Knoepfe OHNE Preisschild,
      je Aussenrunde bis zu 14 Durchgaenge, in Bildschirm-Reihenfolge. Ein
-     Knopf, dessen Text sich seit dem letzten Versuch nicht geaendert hat,
-     bekommt trotzdem bis zu MEHRFACH_GRENZE Versuche in dieser Woche —
-     das faengt Mehrfach-Knoepfe wie "+ 1 Fass" ab, ohne einen Namen zu
+     Knopf wird versucht, wenn sein jetziger Text bei DIESEM Knopf noch nie
+     aufgetaucht ist — das genuegt fuer einen Zaehler, der weiterlaeuft, UND
+     bremst einen Auf/Zu-Schalter nach zwei Staenden aus, ohne einen Namen zu
      kennen: es gilt fuer JEDEN freien Knopf gleich. */
   for (let pass = 0; pass < 14; pass++) {
     s = await schirm();
@@ -183,15 +184,14 @@ while (echteWochenGesamt < MAXWOCHEN) {
     }
     const cand = s.zuege.filter(z => {
       if (!z.hit || z.aus || z.preis !== null || z.zug === 'weiter') return false;
-      const versucheBisher = navVersucheDieseWoche.get(z.zug) || 0;
-      if (navGesehenText.get(z.zug) !== z.text) return true;         // neuer Text
-      return versucheBisher < MEHRFACH_GRENZE;                        // textstabil, aber noch Kontingent
+      const gesehen = navGesehenTexte.get(z.zug);
+      return !gesehen || !gesehen.has(z.text);
     });
     if (!cand.length) break;
     let bewegt = false;
     for (const c of cand) {
-      navGesehenText.set(c.zug, c.text);
-      navVersucheDieseWoche.set(c.zug, (navVersucheDieseWoche.get(c.zug) || 0) + 1);
+      if (!navGesehenTexte.has(c.zug)) navGesehenTexte.set(c.zug, new Set());
+      navGesehenTexte.get(c.zug).add(c.text);
       const vor = await schirm(); if (vor.ende) break;
       const el = vor.zuege.find(x => x.zug === c.zug && x.hit && !x.aus);
       if (!el) continue;

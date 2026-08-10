@@ -3265,7 +3265,39 @@
   /* --- DIE ANSCHLAGTAFEL ---------------------------------------------- */
   function zeichneTafel(fach) {
     var e = ep();
-    var b = brett('fu-tafel', e.tafel.name.toUpperCase(), e.tafel.unter);
+    /* WELLE 15, R15.2 — DIE UNTERSCHRIFT DER TAFEL TRAEGT EINE ZAHL, DIE SICH
+       BEWEGT, AUCH WENN NIEMAND DIE TAFEL ANFASST.
+
+       Vorher stand hier immer derselbe Satz (`e.tafel.unter`, z. B. "mit
+       Kreide an der Sudhauswand") — Wort fuer Wort gleich, Woche fuer Woche,
+       Braujahr fuer Braujahr. DIE STADT liest genau diesen Satz als
+       Reiterbeschriftung (`stadt.js:beschriftung`): ein Reiter mit
+       unveraendertem Anblick wird von einer Hand, die nach NEUEM sucht, kein
+       zweites Mal aufgeschlagen, sobald "Stadt zeigen" ihn einmal zugeklappt
+       hat. Gemessen: die Tafel blieb danach 220 Wochen lang zu, und der
+       Sudplan blieb auf dem Startwert stehen, waehrend zwei Drittel der
+       woechentlichen Braukapazitaet ungenutzt blieben (siehe Baubericht).
+       Jetzt traegt die Unterschrift zusaetzlich, wieviel von der
+       Wochenkapazitaet schon verplant ist und was in der Kammer liegt — beides
+       Zahlen, die sich von selbst bewegen (Einkauf, Verbrauch, Umstellen),
+       ohne dass ein Name daran haengt.
+
+       DIE REIHENFOLGE IST KEIN GESCHMACK. `stadt.js:beschriftung()` kappt die
+       Unterschrift des Reiters hart bei 44 Zeichen und danach an der letzten
+       vollstaendigen " · "-Grenze — der alte Satz allein war schon 30 Zeichen
+       lang. Stuende er vorn, fiele die neue Zahl dahinter aus dem Fenster und
+       haette denselben unbeweglichen Anblick wie vorher. Die Zahlen stehen
+       deshalb ZUERST: sie passen sicher hinein, auch wenn der alte Satz dafuer
+       auf dem Reiter selbst verloren geht — er bleibt vollstaendig auf der
+       Tafel stehen, wo tatsaechlich gelesen wird. */
+    var kapazitaet = e.budget
+      ? planSummeBudget() + '/' + e.budget.jeWoche + ' ' + e.budget.name
+      : planSummeSude() + '/' + (Z.sudeJeWoche || 1)
+        + (Z.sudeJeWoche === 1 ? ' Sud' : ' Suden');
+    var rname0 = B.welt.epoche().rohstoff || 'Rohstoff';
+    var tafelUnter = kapazitaet + ' · ' + B.zahl(B.welt.haus.rohstoff) + ' ' + rname0
+      + ' · ' + e.tafel.unter;
+    var b = brett('fu-tafel', e.tafel.name.toUpperCase(), tafelUnter);
     /* Die Tafel haengt an der Sudhauswand — der Ort steht als Zeugnis dran,
        gesetzt wird sie ueber die Platzordnung in stil/fuhre.css, weil ein
        Brett dieser Groesse kein Punkt ist. */
@@ -3342,22 +3374,39 @@
       if (s.sommer) kosten.appendChild(B.el('span', 'fu-sommerfest', 'sommerfest'));
       r.appendChild(kosten);
 
+      /* WELLE 15, R15.2 — DER STELLKNOPF TRAEGT SEINE EIGENE ZAHL.
+         Bis hierher stand auf "+" immer nur "+", gleich wie oft man schon
+         umgestellt hatte — die Planzahl stand nur im Fach daneben. Gemessen
+         (eigene Hand, siehe werkbank/schuss/welle15-pfennig/): eine Hand, die
+         Knoepfe nach ihrem SICHTBAREN Zustand absucht, greift einen Knopf mit
+         immer demselben Anblick genau einmal in der ganzen Partie — die Tafel
+         blieb 220 Wochen lang auf dem Anfangsplan stehen, waehrend derselbe
+         Wagen jede Woche mehr Platz gehabt haette. Jetzt zeigt der Knopf
+         selbst, wohin der naechste Klick fuehrt: "+" bleibt "+", solange
+         nichts steht, und wird "+ 2", "+ 3", ... sobald etwas draufsteht —
+         derselbe Griff, keine neue Zahl, nur ein Anblick, der sich mit dem
+         Klick tatsaechlich aendert. Das Fach mit der Planzahl bleibt daneben
+         stehen, unveraendert. */
       var stell = B.el('div', 'fu-stell');
       stell.appendChild(B.knopf({
-        text: '−', zug: 'fuhre:tafel-ab:' + s.k, klasse: 'fu-klein',
+        text: '−' + (Z.plan[s.k] ? ' ' + Z.plan[s.k] : ''), zug: 'fuhre:tafel-ab:' + s.k, klasse: 'fu-klein',
         aus: !(Z.plan[s.k] > 0),
         titel: 'Einen Sud weniger je Woche.',
         tu: function () { stelleTafel(s, -1, aendern); }
       }));
       stell.appendChild(B.el('span', 'fu-planzahl', String(Z.plan[s.k] || 0)));
-      stell.appendChild(B.knopf({
-        text: '+', zug: 'fuhre:tafel-auf:' + s.k, klasse: 'fu-klein',
-        preis: aendern ? -aendern : 0,
-        titel: frei
-          ? 'Zu Michaeli steht die Tafel frei. ' + s.satz
-          : 'Der Braumeister muss umstellen. Das kostet ' + B.welt.geld(aendern) + '. ' + s.satz,
-        tu: function () { stelleTafel(s, +1, aendern); }
-      }));
+      var tafelAufFrei = { text: '+' + (Z.plan[s.k] ? ' ' + (Z.plan[s.k] + 1) : ''),
+        zug: 'fuhre:tafel-auf:' + s.k, klasse: 'fu-klein',
+        titel: 'Zu Michaeli steht die Tafel frei. ' + s.satz,
+        tu: function () { stelleTafel(s, +1, aendern); } };
+      /* Kostet der Klick wirklich etwas (nach der freien Woche), traegt der
+         Knopf sein Preisschild wie jeder andere Kauf — die Zahl daran aendert
+         sich dadurch nicht. */
+      if (aendern) {
+        tafelAufFrei.preis = -aendern;
+        tafelAufFrei.titel = 'Der Braumeister muss umstellen. Das kostet ' + B.welt.geld(aendern) + '. ' + s.satz;
+      }
+      stell.appendChild(B.knopf(tafelAufFrei));
       r.appendChild(stell);
       tab.appendChild(r);
     });
@@ -3381,13 +3430,16 @@
         + ' · hält ' + ns.haltbar + ' Wo. · nur die Pfanne'));
       var nstell = B.el('div', 'fu-stell');
       nstell.appendChild(B.knopf({
-        text: '−', zug: 'fuhre:tafel-ab:' + ns.k, klasse: 'fu-klein',
+        text: '−' + (Z.plan[ns.k] ? ' ' + Z.plan[ns.k] : ''), zug: 'fuhre:tafel-ab:' + ns.k, klasse: 'fu-klein',
         aus: !(Z.plan[ns.k] > 0), titel: 'Einen Notsud weniger je Woche.',
         tu: function () { stelleTafel(ns, -1, 0); }
       }));
       nstell.appendChild(B.el('span', 'fu-planzahl', String(Z.plan[ns.k] || 0)));
       nstell.appendChild(B.knopf({
-        text: '+', zug: 'fuhre:tafel-auf:' + ns.k, klasse: 'fu-klein',
+        /* Derselbe Grund wie oben bei den echten Sorten: der Knopf traegt
+           seine Zahl selbst, sonst sieht eine Hand, die nach Anblick sucht,
+           nie mehr als den ersten Notsud der ganzen Partie. */
+        text: '+' + (Z.plan[ns.k] ? ' ' + (Z.plan[ns.k] + 1) : ''), zug: 'fuhre:tafel-auf:' + ns.k, klasse: 'fu-klein',
         titel: ns.satz + ' Umstellen kostet hier nichts — der Braumeister braucht dafür '
              + 'weder Kreide noch Erlaubnis.',
         tu: function () { stelleTafel(ns, +1, 0); }
