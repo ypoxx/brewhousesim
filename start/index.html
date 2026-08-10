@@ -1,0 +1,335 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>Brauhaus-Imperium — ein Haus, sieben Jahrhunderte</title>
+<meta name="description" content="Eine deutschsprachige Wirtschaftssimulation für den Desktop-Browser: ein Brauhaus, ein Ort, vier Epochen von 1350 bis heute. Gewinnen heißt: übergeben können.">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Brauhaus-Imperium — ein Haus, sieben Jahrhunderte">
+<meta property="og:description" content="Eine deutschsprachige Wirtschaftssimulation für den Desktop-Browser: ein Brauhaus, ein Ort, vier Epochen von 1350 bis heute. Gewinnen heißt: übergeben können.">
+<meta property="og:image" content="og.png">
+<meta property="og:locale" content="de_DE">
+
+<meta name="theme-color" content="#efebe2" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#16150f" media="(prefers-color-scheme: dark)">
+<link rel="icon" type="image/png" href="favicon.png">
+
+<!--
+  Einzelne, eigenstaendige HTML-Datei: kein Build-Schritt, kein Netzzugriff,
+  keine Web-Fonts, keine ES-Module — dieselben Regeln wie im Spiel selbst.
+  Inline-CSS, Inline-JS, keine inline-Ereignis-Attribute (onclick=…), damit
+  die Seite auch eine strenge Content-Security-Policy uebersteht.
+-->
+<style>
+  :root {
+    --papier: #efebe2;
+    --tinte: #1b1a18;
+    --matt: #6d665a;
+    --linie: #d3ccbd;
+    --rot: #b8402a;
+    --gruen: #4a6b3a;
+    --feld: #f7f4ee;
+    --serif: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+    --sans: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    --mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --papier: #16150f; --tinte: #e8e2d4; --matt: #98907f;
+      --linie: #33302a; --rot: #e0664a; --gruen: #8fb173; --feld: #201e18;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--papier); color: var(--tinte);
+    font-family: var(--sans); font-size: 16px; line-height: 1.55;
+    -webkit-text-size-adjust: 100%;
+  }
+  .blatt { max-width: 760px; margin: 0 auto; padding: 40px 20px 80px; }
+
+  header { border-bottom: 3px double var(--linie); padding-bottom: 16px; margin-bottom: 22px; }
+  h1 {
+    font-family: var(--serif); font-size: clamp(30px, 6vw, 44px);
+    margin: 0 0 6px; font-weight: 600; letter-spacing: .01em;
+  }
+  .unter { color: var(--matt); font-size: 15px; margin: 0; }
+
+  .ziel {
+    font-family: var(--serif); font-size: 19px; line-height: 1.6;
+    margin: 0 0 32px;
+  }
+  .ziel strong { color: var(--rot); font-weight: 600; }
+
+  .abschnitt {
+    border: 1px solid var(--linie); background: var(--feld);
+    padding: 22px 24px; margin-bottom: 22px; border-radius: 3px;
+  }
+  .abschnitt h2 {
+    font-family: var(--serif); font-size: 22px; margin: 0 0 10px; font-weight: 600;
+  }
+  .abschnitt p { margin: 0 0 14px; }
+  .abschnitt-primaer { border-width: 1px 1px 1px 4px; border-left-color: var(--rot); }
+
+  .knopf {
+    display: inline-block; font-family: var(--sans); font-size: 15px; font-weight: 600;
+    padding: 12px 22px; border-radius: 3px; border: 1px solid var(--tinte);
+    text-decoration: none; cursor: pointer; color: var(--tinte); background: var(--papier);
+    line-height: 1.3;
+  }
+  .knopf-primaer { background: var(--tinte); color: var(--papier); border-color: var(--tinte); }
+  .knopf-sekundaer { border-color: var(--linie); }
+  .knopf-klein { padding: 8px 12px; font-size: 13px; }
+  .knopf:hover { opacity: .82; }
+  a:focus-visible, button:focus-visible, input:focus-visible {
+    outline: 3px solid var(--rot); outline-offset: 2px;
+  }
+
+  .hinweis {
+    background: var(--papier); border-left: 3px solid var(--rot);
+    padding: 10px 14px; font-size: 14px; color: var(--matt); margin: 16px 0 0;
+  }
+  .hinweis strong { color: var(--rot); }
+
+  .klein { font-size: 13px; color: var(--matt); margin: 8px 0 0; }
+
+  .epochen { border: 0; padding: 0; margin: 0 0 18px; }
+  .epochen legend {
+    font-family: var(--serif); font-weight: 600; font-size: 15px; padding: 0 0 8px;
+  }
+  .epochen .zeile { display: block; margin: 0 0 8px; }
+  .epochen label { font-size: 15px; cursor: pointer; }
+  .epochen input { margin-right: 8px; }
+  .epochen .verb { color: var(--matt); font-size: 13px; }
+
+  .saatzeile {
+    display: flex; flex-wrap: wrap; align-items: center; gap: 10px; margin-bottom: 6px;
+  }
+  .saatzeile label { font-size: 14px; }
+  .saatzeile input[type="number"] {
+    font-family: var(--mono); font-size: 15px; padding: 8px 10px;
+    border: 1px solid var(--linie); border-radius: 3px;
+    background: var(--papier); color: var(--tinte); width: 150px;
+  }
+
+  .start-frei { margin-top: 18px; }
+
+  .staende { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
+  .staende li { display: block; }
+
+  footer { margin-top: 32px; padding-top: 16px; border-top: 1px solid var(--linie); }
+  .fuss-nav { display: flex; gap: 18px; margin: 0 0 14px; padding: 0; list-style: none; }
+  .fuss-nav a { color: var(--tinte); font-size: 14px; }
+  .deklaration { font-size: 12.5px; color: var(--matt); line-height: 1.65; margin: 0; }
+  .deklaration strong { color: var(--tinte); }
+</style>
+</head>
+<body>
+<div class="blatt">
+
+  <header>
+    <h1>Brauhaus-Imperium</h1>
+    <p class="unter">Eine deutschsprachige Wirtschaftssimulation für den Desktop-Browser.</p>
+  </header>
+
+  <p class="ziel">
+    Man führt kein Leben, sondern ein Haus — über Jahrhunderte, am selben Ort.
+    Gewinnen heißt hier nicht groß werden, sondern: <strong>übergeben können</strong>.
+  </p>
+
+  <section class="abschnitt abschnitt-primaer" aria-labelledby="h-bogen">
+    <h2 id="h-bogen">Den Bogen beginnen</h2>
+    <p>
+      Eine Epoche nach der anderen, 1350 bis heute — jede für sich ein eigenständiges
+      Spiel von etwa 20 bis 45 Minuten.
+    </p>
+    <a class="knopf knopf-primaer" id="knopf-bogen" href="spiel/?epoche=1">Den Bogen beginnen</a>
+    <p class="hinweis">
+      <strong>Ehrlich gesagt:</strong> Der Epochenbogen selbst — die Übergabe von
+      Erbstücken von einer Epoche zur nächsten — ist noch nicht gebaut. Dieser Knopf
+      startet heute schlicht die erste Epoche, 1350, mit der Tagessaat unten. Der Stand
+      lässt sich später unter „Fortsetzen“ wiederfinden.
+    </p>
+    <p class="klein">Heutige Tagessaat: <strong id="tagessaat-anzeige">…</strong> —
+      wer heute spielt, würfelt dieselbe Partie.</p>
+  </section>
+
+  <section class="abschnitt" aria-labelledby="h-frei">
+    <h2 id="h-frei">Freies Spiel</h2>
+    <p>Epoche und Würfelsaat selbst wählen.</p>
+
+    <fieldset class="epochen">
+      <legend>Epoche</legend>
+      <span class="zeile">
+        <label><input type="radio" name="epoche" value="1" checked>
+          1350 · Das Recht <span class="verb">(überleben)</span></label>
+      </span>
+      <span class="zeile">
+        <label><input type="radio" name="epoche" value="2">
+          1600 · Die Ordnung <span class="verb">(besitzen)</span></label>
+      </span>
+      <span class="zeile">
+        <label><input type="radio" name="epoche" value="3">
+          1884 · Die Maschine <span class="verb">(skalieren)</span></label>
+      </span>
+      <span class="zeile">
+        <label><input type="radio" name="epoche" value="4">
+          1970 · Die Marke <span class="verb">(bedeuten)</span></label>
+      </span>
+    </fieldset>
+
+    <div class="saatzeile">
+      <label for="saat-feld">Würfelsaat</label>
+      <input type="number" id="saat-feld" min="1" max="4294967295" step="1" inputmode="numeric">
+      <button type="button" class="knopf knopf-klein" id="knopf-tagespartie">Tagespartie einsetzen</button>
+    </div>
+    <p class="klein">
+      Die Saat bestimmt den Würfel: gleiche Saat, gleiche Epoche, gleiche Partie.
+      „Tagespartie einsetzen“ trägt die heutige Tagessaat ein — alle, die heute so
+      spielen, spielen dieselbe.
+    </p>
+
+    <div class="start-frei">
+      <button type="button" class="knopf knopf-primaer" id="knopf-frei-start">Spiel starten</button>
+    </div>
+  </section>
+
+  <section class="abschnitt" id="fortsetzen" hidden aria-labelledby="h-fortsetzen">
+    <h2 id="h-fortsetzen">Fortsetzen</h2>
+    <p>Gefundene Spielstände in diesem Browser:</p>
+    <ul class="staende" id="fortsetzen-liste"></ul>
+  </section>
+
+  <footer>
+    <ul class="fuss-nav">
+      <li><a href="impressum.html">Impressum</a></li>
+      <li><a href="datenschutz.html">Datenschutz</a></li>
+    </ul>
+    <p class="deklaration">
+      Gebaut für <strong>Desktop und Laptop im Querformat</strong>, Bezugsgröße
+      1366×768. Getestet in <strong>Chromium 141</strong> und damit in Chrome und Edge
+      derselben Reihe — jede Zahl dieses Spiels ist dort gemessen worden. <strong>Nicht geprüft:</strong> Firefox und Safari/WebKit — es kann dort
+      funktionieren, wurde aber nicht kontrolliert. Mobilgeräte und Hochformat sind
+      kein Ziel dieses Spiels.
+    </p>
+  </footer>
+
+</div>
+
+<script>
+(function () {
+  'use strict';
+
+  /* Tagessaat: aus dem Kalendertag des eigenen Geräts, damit alle, die am
+     selben Tag spielen, denselben Würfel bekommen. YYYYMMDD als Zahl —
+     eindeutig pro Tag, passt bequem in die 32-Bit-Saat des Spiels
+     (kern/uhr.js: `(saat >>> 0) || 1350`). */
+  function tagessaat(datum) {
+    var d = datum || new Date();
+    return d.getFullYear() * 10000 + (d.getMonth() + 1) * 100 + d.getDate();
+  }
+  var heute = tagessaat();
+
+  var anzeige = document.getElementById('tagessaat-anzeige');
+  if (anzeige) anzeige.textContent = String(heute);
+
+  var knopfBogen = document.getElementById('knopf-bogen');
+  if (knopfBogen) knopfBogen.href = 'spiel/?epoche=1&saat=' + heute;
+
+  var saatFeld = document.getElementById('saat-feld');
+  if (saatFeld && !saatFeld.value) {
+    saatFeld.value = String(Math.floor(Math.random() * 90000000) + 10000000);
+  }
+
+  var knopfTagespartie = document.getElementById('knopf-tagespartie');
+  if (knopfTagespartie) {
+    knopfTagespartie.addEventListener('click', function () {
+      if (saatFeld) saatFeld.value = String(heute);
+    });
+  }
+
+  var knopfFreiStart = document.getElementById('knopf-frei-start');
+  if (knopfFreiStart) {
+    knopfFreiStart.addEventListener('click', function () {
+      var radios = document.getElementsByName('epoche');
+      var epoche = '1';
+      for (var i = 0; i < radios.length; i++) {
+        if (radios[i].checked) epoche = radios[i].value;
+      }
+      var saatWert = parseInt(saatFeld && saatFeld.value, 10);
+      if (!saatWert || saatWert < 1) {
+        saatWert = Math.floor(Math.random() * 90000000) + 10000000;
+      }
+      window.location.href = 'spiel/?epoche=' + epoche + '&saat=' + saatWert;
+    });
+  }
+
+  /* ------------------------------------------------------------------
+     FORTSETZEN. Liest brauhaus:<epoche>:<saat> aus localStorage (siehe
+     spiel/kern/stand.js) und zeigt nur Schlüssel, die wirklich vorliegen.
+     Kein Treffer, kein Abschnitt — kein toter Knopf.
+     ------------------------------------------------------------------ */
+  var EPOCHEN_NAMEN = {
+    1: '1350 · Das Recht',
+    2: '1600 · Die Ordnung',
+    3: '1884 · Die Maschine',
+    4: '1970 · Die Marke'
+  };
+
+  function ladeStaende() {
+    var raus = [];
+    var speicher;
+    try { speicher = window.localStorage; } catch (e) { return raus; }
+    if (!speicher) return raus;
+
+    for (var i = 0; i < speicher.length; i++) {
+      var schluessel = speicher.key(i);
+      if (!schluessel) continue;
+      var treffer = /^brauhaus:([0-9]+):([0-9]+)$/.exec(schluessel);
+      if (!treffer) continue; /* z. B. brauhaus:bogen — kein Partienstand */
+
+      var eintrag = { schluessel: schluessel, epoche: parseInt(treffer[1], 10), saat: treffer[2], jahr: null, woche: null };
+      try {
+        var wert = speicher.getItem(schluessel);
+        if (wert) {
+          var d = JSON.parse(wert);
+          if (d && d.zeit && typeof d.zeit.jahr === 'number' && typeof d.zeit.woche === 'number') {
+            eintrag.jahr = d.zeit.jahr;
+            eintrag.woche = d.zeit.woche;
+          }
+        }
+      } catch (e) { /* unlesbarer Stand: trotzdem als vorhanden listen, Jahr/Woche bleibt leer */ }
+
+      raus.push(eintrag);
+    }
+    raus.sort(function (a, b) {
+      return a.epoche - b.epoche || (Number(a.saat) - Number(b.saat));
+    });
+    return raus;
+  }
+
+  var staende = ladeStaende();
+  if (staende.length) {
+    var abschnitt = document.getElementById('fortsetzen');
+    var liste = document.getElementById('fortsetzen-liste');
+    staende.forEach(function (s) {
+      var li = document.createElement('li');
+      var a = document.createElement('a');
+      a.className = 'knopf knopf-sekundaer';
+      a.href = 'spiel/?epoche=' + s.epoche + '&saat=' + s.saat;
+      var text = EPOCHEN_NAMEN[s.epoche] || ('Epoche ' + s.epoche);
+      text += (s.jahr != null && s.woche != null)
+        ? ' · Jahr ' + s.jahr + ' · Woche ' + s.woche
+        : ' · Saat ' + s.saat;
+      a.textContent = text;
+      li.appendChild(a);
+      liste.appendChild(li);
+    });
+    abschnitt.hidden = false;
+  }
+})();
+</script>
+</body>
+</html>

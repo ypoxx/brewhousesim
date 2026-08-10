@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>Datenschutzerklärung — Brauhaus-Imperium</title>
+<meta name="description" content="Datenschutzerklärung von Brauhaus-Imperium.">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#efebe2" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#16150f" media="(prefers-color-scheme: dark)">
+<link rel="icon" type="image/png" href="favicon.png">
+
+<style>
+  :root {
+    --papier: #efebe2; --tinte: #1b1a18; --matt: #6d665a; --linie: #d3ccbd;
+    --rot: #b8402a; --feld: #f7f4ee;
+    --serif: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+    --sans: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    --mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --papier: #16150f; --tinte: #e8e2d4; --matt: #98907f;
+      --linie: #33302a; --rot: #e0664a; --feld: #201e18;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--papier); color: var(--tinte);
+    font-family: var(--sans); font-size: 16px; line-height: 1.6;
+  }
+  .blatt { max-width: 640px; margin: 0 auto; padding: 40px 20px 80px; }
+  header { border-bottom: 3px double var(--linie); padding-bottom: 14px; margin-bottom: 24px; }
+  h1 { font-family: var(--serif); font-size: clamp(24px, 5vw, 32px); margin: 0; font-weight: 600; }
+  .zurueck { display: inline-block; margin-bottom: 18px; font-size: 14px; color: var(--tinte); }
+  .zurueck:focus-visible, a:focus-visible { outline: 3px solid var(--rot); outline-offset: 2px; }
+  h2 {
+    font-family: var(--serif); font-size: 19px; margin: 30px 0 8px; font-weight: 600;
+    border-bottom: 1px solid var(--linie); padding-bottom: 6px;
+  }
+  p { margin: 0 0 12px; }
+  ul { margin: 0 0 12px; padding-left: 22px; }
+  li { margin-bottom: 6px; }
+  code {
+    font-family: var(--mono); font-size: 14px; background: var(--feld);
+    padding: 1px 5px; border: 1px solid var(--linie); border-radius: 2px;
+  }
+  .platzhalter {
+    background: var(--feld); border-left: 3px solid var(--rot);
+    padding: 10px 14px; font-family: var(--mono); font-size: 14.5px;
+  }
+  .hinweis { font-size: 13px; color: var(--matt); margin-top: 28px; }
+</style>
+</head>
+<body>
+<div class="blatt">
+  <a class="zurueck" href="index.html">← Zur Startseite</a>
+  <header><h1>Datenschutzerklärung</h1></header>
+
+  <h2>Kurzfassung</h2>
+  <p>
+    Dieses Spiel sendet keine Daten an uns. Es speichert ausschließlich im
+    <code>localStorage</code> des eigenen Browsers, auf dem eigenen Gerät —
+    nichts davon verlässt das Gerät. Es gibt kein Tracking, keine Cookies,
+    keine Analyse-Werkzeuge und keine Weitergabe an Dritte.
+  </p>
+
+  <h2>Was gespeichert wird</h2>
+  <p>
+    Beim Spielen legt Brauhaus-Imperium den Spielstand je Epoche und Würfelsaat
+    im <code>localStorage</code> des Browsers ab, unter Schlüsseln der Form
+    <code>brauhaus:&lt;epoche&gt;:&lt;saat&gt;</code>. Das sind Spielwerte:
+    Kasse, Zeit, Vorrat, Adressen, Chronik und ähnliches — keine
+    personenbezogenen Daten, kein Name, keine E-Mail-Adresse, keine
+    Geräte-Kennung, die über den Browserspeicher hinausgeht.
+  </p>
+  <p>
+    Dieser Speicher bleibt auf dem eigenen Gerät. Er wird nicht an einen
+    Server übertragen, weder an uns noch an Dritte.
+  </p>
+
+  <h2>Löschen</h2>
+  <p>
+    Der Aufruf einer Spiel-Adresse mit dem Zusatz <code>?neu=1</code> löscht
+    alle eigenen Spielstände aus dem <code>localStorage</code> und beginnt
+    eine frische Partie. Wer den Browserspeicher der Seite über die
+    Browser-Einstellungen leert, erreicht dasselbe.
+  </p>
+
+  <h2>Kein Tracking, keine Cookies, keine Analyse</h2>
+  <ul>
+    <li>Kein Analyse- oder Statistik-Werkzeug (kein Google Analytics und
+      vergleichbares).</li>
+    <li>Keine Cookies.</li>
+    <li>Keine eingebetteten Drittanbieter-Inhalte, keine Web-Fonts, keine
+      externen Skripte — die Seite lädt nichts aus dem Netz nach.</li>
+    <li>Keine Weitergabe von Daten an Dritte, weil keine erhoben werden, die
+      weitergegeben werden könnten.</li>
+  </ul>
+
+  <h2>Hosting und Server-Logs</h2>
+  <p>
+    Diese Seite wird bei Netlify, Inc. gehostet. Wie jeder Webserver
+    verarbeitet Netlify beim Abruf der Seite technisch bedingt Server-Logs
+    (z. B. IP-Adresse, Zeitpunkt des Zugriffs, abgerufene Datei). Diese Logs
+    entstehen automatisch beim Betrieb des Servers, dienen dem technischen
+    Betrieb und der Sicherheit und werden von uns nicht ausgewertet. Angaben
+    zur Dauer und zu den Details dieser Logs macht Netlify in der eigenen
+    Datenschutzerklärung.
+  </p>
+
+  <h2>Verantwortlicher</h2>
+  <p class="platzhalter">
+    [Name]<br>
+    [Anschrift]<br>
+    [E-Mail]
+  </p>
+
+  <p class="hinweis">
+    Diese Seite wurde als Entwurf ausgeliefert: die eckigen Platzhalter oben
+    ([Name], [Anschrift], [E-Mail]) trägt der Betreiber selbst ein, bevor die
+    Seite öffentlich erreichbar wird.
+  </p>
+</div>
+</body>
+</html>

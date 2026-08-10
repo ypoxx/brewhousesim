@@ -10,19 +10,25 @@
 # nie beabsichtigt; es war die Vorgabe, die niemand angefasst hat, solange die
 # Seite nur eine Werkstattseite war.
 #
-# Ausgeliefert wird ab jetzt genau dreierlei:
+# Ausgeliefert wird ab jetzt (T2.1, Startseite gebaut):
 #
-#   spiel/**              das Spiel
-#   index.html            die Werkstattseite (spaeter: die Startseite, T2.1)
-#   werkbank/stand.json   der Spiegel, den die Werkstattseite liest
+#   spiel/**               das Spiel, unveraendert
+#   index.html              die neue STARTSEITE (aus start/index.html)
+#   impressum.html           die Unterseite (aus start/impressum.html)
+#   datenschutz.html         die Unterseite (aus start/datenschutz.html)
+#   favicon.png, og.png      Bildchen der Startseite (aus start/)
+#   werkstatt.html          die bisherige Werkstattseite (Fortschrittsseite,
+#                            bisher an der Wurzel index.html) — zieht um,
+#                            weil index.html jetzt der Startseite gehoert
+#   werkbank/stand.json      der Spiegel, den die Werkstattseite liest
 #
 # DIE FALLE, DIE HIER SCHON EINMAL ZUGESCHNAPPT IST, und deshalb steht sie
 # hier: am 3. August starb die Werkstattseite still, weil ihre Deploy-Vorschau
 # an einem geschlossenen Pull Request hing. Der Auftraggeber sah stundenlang
 # einen alten Stand und hielt ihn fuer aktuell. **Eine Seite, die stehenbleibt,
 # ohne es zu sagen, ist schlimmer als gar keine.** Darum prueft dieses Skript
-# am Ende selbst nach, ob die drei Dinge wirklich im Ausgabeverzeichnis liegen,
-# und bricht sonst laut ab — ein fehlgeschlagener Build ist sichtbar, ein
+# am Ende selbst nach, ob alles wirklich im Ausgabeverzeichnis liegt, und
+# bricht sonst laut ab — ein fehlgeschlagener Build ist sichtbar, ein
 # stiller Teil-Deploy nicht.
 #
 # `werkbank/stand.json` traegt oben ein Feld `stand` mit dem Zeitstempel. Steht
@@ -38,7 +44,20 @@ rm -rf "$ZIEL"
 mkdir -p "$ZIEL/werkbank"
 
 cp -R spiel "$ZIEL/spiel"
-cp index.html "$ZIEL/index.html"
+
+# Die alte Wurzel-index.html ist die Werkstatt-/Fortschrittsseite (Gauntlet
+# Loop). Sie bleibt erreichbar, zieht aber auf /werkstatt.html um, weil
+# /index.html jetzt der neuen Startseite (T2.1) gehoert.
+cp index.html "$ZIEL/werkstatt.html"
+
+# Die neue Startseite und ihre Unterseiten (T2.1/T2.2/T2.3), jede eine
+# eigenstaendige Datei ohne Build-Schritt.
+cp start/index.html "$ZIEL/index.html"
+cp start/impressum.html "$ZIEL/impressum.html"
+cp start/datenschutz.html "$ZIEL/datenschutz.html"
+cp start/favicon.png "$ZIEL/favicon.png"
+cp start/og.png "$ZIEL/og.png"
+
 cp werkbank/stand.json "$ZIEL/werkbank/stand.json"
 
 # Die Werkpapiere unter `spiel/` gehen NICHT mit. `STAND.md`, `BEFUND-*.md`,
@@ -50,10 +69,12 @@ cp werkbank/stand.json "$ZIEL/werkbank/stand.json"
 # dann erst recht nicht.
 find "$ZIEL/spiel" -name '*.md' -type f -delete
 
-# Nachsehen statt hoffen. Jede dieser drei Zeilen ist eine Seite, die sonst
-# leer, tot oder eingefroren waere.
+# Nachsehen statt hoffen. Jede dieser Zeilen ist eine Seite, die sonst leer,
+# tot oder eingefroren waere.
 fehlt=0
-for p in "$ZIEL/spiel/index.html" "$ZIEL/index.html" "$ZIEL/werkbank/stand.json"; do
+for p in "$ZIEL/spiel/index.html" "$ZIEL/index.html" "$ZIEL/impressum.html" \
+         "$ZIEL/datenschutz.html" "$ZIEL/werkstatt.html" "$ZIEL/favicon.png" \
+         "$ZIEL/og.png" "$ZIEL/werkbank/stand.json"; do
   [ -s "$p" ] || { echo "AUSLIEFERUNG FEHLGESCHLAGEN: $p fehlt oder ist leer" >&2; fehlt=1; }
 done
 [ "$fehlt" = 0 ] || exit 1

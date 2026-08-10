@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>Impressum — Brauhaus-Imperium</title>
+<meta name="description" content="Impressum von Brauhaus-Imperium.">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#efebe2" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#16150f" media="(prefers-color-scheme: dark)">
+<link rel="icon" type="image/png" href="favicon.png">
+
+<style>
+  :root {
+    --papier: #efebe2; --tinte: #1b1a18; --matt: #6d665a; --linie: #d3ccbd;
+    --rot: #b8402a; --feld: #f7f4ee;
+    --serif: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+    --sans: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --papier: #16150f; --tinte: #e8e2d4; --matt: #98907f;
+      --linie: #33302a; --rot: #e0664a; --feld: #201e18;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--papier); color: var(--tinte);
+    font-family: var(--sans); font-size: 16px; line-height: 1.6;
+  }
+  .blatt { max-width: 640px; margin: 0 auto; padding: 40px 20px 80px; }
+  header { border-bottom: 3px double var(--linie); padding-bottom: 14px; margin-bottom: 24px; }
+  h1 { font-family: var(--serif); font-size: clamp(24px, 5vw, 32px); margin: 0; font-weight: 600; }
+  .zurueck { display: inline-block; margin-bottom: 18px; font-size: 14px; color: var(--tinte); }
+  .zurueck:focus-visible, a:focus-visible { outline: 3px solid var(--rot); outline-offset: 2px; }
+  h2 {
+    font-family: var(--serif); font-size: 19px; margin: 30px 0 8px; font-weight: 600;
+    border-bottom: 1px solid var(--linie); padding-bottom: 6px;
+  }
+  p { margin: 0 0 12px; }
+  .platzhalter {
+    background: var(--feld); border-left: 3px solid var(--rot);
+    padding: 10px 14px; font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-size: 14.5px;
+  }
+  .hinweis { font-size: 13px; color: var(--matt); margin-top: 28px; }
+</style>
+</head>
+<body>
+<div class="blatt">
+  <a class="zurueck" href="index.html">← Zur Startseite</a>
+  <header><h1>Impressum</h1></header>
+
+  <h2>Angaben gemäß § 5 TMG</h2>
+  <p class="platzhalter">
+    [Name]<br>
+    [Anschrift]<br>
+    [E-Mail]
+  </p>
+
+  <h2>Kontakt</h2>
+  <p class="platzhalter">E-Mail: [E-Mail]</p>
+
+  <h2>Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV</h2>
+  <p class="platzhalter">[Name], [Anschrift]</p>
+
+  <p class="hinweis">
+    Diese Seite wurde als Entwurf ausgeliefert: die eckigen Platzhalter oben
+    ([Name], [Anschrift], [E-Mail]) trägt der Betreiber selbst ein, bevor die
+    Seite öffentlich erreichbar wird.
+  </p>
+</div>
+</body>
+</html>
