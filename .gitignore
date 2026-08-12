@@ -91,3 +91,8 @@ werkbank/schuss/*.wav
 # Das Ausgabeverzeichnis des Netlify-Builds (werkbank/auslieferung.sh).
 # Es wird bei jedem Build neu erzeugt und gehoert nie ins Repo.
 auslieferung/
+
+# Die Marke, mit der messstand.sh seinen Hafen ausweist. Sie entsteht im
+# ausgelegten Stand unter /tmp; landet sie in der Wurzel, ist ein Aufruf aus
+# dem falschen Verzeichnis gekommen. Sie gehoert nie ins Repo.
+.messstand-marke
