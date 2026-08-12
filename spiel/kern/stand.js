@@ -80,10 +80,78 @@
   'use strict';
 
   var PRAEFIX = 'brauhaus:';
-  /* Steigt, wenn sich die Form des Standes aendert. Ein Stand mit fremder
-     Fassung wird weggeworfen statt halb gelesen — ein halb gelesener Stand
-     ist schlimmer als gar keiner. */
-  var FASSUNG = 1;
+  /* Steigt, wenn sich die Form des Standes aendert. Ein halb gelesener Stand
+     ist schlimmer als gar keiner — aber ein weggeworfener ist es auch, sobald
+     jemand wirklich spielt. */
+  var FASSUNG = 2;
+
+  /* ----------------------------------------------------------------------
+     DIE MIGRATION — warum ein alter Stand ab jetzt umgezogen statt verworfen
+     wird.
+
+     Bis zur Fassung 1 galt: fremde Fassung, fort damit. Das war richtig,
+     solange nur Messhaende spielten — die fangen ohnehin jedes Mal neu an.
+     Vom Tag der Veroeffentlichung an ist es ein Fehler: dann kostet **jedes**
+     Update jede laufende Partie, und der Spieler erfaehrt als Begruendung
+     nichts als einen leeren Anfang. Ein Spiel, das seine eigenen Staende
+     wegwirft, erzieht dazu, es nicht ernst zu nehmen.
+
+     DIE REGELN, und sie sind eng gefasst:
+
+       1. Eine Migration ist **reine Datenarbeit**. Sie fasst kein DOM an,
+          misst nichts, ruft kein Stueck und keine Uhr. Sie bekommt ein Objekt
+          und gibt ein Objekt zurueck.
+       2. Sie laeuft **kettenweise**: 1→2, dann 2→3, und so weiter. Niemand
+          schreibt einen Sprung von 1 auf 4; wer das tut, muss vier Faelle im
+          Kopf behalten statt einen.
+       3. Fehlt eine Stufe oder wirft sie, **faellt der Stand zurueck auf das
+          alte Verhalten** — er wird verworfen. Lieber eine frische Partie als
+          eine kaputte; dieser Satz stand hier vorher und gilt weiter.
+       4. Danach laeuft `taugt()` unveraendert darueber. Eine Migration darf
+          das Pruefen nicht ersetzen, nur ihm etwas Gueltiges vorlegen.
+
+     WAS 1→2 WIRKLICH TUT — wenig, und das ist Absicht. Die Form des Kerns hat
+     sich nicht geaendert; geaendert hat sich, dass die **Stuecke** seit der
+     Welle 13 ihren Eigenzustand selbst anmelden (GEGNER zuerst, der SUD und
+     die uebrigen folgen). Ein Stand der Fassung 1 bringt fuer sie nichts oder
+     nur einen Teil mit — und das faengt der vorhandene Weg schon ab:
+     `B.stand.geladen(name)` gibt `null` zurueck, wo nichts liegt, und jedes
+     Stueck faengt dann an dieser Stelle frisch an. Mehr ist nicht noetig.
+
+     Die Migration ist damit heute fast leer, und trotzdem gehoert sie gebaut:
+     **die naechste Formaenderung braucht einen Ort, an den sie geschrieben
+     wird.** Wer sie erst baut, wenn er sie braucht, baut sie unter Zeitdruck
+     an einem Stand, den er schon veroeffentlicht hat.
+     ---------------------------------------------------------------------- */
+  var MIGRATIONEN = {
+    /* Fassung 1 → 2: Stueck-Staende sind hinzugekommen. Ein alter Stand hat
+       das Feld nicht; es wird angelegt, damit `d.stuecke || {}` weiter unten
+       nicht die einzige Stelle bleibt, die davon weiss. Sonst nichts. */
+    1: function (d) {
+      if (!d.stuecke || typeof d.stuecke !== 'object') d.stuecke = {};
+      d.fassung = 2;
+      return d;
+    }
+  };
+
+  /* Zieht einen Stand so weit hoch, wie Stufen vorliegen. Gibt `null` zurueck,
+     sobald eine Stufe fehlt oder wirft — dann greift das alte Verhalten. */
+  function ziehHoch(d) {
+    if (!d || typeof d.fassung !== 'number') return null;
+    var runden = 0;
+    while (d.fassung < FASSUNG) {
+      var stufe = MIGRATIONEN[d.fassung];
+      if (typeof stufe !== 'function') return null;
+      /* Ein Zaehler gegen die Migration, die ihre eigene Fassung nicht hebt:
+         sie wuerde hier sonst ewig laufen und die Seite anhalten. */
+      if (++runden > 20) return null;
+      try { d = stufe(d); } catch (e) { return null; }
+      if (!d || typeof d.fassung !== 'number') return null;
+    }
+    /* Ein Stand aus der Zukunft wird nicht heruntergerechnet. Wer eine neuere
+       Fassung gespielt hat, hat Felder, die diese hier nicht kennt. */
+    return d.fassung === FASSUNG ? d : null;
+  }
   /* Obergrenze fuer den geschriebenen Text. localStorage traegt je nach
      Browser 5 bis 10 MB; darueber wirft setItem. Wir bleiben weit darunter
      und kuerzen vorher das BUCH von vorn (das aelteste zuerst) — die Chronik
@@ -220,7 +288,19 @@
   /* Ein Stand, der nicht alles mitbringt, was der Kern braucht, wird nicht
      halb eingesetzt. Lieber eine frische Partie als eine kaputte. */
   function taugt(d) {
-    if (!d || d.fassung !== FASSUNG) return false;
+    if (!d) return false;
+    /* Erst umziehen, dann pruefen — und der Umzug darf das Pruefen nicht
+       ersetzen. Schlaegt er fehl, steht hier wieder das alte Verhalten. */
+    if (d.fassung !== FASSUNG) {
+      var hoch = ziehHoch(d);
+      if (!hoch) return false;
+      /* `ziehHoch` arbeitet auf demselben Objekt; der Aufrufer liest danach
+         weiter aus `d`, also muss beides dasselbe sein. Ist es das nicht,
+         hat eine Stufe eine Kopie zurueckgegeben — dann wird nichts
+         eingesetzt, statt still den alten Stand zu benutzen. */
+      if (hoch !== d) return false;
+    }
+    if (d.fassung !== FASSUNG) return false;
     if (!d.zeit || !d.haus || !d.vorrat) return false;
     if (typeof d.zeit.jahr !== 'number' || typeof d.zeit.woche !== 'number') return false;
     if (!d.zeit.amtszeit) return false;
