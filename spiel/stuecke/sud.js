@@ -2495,10 +2495,8 @@
       /* WELLE 13: SPIELSTAND SICHERN
          Der Eigenzustand Z wird nach localStorage geschrieben und beim
          Neuladen wiederhergestellt. Vorbild: gegner.js Zeile 3548 ff. */
-      var FELDER = ['verfahren', 'fest', 'bottiche', 'zusatz', 'kaufNr', 'guete',
-        'anstichWoche', 'nr', 'rueck', 'brettZu', 'gestuft', 'gestuftGesamt',
-        'buch', 'jahrSude', 'jahrFass', 'jahrLegte', 'gesamtLegte', 'kalt',
-        'bestellt', 'gesamtSude', 'gesamtFass', 'epocheGesetzt'];
+      var FELDER = ['verfahren', 'fest', 'zusatz', 'kaufNr', 'rueck', 'bestellt',
+        'gestuft', 'gestuftGesamt', 'kalt', 'epocheGesetzt'];
       if (B.stand && B.stand.melde) {
         B.stand.melde('sud', function () {
           var d = {};
@@ -2511,11 +2509,19 @@
             if (alt[f] !== undefined) Z[f] = alt[f];
           });
         }
-        /* Nichts nachzubauen: Verfahren, Siegel und Bottiche halten die
-           Schluessel ihrer Optionen, nicht die Optionen selbst — `achseVon()`
-           und `gewaehlt()` schlagen in der stehenden Tabelle nach, die aus
-           den Daten kommt und keinen Spielstand braucht. Alles, was gesichert
-           wird, ist Zahl oder Wort. */
+        /* Nichts nachzubauen: Verfahren und Siegel halten die Schluessel ihrer
+           Optionen, nicht die Optionen selbst — `achseVon()` und `gewaehlt()`
+           schlagen in der stehenden Tabelle nach, die aus den Daten kommt und
+           keinen Spielstand braucht. Alles, was gesichert wird, ist Zahl oder Wort.
+
+           NICHT GESICHERT:
+           · bottiche, nr, anstichWoche: werden waehrend des Spiels kontinuierlich
+             veraendert und sind vom Spielverlauf abhaengig
+           · buch: die Chronik wird durch das Spiel geschrieben, nicht geladen
+           · guete: ergibt sich aus Entscheidungen; abgeleiteter Wert
+           · jahrSude, jahrFass, jahrLegte, gesamtLegte, gesamtSude, gesamtFass:
+             Bilanzzaehler, die sich aus dem Spielverlauf ergeben
+           · brettZu: Bedienzustand (UI), nicht Spielzustand */
       }
 
       /* Nach jedem Sud der FUHRE sofort ansaugen — dann ist der Lagerplatz

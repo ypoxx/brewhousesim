@@ -34,6 +34,30 @@
  * Epochenplatte ohne eigenen Kasten, faellt er unter „unbekannter Grund" und
  * wird gezaehlt, aber nicht beurteilt. Wer diese Zahl senken will, gibt dem
  * Text einen Grund — was ohnehin die Antwort ist.
+ *
+ * ─────────────────────────────────────────────────────────────────────────────
+ * ZWEI EIGENE FEHLER, GEMELDET VOM BUILDER DER WELLE 17 UND HIER BEHOBEN.
+ * Beide haben die Zahlen dieses Geraets zu HOCH ausgewiesen — es hat Alarm
+ * geschlagen, wo keiner noetig war.
+ *
+ *   (a) `clip-path` war ihm unbekannt. Ein zugeklapptes Brett traegt
+ *       `clip-path: inset(50%)`: es ist unsichtbar, steht aber im Baum und
+ *       liefert eine Flaeche. Das Geraet hat seinen Text mitgezaehlt — beim
+ *       Ausgangsstand 1 635 „sichtbare" Textknoten, von denen ueber tausend
+ *       nirgends zu sehen waren. `kern/haushalt.js` umgeht dieselbe Falle
+ *       ausdruecklich; ich habe dort nicht nachgesehen, bevor ich mass.
+ *
+ *   (b) `text-shadow` war ihm unbekannt. Die Welle 11 hat fuer GEGNER und
+ *       ERBE bewusst einen Lichthof aus Schatten statt eines Kastens gebaut,
+ *       weil ein Kasten den Flaechenhaushalt um das Sechs- bis Neunfache
+ *       gesprengt haette. Solcher Text ist lesbar und wurde trotzdem als „zu
+ *       blass" gezaehlt.
+ *
+ * DIE LEHRE, und sie ist aelter als dieses Geraet: **ein Messgeraet, das die
+ * Technik nicht kennt, mit der gebaut wurde, misst den Bauplan und nicht das
+ * Bild.** Wer die Zahlen von vor dem 9. August zitiert, nennt diese zwei
+ * Fehler dazu.
+ * ─────────────────────────────────────────────────────────────────────────────
  */
 import { chromium } from '/opt/node22/lib/node_modules/playwright/index.mjs';
 
@@ -74,6 +98,14 @@ for (const e of EPOCHEN) {
       if (k.bottom < 0 || k.top > innerHeight || k.right < 0 || k.left > innerWidth) continue;
       const c = getComputedStyle(el);
       if (c.visibility === 'hidden' || c.display === 'none') continue;
+      /* `clip-path: inset(50%)` und Verwandte schneiden alles weg — der Knoten
+         steht im Baum, liefert eine Flaeche und ist trotzdem nirgends zu sehen.
+         Ein zugeklapptes Brett traegt genau das. */
+      const geklappt = (n) => { for (let q = n; q && q !== document.documentElement; q = q.parentElement) {
+        const cp = getComputedStyle(q).clipPath;
+        if (cp && cp !== 'none' && /inset\(\s*(4[5-9]|50)(\.\d+)?%/.test(cp)) return true;
+      } return false; };
+      if (geklappt(el)) continue;
       textKnoten++;
       const marke = (el.className && typeof el.className === 'string' ? el.className.split(/\s+/)[0] : el.tagName.toLowerCase())
                   + ' · ' + (el.textContent || '').trim().slice(0, 28);
@@ -107,7 +139,11 @@ for (const e of EPOCHEN) {
       const px = parseFloat(c.fontSize), fett = +(c.fontWeight) >= 700;
       const ziel = (px >= 24 || (px >= 19 && fett)) ? 3.0 : 4.5;
       const kv = kontrast(vg, grund);
-      if (kv < ziel) blass.push(marke + '  (' + kv.toFixed(2) + ':1, verlangt ' + ziel + ')');
+      /* Ein Lichthof aus `text-shadow` traegt den Text ueber wechselndem Grund
+         (Welle 11, GEGNER und ERBE: bewusst statt eines Kastens, der den
+         Flaechenhaushalt gesprengt haette). Er zaehlt als Grund. */
+      const hof = c.textShadow && c.textShadow !== 'none';
+      if (kv < ziel && !hof) blass.push(marke + '  (' + kv.toFixed(2) + ':1, verlangt ' + ziel + ')');
     }
     return { verdeckt, durch, blass, unbekannt, textKnoten };
   });

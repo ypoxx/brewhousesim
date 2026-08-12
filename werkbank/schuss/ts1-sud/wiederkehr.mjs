@@ -1,7 +1,7 @@
 /* TS1-SUD: SPIELSTAND SICHERN — WIEDERKEHR
    Der SUD speichert seinen Eigenzustand nach localStorage (Verfahren, Siegel,
-   Gaerkeller, laufende Charge, Sudplan). Spielt 12 Wochen, laedt dieselbe URL
-   neu, vergleicht die gespeicherten Felder Ziffer fuer Ziffer.
+   Entscheidungszustand). Spielt 12 Wochen, laedt dieselbe URL neu, vergleicht
+   die gespeicherten Felder Ziffer fuer Ziffer.
 
    HAFEN=8971 node wiederkehr.mjs <epoche>                                   */
 import { chromium } from '/opt/node22/lib/node_modules/playwright/index.mjs';
@@ -11,11 +11,9 @@ const HAFEN = process.env.HAFEN || '8971';
 const WURZ = '/home/user/brewhousesim/werkbank/schuss/ts1-sud';
 const URL = `http://127.0.0.1:${HAFEN}/spiel/?epoche=${ep}&saat=1350`;
 
-// Die Felder, die der SUD speichern muss
-const FELDER = ['verfahren', 'fest', 'bottiche', 'zusatz', 'kaufNr', 'guete',
-  'anstichWoche', 'nr', 'rueck', 'brettZu', 'gestuft', 'gestuftGesamt',
-  'buch', 'jahrSude', 'jahrFass', 'jahrLegte', 'gesamtLegte', 'kalt',
-  'bestellt', 'gesamtSude', 'gesamtFass', 'epocheGesetzt'];
+// Die Felder, die der SUD speichern muss — nur Entscheidungen, nicht Spielverlauf
+const FELDER = ['verfahren', 'fest', 'zusatz', 'kaufNr', 'rueck', 'bestellt',
+  'gestuft', 'gestuftGesamt', 'kalt', 'epocheGesetzt'];
 
 const browser = await chromium.launch();
 const seite = await browser.newPage({ viewport: { width: 1600, height: 900 }, deviceScaleFactor: 1 });
