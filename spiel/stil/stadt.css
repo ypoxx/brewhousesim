@@ -97,7 +97,18 @@
 .stadt-name {
   white-space: nowrap;
   padding: calc(var(--s) * 3) calc(var(--s) * 9) calc(var(--s) * 4);
-  background: linear-gradient(180deg, #f6ecd2 0%, #e6d5ae 100%);
+  /* `background-color` STEHT ZUSAETZLICH ZUM VERLAUF, seit Welle 17, und
+     aendert am Bild kein Pixel: der Verlauf ist an jeder Stelle deckend, er
+     malt einfach darueber. Ohne diese Zeile SIEHT ein Kontrastpruefer, der
+     nur `background-color` liest (WCAG-Werkzeuge tun das durchgaengig so,
+     `werkbank/schuss/aufsicht/sicht.mjs` eingeschlossen), diese Plakette
+     gar nicht — er faellt bis zum naechsten ECHTEN `background-color` durch,
+     und das ist zufaellig `<body>`, fast schwarz. Verglichen wurde also
+     #33220f (Schrift) gegen #0d0b08 (Kopf des Dokuments): 1,29:1. Die
+     Plakette selbst, #33220f auf #e6d5ae, liegt bei rund 9,7:1 — sie war nie
+     das Problem, nur unsichtbar fuer das Werkzeug. Auflage 1 der Welle 17. */
+  background-color: #ecdfbb;
+  background-image: linear-gradient(180deg, #f6ecd2 0%, #e6d5ae 100%);
   border: calc(var(--s) * 2) solid #4a3117;
   border-radius: calc(var(--s) * 2);
   box-shadow: 0 calc(var(--s) * 3) calc(var(--s) * 5) rgba(40, 26, 12, 0.4);
@@ -159,12 +170,24 @@
   margin-top: calc(var(--s) * 2);
   font-size: calc(var(--s) * 11);
   letter-spacing: calc(var(--s) * 2);
-  opacity: 0.8;
+  /* WAR `opacity: 0.8`. Eine Deckkraft unter 1 auf einem eigenen, deckenden
+     Grund (der Schilderplatte, nicht der Platte des Spiels) ist kein
+     Ratespiel — der Grund darunter aendert sich nie —, aber sie ist trotzdem
+     unnoetig, denn dasselbe Bild entsteht, indem man die Farbe VORAB mit dem
+     Grund mischt: #2f1f0d bei 0,8 Deckkraft auf #f2e2bd ergibt exakt
+     #564630. Gleiches Bild, volle Deckkraft, Welle 17. */
+  color: #564630;
 }
 
 /* 1970: kein gemaltes Brett mehr, sondern eine Leuchtschrifttafel. */
 .stadt-hausschild.hell {
-  background: linear-gradient(180deg, #fdfdfb 0%, #e9eae6 100%);
+  /* `background-color` zusaetzlich zum Verlauf — derselbe Grund wie bei
+     `.stadt-name` oben: ein Kontrastpruefer, der nur `background-color`
+     liest, sieht sonst nicht die helle Tafel, sondern faellt bis zum fast
+     schwarzen Seitenhintergrund durch. Am Bild aendert sich nichts, der
+     Verlauf ist ueberall deckend. */
+  background-color: #f3f3f0;
+  background-image: linear-gradient(180deg, #fdfdfb 0%, #e9eae6 100%);
   border: calc(var(--s) * 2) solid #6d6b62;
   border-radius: calc(var(--s) * 1);
   color: #23231f;

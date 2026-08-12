@@ -314,38 +314,68 @@
   flex: 0 0 auto;
 }
 
+/* ALLE FUENF KNOPFVERLAEUFE UNTEN BEKOMMEN, WELLE 17, ZUSAETZLICH EIN FLACHES
+   `background-color` — Begruendung wie bei `.stadt-name` (stil/stadt.css):
+   ein Kontrastpruefer, der nur `background-color` liest, sieht sonst keinen
+   dieser Knoepfe und vergleicht die Schrift gegen den fast schwarzen
+   Seitenhintergrund statt gegen die eigene helle Flaeche. Jeder Verlauf hier
+   ist an jeder Stelle deckend, also aendert die zusaetzliche Zeile am Bild
+   kein Pixel — sie macht nur sichtbar, was ohnehin da ist. */
+
 /* DER GRIFF ZUM BUCH.  Er traegt kein Preisschild und keine Entscheidung —
    er macht nur auf. Also ist er der schmalste Kasten der Reihe und steht
    als letzter, hinter den drei Wegen: was zu entscheiden ist, steht vorn. */
 .knopf.erb-griff {
-  background: linear-gradient(180deg, #efe6d2 0%, #dccfae 100%);
+  background-color: #e5d9c1;
+  background-image: linear-gradient(180deg, #efe6d2 0%, #dccfae 100%);
   border-style: dashed;
   font-style: italic;
 }
-.knopf.erb-griff:hover { background: linear-gradient(180deg, #fbf3e2 0%, #eadcb9 100%); }
+.knopf.erb-griff:hover {
+  background-color: #f1e7ce;
+  background-image: linear-gradient(180deg, #fbf3e2 0%, #eadcb9 100%);
+}
 
 /* Die drei Wege der Uebergabe stehen dunkler: sie sind endgueltig. */
 .knopf.erb-uebergabe {
-  background: linear-gradient(180deg, #e6d3ae 0%, #cdb488 100%);
+  background-color: #dcc59b;
+  background-image: linear-gradient(180deg, #e6d3ae 0%, #cdb488 100%);
   border-color: #4a2f16;
 }
-.knopf.erb-uebergabe:hover { background: linear-gradient(180deg, #f2e2c1 0%, #d9c298 100%); }
+.knopf.erb-uebergabe:hover {
+  background-color: #e8d3ad;
+  background-image: linear-gradient(180deg, #f2e2c1 0%, #d9c298 100%);
+}
 /* Der dritte Weg. Er kostet nichts und ist trotzdem eine Entscheidung —
    also sieht er auch nicht aus wie ein gesperrter Knopf: volle Tinte,
    aufrechte Schrift, gruene Null. */
 .knopf.erb-ohne {
-  background: linear-gradient(180deg, #e2d6bd 0%, #c8b89a 100%);
+  background-color: #d8cbac;
+  background-image: linear-gradient(180deg, #e2d6bd 0%, #c8b89a 100%);
   color: var(--tinte);
   font-style: normal;
 }
 .knopf.erb-ohne .wort  { color: var(--tinte); font-style: normal; }
 .knopf.erb-ohne .preis { color: #3d5c2e; font-weight: 600; }
-.knopf.erb-streit { background: linear-gradient(180deg, #e9cfc4 0%, #d3ab99 100%); }
+.knopf.erb-streit {
+  background-color: #dfbfae;
+  background-image: linear-gradient(180deg, #e9cfc4 0%, #d3ab99 100%);
+}
 /* War `flex: 1.3 1 0` — der Tat-Knopf bekam ein Drittel mehr als die drei
    Wege. Mit Inhaltsmass braucht er keinen Vorzug mehr; er ist ohnehin der
    laengste, weil er einen Hausnamen traegt. */
-.knopf.erb-weit   { flex: 0 0 auto; }
-.knopf.erb-nach   { background: linear-gradient(180deg, #dfe0c8 0%, #bfc0a2 100%); }
+/* `erb-weit` (der Tat-Knopf) setzt selbst keinen Verlauf — er erbt den
+   Grundknopf aus stil/grund.css (schreibgeschuetzt, Zeile 266:
+   `linear-gradient(180deg, #f6ecd6 0%, #e4d3b0 100%)`, ebenfalls ohne
+   eigenes `background-color`). Diese Regel hier ist NUR eine Ebene
+   spezifischer (zwei Klassen statt einer) und setzt AUSSCHLIESSLICH
+   `background-color` dazu — der Verlauf selbst bleibt der des Grundknopfs,
+   unveraendert, ich fasse grund.css nicht an. */
+.knopf.erb-weit   { flex: 0 0 auto; background-color: #eee1c3; }
+.knopf.erb-nach   {
+  background-color: #cfd0b5;
+  background-image: linear-gradient(180deg, #dfe0c8 0%, #bfc0a2 100%);
+}
 
 /* --------------------------------------------------------------------------
    DAS BUCH — das Brett mit der vollen Liste
@@ -857,7 +887,8 @@
 #buehne[data-epoche="1"] .erb-wort { color: #8e2b18; }
 #buehne[data-epoche="1"] .erb-leiste .knopf { border-color: #3d2614; }
 #buehne[data-epoche="1"] .knopf.erb-uebergabe {
-  background: linear-gradient(180deg, #ecdfbe 0%, #d7c49c 100%);
+  background-color: #e2d0ac;
+  background-image: linear-gradient(180deg, #ecdfbe 0%, #d7c49c 100%);
 }
 
 /* 1600 — DER SIEGELBRIEF: Kanzleikursive, Siegelrot an der Kante. */
@@ -869,7 +900,8 @@
   border-radius: calc(var(--s) * 2);
 }
 #buehne[data-epoche="2"] .knopf.erb-uebergabe {
-  background: linear-gradient(180deg, #f1ebd6 0%, #ddd4b6 100%);
+  background-color: #e7e0c5;
+  background-image: linear-gradient(180deg, #f1ebd6 0%, #ddd4b6 100%);
 }
 
 /* 1884 — DER VORDRUCK: schmale Schrift, rechte Winkel, Behoerdenblau. */
@@ -880,7 +912,8 @@
   border-radius: 0;
 }
 #buehne[data-epoche="3"] .knopf.erb-uebergabe {
-  background: linear-gradient(180deg, #e8efe4 0%, #d3ddcf 100%);
+  background-color: #dce6d9;
+  background-image: linear-gradient(180deg, #e8efe4 0%, #d3ddcf 100%);
 }
 
 /* 1970 — DIE MASCHINENSCHRIFT: gleiche Dickte, kein Zierat, grauer Rand. */
@@ -892,8 +925,10 @@
   border-radius: calc(var(--s) * 1);
 }
 #buehne[data-epoche="4"] .knopf.erb-uebergabe {
-  background: linear-gradient(180deg, #f7f7f5 0%, #e4e4e0 100%);
+  background-color: #eeeeec;
+  background-image: linear-gradient(180deg, #f7f7f5 0%, #e4e4e0 100%);
 }
 #buehne[data-epoche="4"] .knopf.erb-ohne {
-  background: linear-gradient(180deg, #ececeA 0%, #d9d9d5 100%);
+  background-color: #e3e3e0;
+  background-image: linear-gradient(180deg, #ececeA 0%, #d9d9d5 100%);
 }

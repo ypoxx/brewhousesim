@@ -137,7 +137,14 @@
   min-height: max(24px, calc(var(--s) * 40));
   max-width: 100%;
   padding: calc(var(--s) * 4) calc(var(--s) * 9) calc(var(--s) * 5);
-  background: linear-gradient(180deg, #eceef0 0%, #c9ced3 62%, #b3b9bf 100%);
+  /* `background-color` zusaetzlich zum Verlauf, Welle 17 — siehe stadt.css
+     `.stadt-name` fuer die ausfuehrliche Begruendung. Kurzform: ein
+     Kontrastpruefer, der nur `background-color` liest, sieht diesen Kasten
+     sonst nicht und vergleicht die Tinte gegen den fast schwarzen
+     Seitenhintergrund statt gegen die eigene helle Platte. Am Bild aendert
+     sich nichts, der Verlauf deckt ueberall voll. */
+  background-color: #c7ccd1;
+  background-image: linear-gradient(180deg, #eceef0 0%, #c9ced3 62%, #b3b9bf 100%);
   border: calc(var(--s) * 2) solid var(--gg-tinte);
   border-radius: calc(var(--s) * 3);
   cursor: pointer;
@@ -145,7 +152,10 @@
   font-family: var(--serif);
   color: var(--gg-tinte);
 }
-.gg-sitz:hover { background: linear-gradient(180deg, #f6f8fa 0%, #d6dbe0 62%, #c0c6cc 100%); }
+.gg-sitz:hover {
+  background-color: #d3d8dc;
+  background-image: linear-gradient(180deg, #f6f8fa 0%, #d6dbe0 62%, #c0c6cc 100%);
+}
 .gg-sitz.offen { outline: calc(var(--s) * 2) solid var(--gg-schiefer); outline-offset: calc(var(--s) * 2); }
 .gg-sitz.klamm { border-color: var(--gg-warn); }
 
@@ -443,7 +453,15 @@
   position: absolute;
   width: 34%;
   padding: calc(var(--s) * 6) calc(var(--s) * 10) calc(var(--s) * 7);
-  background: linear-gradient(180deg, rgba(226, 228, 226, 0.93), rgba(200, 203, 203, 0.9));
+  /* `background-color` zusaetzlich zum (fast deckenden) Verlauf, Welle 17 —
+     Begruendung wie bei `.stadt-name`. Der Verlauf selbst bleibt bei seiner
+     Deckkraft (0,90–0,93): das Blatt schimmert weiter minimal durch, nur der
+     letzte, kaum sichtbare Rest zeigt jetzt denselben Ton statt der Platte
+     dahinter — ein Kontrastpruefer verlangt eine wirklich deckende Flaeche
+     (>90 %), um sie ueberhaupt als Grund zu werten, sonst faellt er bis zum
+     Seitenhintergrund durch. */
+  background-color: rgb(213, 216, 216);
+  background-image: linear-gradient(180deg, rgba(226, 228, 226, 0.93), rgba(200, 203, 203, 0.9));
   border: calc(var(--s) * 2) solid var(--gg-tinte);
   border-radius: calc(var(--s) * 4);
   box-shadow: 0 calc(var(--s) * 5) calc(var(--s) * 12) rgba(0, 0, 0, 0.35);

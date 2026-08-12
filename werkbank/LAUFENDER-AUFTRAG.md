@@ -73,6 +73,29 @@
 > > als einzige die Übersicht hat und deshalb als einzige glauben könnte, sie
 > > brauche sie nicht.
 
+> ### DER ELEVENLABS-SCHLÜSSEL IST EINE KEY-ID, KEIN SCHLÜSSEL — 9. August
+>
+> `$ELEVENLABS_API_KEY` trägt **64 Zeichen, beginnend mit `960…`**. Die API
+> antwortet darauf mit HTTP 400 und sagt den Grund selbst:
+>
+> > *„API key ID used as API key — only valid API keys can be used. API keys
+> > start with `sk_` and are shown when the key is created or rotated."*
+>
+> **Nicht das Netz und nicht der Proxy.** Wir bekommen eine saubere inhaltliche
+> Antwort von `api.elevenlabs.io`; Gemini antwortet am selben Weg mit HTTP 200.
+> Es liegt allein am hinterlegten Wert.
+>
+> **Was zu tun ist:** im ElevenLabs-Dashboard den Schlüssel anlegen oder
+> rotieren, den dabei **einmalig** gezeigten `sk_…`-Wert nehmen (nicht die ID,
+> die daneben stehen bleibt) und ihn in der Umgebung des Laufs eintragen.
+>
+> **Bis dahin** spricht das Intro mit der eingebauten Gemini-Stimme „Charon" —
+> verständlich, aber nicht die deutsche Erzählerstimme, die vorgesehen war.
+> Der Weg dorthin ist gebaut (`design/tools/gen_audio.py`, vier Textblöcke
+> liegen fertig); es fehlt nur der Wert. **Wer das hier liest, prüft den
+> Schlüssel mit einem Aufruf, bevor er eine Stunde in die Tonspur steckt:**
+> `curl -s -H "xi-api-key: $ELEVENLABS_API_KEY" https://api.elevenlabs.io/v1/user`
+
 > ### ZWEI AUFSICHTEN AUF EINEM ZWEIG — bemerkt am 8. August, 16:24 UTC
 >
 > Auf `claude/brauhaus-imperium-sim-163s85` erschien ein Commit, der nicht aus

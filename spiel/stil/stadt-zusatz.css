@@ -52,12 +52,29 @@
   line-height: 1.15;
   white-space: nowrap;
   opacity: 0;
+  /* DAZU, SEIT WELLE 17: `visibility: hidden`. In Ruhelage war dieses Wort
+     nur per `opacity: 0` weg — fuer das Auge nichts, aber fuer jedes
+     Werkzeug, das den Text trotzdem als „da" zaehlt (er hat ja Groesse,
+     Farbe, einen Platz), eine Deckkraft von 0,00, dieselbe Sorte Fund wie
+     eine Halbtransparenz ueber der Platte, nur radikaler. `sicht.mjs`
+     zaehlte so sieben Pflock-Beschriftungen je Epoche als „durchscheinend",
+     obwohl niemand sie je zu sehen bekommt, solange der Zeiger nicht da ist.
+     `visibility:hidden` sagt das ehrlich: nicht nur unsichtbar bemalt,
+     sondern wirklich nicht da. Die Verzoegerung unten haelt die alte
+     Ueberblendung: beim Erscheinen sofort sichtbar (Deckkraft blendet auf),
+     beim Verschwinden bleibt es bis zum Ende der Deckkraft-Animation
+     sichtbar und faellt erst danach weg — exakt das alte Bild. */
+  visibility: hidden;
   pointer-events: none;
-  transition: opacity 120ms ease-out;
+  transition: opacity 120ms ease-out, visibility 0s linear 120ms;
 }
 
 .knopf.stadt-pflock:hover .wort,
-.knopf.stadt-pflock:focus-visible .wort { opacity: 1; }
+.knopf.stadt-pflock:focus-visible .wort {
+  opacity: 1;
+  visibility: visible;
+  transition-delay: 0s;
+}
 
 /* Die Scheibe selbst. Zwei Ringe: aussen der warme Schatten der Platte,
    innen das Gold der Beschriftung — dieselbe Familie wie ST. MICHAEL. */
