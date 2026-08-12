@@ -49,3 +49,19 @@ Wochen, 6 Braujahre erzählt (1970–1975/16), Abbruch `maxWochen-erreicht`
 (sauber, kein Wanduhrlimit), 0 Seitenfehler. **Konzernvertrag: NICHT
 genommen.** Prüfsumme `4e931e04`. Deckt sich mit Welle 15s eigenem Lauf 1
 (Saat 4001 → „nein").
+
+**STÖRUNG, gemeldet von der Aufsicht:** `vorher-4002` lief verwaist — der
+`messfenster.sh`-Wrapper starb (vermutlich beim Pausieren der Sitzung
+zwischen zwei Zügen), der `node`-Prozess überlebte elternlos (Parent PID 1)
+und gab dabei die Sperre frei, ohne dass ich es sah. DER KÄUFER hat die freie
+Sperre danach ordnungsgemäß genommen — zwei Messungen liefen nebeneinander.
+Die Aufsicht hat den Waisen gekillt und das Teilprotokoll geräumt.
+**`vorher-4001` bleibt gültig** (lief sauber und allein, vor der Störung
+abgeschlossen). `vorher-4002` wird neu gefahren.
+
+Ab jetzt: (a) vor jedem Start `ps -eo cmd | grep -E "[l]inie|[h]and.*mjs|
+[k]ontrakte"` — eine freie Sperre ist kein Beweis für eine freie Maschine;
+(b) ein Lauf zählt erst, wenn seine `*-ergebnis.json` vorliegt, nicht schon
+bei einer wachsenden `.jsonl`; (c) lange Läufe über den nativen
+`run_in_background`-Weg starten statt über `nohup … & disown` im
+Skriptkörper, damit die Sitzung ihn korrekt weiterverfolgt.

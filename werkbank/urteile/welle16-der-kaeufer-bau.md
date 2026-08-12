@@ -79,6 +79,11 @@ Regel reduziert; die Einnahmefarbe kommt ohnehin aus `grund.css`
 **Tor (`tor.mjs`):** TOR OFFEN — alle 4 Epochen OK, `lage` 0, 0 Konsolenfehler
 (E1 100 Züge, E2 108, E3 111, E4 103).
 
+**Kontrakte (`kontrakte.mjs`):** **14 von 16** — Ziffer für Ziffer identisch
+zur dokumentierten Basis (E1 „Aufgeld nach Lieferung" GERISSEN vorbestehend,
+E3 „ERBE AM_HAUS" nicht messbar vorbestehend, beide unabhängig von diesem
+Bau). Erfüllt „nicht schlechter als 14/16".
+
 **Messstände:**
 - Hafen 8941 — `messstand.sh HEAD 8941` (346c2fe), eingefroren, für die
   Vorher-Zahlen oben.
