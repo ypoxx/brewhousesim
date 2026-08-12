@@ -74,6 +74,11 @@ weiterer Knopf in der bereits vorhandenen, umbrechenden Kaufreihe
 Regel reduziert; die Einnahmefarbe kommt ohnehin aus `grund.css`
 (`.knopf .preis.einnahme`, gesperrt, nicht angefasst).
 
+## Abnahmemessungen gegen den korrigierten Stand (Hafen 8942)
+
+**Tor (`tor.mjs`):** TOR OFFEN — alle 4 Epochen OK, `lage` 0, 0 Konsolenfehler
+(E1 100 Züge, E2 108, E3 111, E4 103).
+
 **Messstände:**
 - Hafen 8941 — `messstand.sh HEAD 8941` (346c2fe), eingefroren, für die
   Vorher-Zahlen oben.
