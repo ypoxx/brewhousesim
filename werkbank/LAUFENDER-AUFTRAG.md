@@ -68,6 +68,26 @@
 >    `sk_…`-Schlüssel im Container liegt — der Weg ist gebaut, es fehlt nur der
 >    Wert. Zehn Minuten Arbeit, keine Welle.
 >
+> ### Drei Werkzeuge warten auf ihre Reparatur — alle drei bekannt, keines behoben
+>
+> 1. **`messfenster.sh` nimmt sein Kind nicht mit.** Stirbt der Wrapper, wird
+>    die Sperre frei — und der `node`-Prozess läuft verwaist weiter (Elternteil
+>    PID 1). Am 9. August hat ein Vorher-Lauf der ZWEITEN TÜR so dreizehn
+>    Minuten neben einer fremden Messung gelaufen. **Eine freie Sperre ist kein
+>    Beweis für eine freie Maschine.** Bis zur Reparatur gilt die Handregel:
+>    vor jedem Start `ps -eo cmd | grep -E "[l]inie|[h]and.*mjs"` (Klammer!),
+>    statt der Sperre zu glauben. Reparieren, **sobald keine Messung läuft** —
+>    ein Werkzeug wird nicht angefasst, während vier Leute es benutzen.
+> 2. **`kern/grund.css`, die Knopfbasis:** ein Farbverlauf ohne
+>    `background-color` darunter, spielweit vererbt. Eine Ergänzung dort senkt
+>    die Blässe-Zahl in allen Stücken auf einmal. Gehört der Aufsicht — **aber
+>    erst, wenn die Wirtschaft steht**: eine Kernänderung bewegt jede Epoche
+>    gleichzeitig.
+> 3. **`start/anleitung.html` hat drei synthetisierte Stellen**, die der
+>    Builder selbst benannt hat (u. a. „die drei Dinge, die jede Woche zu tun
+>    sind"). Gegen den Quelltext prüfen. Eine Anleitung, die etwas behauptet,
+>    was das Spiel nicht tut, ist schlimmer als keine.
+>
 > ### Die drei Sätze, die diese Sitzung teuer gelernt hat
 > * **Eine Zahl, die unter Nebenlast entstand, ist keine Zahl.** Jede Messung
 >   durch `messfenster.sh` — auch die der Aufsicht.
