@@ -10,10 +10,16 @@
 # nie beabsichtigt; es war die Vorgabe, die niemand angefasst hat, solange die
 # Seite nur eine Werkstattseite war.
 #
-# Ausgeliefert wird ab jetzt (T2.1, Startseite gebaut):
+# Ausgeliefert wird ab jetzt (T2.1, Startseite gebaut; DAS INTRO dazu):
 #
 #   spiel/**               das Spiel, unveraendert
 #   index.html              die neue STARTSEITE (aus start/index.html)
+#   anleitung.html           die Anleitung (aus start/anleitung.html) —
+#                            Braujahr, Zeile unten, Michaelitafel, Verlieren,
+#                            Glossar; NEU, DAS INTRO
+#   intro/**                 DAS INTRO: Bilder (WebP) + Erzaehlerstimme (MP3),
+#                            geladen nur, wenn "Ansehen" gedrueckt wird
+#                            (aus start/intro/) — NEU, DAS INTRO
 #   impressum.html           die Unterseite (aus start/impressum.html)
 #   datenschutz.html         die Unterseite (aus start/datenschutz.html)
 #   favicon.png, og.png      Bildchen der Startseite (aus start/)
@@ -53,10 +59,16 @@ cp index.html "$ZIEL/werkstatt.html"
 # Die neue Startseite und ihre Unterseiten (T2.1/T2.2/T2.3), jede eine
 # eigenstaendige Datei ohne Build-Schritt.
 cp start/index.html "$ZIEL/index.html"
+cp start/anleitung.html "$ZIEL/anleitung.html"
 cp start/impressum.html "$ZIEL/impressum.html"
 cp start/datenschutz.html "$ZIEL/datenschutz.html"
 cp start/favicon.png "$ZIEL/favicon.png"
 cp start/og.png "$ZIEL/og.png"
+
+# DAS INTRO: eigene Seite unter /intro/, Bilder+Ton daneben. Laedt serverseitig
+# immer mit, kostet aber am ersten Aufruf der Startseite nichts — die Seite
+# start/index.html verlinkt nur dorthin, ruft nichts von dort ab.
+cp -R start/intro "$ZIEL/intro"
 
 cp werkbank/stand.json "$ZIEL/werkbank/stand.json"
 
@@ -72,9 +84,14 @@ find "$ZIEL/spiel" -name '*.md' -type f -delete
 # Nachsehen statt hoffen. Jede dieser Zeilen ist eine Seite, die sonst leer,
 # tot oder eingefroren waere.
 fehlt=0
-for p in "$ZIEL/spiel/index.html" "$ZIEL/index.html" "$ZIEL/impressum.html" \
-         "$ZIEL/datenschutz.html" "$ZIEL/werkstatt.html" "$ZIEL/favicon.png" \
-         "$ZIEL/og.png" "$ZIEL/werkbank/stand.json"; do
+for p in "$ZIEL/spiel/index.html" "$ZIEL/index.html" "$ZIEL/anleitung.html" \
+         "$ZIEL/impressum.html" "$ZIEL/datenschutz.html" "$ZIEL/werkstatt.html" \
+         "$ZIEL/favicon.png" "$ZIEL/og.png" "$ZIEL/werkbank/stand.json" \
+         "$ZIEL/intro/index.html" "$ZIEL/intro/01-1350.webp" \
+         "$ZIEL/intro/02-1884.webp" "$ZIEL/intro/03-heute.webp" \
+         "$ZIEL/intro/04-uebergabe.webp" "$ZIEL/intro/01-1350.mp3" \
+         "$ZIEL/intro/02-1884.mp3" "$ZIEL/intro/03-heute.mp3" \
+         "$ZIEL/intro/04-uebergabe.mp3"; do
   [ -s "$p" ] || { echo "AUSLIEFERUNG FEHLGESCHLAGEN: $p fehlt oder ist leer" >&2; fehlt=1; }
 done
 [ "$fehlt" = 0 ] || exit 1

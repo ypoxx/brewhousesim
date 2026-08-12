@@ -1,0 +1,301 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>Das Intro — Brauhaus-Imperium</title>
+<meta name="description" content="Ein Haus, ein Ort, sechshundert Jahre — das Intro zu Brauhaus-Imperium. Unter 90 Sekunden, jederzeit überspringbar.">
+<meta name="theme-color" content="#efebe2" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#16150f" media="(prefers-color-scheme: dark)">
+<link rel="icon" type="image/png" href="../favicon.png">
+
+<!--
+  Eigenstaendige HTML-Datei, wie start/index.html: kein Build-Schritt, kein
+  Netzzugriff, keine Web-Fonts, keine ES-Module, kein onclick=-Attribut.
+  Bilder/Ton liegen als Dateien daneben (start/intro/*.webp, *.mp3) und
+  werden NICHT zur Laufzeit von einem Dienst abgerufen — nur einmal offline
+  erzeugt. Diese Seite wird selbst erst aufgerufen, wenn jemand von der
+  Startseite aus "Ansehen" klickt; nichts hier laedt ungefragt vor.
+-->
+<style>
+  :root {
+    --papier: #efebe2; --tinte: #1b1a18; --matt: #6d665a; --linie: #d3ccbd;
+    --rot: #b8402a; --gruen: #4a6b3a; --feld: #f7f4ee; --buehne: #0f0e0c;
+    --serif: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+    --sans: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    --mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --papier: #16150f; --tinte: #e8e2d4; --matt: #98907f;
+      --linie: #33302a; --rot: #e0664a; --gruen: #8fb173; --feld: #201e18;
+    }
+  }
+  * { box-sizing: border-box; }
+  html, body { height: 100%; }
+  body {
+    margin: 0; background: var(--papier); color: var(--tinte);
+    font-family: var(--sans); font-size: 16px; line-height: 1.55;
+    -webkit-text-size-adjust: 100%;
+    display: flex; flex-direction: column; min-height: 100vh;
+  }
+  a { color: inherit; }
+  a:focus-visible, button:focus-visible {
+    outline: 3px solid var(--rot); outline-offset: 2px;
+  }
+
+  /* -------------------------------------------------------------------
+     KOPFZEILE — Ueberspringen und Ton, immer sichtbar, immer bedienbar.
+     ------------------------------------------------------------------- */
+  .kopf {
+    display: flex; align-items: center; justify-content: space-between;
+    gap: 10px; padding: 12px 16px; flex: 0 0 auto;
+  }
+  .marke {
+    font-family: var(--serif); font-weight: 600; font-size: 15px;
+    color: var(--matt); text-decoration: none;
+  }
+  .kopf-knoepfe { display: flex; gap: 8px; }
+  .iknopf {
+    font-family: var(--sans); font-size: 13.5px; font-weight: 600;
+    padding: 9px 14px; border-radius: 3px; border: 1px solid var(--linie);
+    background: var(--feld); color: var(--tinte); cursor: pointer;
+    line-height: 1.2; white-space: nowrap;
+  }
+  .iknopf[aria-pressed="true"] { border-color: var(--tinte); }
+  .iknopf:hover { opacity: .85; }
+  .iknopf-ueberspringen { border-color: var(--tinte); }
+
+  /* -------------------------------------------------------------------
+     BUEHNE — das Bild, 16:9, mit der Bildunterschrift im unteren Drittel.
+     ------------------------------------------------------------------- */
+  .buehnenfeld {
+    flex: 1 1 auto; display: flex; align-items: center; justify-content: center;
+    padding: 4px 16px 8px; min-height: 0;
+  }
+  .buehne {
+    position: relative; width: 100%; max-width: 1040px;
+    aspect-ratio: 16 / 9; background: var(--buehne);
+    border-radius: 4px; overflow: hidden;
+    box-shadow: 0 2px 22px rgba(0,0,0,.28);
+  }
+  .buehne img {
+    position: absolute; inset: 0; width: 100%; height: 100%;
+    object-fit: cover; display: block;
+  }
+  .schrift {
+    position: absolute; left: 0; right: 0; bottom: 0;
+    padding: 40px 26px 20px;
+    background: linear-gradient(to top, rgba(10,9,7,.86) 0%, rgba(10,9,7,.55) 55%, rgba(10,9,7,0) 100%);
+  }
+  .epoche {
+    font-family: var(--mono); font-size: 12.5px; letter-spacing: .04em;
+    color: #d9cfa8; margin: 0 0 6px; text-transform: uppercase;
+  }
+  .zeile {
+    font-family: var(--serif); font-size: clamp(17px, 2.6vw, 23px);
+    line-height: 1.45; color: #f6f1e4; margin: 0; max-width: 62ch;
+  }
+
+  /* -------------------------------------------------------------------
+     STEUERUNG — Zurueck / Punkte / Weiter, unter der Buehne.
+     ------------------------------------------------------------------- */
+  .steuerung {
+    flex: 0 0 auto; display: flex; align-items: center; justify-content: center;
+    gap: 18px; padding: 4px 16px 22px;
+  }
+  .schrittknopf {
+    font-family: var(--sans); font-size: 14px; font-weight: 600;
+    padding: 11px 20px; border-radius: 3px; border: 1px solid var(--tinte);
+    background: var(--tinte); color: var(--papier); cursor: pointer; line-height: 1.2;
+    min-width: 108px;
+  }
+  .schrittknopf:hover { opacity: .85; }
+  .schrittknopf:disabled { opacity: .3; cursor: default; }
+  .schrittknopf-zurueck { background: var(--papier); color: var(--tinte); }
+
+  .punkte { display: flex; gap: 8px; }
+  .punkt {
+    width: 11px; height: 11px; border-radius: 50%; padding: 0;
+    border: 1px solid var(--matt); background: transparent; cursor: pointer;
+  }
+  .punkt[aria-current="true"] { background: var(--rot); border-color: var(--rot); }
+
+  .fussnotiz {
+    flex: 0 0 auto; text-align: center; font-size: 12.5px; color: var(--matt);
+    padding: 0 16px 18px;
+  }
+
+  @media (max-width: 560px) {
+    .steuerung { gap: 10px; }
+    .schrittknopf { min-width: 84px; padding: 10px 14px; font-size: 13px; }
+  }
+</style>
+</head>
+<body>
+
+  <header class="kopf">
+    <a class="marke" href="../index.html">Brauhaus-Imperium</a>
+    <div class="kopf-knoepfe">
+      <button type="button" class="iknopf" id="knopf-ton" aria-pressed="false">🔇 Ton: aus</button>
+      <a class="iknopf iknopf-ueberspringen" href="../index.html" id="knopf-ueberspringen">Überspringen (Esc)</a>
+    </div>
+  </header>
+
+  <main class="buehnenfeld">
+    <div class="buehne" aria-roledescription="Bildfolge" aria-label="Das Intro">
+      <img id="bild" alt="" width="1600" height="893">
+      <div class="schrift">
+        <p class="epoche" id="epochenmarke"></p>
+        <p class="zeile" id="erzaehltext" aria-live="polite"></p>
+      </div>
+    </div>
+  </main>
+
+  <div class="steuerung">
+    <button type="button" class="schrittknopf schrittknopf-zurueck" id="knopf-zurueck">◀ Zurück</button>
+    <div class="punkte" id="punkte" role="group" aria-label="Bild wählen"></div>
+    <button type="button" class="schrittknopf" id="knopf-weiter">Weiter ▶</button>
+  </div>
+
+  <p class="fussnotiz">
+    Der Text steht immer vollständig hier — Ton ist nie Voraussetzung.
+    Vier Bilder, unter 90 Sekunden, jederzeit mit Escape oder „Überspringen“ zu verlassen.
+  </p>
+
+<script>
+(function () {
+  'use strict';
+
+  /* ------------------------------------------------------------------
+     DIE VIER BILDER. dauerMs ist die Mindestverweildauer je Bild (fuer
+     stumme Betrachtung ausreichend zum Lesen); jeder Tonclip ist kuerzer
+     als seine dauerMs, damit die Erzaehlung nie abgeschnitten wird.
+     Summe der dauerMs = 58 s, deutlich unter der 90-Sekunden-Vorgabe.
+     ------------------------------------------------------------------ */
+  var PANELE = [
+    {
+      bild: '01-1350.webp', ton: '01-1350.mp3', epoche: '1350',
+      alt: 'Ein Kessel über offenem Feuer im Hof eines Brauhauses vor einer geschlossenen Stadtmauer.',
+      text: 'Ein Kessel, ein Feuer, ein Hof vor den Toren der Stadt. Der Rat verleiht das Recht, hier zu brauen — auf Zeit, nicht für immer.',
+      dauerMs: 15000
+    },
+    {
+      bild: '02-1884.webp', ton: '02-1884.mp3', epoche: '1884',
+      alt: 'Dieselbe Stelle Jahrhunderte später: eine gewachsene Brauerei mit Schornstein an einer Steinbrücke.',
+      text: 'Jahrhunderte vergehen. Der Fluss, die Brücke, die Kirche auf dem Hügel bleiben, wo sie sind. Nur das Haus wandert von einer Hand zur nächsten.',
+      dauerMs: 16000
+    },
+    {
+      bild: '03-heute.webp', ton: '03-heute.mp3', epoche: 'Heute',
+      alt: 'Dieselbe Stelle in der Gegenwart: eine moderne Brauerei mit Solardach, der alte Schornstein als Denkmal.',
+      text: 'Sechshundert Jahre später steht hier immer noch ein Brauhaus — derselbe Ort, ein neuer Tag.',
+      dauerMs: 12000
+    },
+    {
+      bild: '04-uebergabe.webp', ton: '04-uebergabe.mp3', epoche: null,
+      alt: 'Eine ältere Hand übergibt einer jüngeren Hand einen alten Schlüssel am Hoftor, im Abendlicht.',
+      text: 'Wer dieses Haus führt, führt es nicht für sich allein. Gewinnen heißt hier nicht: groß werden. Gewinnen heißt: übergeben können.',
+      dauerMs: 15000
+    }
+  ];
+
+  var stand = 0;
+  var tonAn = false;
+  var timerId = null;
+
+  var elBild = document.getElementById('bild');
+  var elEpoche = document.getElementById('epochenmarke');
+  var elText = document.getElementById('erzaehltext');
+  var elPunkte = document.getElementById('punkte');
+  var elWeiter = document.getElementById('knopf-weiter');
+  var elZurueck = document.getElementById('knopf-zurueck');
+  var elTon = document.getElementById('knopf-ton');
+  var elAudio = new Audio();
+  elAudio.preload = 'none'; /* laedt erst, wenn wir es wirklich abspielen */
+
+  /* Die Bildpunkte einmal aufbauen. */
+  PANELE.forEach(function (p, i) {
+    var b = document.createElement('button');
+    b.type = 'button';
+    b.className = 'punkt';
+    b.setAttribute('aria-label', 'Bild ' + (i + 1) + ' von ' + PANELE.length);
+    b.addEventListener('click', function () { geheZu(i); });
+    elPunkte.appendChild(b);
+  });
+  var punktKnoepfe = elPunkte.querySelectorAll('.punkt');
+
+  function ladeTon(p) {
+    try {
+      elAudio.pause();
+      elAudio.currentTime = 0;
+      elAudio.src = p.ton;
+      elAudio.preload = 'auto';
+      var abspielVersuch = elAudio.play();
+      if (abspielVersuch && abspielVersuch.catch) abspielVersuch.catch(function () {});
+    } catch (e) { /* Ton ist nie Voraussetzung — ein Fehlschlag stoppt nichts anderes */ }
+  }
+
+  function zeichne() {
+    var p = PANELE[stand];
+    elBild.src = p.bild;
+    elBild.alt = p.alt;
+    elEpoche.textContent = p.epoche || '';
+    elEpoche.hidden = !p.epoche;
+    elText.textContent = p.text;
+
+    punktKnoepfe.forEach(function (b, i) {
+      if (i === stand) b.setAttribute('aria-current', 'true');
+      else b.removeAttribute('aria-current');
+    });
+
+    elZurueck.disabled = (stand === 0);
+    elWeiter.textContent = (stand === PANELE.length - 1) ? 'Zur Startseite' : 'Weiter ▶';
+
+    if (tonAn) ladeTon(p); else { elAudio.pause(); elAudio.removeAttribute('src'); }
+  }
+
+  function planeWeiter() {
+    if (timerId) clearTimeout(timerId);
+    timerId = setTimeout(function () {
+      if (stand < PANELE.length - 1) geheZu(stand + 1);
+      else window.location.href = '../index.html';
+    }, PANELE[stand].dauerMs);
+  }
+
+  function geheZu(i) {
+    if (i < 0 || i >= PANELE.length) return;
+    stand = i;
+    zeichne();
+    planeWeiter();
+  }
+
+  elWeiter.addEventListener('click', function () {
+    if (stand === PANELE.length - 1) { window.location.href = '../index.html'; return; }
+    geheZu(stand + 1);
+  });
+  elZurueck.addEventListener('click', function () { geheZu(stand - 1); });
+
+  elTon.addEventListener('click', function () {
+    tonAn = !tonAn;
+    elTon.setAttribute('aria-pressed', tonAn ? 'true' : 'false');
+    elTon.textContent = tonAn ? '🔊 Ton: an' : '🔇 Ton: aus';
+    if (tonAn) ladeTon(PANELE[stand]);
+    else { elAudio.pause(); elAudio.removeAttribute('src'); }
+  });
+
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') { window.location.href = '../index.html'; return; }
+    if (e.key === 'ArrowRight') { elWeiter.click(); }
+    if (e.key === 'ArrowLeft') { elZurueck.click(); }
+  });
+
+  /* Los geht's — Bild 1 laedt jetzt, weil diese Seite selbst erst nach
+     einem Klick auf "Ansehen" von der Startseite aus erreicht wird. */
+  zeichne();
+  planeWeiter();
+})();
+</script>
+</body>
+</html>

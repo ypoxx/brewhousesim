@@ -1,0 +1,324 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>Anleitung — Brauhaus-Imperium</title>
+<meta name="description" content="Was man in den ersten fünf Minuten von Brauhaus-Imperium wissen muss: das Braujahr, die Zeile am unteren Rand, die Michaelitafel, wie man verliert, und ein Glossar.">
+<meta name="theme-color" content="#efebe2" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#16150f" media="(prefers-color-scheme: dark)">
+<link rel="icon" type="image/png" href="favicon.png">
+
+<!--
+  Eigenstaendige HTML-Datei wie start/index.html: kein Build-Schritt, kein
+  Netzzugriff, keine Web-Fonts, kein Skript ueberhaupt — diese Seite ist
+  reiner, ruhiger Text. Jede hier beschriebene Regel ist vorher in
+  spiel/LIESMICH.md oder im Quelltext des Spiels nachgelesen worden (siehe
+  werkbank/urteile/intro-bau.md fuer die Fundstellen).
+-->
+<style>
+  :root {
+    --papier: #efebe2; --tinte: #1b1a18; --matt: #6d665a; --linie: #d3ccbd;
+    --rot: #b8402a; --gruen: #4a6b3a; --feld: #f7f4ee;
+    --serif: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+    --sans: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    --mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --papier: #16150f; --tinte: #e8e2d4; --matt: #98907f;
+      --linie: #33302a; --rot: #e0664a; --gruen: #8fb173; --feld: #201e18;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--papier); color: var(--tinte);
+    font-family: var(--sans); font-size: 16px; line-height: 1.6;
+    -webkit-text-size-adjust: 100%;
+  }
+  .blatt { max-width: 760px; margin: 0 auto; padding: 40px 20px 90px; }
+
+  a { color: var(--tinte); }
+  a:focus-visible, button:focus-visible { outline: 3px solid var(--rot); outline-offset: 2px; }
+  .zurueck { display: inline-block; margin-bottom: 18px; font-size: 14px; }
+
+  header { border-bottom: 3px double var(--linie); padding-bottom: 16px; margin-bottom: 8px; }
+  h1 { font-family: var(--serif); font-size: clamp(28px, 5.5vw, 40px); margin: 0 0 6px; font-weight: 600; }
+  .unter { color: var(--matt); font-size: 15px; margin: 0; }
+
+  nav.inhalt {
+    margin: 22px 0 30px; padding: 16px 18px; border: 1px solid var(--linie);
+    border-radius: 3px; background: var(--feld);
+  }
+  nav.inhalt p { margin: 0 0 8px; font-size: 12.5px; text-transform: uppercase;
+    letter-spacing: .04em; color: var(--matt); font-weight: 600; }
+  nav.inhalt ol { margin: 0; padding: 0 0 0 20px; }
+  nav.inhalt li { margin-bottom: 4px; font-size: 14.5px; }
+  nav.inhalt a { text-decoration: none; }
+  nav.inhalt a:hover { text-decoration: underline; }
+
+  section { margin: 0 0 40px; scroll-margin-top: 20px; }
+  h2 {
+    font-family: var(--serif); font-size: 23px; margin: 0 0 12px; font-weight: 600;
+    border-bottom: 1px solid var(--linie); padding-bottom: 8px;
+  }
+  h3 { font-family: var(--serif); font-size: 17px; margin: 20px 0 6px; font-weight: 600; }
+  p { margin: 0 0 14px; }
+  ol, ul { margin: 0 0 14px; padding-left: 22px; }
+  li { margin-bottom: 8px; }
+  strong { color: var(--tinte); }
+  code, .zeile-beispiel {
+    font-family: var(--mono); font-size: 13.5px; background: var(--feld);
+    border: 1px solid var(--linie); border-radius: 3px; padding: 1px 6px;
+    white-space: nowrap;
+  }
+  .zeile-beispiel-block {
+    font-family: var(--mono); font-size: 14px; background: #2b2318; color: #f4ecd8;
+    border-radius: 4px; padding: 14px 16px; margin: 10px 0 16px; line-height: 1.7;
+  }
+  @media (prefers-color-scheme: dark) {
+    .zeile-beispiel-block { background: #0c0b09; color: #e8e2d4; }
+  }
+
+  .kasten {
+    border: 1px solid var(--linie); border-left: 4px solid var(--rot);
+    background: var(--feld); padding: 16px 18px; margin: 0 0 16px; border-radius: 3px;
+  }
+  .kasten p:last-child { margin-bottom: 0; }
+  .kasten-gruen { border-left-color: var(--gruen); }
+
+  dl.glossar { margin: 0; }
+  dl.glossar > div {
+    padding: 14px 0; border-top: 1px solid var(--linie);
+  }
+  dl.glossar > div:first-child { border-top: none; }
+  dl.glossar dt {
+    font-family: var(--serif); font-weight: 600; font-size: 17px; margin-bottom: 4px;
+  }
+  dl.glossar dd { margin: 0; color: var(--tinte); }
+  dl.glossar .beleg { display: block; margin-top: 4px; font-size: 12.5px; color: var(--matt); }
+
+  footer { margin-top: 10px; padding-top: 16px; border-top: 1px solid var(--linie); }
+  .fuss-nav { display: flex; gap: 18px; margin: 0 0 14px; padding: 0; list-style: none; flex-wrap: wrap; }
+  .fuss-nav a { font-size: 14px; }
+  .klein { font-size: 12.5px; color: var(--matt); line-height: 1.65; margin: 0; }
+</style>
+</head>
+<body>
+<div class="blatt">
+
+  <a class="zurueck" href="index.html">← Zur Startseite</a>
+
+  <header>
+    <h1>Anleitung</h1>
+    <p class="unter">Was man in den ersten fünf Minuten wissen muss — mehr nicht.</p>
+  </header>
+
+  <p>
+    Das Spiel wirkt am Anfang groß: es hat mehr Knöpfe, als eine erste Woche braucht.
+    Diese Seite ersetzt sie nicht — sie nennt nur, was jede Partie tatsächlich trägt.
+  </p>
+
+  <nav class="inhalt" aria-label="Inhalt dieser Seite">
+    <p>Inhalt</p>
+    <ol>
+      <li><a href="#braujahr">Das Braujahr — Michaeli bis Georgi</a></li>
+      <li><a href="#drei-dinge">Was in einer Woche zu tun ist</a></li>
+      <li><a href="#zeile">Die Zeile am unteren Rand</a></li>
+      <li><a href="#michaelitafel">Die Michaelitafel und die Festlegung</a></li>
+      <li><a href="#verlieren">Wie man verliert — und was stattdessen das Ziel ist</a></li>
+      <li><a href="#glossar">Glossar</a></li>
+    </ol>
+  </nav>
+
+  <section id="braujahr">
+    <h2>Das Braujahr — Michaeli bis Georgi</h2>
+    <p>
+      Ein Braujahr hat 30 Wochen. Es beginnt am <strong>29. September</strong>
+      (<a href="#g-michaeli">Michaeli</a>) und läuft bis zum <strong>23. April</strong>
+      (<a href="#g-georgi">Georgi</a>) — jeder Klick auf WEITER ist eine Woche, der
+      dreißigste schließt das Jahr.
+    </p>
+    <p>
+      In den frühen Epochen ist das kein Zufall, sondern Gesetz: das Sommerbrauverbot von
+      1553 verbot das Brauen über den Sommer, und der Sommer selbst läuft im Spiel
+      ungeklickt durch — er wird abgerechnet und in die Chronik geschrieben, nicht gespielt.
+      Später, ab der Kältemaschine, ist derselbe Rhythmus nur noch Gewohnheit statt Gesetz —
+      die Rundenform bleibt in allen vier Epochen gleich, nur ihre Begründung wechselt.
+    </p>
+  </section>
+
+  <section id="drei-dinge">
+    <h2>Was in einer Woche zu tun ist</h2>
+    <p>Drei Dinge tragen fast jede Woche, egal in welcher Epoche:</p>
+    <ol>
+      <li>
+        <strong>Einen <a href="#g-sud">Sud</a> ansetzen</strong>, wenn Rohstoff und Zeit
+        reichen. Daraus wird ein Fass — aber erst, wenn es reif ist, lässt es sich
+        ausliefern.
+      </li>
+      <li>
+        <strong>Die <a href="#g-fuhre">Fuhre</a> beladen und losschicken</strong>, zu einer
+        Adresse, die noch Platz hat. Erst unterwegs und angekommen wird aus Bier Geld.
+      </li>
+      <li>
+        <strong>Die Zeile am unteren Rand lesen</strong>, bevor man auf WEITER klickt —
+        sie sagt, was als Nächstes ansteht und ob die Kasse dafür reicht. Siehe unten.
+      </li>
+    </ol>
+    <p class="klein">
+      Alles andere — Bauten, Verträge, der Umgang mit dem Gegner — kommt dazu, sobald Zeit
+      dafür ist. Diese drei tragen aber schon eine Partie, in der man nichts anderes tut.
+    </p>
+  </section>
+
+  <section id="zeile">
+    <h2>Die Zeile am unteren Rand</h2>
+    <p>
+      Unten rechts im Bild stehen ein bis zwei Zeilen, die sich bei jedem Zug neu schreiben.
+      Sie sind keine Dekoration — sie sind die knappeste Zusammenfassung des Spielstands,
+      die es gibt.
+    </p>
+    <div class="zeile-beispiel-block">nächster Zug: Fuhre zum Lindenhof — 40 Pf  (Kasse reicht 5,9×)</div>
+    <p>
+      Das ist, nach dem Urteil eines blinden Kritikers, <strong>die beste Zeile des
+      Spiels</strong>. Sie zeigt den wichtigsten Zug, den man gerade wirklich drücken kann,
+      seinen Preis, und wie oft die eigene Kasse diesen Preis deckt. Eine hohe Zahl heißt:
+      Luft. Eine Zahl nahe 1 heißt: knapp. Fehlt die Zeile, hat in diesem Zug niemand etwas
+      zu melden — sie erfindet dann nichts.
+    </p>
+    <div class="zeile-beispiel-block">Ziel: Die Übergabe liegt auf dem Tisch — noch 3 Wochen. (100 % des Wegs)</div>
+    <p>
+      Darüber steht, wenn vorhanden, eine zweite Zeile: was das gute Ende ist und wie nah
+      das Haus daran ist, in Prozent. Sie bleibt leer, solange kein Stück etwas zu melden
+      hat — auch das ist Absicht, nicht ein Fehler.
+    </p>
+  </section>
+
+  <section id="michaelitafel">
+    <h2>Die Michaelitafel und die Festlegung</h2>
+    <p>
+      Zu Michaeli — Woche 1 jedes Braujahrs — verwandelt sich die Bühne: die
+      <strong>Michaelitafel</strong> legt drei bis fünf Angebote nebeneinander aus, jedes
+      mit Preisschild, Bauzeit und Folge. Die Kasse reicht nie für alle auf einmal.
+    </p>
+    <div class="kasten">
+      <p>
+        Eine Zeile auf der Tafel ist anders als die übrigen: die <strong>Festlegung</strong>.
+        Je Amtszeit — also je Hausvorstand — gibt es genau eine. Wer sie nimmt, ändert damit
+        eine Regel für den <strong>Rest der Partie</strong> (etwa: Hopfen statt Grut, der
+        Freikauf vom Grundherrn, Vertrag statt Gunst). Sie steht danach unveränderlich in
+        der Chronik. <strong>Es gibt keinen zweiten Klick.</strong>
+      </p>
+    </div>
+    <p>
+      Genau deshalb lohnt es sich, die Tafel nicht im Vorbeigehen wegzuklicken: eine
+      Festlegung lässt sich nicht zurücknehmen, auch nicht in einer späteren Amtszeit durch
+      eine andere ersetzen.
+    </p>
+  </section>
+
+  <section id="verlieren">
+    <h2>Wie man verliert — und was stattdessen das Ziel ist</h2>
+    <div class="kasten">
+      <p>
+        <strong>Die häufigste Art zu verlieren:</strong> Wenn längere Zeit hintereinander
+        keine Schenke ein Fass genommen hat — acht bis zwölf Wochen, je nach Epoche —,
+        entzieht die zuständige Stelle dem Haus das Braurecht. Wer das genau ist, wechselt
+        mit der Epoche (1350 der Rat, 1600 die Zunft, 1884 der Malzhändler und am Ende die
+        Bank, 1970 der Handel), aber die Folge ist immer dieselbe: die Partie endet an
+        diesem Tag, mit einem eigenen Schlusstext. Das ist der Ausgang, an dem eine
+        ungeübte erste Partie am ehesten scheitert — nicht am leeren Konto, sondern am
+        leeren Auftragsbuch.
+      </p>
+    </div>
+    <div class="kasten kasten-gruen">
+      <p>
+        <strong>Das eigentliche Ziel ist kein Sieg über irgendjemanden, sondern die
+        Übergabe.</strong> Steht das Haus lange genug ohne Not — genug Braujahre seit dem
+        Antritt, genug beliefernde Häuser, keine roten Zahlen, genug Ausstoß im letzten
+        Jahr — bietet sich zu Michaeli von selbst die Übergabe an. Nimmt man sie an, führt
+        die nächste Generation weiter; das Haus bleibt stehen. Das ist das einzige Ende,
+        nach dem am nächsten Morgen wieder Feuer unter der Pfanne brennt. Gewinnen heißt
+        hier nicht: groß werden. Gewinnen heißt: übergeben können.
+      </p>
+    </div>
+  </section>
+
+  <section id="glossar">
+    <h2>Glossar</h2>
+    <dl class="glossar">
+      <div>
+        <dt id="g-kerbholz">Kerbholz</dt>
+        <dd>
+          Wenn ein Wirt nicht bar zahlt, sondern anschreiben lässt, wird das nicht in ein
+          Buch, sondern auf ein gekerbtes Holz vermerkt. Am Michaelistag geht der Knecht
+          mit dem Holz die Runde und rechnet die Kerben ab.
+        </dd>
+      </div>
+      <div>
+        <dt id="g-angeld">Angeld</dt>
+        <dd>
+          Eine Anzahlung, die ein gebundener Wirt zu Michaeli auf das kommende Braujahr
+          leistet, damit er auch im Winter beliefert wird. Sie wird über die folgenden
+          Lieferungen nach und nach abgetrunken — sie schafft kein zusätzliches Geld,
+          sondern verschiebt nur, wann bezahlt wird.
+        </dd>
+      </div>
+      <div>
+        <dt id="g-bannmeile">Bannmeile</dt>
+        <dd>
+          Eine Grenze in Meilen um die Stadt. Jenseits davon fährt ohne einen eigenen
+          Bannbrief des Rats kein Fass — auch kein verschenktes.
+        </dd>
+      </div>
+      <div>
+        <dt id="g-sud">Sud</dt>
+        <dd>Ein einzelner Brauvorgang. Rohstoff wird angesetzt, daraus entsteht ein Fass —
+          aber erst nach einer gewissen Reife lässt es sich ausliefern.</dd>
+      </div>
+      <div>
+        <dt id="g-fuhre">Fuhre</dt>
+        <dd>Die beladene Fahrt mit dem Wagen zu einer Adresse. Bier, das im Keller liegt,
+          bringt nichts ein — erst als gelieferte Fuhre wird daraus Geld.</dd>
+      </div>
+      <div>
+        <dt id="g-aufgeld">Aufgeld</dt>
+        <dd>
+          Ein Aufschlag, den in späteren Epochen der Ruf des eigenen Namens auf eine
+          Lieferung legt — zusätzliches Geld herein, keine Abgabe, die man zahlt.
+        </dd>
+      </div>
+      <div>
+        <dt id="g-michaeli">Michaeli</dt>
+        <dd>29. September, Woche 1 des Braujahrs. Die Bühne verwandelt sich, und die
+          Michaelitafel liegt aus.</dd>
+      </div>
+      <div>
+        <dt id="g-georgi">Georgi</dt>
+        <dd>23. April, das Ende des Braujahrs. In den frühen Epochen das gesetzliche Ende
+          der Braisonzeit; später nur noch der Takt, an dem das Spiel festhält.</dd>
+      </div>
+    </dl>
+  </section>
+
+  <footer>
+    <ul class="fuss-nav">
+      <li><a href="index.html">Startseite</a></li>
+      <li><a href="intro/index.html">Das Intro</a></li>
+      <li><a href="impressum.html">Impressum</a></li>
+      <li><a href="datenschutz.html">Datenschutz</a></li>
+    </ul>
+    <p class="klein">
+      Diese Seite beschreibt nur, was der Quelltext des Spiels tatsächlich tut — nachgelesen
+      in <code>spiel/LIESMICH.md</code> und den zuständigen Dateien unter
+      <code>spiel/kern/</code> und <code>spiel/stuecke/</code>. Zahlen wie Fristen oder
+      Preise können sich mit künftigen Wellen ändern; die hier beschriebenen Abläufe sind
+      die, die am 12. August 2026 galten.
+    </p>
+  </footer>
+
+</div>
+</body>
+</html>

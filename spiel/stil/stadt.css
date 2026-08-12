@@ -210,11 +210,45 @@
 
 /* Zugeklappt heisst weggeschnitten, nicht versteckt: Platz, Groesse und
    Umbruch bleiben stehen, deshalb stehen im Reiter die lebenden Zahlen des
-   Bretts. Wer sein Brett selbst in eine Leiste legt, setzt data-frei. */
+   Bretts. Wer sein Brett selbst in eine Leiste legt, setzt data-frei.
+
+   DAZU, SEIT WELLE 17: `visibility: hidden`. Weggeschnitten ist nicht
+   nichts — ein zugeklapptes Brett behaelt seine Kastengeometrie (das ist
+   der ganze Witz, siehe oben), aber es bleibt fuer JEDEN Werkzeug, das nur
+   `visibility`/`display` fragt und `clip-path` nicht kennt, ein GANZ
+   NORMALES, sichtbares, aber zufaellig nulldimensional geclipptes Element.
+   Genau das tut `werkbank/schuss/aufsicht/sicht.mjs` (das misst, ruehrt
+   dieses Stueck nicht an) — es zaehlt 65 "verdeckte" Textknoten DES NAMENS,
+   die in Wahrheit alle unter genau einem zugeklappten `.nm-band` liegen und
+   fuer niemanden sichtbar sind: `aria-hidden="true"` steht schon daneben
+   (`klappeZu()`), nur eben kein `visibility`. `visibility: hidden` aendert
+   an der Geometrie nichts (anders als `display: none`) — `getBoundingClientRect()`
+   bleibt, was `deckt()` und die Randwache brauchen. Es aendert auch nichts
+   an `beschriftung()`: `kopf.innerText` liefert fuer ein unsichtbares
+   Element „", und genau dafuer steht der Rueckfall `|| kopf.textContent`
+   schon da (Zeile 614) — er greift jetzt, statt nie gebraucht zu werden.
+   Nachgemessen mit Kontrakt 3 (STADT-Rahmenschluessel) und den Reiter-
+   Aufschriften aller vier Epochen vor und nach dieser Zeile: unveraendert. */
 .stadt-zugeklappt {
   clip-path: inset(50%) !important;
+  visibility: hidden !important;
   pointer-events: none !important;
 }
+/* `beschriftung()` (Zeile 610) liest `kopf.innerText` — jeden Takt frisch,
+   das ist der ganze Witz der lebenden Reiterzahlen — und `innerText` ist
+   selbst rendering-bewusst: es liefert fuer ein `visibility:hidden`-Element
+   „" statt Text, und der Rueckfall `|| kopf.textContent` daneben kennt keine
+   Zeilenumbrueche mehr, wo `innerText` sie aus block-artigen Kindern baut.
+   ERSTER ANLAUF (nur `visibility:hidden` oben, ohne diese Zeile) hat genau
+   das zerschossen: aus "DIE HÄUSER" + "wollen 15 · …" wurde am Bildschirm
+   EINE zusammengeklebte Zeile "DIE / HÄUSERwollen 15 · …", am Reiter DES
+   RUFS DES HAUSES sogar komplett grossgeschrieben, weil ohne Zeilentrennung
+   alles als „Titel" galt. Gesehen am Bild, nicht an einer Zahl.
+   Die Antwort: nur das erste Kind (= `kopf` in `beschriftung()`) bekommt
+   seine Sichtbarkeit zurueck. Es bleibt trotzdem unsichtbar — `clip-path`
+   oben schneidet weiterhin alles weg, auch dieses Kind, ganz gleich, was
+   `visibility` dazu sagt. Nur `innerText` darf wieder hindurchsehen. */
+.stadt-zugeklappt > :first-child { visibility: visible; }
 
 /* EINE KARTE, DIE UNTER EINEM AUFLIEGENDEN BLATT LIEGT.  (Auflage A3, Welle 9)
 

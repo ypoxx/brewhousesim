@@ -63,6 +63,12 @@
   }
   .ziel strong { color: var(--rot); font-weight: 600; }
 
+  .vorspann-zeile {
+    display: flex; flex-wrap: wrap; align-items: center; gap: 10px 14px;
+    margin: 0 0 32px;
+  }
+  .vorspann-hinweis { flex-basis: 100%; margin: 2px 0 0; }
+
   .abschnitt {
     border: 1px solid var(--linie); background: var(--feld);
     padding: 22px 24px; margin-bottom: 22px; border-radius: 3px;
@@ -139,6 +145,14 @@
     Gewinnen heißt hier nicht groß werden, sondern: <strong>übergeben können</strong>.
   </p>
 
+  <p class="vorspann-zeile">
+    <a class="knopf knopf-sekundaer" href="intro/index.html">Das Intro ansehen</a>
+    <a class="knopf knopf-sekundaer" href="anleitung.html">Anleitung lesen</a>
+    <span class="klein vorspann-hinweis">Beides ist optional und lädt nichts nach, solange
+      man hier bleibt — das Intro dauert unter 90 Sekunden und ist stumm, bis man den Ton
+      selbst anschaltet.</span>
+  </p>
+
   <section class="abschnitt abschnitt-primaer" aria-labelledby="h-bogen">
     <h2 id="h-bogen">Den Bogen beginnen</h2>
     <p>
@@ -204,6 +218,8 @@
 
   <footer>
     <ul class="fuss-nav">
+      <li><a href="anleitung.html">Anleitung</a></li>
+      <li><a href="intro/index.html">Das Intro</a></li>
       <li><a href="impressum.html">Impressum</a></li>
       <li><a href="datenschutz.html">Datenschutz</a></li>
     </ul>
