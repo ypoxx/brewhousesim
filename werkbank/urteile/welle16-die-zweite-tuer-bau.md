@@ -43,3 +43,9 @@ Teildatei gelöscht, neu gestartet mit `MAXMIN=40`.
 mit `hand.mjs 1 e1-nachher-tune1 220 12` — mein Lauf wartet ordnungsgemäß in
 der `flock`-Warteschlange (`fuser -v` zeigt beide Prozessgruppen). Kein
 Parallellauf, wie vorgeschrieben.
+
+**Vorher-Messung, Lauf 1 (SAAT=4001, MAXMIN=40) — fertig:** 152 echte
+Wochen, 6 Braujahre erzählt (1970–1975/16), Abbruch `maxWochen-erreicht`
+(sauber, kein Wanduhrlimit), 0 Seitenfehler. **Konzernvertrag: NICHT
+genommen.** Prüfsumme `4e931e04`. Deckt sich mit Welle 15s eigenem Lauf 1
+(Saat 4001 → „nein").
