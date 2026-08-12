@@ -1,0 +1,152 @@
+{
+ "epoche": 3,
+ "url": "http://127.0.0.1:8971/spiel/?epoche=3&saat=1350",
+ "felder": 22,
+ "gleich": 11,
+ "unterschiedlich": 11,
+ "unterschiede": {
+  "bottiche": {
+   "vor": [],
+   "nachNeuladen": [
+    {
+     "nr": 1,
+     "k": "lager",
+     "sorte": "Lagerbier",
+     "zeichen": "L",
+     "stufe": 2,
+     "fass": 24,
+     "rein": 56521,
+     "reifAb": 56523,
+     "haltbarPur": 24,
+     "faktor": 1.35,
+     "hoechst": 2,
+     "notsud": false,
+     "verfahren": "Natureis aus dem Fluss · Betriebshefe aus dem Bottich",
+     "notdurft": false,
+     "gesperrt": false,
+     "seitGesperrt": 0,
+     "streuung": 0
+    }
+   ],
+   "gleich": false
+  },
+  "guete": {
+   "vor": 25,
+   "nachNeuladen": 70,
+   "gleich": false
+  },
+  "anstichWoche": {
+   "vor": 56522,
+   "nachNeuladen": -1,
+   "gleich": false
+  },
+  "nr": {
+   "vor": 5,
+   "nachNeuladen": 1,
+   "gleich": false
+  },
+  "buch": {
+   "vor": [
+    {
+     "jahr": 1884,
+     "woche": 1,
+     "text": "36 hl in den Gärkeller — Natureis aus dem Fluss · Betriebshefe aus dem Bottich"
+    },
+    {
+     "jahr": 1884,
+     "woche": 1,
+     "text": "Hefe im Gärbottich abernten — Bottich 1, +8"
+    },
+    {
+     "jahr": 1884,
+     "woche": 2,
+     "text": "Hefe im Gärbottich abernten — Bottich 1, +8"
+    },
+    {
+     "jahr": 1884,
+     "woche": 3,
+     "text": "1 Bottich ausgeschlagen — die Haltbarkeit beginnt jetzt am Fass"
+    },
+    {
+     "jahr": 1884,
+     "woche": 3,
+     "text": "36 hl in den Gärkeller — Natureis aus dem Fluss · Betriebshefe aus dem Bottich"
+    },
+    {
+     "jahr": 1884,
+     "woche": 4,
+     "text": "Die Hefe ist infiziert: Bottich 2 (36 hl)"
+    },
+    {
+     "jahr": 1884,
+     "woche": 4,
+     "text": "36 hl in den Gärkeller — Natureis aus dem Fluss · Betriebshefe aus dem Bottich"
+    },
+    {
+     "jahr": 1884,
+     "woche": 5,
+     "text": "36 hl in den Gärkeller — Natureis aus dem Fluss · Betriebshefe aus dem Bottich"
+    },
+    {
+     "jahr": 1884,
+     "woche": 5,
+     "text": "Die Hefe ist infiziert: Bottich 4 (36 hl)"
+    },
+    {
+     "jahr": 1884,
+     "woche": 5,
+     "text": "36 hl in den Gärkeller — Natureis aus dem Fluss · Betriebshefe aus dem Bottich"
+    },
+    {
+     "jahr": 1884,
+     "woche": 8,
+     "text": "1 Bottich ausgeschlagen — die Haltbarkeit beginnt jetzt am Fass"
+    },
+    {
+     "jahr": 1884,
+     "woche": 9,
+     "text": "1 Bottich ausgeschlagen — die Haltbarkeit beginnt jetzt am Fass"
+    }
+   ],
+   "nachNeuladen": [
+    {
+     "jahr": 1884,
+     "woche": 1,
+     "text": "36 hl in den Gärkeller — Natureis aus dem Fluss · Betriebshefe aus dem Bottich"
+    }
+   ],
+   "gleich": false
+  },
+  "jahrSude": {
+   "vor": 5,
+   "nachNeuladen": 1,
+   "gleich": false
+  },
+  "jahrFass": {
+   "vor": 120,
+   "nachNeuladen": 24,
+   "gleich": false
+  },
+  "jahrLegte": {
+   "vor": 4,
+   "nachNeuladen": 0,
+   "gleich": false
+  },
+  "gesamtLegte": {
+   "vor": 4,
+   "nachNeuladen": 0,
+   "gleich": false
+  },
+  "gesamtSude": {
+   "vor": 5,
+   "nachNeuladen": 1,
+   "gleich": false
+  },
+  "gesamtFass": {
+   "vor": 120,
+   "nachNeuladen": 24,
+   "gleich": false
+  }
+ },
+ "fortgesetzt": false
+}

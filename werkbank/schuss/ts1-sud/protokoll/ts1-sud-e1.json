@@ -1,0 +1,46 @@
+{
+ "epoche": 1,
+ "url": "http://127.0.0.1:8971/spiel/?epoche=1&saat=1350",
+ "felder": 22,
+ "gleich": 17,
+ "unterschiedlich": 5,
+ "unterschiede": {
+  "guete": {
+   "vor": 74,
+   "nachNeuladen": 70,
+   "gleich": false
+  },
+  "anstichWoche": {
+   "vor": 40502,
+   "nachNeuladen": -1,
+   "gleich": false
+  },
+  "buch": {
+   "vor": [
+    {
+     "jahr": 1350,
+     "woche": 1,
+     "text": "Hefezeug vom Fass abnehmen — junges Fass, 0 Wochen alt, +14"
+    },
+    {
+     "jahr": 1350,
+     "woche": 2,
+     "text": "Hefezeug vom Fass abnehmen — junges Fass, 0 Wochen alt, +14"
+    }
+   ],
+   "nachNeuladen": [],
+   "gleich": false
+  },
+  "jahrLegte": {
+   "vor": 5,
+   "nachNeuladen": 0,
+   "gleich": false
+  },
+  "gesamtLegte": {
+   "vor": 5,
+   "nachNeuladen": 0,
+   "gleich": false
+  }
+ },
+ "fortgesetzt": false
+}
