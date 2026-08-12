@@ -3516,34 +3516,6 @@
        Kasse darf das nie. Er steht immer im Bild. */
     if (nz) b.appendChild(nz);
 
-    /* LOHNBRAUEN — der zweite Erlösweg (R16.1). An genau der Stelle, an der
-       die suchende Hand seit Welle 15 nachweislich hinsieht: derselben
-       Anschlagtafel, demselben Reiter, mit eigenem Preisschild — kein
-       neuer, unbekannter Ort. */
-    var lb = lohnbrauDef();
-    if (lb) {
-      var lbz = B.el('div', 'fu-lohnbrau' + (Z.lohnbrauWoche >= (lb.wochenMax || 1) ? ' voll' : ''));
-      var lbk = B.el('div', 'fu-lohnbrau-kopf');
-      lbk.appendChild(B.el('b', null, lb.name));
-      lbk.appendChild(B.el('span', 'fu-erloes', '+' + B.welt.geld(lohnbrauLohn()) + ' bar'));
-      lbz.appendChild(lbk);
-      var lbZeile = lb.tage + (lb.tage === 1 ? ' Brautag' : ' Brautage')
-        + ' · kein Ungeld · ' + Z.lohnbrauWoche + '/' + (lb.wochenMax || 1) + ' diese Woche';
-      lbz.appendChild(B.el('div', 'fu-lohnbrau-zeile', lbZeile));
-      var lbAus = !lohnbrauVerfuegbar();
-      var lbGrund = Z.budget < lb.tage ? (e.budget ? e.budget.name : 'Brautage') + ' verbraucht'
-        : (Z.lohnbrauWoche >= (lb.wochenMax || 1) ? 'Der Fronhof hat diese Woche schon abgeholt' : '');
-      lbz.appendChild(B.knopf({
-        text: lb.name + (Z.lohnbrauNr ? ' · ' + (Z.lohnbrauNr + 1) + '. Mal' : ''),
-        zug: 'fuhre:lohnbrau', klasse: 'fu-lohnbrau-knopf',
-        preis: lohnbrauLohn(),
-        aus: lbAus,
-        titel: lb.satz + (lbGrund ? ' (' + lbGrund + ')' : ''),
-        tu: function () { lohnbraue(); }
-      }));
-      b.appendChild(lbz);
-    }
-
     if (Z.sudMeldung) b.appendChild(B.el('div', 'fu-sudmeldung', Z.sudMeldung));
 
     /* DAS KERBHOLZ. Was das Haus schuldig ist, steht sichtbar im Holz —
@@ -3621,6 +3593,35 @@
         }));
       }
     });
+
+    /* LOHNBRAUEN — der zweite Erlösweg (R16.1). BEWUSST kein eigenes
+       Brett und keine eigene Kopfzeile: die Anschlagtafel hat seit Welle 15
+       (zwei Zeilen mehr für Notsud und Kerbholz) nur noch knapp Platz, und
+       ein drittes eigenes Fach hätte die Kaufreihe darunter — mit
+       `fuhre:kauf:rohstoff`, dem einzigen hier von der kundigen Linie
+       benutzten Knopf — aus dem sichtbaren Bereich gedrückt (gemessen: mit
+       eigenem Fach fand die suchende Hand den Lohnbrau-Knopf nur 1× in 220
+       Wochen, weil er ab dem zweiten Braujahr regelmäßig aus dem Ausschnitt
+       lief). Stattdessen ein weiterer Knopf in DERSELBEN, bereits
+       umbrechenden Kaufreihe — dieselbe Fläche, kein Fach mehr. */
+    var lb = lohnbrauDef();
+    if (lb) {
+      var lbAus = !lohnbrauVerfuegbar();
+      var lbGrund = Z.budget < lb.tage ? (e.budget ? e.budget.name : 'Brautage') + ' verbraucht'
+        : (Z.lohnbrauWoche >= (lb.wochenMax || 1) ? 'Der Fronhof hat diese Woche schon abgeholt' : '');
+      kauf.appendChild(B.knopf({
+        /* Kurz gehalten wie die drei Kaufknoepfe daneben ("Grut vom
+           Grutherrn · +40" u.ae.) — die volle Erklaerung steht im Titel,
+           nicht am Knopf: die Kaufreihe ist die knappste Zeile der Tafel. */
+        text: lb.kurz + ' · ' + lb.tage + (lb.tage === 1 ? ' Brautag' : ' Brautage'),
+        zug: 'fuhre:lohnbrau', klasse: 'fu-klein fu-lohnbrau-knopf',
+        preis: lohnbrauLohn(),
+        aus: lbAus,
+        titel: lb.satz + ' Kein Ungeld, bar auf die Hand.' + (lbGrund ? ' (' + lbGrund + ')' : ''),
+        tu: function () { lohnbraue(); }
+      }));
+    }
+
     b.appendChild(kauf);
     fach.appendChild(b);
   }

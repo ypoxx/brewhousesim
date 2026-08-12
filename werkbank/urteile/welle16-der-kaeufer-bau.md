@@ -53,6 +53,27 @@ Braujahre) — kein neuer, unbekannter Ort.
 `node --check` auf beiden JS-Dateien fehlerfrei; `FUHRE_DATEN.epochen[1].lohnbrau`
 lädt sauber.
 
+## Selbst gefundener Fehler: eigenes Fach hat den Kauf-Knopf verdrängt
+
+Erste Fassung baute ein eigenes `.fu-lohnbrau`-Fach (Kopf + Zeile + Knopf,
+wie der Notsud). Testlauf `e1-nachher-tune1` (220 Wochen, Hafen 8942, alte
+Fassung) zeigte: **`fuhre:lohnbrau` wurde nur 1× in 220 Wochen gegriffen**
+(Woche 5, +18 Pf) — obwohl er als Einnahme jede Ausgabe schlagen sollte und
+also so gut wie jede Woche hätte gegriffen werden müssen. Grund: die
+Anschlagtafel ist laut eigenem Kommentar in `fuhre-zusatz.css` bereits „knapp
+Platz" (40,4 % Bühnenhöhe); ein zusätzliches Fach zwischen Notsud und
+Kerbholz/Kaufreihe hat Letztere ab dem zweiten Braujahr regelmäßig aus dem
+sichtbaren Ausschnitt gedrückt (`.fu-brett { overflow:hidden }`, feste
+Prozenthöhe) — **genau das Muster, vor dem `orte.js`/„Was gegraben wird,
+bleibt" in `LIESMICH.md` warnt, nur diesmal am eigenen Stück.**
+
+**Behoben:** kein eigenes Fach mehr. Der Lohnbrauen-Knopf ist jetzt ein
+weiterer Knopf in der bereits vorhandenen, umbrechenden Kaufreihe
+(`.fu-kaeufe`, ganz unten in der Tafel, wo auch `fuhre:kauf:rohstoff` steht)
+— dieselbe Fläche, kein zusätzliches Fach. CSS auf eine einzige Randfarben-
+Regel reduziert; die Einnahmefarbe kommt ohnehin aus `grund.css`
+(`.knopf .preis.einnahme`, gesperrt, nicht angefasst).
+
 **Messstände:**
 - Hafen 8941 — `messstand.sh HEAD 8941` (346c2fe), eingefroren, für die
   Vorher-Zahlen oben.
