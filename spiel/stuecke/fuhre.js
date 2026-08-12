@@ -274,10 +274,30 @@
 
      Lohnbrauen umgeht die ganze Kette: der Fronhof bringt sein EIGENES
      Malz, holt sein Bier selbst ab und zahlt bar für die Pfanne und den
-     Tag — nicht für das Bier des Hauses. Es kostet einen Brautag aus
-     DERSELBEN Jahresverleihung (`Z.budget`), die auch die eigene Tafel
-     braucht: ein Sud für den Fronhof ist ein Sud weniger für den eigenen
-     Keller. Das ist die Abwägung, die R16.1 verlangt — kein Geldhahn.
+     Tag — nicht für das Bier des Hauses.
+
+     ERSTE FASSUNG zog den Brautag aus DERSELBEN Jahresverleihung
+     (`Z.budget`), die auch die eigene Tafel braucht. Gemessen (eigene Hand,
+     220 Wochen, `e1-nachher-1`): **1 Griff in 221 Wochen**, obwohl eine
+     Einnahme jede Ausgabe schlagen sollte. Befund: `Z.budget` ist ein
+     JAHRES-Topf (44, kein Wochenzuwachs) und die suchende Hand stellt die
+     Tafel früh im ersten Braujahr auf einen festen Plan (frei nur in den
+     ersten drei Wochen, danach kostet Umstellen — R15.2), der übers Jahr
+     mehr Brautage verbraucht, als der Topf hergibt; er steht deshalb die
+     meisten Wochen bei 0 — lange bevor der Fronhof je an der Reihe wäre.
+     `Z.budget` ist damit kein verlässlicher Nenner für ein Verb, das JEDE
+     Woche erreichbar sein soll.
+
+     Historisch trägt das sogar: der Rat verleiht Brautage, um zu steuern,
+     wie viel VOM BIER DES HAUSES auf den Markt kommt (dieselbe Sperre, die
+     das Ungeld begründet, s.u.). Ein Sud für den Fronhof geht nie auf den
+     Markt — er verlässt den Hof im Fass des Fronhofs. Der Rat sieht ihn
+     nicht, und er zählt nicht auf die Jahresverleihung.
+
+     Die echte Abwägung, die bleibt: `wochenMax` (der Fronhof hat selbst nur
+     ein Fuhrwerk) und die GREIFEN-Konkurrenz mit jedem anderen Preisschild
+     der Woche — kein Geldhahn, aber ein Weg, der nicht an der Tafel eines
+     anderen Zuges hängt.
 
      Gezeichnet wird er in der Anschlagtafel selbst (`zeichneTafel`) — genau
      dort, wo die suchende Hand seit Welle 15 nachweislich hinschaut, statt
@@ -297,14 +317,12 @@
     var def = lohnbrauDef();
     if (!def) return false;
     if (Z.lohnbrauWoche >= (def.wochenMax || 1)) return false;
-    if (Z.budget < def.tage) return false;
     return true;
   }
 
   function lohnbraue() {
     var def = lohnbrauDef();
     if (!def || !lohnbrauVerfuegbar()) return;
-    Z.budget -= def.tage;
     Z.lohnbrauWoche += 1;
     Z.lohnbrauNr += 1;
     var lohn = lohnbrauLohn();
@@ -3594,30 +3612,25 @@
       }
     });
 
-    /* LOHNBRAUEN — der zweite Erlösweg (R16.1). BEWUSST kein eigenes
-       Brett und keine eigene Kopfzeile: die Anschlagtafel hat seit Welle 15
-       (zwei Zeilen mehr für Notsud und Kerbholz) nur noch knapp Platz, und
-       ein drittes eigenes Fach hätte die Kaufreihe darunter — mit
-       `fuhre:kauf:rohstoff`, dem einzigen hier von der kundigen Linie
-       benutzten Knopf — aus dem sichtbaren Bereich gedrückt (gemessen: mit
-       eigenem Fach fand die suchende Hand den Lohnbrau-Knopf nur 1× in 220
-       Wochen, weil er ab dem zweiten Braujahr regelmäßig aus dem Ausschnitt
-       lief). Stattdessen ein weiterer Knopf in DERSELBEN, bereits
-       umbrechenden Kaufreihe — dieselbe Fläche, kein Fach mehr. */
+    /* LOHNBRAUEN — der zweite Erlösweg (R16.1). BEWUSST kein eigenes Fach
+       (s.o.) — ein weiterer Knopf in DERSELBEN, bereits umbrechenden
+       Kaufreihe wie `fuhre:kauf:rohstoff`. BEWUSST auch keine Bindung an
+       `Z.budget` (s. Kommentar bei `lohnbrauDef`) — nur der eigene
+       Wochendeckel hält ihn im Zaum. */
     var lb = lohnbrauDef();
     if (lb) {
       var lbAus = !lohnbrauVerfuegbar();
-      var lbGrund = Z.budget < lb.tage ? (e.budget ? e.budget.name : 'Brautage') + ' verbraucht'
-        : (Z.lohnbrauWoche >= (lb.wochenMax || 1) ? 'Der Fronhof hat diese Woche schon abgeholt' : '');
+      var lbGrund = lbAus ? 'Der Fronhof hat diese Woche schon abgeholt' : '';
       kauf.appendChild(B.knopf({
         /* Kurz gehalten wie die drei Kaufknoepfe daneben ("Grut vom
            Grutherrn · +40" u.ae.) — die volle Erklaerung steht im Titel,
            nicht am Knopf: die Kaufreihe ist die knappste Zeile der Tafel. */
-        text: lb.kurz + ' · ' + lb.tage + (lb.tage === 1 ? ' Brautag' : ' Brautage'),
+        text: lb.kurz + ' · ' + Z.lohnbrauWoche + '/' + (lb.wochenMax || 1) + ' diese Woche',
         zug: 'fuhre:lohnbrau', klasse: 'fu-klein fu-lohnbrau-knopf',
         preis: lohnbrauLohn(),
         aus: lbAus,
-        titel: lb.satz + ' Kein Ungeld, bar auf die Hand.' + (lbGrund ? ' (' + lbGrund + ')' : ''),
+        titel: lb.satz + ' Kein Ungeld, keine Brautage, bar auf die Hand.'
+             + (lbGrund ? ' (' + lbGrund + ')' : ''),
         tu: function () { lohnbraue(); }
       }));
     }

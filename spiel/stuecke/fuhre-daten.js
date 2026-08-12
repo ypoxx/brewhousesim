@@ -303,13 +303,20 @@ var FUHRE_DATEN = {
          das ausgeschenkt wird, fällt das Ungeld hier nicht an (Rat und
          Statur treffen den Ausschank, nicht die Werkstatt).
 
-         Er kostet trotzdem etwas Echtes: einen Brautag aus DERSELBEN
-         Jahresverleihung, die auch die eigene Tafel braucht — wer den
-         Fronhof bedient, braut in diesem Jahr anderswo einen Sud weniger.
-         Kein Geldhahn, ein Verb mit Preisschild und einer echten
-         Abwägung.
+         ERSTE FASSUNG zog dafür einen Brautag aus DERSELBEN
+         Jahresverleihung (`Z.budget`), die auch die eigene Tafel braucht.
+         Gemessen (eigene Hand, 220 Wochen): **1 Griff in 221 Wochen** — der
+         Jahres-Topf (44, kein Wochenzuwachs) war fast das ganze Jahr über
+         schon durch die normale Tafel aufgebraucht, lange bevor der
+         Fronhof je an der Reihe war. `Z.budget` regelt, wieviel VOM BIER
+         DES HAUSES auf den Markt kommt (derselbe Grund, aus dem hier kein
+         Ungeld anfällt) — ein Sud für den Fronhof geht nie auf den Markt,
+         der Rat sieht ihn nicht und zählt ihn nicht auf die Jahresverleihung.
+         Die echte Abwägung bleibt `wochenMax` (der Fronhof hat selbst nur
+         ein Fuhrwerk) und die Konkurrenz um denselben Wochenblick wie jedes
+         andere Preisschild — kein Geldhahn, aber unabhängig von der Tafel
+         eines anderen Zuges.
 
-         `tage`      Brautage, die ein Lohnsud aus Z.budget nimmt.
          `lohn`      Grundlohn, mit derselben Schere (laufPreis) wie jeder
                      andere laufende Posten — ein Lohn für Arbeit zieht mit
                      den Löhnen der Zeit, nicht mit dem eingefrorenen
@@ -319,7 +326,7 @@ var FUHRE_DATEN = {
          --------------------------------------------------------------- */
       lohnbrau: {
         name: 'Lohnbrauen für den Fronhof', kurz: 'Lohnbrauen',
-        wer: 'der Fronhof', tage: 1, lohn: 18, wochenMax: 2,
+        wer: 'der Fronhof', lohn: 18, wochenMax: 2,
         satz: 'Der Fronhof vor dem Tor bringt eigenes Malz und eigene Knechte — er '
             + 'kauft dem Haus nicht das Bier ab, er kauft ihm die Pfanne und den '
             + 'Braumeister für einen Tag ab. Kein Fass bleibt im Keller, kein Wagen, '
