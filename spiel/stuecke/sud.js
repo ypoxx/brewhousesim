@@ -2492,6 +2492,32 @@
     aufbau: function () {
       setzeEpoche();
 
+      /* WELLE 13: SPIELSTAND SICHERN
+         Der Eigenzustand Z wird nach localStorage geschrieben und beim
+         Neuladen wiederhergestellt. Vorbild: gegner.js Zeile 3548 ff. */
+      var FELDER = ['verfahren', 'fest', 'bottiche', 'zusatz', 'kaufNr', 'guete',
+        'anstichWoche', 'nr', 'rueck', 'brettZu', 'gestuft', 'gestuftGesamt',
+        'buch', 'jahrSude', 'jahrFass', 'jahrLegte', 'gesamtLegte', 'kalt',
+        'bestellt', 'gesamtSude', 'gesamtFass', 'epocheGesetzt'];
+      if (B.stand && B.stand.melde) {
+        B.stand.melde('sud', function () {
+          var d = {};
+          FELDER.forEach(function (f) { d[f] = Z[f]; });
+          return d;
+        });
+        var alt = B.stand.geladen ? B.stand.geladen('sud') : null;
+        if (alt) {
+          FELDER.forEach(function (f) {
+            if (alt[f] !== undefined) Z[f] = alt[f];
+          });
+        }
+        /* Nichts nachzubauen: Verfahren, Siegel und Bottiche halten die
+           Schluessel ihrer Optionen, nicht die Optionen selbst — `achseVon()`
+           und `gewaehlt()` schlagen in der stehenden Tabelle nach, die aus
+           den Daten kommt und keinen Spielstand braucht. Alles, was gesichert
+           wird, ist Zahl oder Wort. */
+      }
+
       /* Nach jedem Sud der FUHRE sofort ansaugen — dann ist der Lagerplatz
          schon wieder frei, ehe der naechste Sud ihn prueft. Ein Horcher auf
          das Protokoll reicht dafuer und fasst keine fremde Datei an. */

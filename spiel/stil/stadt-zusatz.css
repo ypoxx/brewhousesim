@@ -116,8 +116,15 @@
 
 .stadt-marke-ruht {
   opacity: 0;
-  transition: opacity 140ms ease-out;
+  /* DAZU, SEIT WELLE 17: `visibility: hidden` — derselbe Grund und dieselbe
+     Verzoegerungstechnik wie bei `.knopf.stadt-pflock .wort` oben: eine
+     ruhende, fremde Marke traegt bei Deckkraft 0 trotzdem noch Text, den
+     `sicht.mjs` als „durchscheinend" zaehlt, obwohl niemand ihn sieht,
+     solange der Zeiger nicht da ist. */
+  visibility: hidden;
+  transition: opacity 140ms ease-out, visibility 0s linear 140ms;
 }
+.stadt-marke-zeigt { visibility: visible; transition-delay: 0s; }
 
 /* Was unsichtbar ist, faengt keine Maus. Das braucht !important, weil
    grund.css '.ebene .greifbar' und die Stuecke selbst pointer-events mit

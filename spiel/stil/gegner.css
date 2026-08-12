@@ -514,7 +514,12 @@
 .gg-ohnegeld {
   font-family: var(--mono);
   font-size: calc(var(--s) * 14);
-  opacity: 0.78;
+  /* WAR `opacity: 0.78`. Der Grund ist seit Welle 17 die eigene, deckende
+     Flaeche des Bandes (`.gg-band`, oben) und nicht mehr die wechselnde
+     Platte — also ist die Deckkraft hier vorab in die Farbe gemischt:
+     #23262a (--gg-tinte) bei 0,78 auf rgb(213,216,216) ergibt #4a4d50.
+     Gleiches Bild, volle Deckkraft. */
+  color: #4a4d50;
 }
 .gg-bandluecke { flex: 1; }
 .gg-bandwaehrung {
@@ -574,7 +579,9 @@
   line-height: 1.25;
   padding: calc(var(--s) * 2) 0;
 }
-.gg-bandzeile .wann { font-family: var(--mono); font-size: calc(var(--s) * 15); opacity: 0.7;
+/* WAR `opacity: 0.7`. Derselbe Umbau wie bei `.gg-ohnegeld`: #23262a bei 0,7
+   auf rgb(213,216,216) (die Grundflaeche des Bandes) ergibt #585b5e. */
+.gg-bandzeile .wann { font-family: var(--mono); font-size: calc(var(--s) * 15); color: #585b5e;
                       min-width: calc(var(--s) * 92); flex: none; }
 .gg-bandzeile .was {
   flex: 1 1 auto;

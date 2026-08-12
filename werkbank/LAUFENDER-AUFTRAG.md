@@ -23,6 +23,59 @@
 > (das ist T0.1). Die Detailberichte liest die Aufsicht abschnittsweise bei
 > Bedarf; **Builder lesen sie nie** (Tokenregel 2).
 
+> ## ÜBERGABE — wo der Lauf am 9. August steht, und was gerade in der Luft ist
+>
+> *Falls die Sitzung endet oder der Kontext weg ist: das hier zuerst, dann
+> `../feinkonzept/UMSETZUNGSPLAN.md`, dann die Wellenbriefe.*
+>
+> **Ziel ist RC1** — vier Epochen, spielbar und veröffentlichbar. Entscheidung
+> des Auftraggebers vom 9. August. P3 (Bogen) und P4 (die Gegenwart) kommen
+> danach; wird das Budget knapp, wird **P4 ganz verschoben statt halb gebaut**.
+>
+> ### Was fertig ist
+> Phase 0 vollständig (bis auf die zurückgestellte Vorziehregel-Probe) ·
+> Welle 13 abgenommen · Welle 14 gemessen · Welle 15 abgenommen (Stück 1 ganz,
+> Stück 2 als Bedienarbeit) · Startseite, Anleitung, Intro mit Bildern und
+> Erzählerstimme, Impressum, Datenschutz · Spielstand-Migration auf FASSUNG 2.
+>
+> ### Was in der Luft ist — vier Agenten, Stand 9. August
+>
+> | Agent | Auftrag | Dateibesitz | offen |
+> |---|---|---|---|
+> | **DER KÄUFER** (W16) | zweiter Erlösweg 1350 | `fuhre*` | Deckung suchende Linie ≥ 1,0× (heute 0,186) |
+> | **DIE ZWEITE TÜR** (W16) | Festlegung aus der Woche | `preis*` | 3 von 3 statt 2 von 3 |
+> | **DIE SICHT** (W17) | Verdeckung/Transparenz/Kontrast | `stadt* gegner* name* erbe*` | 226 / 343 / 673 → 0 |
+> | **TS1 · DER SUD** | Spielstand des SUD | `sud*` | Wiederkehr ziffernweise |
+>
+> Die vier Dateibesitze schneiden sich nicht — das ist der Grund, warum sie
+> nebeneinander laufen dürfen. **`kern/**` gehört der Aufsicht.**
+>
+> ### Was als Nächstes zu tun ist
+> 1. Die vier Berichte abnehmen — **jede Zahl in den Rohdaten nachprüfen**,
+>    nicht aus dem Baubericht übernehmen. Das hat in dieser Sitzung dreimal
+>    einen falschen Schluss verhindert.
+> 2. **Bewegt sich ρ, ist nicht mehr zuzuordnen, wer es war** (Wirtschaft und
+>    Layout wurden gleichzeitig gebaut) → Trennprobe nach dem Muster
+>    `schuss/aufsicht/welle8-trennprobe/`.
+> 3. TS1 für `preis`, `fuhre`, `erbe`, `name`, `stadt` — je ein Haiku-Ticket
+>    nach dem GEGNER-Vorbild, sobald der jeweilige Besitz frei ist.
+> 4. **T2.5 Cross-Browser-Probe** (Firefox/WebKit) — die Startseite deklariert
+>    beide als *nicht geprüft*; das muss vor RC1 entweder gemessen oder so
+>    stehen bleiben.
+> 5. Die drei synthetisierten Stellen in `start/anleitung.html` gegen den
+>    Quelltext prüfen (im Baubericht `intro-bau.md` benannt).
+> 6. **Die deutsche Erzählerstimme nachreichen**, sobald ein gültiger
+>    `sk_…`-Schlüssel im Container liegt — der Weg ist gebaut, es fehlt nur der
+>    Wert. Zehn Minuten Arbeit, keine Welle.
+>
+> ### Die drei Sätze, die diese Sitzung teuer gelernt hat
+> * **Eine Zahl, die unter Nebenlast entstand, ist keine Zahl.** Jede Messung
+>   durch `messfenster.sh` — auch die der Aufsicht.
+> * **Eine Schwelle wird an der Hand verankert, die sie messen wird**, und die
+>   Vorher-Zahl steht mit derselben Hand daneben.
+> * **Ein Ausschnitt, der an der Kante einer Form abschneidet, ist keine
+>   Prüfung** — und ein Baubericht ist kein Ersatz fürs Hinsehen.
+
 > ## PHASE 0 IST DURCH — 9. August 2026
 >
 > Die Welle-13-Abnahme ist abgeschlossen und quittiert
