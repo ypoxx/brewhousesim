@@ -85,18 +85,35 @@ geprüft habe:**
 > den 1890ern."
 
 Für 1350 (Bild 1) galt die erste Zeile direkt: offener Kessel über offenem
-Feuer, keine Kuppel, kein Rohr — im ersten Wurf sauber. Für 1884 (Bild 2)
-zeigte der **erste** Wurf genau den in §4.5 benannten Modellreflex: ein
-kuppelförmiges Kupfergefäß mit Hals, das in eine Haube mündet — zu nah an
-„Destillierblase". Nachgebessert mit einer expliziten Formzeile („breite,
-flache Pfanne, KEIN Deckel auf der Pfanne selbst; die Haube hängt frei
-darüber, mit Luft dazwischen"), zweiter Wurf zeigt eine offene Pfanne mit
-sichtbarer Flüssigkeitsoberfläche unter einer freihängenden, separaten
-Dunsthaube — das entspricht `design/jury/votum-fach.md` F2 („Eine Sudpfanne
-von 1884 ist eine breite, flache Kupferpfanne unter einer Dunsthaube, kein
-Kolbenkörper"), nicht der Sperrliste selbst zitiert, aber dieselbe Regel in
-einer Schwesterdatei. Kein Emailschild in Bild 2 (ich habe ohnehin jede
-Beschriftung verboten). **Zur Bahn vor 1835**, die im Auftrag als harte
+Feuer, keine Kuppel, kein Rohr — im ersten Wurf sauber, von der Aufsicht
+bestätigt.
+
+**Für 1884 (Bild 2) hat es drei Würfe gebraucht, nicht zwei — und ich hatte
+den zweiten fälschlich für erledigt erklärt.** Der erste Wurf zeigte genau
+den in §4.5 benannten Modellreflex: ein kuppelförmiges Kupfergefäß mit Hals,
+das in eine Haube mündet. Ich habe nachgebessert („breite, flache Pfanne,
+KEIN Deckel auf der Pfanne selbst; die Haube hängt frei darüber, mit Luft
+dazwischen") und den zweiten Wurf als sauber gemeldet — geprüft an einem
+Ausschnitt, der genau an der Stelle endete, an der das Rohr der Dunsthaube
+nach oben abknickte. **Die Aufsicht hat sich das Bild angesehen, nicht nur
+meinen Bericht gelesen, und an einem weiter gezogenen Ausschnitt war die
+Silhouette eindeutig eine Destillierblase: der Haubentrichter plus das
+abknickende Rohr ergaben zusammen genau die verbotene Form — breit unten,
+zum Hals verengt, seitlich abknickend.** Mein „Fix" hatte der Pfanne im
+Türdurchgang eine offene Fläche gegeben, aber daneben eine neue Blase an die
+Wand gehängt, statt die verbotene Form ganz zu entfernen. Dritter Wurf mit
+einer Prompt-Fassung, die jede Haube, jedes Rohr und jede Verjüngung neben
+der Pfanne ausdrücklich verbietet (`--ref` wieder auf `01-1350.webp`, wie
+von der Aufsicht verlangt) — die Pfanne steht jetzt offen unter freiem
+Himmel im Türdurchgang, Dampf steigt frei auf, nichts hängt darüber. **Diesen
+dritten Wurf habe ich mit `Read` an der tatsächlich ausgelieferten
+`start/intro/02-1884.webp` selbst angesehen, nicht nur am Rohbild im
+Scratchpad**, bevor ich ihn hier vermelde. Kein Emailschild in Bild 2 (ich
+habe ohnehin jede Beschriftung verboten). **Lehre für mich:** ein Ausschnitt,
+der eine Form erst am Bildrand abschneidet, ist kein Beleg — die volle
+Silhouette gehört ins Bild, bevor man „geprüft" schreibt.
+
+**Zur Bahn vor 1835**, die im Auftrag als harte
 Grenze genannt war: eine wörtliche Zeile mit dieser Zahl **habe ich in
 `design/PRUEFUNG.md` nicht gefunden** — die 1835 steht als belegte
 Jahreszahl in `design/REFERENZEN.md:679` („Erstes Frachtgut auf deutscher
@@ -157,11 +174,12 @@ property="og:image">`), nie vom Browser selbst beim normalen Seitenaufruf.
 Kein neuer Request auf der Startseite durch diesen Auftrag.
 
 **Das Intro, nur wenn „Ansehen" gedrückt wird:** `intro/index.html`
-12.035 B + vier WebP progressiv nachgeladen (220+240+225+88 KB) = bis zu
-**≈ 771 KB**, wenn man bis zum Schluss schaut, weniger bei früherem Escape/
-Überspringen (nur das gerade gezeigte Bild ist geladen). **Ton kommt nur
-oben drauf, wenn er angeschaltet wird:** +285 KB für alle vier Clips
-(Vorgabe ist aus — 0 Byte Ton, bis jemand den Knopf drückt).
+12.035 B + vier WebP progressiv nachgeladen (220+215+220+86 KB, Bild 2 nach
+dem Neubau unten leicht kleiner) = bis zu **≈ 752 KB**, wenn man bis zum
+Schluss schaut, weniger bei früherem Escape/Überspringen (nur das gerade
+gezeigte Bild ist geladen). **Ton kommt nur oben drauf, wenn er
+angeschaltet wird:** +285 KB für alle vier Clips (Vorgabe ist aus — 0 Byte
+Ton, bis jemand den Knopf drückt).
 
 ## Wo ich eine Regel beschrieben habe, ohne sie wortwörtlich im Quelltext zu
 ## belegen — vollständige Liste
@@ -202,3 +220,20 @@ Bild 1, alle Bedienelemente, „keine Fehler auf der Seite". HTML-Tag-Balance
 und das eingebettete JS (`node --check`) für `start/index.html`,
 `start/intro/index.html` und `start/anleitung.html` geprüft, sonst nur
 gelesen.
+
+## Nachtrag — Gegenprobe der Aufsicht, 02-1884.webp neu erzeugt
+
+Die Aufsicht hat die Bilder selbst angesehen (nicht nur diesen Bericht) und
+in `02-1884.webp` die in §4.5 verbotene Destillierblasen-Silhouette
+gefunden — mein zweiter Wurf hatte sie nicht entfernt, nur eine offene
+Pfanne danebengestellt (Einzelheiten oben im Abschnitt „Bilder", jetzt
+korrigiert statt stillschweigend überschrieben). Dritter Wurf erzeugt mit
+einer Prompt-Fassung, die Haube, Rohr und jede Verjüngung neben der Pfanne
+ausdrücklich verbietet, wieder mit `--ref 01-1350.webp` für die
+Ortskontinuität. Das Ergebnis mit `Read` an der tatsächlich ausgelieferten
+Datei geprüft (nicht nur am Scratchpad-Rohbild), an einem Bildausschnitt,
+der die volle Form zeigt und nicht am Rand abschneidet — die Pfanne steht
+jetzt offen unter freiem Himmel, nichts hängt darüber. `start/index.html`,
+`start/anleitung.html` und `werkbank/auslieferung.sh` waren von dem Fund
+nicht betroffen und blieben unverändert; die Tonspuren wurden angewiesen,
+nicht angefasst zu werden, und wurden es auch nicht.
