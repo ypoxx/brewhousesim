@@ -123,6 +123,10 @@
     kaufNr: {},
     bannNr: 0,
     eisGemeldet: false,
+    /* LOHNBRAUEN — Welle 16, R16.1: der zweite Erlösweg in 1350.           */
+    lohnbrauNr: 0,       /* wie oft insgesamt schon gebraucht, fuers Buch    */
+    lohnbrauWoche: 0,    /* wie oft DIESE Woche schon — der Fronhof hat     */
+                          /* selbst nur einen Wagen                          */
     unterhaltExtra: 0,
     verladen: 0,         /* Fass, die dieses Braujahr wirklich hinausgingen */
     verladenVorjahr: 0,
@@ -257,6 +261,59 @@
   function pfannenKosten(s) {
     var f = budgetFeld();
     return f ? (s[f] || 1) : 1;
+  }
+
+  /* ----------------------------------------------------------------------
+     LOHNBRAUEN — DER ZWEITE WEG, GELD HEREINZUHOLEN. Welle 16, R16.1.
+
+     Der einzige geldbringende Zug im ganzen Spiel war bisher das Fass, das
+     den Hof verlässt — Keller, Wagen, Bannmeile, Wirt, und der Löwenanteil
+     erst zu Michaeli. Die Welle 15 hat Kapazität und Sichtbarkeit geheilt
+     (die Anschlagtafel wird jetzt gefunden), und die Kasse wuchs trotzdem
+     nur um vierzehn Pfennig, weil das Gefundene niemand kaufte.
+
+     Lohnbrauen umgeht die ganze Kette: der Fronhof bringt sein EIGENES
+     Malz, holt sein Bier selbst ab und zahlt bar für die Pfanne und den
+     Tag — nicht für das Bier des Hauses. Es kostet einen Brautag aus
+     DERSELBEN Jahresverleihung (`Z.budget`), die auch die eigene Tafel
+     braucht: ein Sud für den Fronhof ist ein Sud weniger für den eigenen
+     Keller. Das ist die Abwägung, die R16.1 verlangt — kein Geldhahn.
+
+     Gezeichnet wird er in der Anschlagtafel selbst (`zeichneTafel`) — genau
+     dort, wo die suchende Hand seit Welle 15 nachweislich hinschaut, statt
+     an einer neuen, unbekannten Stelle. */
+  function lohnbrauDef() { return ep().lohnbrau || null; }
+
+  /* Derselbe Faktor wie jeder laufende Posten (Löhne, Unterhalt): ein Lohn
+     für Arbeit zieht mit den Löhnen der Zeit, nicht mit dem vom Rat
+     eingefrorenen Bierpfennig — sonst würde der Fronhof über die Partie
+     hinweg real immer billiger, während alles andere teurer wird. */
+  function lohnbrauLohn() {
+    var def = lohnbrauDef();
+    return def ? laufPreis(def.lohn) : 0;
+  }
+
+  function lohnbrauVerfuegbar() {
+    var def = lohnbrauDef();
+    if (!def) return false;
+    if (Z.lohnbrauWoche >= (def.wochenMax || 1)) return false;
+    if (Z.budget < def.tage) return false;
+    return true;
+  }
+
+  function lohnbraue() {
+    var def = lohnbrauDef();
+    if (!def || !lohnbrauVerfuegbar()) return;
+    Z.budget -= def.tage;
+    Z.lohnbrauWoche += 1;
+    Z.lohnbrauNr += 1;
+    var lohn = lohnbrauLohn();
+    /* B.welt.nimm() statt einnahme(): das Ungeld trifft den Ausschank des
+       Hauses, nicht den Lohn für eine fremde Pfanne — der Rat sieht dieses
+       Bier nie, es verlässt den Hof im Fass des Fronhofs. */
+    B.welt.nimm(lohn, def.name + ' — ' + def.wer + ' zahlt bar für Pfanne und Tag', 'spieler');
+    B.ton.spiele('fuhre:kauf', { ort: 'hof' });
+    B.sende('zeichne', { grund: 'fuhre-lohnbrau' });
   }
 
   /* Der Notsud dieser Epoche: Kofent · Nachbier · Einfachbier · Handelsmarke */
@@ -819,6 +876,11 @@
     var lebt = haeuser().length > 0;
     var probiert = Z.probeDieseWoche > 0;
     Z.probeDieseWoche = 0;
+    /* Der Fronhof holt wöchentlich neu ab — was diese Woche geschöpft war,
+       ist es nächste Woche nicht mehr. Dieselbe Stelle wie beim Probefass
+       oben: einmal je echter Woche durchlaufen (woche: und die Georgi-Woche
+       im jahr:-Pfad), nie öfter. */
+    Z.lohnbrauWoche = 0;
 
     if (lebt) {
       if (Z.frist !== null) Z.frist = null;
@@ -2484,6 +2546,8 @@
     Z.vorige = null;
     Z.kaufNr = {};
     Z.bannNr = 0;
+    Z.lohnbrauNr = 0;
+    Z.lohnbrauWoche = 0;
     Z.plan = {};
     Z.planVorjahr = null;
     /* Ein neuer Glaeubiger, ein neues Holz: ueber einen Epochensprung von
@@ -3451,6 +3515,34 @@
        bei vier Sorten und schmalem Brett rollen, der Weg aus der leeren
        Kasse darf das nie. Er steht immer im Bild. */
     if (nz) b.appendChild(nz);
+
+    /* LOHNBRAUEN — der zweite Erlösweg (R16.1). An genau der Stelle, an der
+       die suchende Hand seit Welle 15 nachweislich hinsieht: derselben
+       Anschlagtafel, demselben Reiter, mit eigenem Preisschild — kein
+       neuer, unbekannter Ort. */
+    var lb = lohnbrauDef();
+    if (lb) {
+      var lbz = B.el('div', 'fu-lohnbrau' + (Z.lohnbrauWoche >= (lb.wochenMax || 1) ? ' voll' : ''));
+      var lbk = B.el('div', 'fu-lohnbrau-kopf');
+      lbk.appendChild(B.el('b', null, lb.name));
+      lbk.appendChild(B.el('span', 'fu-erloes', '+' + B.welt.geld(lohnbrauLohn()) + ' bar'));
+      lbz.appendChild(lbk);
+      var lbZeile = lb.tage + (lb.tage === 1 ? ' Brautag' : ' Brautage')
+        + ' · kein Ungeld · ' + Z.lohnbrauWoche + '/' + (lb.wochenMax || 1) + ' diese Woche';
+      lbz.appendChild(B.el('div', 'fu-lohnbrau-zeile', lbZeile));
+      var lbAus = !lohnbrauVerfuegbar();
+      var lbGrund = Z.budget < lb.tage ? (e.budget ? e.budget.name : 'Brautage') + ' verbraucht'
+        : (Z.lohnbrauWoche >= (lb.wochenMax || 1) ? 'Der Fronhof hat diese Woche schon abgeholt' : '');
+      lbz.appendChild(B.knopf({
+        text: lb.name + (Z.lohnbrauNr ? ' · ' + (Z.lohnbrauNr + 1) + '. Mal' : ''),
+        zug: 'fuhre:lohnbrau', klasse: 'fu-lohnbrau-knopf',
+        preis: lohnbrauLohn(),
+        aus: lbAus,
+        titel: lb.satz + (lbGrund ? ' (' + lbGrund + ')' : ''),
+        tu: function () { lohnbraue(); }
+      }));
+      b.appendChild(lbz);
+    }
 
     if (Z.sudMeldung) b.appendChild(B.el('div', 'fu-sudmeldung', Z.sudMeldung));
 

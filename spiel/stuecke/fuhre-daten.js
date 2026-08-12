@@ -283,7 +283,50 @@ var FUHRE_DATEN = {
               + 'Er kostet nur die Pfanne. Drei Fass Dünnes, in zwei Wochen sauer, Gesindebier: '
               + 'der Gasthof und das Kloster nehmen es nicht. In einer schlechten Woche das '
               + 'einzige Bier des Hauses.' }
-      ]
+      ],
+
+      /* --------------------------------------------------------------
+         LOHNBRAUEN — DER ZWEITE WEG, GELD HEREINZUHOLEN (Welle 16, R16.1).
+
+         Der einzige geldbringende Weg des Spiels war bisher das Fass, das
+         den Hof verlässt: Keller, Wagen, Bannmeile, Wirt, und am Ende des
+         Jahres — nicht sofort — ein Teil in bar. Wer mehr Braukapazität
+         fand (Welle 15), hatte damit noch keinen Käufer dafür.
+
+         Historisch gab es einen zweiten Weg, der diese ganze Kette
+         umgeht: Lohnbrauen. Ein Hof vor den Toren bringt sein EIGENES
+         Malz und holt sein Bier selbst ab — er kauft dem Haus nicht das
+         Bier ab, er kauft ihm die Pfanne und den Braumeister für einen
+         Tag ab. Kein Fass bleibt im Keller, kein Wagen, kein Bannbrief,
+         kein Wirt, der erst zu Michaeli zahlt: der Lohn liegt bar auf der
+         Hand, sobald der Sud steht. Und weil es kein Bier des Hauses ist,
+         das ausgeschenkt wird, fällt das Ungeld hier nicht an (Rat und
+         Statur treffen den Ausschank, nicht die Werkstatt).
+
+         Er kostet trotzdem etwas Echtes: einen Brautag aus DERSELBEN
+         Jahresverleihung, die auch die eigene Tafel braucht — wer den
+         Fronhof bedient, braut in diesem Jahr anderswo einen Sud weniger.
+         Kein Geldhahn, ein Verb mit Preisschild und einer echten
+         Abwägung.
+
+         `tage`      Brautage, die ein Lohnsud aus Z.budget nimmt.
+         `lohn`      Grundlohn, mit derselben Schere (laufPreis) wie jeder
+                     andere laufende Posten — ein Lohn für Arbeit zieht mit
+                     den Löhnen der Zeit, nicht mit dem eingefrorenen
+                     Bierpfennig.
+         `wochenMax` wie oft der Fronhof das je Woche abnimmt — er hat
+                     selbst nur einen Wagen und ein Fuhrwerk voll Malz.
+         --------------------------------------------------------------- */
+      lohnbrau: {
+        name: 'Lohnbrauen für den Fronhof', kurz: 'Lohnbrauen',
+        wer: 'der Fronhof', tage: 1, lohn: 18, wochenMax: 2,
+        satz: 'Der Fronhof vor dem Tor bringt eigenes Malz und eigene Knechte — er '
+            + 'kauft dem Haus nicht das Bier ab, er kauft ihm die Pfanne und den '
+            + 'Braumeister für einen Tag ab. Kein Fass bleibt im Keller, kein Wagen, '
+            + 'kein Bannbrief, kein Wirt, der erst zu Michaeli zahlt. Bar auf die Hand, '
+            + 'sobald der Sud steht — und weil es nicht das Bier des Hauses ist, das '
+            + 'ausgeschenkt wird, verlangt der Rat hier kein Ungeld.'
+      }
     },
 
     /* ------------------------------------------------------------------
