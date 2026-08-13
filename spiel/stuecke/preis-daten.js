@@ -314,8 +314,21 @@ var PREIS_DATEN = {
              Braujahren unter 1x. 0,55 ist ausdruecklich nicht genommen; dort
              schrumpft die Lade ueber die Partie auf ein Drittel (Tabelle
              oben), und das ist kein Gegengewicht mehr, sondern ein Ende. */
-      liegeFrei: 1.0,
-      liegeSatz: 0.70,
+      /* ZURUECKGEDREHT von der Aufsicht am 9. August. DER ANKER hatte hier
+         1600s Werte (1,0 / 0,70) eingesetzt, mit guter Begruendung: der zweite
+         Erloesweg hatte die Lade der suchenden Linie von einem Fuenftel auf mehr
+         als das Anderthalbfache eines Jahresumsatzes gehoben, also galt die
+         Bedingung, unter der 1600 den hoeheren Satz traegt.
+         GEMESSEN HAT ER DANN SELBST, was es kostet, und es zurueckgemeldet statt
+         verschwiegen: die Jahre unter 1x auf der kundigen Linie steigen von
+         0/14 auf 3/14. Die Latte erlaubt eines von sechs, also hoechstens 2 von
+         14 — sie reisst. Und der Deckungs-Median der suchenden Linie bewegt sich
+         dabei nicht (0,389 vorher wie nachher), weil der Nenner dieser Kennzahl
+         dem GEGNER gehoert und nicht diesem Stueck
+         (werkbank/urteile/der-nenner-gehoert-dem-gegner.md).
+         EINE AENDERUNG, DIE EINE LATTE KOSTET UND NICHTS EINBRINGT, GEHT ZURUECK. */
+      liegeFrei: 1.3,
+      liegeSatz: 0.45,
 
       /* Ausserordentliche Umlagen kamen haeufiger als alle sieben Jahre:
          Mauerbau, Landfriedensgeld, Brandschatzung, Siechenhaus — eine

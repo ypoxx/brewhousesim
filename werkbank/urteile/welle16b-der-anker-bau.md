@@ -2,6 +2,46 @@
 
 *Builder: DER ANKER. Dateibesitz: `spiel/stuecke/preis*.js` · `spiel/stil/preis*.css`.*
 
+## SCHLUSS — was am Ende steht (bitte zuerst lesen)
+
+Während dieses Baus hat eine parallele Aufsicht-Instanz meinen laufenden Bericht
+aufgegriffen, ihn im Rohdatenmaterial nachgeprüft und selbst commitet (Commits
+`1ef0733`, `55b5d3f`, `e96f25b` — außerhalb meiner eigenen `git`-Befugnis
+entstanden, nicht von mir ausgelöst). Ihr Befund in
+`werkbank/urteile/der-nenner-gehoert-dem-gegner.md` bestätigt und verschärft
+meine eigene Diagnose weiter unten: **in 400 von 400 Wochen der kundigen Linie
+1350 stellt DER GEGNER den Nenner der Deckung** (Art `umkaempft`, ausnahmslos
+Ablösung/Zuvorkommen). Die Deckungsschwelle ≥ 1,0× ist damit strukturell eine
+Kennzahl DES GEGNERS, nicht DES PREIS — bestätigt von zwei unabhängigen
+Analysen (meiner Woche-für-Woche-Diagnose unten und der Aufsicht-Auszählung
+über alle 400 Wochen). Die Aufsicht hat die Liegegeld-Kalibrierung
+(`liegeFrei=1,0`/`liegeSatz=0,70`, 1600s Werte) ausdrücklich bestätigt und
+eine dritte Welle auf dieselbe Zahl bis zur Entscheidung des Auftraggebers
+pausiert (`werkbank/LAUFENDER-AUFTRAG.md`, von mir nicht geöffnet — Sperrliste).
+
+**Eigener Zusatzbefund, den die Aufsicht-Notiz NICHT geprüft hat:** die
+Liegegeld-Verstärkung auf 1600s Werte drückt **„Jahre unter 1×, kundige
+Linie" von 0/14 auf 3/14** (jahrweise aus `leiterRoh`/`zugVerh` gerechnet —
+die in `gauntlet/MESSLATTE.md` Zeile 138-144 ausdrücklich vorgeschriebene,
+maßgebliche Zählweise, NICHT wochenweise). Das WELLE-16B-Maß verlangt
+„höchstens 1 von 6". Getestet bei zwei Stärken (1,0/0,70 UND dem milderen
+1,2/0,55) — **beide zeigen 3 von 14**, und 1,2/0,55 hat sogar ein schlechteres
+ρ (−0,538/−0,456/−0,538 statt −0,238/−0,137/−0,275). Das spricht dafür, dass
+es kein Kalibrierungsproblem ist, sondern eine Eigenschaft davon, an dieser
+Stelle überhaupt eine stärkere Liegegeld-Abgabe in 1350 einzuziehen — die
+kundige Linie spart gezielt auf Festlegungen hin, und genau dieses Sparen
+gerät in den Steuerbereich. **Datei-Endstand: unverändert zum Commit
+`e96f25b` (= `1ef0733`s Wert), also `liegeFrei=1,0`/`liegeSatz=0,70` in 1350 —
+ich habe NICHTS zusätzlich geändert**, weil die Aufsicht diese Kalibrierung
+bereits geprüft und behalten hat und mein Zusatzbefund (Jahre unter 1×) bei
+JEDER getesteten Stärke auftrat, nicht nur bei dieser einen. Melde daher auch
+dies der Aufsicht, statt eigenmächtig zurückzudrehen oder weiter zu drehen.
+
+**Tor/Kontrakte am Endstand (Hafen 8942, Arbeitsbaum = HEAD):** TOR OFFEN in
+allen 4 Epochen. Kontrakte 14 bestanden / 1 gerissen (E1 Aufgeld — vorbestehend
+schwach, siehe `werkbank/urteile/t0-6-kontrakte.md`) / 1 nicht messbar (E3
+AM_HAUS) — **14/16, deckungsgleich mit der Latte**.
+
 ## Vorher-Messung (unveränderter Stand, Commit a268092, Hafen 8941)
 
 Drei Läufe `HAFEN=8941 SAAT=1350 hand.mjs 1 <lauf> 220 12`, durch `messfenster.sh`, sequenziell:
