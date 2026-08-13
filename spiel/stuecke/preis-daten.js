@@ -261,7 +261,24 @@ var PREIS_DATEN = {
          Rueckkopplung, sondern ein Ende. In 1600 darf 0,70 stehen, weil dort
          das Anderthalbfache eines Jahresumsatzes bar in der Lade lag; hier
          liegt ein Fuenftel. Die Laeufe stehen im Bericht der Nacharbeit
-         (werkbank/urteile/welle4-rueckkopplung-nacharbeit.md). */
+         (werkbank/urteile/welle4-rueckkopplung-nacharbeit.md).
+
+         NACHGEFUEHRT IN WELLE 16b (DER ANKER), und die Voraussetzung von
+         damals gilt nicht mehr. Der zweite Erloesweg (Welle 16, DER KAEUFER)
+         hat die Lade der suchenden Linie von einem Fuenftel auf mehr als das
+         Anderthalbfache eines Jahresumsatzes gehoben — GEMESSEN: Kassenhoechst
+         126 -> 1.212 Pf ueber 220 Wochen (werkbank/urteile/welle16-kaeufer-
+         abnahme.md). Genau die Bedingung, unter der 1600 0,70 traegt, gilt
+         jetzt auch hier. Der ANSCHLAG (`rechneAnschlag`, `ausBarschaft`) haengt
+         an `Z.hoehe`, und `Z.hoehe` wird VOR der naechsten Schaetzung aus der
+         Barschaft NACH `liegegeld()` gebildet (`preis.js` Schritt 7c) — die
+         Abgabe zaehmt also nicht nur die Lade, sondern den ANKER selbst fuer
+         das ganze folgende Braujahr, waehrend die Kasse innerhalb des Jahres
+         (Bierverkauf, Kaeufer) unangetastet weiterwaechst. Genommen ist
+         `liegeFrei`/`liegeSatz` = 1600s Werte (1,0 / 0,70) — dieselbe
+         Mechanik, dieselbe Kalibrierung, weil dieselbe Bedingung jetzt gilt.
+         Der Boden auf dem Preis der billigsten Festlegung bleibt unangetastet:
+         wer auf die unwiderrufliche Wahl spart, wird nicht angeschlagen. */
       liegeName: 'Anschlag auf das Geld in der Lade',
       liegeSagt: 'Zu Michaeli gehen zwei Ratsherren durch die Häuser und schätzen, '
                + 'was einer bar liegen hat. Was durch das Haus geht und was im Haus '
@@ -297,8 +314,8 @@ var PREIS_DATEN = {
              Braujahren unter 1x. 0,55 ist ausdruecklich nicht genommen; dort
              schrumpft die Lade ueber die Partie auf ein Drittel (Tabelle
              oben), und das ist kein Gegengewicht mehr, sondern ein Ende. */
-      liegeFrei: 1.3,
-      liegeSatz: 0.45,
+      liegeFrei: 1.0,
+      liegeSatz: 0.70,
 
       /* Ausserordentliche Umlagen kamen haeufiger als alle sieben Jahre:
          Mauerbau, Landfriedensgeld, Brandschatzung, Siechenhaus — eine

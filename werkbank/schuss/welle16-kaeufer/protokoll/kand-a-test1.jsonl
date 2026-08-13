@@ -1,0 +1,689 @@
+{"t":2.5,"was":"start","url":"http://127.0.0.1:8942/spiel/?epoche=1&saat=1350&neu=1","fenster":"1600x900"}
+{"t":3.9,"was":"erkunden","zug":"gegner:oeffnen:adler","text":"Brauhaus zum Adler","jahr":1350,"woche":1,"kasse":112,"vorbei":false,"ursache":null}
+{"t":4.5,"was":"erkunden","zug":"gegner:hinhalten:faehrhaus","text":"Fass an den Wirt1 Fass statt Geld","jahr":1350,"woche":1,"kasse":112,"vorbei":false,"ursache":null}
+{"t":5.1,"was":"erkunden","zug":"gegner:hinhalten:obernberg","text":"Fass an den Wirt1 Fass statt Geld","jahr":1350,"woche":1,"kasse":112,"vorbei":false,"ursache":null}
+{"t":5.8,"was":"erkunden","zug":"stadt:marke:fuhre-muehle","text":"MUE","jahr":1350,"woche":1,"kasse":112,"vorbei":false,"ursache":null}
+{"t":6.3,"was":"erkunden","zug":"stadt:marke:fuhre-bruecke-unten","text":"BRU","jahr":1350,"woche":1,"kasse":112,"vorbei":false,"ursache":null}
+{"t":6.9,"was":"erkunden","zug":"stadt:marke:fuhre-bruecke-oben","text":"OBE","jahr":1350,"woche":1,"kasse":112,"vorbei":false,"ursache":null}
+{"t":7.6,"was":"erkunden","zug":"kern:chronik","text":"Chronik4","jahr":1350,"woche":1,"kasse":112,"vorbei":false,"ursache":null}
+{"t":8,"was":"erkunden","zug":"kern:protokoll","text":"Buch1","jahr":1350,"woche":1,"kasse":112,"vorbei":false,"ursache":null}
+{"t":8.7,"was":"erkunden","zug":"kern:anfangen","text":"Anfangen","jahr":1350,"woche":1,"kasse":112,"vorbei":false,"ursache":null}
+{"t":9.2,"was":"erkunden","zug":"klang:ton","text":"♪","jahr":1350,"woche":1,"kasse":112,"vorbei":false,"ursache":null}
+{"t":9.9,"was":"erkunden","zug":"stadt:bauhof","text":"BAUHOF5 offen · ab 13 Pf · 5 bezahlbar","jahr":1350,"woche":1,"kasse":112,"vorbei":false,"ursache":null}
+{"t":10.5,"was":"erkunden","zug":"stadt:reiter:gegner-amort-gg-band","text":"Ohne dich geschehen · 1 Zugzugeklappt","jahr":1350,"woche":1,"kasse":112,"vorbei":false,"ursache":null}
+{"t":11,"was":"erkunden","zug":"stadt:reiter:fuhre-fu-brett-fu-haeuser","text":"DIE HÄUSERwollen 15 · im Keller liegen 4 Fass","jahr":1350,"woche":1,"kasse":112,"vorbei":false,"ursache":null}
+{"t":11.5,"was":"erkunden","zug":"stadt:reiter:fuhre-fu-brett-fu-schiefer-fu-tafel","text":"ANSCHLAGTAFEL2/6 Brautage · 40 Grut · mit Kreide an der S","jahr":1350,"woche":1,"kasse":112,"vorbei":false,"ursache":null}
+{"t":11.9,"was":"erkunden","zug":"stadt:reiter:fuhre-fu-brett-fu-keller","text":"DER KELLER4 von 12 Fass · 4 reif","jahr":1350,"woche":1,"kasse":112,"vorbei":false,"ursache":null}
+{"t":12.4,"was":"erkunden","zug":"stadt:reiter:fuhre-fu-brett-fu-wagen","text":"OCHSENKARREN0 von 5 Fass · 0 von 4 Halten","jahr":1350,"woche":1,"kasse":112,"vorbei":false,"ursache":null}
+{"t":12.8,"was":"erkunden","zug":"stadt:reiter:sud-sud-brett","text":"DAS SUDHAUSzugeklappt","jahr":1350,"woche":1,"kasse":112,"vorbei":false,"ursache":null}
+{"t":13.2,"was":"erkunden","zug":"stadt:reiter:name-nm-band","text":"DER RUF DES HAUSESBierzeiger und Zunftzeichen","jahr":1350,"woche":1,"kasse":112,"vorbei":false,"ursache":null}
+{"t":13.6,"was":"erkunden","zug":"stadt:ortsmarken","text":"Ortsmarken7 auf dem Pflock","jahr":1350,"woche":1,"kasse":112,"vorbei":false,"ursache":null}
+{"t":14.4,"was":"erkunden","zug":"preis:tafel","text":"Michaelitafel 1350 · 5 Angebote — heute ist Michaeli","jahr":1350,"woche":1,"kasse":112,"vorbei":false,"ursache":null}
+{"t":14.8,"was":"erkunden","zug":"kern:chronik","text":"Chronik6","jahr":1350,"woche":1,"kasse":112,"vorbei":false,"ursache":null}
+{"t":15.2,"was":"erkunden","zug":"kern:protokoll","text":"Buch3","jahr":1350,"woche":1,"kasse":112,"vorbei":false,"ursache":null}
+{"t":15.7,"was":"erkunden","zug":"klang:ton","text":"—","jahr":1350,"woche":1,"kasse":112,"vorbei":false,"ursache":null}
+{"t":16.3,"was":"erkunden","zug":"stadt:reiter:gegner-amort-gg-band","text":"Ohne dich geschehen · 1 Zugliegt auf","jahr":1350,"woche":1,"kasse":112,"vorbei":false,"ursache":null}
+{"t":16.8,"was":"erkunden","zug":"stadt:reiter:fuhre-fu-brett-fu-haeuser","text":"DIE HÄUSERwollen 15 · im Keller liegen 2 Fass","jahr":1350,"woche":1,"kasse":112,"vorbei":false,"ursache":null}
+{"t":17.3,"was":"erkunden","zug":"stadt:reiter:fuhre-fu-brett-fu-keller","text":"DER KELLER2 von 12 Fass · 2 reif","jahr":1350,"woche":1,"kasse":112,"vorbei":false,"ursache":null}
+{"t":17.7,"was":"erkunden","zug":"stadt:ortsmarken","text":"Ortsmarken7 im Bild","jahr":1350,"woche":1,"kasse":112,"vorbei":false,"ursache":null}
+{"t":18.4,"was":"erkunden","zug":"stadt:alles-zuklappen","text":"Stadt zeigen","jahr":1350,"woche":1,"kasse":112,"vorbei":false,"ursache":null}
+{"t":19.2,"was":"erkunden","zug":"preis:tafel","text":"Michaelitafel bleibt offen — erst festlegen oder unten schließen","jahr":1350,"woche":1,"kasse":112,"vorbei":false,"ursache":null}
+{"t":19.7,"was":"erkunden","zug":"preis:chronik","text":"Chronik des Hauses · 0 Festlegungen · 0 von dieser Tafel","jahr":1350,"woche":1,"kasse":112,"vorbei":false,"ursache":null}
+{"t":20.3,"was":"erkunden","zug":"preis:nichts","text":"Nichts nehmen · das Geld bleibt liegen","jahr":1350,"woche":1,"kasse":112,"vorbei":false,"ursache":null}
+{"t":20.8,"was":"erkunden","zug":"kern:blatt-zu","text":"Schließen","jahr":1350,"woche":1,"kasse":112,"vorbei":false,"ursache":null}
+{"t":21.6,"was":"erkunden","zug":"preis:tafel","text":"Michaelitafel 1350 · 5 Angebote","jahr":1350,"woche":1,"kasse":112,"vorbei":false,"ursache":null}
+{"t":22.2,"was":"greifen","zug":"gegner:zuvorkommen:obernberg","text":"wirbt · noch 7 Wo.zuvorkommen 19 Pf","preis":-19,"kasseVor":112,"kasseNach":93,"jahr":1350,"woche":1,"vorbei":false,"ursache":null}
+{"t":22.8,"was":"greifen","zug":"preis:nimm:dach","text":"Nehmen−33 Pf","preis":-33,"kasseVor":93,"kasseNach":60,"jahr":1350,"woche":1,"vorbei":false,"ursache":null}
+{"t":23.4,"was":"greifen","zug":"preis:nimm:bottich","text":"Nehmen−42 Pf","preis":-42,"kasseVor":60,"kasseNach":18,"jahr":1350,"woche":1,"vorbei":false,"ursache":null}
+{"t":24.1,"was":"rundenende","aussenrunde":1,"jahr":1350,"woche":2,"kasse":9,"deckung":0.16071428571428573,"vorbei":false,"ursache":null,"wochenZahl":2}
+{"t":24.6,"was":"erkunden","zug":"sud:zettel-wechsel-frei2","text":"Wasser aus dem Ziehbrunnenlässt Starkbier zu","jahr":1350,"woche":2,"kasse":9,"vorbei":false,"ursache":null}
+{"t":25,"was":"erkunden","zug":"stadt:marke:gegner-bruecke-oben","text":"zurückgeholt — unser H","jahr":1350,"woche":2,"kasse":9,"vorbei":false,"ursache":null}
+{"t":25.5,"was":"erkunden","zug":"kern:chronik","text":"Chronik9","jahr":1350,"woche":2,"kasse":9,"vorbei":false,"ursache":null}
+{"t":25.9,"was":"erkunden","zug":"kern:protokoll","text":"Buch11","jahr":1350,"woche":2,"kasse":9,"vorbei":false,"ursache":null}
+{"t":26.4,"was":"erkunden","zug":"stadt:bauhof","text":"BAUHOF5 offen · ab 13 Pf · keiner bezahlbar","jahr":1350,"woche":2,"kasse":9,"vorbei":false,"ursache":null}
+{"t":27.1,"was":"erkunden","zug":"stadt:reiter:gegner-amort-gg-band","text":"Ohne dich geschehen · 2 Zügezugeklappt","jahr":1350,"woche":2,"kasse":9,"vorbei":false,"ursache":null}
+{"t":27.6,"was":"erkunden","zug":"stadt:reiter:fuhre-fu-brett-fu-haeuser","text":"DIE HÄUSERwollen 22 · im Keller liegen 6 Fass","jahr":1350,"woche":2,"kasse":9,"vorbei":false,"ursache":null}
+{"t":28.1,"was":"erkunden","zug":"stadt:reiter:fuhre-fu-brett-fu-schiefer-fu-tafel","text":"ANSCHLAGTAFEL2/6 Brautage · 37 Grut · mit Kreide an der S","jahr":1350,"woche":2,"kasse":9,"vorbei":false,"ursache":null}
+{"t":28.6,"was":"erkunden","zug":"stadt:reiter:fuhre-fu-brett-fu-keller","text":"DER KELLER6 von 12 Fass · 6 reif","jahr":1350,"woche":2,"kasse":9,"vorbei":false,"ursache":null}
+{"t":29,"was":"erkunden","zug":"stadt:ortsmarken","text":"Ortsmarken8 auf dem Pflock","jahr":1350,"woche":2,"kasse":9,"vorbei":false,"ursache":null}
+{"t":29.8,"was":"erkunden","zug":"preis:tafel","text":"Michaelitafel 1350 · 4 Angebote","jahr":1350,"woche":2,"kasse":9,"vorbei":false,"ursache":null}
+{"t":30.3,"was":"erkunden","zug":"kern:protokoll","text":"Buch13","jahr":1350,"woche":2,"kasse":9,"vorbei":false,"ursache":null}
+{"t":30.8,"was":"erkunden","zug":"stadt:reiter:gegner-amort-gg-band","text":"Ohne dich geschehen · 2 Zügeliegt auf","jahr":1350,"woche":2,"kasse":9,"vorbei":false,"ursache":null}
+{"t":31.2,"was":"erkunden","zug":"stadt:ortsmarken","text":"Ortsmarken8 im Bild","jahr":1350,"woche":2,"kasse":9,"vorbei":false,"ursache":null}
+{"t":32,"was":"erkunden","zug":"preis:tafel","text":"Michaelitafel schließen","jahr":1350,"woche":2,"kasse":9,"vorbei":false,"ursache":null}
+{"t":32.6,"was":"rundenende","aussenrunde":2,"jahr":1350,"woche":3,"kasse":0,"deckung":0,"vorbei":false,"ursache":null,"wochenZahl":3}
+{"t":33.1,"was":"erkunden","zug":"sud:zettel-wechsel-frei2","text":"Wasser aus dem Stadtbachlässt Starkbier zu","jahr":1350,"woche":3,"kasse":0,"vorbei":false,"ursache":null}
+{"t":33.9,"was":"erkunden","zug":"fuhre:ziel:bar","text":"So verabreden","jahr":1350,"woche":3,"kasse":0,"vorbei":false,"ursache":null}
+{"t":34.4,"was":"erkunden","zug":"fuhre:ziel:borg","text":"So verabreden","jahr":1350,"woche":3,"kasse":0,"vorbei":false,"ursache":null}
+{"t":34.9,"was":"erkunden","zug":"fuhre:laden:lindenhof","text":"+ 1 Fass","jahr":1350,"woche":3,"kasse":0,"vorbei":false,"ursache":null}
+{"t":35.4,"was":"erkunden","zug":"fuhre:laden:ochse","text":"+ 1 Fass","jahr":1350,"woche":3,"kasse":0,"vorbei":false,"ursache":null}
+{"t":35.9,"was":"erkunden","zug":"fuhre:laden:torschenke","text":"+ 1 Fass","jahr":1350,"woche":3,"kasse":0,"vorbei":false,"ursache":null}
+{"t":36.3,"was":"erkunden","zug":"fuhre:laden:pfarrhof","text":"+ 1 Fass","jahr":1350,"woche":3,"kasse":0,"vorbei":false,"ursache":null}
+{"t":36.8,"was":"erkunden","zug":"fuhre:tafel-auf:duenn","text":"+","jahr":1350,"woche":3,"kasse":0,"vorbei":false,"ursache":null}
+{"t":37.3,"was":"erkunden","zug":"fuhre:tafel-ab:grut","text":"− 1","jahr":1350,"woche":3,"kasse":0,"vorbei":false,"ursache":null}
+{"t":37.8,"was":"erkunden","zug":"fuhre:tafel-auf:grut","text":"+ 2","jahr":1350,"woche":3,"kasse":0,"vorbei":false,"ursache":null}
+{"t":38.2,"was":"erkunden","zug":"fuhre:tafel-auf:kofent","text":"+","jahr":1350,"woche":3,"kasse":0,"vorbei":false,"ursache":null}
+{"t":38.6,"was":"erkunden","zug":"kern:protokoll","text":"Buch20","jahr":1350,"woche":3,"kasse":0,"vorbei":false,"ursache":null}
+{"t":39.2,"was":"erkunden","zug":"stadt:reiter:gegner-amort-gg-band","text":"Ohne dich geschehen · 3 Zügezugeklappt","jahr":1350,"woche":3,"kasse":0,"vorbei":false,"ursache":null}
+{"t":39.7,"was":"erkunden","zug":"stadt:reiter:fuhre-fu-brett-fu-haeuser","text":"DIE HÄUSERwollen 28 · im Keller liegen 10 Fass","jahr":1350,"woche":3,"kasse":0,"vorbei":false,"ursache":null}
+{"t":40.2,"was":"erkunden","zug":"stadt:reiter:fuhre-fu-brett-fu-schiefer-fu-tafel","text":"ANSCHLAGTAFEL2/6 Brautage · 34 Grut · mit Kreide an der S","jahr":1350,"woche":3,"kasse":0,"vorbei":false,"ursache":null}
+{"t":40.6,"was":"erkunden","zug":"stadt:reiter:fuhre-fu-brett-fu-keller","text":"DER KELLER10 von 12 Fass · 10 reif","jahr":1350,"woche":3,"kasse":0,"vorbei":false,"ursache":null}
+{"t":41.2,"was":"erkunden","zug":"gegner:blatt","text":"Das Haus gegenüber","jahr":1350,"woche":3,"kasse":0,"vorbei":false,"ursache":null}
+{"t":41.7,"was":"erkunden","zug":"gegner:zeige:3","text":"zeigen","jahr":1350,"woche":3,"kasse":0,"vorbei":false,"ursache":null}
+{"t":42.1,"was":"erkunden","zug":"kern:chronik","text":"Chronik11","jahr":1350,"woche":3,"kasse":0,"vorbei":false,"ursache":null}
+{"t":42.6,"was":"erkunden","zug":"stadt:reiter:gegner-amort-gg-band","text":"Ohne dich geschehen · 3 Zügeliegt auf","jahr":1350,"woche":3,"kasse":0,"vorbei":false,"ursache":null}
+{"t":43.2,"was":"erkunden","zug":"stadt:reiter:fuhre-fu-brett-fu-haeuser","text":"DIE HÄUSERwollen 28 · im Keller liegen 6 Fass","jahr":1350,"woche":3,"kasse":0,"vorbei":false,"ursache":null}
+{"t":43.7,"was":"erkunden","zug":"stadt:reiter:fuhre-fu-brett-fu-schiefer-fu-tafel","text":"ANSCHLAGTAFEL3/6 Brautage · 34 Grut · mit Kreide an der S","jahr":1350,"woche":3,"kasse":0,"vorbei":false,"ursache":null}
+{"t":44.1,"was":"erkunden","zug":"stadt:reiter:fuhre-fu-brett-fu-wagen","text":"OCHSENKARREN4 von 5 Fass · 4 von 4 Halten","jahr":1350,"woche":3,"kasse":0,"vorbei":false,"ursache":null}
+{"t":44.6,"was":"erkunden","zug":"fuhre:ziel:ziel","text":"So verabreden","jahr":1350,"woche":3,"kasse":0,"vorbei":false,"ursache":null}
+{"t":45.2,"was":"erkunden","zug":"fuhre:leeren","text":"Karren leeren","jahr":1350,"woche":3,"kasse":0,"vorbei":false,"ursache":null}
+{"t":45.6,"was":"erkunden","zug":"kern:chronik","text":"Chronik12","jahr":1350,"woche":3,"kasse":0,"vorbei":false,"ursache":null}
+{"t":46.1,"was":"erkunden","zug":"fuhre:tafel-ab:duenn","text":"− 1","jahr":1350,"woche":3,"kasse":0,"vorbei":false,"ursache":null}
+{"t":46.6,"was":"erkunden","zug":"fuhre:tafel-auf:duenn","text":"+ 2","jahr":1350,"woche":3,"kasse":0,"vorbei":false,"ursache":null}
+{"t":47,"was":"erkunden","zug":"fuhre:tafel-ab:kofent","text":"− 1","jahr":1350,"woche":3,"kasse":0,"vorbei":false,"ursache":null}
+{"t":47.5,"was":"erkunden","zug":"fuhre:tafel-auf:kofent","text":"+ 2","jahr":1350,"woche":3,"kasse":0,"vorbei":false,"ursache":null}
+{"t":48.1,"was":"erkunden","zug":"fuhre:fuellen","text":"Nach Durst füllen","jahr":1350,"woche":3,"kasse":0,"vorbei":false,"ursache":null}
+{"t":48.6,"was":"erkunden","zug":"fuhre:abladen:lindenhof","text":"−","jahr":1350,"woche":3,"kasse":0,"vorbei":false,"ursache":null}
+{"t":49,"was":"erkunden","zug":"fuhre:abladen:ochse","text":"−","jahr":1350,"woche":3,"kasse":0,"vorbei":false,"ursache":null}
+{"t":49.5,"was":"erkunden","zug":"fuhre:abladen:torschenke","text":"−","jahr":1350,"woche":3,"kasse":0,"vorbei":false,"ursache":null}
+{"t":49.9,"was":"erkunden","zug":"fuhre:abladen:pfarrhof","text":"−","jahr":1350,"woche":3,"kasse":0,"vorbei":false,"ursache":null}
+{"t":50.4,"was":"erkunden","zug":"stadt:reiter:fuhre-fu-brett-fu-haeuser","text":"DIE HÄUSERwollen 28 · im Keller liegen 5 Fass","jahr":1350,"woche":3,"kasse":0,"vorbei":false,"ursache":null}
+{"t":51,"was":"erkunden","zug":"stadt:reiter:fuhre-fu-brett-fu-wagen","text":"OCHSENKARREN5 von 5 Fass · 4 von 4 Halten","jahr":1350,"woche":3,"kasse":0,"vorbei":false,"ursache":null}
+{"t":51.5,"was":"erkunden","zug":"stadt:reiter:fuhre-fu-brett-fu-haeuser","text":"DIE HÄUSERwollen 28 · im Keller liegen 9 Fass","jahr":1350,"woche":3,"kasse":0,"vorbei":false,"ursache":null}
+{"t":52,"was":"erkunden","zug":"stadt:reiter:fuhre-fu-brett-fu-wagen","text":"OCHSENKARREN1 von 5 Fass · 1 von 4 Halten","jahr":1350,"woche":3,"kasse":0,"vorbei":false,"ursache":null}
+{"t":52.6,"was":"greifen","zug":"fuhre:plan:durst","text":"Fahren: nach Durst · 5 Fass+38 Pf","preis":38,"kasseVor":0,"kasseNach":3,"jahr":1350,"woche":4,"vorbei":false,"ursache":null}
+{"t":53.1,"was":"greifen","zug":"fuhre:plan:mager","text":"Fahren: die mageren Häuser · 5 Fass+34 Pf","preis":34,"kasseVor":3,"kasseNach":5,"jahr":1350,"woche":5,"vorbei":false,"ursache":null}
+{"t":53.6,"was":"greifen","zug":"fuhre:lohnbrau","text":"Lohnbrauen · 0/2 diese Woche+18 Pf","preis":18,"kasseVor":5,"kasseNach":23,"jahr":1350,"woche":5,"vorbei":false,"ursache":null}
+{"t":54,"was":"rundenende","aussenrunde":3,"jahr":1350,"woche":6,"kasse":22,"deckung":0.7586206896551724,"vorbei":false,"ursache":null,"wochenZahl":6}
+{"t":54.5,"was":"erkunden","zug":"gegner:hinhalten:ochse","text":"Fass an den Wirt1 Fass statt Geld","jahr":1350,"woche":6,"kasse":22,"vorbei":false,"ursache":null}
+{"t":55,"was":"erkunden","zug":"gegner:hinhalten:muehlwirt","text":"Fass an den Wirt1 Fass statt Geld","jahr":1350,"woche":6,"kasse":22,"vorbei":false,"ursache":null}
+{"t":55.5,"was":"erkunden","zug":"fuhre:wie-vorige","text":"Wie vorige Woche","jahr":1350,"woche":6,"kasse":22,"vorbei":false,"ursache":null}
+{"t":56.3,"was":"erkunden","zug":"fuhre:sprung","text":"Weiter wie zuletzt · bis zu 6 Wochen","jahr":1350,"woche":12,"kasse":19,"vorbei":false,"ursache":null}
+{"t":56.7,"was":"erkunden","zug":"kern:chronik","text":"Chronik13","jahr":1350,"woche":12,"kasse":19,"vorbei":false,"ursache":null}
+{"t":57.1,"was":"erkunden","zug":"kern:protokoll","text":"Buch53","jahr":1350,"woche":12,"kasse":19,"vorbei":false,"ursache":null}
+{"t":57.7,"was":"erkunden","zug":"stadt:bauhof","text":"BAUHOF5 offen · ab 13 Pf · 4 bezahlbar","jahr":1350,"woche":12,"kasse":19,"vorbei":false,"ursache":null}
+{"t":58.4,"was":"erkunden","zug":"stadt:reiter:gegner-amort-gg-band","text":"Ohne dich geschehen · 6 Zügezugeklappt","jahr":1350,"woche":12,"kasse":19,"vorbei":false,"ursache":null}
+{"t":58.9,"was":"erkunden","zug":"stadt:reiter:fuhre-fu-brett-fu-haeuser","text":"DIE HÄUSERwollen 31 · im Keller liegen 10 Fass","jahr":1350,"woche":12,"kasse":19,"vorbei":false,"ursache":null}
+{"t":59.5,"was":"erkunden","zug":"stadt:reiter:fuhre-fu-brett-fu-schiefer-fu-tafel","text":"ANSCHLAGTAFEL3/6 Brautage · 30 Grut · mit Kreide an der S","jahr":1350,"woche":12,"kasse":19,"vorbei":false,"ursache":null}
+{"t":60,"was":"erkunden","zug":"gegner:hinhalten:brueckenwirt","text":"Fass an den Wirt1 Fass statt Geld","jahr":1350,"woche":12,"kasse":19,"vorbei":false,"ursache":null}
+{"t":60.5,"was":"erkunden","zug":"kern:chronik","text":"Chronik20","jahr":1350,"woche":12,"kasse":19,"vorbei":false,"ursache":null}
+{"t":60.9,"was":"erkunden","zug":"kern:protokoll","text":"Buch119","jahr":1350,"woche":12,"kasse":19,"vorbei":false,"ursache":null}
+{"t":61.5,"was":"erkunden","zug":"stadt:bauhof","text":"BAUHOF5 offen · ab 13 Pf · 3 bezahlbar","jahr":1350,"woche":12,"kasse":19,"vorbei":false,"ursache":null}
+{"t":62.2,"was":"erkunden","zug":"stadt:reiter:gegner-amort-gg-band","text":"Ohne dich geschehen · 11 Zügeliegt auf","jahr":1350,"woche":12,"kasse":19,"vorbei":false,"ursache":null}
+{"t":62.7,"was":"erkunden","zug":"stadt:reiter:fuhre-fu-brett-fu-haeuser","text":"DIE HÄUSERwollen 34 · im Keller liegen 12 Fass","jahr":1350,"woche":12,"kasse":19,"vorbei":false,"ursache":null}
+{"t":63.3,"was":"erkunden","zug":"stadt:reiter:fuhre-fu-brett-fu-schiefer-fu-tafel","text":"ANSCHLAGTAFEL3/6 Brautage · 26 Grut · mit Kreide an der S","jahr":1350,"woche":12,"kasse":19,"vorbei":false,"ursache":null}
+{"t":63.7,"was":"erkunden","zug":"stadt:reiter:fuhre-fu-brett-fu-keller","text":"DER KELLER12 von 12 Fass · 12 reif","jahr":1350,"woche":12,"kasse":19,"vorbei":false,"ursache":null}
+{"t":64.1,"was":"erkunden","zug":"kern:chronik","text":"Chronik21","jahr":1350,"woche":12,"kasse":19,"vorbei":false,"ursache":null}
+{"t":64.5,"was":"erkunden","zug":"kern:protokoll","text":"Buch120","jahr":1350,"woche":12,"kasse":19,"vorbei":false,"ursache":null}
+{"t":65,"was":"erkunden","zug":"stadt:reiter:fuhre-fu-brett-fu-haeuser","text":"DIE HÄUSERwollen 34 · im Keller liegen 11 Fass","jahr":1350,"woche":12,"kasse":19,"vorbei":false,"ursache":null}
+{"t":65.4,"was":"erkunden","zug":"stadt:reiter:fuhre-fu-brett-fu-keller","text":"DER KELLER11 von 12 Fass · 11 reif","jahr":1350,"woche":12,"kasse":19,"vorbei":false,"ursache":null}
+{"t":65.9,"was":"greifen","zug":"fuhre:plan:mager","text":"Fahren: die mageren Häuser · 2 Fass+4 Pf","preis":4,"kasseVor":19,"kasseNach":18,"jahr":1350,"woche":13,"vorbei":false,"ursache":null}
+{"t":66.4,"was":"rundenende","aussenrunde":4,"jahr":1350,"woche":14,"kasse":17,"deckung":0.3333333333333333,"vorbei":false,"ursache":null,"wochenZahl":9}
+{"t":66.9,"was":"erkunden","zug":"kern:chronik","text":"Chronik23","jahr":1350,"woche":14,"kasse":17,"vorbei":false,"ursache":null}
+{"t":67.3,"was":"erkunden","zug":"kern:protokoll","text":"Buch128","jahr":1350,"woche":14,"kasse":17,"vorbei":false,"ursache":null}
+{"t":67.9,"was":"erkunden","zug":"stadt:bauhof","text":"BAUHOF5 offen · ab 13 Pf · 2 bezahlbar","jahr":1350,"woche":14,"kasse":17,"vorbei":false,"ursache":null}
+{"t":68.5,"was":"erkunden","zug":"stadt:reiter:fuhre-fu-brett-fu-haeuser","text":"DIE HÄUSERwollen 33 · im Keller liegen 12 Fass","jahr":1350,"woche":14,"kasse":17,"vorbei":false,"ursache":null}
+{"t":69,"was":"erkunden","zug":"stadt:reiter:name-nm-band","text":"DER RUF DES HAUSESGENOMMEN von Der Rat bis 1353","jahr":1350,"woche":14,"kasse":17,"vorbei":false,"ursache":null}
+{"t":69.6,"was":"erkunden","zug":"name:aufgeldbuch","text":"Das Aufgeld nachrechnen","jahr":1350,"woche":14,"kasse":17,"vorbei":false,"ursache":null}
+{"t":70.1,"was":"erkunden","zug":"name:ruhe","text":"Das Zeichen verdecken","jahr":1350,"woche":14,"kasse":17,"vorbei":false,"ursache":null}
+{"t":70.6,"was":"erkunden","zug":"name:herumgehen","text":"Herumgehen und den Namen sagen","jahr":1350,"woche":14,"kasse":17,"vorbei":false,"ursache":null}
+{"t":71.1,"was":"erkunden","zug":"name:blatt","text":"Das Zeichen und das Register","jahr":1350,"woche":14,"kasse":17,"vorbei":false,"ursache":null}
+{"t":71.6,"was":"erkunden","zug":"stadt:reiter:gegner-amort-gg-band","text":"Ohne dich geschehen · 11 Zügezugeklappt","jahr":1350,"woche":14,"kasse":17,"vorbei":false,"ursache":null}
+{"t":72.1,"was":"erkunden","zug":"name:ruhe","text":"Das Zeichen wieder zeigen","jahr":1350,"woche":14,"kasse":17,"vorbei":false,"ursache":null}
+{"t":72.7,"was":"greifen","zug":"fuhre:plan:mager","text":"Fahren: die mageren Häuser · 3 Fass+6 Pf","preis":6,"kasseVor":17,"kasseNach":16,"jahr":1350,"woche":15,"vorbei":false,"ursache":null}
+{"t":73.2,"was":"greifen","zug":"fuhre:plan:mager","text":"Fahren: die mageren Häuser · 1 Fass+2 Pf","preis":2,"kasseVor":16,"kasseNach":8,"jahr":1350,"woche":16,"vorbei":false,"ursache":null}
+{"t":73.7,"was":"greifen","zug":"fuhre:plan:mager","text":"Fahren: die mageren Häuser · 1 Fass+1 Pf","preis":1,"kasseVor":8,"kasseNach":7,"jahr":1350,"woche":17,"vorbei":false,"ursache":null}
+{"t":74.3,"was":"rundenende","aussenrunde":5,"jahr":1350,"woche":18,"kasse":0,"deckung":0,"vorbei":false,"ursache":null,"wochenZahl":13}
+{"t":74.8,"was":"erkunden","zug":"gegner:hinhalten:lindenhof","text":"Fass an den Wirt1 Fass statt Geld","jahr":1350,"woche":18,"kasse":0,"vorbei":false,"ursache":null}
+{"t":75.3,"was":"erkunden","zug":"gegner:hinhalten:markt","text":"Fass an den Wirt1 Fass statt Geld","jahr":1350,"woche":18,"kasse":0,"vorbei":false,"ursache":null}
+{"t":75.7,"was":"erkunden","zug":"kern:chronik","text":"Chronik28","jahr":1350,"woche":18,"kasse":0,"vorbei":false,"ursache":null}
+{"t":76.1,"was":"erkunden","zug":"kern:protokoll","text":"Buch163","jahr":1350,"woche":18,"kasse":0,"vorbei":false,"ursache":null}
+{"t":76.6,"was":"erkunden","zug":"stadt:reiter:gegner-amort-gg-band","text":"Ohne dich geschehen · 14 Zügeliegt auf","jahr":1350,"woche":18,"kasse":0,"vorbei":false,"ursache":null}
+{"t":77.1,"was":"erkunden","zug":"stadt:reiter:fuhre-fu-brett-fu-schiefer-fu-tafel","text":"ANSCHLAGTAFEL3/6 Brautage · 21 Grut · mit Kreide an der S","jahr":1350,"woche":18,"kasse":0,"vorbei":false,"ursache":null}
+{"t":77.5,"was":"erkunden","zug":"kern:chronik","text":"Chronik30","jahr":1350,"woche":18,"kasse":0,"vorbei":false,"ursache":null}
+{"t":78,"was":"erkunden","zug":"kern:protokoll","text":"Buch165","jahr":1350,"woche":18,"kasse":0,"vorbei":false,"ursache":null}
+{"t":78.5,"was":"erkunden","zug":"stadt:reiter:gegner-amort-gg-band","text":"Ohne dich geschehen · 14 Zügezugeklappt","jahr":1350,"woche":18,"kasse":0,"vorbei":false,"ursache":null}
+{"t":78.9,"was":"erkunden","zug":"stadt:reiter:fuhre-fu-brett-fu-haeuser","text":"DIE HÄUSERwollen 34 · im Keller liegen 10 Fass","jahr":1350,"woche":18,"kasse":0,"vorbei":false,"ursache":null}
+{"t":79.5,"was":"greifen","zug":"fuhre:plan:mager","text":"Fahren: die mageren Häuser · 5 Fass+25 Pf","preis":25,"kasseVor":0,"kasseNach":0,"jahr":1350,"woche":19,"vorbei":false,"ursache":null}
+{"t":80,"was":"greifen","zug":"fuhre:plan:mager","text":"Fahren: die mageren Häuser · 3 Fass+20 Pf","preis":20,"kasseVor":0,"kasseNach":22,"jahr":1350,"woche":20,"vorbei":false,"ursache":null}
+{"t":80.5,"was":"greifen","zug":"fuhre:plan:mager","text":"Fahren: die mageren Häuser · 1 Fass+3 Pf","preis":3,"kasseVor":22,"kasseNach":22,"jahr":1350,"woche":21,"vorbei":false,"ursache":null}
+{"t":81,"was":"rundenende","aussenrunde":6,"jahr":1350,"woche":22,"kasse":21,"deckung":0.65625,"vorbei":false,"ursache":null,"wochenZahl":17}
+{"t":81.5,"was":"erkunden","zug":"gegner:zeige:18","text":"zeigen","jahr":1350,"woche":22,"kasse":21,"vorbei":false,"ursache":null}
+{"t":81.9,"was":"erkunden","zug":"kern:chronik","text":"Chronik31","jahr":1350,"woche":22,"kasse":21,"vorbei":false,"ursache":null}
+{"t":82.4,"was":"erkunden","zug":"kern:protokoll","text":"Buch200","jahr":1350,"woche":22,"kasse":21,"vorbei":false,"ursache":null}
+{"t":82.9,"was":"erkunden","zug":"stadt:reiter:gegner-amort-gg-band","text":"Ohne dich geschehen · 18 Zügeliegt auf","jahr":1350,"woche":22,"kasse":21,"vorbei":false,"ursache":null}
+{"t":83.4,"was":"erkunden","zug":"stadt:reiter:fuhre-fu-brett-fu-haeuser","text":"DIE HÄUSERwollen 32 · im Keller liegen 10 Fass","jahr":1350,"woche":22,"kasse":21,"vorbei":false,"ursache":null}
+{"t":83.9,"was":"erkunden","zug":"stadt:reiter:fuhre-fu-brett-fu-schiefer-fu-tafel","text":"ANSCHLAGTAFEL3/6 Brautage · 17 Grut · mit Kreide an der S","jahr":1350,"woche":22,"kasse":21,"vorbei":false,"ursache":null}
+{"t":84.4,"was":"erkunden","zug":"stadt:reiter:gegner-amort-gg-band","text":"Ohne dich geschehen · 18 Zügezugeklappt","jahr":1350,"woche":22,"kasse":21,"vorbei":false,"ursache":null}
+{"t":84.9,"was":"greifen","zug":"fuhre:plan:mager","text":"Fahren: die mageren Häuser · 4 Fass+14 Pf","preis":14,"kasseVor":21,"kasseNach":17,"jahr":1350,"woche":23,"vorbei":false,"ursache":null}
+{"t":85.4,"was":"greifen","zug":"fuhre:plan:mager","text":"Fahren: die mageren Häuser · 1 Fass+3 Pf","preis":3,"kasseVor":17,"kasseNach":17,"jahr":1350,"woche":24,"vorbei":false,"ursache":null}
+{"t":85.9,"was":"greifen","zug":"fuhre:plan:mager","text":"Fahren: die mageren Häuser · 1 Fass+4 Pf","preis":4,"kasseVor":17,"kasseNach":10,"jahr":1350,"woche":25,"vorbei":false,"ursache":null}
+{"t":86.5,"was":"rundenende","aussenrunde":7,"jahr":1350,"woche":26,"kasse":9,"deckung":0.2571428571428571,"vorbei":false,"ursache":null,"wochenZahl":21}
+{"t":87,"was":"erkunden","zug":"gegner:abloesen:markt","text":"MKT · RATnicht ablösbar","jahr":1350,"woche":26,"kasse":9,"vorbei":false,"ursache":null}
+{"t":87.5,"was":"erkunden","zug":"gegner:zeige:22","text":"zeigen","jahr":1350,"woche":26,"kasse":9,"vorbei":false,"ursache":null}
+{"t":87.9,"was":"erkunden","zug":"stadt:marke:gegner-muehle","text":"frei geworden","jahr":1350,"woche":26,"kasse":9,"vorbei":false,"ursache":null}
+{"t":88.4,"was":"erkunden","zug":"stadt:marke:gegner-fluss","text":"frei geworden","jahr":1350,"woche":26,"kasse":9,"vorbei":false,"ursache":null}
+{"t":89.1,"was":"erkunden","zug":"fuhre:sprung","text":"Weiter wie zuletzt · bis zu 4 Wochen","jahr":1350,"woche":30,"kasse":19,"vorbei":false,"ursache":null}
+{"t":89.5,"was":"erkunden","zug":"kern:chronik","text":"Chronik34","jahr":1350,"woche":30,"kasse":19,"vorbei":false,"ursache":null}
+{"t":89.9,"was":"erkunden","zug":"kern:protokoll","text":"Buch228","jahr":1350,"woche":30,"kasse":19,"vorbei":false,"ursache":null}
+{"t":90.4,"was":"erkunden","zug":"stadt:reiter:gegner-amort-gg-band","text":"Ohne dich geschehen · 22 Zügeliegt auf","jahr":1350,"woche":30,"kasse":19,"vorbei":false,"ursache":null}
+{"t":91,"was":"erkunden","zug":"stadt:reiter:fuhre-fu-brett-fu-haeuser","text":"DIE HÄUSERwollen 33 · im Keller liegen 10 Fass","jahr":1350,"woche":30,"kasse":19,"vorbei":false,"ursache":null}
+{"t":91.4,"was":"erkunden","zug":"stadt:reiter:fuhre-fu-brett-fu-schiefer-fu-tafel","text":"ANSCHLAGTAFEL3/6 Brautage · 13 Grut · mit Kreide an der S","jahr":1350,"woche":30,"kasse":19,"vorbei":false,"ursache":null}
+{"t":91.9,"was":"erkunden","zug":"stadt:ortsmarken","text":"Ortsmarken9 auf dem Pflock","jahr":1350,"woche":30,"kasse":19,"vorbei":false,"ursache":null}
+{"t":92.3,"was":"erkunden","zug":"kern:chronik","text":"Chronik36","jahr":1350,"woche":30,"kasse":19,"vorbei":false,"ursache":null}
+{"t":92.7,"was":"erkunden","zug":"kern:protokoll","text":"Buch256","jahr":1350,"woche":30,"kasse":19,"vorbei":false,"ursache":null}
+{"t":93.2,"was":"erkunden","zug":"stadt:reiter:gegner-amort-gg-band","text":"Ohne dich geschehen · 24 Zügezugeklappt","jahr":1350,"woche":30,"kasse":19,"vorbei":false,"ursache":null}
+{"t":93.6,"was":"erkunden","zug":"stadt:reiter:fuhre-fu-brett-fu-haeuser","text":"DIE HÄUSERwollen 36 · im Keller liegen 12 Fass","jahr":1350,"woche":30,"kasse":19,"vorbei":false,"ursache":null}
+{"t":94,"was":"erkunden","zug":"stadt:reiter:fuhre-fu-brett-fu-schiefer-fu-tafel","text":"ANSCHLAGTAFEL3/6 Brautage · 8 Grut · mit Kreide an der Su","jahr":1350,"woche":30,"kasse":19,"vorbei":false,"ursache":null}
+{"t":94.6,"was":"erkunden","zug":"gegner:zeige:24","text":"zeigen","jahr":1350,"woche":30,"kasse":19,"vorbei":false,"ursache":null}
+{"t":95.1,"was":"erkunden","zug":"stadt:reiter:gegner-amort-gg-band","text":"Ohne dich geschehen · 24 Zügeliegt auf","jahr":1350,"woche":30,"kasse":19,"vorbei":false,"ursache":null}
+{"t":95.5,"was":"erkunden","zug":"stadt:marke:gegner-kirche","text":"frei geworden","jahr":1350,"woche":30,"kasse":19,"vorbei":false,"ursache":null}
+{"t":96.8,"was":"greifen","zug":"fuhre:plan:mager","text":"Fahren: die mageren Häuser · 5 Fass+21 Pf","preis":21,"kasseVor":19,"kasseNach":48,"jahr":1351,"woche":1,"vorbei":false,"ursache":null}
+{"t":97.8,"was":"greifen","zug":"gegner:zukaufen:brueckenwirt","text":"lieber zukaufen1 Fass · 12 Pf","preis":-12,"kasseVor":48,"kasseNach":36,"jahr":1351,"woche":1,"vorbei":false,"ursache":null}
+{"t":98.4,"was":"rundenende","aussenrunde":8,"jahr":1351,"woche":2,"kasse":19,"deckung":0.8636363636363636,"vorbei":false,"ursache":null,"wochenZahl":24}
+{"t":98.9,"was":"erkunden","zug":"kern:chronik","text":"Chronik41","jahr":1351,"woche":2,"kasse":19,"vorbei":false,"ursache":null}
+{"t":99.3,"was":"erkunden","zug":"kern:protokoll","text":"Buch294","jahr":1351,"woche":2,"kasse":19,"vorbei":false,"ursache":null}
+{"t":99.8,"was":"erkunden","zug":"stadt:reiter:gegner-amort-gg-band","text":"Ohne dich geschehen · 25 Zügezugeklappt","jahr":1351,"woche":2,"kasse":19,"vorbei":false,"ursache":null}
+{"t":100.4,"was":"erkunden","zug":"stadt:reiter:fuhre-fu-brett-fu-schiefer-fu-tafel","text":"ANSCHLAGTAFEL3/6 Brautage · 3 Grut · mit Kreide an der Su","jahr":1351,"woche":2,"kasse":19,"vorbei":false,"ursache":null}
+{"t":101.2,"was":"erkunden","zug":"preis:tafel","text":"Michaelitafel 1351 · 5 Angebote","jahr":1351,"woche":2,"kasse":19,"vorbei":false,"ursache":null}
+{"t":101.8,"was":"erkunden","zug":"stadt:reiter:gegner-amort-gg-band","text":"Ohne dich geschehen · 25 Zügeliegt auf","jahr":1351,"woche":2,"kasse":19,"vorbei":false,"ursache":null}
+{"t":102.4,"was":"greifen","zug":"fuhre:plan:mager","text":"Fahren: die mageren Häuser · 5 Fass+28 Pf","preis":28,"kasseVor":19,"kasseNach":16,"jahr":1351,"woche":3,"vorbei":false,"ursache":null}
+{"t":102.9,"was":"greifen","zug":"fuhre:plan:mager","text":"Fahren: die mageren Häuser · 4 Fass+23 Pf","preis":23,"kasseVor":16,"kasseNach":23,"jahr":1351,"woche":4,"vorbei":false,"ursache":null}
+{"t":103.4,"was":"greifen","zug":"fuhre:plan:mager","text":"Fahren: die mageren Häuser · 1 Fass+1 Pf","preis":1,"kasseVor":23,"kasseNach":20,"jahr":1351,"woche":5,"vorbei":false,"ursache":null}
+{"t":103.9,"was":"rundenende","aussenrunde":9,"jahr":1351,"woche":6,"kasse":19,"deckung":0.5277777777777778,"vorbei":false,"ursache":null,"wochenZahl":28}
+{"t":104.3,"was":"erkunden","zug":"kern:chronik","text":"Chronik42","jahr":1351,"woche":6,"kasse":19,"vorbei":false,"ursache":null}
+{"t":104.7,"was":"erkunden","zug":"kern:protokoll","text":"Buch326","jahr":1351,"woche":6,"kasse":19,"vorbei":false,"ursache":null}
+{"t":105.3,"was":"erkunden","zug":"stadt:reiter:gegner-amort-gg-band","text":"Ohne dich geschehen · 27 Zügezugeklappt","jahr":1351,"woche":6,"kasse":19,"vorbei":false,"ursache":null}
+{"t":105.8,"was":"erkunden","zug":"stadt:reiter:fuhre-fu-brett-fu-haeuser","text":"DIE HÄUSERwollen 31 · im Keller liegen 11 Fass","jahr":1351,"woche":6,"kasse":19,"vorbei":false,"ursache":null}
+{"t":106.4,"was":"erkunden","zug":"stadt:reiter:fuhre-fu-brett-fu-schiefer-fu-tafel","text":"ANSCHLAGTAFEL3/6 Brautage · 1 Grut · mit Kreide an der Su","jahr":1351,"woche":6,"kasse":19,"vorbei":false,"ursache":null}
+{"t":106.9,"was":"erkunden","zug":"gegner:zeige:27","text":"zeigen","jahr":1351,"woche":6,"kasse":19,"vorbei":false,"ursache":null}
+{"t":107.5,"was":"erkunden","zug":"stadt:reiter:gegner-amort-gg-band","text":"Ohne dich geschehen · 27 Zügeliegt auf","jahr":1351,"woche":6,"kasse":19,"vorbei":false,"ursache":null}
+{"t":108,"was":"greifen","zug":"fuhre:plan:mager","text":"Fahren: die mageren Häuser · 5 Fass+19 Pf","preis":19,"kasseVor":19,"kasseNach":21,"jahr":1351,"woche":7,"vorbei":false,"ursache":null}
+{"t":108.5,"was":"greifen","zug":"erbe:uebergabe:leibgeding","text":"Leibgeding−6 Pf","preis":-6,"kasseVor":21,"kasseNach":21,"jahr":1351,"woche":7,"vorbei":false,"ursache":null}
+{"t":108.9,"was":"greifen","zug":"erbe:uebergabe:leibgeding","text":"Leibgeding−9 Pf","preis":-9,"kasseVor":21,"kasseNach":21,"jahr":1351,"woche":7,"vorbei":false,"ursache":null}
+{"t":109.4,"was":"rundenende","aussenrunde":10,"jahr":1351,"woche":8,"kasse":20,"deckung":0.5555555555555556,"vorbei":false,"ursache":null,"wochenZahl":30}
+{"t":109.9,"was":"erkunden","zug":"kern:chronik","text":"Chronik48","jahr":1351,"woche":8,"kasse":20,"vorbei":false,"ursache":null}
+{"t":110.3,"was":"erkunden","zug":"kern:protokoll","text":"Buch339","jahr":1351,"woche":8,"kasse":20,"vorbei":false,"ursache":null}
+{"t":110.8,"was":"erkunden","zug":"stadt:reiter:fuhre-fu-brett-fu-haeuser","text":"DIE HÄUSERwollen 27 · im Keller liegen 9 Fass","jahr":1351,"woche":8,"kasse":20,"vorbei":false,"ursache":null}
+{"t":111.3,"was":"erkunden","zug":"stadt:reiter:fuhre-fu-brett-fu-keller","text":"DER KELLER9 von 12 Fass · 9 reif","jahr":1351,"woche":8,"kasse":20,"vorbei":false,"ursache":null}
+{"t":112,"was":"erkunden","zug":"preis:chronik-auf","text":"Chronik des Hauses · 2 Festlegungen · 0 von dieser Tafel · 1 Bauten stehen","jahr":1351,"woche":8,"kasse":20,"vorbei":false,"ursache":null}
+{"t":112.6,"was":"erkunden","zug":"preis:chronik","text":"Zurück zur Tafel","jahr":1351,"woche":8,"kasse":20,"vorbei":false,"ursache":null}
+{"t":113.1,"was":"erkunden","zug":"preis:chronik","text":"Chronik des Hauses · 2 Festlegungen · 0 von dieser Tafel","jahr":1351,"woche":8,"kasse":20,"vorbei":false,"ursache":null}
+{"t":113.7,"was":"rundenende","aussenrunde":11,"jahr":1351,"woche":9,"kasse":19,"deckung":0.5277777777777778,"vorbei":false,"ursache":null,"wochenZahl":31}
+{"t":114.1,"was":"erkunden","zug":"kern:protokoll","text":"Buch341","jahr":1351,"woche":9,"kasse":19,"vorbei":false,"ursache":null}
+{"t":114.6,"was":"erkunden","zug":"stadt:reiter:fuhre-fu-brett-fu-haeuser","text":"DIE HÄUSERwollen 31 · im Keller liegen 12 Fass","jahr":1351,"woche":9,"kasse":19,"vorbei":false,"ursache":null}
+{"t":115.1,"was":"erkunden","zug":"gegner:hinhalten:pfarrhof","text":"Fass an den Wirt1 Fass statt Geld","jahr":1351,"woche":9,"kasse":19,"vorbei":false,"ursache":null}
+{"t":115.5,"was":"erkunden","zug":"kern:chronik","text":"Chronik49","jahr":1351,"woche":9,"kasse":19,"vorbei":false,"ursache":null}
+{"t":116,"was":"erkunden","zug":"kern:protokoll","text":"Buch342","jahr":1351,"woche":9,"kasse":19,"vorbei":false,"ursache":null}
+{"t":116.5,"was":"greifen","zug":"fuhre:plan:mager","text":"Fahren: die mageren Häuser · 2 Fass+4 Pf","preis":4,"kasseVor":19,"kasseNach":18,"jahr":1351,"woche":10,"vorbei":false,"ursache":null}
+{"t":117,"was":"greifen","zug":"fuhre:plan:mager","text":"Fahren: die mageren Häuser · 2 Fass+3 Pf","preis":3,"kasseVor":18,"kasseNach":14,"jahr":1351,"woche":11,"vorbei":false,"ursache":null}
+{"t":117.5,"was":"greifen","zug":"fuhre:plan:mager","text":"Fahren: die mageren Häuser · 1 Fass+2 Pf","preis":2,"kasseVor":14,"kasseNach":13,"jahr":1351,"woche":12,"vorbei":false,"ursache":null}
+{"t":118,"was":"rundenende","aussenrunde":12,"jahr":1351,"woche":13,"kasse":12,"deckung":0.3333333333333333,"vorbei":false,"ursache":null,"wochenZahl":35}
+{"t":118.4,"was":"erkunden","zug":"kern:protokoll","text":"Buch368","jahr":1351,"woche":13,"kasse":12,"vorbei":false,"ursache":null}
+{"t":118.9,"was":"erkunden","zug":"stadt:reiter:gegner-amort-gg-band","text":"Ohne dich geschehen · 29 Zügezugeklappt","jahr":1351,"woche":13,"kasse":12,"vorbei":false,"ursache":null}
+{"t":119.4,"was":"erkunden","zug":"gegner:beschwerde","text":"Klage vor dem Stadtgericht","jahr":1351,"woche":13,"kasse":12,"vorbei":false,"ursache":null}
+{"t":119.9,"was":"erkunden","zug":"gegner:zeige:29","text":"zeigen","jahr":1351,"woche":13,"kasse":12,"vorbei":false,"ursache":null}
+{"t":120.4,"was":"erkunden","zug":"stadt:reiter:gegner-amort-gg-band","text":"Ohne dich geschehen · 29 Zügeliegt auf","jahr":1351,"woche":13,"kasse":12,"vorbei":false,"ursache":null}
+{"t":120.8,"was":"erkunden","zug":"kern:chronik","text":"Chronik50","jahr":1351,"woche":13,"kasse":12,"vorbei":false,"ursache":null}
+{"t":121.2,"was":"erkunden","zug":"kern:protokoll","text":"Buch369","jahr":1351,"woche":13,"kasse":12,"vorbei":false,"ursache":null}
+{"t":121.8,"was":"greifen","zug":"fuhre:plan:mager","text":"Fahren: die mageren Häuser · 4 Fass+7 Pf","preis":7,"kasseVor":12,"kasseNach":11,"jahr":1351,"woche":14,"vorbei":false,"ursache":null}
+{"t":122.3,"was":"greifen","zug":"fuhre:plan:mager","text":"Fahren: die mageren Häuser · 1 Fass+2 Pf","preis":2,"kasseVor":11,"kasseNach":10,"jahr":1351,"woche":15,"vorbei":false,"ursache":null}
+{"t":122.8,"was":"greifen","zug":"fuhre:plan:mager","text":"Fahren: die mageren Häuser · 1 Fass+1 Pf","preis":1,"kasseVor":10,"kasseNach":8,"jahr":1351,"woche":16,"vorbei":false,"ursache":null}
+{"t":123.3,"was":"rundenende","aussenrunde":13,"jahr":1351,"woche":17,"kasse":7,"deckung":0.125,"vorbei":false,"ursache":null,"wochenZahl":39}
+{"t":123.8,"was":"erkunden","zug":"kern:chronik","text":"Chronik52","jahr":1351,"woche":17,"kasse":7,"vorbei":false,"ursache":null}
+{"t":124.2,"was":"erkunden","zug":"kern:protokoll","text":"Buch397","jahr":1351,"woche":17,"kasse":7,"vorbei":false,"ursache":null}
+{"t":124.7,"was":"erkunden","zug":"stadt:reiter:gegner-amort-gg-band","text":"Ohne dich geschehen · 33 Zügezugeklappt","jahr":1351,"woche":17,"kasse":7,"vorbei":false,"ursache":null}
+{"t":125.3,"was":"erkunden","zug":"gegner:zeige:33","text":"zeigen","jahr":1351,"woche":17,"kasse":7,"vorbei":false,"ursache":null}
+{"t":125.8,"was":"erkunden","zug":"gegner:zeige:32","text":"zeigen","jahr":1351,"woche":17,"kasse":7,"vorbei":false,"ursache":null}
+{"t":126.3,"was":"erkunden","zug":"stadt:reiter:gegner-amort-gg-band","text":"Ohne dich geschehen · 33 Zügeliegt auf","jahr":1351,"woche":17,"kasse":7,"vorbei":false,"ursache":null}
+{"t":126.9,"was":"greifen","zug":"fuhre:plan:mager","text":"Fahren: die mageren Häuser · 4 Fass+6 Pf","preis":6,"kasseVor":7,"kasseNach":5,"jahr":1351,"woche":18,"vorbei":false,"ursache":null}
+{"t":127.4,"was":"rundenende","aussenrunde":14,"jahr":1351,"woche":19,"kasse":4,"deckung":0.07142857142857142,"vorbei":false,"ursache":null,"wochenZahl":41}
+{"t":127.8,"was":"erkunden","zug":"kern:protokoll","text":"Buch411","jahr":1351,"woche":19,"kasse":4,"vorbei":false,"ursache":null}
+{"t":128.4,"was":"erkunden","zug":"stadt:reiter:fuhre-fu-brett-fu-haeuser","text":"DIE HÄUSERwollen 30 · im Keller liegen 12 Fass","jahr":1351,"woche":19,"kasse":4,"vorbei":false,"ursache":null}
+{"t":128.9,"was":"greifen","zug":"fuhre:plan:mager","text":"Fahren: die mageren Häuser · 1 Fass+1 Pf","preis":1,"kasseVor":4,"kasseNach":2,"jahr":1351,"woche":20,"vorbei":false,"ursache":null}
+{"t":129.4,"was":"greifen","zug":"fuhre:plan:mager","text":"Fahren: die mageren Häuser · 2 Fass+4 Pf","preis":4,"kasseVor":2,"kasseNach":1,"jahr":1351,"woche":21,"vorbei":false,"ursache":null}
+{"t":129.8,"was":"greifen","zug":"fuhre:plan:mager","text":"Fahren: die mageren Häuser · 2 Fass+2 Pf","preis":2,"kasseVor":1,"kasseNach":0,"jahr":1351,"woche":22,"vorbei":false,"ursache":null}
+{"t":130.3,"was":"rundenende","aussenrunde":15,"jahr":1351,"woche":23,"kasse":0,"deckung":0,"vorbei":false,"ursache":null,"wochenZahl":45}
+{"t":130.8,"was":"erkunden","zug":"kern:protokoll","text":"Buch437","jahr":1351,"woche":23,"kasse":0,"vorbei":false,"ursache":null}
+{"t":131.3,"was":"erkunden","zug":"stadt:reiter:gegner-amort-gg-band","text":"Ohne dich geschehen · 34 Zügezugeklappt","jahr":1351,"woche":23,"kasse":0,"vorbei":false,"ursache":null}
+{"t":131.8,"was":"erkunden","zug":"gegner:zeige:34","text":"zeigen","jahr":1351,"woche":23,"kasse":0,"vorbei":false,"ursache":null}
+{"t":132.3,"was":"erkunden","zug":"stadt:reiter:gegner-amort-gg-band","text":"Ohne dich geschehen · 34 Zügeliegt auf","jahr":1351,"woche":23,"kasse":0,"vorbei":false,"ursache":null}
+{"t":132.9,"was":"greifen","zug":"fuhre:plan:mager","text":"Fahren: die mageren Häuser · 3 Fass+6 Pf","preis":6,"kasseVor":0,"kasseNach":0,"jahr":1351,"woche":24,"vorbei":false,"ursache":null}
+{"t":133.4,"was":"rundenende","aussenrunde":16,"jahr":1351,"woche":25,"kasse":0,"deckung":0,"vorbei":false,"ursache":null,"wochenZahl":47}
+{"t":134.1,"was":"erkunden","zug":"fuhre:sprung","text":"Weiter wie zuletzt · bis zu 5 Wochen","jahr":1351,"woche":30,"kasse":0,"vorbei":false,"ursache":null}
+{"t":134.5,"was":"erkunden","zug":"kern:chronik","text":"Chronik54","jahr":1351,"woche":30,"kasse":0,"vorbei":false,"ursache":null}
+{"t":134.9,"was":"erkunden","zug":"kern:protokoll","text":"Buch450","jahr":1351,"woche":30,"kasse":0,"vorbei":false,"ursache":null}
+{"t":135.4,"was":"erkunden","zug":"stadt:reiter:gegner-amort-gg-band","text":"Ohne dich geschehen · 37 Zügezugeklappt","jahr":1351,"woche":30,"kasse":0,"vorbei":false,"ursache":null}
+{"t":135.9,"was":"erkunden","zug":"gegner:zeige:40","text":"zeigen","jahr":1351,"woche":30,"kasse":0,"vorbei":false,"ursache":null}
+{"t":136.4,"was":"erkunden","zug":"gegner:zeige:39","text":"zeigen","jahr":1351,"woche":30,"kasse":0,"vorbei":false,"ursache":null}
+{"t":136.8,"was":"erkunden","zug":"kern:chronik","text":"Chronik56","jahr":1351,"woche":30,"kasse":0,"vorbei":false,"ursache":null}
+{"t":137.2,"was":"erkunden","zug":"kern:protokoll","text":"Buch489","jahr":1351,"woche":30,"kasse":0,"vorbei":false,"ursache":null}
+{"t":137.7,"was":"erkunden","zug":"stadt:reiter:gegner-amort-gg-band","text":"Ohne dich geschehen · 40 Zügeliegt auf","jahr":1351,"woche":30,"kasse":0,"vorbei":false,"ursache":null}
+{"t":138.2,"was":"erkunden","zug":"stadt:reiter:fuhre-fu-brett-fu-haeuser","text":"DIE HÄUSERwollen 32 · im Keller liegen 12 Fass","jahr":1351,"woche":30,"kasse":0,"vorbei":false,"ursache":null}
+{"t":138.8,"was":"erkunden","zug":"stadt:reiter:gegner-amort-gg-band","text":"Ohne dich geschehen · 40 Zügezugeklappt","jahr":1351,"woche":30,"kasse":0,"vorbei":false,"ursache":null}
+{"t":140,"was":"greifen","zug":"fuhre:plan:mager","text":"Fahren: die mageren Häuser · 3 Fass+5 Pf","preis":5,"kasseVor":0,"kasseNach":33,"jahr":1352,"woche":1,"vorbei":false,"ursache":null}
+{"t":141.1,"was":"greifen","zug":"gegner:zukaufen:brueckenwirt","text":"lieber zukaufen1 Fass · 12 Pf","preis":-12,"kasseVor":33,"kasseNach":21,"jahr":1352,"woche":1,"vorbei":false,"ursache":null}
+{"t":141.8,"was":"rundenende","aussenrunde":17,"jahr":1352,"woche":2,"kasse":20,"deckung":0.2777777777777778,"vorbei":false,"ursache":null,"wochenZahl":50}
+{"t":142.2,"was":"erkunden","zug":"kern:chronik","text":"Chronik66","jahr":1352,"woche":2,"kasse":20,"vorbei":false,"ursache":null}
+{"t":142.6,"was":"erkunden","zug":"kern:protokoll","text":"Buch519","jahr":1352,"woche":2,"kasse":20,"vorbei":false,"ursache":null}
+{"t":143.2,"was":"erkunden","zug":"stadt:reiter:gegner-amort-gg-band","text":"Ohne dich geschehen · 41 Zügezugeklappt","jahr":1352,"woche":2,"kasse":20,"vorbei":false,"ursache":null}
+{"t":143.8,"was":"erkunden","zug":"stadt:reiter:fuhre-fu-brett-fu-haeuser","text":"DIE HÄUSERwollen 15 · im Keller liegen 3 Fass","jahr":1352,"woche":2,"kasse":20,"vorbei":false,"ursache":null}
+{"t":144.2,"was":"erkunden","zug":"stadt:reiter:fuhre-fu-brett-fu-keller","text":"DER KELLER3 von 12 Fass · 3 reif","jahr":1352,"woche":2,"kasse":20,"vorbei":false,"ursache":null}
+{"t":145,"was":"erkunden","zug":"preis:tafel","text":"Michaelitafel 1352 · 5 Angebote","jahr":1352,"woche":2,"kasse":20,"vorbei":false,"ursache":null}
+{"t":145.6,"was":"erkunden","zug":"stadt:reiter:gegner-amort-gg-band","text":"Ohne dich geschehen · 41 Zügeliegt auf","jahr":1352,"woche":2,"kasse":20,"vorbei":false,"ursache":null}
+{"t":146.1,"was":"greifen","zug":"fuhre:plan:mager","text":"Fahren: die mageren Häuser · 3 Fass+5 Pf","preis":5,"kasseVor":20,"kasseNach":18,"jahr":1352,"woche":3,"vorbei":false,"ursache":null}
+{"t":146.7,"was":"greifen","zug":"fuhre:plan:mager","text":"Fahren: die mageren Häuser · 2 Fass+3 Pf","preis":3,"kasseVor":18,"kasseNach":15,"jahr":1352,"woche":4,"vorbei":false,"ursache":null}
+{"t":147.2,"was":"greifen","zug":"erbe:uebergabe:abfindung","text":"Abfertigung−6 Pf","preis":-6,"kasseVor":15,"kasseNach":9,"jahr":1352,"woche":4,"vorbei":false,"ursache":null}
+{"t":147.7,"was":"rundenende","aussenrunde":18,"jahr":1352,"woche":5,"kasse":8,"deckung":0.1111111111111111,"vorbei":false,"ursache":null,"wochenZahl":53}
+{"t":148.2,"was":"erkunden","zug":"kern:chronik","text":"Chronik71","jahr":1352,"woche":5,"kasse":8,"vorbei":false,"ursache":null}
+{"t":148.6,"was":"erkunden","zug":"kern:protokoll","text":"Buch539","jahr":1352,"woche":5,"kasse":8,"vorbei":false,"ursache":null}
+{"t":149.1,"was":"erkunden","zug":"stadt:reiter:gegner-amort-gg-band","text":"Ohne dich geschehen · 43 Zügezugeklappt","jahr":1352,"woche":5,"kasse":8,"vorbei":false,"ursache":null}
+{"t":149.6,"was":"erkunden","zug":"stadt:reiter:fuhre-fu-brett-fu-haeuser","text":"DIE HÄUSERwollen 17 · im Keller liegen 7 Fass","jahr":1352,"woche":5,"kasse":8,"vorbei":false,"ursache":null}
+{"t":150.2,"was":"erkunden","zug":"stadt:reiter:fuhre-fu-brett-fu-keller","text":"DER KELLER7 von 12 Fass · 7 reif","jahr":1352,"woche":5,"kasse":8,"vorbei":false,"ursache":null}
+{"t":151,"was":"erkunden","zug":"preis:chronik-auf","text":"Chronik des Hauses · 3 Festlegungen · 0 von dieser Tafel · 1 Bauten stehen","jahr":1352,"woche":5,"kasse":8,"vorbei":false,"ursache":null}
+{"t":151.6,"was":"erkunden","zug":"stadt:reiter:gegner-amort-gg-band","text":"Ohne dich geschehen · 43 Zügeliegt auf","jahr":1352,"woche":5,"kasse":8,"vorbei":false,"ursache":null}
+{"t":152.1,"was":"greifen","zug":"fuhre:plan:mager","text":"Fahren: die mageren Häuser · 1 Fass+1 Pf","preis":1,"kasseVor":8,"kasseNach":6,"jahr":1352,"woche":6,"vorbei":false,"ursache":null}
+{"t":152.6,"was":"greifen","zug":"fuhre:plan:mager","text":"Fahren: die mageren Häuser · 4 Fass+7 Pf","preis":7,"kasseVor":6,"kasseNach":3,"jahr":1352,"woche":7,"vorbei":false,"ursache":null}
+{"t":153.1,"was":"rundenende","aussenrunde":19,"jahr":1352,"woche":8,"kasse":2,"deckung":0.027777777777777776,"vorbei":false,"ursache":null,"wochenZahl":56}
+{"t":153.5,"was":"erkunden","zug":"kern:protokoll","text":"Buch557","jahr":1352,"woche":8,"kasse":2,"vorbei":false,"ursache":null}
+{"t":154,"was":"erkunden","zug":"stadt:reiter:fuhre-fu-brett-fu-haeuser","text":"DIE HÄUSERwollen 20 · im Keller liegen 11 Fass","jahr":1352,"woche":8,"kasse":2,"vorbei":false,"ursache":null}
+{"t":154.5,"was":"erkunden","zug":"stadt:marke:gegner-marktplatz-5","text":"frei geworden","jahr":1352,"woche":8,"kasse":2,"vorbei":false,"ursache":null}
+{"t":155,"was":"greifen","zug":"fuhre:plan:mager","text":"Fahren: die mageren Häuser · 1 Fass+1 Pf","preis":1,"kasseVor":2,"kasseNach":0,"jahr":1352,"woche":9,"vorbei":false,"ursache":null}
+{"t":155.5,"was":"greifen","zug":"fuhre:plan:mager","text":"Fahren: die mageren Häuser · 1 Fass+2 Pf","preis":2,"kasseVor":0,"kasseNach":0,"jahr":1352,"woche":10,"vorbei":false,"ursache":null}
+{"t":155.9,"was":"greifen","zug":"fuhre:plan:mager","text":"Fahren: die mageren Häuser · 2 Fass+3 Pf","preis":3,"kasseVor":0,"kasseNach":0,"jahr":1352,"woche":11,"vorbei":false,"ursache":null}
+{"t":156.4,"was":"rundenende","aussenrunde":20,"jahr":1352,"woche":12,"kasse":0,"deckung":0,"vorbei":false,"ursache":null,"wochenZahl":60}
+{"t":157.3,"was":"erkunden","zug":"kern:protokoll","text":"Buch580","jahr":1352,"woche":12,"kasse":0,"vorbei":false,"ursache":null}
+{"t":157.8,"was":"erkunden","zug":"stadt:reiter:gegner-amort-gg-band","text":"Ohne dich geschehen · 44 Zügezugeklappt","jahr":1352,"woche":12,"kasse":0,"vorbei":false,"ursache":null}
+{"t":158.3,"was":"erkunden","zug":"stadt:reiter:fuhre-fu-brett-fu-haeuser","text":"DIE HÄUSERwollen 22 · im Keller liegen 12 Fass","jahr":1352,"woche":12,"kasse":0,"vorbei":false,"ursache":null}
+{"t":158.8,"was":"erkunden","zug":"gegner:zeige:44","text":"zeigen","jahr":1352,"woche":12,"kasse":0,"vorbei":false,"ursache":null}
+{"t":159.3,"was":"erkunden","zug":"stadt:reiter:gegner-amort-gg-band","text":"Ohne dich geschehen · 44 Zügeliegt auf","jahr":1352,"woche":12,"kasse":0,"vorbei":false,"ursache":null}
+{"t":159.9,"was":"greifen","zug":"fuhre:plan:mager","text":"Fahren: die mageren Häuser · 3 Fass+5 Pf","preis":5,"kasseVor":0,"kasseNach":0,"jahr":1352,"woche":13,"vorbei":false,"ursache":null}
+{"t":160.3,"was":"greifen","zug":"fuhre:plan:mager","text":"Fahren: die mageren Häuser · 1 Fass+1 Pf","preis":1,"kasseVor":0,"kasseNach":0,"jahr":1352,"woche":14,"vorbei":false,"ursache":null}
+{"t":160.8,"was":"greifen","zug":"fuhre:plan:mager","text":"Fahren: die mageren Häuser · 1 Fass+1 Pf","preis":1,"kasseVor":0,"kasseNach":0,"jahr":1352,"woche":15,"vorbei":false,"ursache":null}
+{"t":161.3,"was":"rundenende","aussenrunde":21,"jahr":1352,"woche":16,"kasse":0,"deckung":0,"vorbei":false,"ursache":null,"wochenZahl":64}
+{"t":161.8,"was":"erkunden","zug":"kern:chronik","text":"Chronik72","jahr":1352,"woche":16,"kasse":0,"vorbei":false,"ursache":null}
+{"t":162.2,"was":"erkunden","zug":"kern:protokoll","text":"Buch605","jahr":1352,"woche":16,"kasse":0,"vorbei":false,"ursache":null}
+{"t":162.7,"was":"erkunden","zug":"stadt:reiter:gegner-amort-gg-band","text":"Ohne dich geschehen · 46 Zügezugeklappt","jahr":1352,"woche":16,"kasse":0,"vorbei":false,"ursache":null}
+{"t":163.2,"was":"erkunden","zug":"gegner:zeige:46","text":"zeigen","jahr":1352,"woche":16,"kasse":0,"vorbei":false,"ursache":null}
+{"t":163.7,"was":"erkunden","zug":"stadt:reiter:gegner-amort-gg-band","text":"Ohne dich geschehen · 46 Zügeliegt auf","jahr":1352,"woche":16,"kasse":0,"vorbei":false,"ursache":null}
+{"t":164.2,"was":"greifen","zug":"fuhre:plan:mager","text":"Fahren: die mageren Häuser · 3 Fass+6 Pf","preis":6,"kasseVor":0,"kasseNach":0,"jahr":1352,"woche":17,"vorbei":false,"ursache":null}
+{"t":164.7,"was":"greifen","zug":"fuhre:plan:mager","text":"Fahren: die mageren Häuser · 1 Fass+1 Pf","preis":1,"kasseVor":0,"kasseNach":0,"jahr":1352,"woche":18,"vorbei":false,"ursache":null}
+{"t":165.1,"was":"greifen","zug":"fuhre:plan:mager","text":"Fahren: die mageren Häuser · 3 Fass+5 Pf","preis":5,"kasseVor":0,"kasseNach":0,"jahr":1352,"woche":19,"vorbei":false,"ursache":null}
+{"t":165.6,"was":"rundenende","aussenrunde":22,"jahr":1352,"woche":20,"kasse":0,"deckung":0,"vorbei":false,"ursache":null,"wochenZahl":68}
+{"t":166.1,"was":"erkunden","zug":"stadt:marke:gegner-bruecke-unten","text":"frei geworden","jahr":1352,"woche":20,"kasse":0,"vorbei":false,"ursache":null}
+{"t":166.5,"was":"erkunden","zug":"kern:chronik","text":"Chronik74","jahr":1352,"woche":20,"kasse":0,"vorbei":false,"ursache":null}
+{"t":166.9,"was":"erkunden","zug":"kern:protokoll","text":"Buch633","jahr":1352,"woche":20,"kasse":0,"vorbei":false,"ursache":null}
+{"t":167.5,"was":"erkunden","zug":"stadt:reiter:gegner-amort-gg-band","text":"Ohne dich geschehen · 50 Zügezugeklappt","jahr":1352,"woche":20,"kasse":0,"vorbei":false,"ursache":null}
+{"t":168.1,"was":"erkunden","zug":"stadt:reiter:fuhre-fu-brett-fu-haeuser","text":"DIE HÄUSERwollen 21 · im Keller liegen 12 Fass","jahr":1352,"woche":20,"kasse":0,"vorbei":false,"ursache":null}
+{"t":168.6,"was":"erkunden","zug":"gegner:zeige:50","text":"zeigen","jahr":1352,"woche":20,"kasse":0,"vorbei":false,"ursache":null}
+{"t":169.1,"was":"erkunden","zug":"stadt:reiter:gegner-amort-gg-band","text":"Ohne dich geschehen · 50 Zügeliegt auf","jahr":1352,"woche":20,"kasse":0,"vorbei":false,"ursache":null}
+{"t":169.6,"was":"greifen","zug":"fuhre:plan:mager","text":"Fahren: die mageren Häuser · 1 Fass+1 Pf","preis":1,"kasseVor":0,"kasseNach":0,"jahr":1352,"woche":21,"vorbei":false,"ursache":null}
+{"t":170.1,"was":"greifen","zug":"fuhre:plan:mager","text":"Fahren: die mageren Häuser · 3 Fass+5 Pf","preis":5,"kasseVor":0,"kasseNach":0,"jahr":1352,"woche":22,"vorbei":false,"ursache":null}
+{"t":170.6,"was":"greifen","zug":"fuhre:plan:mager","text":"Fahren: die mageren Häuser · 1 Fass+1 Pf","preis":1,"kasseVor":0,"kasseNach":0,"jahr":1352,"woche":23,"vorbei":false,"ursache":null}
+{"t":171.1,"was":"rundenende","aussenrunde":23,"jahr":1352,"woche":24,"kasse":0,"deckung":0,"vorbei":false,"ursache":null,"wochenZahl":72}
+{"t":171.5,"was":"erkunden","zug":"kern:protokoll","text":"Buch657","jahr":1352,"woche":24,"kasse":0,"vorbei":false,"ursache":null}
+{"t":172,"was":"greifen","zug":"fuhre:plan:mager","text":"Fahren: die mageren Häuser · 2 Fass+3 Pf","preis":3,"kasseVor":0,"kasseNach":0,"jahr":1352,"woche":25,"vorbei":false,"ursache":null}
+{"t":172.5,"was":"greifen","zug":"fuhre:plan:mager","text":"Fahren: die mageren Häuser · 3 Fass+5 Pf","preis":5,"kasseVor":0,"kasseNach":0,"jahr":1352,"woche":26,"vorbei":false,"ursache":null}
+{"t":172.9,"was":"greifen","zug":"gegner:beschwerde-bild","text":"Klage vor dem Stadtgerichtkostet kein Geld · vier Ansehengegen Zum Goldenen Ochsen","preis":0,"kasseVor":0,"kasseNach":0,"jahr":1352,"woche":26,"vorbei":false,"ursache":null}
+{"t":173.4,"was":"rundenende","aussenrunde":24,"jahr":1352,"woche":27,"kasse":0,"deckung":0,"vorbei":false,"ursache":null,"wochenZahl":75}
+{"t":173.9,"was":"erkunden","zug":"fuhre:sprung","text":"Weiter wie zuletzt · bis zu 3 Wochen","jahr":1352,"woche":30,"kasse":0,"vorbei":false,"ursache":null}
+{"t":174.4,"was":"erkunden","zug":"kern:chronik","text":"Chronik75","jahr":1352,"woche":30,"kasse":0,"vorbei":false,"ursache":null}
+{"t":174.8,"was":"erkunden","zug":"kern:protokoll","text":"Buch679","jahr":1352,"woche":30,"kasse":0,"vorbei":false,"ursache":null}
+{"t":175.3,"was":"erkunden","zug":"stadt:reiter:gegner-amort-gg-band","text":"Ohne dich geschehen · 52 Zügezugeklappt","jahr":1352,"woche":30,"kasse":0,"vorbei":false,"ursache":null}
+{"t":175.8,"was":"erkunden","zug":"gegner:zeige:53","text":"zeigen","jahr":1352,"woche":30,"kasse":0,"vorbei":false,"ursache":null}
+{"t":176.3,"was":"erkunden","zug":"gegner:zeige:52","text":"zeigen","jahr":1352,"woche":30,"kasse":0,"vorbei":false,"ursache":null}
+{"t":176.7,"was":"erkunden","zug":"kern:chronik","text":"Chronik78","jahr":1352,"woche":30,"kasse":0,"vorbei":false,"ursache":null}
+{"t":177.1,"was":"erkunden","zug":"kern:protokoll","text":"Buch708","jahr":1352,"woche":30,"kasse":0,"vorbei":false,"ursache":null}
+{"t":177.6,"was":"erkunden","zug":"stadt:reiter:gegner-amort-gg-band","text":"Ohne dich geschehen · 53 Zügeliegt auf","jahr":1352,"woche":30,"kasse":0,"vorbei":false,"ursache":null}
+{"t":178.2,"was":"erkunden","zug":"stadt:reiter:gegner-amort-gg-band","text":"Ohne dich geschehen · 53 Zügezugeklappt","jahr":1352,"woche":30,"kasse":0,"vorbei":false,"ursache":null}
+{"t":179.4,"was":"greifen","zug":"fuhre:plan:mager","text":"Fahren: die mageren Häuser · 1 Fass+2 Pf","preis":2,"kasseVor":0,"kasseNach":33,"jahr":1353,"woche":1,"vorbei":false,"ursache":null}
+{"t":180.1,"was":"rundenende","aussenrunde":25,"jahr":1353,"woche":2,"kasse":32,"deckung":0.5714285714285714,"vorbei":false,"ursache":null,"wochenZahl":78}
+{"t":180.7,"was":"erkunden","zug":"sud:wuerze:sack","text":"Hopfen im Sack, heimlich","jahr":1353,"woche":2,"kasse":32,"vorbei":false,"ursache":null}
+{"t":181.2,"was":"erkunden","zug":"sud:wasser:brunnen","text":"Wasser aus dem Ziehbrunnen","jahr":1353,"woche":2,"kasse":32,"vorbei":false,"ursache":null}
+{"t":181.6,"was":"erkunden","zug":"kern:chronik","text":"Chronik84","jahr":1353,"woche":2,"kasse":32,"vorbei":false,"ursache":null}
+{"t":182,"was":"erkunden","zug":"kern:protokoll","text":"Buch729","jahr":1353,"woche":2,"kasse":32,"vorbei":false,"ursache":null}
+{"t":182.5,"was":"erkunden","zug":"stadt:reiter:gegner-amort-gg-band","text":"Ohne dich geschehen · 54 Zügezugeklappt","jahr":1353,"woche":2,"kasse":32,"vorbei":false,"ursache":null}
+{"t":183.1,"was":"erkunden","zug":"stadt:reiter:fuhre-fu-brett-fu-haeuser","text":"DIE HÄUSERwollen 11 · im Keller liegen 3 Fass","jahr":1353,"woche":2,"kasse":32,"vorbei":false,"ursache":null}
+{"t":183.6,"was":"erkunden","zug":"stadt:reiter:sud-sud-brett","text":"DAS SUDHAUSliegt auf","jahr":1353,"woche":2,"kasse":32,"vorbei":false,"ursache":null}
+{"t":184.4,"was":"erkunden","zug":"preis:tafel","text":"Michaelitafel 1353 · 5 Angebote","jahr":1353,"woche":2,"kasse":32,"vorbei":false,"ursache":null}
+{"t":184.8,"was":"erkunden","zug":"kern:protokoll","text":"Buch730","jahr":1353,"woche":2,"kasse":32,"vorbei":false,"ursache":null}
+{"t":185.4,"was":"erkunden","zug":"stadt:reiter:gegner-amort-gg-band","text":"Ohne dich geschehen · 54 Zügeliegt auf","jahr":1353,"woche":2,"kasse":32,"vorbei":false,"ursache":null}
+{"t":185.9,"was":"erkunden","zug":"sud:wuerze:grut","text":"Grut vom Grutamt","jahr":1353,"woche":2,"kasse":32,"vorbei":false,"ursache":null}
+{"t":186.3,"was":"erkunden","zug":"sud:wasser:bach","text":"Wasser aus dem Stadtbach","jahr":1353,"woche":2,"kasse":32,"vorbei":false,"ursache":null}
+{"t":186.8,"was":"erkunden","zug":"sud:anstich-jung","text":"Junges Fass anbrechen · +14 · 1 Fass","jahr":1353,"woche":2,"kasse":32,"vorbei":false,"ursache":null}
+{"t":187.2,"was":"erkunden","zug":"kern:protokoll","text":"Buch731","jahr":1353,"woche":2,"kasse":32,"vorbei":false,"ursache":null}
+{"t":187.8,"was":"erkunden","zug":"stadt:reiter:fuhre-fu-brett-fu-haeuser","text":"DIE HÄUSERwollen 11 · im Keller liegen 2 Fass","jahr":1353,"woche":2,"kasse":32,"vorbei":false,"ursache":null}
+{"t":188.4,"was":"greifen","zug":"fuhre:plan:mager","text":"Fahren: die mageren Häuser · 2 Fass+3 Pf","preis":3,"kasseVor":32,"kasseNach":29,"jahr":1353,"woche":3,"vorbei":false,"ursache":null}
+{"t":188.9,"was":"greifen","zug":"fuhre:plan:mager","text":"Fahren: die mageren Häuser · 2 Fass+3 Pf","preis":3,"kasseVor":29,"kasseNach":26,"jahr":1353,"woche":4,"vorbei":false,"ursache":null}
+{"t":189.3,"was":"greifen","zug":"fuhre:plan:mager","text":"Fahren: die mageren Häuser · 3 Fass+5 Pf","preis":5,"kasseVor":26,"kasseNach":23,"jahr":1353,"woche":5,"vorbei":false,"ursache":null}
+{"t":189.9,"was":"rundenende","aussenrunde":26,"jahr":1353,"woche":6,"kasse":22,"deckung":0.39285714285714285,"vorbei":false,"ursache":null,"wochenZahl":82}
+{"t":190.3,"was":"erkunden","zug":"kern:protokoll","text":"Buch754","jahr":1353,"woche":6,"kasse":22,"vorbei":false,"ursache":null}
+{"t":190.8,"was":"erkunden","zug":"stadt:reiter:gegner-amort-gg-band","text":"Ohne dich geschehen · 55 Zügezugeklappt","jahr":1353,"woche":6,"kasse":22,"vorbei":false,"ursache":null}
+{"t":191.3,"was":"erkunden","zug":"stadt:reiter:fuhre-fu-brett-fu-haeuser","text":"DIE HÄUSERwollen 12 · im Keller liegen 7 Fass","jahr":1353,"woche":6,"kasse":22,"vorbei":false,"ursache":null}
+{"t":191.8,"was":"erkunden","zug":"gegner:zeige:55","text":"zeigen","jahr":1353,"woche":6,"kasse":22,"vorbei":false,"ursache":null}
+{"t":192.3,"was":"erkunden","zug":"stadt:reiter:gegner-amort-gg-band","text":"Ohne dich geschehen · 55 Zügeliegt auf","jahr":1353,"woche":6,"kasse":22,"vorbei":false,"ursache":null}
+{"t":192.8,"was":"greifen","zug":"fuhre:plan:mager","text":"Fahren: die mageren Häuser · 1 Fass+1 Pf","preis":1,"kasseVor":22,"kasseNach":20,"jahr":1353,"woche":7,"vorbei":false,"ursache":null}
+{"t":193.2,"was":"greifen","zug":"fuhre:plan:mager","text":"Fahren: die mageren Häuser · 2 Fass+3 Pf","preis":3,"kasseVor":20,"kasseNach":17,"jahr":1353,"woche":8,"vorbei":false,"ursache":null}
+{"t":193.7,"was":"greifen","zug":"fuhre:plan:mager","text":"Fahren: die mageren Häuser · 1 Fass+1 Pf","preis":1,"kasseVor":17,"kasseNach":15,"jahr":1353,"woche":9,"vorbei":false,"ursache":null}
+{"t":194.2,"was":"rundenende","aussenrunde":27,"jahr":1353,"woche":10,"kasse":14,"deckung":0.25,"vorbei":false,"ursache":null,"wochenZahl":86}
+{"t":194.6,"was":"erkunden","zug":"kern:protokoll","text":"Buch773","jahr":1353,"woche":10,"kasse":14,"vorbei":false,"ursache":null}
+{"t":195.1,"was":"erkunden","zug":"stadt:bauhof","text":"BAUHOF5 offen · ab 13 Pf · 1 bezahlbar","jahr":1353,"woche":10,"kasse":14,"vorbei":false,"ursache":null}
+{"t":195.7,"was":"erkunden","zug":"stadt:reiter:fuhre-fu-brett-fu-haeuser","text":"DIE HÄUSERwollen 18 · im Keller liegen 12 Fass","jahr":1353,"woche":10,"kasse":14,"vorbei":false,"ursache":null}
+{"t":196.2,"was":"greifen","zug":"fuhre:plan:mager","text":"Fahren: die mageren Häuser · 4 Fass+7 Pf","preis":7,"kasseVor":14,"kasseNach":11,"jahr":1353,"woche":11,"vorbei":false,"ursache":null}
+{"t":196.7,"was":"greifen","zug":"fuhre:plan:mager","text":"Fahren: die mageren Häuser · 1 Fass+1 Pf","preis":1,"kasseVor":11,"kasseNach":9,"jahr":1353,"woche":12,"vorbei":false,"ursache":null}
+{"t":197.2,"was":"greifen","zug":"erbe:uebergabe:abfindung","text":"Abfertigung−8 Pf","preis":-8,"kasseVor":9,"kasseNach":1,"jahr":1353,"woche":12,"vorbei":false,"ursache":null}
+{"t":197.7,"was":"rundenende","aussenrunde":28,"jahr":1353,"woche":13,"kasse":0,"deckung":0,"vorbei":false,"ursache":null,"wochenZahl":89}
+{"t":198.1,"was":"erkunden","zug":"kern:chronik","text":"Chronik87","jahr":1353,"woche":13,"kasse":0,"vorbei":false,"ursache":null}
+{"t":198.5,"was":"erkunden","zug":"kern:protokoll","text":"Buch794","jahr":1353,"woche":13,"kasse":0,"vorbei":false,"ursache":null}
+{"t":199.1,"was":"erkunden","zug":"stadt:reiter:gegner-amort-gg-band","text":"Ohne dich geschehen · 56 Zügezugeklappt","jahr":1353,"woche":13,"kasse":0,"vorbei":false,"ursache":null}
+{"t":199.8,"was":"erkunden","zug":"preis:chronik-auf","text":"Chronik des Hauses · 4 Festlegungen · 0 von dieser Tafel · 1 Bauten stehen","jahr":1353,"woche":13,"kasse":0,"vorbei":false,"ursache":null}
+{"t":200.3,"was":"erkunden","zug":"stadt:reiter:gegner-amort-gg-band","text":"Ohne dich geschehen · 56 Zügeliegt auf","jahr":1353,"woche":13,"kasse":0,"vorbei":false,"ursache":null}
+{"t":200.8,"was":"greifen","zug":"fuhre:plan:mager","text":"Fahren: die mageren Häuser · 1 Fass+1 Pf","preis":1,"kasseVor":0,"kasseNach":0,"jahr":1353,"woche":14,"vorbei":false,"ursache":null}
+{"t":201.3,"was":"greifen","zug":"fuhre:plan:mager","text":"Fahren: die mageren Häuser · 4 Fass+7 Pf","preis":7,"kasseVor":0,"kasseNach":0,"jahr":1353,"woche":15,"vorbei":false,"ursache":null}
+{"t":201.8,"was":"rundenende","aussenrunde":29,"jahr":1353,"woche":16,"kasse":0,"deckung":0,"vorbei":false,"ursache":null,"wochenZahl":92}
+{"t":202.2,"was":"erkunden","zug":"kern:chronik","text":"Chronik88","jahr":1353,"woche":16,"kasse":0,"vorbei":false,"ursache":null}
+{"t":202.6,"was":"erkunden","zug":"kern:protokoll","text":"Buch813","jahr":1353,"woche":16,"kasse":0,"vorbei":false,"ursache":null}
+{"t":203.2,"was":"erkunden","zug":"stadt:reiter:fuhre-fu-brett-fu-haeuser","text":"DIE HÄUSERwollen 17 · im Keller liegen 12 Fass","jahr":1353,"woche":16,"kasse":0,"vorbei":false,"ursache":null}
+{"t":203.6,"was":"greifen","zug":"fuhre:plan:mager","text":"Fahren: die mageren Häuser · 1 Fass+1 Pf","preis":1,"kasseVor":0,"kasseNach":0,"jahr":1353,"woche":17,"vorbei":false,"ursache":null}
+{"t":204.1,"was":"greifen","zug":"fuhre:plan:mager","text":"Fahren: die mageren Häuser · 1 Fass+2 Pf","preis":2,"kasseVor":0,"kasseNach":0,"jahr":1353,"woche":18,"vorbei":false,"ursache":null}
+{"t":204.6,"was":"greifen","zug":"fuhre:plan:mager","text":"Fahren: die mageren Häuser · 2 Fass+3 Pf","preis":3,"kasseVor":0,"kasseNach":0,"jahr":1353,"woche":19,"vorbei":false,"ursache":null}
+{"t":205,"was":"rundenende","aussenrunde":30,"jahr":1353,"woche":20,"kasse":0,"deckung":0,"vorbei":false,"ursache":null,"wochenZahl":96}
+{"t":205.5,"was":"erkunden","zug":"kern:protokoll","text":"Buch836","jahr":1353,"woche":20,"kasse":0,"vorbei":false,"ursache":null}
+{"t":206,"was":"erkunden","zug":"stadt:reiter:gegner-amort-gg-band","text":"Ohne dich geschehen · 57 Zügezugeklappt","jahr":1353,"woche":20,"kasse":0,"vorbei":false,"ursache":null}
+{"t":206.4,"was":"erkunden","zug":"gegner:zeige:57","text":"zeigen","jahr":1353,"woche":20,"kasse":0,"vorbei":false,"ursache":null}
+{"t":206.9,"was":"erkunden","zug":"stadt:reiter:gegner-amort-gg-band","text":"Ohne dich geschehen · 57 Zügeliegt auf","jahr":1353,"woche":20,"kasse":0,"vorbei":false,"ursache":null}
+{"t":207.4,"was":"greifen","zug":"fuhre:plan:mager","text":"Fahren: die mageren Häuser · 3 Fass+5 Pf","preis":5,"kasseVor":0,"kasseNach":0,"jahr":1353,"woche":21,"vorbei":false,"ursache":null}
+{"t":207.8,"was":"greifen","zug":"fuhre:plan:mager","text":"Fahren: die mageren Häuser · 2 Fass+3 Pf","preis":3,"kasseVor":0,"kasseNach":0,"jahr":1353,"woche":22,"vorbei":false,"ursache":null}
+{"t":208.3,"was":"greifen","zug":"fuhre:plan:mager","text":"Fahren: die mageren Häuser · 1 Fass+1 Pf","preis":1,"kasseVor":0,"kasseNach":0,"jahr":1353,"woche":23,"vorbei":false,"ursache":null}
+{"t":208.7,"was":"rundenende","aussenrunde":31,"jahr":1353,"woche":24,"kasse":0,"deckung":0,"vorbei":false,"ursache":null,"wochenZahl":100}
+{"t":209.2,"was":"erkunden","zug":"kern:chronik","text":"Chronik89","jahr":1353,"woche":24,"kasse":0,"vorbei":false,"ursache":null}
+{"t":209.6,"was":"erkunden","zug":"kern:protokoll","text":"Buch863","jahr":1353,"woche":24,"kasse":0,"vorbei":false,"ursache":null}
+{"t":210.1,"was":"erkunden","zug":"stadt:reiter:gegner-amort-gg-band","text":"Ohne dich geschehen · 59 Zügezugeklappt","jahr":1353,"woche":24,"kasse":0,"vorbei":false,"ursache":null}
+{"t":210.5,"was":"erkunden","zug":"gegner:zeige:59","text":"zeigen","jahr":1353,"woche":24,"kasse":0,"vorbei":false,"ursache":null}
+{"t":211,"was":"erkunden","zug":"stadt:reiter:gegner-amort-gg-band","text":"Ohne dich geschehen · 59 Zügeliegt auf","jahr":1353,"woche":24,"kasse":0,"vorbei":false,"ursache":null}
+{"t":211.5,"was":"greifen","zug":"fuhre:plan:mager","text":"Fahren: die mageren Häuser · 3 Fass+5 Pf","preis":5,"kasseVor":0,"kasseNach":0,"jahr":1353,"woche":25,"vorbei":false,"ursache":null}
+{"t":212,"was":"greifen","zug":"fuhre:plan:mager","text":"Fahren: die mageren Häuser · 1 Fass+1 Pf","preis":1,"kasseVor":0,"kasseNach":0,"jahr":1353,"woche":26,"vorbei":false,"ursache":null}
+{"t":212.5,"was":"greifen","zug":"fuhre:plan:mager","text":"Fahren: die mageren Häuser · 1 Fass+1 Pf","preis":1,"kasseVor":0,"kasseNach":0,"jahr":1353,"woche":27,"vorbei":false,"ursache":null}
+{"t":213,"was":"rundenende","aussenrunde":32,"jahr":1353,"woche":28,"kasse":0,"deckung":0,"vorbei":false,"ursache":null,"wochenZahl":104}
+{"t":213.5,"was":"erkunden","zug":"fuhre:sprung","text":"Weiter wie zuletzt · bis zu 2 Wochen","jahr":1353,"woche":30,"kasse":0,"vorbei":false,"ursache":null}
+{"t":213.9,"was":"erkunden","zug":"kern:protokoll","text":"Buch887","jahr":1353,"woche":30,"kasse":0,"vorbei":false,"ursache":null}
+{"t":214.4,"was":"erkunden","zug":"stadt:reiter:gegner-amort-gg-band","text":"Ohne dich geschehen · 60 Zügezugeklappt","jahr":1353,"woche":30,"kasse":0,"vorbei":false,"ursache":null}
+{"t":214.9,"was":"erkunden","zug":"gegner:zeige:60","text":"zeigen","jahr":1353,"woche":30,"kasse":0,"vorbei":false,"ursache":null}
+{"t":215.3,"was":"erkunden","zug":"kern:chronik","text":"Chronik91","jahr":1353,"woche":30,"kasse":0,"vorbei":false,"ursache":null}
+{"t":215.7,"was":"erkunden","zug":"kern:protokoll","text":"Buch899","jahr":1353,"woche":30,"kasse":0,"vorbei":false,"ursache":null}
+{"t":216.2,"was":"erkunden","zug":"stadt:reiter:gegner-amort-gg-band","text":"Ohne dich geschehen · 60 Zügeliegt auf","jahr":1353,"woche":30,"kasse":0,"vorbei":false,"ursache":null}
+{"t":217.4,"was":"greifen","zug":"fuhre:plan:mager","text":"Fahren: die mageren Häuser · 4 Fass+7 Pf","preis":7,"kasseVor":0,"kasseNach":33,"jahr":1354,"woche":1,"vorbei":false,"ursache":null}
+{"t":218.2,"was":"rundenende","aussenrunde":33,"jahr":1354,"woche":2,"kasse":32,"deckung":0.5714285714285714,"vorbei":false,"ursache":null,"wochenZahl":107}
+{"t":218.6,"was":"erkunden","zug":"kern:chronik","text":"Chronik98","jahr":1354,"woche":2,"kasse":32,"vorbei":false,"ursache":null}
+{"t":219,"was":"erkunden","zug":"kern:protokoll","text":"Buch918","jahr":1354,"woche":2,"kasse":32,"vorbei":false,"ursache":null}
+{"t":219.5,"was":"erkunden","zug":"stadt:reiter:gegner-amort-gg-band","text":"Ohne dich geschehen · 61 Zügezugeklappt","jahr":1354,"woche":2,"kasse":32,"vorbei":false,"ursache":null}
+{"t":220.1,"was":"erkunden","zug":"stadt:reiter:fuhre-fu-brett-fu-haeuser","text":"DIE HÄUSERwollen 7 · im Keller liegen 3 Fass","jahr":1354,"woche":2,"kasse":32,"vorbei":false,"ursache":null}
+{"t":220.9,"was":"erkunden","zug":"preis:tafel","text":"Michaelitafel 1354 · 5 Angebote","jahr":1354,"woche":2,"kasse":32,"vorbei":false,"ursache":null}
+{"t":221.5,"was":"erkunden","zug":"stadt:reiter:gegner-amort-gg-band","text":"Ohne dich geschehen · 61 Zügeliegt auf","jahr":1354,"woche":2,"kasse":32,"vorbei":false,"ursache":null}
+{"t":222,"was":"greifen","zug":"fuhre:plan:umkaempft","text":"Fahren: wo der Adler wirbt · 3 Fass+5 Pf","preis":5,"kasseVor":32,"kasseNach":30,"jahr":1354,"woche":3,"vorbei":false,"ursache":null}
+{"t":222.5,"was":"greifen","zug":"fuhre:plan:umkaempft","text":"Fahren: wo der Adler wirbt · 3 Fass+6 Pf","preis":6,"kasseVor":30,"kasseNach":30,"jahr":1354,"woche":4,"vorbei":false,"ursache":null}
+{"t":223,"was":"greifen","zug":"fuhre:plan:umkaempft","text":"Fahren: wo der Adler wirbt · 3 Fass+5 Pf","preis":5,"kasseVor":30,"kasseNach":28,"jahr":1354,"woche":5,"vorbei":false,"ursache":null}
+{"t":223.4,"was":"rundenende","aussenrunde":34,"jahr":1354,"woche":6,"kasse":27,"deckung":0.48214285714285715,"vorbei":false,"ursache":null,"wochenZahl":111}
+{"t":223.9,"was":"erkunden","zug":"kern:chronik","text":"Chronik99","jahr":1354,"woche":6,"kasse":27,"vorbei":false,"ursache":null}
+{"t":224.3,"was":"erkunden","zug":"kern:protokoll","text":"Buch941","jahr":1354,"woche":6,"kasse":27,"vorbei":false,"ursache":null}
+{"t":224.8,"was":"erkunden","zug":"stadt:reiter:fuhre-fu-brett-fu-haeuser","text":"DIE HÄUSERwollen 10 · im Keller liegen 6 Fass","jahr":1354,"woche":6,"kasse":27,"vorbei":false,"ursache":null}
+{"t":225.3,"was":"greifen","zug":"fuhre:plan:umkaempft","text":"Fahren: wo der Adler wirbt · 5 Fass+10 Pf","preis":10,"kasseVor":27,"kasseNach":27,"jahr":1354,"woche":7,"vorbei":false,"ursache":null}
+{"t":225.8,"was":"greifen","zug":"fuhre:plan:umkaempft","text":"Fahren: wo der Adler wirbt · 4 Fass+8 Pf","preis":8,"kasseVor":27,"kasseNach":27,"jahr":1354,"woche":8,"vorbei":false,"ursache":null}
+{"t":226.3,"was":"greifen","zug":"fuhre:plan:umkaempft","text":"Fahren: wo der Adler wirbt · 3 Fass+6 Pf","preis":6,"kasseVor":27,"kasseNach":27,"jahr":1354,"woche":9,"vorbei":false,"ursache":null}
+{"t":226.8,"was":"rundenende","aussenrunde":35,"jahr":1354,"woche":10,"kasse":26,"deckung":0.4642857142857143,"vorbei":false,"ursache":null,"wochenZahl":115}
+{"t":227.3,"was":"erkunden","zug":"kern:protokoll","text":"Buch963","jahr":1354,"woche":10,"kasse":26,"vorbei":false,"ursache":null}
+{"t":227.7,"was":"erkunden","zug":"stadt:reiter:gegner-amort-gg-band","text":"Ohne dich geschehen · 62 Zügezugeklappt","jahr":1354,"woche":10,"kasse":26,"vorbei":false,"ursache":null}
+{"t":228.2,"was":"erkunden","zug":"gegner:zeige:62","text":"zeigen","jahr":1354,"woche":10,"kasse":26,"vorbei":false,"ursache":null}
+{"t":228.7,"was":"erkunden","zug":"stadt:reiter:gegner-amort-gg-band","text":"Ohne dich geschehen · 62 Zügeliegt auf","jahr":1354,"woche":10,"kasse":26,"vorbei":false,"ursache":null}
+{"t":229.2,"was":"greifen","zug":"fuhre:plan:umkaempft","text":"Fahren: wo der Adler wirbt · 5 Fass+9 Pf","preis":9,"kasseVor":26,"kasseNach":24,"jahr":1354,"woche":11,"vorbei":false,"ursache":null}
+{"t":229.6,"was":"greifen","zug":"fuhre:plan:umkaempft","text":"Fahren: wo der Adler wirbt · 4 Fass+8 Pf","preis":8,"kasseVor":24,"kasseNach":23,"jahr":1354,"woche":12,"vorbei":false,"ursache":null}
+{"t":230.1,"was":"greifen","zug":"fuhre:plan:umkaempft","text":"Fahren: wo der Adler wirbt · 3 Fass+6 Pf","preis":6,"kasseVor":23,"kasseNach":23,"jahr":1354,"woche":13,"vorbei":false,"ursache":null}
+{"t":230.5,"was":"rundenende","aussenrunde":36,"jahr":1354,"woche":14,"kasse":22,"deckung":0.8461538461538461,"vorbei":false,"ursache":null,"wochenZahl":119}
+{"t":230.9,"was":"erkunden","zug":"kern:chronik","text":"Chronik102","jahr":1354,"woche":14,"kasse":22,"vorbei":false,"ursache":null}
+{"t":231.3,"was":"erkunden","zug":"kern:protokoll","text":"Buch989","jahr":1354,"woche":14,"kasse":22,"vorbei":false,"ursache":null}
+{"t":231.7,"was":"erkunden","zug":"stadt:reiter:gegner-amort-gg-band","text":"Ohne dich geschehen · 63 Zügezugeklappt","jahr":1354,"woche":14,"kasse":22,"vorbei":false,"ursache":null}
+{"t":232.1,"was":"erkunden","zug":"stadt:reiter:name-nm-band","text":"DER RUF DES HAUSESGENOMMEN von Der Rat bis 1357","jahr":1354,"woche":14,"kasse":22,"vorbei":false,"ursache":null}
+{"t":232.6,"was":"erkunden","zug":"gegner:zeige:63","text":"zeigen","jahr":1354,"woche":14,"kasse":22,"vorbei":false,"ursache":null}
+{"t":233.1,"was":"erkunden","zug":"stadt:reiter:gegner-amort-gg-band","text":"Ohne dich geschehen · 63 Zügeliegt auf","jahr":1354,"woche":14,"kasse":22,"vorbei":false,"ursache":null}
+{"t":233.6,"was":"greifen","zug":"fuhre:plan:umkaempft","text":"Fahren: wo der Adler wirbt · 5 Fass+9 Pf","preis":9,"kasseVor":22,"kasseNach":20,"jahr":1354,"woche":15,"vorbei":false,"ursache":null}
+{"t":234.1,"was":"greifen","zug":"fuhre:plan:umkaempft","text":"Fahren: wo der Adler wirbt · 4 Fass+8 Pf","preis":8,"kasseVor":20,"kasseNach":20,"jahr":1354,"woche":16,"vorbei":false,"ursache":null}
+{"t":234.6,"was":"greifen","zug":"fuhre:plan:umkaempft","text":"Fahren: wo der Adler wirbt · 3 Fass+5 Pf","preis":5,"kasseVor":20,"kasseNach":18,"jahr":1354,"woche":17,"vorbei":false,"ursache":null}
+{"t":235,"was":"rundenende","aussenrunde":37,"jahr":1354,"woche":18,"kasse":17,"deckung":0.30357142857142855,"vorbei":false,"ursache":null,"wochenZahl":123}
+{"t":235.5,"was":"erkunden","zug":"kern:protokoll","text":"Buch1016","jahr":1354,"woche":18,"kasse":17,"vorbei":false,"ursache":null}
+{"t":236,"was":"erkunden","zug":"stadt:reiter:gegner-amort-gg-band","text":"Ohne dich geschehen · 65 Zügezugeklappt","jahr":1354,"woche":18,"kasse":17,"vorbei":false,"ursache":null}
+{"t":236.5,"was":"erkunden","zug":"stadt:reiter:fuhre-fu-brett-fu-haeuser","text":"DIE HÄUSERwollen 11 · im Keller liegen 6 Fass","jahr":1354,"woche":18,"kasse":17,"vorbei":false,"ursache":null}
+{"t":237,"was":"erkunden","zug":"gegner:zeige:65","text":"zeigen","jahr":1354,"woche":18,"kasse":17,"vorbei":false,"ursache":null}
+{"t":237.4,"was":"erkunden","zug":"fuhre:probe:lindenhof","text":"auf Probe · 1 Fass · 0/6","jahr":1354,"woche":18,"kasse":17,"vorbei":false,"ursache":null}
+{"t":238,"was":"erkunden","zug":"stadt:reiter:gegner-amort-gg-band","text":"Ohne dich geschehen · 65 Zügeliegt auf","jahr":1354,"woche":18,"kasse":17,"vorbei":false,"ursache":null}
+{"t":238.4,"was":"erkunden","zug":"fuhre:probe:lindenhof","text":"Probe wieder abladen · 0/6","jahr":1354,"woche":18,"kasse":17,"vorbei":false,"ursache":null}
+{"t":239,"was":"erkunden","zug":"stadt:reiter:fuhre-fu-brett-fu-haeuser","text":"DIE HÄUSERwollen 11 · im Keller liegen 5 Fass","jahr":1354,"woche":18,"kasse":17,"vorbei":false,"ursache":null}
+{"t":239.5,"was":"greifen","zug":"fuhre:plan:umkaempft","text":"Fahren: wo der Adler wirbt · 5 Fass+10 Pf","preis":10,"kasseVor":17,"kasseNach":17,"jahr":1354,"woche":19,"vorbei":false,"ursache":null}
+{"t":240,"was":"greifen","zug":"fuhre:plan:umkaempft","text":"Fahren: wo der Adler wirbt · 4 Fass+7 Pf","preis":7,"kasseVor":17,"kasseNach":15,"jahr":1354,"woche":20,"vorbei":false,"ursache":null}
+{"t":240.5,"was":"greifen","zug":"fuhre:plan:umkaempft","text":"Fahren: wo der Adler wirbt · 3 Fass+6 Pf","preis":6,"kasseVor":15,"kasseNach":15,"jahr":1354,"woche":21,"vorbei":false,"ursache":null}
+{"t":240.9,"was":"rundenende","aussenrunde":38,"jahr":1354,"woche":22,"kasse":14,"deckung":0.7,"vorbei":false,"ursache":null,"wochenZahl":127}
+{"t":241.5,"was":"erkunden","zug":"kern:chronik","text":"Chronik103","jahr":1354,"woche":22,"kasse":14,"vorbei":false,"ursache":null}
+{"t":241.9,"was":"erkunden","zug":"kern:protokoll","text":"Buch1042","jahr":1354,"woche":22,"kasse":14,"vorbei":false,"ursache":null}
+{"t":242.5,"was":"erkunden","zug":"stadt:reiter:gegner-amort-gg-band","text":"Ohne dich geschehen · 68 Zügezugeklappt","jahr":1354,"woche":22,"kasse":14,"vorbei":false,"ursache":null}
+{"t":243,"was":"erkunden","zug":"gegner:zeige:68","text":"zeigen","jahr":1354,"woche":22,"kasse":14,"vorbei":false,"ursache":null}
+{"t":243.5,"was":"erkunden","zug":"stadt:reiter:gegner-amort-gg-band","text":"Ohne dich geschehen · 68 Zügeliegt auf","jahr":1354,"woche":22,"kasse":14,"vorbei":false,"ursache":null}
+{"t":244,"was":"greifen","zug":"fuhre:plan:umkaempft","text":"Fahren: wo der Adler wirbt · 5 Fass+10 Pf","preis":10,"kasseVor":14,"kasseNach":14,"jahr":1354,"woche":23,"vorbei":false,"ursache":null}
+{"t":244.5,"was":"greifen","zug":"fuhre:plan:umkaempft","text":"Fahren: wo der Adler wirbt · 4 Fass+7 Pf","preis":7,"kasseVor":14,"kasseNach":11,"jahr":1354,"woche":24,"vorbei":false,"ursache":null}
+{"t":245,"was":"greifen","zug":"fuhre:plan:umkaempft","text":"Fahren: wo der Adler wirbt · 3 Fass+5 Pf","preis":5,"kasseVor":11,"kasseNach":9,"jahr":1354,"woche":25,"vorbei":false,"ursache":null}
+{"t":245.5,"was":"rundenende","aussenrunde":39,"jahr":1354,"woche":26,"kasse":8,"deckung":0.2222222222222222,"vorbei":false,"ursache":null,"wochenZahl":131}
+{"t":246,"was":"erkunden","zug":"kern:chronik","text":"Chronik106","jahr":1354,"woche":26,"kasse":8,"vorbei":false,"ursache":null}
+{"t":246.4,"was":"erkunden","zug":"kern:protokoll","text":"Buch1075","jahr":1354,"woche":26,"kasse":8,"vorbei":false,"ursache":null}
+{"t":247.1,"was":"erkunden","zug":"stadt:reiter:gegner-amort-gg-band","text":"Ohne dich geschehen · 75 Zügezugeklappt","jahr":1354,"woche":26,"kasse":8,"vorbei":false,"ursache":null}
+{"t":247.5,"was":"erkunden","zug":"stadt:ortsmarken","text":"Ortsmarken10 im Bild","jahr":1354,"woche":26,"kasse":8,"vorbei":false,"ursache":null}
+{"t":248,"was":"erkunden","zug":"gegner:zeige:75","text":"zeigen","jahr":1354,"woche":26,"kasse":8,"vorbei":false,"ursache":null}
+{"t":248.7,"was":"erkunden","zug":"stadt:reiter:gegner-amort-gg-band","text":"Ohne dich geschehen · 75 Zügeliegt auf","jahr":1354,"woche":26,"kasse":8,"vorbei":false,"ursache":null}
+{"t":249.1,"was":"erkunden","zug":"stadt:ortsmarken","text":"Ortsmarken10 auf dem Pflock","jahr":1354,"woche":26,"kasse":8,"vorbei":false,"ursache":null}
+{"t":249.6,"was":"greifen","zug":"fuhre:plan:umkaempft","text":"Fahren: wo der Adler wirbt · 5 Fass+9 Pf","preis":9,"kasseVor":8,"kasseNach":7,"jahr":1354,"woche":27,"vorbei":false,"ursache":null}
+{"t":250.1,"was":"greifen","zug":"fuhre:plan:umkaempft","text":"Fahren: wo der Adler wirbt · 4 Fass+7 Pf","preis":7,"kasseVor":7,"kasseNach":6,"jahr":1354,"woche":28,"vorbei":false,"ursache":null}
+{"t":250.6,"was":"greifen","zug":"fuhre:plan:umkaempft","text":"Fahren: wo der Adler wirbt · 3 Fass+6 Pf","preis":6,"kasseVor":6,"kasseNach":6,"jahr":1354,"woche":29,"vorbei":false,"ursache":null}
+{"t":251.1,"was":"rundenende","aussenrunde":40,"jahr":1354,"woche":30,"kasse":5,"deckung":0.1388888888888889,"vorbei":false,"ursache":null,"wochenZahl":135}
+{"t":251.9,"was":"erkunden","zug":"kern:protokoll","text":"Buch1100","jahr":1354,"woche":30,"kasse":5,"vorbei":false,"ursache":null}
+{"t":252.4,"was":"erkunden","zug":"stadt:reiter:gegner-amort-gg-band","text":"Ohne dich geschehen · 77 Zügezugeklappt","jahr":1354,"woche":30,"kasse":5,"vorbei":false,"ursache":null}
+{"t":252.9,"was":"erkunden","zug":"stadt:reiter:fuhre-fu-brett-fu-haeuser","text":"DIE HÄUSERwollen 12 · im Keller liegen 6 Fass","jahr":1354,"woche":30,"kasse":5,"vorbei":false,"ursache":null}
+{"t":253.4,"was":"erkunden","zug":"gegner:zeige:77","text":"zeigen","jahr":1354,"woche":30,"kasse":5,"vorbei":false,"ursache":null}
+{"t":253.9,"was":"erkunden","zug":"stadt:reiter:gegner-amort-gg-band","text":"Ohne dich geschehen · 77 Zügeliegt auf","jahr":1354,"woche":30,"kasse":5,"vorbei":false,"ursache":null}
+{"t":255,"was":"greifen","zug":"fuhre:plan:umkaempft","text":"Fahren: wo der Adler wirbt · 5 Fass+9 Pf","preis":9,"kasseVor":5,"kasseNach":102,"jahr":1355,"woche":1,"vorbei":false,"ursache":null}
+{"t":256.2,"was":"greifen","zug":"preis:festlege:pfruende","text":"Festlegen — Geld herein+1.100 Pf","preis":1100,"kasseVor":102,"kasseNach":1202,"jahr":1355,"woche":1,"vorbei":false,"ursache":null}
+{"t":256.7,"was":"greifen","zug":"gegner:zukaufen:faehrhaus","text":"lieber zukaufen1 Fass · 12 Pf","preis":-12,"kasseVor":1202,"kasseNach":1190,"jahr":1355,"woche":1,"vorbei":false,"ursache":null}
+{"t":257.3,"was":"rundenende","aussenrunde":41,"jahr":1355,"woche":2,"kasse":1189,"deckung":33.02777777777778,"vorbei":false,"ursache":null,"wochenZahl":137}
+{"t":257.8,"was":"erkunden","zug":"fuhre:uebergabe-auf","text":"DIE ÜBERGABE VOR DEM RAT · noch 3 Wochen","jahr":1355,"woche":2,"kasse":1189,"vorbei":false,"ursache":null}
+{"t":258.2,"was":"erkunden","zug":"kern:chronik","text":"Chronik115","jahr":1355,"woche":2,"kasse":1189,"vorbei":false,"ursache":null}
+{"t":258.6,"was":"erkunden","zug":"kern:protokoll","text":"Buch1136","jahr":1355,"woche":2,"kasse":1189,"vorbei":false,"ursache":null}
+{"t":259.2,"was":"erkunden","zug":"stadt:reiter:fuhre-fu-brett-fu-haeuser","text":"DIE HÄUSERwollen 8 · im Keller liegen 3 Fass","jahr":1355,"woche":2,"kasse":1189,"vorbei":false,"ursache":null}
+{"t":259.8,"was":"erkunden","zug":"stadt:reiter:fuhre-fu-brett-fu-keller","text":"DER KELLER3 von 15 Fass · 3 reif","jahr":1355,"woche":2,"kasse":1189,"vorbei":false,"ursache":null}
+{"t":260.6,"was":"erkunden","zug":"preis:tafel","text":"Michaelitafel 1355 · 5 Angebote","jahr":1355,"woche":2,"kasse":1189,"vorbei":false,"ursache":null}
+{"t":261.2,"was":"erkunden","zug":"stadt:reiter:preis-pr-stil-pergament-pr-tafel","text":"MICHAELI 1355Der Rat setzt den Bierpfennig. Wer darüber g","jahr":1355,"woche":2,"kasse":1189,"vorbei":false,"ursache":null}
+{"t":261.8,"was":"greifen","zug":"fuhre:plan:umkaempft","text":"Fahren: wo der Adler wirbt · 3 Fass+5 Pf","preis":5,"kasseVor":1189,"kasseNach":1183,"jahr":1355,"woche":3,"vorbei":false,"ursache":null}
+{"t":262.3,"was":"greifen","zug":"fuhre:plan:umkaempft","text":"Fahren: wo der Adler wirbt · 3 Fass+6 Pf","preis":6,"kasseVor":1183,"kasseNach":1179,"jahr":1355,"woche":4,"vorbei":false,"ursache":null}
+{"t":262.8,"was":"greifen","zug":"fuhre:plan:umkaempft","text":"Fahren: wo der Adler wirbt · 3 Fass+6 Pf","preis":6,"kasseVor":1179,"kasseNach":1175,"jahr":1355,"woche":5,"vorbei":false,"ursache":null}
+{"t":263.3,"was":"rundenende","aussenrunde":42,"jahr":1355,"woche":6,"kasse":1174,"deckung":32.611111111111114,"vorbei":false,"ursache":null,"wochenZahl":141}
+{"t":263.8,"was":"erkunden","zug":"kern:chronik","text":"Chronik116","jahr":1355,"woche":6,"kasse":1174,"vorbei":false,"ursache":null}
+{"t":264.2,"was":"erkunden","zug":"kern:protokoll","text":"Buch1157","jahr":1355,"woche":6,"kasse":1174,"vorbei":false,"ursache":null}
+{"t":264.7,"was":"erkunden","zug":"stadt:reiter:gegner-amort-gg-band","text":"Ohne dich geschehen · 80 Zügezugeklappt","jahr":1355,"woche":6,"kasse":1174,"vorbei":false,"ursache":null}
+{"t":265.3,"was":"erkunden","zug":"stadt:reiter:fuhre-fu-brett-fu-keller","text":"DER KELLER6 von 15 Fass · 6 reif","jahr":1355,"woche":6,"kasse":1174,"vorbei":false,"ursache":null}
+{"t":265.8,"was":"erkunden","zug":"gegner:zeige:80","text":"zeigen","jahr":1355,"woche":6,"kasse":1174,"vorbei":false,"ursache":null}
+{"t":266.3,"was":"erkunden","zug":"stadt:reiter:gegner-amort-gg-band","text":"Ohne dich geschehen · 80 Zügeliegt auf","jahr":1355,"woche":6,"kasse":1174,"vorbei":false,"ursache":null}
+{"t":266.8,"was":"greifen","zug":"fuhre:plan:umkaempft","text":"Fahren: wo der Adler wirbt · 5 Fass+9 Pf","preis":9,"kasseVor":1174,"kasseNach":1165,"jahr":1355,"woche":7,"vorbei":false,"ursache":null}
+{"t":267.3,"was":"greifen","zug":"fuhre:plan:umkaempft","text":"Fahren: wo der Adler wirbt · 4 Fass+8 Pf","preis":8,"kasseVor":1165,"kasseNach":1148,"jahr":1355,"woche":8,"vorbei":false,"ursache":null}
+{"t":267.9,"was":"greifen","zug":"fuhre:plan:umkaempft","text":"Fahren: wo der Adler wirbt · 3 Fass+6 Pf","preis":6,"kasseVor":1148,"kasseNach":1135,"jahr":1355,"woche":9,"vorbei":false,"ursache":null}
+{"t":268.4,"was":"rundenende","aussenrunde":43,"jahr":1355,"woche":10,"kasse":1134,"deckung":17.181818181818183,"vorbei":false,"ursache":null,"wochenZahl":145}
+{"t":268.8,"was":"erkunden","zug":"kern:chronik","text":"Chronik119","jahr":1355,"woche":10,"kasse":1134,"vorbei":false,"ursache":null}
+{"t":269.3,"was":"erkunden","zug":"kern:protokoll","text":"Buch1183","jahr":1355,"woche":10,"kasse":1134,"vorbei":false,"ursache":null}
+{"t":269.8,"was":"erkunden","zug":"stadt:reiter:gegner-amort-gg-band","text":"Ohne dich geschehen · 83 Zügezugeklappt","jahr":1355,"woche":10,"kasse":1134,"vorbei":false,"ursache":null}
+{"t":270.3,"was":"erkunden","zug":"gegner:zeige:83","text":"zeigen","jahr":1355,"woche":10,"kasse":1134,"vorbei":false,"ursache":null}
+{"t":270.8,"was":"erkunden","zug":"stadt:reiter:gegner-amort-gg-band","text":"Ohne dich geschehen · 83 Zügeliegt auf","jahr":1355,"woche":10,"kasse":1134,"vorbei":false,"ursache":null}
+{"t":271.3,"was":"greifen","zug":"fuhre:plan:umkaempft","text":"Fahren: wo der Adler wirbt · 5 Fass+9 Pf","preis":9,"kasseVor":1134,"kasseNach":1123,"jahr":1355,"woche":11,"vorbei":false,"ursache":null}
+{"t":271.8,"was":"greifen","zug":"fuhre:plan:umkaempft","text":"Fahren: wo der Adler wirbt · 4 Fass+8 Pf","preis":8,"kasseVor":1123,"kasseNach":1118,"jahr":1355,"woche":12,"vorbei":false,"ursache":null}
+{"t":272.2,"was":"greifen","zug":"fuhre:plan:umkaempft","text":"Fahren: wo der Adler wirbt · 3 Fass+6 Pf","preis":6,"kasseVor":1118,"kasseNach":1114,"jahr":1355,"woche":13,"vorbei":false,"ursache":null}
+{"t":272.7,"was":"rundenende","aussenrunde":44,"jahr":1355,"woche":14,"kasse":1113,"deckung":16.863636363636363,"vorbei":false,"ursache":null,"wochenZahl":149}
+{"t":273.1,"was":"erkunden","zug":"kern:protokoll","text":"Buch1204","jahr":1355,"woche":14,"kasse":1113,"vorbei":false,"ursache":null}
+{"t":273.6,"was":"erkunden","zug":"stadt:reiter:gegner-amort-gg-band","text":"Ohne dich geschehen · 84 Zügezugeklappt","jahr":1355,"woche":14,"kasse":1113,"vorbei":false,"ursache":null}
+{"t":274.1,"was":"erkunden","zug":"gegner:zeige:84","text":"zeigen","jahr":1355,"woche":14,"kasse":1113,"vorbei":false,"ursache":null}
+{"t":274.6,"was":"erkunden","zug":"stadt:reiter:gegner-amort-gg-band","text":"Ohne dich geschehen · 84 Zügeliegt auf","jahr":1355,"woche":14,"kasse":1113,"vorbei":false,"ursache":null}
+{"t":275.2,"was":"erkunden","zug":"gegner:abloesen:ochse","text":"OCH · RATnicht ablösbar","jahr":1355,"woche":14,"kasse":1113,"vorbei":false,"ursache":null}
+{"t":275.7,"was":"greifen","zug":"fuhre:plan:umkaempft","text":"Fahren: wo der Adler wirbt · 5 Fass+9 Pf","preis":9,"kasseVor":1113,"kasseNach":1107,"jahr":1355,"woche":15,"vorbei":false,"ursache":null}
+{"t":276.2,"was":"greifen","zug":"fuhre:plan:umkaempft","text":"Fahren: wo der Adler wirbt · 4 Fass+7 Pf","preis":7,"kasseVor":1107,"kasseNach":1103,"jahr":1355,"woche":16,"vorbei":false,"ursache":null}
+{"t":276.6,"was":"greifen","zug":"fuhre:plan:umkaempft","text":"Fahren: wo der Adler wirbt · 2 Fass+3 Pf","preis":3,"kasseVor":1103,"kasseNach":1099,"jahr":1355,"woche":17,"vorbei":false,"ursache":null}
+{"t":277.1,"was":"rundenende","aussenrunde":45,"jahr":1355,"woche":18,"kasse":1098,"deckung":30.5,"vorbei":false,"ursache":null,"wochenZahl":153}
+{"t":277.6,"was":"erkunden","zug":"kern:chronik","text":"Chronik124","jahr":1355,"woche":18,"kasse":1098,"vorbei":false,"ursache":null}
+{"t":278,"was":"erkunden","zug":"kern:protokoll","text":"Buch1233","jahr":1355,"woche":18,"kasse":1098,"vorbei":false,"ursache":null}
+{"t":278.6,"was":"erkunden","zug":"stadt:reiter:gegner-amort-gg-band","text":"Ohne dich geschehen · 88 Zügezugeklappt","jahr":1355,"woche":18,"kasse":1098,"vorbei":false,"ursache":null}
+{"t":279.1,"was":"erkunden","zug":"gegner:zeige:88","text":"zeigen","jahr":1355,"woche":18,"kasse":1098,"vorbei":false,"ursache":null}
+{"t":279.6,"was":"erkunden","zug":"stadt:reiter:gegner-amort-gg-band","text":"Ohne dich geschehen · 88 Zügeliegt auf","jahr":1355,"woche":18,"kasse":1098,"vorbei":false,"ursache":null}
+{"t":280.1,"was":"greifen","zug":"fuhre:plan:umkaempft","text":"Fahren: wo der Adler wirbt · 5 Fass+9 Pf","preis":9,"kasseVor":1098,"kasseNach":1091,"jahr":1355,"woche":19,"vorbei":false,"ursache":null}
+{"t":280.6,"was":"greifen","zug":"fuhre:plan:umkaempft","text":"Fahren: wo der Adler wirbt · 4 Fass+7 Pf","preis":7,"kasseVor":1091,"kasseNach":1086,"jahr":1355,"woche":20,"vorbei":false,"ursache":null}
+{"t":281.1,"was":"greifen","zug":"fuhre:plan:umkaempft","text":"Fahren: wo der Adler wirbt · 3 Fass+5 Pf","preis":5,"kasseVor":1086,"kasseNach":1082,"jahr":1355,"woche":21,"vorbei":false,"ursache":null}
+{"t":281.6,"was":"rundenende","aussenrunde":46,"jahr":1355,"woche":22,"kasse":1081,"deckung":30.02777777777778,"vorbei":false,"ursache":null,"wochenZahl":157}
+{"t":282,"was":"erkunden","zug":"kern:protokoll","text":"Buch1252","jahr":1355,"woche":22,"kasse":1081,"vorbei":false,"ursache":null}
+{"t":282.5,"was":"greifen","zug":"fuhre:plan:umkaempft","text":"Fahren: wo der Adler wirbt · 5 Fass+9 Pf","preis":9,"kasseVor":1081,"kasseNach":1076,"jahr":1355,"woche":23,"vorbei":false,"ursache":null}
+{"t":283,"was":"greifen","zug":"fuhre:plan:umkaempft","text":"Fahren: wo der Adler wirbt · 4 Fass+7 Pf","preis":7,"kasseVor":1076,"kasseNach":1075,"jahr":1355,"woche":24,"vorbei":false,"ursache":null}
+{"t":283.5,"was":"greifen","zug":"fuhre:plan:umkaempft","text":"Fahren: wo der Adler wirbt · 3 Fass+6 Pf","preis":6,"kasseVor":1075,"kasseNach":1075,"jahr":1355,"woche":25,"vorbei":false,"ursache":null}
+{"t":283.9,"was":"rundenende","aussenrunde":47,"jahr":1355,"woche":26,"kasse":1074,"deckung":29.833333333333332,"vorbei":false,"ursache":null,"wochenZahl":161}
+{"t":284.4,"was":"erkunden","zug":"kern:chronik","text":"Chronik125","jahr":1355,"woche":26,"kasse":1074,"vorbei":false,"ursache":null}
+{"t":284.8,"was":"erkunden","zug":"kern:protokoll","text":"Buch1273","jahr":1355,"woche":26,"kasse":1074,"vorbei":false,"ursache":null}
+{"t":285.4,"was":"erkunden","zug":"stadt:reiter:gegner-amort-gg-band","text":"Ohne dich geschehen · 89 Zügezugeklappt","jahr":1355,"woche":26,"kasse":1074,"vorbei":false,"ursache":null}
+{"t":285.9,"was":"erkunden","zug":"gegner:zeige:89","text":"zeigen","jahr":1355,"woche":26,"kasse":1074,"vorbei":false,"ursache":null}
+{"t":286.5,"was":"erkunden","zug":"stadt:reiter:gegner-amort-gg-band","text":"Ohne dich geschehen · 89 Zügeliegt auf","jahr":1355,"woche":26,"kasse":1074,"vorbei":false,"ursache":null}
+{"t":287,"was":"greifen","zug":"fuhre:plan:umkaempft","text":"Fahren: wo der Adler wirbt · 5 Fass+9 Pf","preis":9,"kasseVor":1074,"kasseNach":1071,"jahr":1355,"woche":27,"vorbei":false,"ursache":null}
+{"t":287.5,"was":"greifen","zug":"fuhre:plan:umkaempft","text":"Fahren: wo der Adler wirbt · 4 Fass+8 Pf","preis":8,"kasseVor":1071,"kasseNach":1071,"jahr":1355,"woche":28,"vorbei":false,"ursache":null}
+{"t":288,"was":"greifen","zug":"fuhre:plan:umkaempft","text":"Fahren: wo der Adler wirbt · 3 Fass+5 Pf","preis":5,"kasseVor":1071,"kasseNach":1068,"jahr":1355,"woche":29,"vorbei":false,"ursache":null}
+{"t":288.6,"was":"rundenende","aussenrunde":48,"jahr":1355,"woche":30,"kasse":1067,"deckung":19.053571428571427,"vorbei":false,"ursache":null,"wochenZahl":165}
+{"t":289,"was":"erkunden","zug":"kern:chronik","text":"Chronik126","jahr":1355,"woche":30,"kasse":1067,"vorbei":false,"ursache":null}
+{"t":289.4,"was":"erkunden","zug":"kern:protokoll","text":"Buch1300","jahr":1355,"woche":30,"kasse":1067,"vorbei":false,"ursache":null}
+{"t":290,"was":"erkunden","zug":"stadt:reiter:gegner-amort-gg-band","text":"Ohne dich geschehen · 92 Zügezugeklappt","jahr":1355,"woche":30,"kasse":1067,"vorbei":false,"ursache":null}
+{"t":290.5,"was":"erkunden","zug":"gegner:zeige:92","text":"zeigen","jahr":1355,"woche":30,"kasse":1067,"vorbei":false,"ursache":null}
+{"t":291.1,"was":"erkunden","zug":"stadt:reiter:gegner-amort-gg-band","text":"Ohne dich geschehen · 92 Zügeliegt auf","jahr":1355,"woche":30,"kasse":1067,"vorbei":false,"ursache":null}
+{"t":292.4,"was":"greifen","zug":"fuhre:plan:umkaempft","text":"Fahren: wo der Adler wirbt · 5 Fass+9 Pf","preis":9,"kasseVor":1067,"kasseNach":355,"jahr":1356,"woche":1,"vorbei":false,"ursache":null}
+{"t":293.6,"was":"greifen","zug":"gegner:zukaufen:faehrhaus","text":"lieber zukaufen1 Fass · 12 Pf","preis":-12,"kasseVor":355,"kasseNach":343,"jahr":1356,"woche":1,"vorbei":false,"ursache":null}
+{"t":294.2,"was":"greifen","zug":"gegner:zukaufen:obernberg","text":"lieber zukaufen1 Fass · 12 Pf","preis":-12,"kasseVor":343,"kasseNach":331,"jahr":1356,"woche":1,"vorbei":false,"ursache":null}
+{"t":294.9,"was":"rundenende","aussenrunde":49,"jahr":1356,"woche":2,"kasse":330,"deckung":5.892857142857143,"vorbei":false,"ursache":null,"wochenZahl":167}
+{"t":295.3,"was":"erkunden","zug":"kern:chronik","text":"Chronik135","jahr":1356,"woche":2,"kasse":330,"vorbei":false,"ursache":null}
+{"t":295.7,"was":"erkunden","zug":"kern:protokoll","text":"Buch1334","jahr":1356,"woche":2,"kasse":330,"vorbei":false,"ursache":null}
+{"t":296.3,"was":"erkunden","zug":"stadt:reiter:gegner-amort-gg-band","text":"Ohne dich geschehen · 93 Zügezugeklappt","jahr":1356,"woche":2,"kasse":330,"vorbei":false,"ursache":null}
+{"t":296.7,"was":"erkunden","zug":"stadt:ortsmarken","text":"Ortsmarken9 im Bild","jahr":1356,"woche":2,"kasse":330,"vorbei":false,"ursache":null}
+{"t":297.5,"was":"erkunden","zug":"preis:tafel","text":"Michaelitafel 1356 · 5 Angebote","jahr":1356,"woche":2,"kasse":330,"vorbei":false,"ursache":null}
+{"t":298.1,"was":"erkunden","zug":"stadt:reiter:gegner-amort-gg-band","text":"Ohne dich geschehen · 93 Zügeliegt auf","jahr":1356,"woche":2,"kasse":330,"vorbei":false,"ursache":null}
+{"t":298.7,"was":"greifen","zug":"fuhre:plan:umkaempft","text":"Fahren: wo der Adler wirbt · 3 Fass+4 Pf","preis":4,"kasseVor":330,"kasseNach":326,"jahr":1356,"woche":3,"vorbei":false,"ursache":null}
+{"t":299.2,"was":"greifen","zug":"fuhre:plan:umkaempft","text":"Fahren: wo der Adler wirbt · 3 Fass+5 Pf","preis":5,"kasseVor":326,"kasseNach":325,"jahr":1356,"woche":4,"vorbei":false,"ursache":null}
+{"t":299.7,"was":"greifen","zug":"fuhre:plan:umkaempft","text":"Fahren: wo der Adler wirbt · 3 Fass+5 Pf","preis":5,"kasseVor":325,"kasseNach":324,"jahr":1356,"woche":5,"vorbei":false,"ursache":null}
+{"t":300.1,"was":"rundenende","aussenrunde":50,"jahr":1356,"woche":6,"kasse":323,"deckung":5.767857142857143,"vorbei":false,"ursache":null,"wochenZahl":171}
+{"t":300.6,"was":"erkunden","zug":"kern:protokoll","text":"Buch1354","jahr":1356,"woche":6,"kasse":323,"vorbei":false,"ursache":null}
+{"t":301.1,"was":"greifen","zug":"fuhre:plan:umkaempft","text":"Fahren: wo der Adler wirbt · 5 Fass+8 Pf","preis":8,"kasseVor":323,"kasseNach":318,"jahr":1356,"woche":7,"vorbei":false,"ursache":null}
+{"t":301.6,"was":"greifen","zug":"fuhre:plan:umkaempft","text":"Fahren: wo der Adler wirbt · 4 Fass+8 Pf","preis":8,"kasseVor":318,"kasseNach":318,"jahr":1356,"woche":8,"vorbei":false,"ursache":null}
+{"t":302,"was":"greifen","zug":"fuhre:plan:umkaempft","text":"Fahren: wo der Adler wirbt · 3 Fass+5 Pf","preis":5,"kasseVor":318,"kasseNach":317,"jahr":1356,"woche":9,"vorbei":false,"ursache":null}
+{"t":302.5,"was":"rundenende","aussenrunde":51,"jahr":1356,"woche":10,"kasse":316,"deckung":5.642857142857143,"vorbei":false,"ursache":null,"wochenZahl":175}
+{"t":302.9,"was":"erkunden","zug":"kern:chronik","text":"Chronik137","jahr":1356,"woche":10,"kasse":316,"vorbei":false,"ursache":null}
+{"t":303.4,"was":"erkunden","zug":"kern:protokoll","text":"Buch1380","jahr":1356,"woche":10,"kasse":316,"vorbei":false,"ursache":null}
+{"t":303.9,"was":"erkunden","zug":"stadt:reiter:gegner-amort-gg-band","text":"Ohne dich geschehen · 97 Zügezugeklappt","jahr":1356,"woche":10,"kasse":316,"vorbei":false,"ursache":null}
+{"t":304.5,"was":"erkunden","zug":"gegner:zeige:97","text":"zeigen","jahr":1356,"woche":10,"kasse":316,"vorbei":false,"ursache":null}
+{"t":305.1,"was":"erkunden","zug":"stadt:reiter:gegner-amort-gg-band","text":"Ohne dich geschehen · 97 Zügeliegt auf","jahr":1356,"woche":10,"kasse":316,"vorbei":false,"ursache":null}
+{"t":305.6,"was":"greifen","zug":"fuhre:plan:umkaempft","text":"Fahren: wo der Adler wirbt · 5 Fass+9 Pf","preis":9,"kasseVor":316,"kasseNach":314,"jahr":1356,"woche":11,"vorbei":false,"ursache":null}
+{"t":306.2,"was":"greifen","zug":"fuhre:plan:umkaempft","text":"Fahren: wo der Adler wirbt · 4 Fass+7 Pf","preis":7,"kasseVor":314,"kasseNach":311,"jahr":1356,"woche":12,"vorbei":false,"ursache":null}
+{"t":306.9,"was":"greifen","zug":"fuhre:plan:umkaempft","text":"Fahren: wo der Adler wirbt · 3 Fass+5 Pf","preis":5,"kasseVor":311,"kasseNach":309,"jahr":1356,"woche":13,"vorbei":false,"ursache":null}
+{"t":307.5,"was":"rundenende","aussenrunde":52,"jahr":1356,"woche":14,"kasse":308,"deckung":4.277777777777778,"vorbei":false,"ursache":null,"wochenZahl":179}
+{"t":308,"was":"erkunden","zug":"kern:chronik","text":"Chronik139","jahr":1356,"woche":14,"kasse":308,"vorbei":false,"ursache":null}
+{"t":308.4,"was":"erkunden","zug":"kern:protokoll","text":"Buch1408","jahr":1356,"woche":14,"kasse":308,"vorbei":false,"ursache":null}
+{"t":309.2,"was":"erkunden","zug":"stadt:reiter:gegner-amort-gg-band","text":"Ohne dich geschehen · 101 Zügezugeklappt","jahr":1356,"woche":14,"kasse":308,"vorbei":false,"ursache":null}
+{"t":309.8,"was":"erkunden","zug":"gegner:zeige:101","text":"zeigen","jahr":1356,"woche":14,"kasse":308,"vorbei":false,"ursache":null}
+{"t":310.5,"was":"erkunden","zug":"stadt:reiter:gegner-amort-gg-band","text":"Ohne dich geschehen · 101 Zügeliegt auf","jahr":1356,"woche":14,"kasse":308,"vorbei":false,"ursache":null}
+{"t":311.1,"was":"greifen","zug":"fuhre:plan:umkaempft","text":"Fahren: wo der Adler wirbt · 5 Fass+9 Pf","preis":9,"kasseVor":308,"kasseNach":302,"jahr":1356,"woche":15,"vorbei":false,"ursache":null}
+{"t":311.6,"was":"greifen","zug":"fuhre:plan:umkaempft","text":"Fahren: wo der Adler wirbt · 4 Fass+7 Pf","preis":7,"kasseVor":302,"kasseNach":297,"jahr":1356,"woche":16,"vorbei":false,"ursache":null}
+{"t":312.3,"was":"greifen","zug":"fuhre:plan:umkaempft","text":"Fahren: wo der Adler wirbt · 3 Fass+5 Pf","preis":5,"kasseVor":297,"kasseNach":293,"jahr":1356,"woche":17,"vorbei":false,"ursache":null}
+{"t":312.9,"was":"rundenende","aussenrunde":53,"jahr":1356,"woche":18,"kasse":292,"deckung":3.4761904761904763,"vorbei":false,"ursache":null,"wochenZahl":183}
+{"t":313.4,"was":"erkunden","zug":"kern:chronik","text":"Chronik140","jahr":1356,"woche":18,"kasse":292,"vorbei":false,"ursache":null}
+{"t":313.8,"was":"erkunden","zug":"kern:protokoll","text":"Buch1432","jahr":1356,"woche":18,"kasse":292,"vorbei":false,"ursache":null}
+{"t":314.4,"was":"erkunden","zug":"stadt:reiter:gegner-amort-gg-band","text":"Ohne dich geschehen · 103 Zügezugeklappt","jahr":1356,"woche":18,"kasse":292,"vorbei":false,"ursache":null}
+{"t":314.9,"was":"erkunden","zug":"gegner:zeige:103","text":"zeigen","jahr":1356,"woche":18,"kasse":292,"vorbei":false,"ursache":null}
+{"t":315.5,"was":"erkunden","zug":"stadt:reiter:gegner-amort-gg-band","text":"Ohne dich geschehen · 103 Zügeliegt auf","jahr":1356,"woche":18,"kasse":292,"vorbei":false,"ursache":null}
+{"t":316,"was":"greifen","zug":"fuhre:plan:umkaempft","text":"Fahren: wo der Adler wirbt · 5 Fass+9 Pf","preis":9,"kasseVor":292,"kasseNach":289,"jahr":1356,"woche":19,"vorbei":false,"ursache":null}
+{"t":316.5,"was":"greifen","zug":"fuhre:plan:umkaempft","text":"Fahren: wo der Adler wirbt · 4 Fass+7 Pf","preis":7,"kasseVor":289,"kasseNach":288,"jahr":1356,"woche":20,"vorbei":false,"ursache":null}
+{"t":317,"was":"greifen","zug":"fuhre:plan:umkaempft","text":"Fahren: wo der Adler wirbt · 3 Fass+5 Pf","preis":5,"kasseVor":288,"kasseNach":285,"jahr":1356,"woche":21,"vorbei":false,"ursache":null}
+{"t":317.5,"was":"rundenende","aussenrunde":54,"jahr":1356,"woche":22,"kasse":284,"deckung":3.380952380952381,"vorbei":false,"ursache":null,"wochenZahl":187}
+{"t":317.9,"was":"erkunden","zug":"kern:protokoll","text":"Buch1456","jahr":1356,"woche":22,"kasse":284,"vorbei":false,"ursache":null}
+{"t":318.4,"was":"erkunden","zug":"gegner:abloesen:torschenke","text":"TOR · RATnicht ablösbar","jahr":1356,"woche":22,"kasse":284,"vorbei":false,"ursache":null}
+{"t":318.9,"was":"greifen","zug":"fuhre:plan:umkaempft","text":"Fahren: wo der Adler wirbt · 5 Fass+9 Pf","preis":9,"kasseVor":284,"kasseNach":283,"jahr":1356,"woche":23,"vorbei":false,"ursache":null}
+{"t":319.3,"was":"greifen","zug":"fuhre:plan:umkaempft","text":"Fahren: wo der Adler wirbt · 4 Fass+7 Pf","preis":7,"kasseVor":283,"kasseNach":282,"jahr":1356,"woche":24,"vorbei":false,"ursache":null}
+{"t":319.8,"was":"greifen","zug":"fuhre:plan:umkaempft","text":"Fahren: wo der Adler wirbt · 3 Fass+5 Pf","preis":5,"kasseVor":282,"kasseNach":280,"jahr":1356,"woche":25,"vorbei":false,"ursache":null}
+{"t":320.3,"was":"rundenende","aussenrunde":55,"jahr":1356,"woche":26,"kasse":279,"deckung":11.625,"vorbei":false,"ursache":null,"wochenZahl":191}
+{"t":320.8,"was":"erkunden","zug":"gegner:hinhalten:hirsch","text":"Fass an den Wirt1 Fass statt Geld","jahr":1356,"woche":26,"kasse":279,"vorbei":false,"ursache":null}
+{"t":321.3,"was":"erkunden","zug":"kern:chronik","text":"Chronik141","jahr":1356,"woche":26,"kasse":279,"vorbei":false,"ursache":null}
+{"t":321.7,"was":"erkunden","zug":"kern:protokoll","text":"Buch1486","jahr":1356,"woche":26,"kasse":279,"vorbei":false,"ursache":null}
+{"t":322.2,"was":"erkunden","zug":"stadt:reiter:gegner-amort-gg-band","text":"Ohne dich geschehen · 107 Zügezugeklappt","jahr":1356,"woche":26,"kasse":279,"vorbei":false,"ursache":null}
+{"t":322.7,"was":"erkunden","zug":"kern:chronik","text":"Chronik142","jahr":1356,"woche":26,"kasse":279,"vorbei":false,"ursache":null}
+{"t":323.1,"was":"erkunden","zug":"kern:protokoll","text":"Buch1487","jahr":1356,"woche":26,"kasse":279,"vorbei":false,"ursache":null}
+{"t":323.6,"was":"erkunden","zug":"stadt:reiter:gegner-amort-gg-band","text":"Ohne dich geschehen · 107 Zügeliegt auf","jahr":1356,"woche":26,"kasse":279,"vorbei":false,"ursache":null}
+{"t":324.2,"was":"erkunden","zug":"stadt:reiter:fuhre-fu-brett-fu-keller","text":"DER KELLER5 von 15 Fass · 5 reif","jahr":1356,"woche":26,"kasse":279,"vorbei":false,"ursache":null}
+{"t":324.7,"was":"greifen","zug":"fuhre:plan:umkaempft","text":"Fahren: wo der Adler wirbt · 5 Fass+8 Pf","preis":8,"kasseVor":279,"kasseNach":275,"jahr":1356,"woche":27,"vorbei":false,"ursache":null}
+{"t":325.2,"was":"greifen","zug":"fuhre:plan:umkaempft","text":"Fahren: wo der Adler wirbt · 3 Fass+5 Pf","preis":5,"kasseVor":275,"kasseNach":272,"jahr":1356,"woche":28,"vorbei":false,"ursache":null}
+{"t":325.7,"was":"greifen","zug":"fuhre:plan:umkaempft","text":"Fahren: wo der Adler wirbt · 3 Fass+5 Pf","preis":5,"kasseVor":272,"kasseNach":271,"jahr":1356,"woche":29,"vorbei":false,"ursache":null}
+{"t":326.3,"was":"rundenende","aussenrunde":56,"jahr":1356,"woche":30,"kasse":270,"deckung":11.25,"vorbei":false,"ursache":null,"wochenZahl":195}
+{"t":326.7,"was":"erkunden","zug":"kern:chronik","text":"Chronik143","jahr":1356,"woche":30,"kasse":270,"vorbei":false,"ursache":null}
+{"t":327.2,"was":"erkunden","zug":"kern:protokoll","text":"Buch1515","jahr":1356,"woche":30,"kasse":270,"vorbei":false,"ursache":null}
+{"t":327.7,"was":"erkunden","zug":"stadt:reiter:gegner-amort-gg-band","text":"Ohne dich geschehen · 110 Zügezugeklappt","jahr":1356,"woche":30,"kasse":270,"vorbei":false,"ursache":null}
+{"t":328.2,"was":"erkunden","zug":"gegner:zeige:110","text":"zeigen","jahr":1356,"woche":30,"kasse":270,"vorbei":false,"ursache":null}
+{"t":328.7,"was":"erkunden","zug":"stadt:reiter:gegner-amort-gg-band","text":"Ohne dich geschehen · 110 Zügeliegt auf","jahr":1356,"woche":30,"kasse":270,"vorbei":false,"ursache":null}
+{"t":330,"was":"greifen","zug":"fuhre:plan:umkaempft","text":"Fahren: wo der Adler wirbt · 5 Fass+8 Pf","preis":8,"kasseVor":270,"kasseNach":192,"jahr":1357,"woche":1,"vorbei":false,"ursache":null}
+{"t":331.1,"was":"greifen","zug":"gegner:zukaufen:obernberg","text":"lieber zukaufen1 Fass · 12 Pf","preis":-12,"kasseVor":192,"kasseNach":180,"jahr":1357,"woche":1,"vorbei":false,"ursache":null}
+{"t":331.7,"was":"greifen","zug":"gegner:abloesen:obernberg","text":"OBE · BANablösen 84 Pf","preis":-84,"kasseVor":180,"kasseNach":96,"jahr":1357,"woche":1,"vorbei":false,"ursache":null}
+{"t":332.4,"was":"rundenende","aussenrunde":57,"jahr":1357,"woche":2,"kasse":95,"deckung":4.318181818181818,"vorbei":false,"ursache":null,"wochenZahl":197}
+{"t":332.8,"was":"erkunden","zug":"kern:chronik","text":"Chronik152","jahr":1357,"woche":2,"kasse":95,"vorbei":false,"ursache":null}
+{"t":333.2,"was":"erkunden","zug":"kern:protokoll","text":"Buch1550","jahr":1357,"woche":2,"kasse":95,"vorbei":false,"ursache":null}
+{"t":333.9,"was":"erkunden","zug":"stadt:reiter:gegner-amort-gg-band","text":"Ohne dich geschehen · 112 Zügezugeklappt","jahr":1357,"woche":2,"kasse":95,"vorbei":false,"ursache":null}
+{"t":334.4,"was":"erkunden","zug":"stadt:reiter:fuhre-fu-brett-fu-haeuser","text":"DIE HÄUSERwollen 10 · im Keller liegen 3 Fass","jahr":1357,"woche":2,"kasse":95,"vorbei":false,"ursache":null}
+{"t":335.2,"was":"erkunden","zug":"preis:tafel","text":"Michaelitafel 1357 · 5 Angebote","jahr":1357,"woche":2,"kasse":95,"vorbei":false,"ursache":null}
+{"t":335.9,"was":"erkunden","zug":"stadt:reiter:gegner-amort-gg-band","text":"Ohne dich geschehen · 112 Zügeliegt auf","jahr":1357,"woche":2,"kasse":95,"vorbei":false,"ursache":null}
+{"t":336.4,"was":"greifen","zug":"fuhre:plan:umkaempft","text":"Fahren: wo der Adler wirbt · 3 Fass+5 Pf","preis":5,"kasseVor":95,"kasseNach":92,"jahr":1357,"woche":3,"vorbei":false,"ursache":null}
+{"t":336.9,"was":"greifen","zug":"fuhre:plan:umkaempft","text":"Fahren: wo der Adler wirbt · 3 Fass+6 Pf","preis":6,"kasseVor":92,"kasseNach":91,"jahr":1357,"woche":4,"vorbei":false,"ursache":null}
+{"t":337.5,"was":"greifen","zug":"fuhre:plan:umkaempft","text":"Fahren: wo der Adler wirbt · 3 Fass+6 Pf","preis":6,"kasseVor":91,"kasseNach":90,"jahr":1357,"woche":5,"vorbei":false,"ursache":null}
+{"t":338,"was":"rundenende","aussenrunde":58,"jahr":1357,"woche":6,"kasse":89,"deckung":1.8541666666666667,"vorbei":false,"ursache":null,"wochenZahl":201}
+{"t":338.4,"was":"erkunden","zug":"kern:chronik","text":"Chronik153","jahr":1357,"woche":6,"kasse":89,"vorbei":false,"ursache":null}
+{"t":338.8,"was":"erkunden","zug":"kern:protokoll","text":"Buch1576","jahr":1357,"woche":6,"kasse":89,"vorbei":false,"ursache":null}
+{"t":339.4,"was":"erkunden","zug":"stadt:reiter:gegner-amort-gg-band","text":"Ohne dich geschehen · 114 Zügezugeklappt","jahr":1357,"woche":6,"kasse":89,"vorbei":false,"ursache":null}
+{"t":339.9,"was":"erkunden","zug":"stadt:reiter:fuhre-fu-brett-fu-haeuser","text":"DIE HÄUSERwollen 13 · im Keller liegen 6 Fass","jahr":1357,"woche":6,"kasse":89,"vorbei":false,"ursache":null}
+{"t":340.4,"was":"erkunden","zug":"gegner:zeige:114","text":"zeigen","jahr":1357,"woche":6,"kasse":89,"vorbei":false,"ursache":null}
+{"t":340.9,"was":"erkunden","zug":"stadt:reiter:gegner-amort-gg-band","text":"Ohne dich geschehen · 114 Zügeliegt auf","jahr":1357,"woche":6,"kasse":89,"vorbei":false,"ursache":null}
+{"t":341.5,"was":"greifen","zug":"fuhre:plan:umkaempft","text":"Fahren: wo der Adler wirbt · 5 Fass+10 Pf","preis":10,"kasseVor":89,"kasseNach":88,"jahr":1357,"woche":7,"vorbei":false,"ursache":null}
+{"t":342,"was":"greifen","zug":"fuhre:plan:umkaempft","text":"Fahren: wo der Adler wirbt · 4 Fass+7 Pf","preis":7,"kasseVor":88,"kasseNach":86,"jahr":1357,"woche":8,"vorbei":false,"ursache":null}
+{"t":342.5,"was":"greifen","zug":"fuhre:plan:umkaempft","text":"Fahren: wo der Adler wirbt · 3 Fass+6 Pf","preis":6,"kasseVor":86,"kasseNach":85,"jahr":1357,"woche":9,"vorbei":false,"ursache":null}
+{"t":343,"was":"rundenende","aussenrunde":59,"jahr":1357,"woche":10,"kasse":84,"deckung":1.75,"vorbei":false,"ursache":null,"wochenZahl":205}
+{"t":343.4,"was":"erkunden","zug":"kern:chronik","text":"Chronik155","jahr":1357,"woche":10,"kasse":84,"vorbei":false,"ursache":null}
+{"t":343.9,"was":"erkunden","zug":"kern:protokoll","text":"Buch1603","jahr":1357,"woche":10,"kasse":84,"vorbei":false,"ursache":null}
+{"t":344.4,"was":"erkunden","zug":"stadt:reiter:gegner-amort-gg-band","text":"Ohne dich geschehen · 118 Zügezugeklappt","jahr":1357,"woche":10,"kasse":84,"vorbei":false,"ursache":null}
+{"t":344.9,"was":"erkunden","zug":"gegner:zeige:118","text":"zeigen","jahr":1357,"woche":10,"kasse":84,"vorbei":false,"ursache":null}
+{"t":345.5,"was":"erkunden","zug":"stadt:reiter:gegner-amort-gg-band","text":"Ohne dich geschehen · 118 Zügeliegt auf","jahr":1357,"woche":10,"kasse":84,"vorbei":false,"ursache":null}
+{"t":346,"was":"greifen","zug":"fuhre:plan:umkaempft","text":"Fahren: wo der Adler wirbt · 5 Fass+10 Pf","preis":10,"kasseVor":84,"kasseNach":83,"jahr":1357,"woche":11,"vorbei":false,"ursache":null}
+{"t":346.5,"was":"greifen","zug":"fuhre:plan:umkaempft","text":"Fahren: wo der Adler wirbt · 4 Fass+7 Pf","preis":7,"kasseVor":83,"kasseNach":80,"jahr":1357,"woche":12,"vorbei":false,"ursache":null}
+{"t":347,"was":"greifen","zug":"fuhre:plan:umkaempft","text":"Fahren: wo der Adler wirbt · 3 Fass+6 Pf","preis":6,"kasseVor":80,"kasseNach":79,"jahr":1357,"woche":13,"vorbei":false,"ursache":null}
+{"t":347.5,"was":"rundenende","aussenrunde":60,"jahr":1357,"woche":14,"kasse":78,"deckung":1.7333333333333334,"vorbei":false,"ursache":null,"wochenZahl":209}
+{"t":348.4,"was":"erkunden","zug":"kern:chronik","text":"Chronik156","jahr":1357,"woche":14,"kasse":78,"vorbei":false,"ursache":null}
+{"t":348.8,"was":"erkunden","zug":"kern:protokoll","text":"Buch1629","jahr":1357,"woche":14,"kasse":78,"vorbei":false,"ursache":null}
+{"t":349.4,"was":"erkunden","zug":"stadt:reiter:gegner-amort-gg-band","text":"Ohne dich geschehen · 119 Zügezugeklappt","jahr":1357,"woche":14,"kasse":78,"vorbei":false,"ursache":null}
+{"t":350,"was":"erkunden","zug":"stadt:reiter:fuhre-fu-brett-fu-haeuser","text":"DIE HÄUSERwollen 14 · im Keller liegen 6 Fass","jahr":1357,"woche":14,"kasse":78,"vorbei":false,"ursache":null}
+{"t":350.6,"was":"erkunden","zug":"gegner:zeige:119","text":"zeigen","jahr":1357,"woche":14,"kasse":78,"vorbei":false,"ursache":null}
+{"t":351.1,"was":"erkunden","zug":"stadt:reiter:gegner-amort-gg-band","text":"Ohne dich geschehen · 119 Zügeliegt auf","jahr":1357,"woche":14,"kasse":78,"vorbei":false,"ursache":null}
+{"t":351.6,"was":"greifen","zug":"fuhre:plan:umkaempft","text":"Fahren: wo der Adler wirbt · 5 Fass+9 Pf","preis":9,"kasseVor":78,"kasseNach":76,"jahr":1357,"woche":15,"vorbei":false,"ursache":null}
+{"t":352.2,"was":"greifen","zug":"fuhre:plan:umkaempft","text":"Fahren: wo der Adler wirbt · 4 Fass+8 Pf","preis":8,"kasseVor":76,"kasseNach":76,"jahr":1357,"woche":16,"vorbei":false,"ursache":null}
+{"t":352.7,"was":"greifen","zug":"fuhre:plan:umkaempft","text":"Fahren: wo der Adler wirbt · 3 Fass+5 Pf","preis":5,"kasseVor":76,"kasseNach":73,"jahr":1357,"woche":17,"vorbei":false,"ursache":null}
+{"t":353.2,"was":"rundenende","aussenrunde":61,"jahr":1357,"woche":18,"kasse":72,"deckung":1.3333333333333333,"vorbei":false,"ursache":null,"wochenZahl":213}
+{"t":353.7,"was":"erkunden","zug":"kern:chronik","text":"Chronik162","jahr":1357,"woche":18,"kasse":72,"vorbei":false,"ursache":null}
+{"t":354.2,"was":"erkunden","zug":"kern:protokoll","text":"Buch1655","jahr":1357,"woche":18,"kasse":72,"vorbei":false,"ursache":null}
+{"t":354.7,"was":"erkunden","zug":"stadt:reiter:gegner-amort-gg-band","text":"Ohne dich geschehen · 120 Zügezugeklappt","jahr":1357,"woche":18,"kasse":72,"vorbei":false,"ursache":null}
+{"t":355.2,"was":"erkunden","zug":"stadt:reiter:fuhre-fu-brett-fu-haeuser","text":"DIE HÄUSERwollen 14 · im Keller liegen 5 Fass","jahr":1357,"woche":18,"kasse":72,"vorbei":false,"ursache":null}
+{"t":355.7,"was":"erkunden","zug":"gegner:zeige:120","text":"zeigen","jahr":1357,"woche":18,"kasse":72,"vorbei":false,"ursache":null}
+{"t":356.3,"was":"erkunden","zug":"stadt:reiter:gegner-amort-gg-band","text":"Ohne dich geschehen · 120 Zügeliegt auf","jahr":1357,"woche":18,"kasse":72,"vorbei":false,"ursache":null}
+{"t":356.8,"was":"greifen","zug":"fuhre:plan:umkaempft","text":"Fahren: wo der Adler wirbt · 5 Fass+10 Pf","preis":10,"kasseVor":72,"kasseNach":72,"jahr":1357,"woche":19,"vorbei":false,"ursache":null}
+{"t":357.4,"was":"greifen","zug":"fuhre:plan:umkaempft","text":"Fahren: wo der Adler wirbt · 3 Fass+5 Pf","preis":5,"kasseVor":72,"kasseNach":69,"jahr":1357,"woche":20,"vorbei":false,"ursache":null}
+{"t":357.9,"was":"greifen","zug":"fuhre:plan:umkaempft","text":"Fahren: wo der Adler wirbt · 3 Fass+6 Pf","preis":6,"kasseVor":69,"kasseNach":67,"jahr":1357,"woche":21,"vorbei":false,"ursache":null}
+{"t":358.4,"was":"rundenende","aussenrunde":62,"jahr":1357,"woche":22,"kasse":66,"deckung":1.2222222222222223,"vorbei":false,"ursache":null,"wochenZahl":217}
+{"t":358.8,"was":"erkunden","zug":"kern:protokoll","text":"Buch1683","jahr":1357,"woche":22,"kasse":66,"vorbei":false,"ursache":null}
+{"t":359.4,"was":"erkunden","zug":"stadt:reiter:gegner-amort-gg-band","text":"Ohne dich geschehen · 121 Zügezugeklappt","jahr":1357,"woche":22,"kasse":66,"vorbei":false,"ursache":null}
+{"t":359.9,"was":"erkunden","zug":"gegner:zeige:121","text":"zeigen","jahr":1357,"woche":22,"kasse":66,"vorbei":false,"ursache":null}
+{"t":360.4,"was":"erkunden","zug":"stadt:reiter:gegner-amort-gg-band","text":"Ohne dich geschehen · 121 Zügeliegt auf","jahr":1357,"woche":22,"kasse":66,"vorbei":false,"ursache":null}
+{"t":360.9,"was":"greifen","zug":"fuhre:plan:umkaempft","text":"Fahren: wo der Adler wirbt · 5 Fass+10 Pf","preis":10,"kasseVor":66,"kasseNach":65,"jahr":1357,"woche":23,"vorbei":false,"ursache":null}
+{"t":361.3,"was":"greifen","zug":"fuhre:plan:umkaempft","text":"Fahren: wo der Adler wirbt · 4 Fass+7 Pf","preis":7,"kasseVor":65,"kasseNach":63,"jahr":1357,"woche":24,"vorbei":false,"ursache":null}
+{"t":361.8,"was":"greifen","zug":"fuhre:plan:umkaempft","text":"Fahren: wo der Adler wirbt · 3 Fass+6 Pf","preis":6,"kasseVor":63,"kasseNach":62,"jahr":1357,"woche":25,"vorbei":false,"ursache":null}
+{"t":362.3,"was":"rundenende","aussenrunde":63,"jahr":1357,"woche":26,"kasse":61,"deckung":3.8125,"vorbei":false,"ursache":null,"wochenZahl":221}
