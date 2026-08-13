@@ -50,6 +50,28 @@
 > Die vier Dateibesitze schneiden sich nicht — das ist der Grund, warum sie
 > nebeneinander laufen dürfen. **`kern/**` gehört der Aufsicht.**
 >
+> ### DER BEFUND, DER PHASE 1 UMSTELLT — zuerst lesen
+>
+> **Der Nenner der zweiten Messlatte gehört dem GEGNER.** In 400 von 400
+> Wochen trägt er die Art `umkaempft`, und jeder Eintrag heißt „Ablösung …"
+> oder „Zuvorkommen …". Kein Sud, keine Fuhre, kein Bau, keine Festlegung.
+> Auszählung: [`urteile/der-nenner-gehoert-dem-gegner.md`](urteile/der-nenner-gehoert-dem-gegner.md).
+>
+> **Die Deckung ist keine Wohlstandszahl, sondern eine Kampfzahl:** sie misst,
+> ob das Haus gegen den Adler bieten kann. Deshalb haben zwei Wellen an FUHRE
+> und PREIS den **Zähler** wirksam geheilt (suchende Linie in 1350: von „nie
+> einen Pfennig über der Startkasse" auf Höchststand 1 212) und den Median
+> kaum bewegt (0,186 → 0,389). **Das war ein Fehler der Zuweisung, nicht der
+> Builder.**
+>
+> **Beim Auftraggeber liegt die Frage**, ob diese Kennzahl das richtige Maß
+> für „man darf spielen" ist — ein Haus, das braut, liefert, baut und
+> übergibt, ohne je zu bieten, hätte nach ihr eine Deckung von null. Solange
+> er nicht entschieden hat, **wird keine dritte Welle auf dieselbe Zahl
+> angesetzt.**
+>
+> **Wer eine Kennzahl heilen will, sucht zuerst, wer ihren Nenner stellt.**
+
 > ### Was als Nächstes zu tun ist
 > 1. Die vier Berichte abnehmen — **jede Zahl in den Rohdaten nachprüfen**,
 >    nicht aus dem Baubericht übernehmen. Das hat in dieser Sitzung dreimal
