@@ -50,7 +50,11 @@ def main() -> int:
             {"inline_data": {"mime_type": "image/png", "data": b64}},
             {"text": frage},
         ]}],
-        "generationConfig": {"temperature": 0.2, "maxOutputTokens": 1500},
+        # Gemini 2.5 zahlt sein eigenes Denken aus maxOutputTokens — mit 1500
+        # kam beim ersten Lauf nach ~200 Zeichen sichtbaren Textes Schluss.
+        # Denken aus, Budget hoch: wir wollen das Urteil, nicht die Grübelei.
+        "generationConfig": {"temperature": 0.2, "maxOutputTokens": 4000,
+                             "thinkingConfig": {"thinkingBudget": 0}},
     }).encode()
     anfrage = urllib.request.Request(
         ENDPOINT + "?key=" + schluessel, data=rumpf,
