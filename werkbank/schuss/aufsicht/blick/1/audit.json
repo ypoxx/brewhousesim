@@ -1,0 +1,97 @@
+{
+ "seiteScrollt": false,
+ "rollende_kaesten": [
+  {
+   "wer": "sud-rolle",
+   "hoehe": 446,
+   "inhalt": 814,
+   "verstecktPx": 368,
+   "verstecktAnteil": 0.45,
+   "zuegeUnterKante": 4
+  },
+  {
+   "wer": "fu-liste",
+   "hoehe": 221,
+   "inhalt": 466,
+   "verstecktPx": 245,
+   "verstecktAnteil": 0.53,
+   "zuegeUnterKante": 6
+  },
+  {
+   "wer": "fu-brett",
+   "hoehe": 327,
+   "inhalt": 562,
+   "verstecktPx": 235,
+   "verstecktAnteil": 0.42,
+   "zuegeUnterKante": 0
+  },
+  {
+   "wer": "sud-kartensatz",
+   "hoehe": 70,
+   "inhalt": 218,
+   "verstecktPx": 148,
+   "verstecktAnteil": 0.68,
+   "zuegeUnterKante": 0
+  },
+  {
+   "wer": "sud-kartensatz",
+   "hoehe": 70,
+   "inhalt": 203,
+   "verstecktPx": 133,
+   "verstecktAnteil": 0.66,
+   "zuegeUnterKante": 0
+  },
+  {
+   "wer": "sud-kartensatz",
+   "hoehe": 70,
+   "inhalt": 187,
+   "verstecktPx": 117,
+   "verstecktAnteil": 0.63,
+   "zuegeUnterKante": 0
+  },
+  {
+   "wer": "sud-kartensatz",
+   "hoehe": 70,
+   "inhalt": 187,
+   "verstecktPx": 117,
+   "verstecktAnteil": 0.63,
+   "zuegeUnterKante": 0
+  },
+  {
+   "wer": "sud-kartensatz",
+   "hoehe": 70,
+   "inhalt": 187,
+   "verstecktPx": 117,
+   "verstecktAnteil": 0.63,
+   "zuegeUnterKante": 0
+  },
+  {
+   "wer": "sud-kartensatz",
+   "hoehe": 70,
+   "inhalt": 172,
+   "verstecktPx": 102,
+   "verstecktAnteil": 0.59,
+   "zuegeUnterKante": 0
+  },
+  {
+   "wer": "fu-sorten",
+   "hoehe": 60,
+   "inhalt": 118,
+   "verstecktPx": 58,
+   "verstecktAnteil": 0.49,
+   "zuegeUnterKante": 2
+  },
+  {
+   "wer": "gg-bandkoerper",
+   "hoehe": 69,
+   "inhalt": 123,
+   "verstecktPx": 54,
+   "verstecktAnteil": 0.44,
+   "zuegeUnterKante": 2
+  }
+ ],
+ "zuege_gesamt": 104,
+ "zuege_ausserhalb_des_fensters": 4,
+ "laufende_animationen": 5,
+ "fehler": []
+}
