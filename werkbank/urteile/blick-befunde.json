@@ -1,0 +1,666 @@
+[
+ {
+  "schwere": "A",
+  "bild": "00-anfang.png",
+  "ort": "Kartenmitte bei „St. Michael“",
+  "was": "Der Kasten „Klage vor dem Stadtgericht … kostet kein Geld · vier Ansehen … Klosterschenke Obernberg … lieber zukaufen“ liegt direkt unter dem Kasten „Junges Fass · +14 · 1 Fass / Altes Fass · +6 / Hopfen im Sack, heimlich / Röhrenrecht an der Quelle −30 Pf“. Beide Kästen überlappen ohne Abstand, Text verschmilzt mitten im Wort („losterschenke“, „bernberg“) zu Buchstabensalat.",
+  "vorschlag": "Kollisionsprüfung für Info-Kärtchen auf der Karte einbauen, überlappende Kärtchen versetzt stapeln oder nacheinander statt gleichzeitig anzeigen.",
+  "pruefer": "?"
+ },
+ {
+  "schwere": "A",
+  "bild": "30-mitte.png",
+  "ort": "rechte Bildhälfte, Bereich „Brauhaus zum Adler“",
+  "was": "Der Titel „BRAUHAUS ZUM ADLER“ erscheint doppelt (einmal als Schild-Banner, einmal direkt darunter als eigener Kasten mit Wappen-Icon), und der Block „Hartmann Feist · streitbar / 4 Häuser · 12 Züge / Kasse 200 Pf …“ überlappt direkt mit dem Block „UMKÄMPFT · Kasse reicht 1,4x / … / ablösen 66 Pf / Fass an den Wirt …“ – rote und schwarze Textzeilen liegen buchstäblich übereinander. Derselbe Fehler ist unverändert auch in 00-anfang.png, 20-tafel.png und 40-jahreswechsel.png zu sehen, also über das ganze Spiel hinweg.",
+  "vorschlag": "Feste, sich nicht überschneidende Positionen/Reihenfolge für die Konkurrenz-Infoboxen vergeben, ggf. in eine Liste statt frei platzierte Kärtchen umbauen.",
+  "pruefer": "?"
+ },
+ {
+  "schwere": "A",
+  "bild": "10-reiter-fuhre-fu-brett-fu-haeuser.png",
+  "ort": "unteres Drittel des aufgeklappten Kastens „Die Häuser“ (Zeilen ab „Schenke am Tor“)",
+  "was": "Der Kasten hat dort keinen deckenden Hintergrund mehr. Der Grundseitentext „Brauhaus zum Anker · 1350 · Das Recht / Du führst dieses Haus … / Das Ziel — das Haus übergeben können …“ scheint direkt durch den Kasten hindurch und liegt Buchstabe auf Buchstabe über den Kunden-Zeilen „will 1 Fass“, „+1 Fass“-Buttons und dem Abzeichen „Bannbrief −60 Pf“. Beide Textebenen sind an dieser Stelle unlesbar. Derselbe Effekt tritt identisch bei „Das Sudhaus“ (10-reiter-sud-sud-brett.png, dort kollidiert „DAS BRAUWASSER“ mit „Brauhaus zum Anker“-Text) und bei „Der Keller“ (10-reiter-fuhre-fu-brett-fu-keller.png, „Fässer des Hauses: 22 eigene…“ kollidiert mit „vor dem Rat. Gewinnen…“) auf.",
+  "vorschlag": "Deckenden Kartenhintergrund über die gesamte Kastenhöhe ziehen (kein Alpha-Verlauf am unteren Rand über Text), Z-Reihenfolge/Hintergrund-Deckkraft der Panels prüfen.",
+  "pruefer": "?"
+ },
+ {
+  "schwere": "A",
+  "bild": "10-reiter-gegner-amort-gg-band.png",
+  "ort": "Kasten „Ohne dich geschehen“, Zeile „1350 W1 Brauhaus zum Adler wirbt um Klosterschenke Obernberg …“",
+  "was": "Die zweite Textzeile („umsonst vor die Tür und lässt sie stehen. Zuvorkommen kostet 19 Pf …“) wird von der Kastenunterkante mitten durch die Buchstabenhöhe hart abgeschnitten – nur die obere Hälfte der Zeichen ist sichtbar, danach beginnt abrupt die Stadt-Illustration. Kein Rollbalken, kein Verblassen, keine „…“-Kennzeichnung zeigt an, dass hier Text fehlt. audit.json führt diesen Kasten als „gg-bandkoerper“ mit 44 % verstecktem Inhalt – man sieht dem Kasten den Rollbalken definitiv nicht an, es wirkt wie ein Darstellungsfehler.",
+  "vorschlag": "Entweder Kasten hoch genug für den Inhalt machen oder echten Rollbalken/Fade-Verlauf einbauen statt hartem Clip; alternativ Zeile kürzen.",
+  "pruefer": "?"
+ },
+ {
+  "schwere": "A",
+  "bild": "40-jahreswechsel.png",
+  "ort": "Kasten „Die Festlegung“, Zeile „Das Geld liegt am Hof …“",
+  "was": "Die zweite Zeile des Hinweistextes wird exakt wie beim vorigen Befund mitten durch die Buchstaben von der gestrichelten Kastenkante abgeschnitten (nur Zeichen-Oberkanten sichtbar). Derselbe Fehler auch in 20-tafel.png in der linken Spalte „Die Rechnung 1350“ direkt vor der Überschrift „Die Bierordnung“ – auch dort ist die letzte Zeile nur als Zeichen-Sliver sichtbar.",
+  "vorschlag": "Systemweit prüfen: offenbar schneidet die Textbox-Komponente überlaufenden Text grundsätzlich hart ab, statt zu kürzen oder zu scrollen. Einheitliche Lösung für alle Info-Kästen einbauen.",
+  "pruefer": "?"
+ },
+ {
+  "schwere": "A",
+  "bild": "20-tafel.png",
+  "ort": "linke Spalte, Abschnitt „Was schon steht“ unten",
+  "was": "Laut audit.json zeigt dieser scrollbare Kasten („sud-rolle“) nur 446 von 814 px Inhalt (45 % versteckt). Im Bild endet die Spalte einfach mit der Zeile „Lagerplatz im Keller · 12 Fass“ am Bildschirmrand – es gibt keinen Rollbalken, keinen Schatten/Verlauf und keinen Pfeil, der andeutet, dass noch mehr Einträge folgen. Ein Spieler kann nicht erkennen, dass hier überhaupt etwas fehlt.",
+  "vorschlag": "Sichtbaren Rollbalken oder „mehr anzeigen“-Indikator (z. B. Schattenverlauf am unteren Rand) für alle Kästen aus der audit-Liste ergänzen.",
+  "pruefer": "?"
+ },
+ {
+  "schwere": "A",
+  "bild": "10-reiter-fuhre-fu-brett-fu-wagen.png",
+  "ort": "gesamter Bildschirm, obere Tableiste",
+  "was": "Beim Öffnen eines neuen Reiters (hier „Ochsenkarren“) schließen sich die vorher geöffneten Reiter „Die Häuser“, „Anschlagtafel“ und „Ohne dich geschehen“ nicht – am Ende sind vier Kästen gleichzeitig als schwebende Fenster übereinander offen, dazu scheinen die Original-Kartenkärtchen (Klage vor dem Stadtgericht, Junges Fass usw.) darunter weiter durch. Der Kasten „Altes Fass · +6 · 1 Fass“ wird z. B. vom neuen „Ochsenkarren“-Kasten einfach hart angeschnitten (nur „Alt…“ bleibt sichtbar, siehe 10-reiter-name-nm-band.png).",
+  "vorschlag": "Öffnen eines Reiters sollte andere Detail-Panels automatisch schließen (Akkordeon-Verhalten) oder es sollte einen abgedunkelten Hintergrund geben, der die Karte darunter blockiert.",
+  "pruefer": "?"
+ },
+ {
+  "schwere": "B",
+  "bild": "00-anfang.png",
+  "ort": "unten links, drei Absätze „Das Recht“ / „Das Ziel“ / „So endet es schlecht“ / „Jede Epoche…“",
+  "was": "Ausgerechnet der Text, der einem Neuling die Grundregeln erklärt, liegt ohne eigene Fläche/Karte direkt auf der bunten, detailreichen Stadt-Illustration (Dächer, Tiere, Fachwerk) und ist nur durch eine dünne Textkontur lesbar. Jede andere Information im Spiel steckt in einem cremefarbenen Kasten mit klarer Kante – hier nicht, obwohl der Inhalt am wichtigsten ist.",
+  "vorschlag": "Diesen Einführungstext in einen eigenen, deckenden Kasten packen wie alle anderen Infoboxen auch – idealerweise prominent oben, nicht unten am Rand.",
+  "pruefer": "?"
+ },
+ {
+  "schwere": "B",
+  "bild": "00-anfang.png",
+  "ort": "gesamter erster Bildschirm",
+  "was": "Einstiegsfrage: Was soll ein Neuling zuerst ansehen? Die tatsächliche Erklärung des Spiels (die drei Absätze unten links) ist optisch das schwächste Element im Bild. Der Blick wird stattdessen zuerst von der kontraststarken cremefarbenen „Michaelitafel“ oben rechts (reine Zahlen-Tabelle) oder von dem dichten Gewusel überlappender Kärtchen in der Kartenmitte (siehe obige Befunde) angezogen – beides Spieldaten, keine Erklärung. Es gibt über 20 einzelne UI-Flächen (8 Reiter, 1 Datentafel, ~5 Kartenkärtchen, 4 Textabsätze, 5 Optionszeilen, 1 Weiter-Button) gleichzeitig ohne jede Hervorhebung eines Einstiegspunkts oder „Hier starten“-Hinweis. Ein Neuling sieht die Erklärung also nicht als Erstes – wahrscheinlich gar nicht, bevor er auf „Weiter“ klickt.",
+  "vorschlag": "Für den allerersten Aufruf einen klaren Fokuspunkt schaffen: z. B. den Erklärtext in ein zentrales, abgedunkeltes Overlay legen und alles andere vorübergehend ausblenden/abdunkeln, bis der Spieler bestätigt hat.",
+  "pruefer": "?"
+ },
+ {
+  "schwere": "B",
+  "bild": "50-weiter-1.png",
+  "ort": "Platz vor „Zum Goldenen Ochsen“ und bei „Gasthof Lindenhof“",
+  "was": "Die beschrifteten Marken „OCH“ und „LIN“ (Kästchen mit Kürzel + roten Punkten) aus 50-weiter-0.png verschwinden im nächsten Frame ersatzlos und werden durch zwei unbeschriftete braune Punkte ersetzt – kein Übergang, harter Szenenwechsel (siehe Feld „animation“).",
+  "vorschlag": "Zustandswechsel der Kartenmarken über eine kurze Überblendung/Fade animieren statt hart umzuschalten, oder Beschriftung dauerhaft sichtbar lassen.",
+  "pruefer": "?"
+ },
+ {
+  "schwere": "C",
+  "bild": "10-reiter-fuhre-fu-brett-fu-wagen.png",
+  "ort": "Kasten „Ochsenkarren“, Mitte",
+  "was": "Zwischen der Beschreibung „Fünf Plätze, vier Halte …“ und den drei Buttons „Nach Durst füllen“ / „Wie vorige Woche“ / „Karren leeren“ klafft eine rund 150 px hohe, komplett leere braune Fläche – wirkt unfertig/leer.",
+  "vorschlag": "Vertikalen Abstand verringern oder die leere Fläche mit einer Kartenübersicht/Icon-Reihe der 5 Wagenplätze füllen.",
+  "pruefer": "?"
+ },
+ {
+  "schwere": "C",
+  "bild": "00-anfang.png",
+  "ort": "unten, Optionszeile „Verschreiben … / Lehrgeding … / Abfertigung … / Mit leeren Händen … / Stadtbuch“",
+  "was": "Die letzten Kachel „Stadtbuch“ hat einen gestrichelten statt durchgezogenen Rahmen wie die vier Kacheln davor – uneinheitlicher Stil in derselben Reihe, wirkt wie ein anderer (evtl. deaktivierter) Elementtyp, ohne dass der Grund erkennbar ist.",
+  "vorschlag": "Einheitlichen Rahmenstil für alle Elemente derselben Reihe verwenden, abweichenden Status stattdessen über Farbe/Deckkraft kennzeichnen.",
+  "pruefer": "?"
+ },
+ {
+  "schwere": "C",
+  "bild": "00-anfang.png",
+  "ort": "verstreut auf der Stadtkarte (z. B. Hof des Brauhauses, vor Gasthof Lindenhof)",
+  "was": "Mehrere unbeschriftete braune Kreispunkte mit hellem Rand liegen auf der Karte verteilt, ohne Icon, Text oder erkennbaren Zweck. Da laut Klick-Serie (50-weiter) genau solche Punkte anstelle von beschrifteten Marken („OCH“, „LIN“) auftauchen, sind es offenbar Marken in einem „eingeklappten“ Zustand – das ist der Karte aber nicht anzusehen, sie könnten für einen Neuling auch wie beiläufige Dekoration wirken.",
+  "vorschlag": "Auch im eingeklappten Zustand ein Mini-Icon oder Kürzel zeigen, damit erkennbar bleibt, dass es sich um interaktive/informative Marken handelt.",
+  "pruefer": "?"
+ },
+ {
+  "schwere": "C",
+  "bild": "40-jahreswechsel.png",
+  "ort": "linke Spalte „Die Rechnung 1351“, direkt unter der Einleitung",
+  "was": "Zwischen dem Satz „Nachlass des Rats auf Zins und Wasser — das vorige Jahr trug nichts“ und der ersten Zeile „Grutgeld an den Grutherrn“ steht ein allein stehender Gedankenstrich „—“ mit auffällig viel Leerraum darüber und darunter – wirkt wie ein vergessener Platzhalter statt bewusster Gestaltung.",
+  "vorschlag": "Leerzeile/Platzhalter entfernen oder durch echten Inhalt ersetzen.",
+  "pruefer": "?"
+ },
+ {
+  "schwere": "C",
+  "bild": "10-reiter-name-nm-band.png",
+  "ort": "Kasten „Aufgeld auf den Zeiger“, Fließtext unter der Tabelle",
+  "was": "Mitten im Erklärsatz steht der durchgestrichene Halbsatz „und einen höheren Grundpreis je Fass“ in Rot – das liest sich wie ein liegen gelassener Korrekturvermerk aus der Textbearbeitung, nicht wie eine bewusste Spielinformation.",
+  "vorschlag": "Prüfen, ob die Durchstreichung beabsichtigt ist; falls ja, mit erklärendem Tooltip versehen, falls nein, Text bereinigen.",
+  "pruefer": "?"
+ },
+ {
+  "schwere": "A",
+  "bild": "00-anfang.png / 30-mitte.png / 50-weiter-0.png / 10-reiter-gegner-amort-gg-band.png",
+  "ort": "rechts oben bei den Schildern „BRAUSTATT ADLER“ / „OBE“ (ca. x=1000-1180, y=195-330)",
+  "was": "Mehrere Textzeilen verschiedener Konkurrenz-Infos liegen direkt übereinander: „...1 Wo. kürzer“ kreuzt sich mit „UMKÄMPFT“ und „BR. Kasse reicht 3,8x“; das Schild „BRAUSTATT ADLER“ wird mitten über die Zeile „Fass in die Lade“ gelegt, sodass rechts nur noch das Wortfragment „ade“ herausragt. Dasselbe Muster in exakt derselben Bildschirmregion taucht in vier verschiedenen Screenshots wieder auf – kein Einzelfall, sondern ein strukturelles Problem der frei schwebenden Konkurrenz-Labels.",
+  "vorschlag": "Kollisionsprüfung für die Konkurrenten-Labels einbauen oder sie in feste, gestapelte Kartenreihen statt frei positionierten Text verwandeln.",
+  "pruefer": "?"
+ },
+ {
+  "schwere": "A",
+  "bild": "10-reiter-sud-sud-brett.png / 50-weiter-0.png / 50-weiter-1.png",
+  "ort": "Panel „DAS SUDHAUS“, unterer Rand der linken Spaltenliste (ca. y=540-650)",
+  "was": "Die Tabellenzeilen und Buttons des Panels („Weizen gibt mehr Fass aus...“, „Junges Fass anstechen · +14 · 1 Fass“) liegen pixelgenau über der fett gedruckten Überschrift „BRAUHAUS ZUM ANKER · 1600 · DIE ORDNUNG“ und dem folgenden Absatz des Eröffnungstexts. Beide Textebenen sind an dieser Stelle gegenseitig unlesbar – das deutlichste Beispiel der ganzen Serie für Panel-Hintergründe, die nicht bis zum eigenen Zeileninhalt reichen.",
+  "vorschlag": "Panelhintergrund über die volle Inhaltshöhe ziehen bzw. den darunterliegenden Kartenlayer beim Öffnen eines Panels ausblenden/abdunkeln.",
+  "pruefer": "?"
+ },
+ {
+  "schwere": "A",
+  "bild": "10-reiter-fuhre-fu-brett-fu-haeuser.png / 10-reiter-fuhre-fu-brett-fu-keller.png / 10-reiter-fuhre-fu-brett-fu-schiefer-fu-tafel.png / 10-reiter-fuhre-fu-brett-fu-wagen.png / 10-reiter-name-nm-band.png",
+  "ort": "Panel „DIE HÄUSER“ unten links, Zeilen „TOR Schenke am Tor“ bis „MÜL Mühlschenke“ (ca. y=540-630)",
+  "was": "Der braune Kastenhintergrund endet mitten in der Hausliste; darunter scheint unverändert der Eröffnungstext „Du führst dieses Haus: brauen, ausliefern...“ durch, sodass „will 2 Fass“, der +1-Fass-Button und der Fließtext übereinanderliegen. Entspricht dem Audit-Eintrag „fu-brett“: 327 px sichtbare Höhe bei 587 px Inhalt (44 % verdeckt) – und man sieht dem Kasten den Rollbalken nicht an, weil gar keiner da ist, nur ein hart endender Hintergrund.",
+  "vorschlag": "Echten Scrollcontainer mit sichtbarer Kante/Rollbalken oder Kastenhintergrund bis zum Listenende einbauen.",
+  "pruefer": "?"
+ },
+ {
+  "schwere": "A",
+  "bild": "10-reiter-fuhre-fu-brett-fu-keller.png",
+  "ort": "Panel „DAS GEWÖLBE“, unter der 8er-Fassreihe (ca. y=560-610)",
+  "was": "Unter der Barrel-Anzeige „8 von 24 Fass · 8 reif“ verschmelzen zwei fremde Textquellen zu einer Buchstabensuppe: „vor dem Rat. Gewinnen: 38 eigene · 8 gefüllt“ und „meisten Jahre geht es 30 leer“ – Wörter aus dem Grundlagentext und der Panel-eigenen Statistik liegen direkt übereinander, dazwischen isolierte Fragmente wie ein einzelnes „G“.",
+  "vorschlag": "Siehe DIE HÄUSER-Befund – gleiche Ursache, gleicher Fix nötig.",
+  "pruefer": "?"
+ },
+ {
+  "schwere": "A",
+  "bild": "10-reiter-sud-sud-brett.png / 50-weiter-0.png / 50-weiter-1.png",
+  "ort": "Panel „DAS SUDHAUS“, Spaltentrenner zwischen „Weizen aus dem Kornhaus“ und der Tabelle „WAS BEIM WIRT ANKOMMT“ (ca. x=350-420, y=355-370)",
+  "was": "Das Wort „unwiderruflich“ läuft mit seinem Ende „...flich“ über den Spaltenrand der linken Vergleichstabelle hinaus und legt sich direkt auf die Zeile „Braunbier · 8 von 10 Häusern · trägt die Pfanne“ der rechten Tabelle. Text bricht also aktiv aus seinem eigenen Container aus und überlagert eine benachbarte, inhaltlich unabhängige Liste.",
+  "vorschlag": "Zeilenumbruch/Containerbreite für Statuswörter wie „unwiderruflich“ erzwingen, damit sie nicht über die Spaltengrenze hinausragen.",
+  "pruefer": "?"
+ },
+ {
+  "schwere": "A",
+  "bild": "30-mitte.png / 10-reiter-fuhre-fu-brett-fu-wagen.png",
+  "ort": "Panel „PFERDEFUHRWERK“, obere Kante (ca. x=700-1075, y=430-445)",
+  "was": "Das neu geöffnete Panel wird exakt über die obere Kante der bereits offenen Liste „Stellhefe nehmen · +8“ / „Junges Fass · +14 · 1 Fass“ gelegt; deren erste Zeile(n) werden dadurch abgeschnitten bzw. vom neuen Panel verdeckt, ein Fragment „Mi...“ bleibt sichtbar herausragend.",
+  "vorschlag": "Beim Öffnen eines neuen Panels vorherige, nicht mehr relevante Panels schließen statt sie stapeln zu lassen.",
+  "pruefer": "?"
+ },
+ {
+  "schwere": "A",
+  "bild": "40-jahreswechsel.png",
+  "ort": "rechter Rand des Michaeli-Fensters, ca. x=1155-1250, y=570-700",
+  "was": "Ein schmaler senkrechter Streifen der darunterliegenden alten Karte („Junges Fass · +14 · 1 Fass“, „...em Kornhaus“, „mit Brief“, „180 fl“, „nächster Zug: Ablösung...“) schaut mitten durch Wörter zerschnitten neben dem großen Michaeli-Modal hervor, weil dessen rechte Kante die darunterliegende Ebene nicht vollständig abdeckt.",
+  "vorschlag": "Modalbreite/Overlay-Maskierung so anpassen, dass die Basisebene vollständig verdeckt oder sauber ausgeblendet wird, statt eines sichtbaren „Risses“ am Rand.",
+  "pruefer": "?"
+ },
+ {
+  "schwere": "A",
+  "bild": "20-tafel.png / 40-jahreswechsel.png",
+  "ort": "Modal „MICHAELI 1600/1601“, Boxen „DIE RECHNUNG“, „DIE BIERORDNUNG“, „WAS SCHON STEHT“ links sowie alle vier Karten unter „DIE FESTLEGUNG“",
+  "was": "In praktisch jeder dieser Boxen bricht die letzte Textzeile mitten im Satz ab (z. B. „REGEL Kein billiges Beibier mehr. Jedes Fass fängt mehr, und die“ oder „seither nachgesetzt (25 im Hundert der“) – ohne Auslassungspunkte, Farbverlauf, Scrollbalken oder „mehr“-Link. Der Nutzer merkt an der Optik nicht, dass hier Inhalt fehlt.",
+  "vorschlag": "Kartenhöhe an Inhalt anpassen oder sichtbaren Rollbalken/Fade-Kante samt „mehr anzeigen“ einführen.",
+  "pruefer": "?"
+ },
+ {
+  "schwere": "B",
+  "bild": "00-anfang.png",
+  "ort": "oben links, Kartenraster, Kasten „BAUHOF“",
+  "was": "Das Wort „bezahlbar“ wird ohne Trennzeichen mitten im Wort umgebrochen zu „bezahlb“ / „ar“ auf zwei Zeilen.",
+  "vorschlag": "Silbentrennung mit Bindestrich oder Kastenbreite/Schriftgröße anpassen, damit ganze Wörter umbrechen.",
+  "pruefer": "?"
+ },
+ {
+  "schwere": "A",
+  "bild": "00-anfang.png",
+  "ort": "oben links, Kartenraster, Kasten „SUDORDNUNG“",
+  "was": "Der Text endet mit „...65 Hopfen · auf der Taf“ – „Tafel“ wird vom rechten Kastenrand mitten im Wort abgeschnitten, es gibt keine Möglichkeit, den Rest zu lesen.",
+  "vorschlag": "Kastenbreite erhöhen oder Text automatisch umbrechen statt hart abzuschneiden.",
+  "pruefer": "?"
+ },
+ {
+  "schwere": "B",
+  "bild": "00-anfang.png versus 10-reiter-name-nm-band.png",
+  "ort": "Kartenlabel „GASTHOF LINDENHOF“, Zeile „Freitrunk zur Kirchweih geben“ (00-anfang, x≈880-1000,y≈415-460) versus Panel „WAS DER NAME JETZT KOSTET“ (name-nm-band, x≈15-295,y≈325-355)",
+  "was": "Derselbe Satz wird zweimal völlig unterschiedlich dargestellt: in der schmalen Kartenblase bricht die vierwortige Phrase in vier separate Zeilen (ein Wort pro Zeile), der Preis „-18 fl [-1 Fass]“ hängt optisch mittig statt am Satzende; im breiteren Seitenpanel steht exakt derselbe Satz sauber in einer Zeile mit Preis rechtsbündig.",
+  "vorschlag": "Für die Kartenblase dieselbe breitere/einzeilige Darstellung wie im Seitenpanel verwenden.",
+  "pruefer": "?"
+ },
+ {
+  "schwere": "B",
+  "bild": "10-reiter-fuhre-fu-brett-fu-keller.png",
+  "ort": "Panel „SUDORDNUNG“, Zeile „N Nachbier · 0 fl · 0 Hopfen · 0 Sude der...“ (ca. x=380-690,y=300-330)",
+  "was": "Das Stepper-Element „− 0 +“ liegt direkt über dem umgebrochenen Zeilenende des Labels, sodass ein Teil des Texts dahinter verschwindet bzw. verdeckt wird.",
+  "vorschlag": "Stepper-Steuerelement in eigener Spalte mit fester Breite platzieren statt über den fließenden Text zu legen.",
+  "pruefer": "?"
+ },
+ {
+  "schwere": "B",
+  "bild": "10-reiter-fuhre-fu-brett-fu-wagen.png / 30-mitte.png",
+  "ort": "Panel „PFERDEFUHRWERK“, zwischen Beschreibungstext und Buttonzeile (ca. y=500-605)",
+  "was": "Zwischen „Acht Plätze, fünf Halte, zwei Pferde...“ und den Buttons „Nach Durst füllen“ / „Wie vorige Woche“ / „Wagen leeren“ klafft eine komplett leere braune Fläche von gut 100 px Höhe – rund ein Drittel des Kastens ist tote Fläche und wirkt unfertig, besonders im Kontrast zu den sonst sehr dicht gefüllten Panels.",
+  "vorschlag": "Leerraum durch zusätzliche Statuszeile füllen oder Panelhöhe an tatsächlichen Inhalt anpassen.",
+  "pruefer": "?"
+ },
+ {
+  "schwere": "C",
+  "bild": "00-anfang.png / 10-reiter-fuhre-fu-brett-fu-haeuser.png",
+  "ort": "Kartenraster oben links bzw. Reiterleiste ganz oben",
+  "was": "Uneinheitliche Ecken-Icons für offenbar denselben Zustand: manche Karten/Reiter tragen ein Dreieck „▲“ bzw. „▼“ oben rechts, andere gar kein Symbol (BAUHOF, DAS GEWÖLBE, PFERDEFUHRWERK), „ORTSMARKEN“ trägt einen Kreis „○“, „STADT ZEIGEN“ eine Raute „◆“ – vier verschiedene Symbole ohne erkennbare gemeinsame Bedeutung.",
+  "vorschlag": "Ein einziges Symbol mit klarer Bedeutung (z. B. auf/zu, neu, Benachrichtigung) konsequent verwenden.",
+  "pruefer": "?"
+ },
+ {
+  "schwere": "C",
+  "bild": "00-anfang.png",
+  "ort": "gesamter Bildschirm",
+  "was": "Mindestens fünf verschiedene visuelle Sprachen für „das könnte klickbar sein“ auf einem einzigen Screen: eckige Klammer-Pillen oben („[ KASSE 640 fl ]“), braune Infokarten links, cremefarbene Info-Kästen (Michaelitafel), cremefarbene Ortsschilder auf der Karte („BRAUSTATT ADLER“), grüne „+1 Fass“-Buttons. Für Neulinge kaum zu unterscheiden, was interaktiv ist und was nur Anzeige.",
+  "vorschlag": "Button-/Card-/Label-Stile im Styleguide vereinheitlichen bzw. klar auf 2-3 Varianten reduzieren.",
+  "pruefer": "?"
+ },
+ {
+  "schwere": "B",
+  "bild": "20-tafel.png",
+  "ort": "Karte „Der Wappenbrief“ unter „DIE ANGEBOTE ZU MICHAELI 1600“ (ca. x=390-530,y=290-330)",
+  "was": "Der Beschreibungssatz endet mit „...wird mit angeschlagen. Ohne Bauzeit .“ – das letzte Wort samt Punkt wird von der oberen Kante des direkt darunterliegenden „Nehmen“-Buttons abgeschnitten.",
+  "vorschlag": "Kartenhöhe konsistent an die längste vorkommende Beschreibung anpassen.",
+  "pruefer": "?"
+ },
+ {
+  "schwere": "B",
+  "bild": "00-anfang.png",
+  "ort": "Michaelitafel-Kasten oben rechts, Zeile „billigstes Angebot dieser Tafel“",
+  "was": "Alle übrigen Zeilen im Kasten folgen dem Muster „Label ... Wert“ in einer Zeile; nur diese eine Zeile bricht auf zwei Zeilen um, wobei der Wert „210 fl“ danach allein steht und optisch nicht mehr eindeutig seinem Label zugeordnet ist.",
+  "vorschlag": "Label kürzen oder Wert immer in eigener rechtsbündiger Spalte mit fester Breite setzen, damit kein Umbruch nötig ist.",
+  "pruefer": "?"
+ },
+ {
+  "schwere": "B",
+  "bild": "00-anfang.png",
+  "ort": "unten links, kompletter Einführungstext (ca. x=15-700,y=520-730)",
+  "was": "Der gesamte Einführungstext („BRAUHAUS ZUM ANKER · 1600 · DIE ORDNUNG“ + vier Absätze) liegt ohne jede eigene Hintergrundfläche direkt auf Kopfsteinpflaster, Pferdewagen und Personen; eine gezeichnete Straßenlaterne verläuft quer durch die Zeile „SO ENDET ES SCHLECHT“. Ausgerechnet der Text, der Neulingen das Spielziel erklären soll, ist am schwersten zu lesen. Der Kernsatz wird zudem 100 px weiter rechts in „Ziel: das Haus weitergeben, solange es steht...“ nahezu wortgleich noch einmal wiederholt.",
+  "vorschlag": "Text in eine deckende Karte/Box packen und Dopplung mit dem separaten „Ziel:“-Hinweis entfernen.",
+  "pruefer": "?"
+ },
+ {
+  "schwere": "C",
+  "bild": "00-anfang.png / 30-mitte.png / 50-weiter-0.png",
+  "ort": "neben dem Label „OBE“ (ca. x=1140-1175,y=225-245)",
+  "was": "Ein cremefarbener Kasten mit fünf senkrechten roten Strichen taucht mehrfach auf, ohne dass irgendwo im Bild erklärt wird, wofür die Striche stehen (Stärke, Bedrohung, Fortschritt?) – für Neueinsteiger nicht selbsterklärend.",
+  "vorschlag": "Kurzes Tooltip/Label ergänzen oder auf eine bereits erklärte Darstellungsform (z. B. Prozentbalken wie bei „Bekanntheit“) umstellen.",
+  "pruefer": "?"
+ },
+ {
+  "schwere": "B",
+  "bild": "50-weiter-1.png / 50-weiter-2.png",
+  "ort": "gesamter Bildschirm",
+  "was": "Beide Aufnahmen der „Weiter“-Serie sind pixelidentisch, es gibt zwischen ihnen keinerlei sichtbare Veränderung. In Kombination mit dem fast unsichtbaren Unterschied zu Bild 0 wirkt der gesamte Übergang wie ein harter Sprung ohne wahrnehmbare Animation.",
+  "vorschlag": "Sicherstellen, dass ein etwaiger Übergang (Kamera, Zahlenänderung, Hervorhebung) tatsächlich über mehrere Frames animiert und nicht bereits nach dem ersten Frame abgeschlossen ist.",
+  "pruefer": "?"
+ },
+ {
+  "schwere": "A",
+  "bild": "50-weiter-0.png",
+  "ort": "rechte Bildhälfte bei den Schornsteinen, ca. Position 'MUE · DEP' (identisch auch in 50-weiter-1.png und 50-weiter-2.png)",
+  "was": "Zwei komplett unabhängige Info-Blöcke ('Freibier / Vorrat reicht nicht / lieber zukaufen / 3,0 hl · 192 M' und 'MUE · DEP / ablösen 5.645 M / Freibier / Vorrat reicht nicht') werden exakt an derselben Stelle übereinander gerendert – reiner Buchstabensalat, in allen drei Frames gleich.",
+  "vorschlag": "Kollisionserkennung für schwebende Beschriftungen einbauen; Positionen versetzen oder mit deckendem Kasten hinterlegen.",
+  "pruefer": "?"
+ },
+ {
+  "schwere": "A",
+  "bild": "10-reiter-fuhre-fu-brett-fu-keller.png",
+  "ort": "mittlere Spalte, Panel 'SUDPLAN', unterhalb der Bier-Sorten-Liste",
+  "was": "Das Baukarten-Raster ('Eis schneiden', 'Eiskeller vergrößern', 'Dampfsudwerk') liegt direkt über der Zeile 'Einfachbier 16 M je hl' inkl. deren Plus/Minus-Stellern und verdeckt sie vollständig; auch die 'Lagerbier'-Zeile wird angeschnitten. Identisch reproduzierbar in 10-reiter-fuhre-fu-brett-fu-schiefer-fu-tafel.png.",
+  "vorschlag": "Z-Index/Layout-Kollision beheben – Kartenraster darf angrenzende Listenzeilen nicht überdecken.",
+  "pruefer": "?"
+ },
+ {
+  "schwere": "A",
+  "bild": "10-reiter-sud-sud-brett.png",
+  "ort": "linkes Panel 'DAS SUDWERK', die drei Vergleichskarten (Natureis/Ohne Kühlung/Lindesche Kältemaschine), unterer Rand",
+  "was": "Der Erklärtext aller drei Karten bricht mitten im Wort/Satz ab (z.B. 'lagert richtig: zwei', 'Der Gärkeller hält') ohne Auslassungszeichen; direkt darunter überlappt der abgeschnittene Text sichtbar mit der Grundseiten-Überschrift 'BRAUHAUS ZUM ANKER · 1884 · DIE MASCHINE'. Deckt sich mit audit.json ('sud-rolle', 39 % verdeckt) – im Bild ist aber kein Rollbalken zu erkennen.",
+  "vorschlag": "Panelhöhe an Inhalt anpassen oder sichtbaren Rollbalken/Fade+'mehr'-Button einbauen; Panel braucht deckenden Hintergrund bis zur letzten Zeile.",
+  "pruefer": "?"
+ },
+ {
+  "schwere": "A",
+  "bild": "20-tafel.png",
+  "ort": "Angebotskarte 'Eine Niederlage in der Kreisstadt', 5. Karte in 'DIE ANGEBOTE ZU MICHAELI'",
+  "was": "Die Preis-Kopfzeile fehlt komplett: statt einer fetten Preisangabe wie bei den anderen vier Karten ('3.100 M', '4.200 M' …) steht dort nur ein einzelner Punkt über einem leeren grauen Platzhalterbalken. Identischer Fehler bei derselben Karte auch in 40-jahreswechsel.png (dort '+5.450 M' fehlt ebenso, nur Punkt+Leerbalken sichtbar) – also reproduzierbar über zwei Spielstände.",
+  "vorschlag": "Datenbindung/Preisformatierung für dieses spezielle Angebot prüfen, offenbar wird kein Wert geladen.",
+  "pruefer": "?"
+ },
+ {
+  "schwere": "A",
+  "bild": "30-mitte.png",
+  "ort": "unten links, drei grüne 'Fahren:'-Routenkärtchen",
+  "was": "Die dritte Route ('Fahren: kurze Wege · 60 hl · +2.483 M') wird vom unteren Bildschirmrand (768 px) abgeschnitten; zusätzlich läuft eine rote Warnzeile ('DIE WOCHE 13/30: Gasthof Lindenhof …') quer über die erste Karte. Bestätigt audit.json 'zuege_ausserhalb_des_fensters: 4'.",
+  "vorschlag": "Kartenliste höher ansetzen oder scrollbar machen; Warnzeile darf nicht über Handlungsoptionen liegen.",
+  "pruefer": "?"
+ },
+ {
+  "schwere": "A",
+  "bild": "10-reiter-fuhre-fu-brett-fu-wagen.png",
+  "ort": "schwebender Meldungs-Stapel 'Hefe abernten/Junges Fass/Ohne Kühlung/Reinzuchthefe', linker Rand direkt neben dem geöffneten Sudplan-Panel",
+  "was": "Sobald ein Seitenpanel offen ist, überdeckt dessen Kante die ersten Buchstaben jeder Zeile der Kärtchen (z.B. 'H' bei 'Hefe', 'J' bei 'Junges' fehlen). Gleicher Effekt am rechten Bildrand bei 'BRU · DEP' in 40-jahreswechsel.png und in der 50-weiter-Serie.",
+  "vorschlag": "Kärtchen-Stapel darf nicht hinter Panels liegen bzw. muss bei geöffnetem Panel ausweichen.",
+  "pruefer": "?"
+ },
+ {
+  "schwere": "A",
+  "bild": "10-reiter-fuhre-fu-brett-fu-haeuser.png",
+  "ort": "unterer Rand des Panels 'DIE HÄUSER', Kundenliste (Pfarrschenke St. Michael/Mühlschenke/Buckenwirt)",
+  "was": "Die Grundseiten-Überschrift 'BRAUHAUS ZUM ANKER … DAS ZIEL …' scheint durch die letzten Listenzeilen durch – beide Textebenen liegen sichtbar übereinander und sind an dieser Stelle nicht mehr lesbar. Der gleiche Durchscheineffekt tritt auch am unteren Rand des Eiskeller-Panels in 10-reiter-fuhre-fu-brett-fu-keller.png auf ('Fässer des Hauses …' überlappt mit 'BRAUHAUS ZUM ANKER …').",
+  "vorschlag": "Panels brauchen einen deckenden Hintergrund bis zum tatsächlichen unteren Rand bzw. einen harten Abschluss mit Zeilenbegrenzung statt eines fließenden Übergangs zur Basisseite.",
+  "pruefer": "?"
+ },
+ {
+  "schwere": "A",
+  "bild": "00-anfang.png",
+  "ort": "unten links, Titelzeile 'BRAUHAUS ZUM ANKER · 1884 · DIE MASCHINE' und Regeltext darüber/darunter",
+  "was": "Weißer Text ohne jede Kontrastfläche liegt direkt auf der bunten Illustration (Eisblöcke, Steinbogen, Pferde) und wird an hellen Bildstellen kaum lesbar; zusätzlich überlappt die freischwebende Statuszeile '3,0 hl statt Geld / lieber zukaufen' direkt mit dem Titel selbst.",
+  "vorschlag": "Einheitliche Textscrim/Verlaufsleiste hinter allen textlastigen Overlays einführen, die direkt auf der Illustration liegen.",
+  "pruefer": "?"
+ },
+ {
+  "schwere": "B",
+  "bild": "10-reiter-fuhre-fu-brett-fu-haeuser.png",
+  "ort": "Panel 'DIE HÄUSER', Tabelle 'DAS KUNDENKONTO' (3 Spalten: Kasse gegen Skonto / Rechnung auf 30 Tage / Jahresrechnung)",
+  "was": "Die Zeilen 'bar/Bestellung/Ausfall' stehen in den drei Spalten nicht auf gleicher Höhe, weil die Beschreibungstexte unterschiedlich lang sind; zusätzlich bricht 'Bestellung 100 %' so um, dass das '%'-Zeichen allein auf einer eigenen Zeile hängt.",
+  "vorschlag": "Feste Zeilenhöhen je Tabellenzeile über alle drei Spalten hinweg erzwingen; Zahl und Einheit nie trennen.",
+  "pruefer": "?"
+ },
+ {
+  "schwere": "B",
+  "bild": "10-reiter-fuhre-fu-brett-fu-haeuser.png",
+  "ort": "Kundenliste im selben Panel (Zeilen LIN/OCH/TOR/MUE/Pfarrschenke …)",
+  "was": "Entfernungsangabe und Folgetext laufen ohne Trennzeichen ineinander, z.B. '0,2 kmadler', '0,6 kmunser Haus', '3 kmadler' – liest sich wie ein einziges Fantasiewort statt 'km' + Name.",
+  "vorschlag": "Leerzeichen bzw. Trennpunkt zwischen Einheit 'km' und folgendem Text einfügen.",
+  "pruefer": "?"
+ },
+ {
+  "schwere": "B",
+  "bild": "00-anfang.png",
+  "ort": "Kasten oben rechts 'Michaelitafel 1884', Zeilen 'billigstes Angebot dieser Tafel' und '1886 Kesselschaden und Neuabnahme' (gleiches Muster bei '−220 M' in 20-tafel.png, linke Spalte)",
+  "was": "Solange das Label in eine Zeile passt, steht der Betrag sauber rechtsbündig daneben (z.B. '48 M', '56.090 M'); sobald das Label umbricht, rutscht der zugehörige Betrag auf eine eigene, linksbündige Zeile ('3.100 M', '630 M') – die Zahlenspalte verliert dadurch ihre gemeinsame rechte Kante.",
+  "vorschlag": "Beträge unabhängig vom Zeilenumbruch des Labels immer in derselben rechtsbündigen Spalte platzieren.",
+  "pruefer": "?"
+ },
+ {
+  "schwere": "B",
+  "bild": "10-reiter-name-nm-band.png",
+  "ort": "Fließtext im Ruf-Panel, Zeile 'und einen höheren Grundpreis je Hektoliter'",
+  "was": "Dieser Satzteil ist mit roter Linie durchgestrichen dargestellt, mitten in einem sonst normalen Absatz – wirkt wie eine versehentlich im Text stehen gelassene Korrekturmarkierung.",
+  "vorschlag": "Prüfen, ob die Durchstreichung beabsichtigt ist; falls nicht, das Markup aus dem Content entfernen.",
+  "pruefer": "?"
+ },
+ {
+  "schwere": "B",
+  "bild": "20-tafel.png",
+  "ort": "Karte 'Die Umwandlung in eine Aktiengesellschaft' (Festlegung), Zeile unter 'REGEL Sofort viel Geld in der'",
+  "was": "Die zweite Zeile des Satzes ('Kasse. Dafür geht …') erscheint in deutlich kleinerer und blasserer Schrift als die erste Zeile desselben Satzes – schwer lesbar und wirkt wie ein Rendering-Fehler beim Zeilenumbruch.",
+  "vorschlag": "Einheitliche Schriftgröße/-farbe für alle Zeilen eines umgebrochenen Satzes sicherstellen.",
+  "pruefer": "?"
+ },
+ {
+  "schwere": "B",
+  "bild": "10-reiter-fuhre-fu-brett-fu-haeuser.png",
+  "ort": "Reiterleiste (Tab-Zeile) ganz oben im Panel",
+  "was": "Tabs haben stark unterschiedliche Höhen (1 bis 3 Textzeilen je nach Titellänge), die Unterkanten der Tabs liegen dadurch nicht auf einer Linie und wirken ausgefranst; zusätzlich wechseln die kleinen Pfeil-Icons zwischen ▲ und ▼ ohne erkennbare Legende, was welches bedeutet.",
+  "vorschlag": "Feste Tab-Höhe mit Textkürzung oder zweizeiligem Raster für alle Tabs; einheitliche, erklärte Pfeilrichtung.",
+  "pruefer": "?"
+ },
+ {
+  "schwere": "B",
+  "bild": "40-jahreswechsel.png",
+  "ort": "Karte 'Die Betriebskrankenkasse für die Mannschaft' (Festlegung)",
+  "was": "Die Rechnung '+943 M −99 M' steht linksbündig, das Ergebnis '= +844 M' darunter aber rechtsbündig auf einer eigenen Zeile – wirkt nicht wie eine zusammengehörige Summe, sondern wie zwei unabhängige Zeilen.",
+  "vorschlag": "Operanden und Ergebnis in einer gemeinsamen, rechtsbündigen Zahlenspalte anordnen.",
+  "pruefer": "?"
+ },
+ {
+  "schwere": "B",
+  "bild": "20-tafel.png",
+  "ort": "Überschriftzeile 'DIE FESTLEGUNG' direkt über den drei Vertragskarten",
+  "was": "Zwischen 'DIE FESTLEGUNG' und dem angehängten Wort 'haben' klafft eine auffällige Lücke ohne erkennbaren Zwischentext – liest sich wie ein abgeschnittener oder fehlerhaft zusammengesetzter Satz.",
+  "vorschlag": "Vollständigen Überschriftstext prüfen (vermutlich fehlt 'die du schon' o.ä. in der Mitte).",
+  "pruefer": "?"
+ },
+ {
+  "schwere": "B",
+  "bild": "30-mitte.png",
+  "ort": "Warnzeile 'DIE WOCHE 13/30: Gasthof Lindenhof …' unten links über der Straßenillustration (gleiches Muster in 50-weiter-0/1/2.png)",
+  "was": "Nur der Wortanfang ('DIE WOCHE 13/30') hat eine farbige Hinterlegung, der Rest desselben Satzes liegt ungeschützt direkt auf der Illustration – die Lesbarkeit wechselt mitten im Satz.",
+  "vorschlag": "Die gesamte Warnzeile einheitlich mit Kontrastfläche hinterlegen, nicht nur den Anfang.",
+  "pruefer": "?"
+ },
+ {
+  "schwere": "C",
+  "bild": "00-anfang.png",
+  "ort": "neun braune Vorschau-Kärtchen oben links (BAUHOF, OHNE DICH GESCHEHEN, DIE HÄUSER, SUDPLAN, DER EISKELLER, HALBER WAGEN, DAS SUDHAUS, DER RUF DES HAUSES, ORTSMARKEN)",
+  "was": "Die Spalten sind so schmal, dass Wörter mitten im Wort umbrechen, z.B. 'bezahlb-ar', 'schwarze-n' – macht die Kärtchen auf den ersten Blick unruhig und schwer scannbar.",
+  "vorschlag": "Spalten verbreitern, Text kürzen oder mit echter Silbentrennung umbrechen.",
+  "pruefer": "?"
+ },
+ {
+  "schwere": "C",
+  "bild": "10-reiter-fuhre-fu-brett-fu-wagen.png",
+  "ort": "Hauptbutton 'FUHRE ABSCHICKEN' unten im Panel 'HALBER WAGEN' (gleiche Farbe auch in 10-reiter-sud-sud-brett.png und der 50-weiter-Serie)",
+  "was": "Der Button ist in mattem Oliv-Grau mit dunkler Schrift gehalten und sieht dadurch deaktiviert aus, obwohl er die zentrale Aktion des Panels ist.",
+  "vorschlag": "Primärbutton farblich klar von echten deaktivierten Buttons absetzen (z.B. kräftige Akzentfarbe).",
+  "pruefer": "?"
+ },
+ {
+  "schwere": "C",
+  "bild": "20-tafel.png",
+  "ort": "die beiden Buttons ganz unten 'Nichts nehmen · das Geld bleibt liegen' und 'Das Jahr beginnen' (gleiches Bild auch in 40-jahreswechsel.png)",
+  "was": "Beide Buttons sind optisch identisch gestaltet, obwohl 'Das Jahr beginnen' die folgenreiche, abschließende Aktion des ganzen Bildschirms ist – keine visuelle Hierarchie zwischen beiden.",
+  "vorschlag": "Primärbutton (Das Jahr beginnen) farblich oder in der Größe hervorheben.",
+  "pruefer": "?"
+ },
+ {
+  "schwere": "C",
+  "bild": "10-reiter-fuhre-fu-brett-fu-keller.png",
+  "ort": "Panel 'DER EISKELLER', gepunktetes Raster unterhalb der Kopfzeile",
+  "was": "Von rund 28 sichtbaren gepunkteten Feldern sind nur 4 gefüllt – ein großer leerer/toter Rasterbereich für einen Füllstand von 11/135 hl (8 %).",
+  "vorschlag": "Raster kompakter darstellen oder durch einen einfachen Füllbalken mit Prozentanzeige ersetzen.",
+  "pruefer": "?"
+ },
+ {
+  "schwere": "C",
+  "bild": "40-jahreswechsel.png",
+  "ort": "Angebotskarte 'Die Kältemaschine nach Linde', Preiszeile",
+  "was": "Vor dem Preis '11.000 M' steht ein senkrechter Strich '|', der wie ein stehengebliebener Text-Cursor wirkt – keine der anderen vier Angebotskarten hat dieses Zeichen.",
+  "vorschlag": "Prüfen, ob hier versehentlich ein Cursor-/Platzhalterzeichen mit ausgegeben wird.",
+  "pruefer": "?"
+ },
+ {
+  "schwere": "C",
+  "bild": "50-weiter-0.png",
+  "ort": "rechte Bildhälfte, Zeile 'baut · W2 setzt das Depot · W2'",
+  "was": "Das Kürzel 'W2' taucht zweimal in derselben Zeile für offenbar zwei unterschiedliche Dinge auf (einmal als Zeitangabe, einmal als Ortsangabe) – liest sich wie ein nicht aufgelöster Platzhaltertext.",
+  "vorschlag": "Prüfen, ob dort echte Namen/Werte statt des Kürzels 'W2' eingesetzt werden sollten.",
+  "pruefer": "?"
+ },
+ {
+  "schwere": "A",
+  "bild": "10-reiter-fuhre-fu-brett-fu-haeuser.png",
+  "ort": "unterer Rand des Kastens 'DIE HÄUSER', ab Zeile 'TOR Schenke am Tor'",
+  "was": "Der Kasten wird ab hier plötzlich durchsichtig: die Zeilen 'Pfarrschenke St. Michael' und 'Mühlschenke' liegen direkt über dem fett gedruckten Hintergrundtext 'BRAUHAUS ZUM ANKER · 1970 · DIE MARKE / Du führst dieses Haus...' - beide Texte verschmelzen zu einem unlesbaren Buchstabensalat, und die '+30 hl'-Knöpfe dieser Zeilen sind kaum noch als Knöpfe erkennbar.",
+  "vorschlag": "Kastenhintergrund an die tatsächliche Listenlänge koppeln (oder harten Clip mit Rollbalken statt Transparenz), damit der Hintergrund der Karte nie durchscheint.",
+  "pruefer": "?"
+ },
+ {
+  "schwere": "A",
+  "bild": "10-reiter-fuhre-fu-brett-fu-haeuser.png",
+  "ort": "rechter Rand des Kastens 'DIE HÄUSER'",
+  "was": "Laut audit.json sind 53% des Listeninhalts und 11 Bedienelemente unterhalb der sichtbaren Kante verborgen - im Bild ist aber am rechten Rand kein Rollbalken, kein Schatten, keine Pfeil- oder 'mehr'-Markierung zu sehen. Der Kasten wirkt wie fertig, obwohl 11 weitere Wirte samt ihren +30hl/−-Knöpfen schlicht nicht erreichbar sind.",
+  "vorschlag": "Sichtbaren Rollbalken oder zumindest ein Fade-Out mit 'X weitere Wirte' einblenden, sobald Inhalt abgeschnitten wird.",
+  "pruefer": "?"
+ },
+ {
+  "schwere": "A",
+  "bild": "10-reiter-name-nm-band.png",
+  "ort": "unterer Rand des Kastens 'DER RUF DES HAUSES', unterhalb 'Das Zeichen und das Register'",
+  "was": "Derselbe Transparenz-Fehler wie bei DIE HÄUSER: Erklärtext des Panels ('Der Etat läuft jedes Jahr...') und der Hintergrundtext 'Du führst dieses Haus... DAS ZIEL...' liegen exakt übereinander.",
+  "vorschlag": "Wie oben - zeigt, dass der Fehler kein Einzelfall, sondern ein generelles Problem der Seitenkästen ist; zentral in der Kasten-Komponente fixen.",
+  "pruefer": "?"
+ },
+ {
+  "schwere": "A",
+  "bild": "10-reiter-sud-sud-brett.png",
+  "ort": "unterer Rand des Kastens 'DAS SUDHAUS', Übergang zu 'DIE BEHANDLUNG'",
+  "was": "Dritte Wiederholung desselben Fehlers: die Zeilen 'ein Labor wird eingerichtet, nicht gemietet' und 'DIE BEHANDLUNG - was geschieht vor der Abfüllung?' verschmelzen mit dem fett gedruckten Hintergrundabsatz 'Du führst dieses Haus: brauen, ausliefern...' zu drei übereinanderliegenden Textebenen - komplett unlesbar.",
+  "vorschlag": "Gleiche zentrale Lösung wie oben; besonders hier prüfen, da drei Textebenen gleichzeitig kollidieren.",
+  "pruefer": "?"
+ },
+ {
+  "schwere": "A",
+  "bild": "20-tafel.png",
+  "ort": "Michaeli-Tafel, Angebotskarte 'Zwei Lastzüge mit Anhänger' (mittlere Spalte)",
+  "was": "Die Bedingungszeile 'Nach dem Ausstoß...' wird nach dem ersten Wort ('Nach dem') hart mitten in der zweiten Zeile abgeschnitten, nur Buchstabenreste ragen über die gepunktete Trennlinie - kein Rollbalken, keine Auslassungspunkte. Dieselbe Kürzung passiert bei der Karte 'Der Liefervertrag mit der Nordstern-Gruppe' ('stellt die...').",
+  "vorschlag": "Kartenhöhe an audit.json-Werte anpassen (Karten sind 70px hoch, brauchen aber bis zu 296px) oder Text automatisch kürzen/Tooltip statt hartem Clip.",
+  "pruefer": "?"
+ },
+ {
+  "schwere": "A",
+  "bild": "20-tafel.png",
+  "ort": "rechte Spalte 'DIE LEITER', letzte sichtbare Zeile",
+  "was": "Der Erklärtext zur Preisleiter-Mechanik bricht mitten im Satz ab: '...diese Tafel liegt an 29 von 30 Wochen zu, und sie fällt, sobald die billigen...' - der Rest fehlt komplett, direkt darunter folgen bereits die Aktionsknöpfe.",
+  "vorschlag": "Textbox höher machen oder scrollbar machen; gerade hier erklärt der abgeschnittene Satz eine zentrale Spielregel.",
+  "pruefer": "?"
+ },
+ {
+  "schwere": "A",
+  "bild": "10-reiter-fuhre-fu-brett-fu-keller.png",
+  "ort": "SUDPLAN-Kasten, Zeile 'Pilsner'",
+  "was": "Der Mengenregler (−/1/+) liegt direkt über der Beschreibung '→ 60 hl 2 Wo. Lager', sodass diese kaum noch lesbar ist; der Regler ragt zudem in die nächste Zeile 'Handelsmarke' hinein.",
+  "vorschlag": "Feste Zeilenhöhe pro Sorte reservieren, die den Regler mit einschließt, statt ihn absolut über den Text zu legen.",
+  "pruefer": "?"
+ },
+ {
+  "schwere": "A",
+  "bild": "10-reiter-fuhre-fu-brett-fu-keller.png",
+  "ort": "SUDPLAN-Kasten, unter der Zeile 'Handelsmarke'",
+  "was": "Die dritte Beschreibungszeile der Handelsmarke ('...10 ...die Pf...') ist komplett von den drei darunterliegenden Investitionskarten ('Zweiter Lastzug', 'Sudhaus erweitern', 'Hopfen im Kontrakt') verdeckt - nur ein Buchstabenrest lugt über deren obere Kante hervor.",
+  "vorschlag": "Abstand zwischen Beschreibungstext und Kartenreihe erzwingen bzw. Kartenreihe erst nach vollständigem Text platzieren.",
+  "pruefer": "?"
+ },
+ {
+  "schwere": "A",
+  "bild": "30-mitte.png",
+  "ort": "rechter Bildrand, Höhe der Brücke, Cluster um 'ADLER-BRÄU AG'",
+  "was": "Mehrere Konkurrenz-Meldungen liegen ohne jeden Kasten direkt auf dem bunten Stadtbild übereinander; der Satz 'kauft sich ins Regal · W12' erscheint doppelt und leicht versetzt (Geisterbild), dazu kreuzen sich 'wirbt · noch 3 Wo.', eine grün angeschnittene 'WERBUNG'-Zeile und 'Zuschuss in Bier' auf engstem Raum - nichts davon ist mehr zusammenhängend lesbar.",
+  "vorschlag": "Diesen Ticker in einen eigenen, blickdichten Kasten mit fester Zeilenreihenfolge packen statt frei auf dem Hintergrund zu positionieren.",
+  "pruefer": "?"
+ },
+ {
+  "schwere": "B",
+  "bild": "10-reiter-sud-sud-brett.png",
+  "ort": "Spalten 2 und 3 unter 'Betriebslabor...' bzw. 'Prozessrechner am Sudwerk'",
+  "was": "Die orange umrandete Markierung 'unwiderruflich' wird exakt an der Spaltentrennlinie abgeschnitten ('unwiderruflic'), in beiden Spalten identisch - wirkt wie ein Kodierfehler statt wie ein Label.",
+  "vorschlag": "Badge-Breite an Spaltenbreite anpassen oder Text umbrechen statt abschneiden.",
+  "pruefer": "?"
+ },
+ {
+  "schwere": "B",
+  "bild": "50-weiter-0.png",
+  "ort": "Karteneintrag 'MUE · JVB', rechts oben im Stadtbild",
+  "was": "Ein kleines Anker-Abzeichen liegt direkt über der Preiszeile 'ablösen 36.?00 DM' und verdeckt eine Ziffer dauerhaft (in allen drei 50-weiter-Bildern gleich) - der tatsächliche Preis ist nicht ablesbar.",
+  "vorschlag": "Abzeichen neben statt über die Zahl setzen.",
+  "pruefer": "?"
+ },
+ {
+  "schwere": "B",
+  "bild": "10-reiter-fuhre-fu-brett-fu-haeuser.png",
+  "ort": "vor jeder Zeile 'will XX hl' in der Häuser-Liste",
+  "was": "Statt eines Icons erscheinen zwei kleine rot umrandete leere Kästchen (Platzhalter-/Tofu-Glyphen) - wirkt wie ein fehlendes Icon/eine fehlende Schriftart, nicht wie Absicht.",
+  "vorschlag": "Fehlende Icon-Glyphen prüfen/austauschen.",
+  "pruefer": "?"
+ },
+ {
+  "schwere": "B",
+  "bild": "50-weiter-0.png",
+  "ort": "Kasten 'DAS SUDHAUS' unten, Kartenreihe 'Naturtrüb / Schönen mit / Kieselgurfilter / Tunnelpasteur'",
+  "was": "Der Titel 'Kieselgurfilter' ist breiter als seine Karte und läuft in die Nachbarkarte 'Tunnelpasteur' hinein.",
+  "vorschlag": "Titeltext umbrechen oder Schriftgröße innerhalb der Karte automatisch verkleinern.",
+  "pruefer": "?"
+ },
+ {
+  "schwere": "B",
+  "bild": "10-reiter-fuhre-fu-brett-fu-wagen.png",
+  "ort": "gesamter linker/mittlerer Bildschirmbereich",
+  "was": "Beim Wechsel zum Reiter LASTZUG bleiben die zuvor geöffneten Kästen 'DIE HÄUSER', 'SUDPLAN'+'DIE TANKS' und 'OHNE DICH GESCHEHEN' einfach liegen; zusammen mit dem neuen LASTZUG-Kasten und den Hintergrund-Ticker-Texten sind gleichzeitig über 40 klickbar wirkende Elemente sichtbar, obwohl die eigentliche Aufgabe (Fuhre planen) nur einen einzigen Kasten braucht.",
+  "vorschlag": "Beim Reiterwechsel alte Detailkästen automatisch schließen, nur den aktiven Reiter-Kasten offen halten.",
+  "pruefer": "?"
+ },
+ {
+  "schwere": "B",
+  "bild": "40-jahreswechsel.png",
+  "ort": "Reiterzeile ganz oben, alle 12 Reiter",
+  "was": "Reiter mit langen Titeln ('MITBIETEN · GASTHOF LINDENHOF', 'OHNE DICH GESCHEHEN · 28 Züge') brechen zweizeilig um und ziehen die ganze Zeile in die Höhe, während kurze Reiter ('BAUHOF', 'LASTZUG') einzeilig bleiben und darunter leeren Raum lassen. Zusätzlich zeigen die meisten Reiter oben rechts ein '▲', einer aber ein '▼' - ohne erkennbaren Bedeutungsunterschied.",
+  "vorschlag": "Einheitliche Reiterhöhe/Textkürzung (z. B. Tooltip statt Volltext) und einheitliches Pfeilsymbol verwenden.",
+  "pruefer": "?"
+ },
+ {
+  "schwere": "C",
+  "bild": "50-weiter-0.png",
+  "ort": "direkt unter der Kopfleiste, mittig ('PFA · LIS')",
+  "was": "Ein Hintergrund-Textlabel wird von der Unterkante der Kopfleiste angeschnitten - nur die untere Hälfte der Buchstaben ist sichtbar.",
+  "vorschlag": "Vertikalen Abstand zwischen Kopfleiste und darunterliegendem Freitext vergrößern.",
+  "pruefer": "?"
+ },
+ {
+  "schwere": "B",
+  "bild": "10-reiter-sud-sud-brett.png",
+  "ort": "Kasten 'DAS SUDHAUS' Mitte rechts vs. Stadtbild-Overlay bei 'BRAUHAUS ZUM ANKER'",
+  "was": "Die Aktion 'Frisches Fass anzapfen · +14 · 1,5 hl' existiert doppelt: einmal als dauerhaft eingeblendete Schwebe-Box über der Stadtgrafik ('Frisches Fass · +14 · 1,5 hl'), einmal identisch im SUDHAUS-Kasten - unklar, ob beide dieselbe Aktion auslösen oder zwei getrennte Systeme sind.",
+  "vorschlag": "Redundante Anzeige entfernen oder eindeutig als dieselbe Aktion kennzeichnen (z. B. Hervorhebung, wenn eine der beiden geklickt wird).",
+  "pruefer": "?"
+ },
+ {
+  "schwere": "B",
+  "bild": "startseite.png",
+  "ort": "ganz unten am Bildschirmrand, unterhalb von \"Heutige Tagessaat: 20260818\"",
+  "was": "Die Startseite (1366×768, vermutlich als \"erster Blick ohne Scrollen\" gedacht) endet nicht am Bildrand: ein weiterer Kasten (roter linker Rand sichtbar) beginnt gerade erst und wird hart abgeschnitten. Es gibt keinerlei Hinweis (Pfeil, Fade-Verlauf, \"mehr unten\"-Text), dass darunter noch etwas folgt.",
+  "vorschlag": "Sichtbaren Scroll-Hinweis ergänzen (z. B. sanfter Verlauf am unteren Bildrand oder Pfeil-Icon) oder wichtige Inhalte (z. B. \"Fortsetzen\") weiter oben platzieren, damit sie ohne Scrollen erkennbar sind.",
+  "pruefer": "?"
+ },
+ {
+  "schwere": "B",
+  "bild": "startseite.png",
+  "ort": "Kasten \"Den Bogen beginnen\", Überschrift direkt über dem gleichnamigen Knopf",
+  "was": "Die Kasten-Überschrift lautet wortgleich \"Den Bogen beginnen\" wie der Knopf direkt darunter. Die Dopplung wirkt redundant und wie ein Platzhaltertext, der nicht mehr überarbeitet wurde.",
+  "vorschlag": "Knopftext variieren, z. B. \"Jetzt starten\" oder \"1350 beginnen\", damit Überschrift und Aktion sich sichtbar unterscheiden.",
+  "pruefer": "?"
+ },
+ {
+  "schwere": "B",
+  "bild": "startseite.png",
+  "ort": "grauer Hinweiskasten \"Ehrlich gesagt:\" unterhalb des Knopfs \"Den Bogen beginnen\"",
+  "was": "Der Text spricht in Entwickler-Sprache (\"ist noch nicht gebaut\", \"Dieser Knopf startet heute schlicht...\") direkt auf der ersten Seite, die ein Neuling sieht. Das steht im Ton hart neben der sonst erzählerischen, sorgfältig geschriebenen Sprache (\"Man führt kein Leben, sondern ein Haus...\") und untergräbt an der Tür selbst das Vertrauen in den Umfang des Spiels.",
+  "vorschlag": "Entweder den Hinweis sprachlich an den Rest angleichen (weniger \"Baustellen-Deutsch\") oder ihn dezenter/kleiner als reine Fußnote statt als große graue Box direkt unter dem Haupt-Call-to-Action platzieren.",
+  "pruefer": "?"
+ },
+ {
+  "schwere": "B",
+  "bild": "startseite.png / intro-4.png",
+  "ort": "gesamter Übergang vom Ende des Intros zur Startseite",
+  "was": "Das Intro ist aufwendig gemalt, warm, illustrativ (vier ganzseitige Szenen). Die Startseite dahinter ist reine Serifen-Typografie auf beigem Grund ohne jedes Bildelement, nur ein roter Akzentstrich erinnert entfernt an die Illustration. Der Sprung von \"Kino\" zu \"Textdokument\" ist deutlich spürbar.",
+  "vorschlag": "Mindestens ein kleines Bildmotiv (Ausschnitt, Icon, o. ä.) aus dem Intro auf der Startseite wiederverwenden, um den Stilbruch abzufedern.",
+  "pruefer": "?"
+ },
+ {
+  "schwere": "C",
+  "bild": "intro-4.png",
+  "ort": "oben links, dort wo bei intro-1/2/3 die Jahreszahl (\"1350\", \"1884\") bzw. \"HEUTE\" steht",
+  "was": "Anders als bei den ersten drei Bildern fehlt hier das kleine Zeit-Label über dem Fließtext. Das in drei Bildern etablierte Muster wird auf dem letzten, emotional wichtigsten Bild nicht fortgeführt.",
+  "vorschlag": "Entweder konsequent auch hier ein Label ergänzen (z. B. \"ÜBERGABE\") oder bewusst weglassen und das an anderer Stelle klar begründen/kennzeichnen.",
+  "pruefer": "?"
+ },
+ {
+  "schwere": "B",
+  "bild": "anleitung-unten.png",
+  "ort": "Glossar, Eintrag \"Georgi\", zweiter Satz",
+  "was": "Text lautet \"...das gesetzliche Ende der Braisonzeit\" — \"Braisonzeit\" ist kein korrektes deutsches Wort, gemeint ist vermutlich \"Brausaisonzeit\"/\"Brausaison\". Ein Rechtschreibfehler in einem offiziellen Nachschlage-Text wirkt unfertig, besonders da der Rest der Anleitung sprachlich sehr sauber ist.",
+  "vorschlag": "Zu \"Brausaisonzeit\" bzw. schlicht \"Brausaison\" korrigieren.",
+  "pruefer": "?"
+ },
+ {
+  "schwere": "C",
+  "bild": "intro-1.png und intro-2.png",
+  "ort": "erste Textzeile der Bilduntertitelung (\"Ein Kessel, ein Feuer...\" bzw. \"Jahrhunderte vergehen...\"), direkt über dem unteren Bildrand",
+  "was": "Der abdunkelnde Verlauf hinter dem Text ist dort am schwächsten; die erste Zeile liegt noch über recht hellem, texturiertem Untergrund (Pflaster, Fässer, Gras). Der Text bleibt lesbar, aber der Kontrast ist merklich knapper als bei der zweiten Zeile bzw. bei intro-3/4.",
+  "vorschlag": "Verlauf/Schlagschatten hinter dem Text etwas höher ziehen bzw. verstärken, damit beide Zeilen gleich sicher lesbar sind.",
+  "pruefer": "?"
+ },
+ {
+  "schwere": "C",
+  "bild": "startseite.png vs. anleitung-mitte.png",
+  "ort": "verschachtelter Kasten \"Ehrlich gesagt\" (startseite.png) gegenüber den Hinweiskästen \"Die häufigste Art zu verlieren\" / \"Das eigentliche Ziel\" (anleitung-mitte.png)",
+  "was": "Auf der Startseite ist der Hinweiskasten grau gefüllt, ohne Farbrand. In der Anleitung sind inhaltlich gleichwertige Hinweiskästen weiß mit farbigem linken Rand (rot = Warnung, grün = Ziel). Für denselben Bausteintyp \"wichtiger Hinweis\" gibt es also zwei unterschiedliche optische Sprachen.",
+  "vorschlag": "Ein einheitliches Hinweiskasten-Design (Farbe/Rand) für Startseite und Anleitung festlegen.",
+  "pruefer": "?"
+ }
+]
