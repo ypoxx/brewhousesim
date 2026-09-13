@@ -2487,10 +2487,18 @@
       + B.welt.waehrung().name + ' — dieses Fass kann auf den Karren oder zum Wirt, '
       + 'nicht beides. Einmal im Braujahr je Adresse.'
       + (ausKeller ? '' : ' Im ' + lager + ' liegen nur ' + B.welt.menge(fassImKeller()) + '.');
+    /* WELLE 18 — WAS DER KNOPF BEWIRKT, STEHT AUF DEM KNOPF.
+
+       Hier stand „Fass an den Wirt" / „1 Fass statt Geld". Der zweite Satz
+       nennt den PREIS, nicht die WIRKUNG, und die Nachprobe hat die Zeile in
+       allen vier Epochen unter den unverstaendlichsten gemeldet: „welche
+       Lade, wofuer statt Geld, was bekomme ich?" Die Wirkung steht in den
+       Daten (`hh.wochen`) und stand bisher nur im Titel. */
     var t = B.el('span', 'gg-fasstext');
     t.appendChild(B.el('b', null, hh.kurz));
-    t.appendChild(B.el('i', null, ausKeller ? B.welt.menge(n) + ' statt Geld'
-                                            : 'Vorrat reicht nicht'));
+    t.appendChild(B.el('i', null, ausKeller
+      ? 'hält ihn ' + (hh.wochen || 3) + ' Wochen · ' + B.welt.menge(n) + ' statt Geld'
+      : 'Vorrat reicht nicht'));
     b.appendChild(t);
     b.addEventListener('click', function () { hinhalten(k, false); });
     raus.push(b);
@@ -2512,7 +2520,8 @@
       + (mitGeld ? '' : ' In der Lade liegen ' + B.welt.geld(B.welt.haus.kasse) + '.');
     var gt = B.el('span', 'gg-fasstext');
     gt.appendChild(B.el('b', null, 'lieber zukaufen'));
-    gt.appendChild(B.el('i', null, B.welt.menge(n) + ' · ' + B.welt.geld(zu)));
+    gt.appendChild(B.el('i', null, 'hält ihn ' + (hh.wochen || 3) + ' Wochen · '
+      + B.welt.geld(zu)));
     g.appendChild(gt);
     g.addEventListener('click', function () { hinhalten(k, true); });
     raus.push(g);
