@@ -220,7 +220,17 @@
        gezaehlt, und keiner von ihnen sagte, dass er nichts tat. Hier sagt er
        es. Ausgenommen sind Knoepfe, die nur etwas AUFSCHLAGEN sollen (ein
        Brett, ein Blatt, ein Reiter) — die tun sichtbar genug. */
-    var reinesOeffnen = /(:reiter:|:blatt|chronik|protokoll|:auf$|:zu$|zeigen|schliess)/i.test(v.zug || '');
+    /* WAS NUR ETWAS ZEIGT, MUSS NICHTS BUCHEN.
+
+       Die Quittung sagt „Nichts geschehen", wenn ein Klick weder Geld noch
+       Vorrat bewegt und die Woche nicht schaltet. Fuer einen Zug ist das die
+       richtige Auskunft; fuer einen Knopf, der nur etwas AUFSCHLAEGT,
+       UMLEGT oder ZEIGT, ist es eine Falschmeldung — und die Nachprobe hat
+       genau die kassiert: die sieben Ortsmarken meldeten „Nichts geschehen",
+       obwohl sie taten, was auf ihnen steht. Ein Kasten, der ueber tote
+       Knoepfe wacht und dabei selbst falsch meldet, ist schlimmer als
+       keiner. */
+    var reinesOeffnen = /(:reiter:|:marke:|:blatt|:band$|:seite:|chronik|protokoll|buch|:auf$|:zu$|:auf:|zeige|zeigen|schliess|bauhof|tafel)/i.test(v.zug || '');
     var nichts = !buchungen.length && !dKasse && !dRohstoff && !dFass && !wocheGelaufen;
 
     if (nichts && reinesOeffnen) return;
@@ -392,6 +402,64 @@
     return Math.max(0, Math.floor(jetzt / -t));
   }
 
+  /* ----------------------------------------------------------------------
+     WO LIEGT DIESER KNOPF?
+
+     Die erste Fassung dieser Warnung nannte ein Brett beim Namen („Nachgekauft
+     wird auf dem Brett DAS SUDHAUS"). In 1600 war das falsch, und ein blinder
+     Spieler hat die Partie darueber verloren: „das Spiel sagte mir jede Woche
+     richtig, was schiefging, und schickte mich fuer die Abhilfe auf das
+     falsche Brett."
+
+     Ein Name, der geraten ist, ist schlimmer als keiner. Diese Datei raet
+     nicht — sie SIEHT NACH: sie sucht den Knopf im Bild und liest ab, in
+     welchem Brett er liegt. Findet sie ihn nicht (das Brett ist zugeklappt,
+     der Knopf gibt es in dieser Epoche nicht), sagt sie nichts weiter. Das
+     ist dieselbe Regel wie ueberall hier: lieber eine Auskunft weniger als
+     eine falsche.
+     ---------------------------------------------------------------------- */
+  function woLiegt(zug) {
+    if (typeof document === 'undefined') return null;
+    var el = document.querySelector('[data-zug="' + zug + '"]');
+    if (!el) return null;
+    var n = el.parentElement;
+    while (n && n.id !== 'buehne') {
+      /* DIE STADT gibt einem Brett `data-reiter`, wenn es sich selbst
+         beschriften will — das ist der genaueste Name, den es gibt. */
+      var name = n.getAttribute && n.getAttribute('data-reiter');
+      if (name) return String(name).split(' · ')[0].trim();
+      /* Sonst die Ueberschrift des Bretts, in dem der Knopf liegt. Woran
+         man ein Brett erkennt: es ist der Kasten, den DIE STADT auf- und
+         zuklappt, und der traegt eine der vier Klassen. Nachgemessen in
+         allen vier Epochen — der Rohstoffknopf liegt in einem Kasten
+         `fu-brett fu-tafel fu-schiefer`, dessen Ueberschrift „SUDORDNUNG"
+         lautet und der mit dem gleichnamigen Reiter aufgeschlagen wird. */
+      var kl = (n.className || '').toString();
+      if (/(^|[\s-])(brett|band|tafel|karte)([\s-]|$)/.test(kl)
+          || (n.classList && n.classList.contains('amort'))) {
+        var kopf = n.querySelector ? n.querySelector('b, strong, h2, h3, .titel') : null;
+        var t = kopf ? (kopf.textContent || '').replace(/\s+/g, ' ').trim() : '';
+        if (t && t.length <= 40) return t;
+      }
+      n = n.parentElement;
+    }
+    return null;
+  }
+
+  /* Der Knopf, der den Rohstoff nachfuellt. Er gehoert DER FUHRE und heisst
+     in jeder Epoche anders („Grut vom Grutherrn", „Hopfen vom Markt",
+     „Hopfen aus der Hallertau", „Hopfen im Kontrakt") — der Schluessel ist
+     derselbe, und der steht hier, nicht der Name. */
+  function rohstoffKnopf() {
+    if (typeof document === 'undefined') return null;
+    var el = document.querySelector('[data-zug="fuhre:kauf:rohstoff"]');
+    if (!el) return null;
+    return {
+      text: (el.textContent || '').replace(/\s+/g, ' ').trim().slice(0, 60),
+      brett: woLiegt('fuhre:kauf:rohstoff')
+    };
+  }
+
   /* Die Adressen, die dem Haus noch abnehmen — der einzige Zaehler, an dem
      das Spiel wirklich endet. */
   function abnehmer() {
@@ -436,8 +504,13 @@
            steht hier, wo er liegt. */
         text: e.rohstoff + ' ' + B.zahl(rohstoff()) + ' — reicht noch etwa '
           + (rW === 0 ? 'keine Woche' : rW + (rW === 1 ? ' Woche' : ' Wochen'))
-          + '. Ohne ' + e.rohstoff + ' kein Sud, ohne Sud kein Fass, ohne Fass keine Fuhre. '
-          + 'Nachgekauft wird auf dem Brett DAS SUDHAUS.'
+          + '. Ohne ' + e.rohstoff + ' kein Sud, ohne Sud kein Fass, ohne Fass keine Fuhre.'
+          + (function () {
+              var kn = rohstoffKnopf();
+              if (!kn) return '';
+              return ' Nachgekauft wird mit „' + kn.text + '"'
+                + (kn.brett ? ' auf ' + kn.brett : '') + '.';
+            }())
       });
     }
     var fW = reicht('faesser');
