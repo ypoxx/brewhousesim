@@ -427,9 +427,17 @@
     if (rW !== null && rW <= 12) {
       saetze.push({
         dringend: rW <= 4,
+        /* DER SATZ, DEN SECHS VON ACHT SPIELERN GEBRAUCHT HAETTEN.
+           Hopfen und Grut liefen zwischen Woche 5 und 16 still leer; die
+           Kopfzeile zeigte die fallende Zahl, und niemand wusste, dass sie
+           etwas bedeutet oder was dagegen zu tun ist. Der Kaufknopf liegt im
+           Brett DAS SUDHAUS, das in 64 Wochen niemand aufgeschlagen hat —
+           der einzige Spieler, der ihn fand, erreichte das gute Ende. Also
+           steht hier, wo er liegt. */
         text: e.rohstoff + ' ' + B.zahl(rohstoff()) + ' — reicht noch etwa '
           + (rW === 0 ? 'keine Woche' : rW + (rW === 1 ? ' Woche' : ' Wochen'))
-          + '. Ohne ' + e.rohstoff + ' kein Sud, ohne Sud kein Fass.'
+          + '. Ohne ' + e.rohstoff + ' kein Sud, ohne Sud kein Fass, ohne Fass keine Fuhre. '
+          + 'Nachgekauft wird auf dem Brett DAS SUDHAUS.'
       });
     }
     var fW = reicht('faesser');

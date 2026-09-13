@@ -2584,10 +2584,25 @@
             + (Z.hinhalt[k] === jahr()
                ? ' Bis Michaeli drückt er hier den Preis nicht — das Fass steht beim Wirt.' : '');
           sc.appendChild(svg(b.wer === 'konzern' ? STERN_SVG : ADLER_SVG, 'gg-wappen klein'));
+          /* WELLE 18 — DER WIRT HEISST, WIE ER HEISST.
+
+             Hier stand „TOR · KON": das Kuerzel der Adresse und das Kuerzel
+             des Bindemittels. ACHT VON ACHT blinden Spielern haben genau
+             diese Zeile unter „unverstaendlich" gemeldet, in allen vier
+             Epochen und mit allen Kuerzeln (TOR·KON, FAE·BAN, LIN·HYP,
+             MUE·DEP, BHF·LIS, BRU·EXK); keiner hat je herausgefunden, wofuer
+             sie stehen — es gab nirgends eine Aufloesung.
+
+             Jetzt steht der Name des Wirts da und darunter, WIE der Gegner
+             ihn haelt, im Klartext. Das Kuerzel bleibt auf der Ortsmarke,
+             wo es hingehoert: dort ist es eine Marke, hier war es ein Raetsel.
+             Laenger wird das Schild dadurch nicht — es sind dieselben zwei
+             Zeilen —, und was nicht hineinpasst, kuerzt das Stilblatt mit
+             „…"; der ganze Satz steht ohnehin im Titel. */
           var txt = B.el('span', 'gg-schildtext');
-          txt.appendChild(B.el('b', null, (D.kurz[k] || k.slice(0, 3).toUpperCase()) + ' · ' + m.kurz));
-          txt.appendChild(B.el('i', null, summe === null
-            ? 'nicht ablösbar' : 'ablösen ' + B.welt.geld(summe)));
+          txt.appendChild(B.el('b', null, a.name));
+          txt.appendChild(B.el('i', null, (m.name ? m.name + ' · ' : '')
+            + (summe === null ? 'nicht ablösbar' : 'ablösen ' + B.welt.geld(summe))));
           sc.appendChild(txt);
           if (summe !== null && !B.welt.kann(summe)) sc.classList.add('zuteuer');
           sc.addEventListener('click', function () { loeseAb(k); });

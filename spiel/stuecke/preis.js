@@ -2835,6 +2835,26 @@
     var links = B.el('div', 'pr-kopf-links');
     links.appendChild(B.el('span', 'pr-kopf-tag', 'MICHAELI ' + Z.tafelJahr));
     links.appendChild(B.el('span', 'pr-kopf-epoche', e.sagt));
+    /* WELLE 18 — WAS HIER ZU TUN IST, IN EINEM SATZ.
+
+       Diese Tafel ist mit 1.512 bis 1.683 Woertern und 57 bis 61 Knoepfen
+       der groesste Brocken des Spiels, und sie ist das ERSTE, was ein
+       Neuling sieht: der erste Klick auf den Hauptknopf schlaegt sie auf.
+       Acht von acht blinden Spielern haben sie gelesen oder ueberflogen und
+       danach geraten. Drei haben sich dabei eine Festlegung eingehandelt,
+       die ihnen das Haus fuer den Rest der Partie verdorben hat.
+
+       Der Satz erfindet nichts, er ordnet nur: was Pflicht ist, was Wahl
+       ist, und wie man wieder herauskommt. */
+    var wegweiser = B.el('span', 'pr-kopf-wegweiser',
+      'Einmal im Jahr. Die Abgaben links sind fällig, ob man klickt oder nicht. '
+      + 'Was in der Mitte steht, ist freiwillig: eine Anschaffung kaufen — oder keine. '
+      + 'Unten rechts geht es weiter.');
+    wegweiser.title = 'Eine FESTLEGUNG (die Karten mit dem Wort REGEL) gilt für den Rest '
+      + 'der Partie und wird nie zurückgenommen. Ein ANGEBOT („Nehmen") ist ein Kauf: '
+      + 'einmal bezahlt, steht es danach auf dem Hof. Wer nichts nimmt, verliert nichts — '
+      + 'das Geld bleibt in der Lade.';
+    links.appendChild(wegweiser);
     kopf.appendChild(links);
 
     var rechts = B.el('div', 'pr-kopf-rechts');
@@ -3213,9 +3233,18 @@
          Preisleiter. Zwei Zahlen, die dasselbe zu sein scheinen und es nicht
          sind, waren der schwerste Einwand gegen dieses Stueck. Also traegt
          diese hier ihren Bezug im Namen und nicht bloss im Satz daneben. */
-      var vz = zeile('Kasse : dieses Angebot',
-        billig.preis ? B.zahl(B.welt.haus.kasse / billig.preis, 2) + '×' : '—', 'pr-verh');
-      vz.title = 'Nur diese Tafel. Die Kennzahl unten rechts misst den nächsten '
+      /* WELLE 18 — DIE ZAHL SAGT, WAS SIE BEDEUTET.
+         „Kasse : dieses Angebot 3,39×" stand bei vier von acht blinden
+         Spielern unter den fuenf unverstaendlichsten Wortgruppen des
+         Spiels. Die Zahl bleibt (sie ist genauer als jedes Wort), aber die
+         Marke daneben sagt jetzt, was sie heisst. */
+      var verh = billig.preis ? B.welt.haus.kasse / billig.preis : null;
+      var vz = zeile(verh === null ? 'Kasse : dieses Angebot'
+                      : (verh >= 1 ? 'die Kasse trägt es' : 'die Kasse trägt es NICHT'),
+        verh === null ? '—' : B.zahl(verh, 2) + '×', 'pr-verh');
+      vz.title = 'Wie oft die Lade das billigste Angebot dieser Tafel bezahlen könnte. '
+        + 'Unter 1× reicht sie für keines davon. '
+        + 'Nur diese Tafel. Die Kennzahl unten rechts misst den nächsten '
         + 'sinnvollen Zug des ganzen Spiels und ist meist eine andere Zahl; '
         + 'beide stehen Jahr für Jahr nebeneinander auf der LEITER.';
       stand.appendChild(vz);

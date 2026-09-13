@@ -408,3 +408,14 @@
   padding-right: calc(var(--s) * 5);
   backdrop-filter: saturate(0.7) brightness(1.06);
 }
+
+/* Der Name des Wirts kann laenger sein als das Schild. Gekuerzt wird mit
+   „…", nicht mitten im Wort — der ganze Name steht im Titel. */
+.gg-schildtext > b, .gg-schildtext > i,
+.gg-zieltext > b, .gg-zieltext > i {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 100%;
+}
