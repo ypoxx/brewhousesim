@@ -350,7 +350,7 @@
      durchschnittliche: eine einzelne Michaeli-Woche mit einer Ablösung von
      tausend Pfennig darf die Zahl nicht verbiegen. */
   function wochenkosten() {
-    if (Z.kosten.length < 3) return null;
+    if (Z.kosten.length < 2) return null;
     var l = Z.kosten.slice().sort(function (a, b) { return a - b; });
     return Math.round(l[Math.floor(l.length / 2)]);
   }
