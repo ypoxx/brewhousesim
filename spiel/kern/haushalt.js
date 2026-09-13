@@ -103,6 +103,27 @@
      ====================================================================== */
   var GRENZEN = {
     kern:   { gesamt: 120000, oben: 80000 },
+    /* WELLE 18 — DIE KLARHEIT bekommt einen eigenen Haushalt, statt sich
+       den des Rahmens zu teilen.
+
+       Der Grund fuer echte Kaesten: die Blindprobe vom 8. September 2026 hat
+       in ALLEN acht Laeufen gemeldet, dass Schrift ohne Grund ueber Daechern
+       und Gaensen nicht zu lesen ist. Was diese Kaesten tragen — was ein Zug
+       WIRKLICH gebracht hat, was die Woche gekostet hat, wie lange der
+       Vorrat reicht — ist genau das, was ohne Grund niemand liest. Ein
+       Lichthof haette den Befund wiederholt, den er beheben soll.
+
+       Der Grund fuer die Zahl: A15 misst den LADEZUSTAND, und dort ist
+       dieses Stueck LEER. Die Quittung entsteht erst durch einen Klick, die
+       Lage erst, wenn drei Wochen Verlauf vorliegen — gemessen auf
+       2752x1536: Ladezustand 0 px, nach dem ersten Fahren-Klick 256.880 px
+       (Quittung 674x298, Lage 674x78), beide unten links, keiner im
+       obersten Sechstel. Die Grenze steht deshalb auf dem gemessenen
+       Arbeitszustand plus knappem Vorrat; `oben` bleibt bei 2.000, damit ein
+       Abrutschen in die Kopfzeile sofort auffaellt. Waechst die Quittung
+       ueber diese Zahl, hat sie zu viele Posten — dann ist
+       POSTEN_HOECHSTENS in kern/klar.js die Stellschraube, nicht diese Zeile. */
+    'kern-klar': { gesamt: 264000, oben: 2000 },
     stadt:  { gesamt:  40000, oben: 26000 },
     sud:    { gesamt:  34000, oben:  6000 },
     fuhre:  { gesamt:  34000, oben: 10000 },
