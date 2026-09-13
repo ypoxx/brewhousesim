@@ -1922,8 +1922,25 @@
     return B.grenze(Math.min(SPRUNG_HOECHSTENS, bisJahresende), 0, SPRUNG_HOECHSTENS);
   }
 
+  /* Wieviel Rohstoff „zur Neige" heisst, wird GEMESSEN, nicht gesetzt: was
+     die letzten Wochen wirklich verbraucht haben, hochgerechnet. Die Zahl
+     liefert DIE KLARHEIT (kern/klar.js), die dasselbe schon fuer ihre
+     Warnung tut — zwei Schwellen fuer dieselbe Sache waeren zwei Wahrheiten.
+     Ohne Verlauf (die ersten Wochen einer Partie) gilt ein grober Anschlag:
+     weniger als ein Viertel dessen, womit die Epoche anfaengt. */
+  function ep0() { return B.welt.epoche(); }
+
+  function rohstoffKnapp() {
+    if (B.klar && B.klar.reicht) {
+      var w = B.klar.reicht('rohstoff');
+      if (w !== null) return w <= 4;
+    }
+    var anfang = [40, 65, 120, 340][B.welt.zeit.epoche - 1] || 40;
+    return B.welt.haus.rohstoff < anfang * 0.25;
+  }
+
   function springeWochen(n) {
-    var fass = 0, geld = 0, gefahren = 0, wochen = 0;
+    var fass = 0, geld = 0, gefahren = 0, wochen = 0, vorratKnapp = false;
     var vonJahr = B.welt.zeit.jahr, vonWoche = B.welt.zeit.woche;
     for (var i = 0; i < n; i++) {
       if (B.welt.zeit.ende) break;
@@ -1945,12 +1962,33 @@
          Zaehlung wie in sprungWeite, damit Anfahren und Anhalten derselben
          Regel folgen. */
       if (B.welt.zeit.woche === 1 || !sprungWeite()) break;
+
+      /* WELLE 18 — UND ANGEHALTEN WIRD AUCH, WENN EIN VORRAT KIPPT.
+
+         Der Knopf verspricht „angehalten wird, sobald wieder etwas zu
+         entscheiden ist". Ein leerer Rohstoffkasten IST etwas zu
+         entscheiden, und er stand bisher nicht in dieser Zaehlung. Gemessen
+         in der Blindprobe: ein einziger Klick liess in 1600 den Hopfen von
+         41 auf 1 fallen und den Ruf von 13 auf 8, waehrend der Adler eine
+         Adresse nahm — sechs Wochen, in denen niemand hinsah, und danach war
+         das Haus nicht mehr zu retten. Zwei von acht Spielern haben den
+         Knopf aus genau diesem Grund unter „tote oder irrefuehrende
+         Knoepfe" gemeldet.
+
+         Angehalten wird beim ERSTEN Mal, nicht erst bei null: wer bei
+         leerem Kasten anhaelt, haelt zu spaet. */
+      if (!vorratKnapp && rohstoffKnapp()) {
+        vorratKnapp = true;
+        break;
+      }
     }
     if (wochen) {
       Z.sprungBericht = wochen + (wochen === 1 ? ' Woche' : ' Wochen') + ' ohne Frage: '
         + (gefahren ? gefahren + (gefahren === 1 ? ' Fuhre, ' : ' Fuhren, ')
             + B.welt.menge(fass) + ' hinaus, ' + B.welt.geld(Math.round(geld)) + ' eingenommen'
-          : 'keine Fuhre — es lag kein reifes Fass im Keller');
+          : 'keine Fuhre — es lag kein reifes Fass im Keller')
+        + (vorratKnapp ? ' · ANGEHALTEN: der ' + ep0().rohstoff + ' geht zur Neige ('
+            + B.zahl(B.welt.haus.rohstoff) + '). Ohne ihn kein Sud, ohne Sud kein Fass.' : '');
       B.welt.schreibe('Vom ' + vonJahr + '/' + vonWoche + ' an ' + Z.sprungBericht + '.', 'fuhre');
     }
     B.sende('zeichne', { grund: 'fuhre-sprung' });
@@ -4107,7 +4145,21 @@
       var n = Math.min(6, Math.ceil(Math.round(durst(a)) / ep().wagen.schritt));
       for (var i = 0; i < n; i++) betten.appendChild(B.el('i', null));
       marke.appendChild(betten);
-      marke.title = a.name + ' · will ' + B.welt.menge(Math.round(durst(a)));
+      /* WELLE 18 — AN JEDER MARKE STEHT, WIE ES UM DIESE ADRESSE STEHT.
+
+         Die Wochenzeile nennt immer nur EINE Adresse in Not. In 1350 waren
+         am Ende der Blindprobe neun weg, und gewarnt worden war nie mehr als
+         vor einer — der Zaehler „N magere Jahre, seit N Wochen kein Fass",
+         an dem eine Adresse in drei Jahren verlorengeht, stand nirgends je
+         Adresse. Jetzt steht er an der Marke, die ohnehin auf dem Haus
+         klebt. */
+      var m2 = Z.mahnung[a.schluessel] || 0;
+      var leer = Z.leer[a.schluessel] || 0;
+      marke.title = a.name + ' · will ' + B.welt.menge(Math.round(durst(a)))
+        + (m2 ? ' · ' + m2 + (m2 === 1 ? ' mageres Jahr' : ' magere Jahre')
+                + ' in Folge — beim dritten ist die Adresse weg' : '')
+        + (leer >= 3 ? ' · seit ' + leer + ' Wochen kein Fass' : '')
+        + (Z.verloren[a.schluessel] ? ' · NIMMT NICHTS MEHR' : '');
       B.orte.setze(marke, a.ort, { anker: 'mitte', dy: m.dy || 0 });
       fach.appendChild(marke);
     });
