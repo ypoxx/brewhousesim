@@ -3344,6 +3344,21 @@
   B.preis = {
     lage: function () { return Z; },
     anschlag: function () { return Z.anschlag; },
+    /* WELLE 18 — WAS WEITER ALS NAECHSTES TUT, DARF AUF WEITER STEHEN.
+
+       `handHorcher()` faengt den ersten WEITER eines Braujahres ab und legt
+       die Michaelitafel zurueck auf den Tisch, statt die Woche zu schalten.
+       Das ist richtig — die Tafel ist die Entscheidung des Jahres, und wer
+       sie wegwischt, soll sie wiederbekommen. Falsch war nur, dass der Knopf
+       das nicht sagte: acht blinde Spieler drueckten in allen vier Epochen
+       WEITER, bekamen eine Tafel mit 1.512 bis 1.683 Woertern und hielten
+       den Knopf fuer kaputt („WEITER in W1/1600: rueckt die Woche nicht vor").
+
+       Der Rahmen fragt hier, bevor er den Knopf beschriftet. Nur gelesen,
+       ohne Nebenwirkung — `darfZurueck()` selbst zaehlt nichts hoch. */
+    haeltWeiter: function () {
+      return Z.gehalten !== Z.tafelJahr && darfZurueck();
+    },
     leiter: function () { return Z.leiter.slice(); },
     /* DIE TAXE, aufgeschluesselt — der Griff, der beim Urteil der Welle 5
        gefehlt hat. Der Kritiker konnte „jede Festlegungskarte ist disabled"

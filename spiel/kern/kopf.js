@@ -120,24 +120,65 @@
 
     zeichneStandzeile(fach);
 
-    /* WEITER — der eine Knopf, den es immer gibt. */
+    /* WEITER — der eine Knopf, den es immer gibt.
+
+       WELLE 18: ER HEISST, WAS ER TUT.  Drei Lagen, drei Aufschriften.
+       Bis hierher stand in allen dreien „WEITER", und die Blindprobe hat
+       alle drei als kaputte Knoepfe gemeldet:
+
+         · In Woche 1 faengt DER PREIS den Klick ab und legt die
+           Michaelitafel zurueck auf den Tisch (preis.haeltWeiter()). Acht
+           von acht Spielern hielten das fuer einen toten Knopf.
+         · In Woche 30 heisst derselbe Knopf „JAHR SCHLIESSEN" — das war
+           schon richtig, kam aber ohne Vorwarnung, und fuenf von acht
+           Laeufen blieben in Woche 30 stehen, weil sie „WEITER" suchten.
+           Deshalb kuendigt Woche 29 ihn an.
+         · Am Ende stand „ENDE" ohne jede Auskunft, was danach kommt. */
     var letzte = z.woche >= B.uhr.WOCHEN_IM_JAHR;
+    var vorletzte = z.woche === B.uhr.WOCHEN_IM_JAHR - 1;
+    var haelt = !z.ende && !letzte && B.preis && B.preis.haeltWeiter
+      && B.wageWert('kopf.haeltWeiter', function () { return B.preis.haeltWeiter(); }, false);
+
+    var aufschrift = z.ende ? 'ENDE'
+      : (letzte ? 'JAHR SCHLIESSEN'
+        : (haelt ? 'MICHAELITAFEL' : 'WEITER'));
+
     var weiter = B.knopf({
-      text: z.ende ? 'ENDE' : (letzte ? 'JAHR SCHLIESSEN' : 'WEITER'),
+      text: aufschrift,
       zug: 'weiter',
-      klasse: 'gross',
+      klasse: 'gross' + (haelt ? ' haelt' : ''),
       ort: 'weiter',
       anker: 'rechts',
       aus: !!z.ende,
-      titel: letzte
-        ? 'Georgi. Das Braujahr endet, der Sommer läuft ohne Hand durch.'
-        : 'Eine Woche weiter. Woche ' + z.woche + ' von ' + B.uhr.WOCHEN_IM_JAHR + '.',
+      titel: z.ende
+        ? 'Die Partie ist zu Ende. Was geschehen ist, steht auf dem Schlussblatt; '
+          + 'von vorn anfangen kann man dort.'
+        : (letzte
+          ? 'Georgi. Das Braujahr endet, der Sommer läuft ohne Hand durch, '
+            + 'und danach liegt die Michaelitafel des neuen Jahres auf dem Tisch.'
+          : (haelt
+            ? 'Heute ist Michaeli. Dieser Klick schaltet noch keine Woche weiter, '
+              + 'sondern legt die Tafel des Jahres zurück auf den Tisch — dort werden '
+              + 'Abgaben bezahlt und Anschaffungen gekauft. Erst danach läuft die Woche.'
+            : 'Eine Woche weiter. Woche ' + z.woche + ' von ' + B.uhr.WOCHEN_IM_JAHR + '. '
+              + 'Eine Woche kostet auch dann, wenn nichts verkauft wird.')),
       tu: function () {
         B.ton.spiele('uhr:woche');
         B.uhr.naechsteWoche();
       }
     });
     fach.appendChild(weiter);
+
+    /* Die Ankuendigung: eine Zeile unter dem Knopf, eine Woche vorher. */
+    if (vorletzte && !z.ende) {
+      var vorwarnung = B.el('div', 'weiter-vorwarnung',
+        'nächste Woche schließt das Braujahr');
+      vorwarnung.style.cssText = 'position:absolute;left:93%;top:96.2%;'
+        + 'transform:translate(-100%,-50%);font-family:var(--mono);'
+        + 'font-size:max(10px,calc(var(--s)*16));color:#6b4a20;white-space:nowrap;'
+        + LICHTHOF;
+      fach.appendChild(vorwarnung);
+    }
 
     zeichneDeckung();
     zeichneZiel();

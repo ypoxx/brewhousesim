@@ -1668,10 +1668,63 @@
                          .sort().join('|')
       };
       erg.netto = erg.erloes - erg.lohn;
+      /* WELLE 18 — WAS AM KNOPF STEHT, MUSS IN DER KASSE ANKOMMEN.
+
+         Bis hierher trug der Knopf `netto` = Erloes minus Fuhrlohn. Das ist
+         der UMSATZ der Fuhre und nicht das, was der Wirt hinlegt: bei der
+         verabredeten Zahlungsweise „aufs Kerbholz" kommen 40 von hundert
+         bar in die Lade, der Rest steht bis Michaeli im Holz. Acht blinde
+         Spieler haben genau diese Luecke gemeldet, in allen vier Epochen:
+         „+40 Pf verspricht der Knopf, +2 Pf kommen an."
+
+         Gerechnet wird mit `buchLieferung()` SELBST — derselben Funktion,
+         die es gleich wirklich bucht. Eine zweite Rechnung daneben waere
+         eine zweite Wahrheit, die beim naechsten Umbau der Zahlungsweisen
+         auseinanderlaeuft. Die beiden Behaelter, die sie fortschreibt,
+         werden gesichert und zurueckgesetzt; die Vorschau aendert nichts. */
+      var k = planKasse(erg.ladung);
+      erg.bar = k.bar;
+      erg.steht = k.steht;
+      erg.kasse = k.bar - erg.lohn;
     } finally {
       Z.ladung = sicher;
     }
     return (erg && erg.fass) ? erg : null;
+  }
+
+  /* Siehe oben: die Vorschau auf das, was bar hereinkommt. Laeuft ueber
+     buchLieferung() und macht dessen Nebenwirkung rueckgaengig. */
+  function planKasse(ladung) {
+    var vorschussVorher = Z.vorschuss, ausstandVorher = Z.ausstand;
+    var k;
+    var vs = {}, as = {};
+    for (k in vorschussVorher) {
+      if (Object.prototype.hasOwnProperty.call(vorschussVorher, k)) vs[k] = vorschussVorher[k];
+    }
+    for (k in ausstandVorher) {
+      if (Object.prototype.hasOwnProperty.call(ausstandVorher, k)) as[k] = ausstandVorher[k];
+    }
+    Z.vorschuss = vs;
+    Z.ausstand = as;
+    var bar = 0, steht = 0;
+    try {
+      (ladung || []).forEach(function (l) {
+        if (l.probe) return;
+        var a = B.welt.adresse(l.adr);
+        if (!a) return;
+        var erloes = 0;
+        l.faesser.forEach(function (f) { erloes += preisJeFass(sorteFass(f), a); });
+        var b = buchLieferung(a, erloes);
+        bar += b.bar;
+        steht += b.steht;
+      });
+    } catch (e) {
+      B.klage('fuhre.planKasse', e);
+    } finally {
+      Z.vorschuss = vorschussVorher;
+      Z.ausstand = ausstandVorher;
+    }
+    return { bar: Math.round(bar), steht: Math.round(steht) };
   }
 
   /* Welche Plaene stehen diese Woche nebeneinander? Die Reihenfolge ist
@@ -1708,9 +1761,38 @@
     return raus;
   }
 
-  function fahrePlan(k) {
-    var p = planRechne(k);
-    if (!p) return false;
+  /* WELLE 18 — DER KLICK FAEHRT DEN PLAN, DEN DER KNOPF ZEIGT.
+
+     Bis hierher rechnete `fahrePlan(k)` den Plan beim Klick NOCH EINMAL. In
+     den allermeisten Wochen kommt dabei dasselbe heraus; in seltenen kommt
+     eine leere Ladung heraus, und dann tat der Knopf nichts — ohne Sperre,
+     ohne Meldung, ohne Grund. Der blinde Spieler von 1884 hat es gezaehlt:
+     9 von 211 Wochen. Nachgestellt und auf die Woche genau reproduzierbar
+     (Epoche 3, frische Partie, 28-mal „die mageren Häuser": Knopf zeigt
+     12 hl, Klick bewegt nichts).
+
+     Der Unterschied liegt in der REIHENFOLGE: beim Zeichnen laeuft
+     `planListe()` und rechnet die Plaene der Reihe nach, beim Klick laeuft
+     nur dieser eine. `fuelleNachRang()` laedt und entlaedt dabei probeweise
+     (Zeile 1528: ein neuer Halt, der weniger bringt als er Fuhrlohn kostet,
+     wird wieder abgeladen) — das Ergebnis haengt also davon ab, was vorher
+     schon gerechnet wurde.
+
+     Statt diese Abhaengigkeit aufzuloesen — sie steckt tief in der
+     Ladelogik und ist die Rechnung, an der die Wirtschaft dieses Stuecks
+     haengt — faehrt der Klick jetzt GENAU DIE LADUNG, die der Knopf
+     ausgerechnet und beschriftet hat. Damit koennen Aufschrift und Handlung
+     nicht mehr auseinanderlaufen, und das ist ohnehin die Regel dieser
+     Welle. Neu gerechnet wird nur noch als Rueckfall, wenn gar keine Ladung
+     mitkommt; bleibt auch die leer, sagt der Knopf es, statt stumm zu sein. */
+  function fahrePlan(k, fertig) {
+    var p = (fertig && fertig.ladung && fertig.ladung.length) ? fertig : planRechne(k);
+    if (!p || !p.ladung || !p.ladung.length) {
+      Z.meldung = 'Diese Fuhre lässt sich nicht mehr beladen — der Keller oder die '
+                + 'Nachfrage hat sich seit dem letzten Blick geändert.';
+      B.sende('zeichne', { grund: 'fuhre-plan-leer' });
+      return false;
+    }
     Z.ladung = p.ladung;
     Z.letzterPlan = k;
     Z.sprungBericht = null;
@@ -3936,21 +4018,68 @@
 
     var plaene = alle.slice(0, Math.max(0, frei));
     plaene.forEach(function (p) {
-      reihe.appendChild(B.knopf({
+      /* WELLE 18: am Schild steht, was IN DIE LADE kommt (bar, nach
+         Fuhrlohn). Was der Wirt anschreiben laesst, steht daneben in
+         eigener Schrift — es ist kein Geld, das man diese Woche ausgeben
+         kann, und es als solches auszuweisen war der meistgemeldete
+         Einzelbefund der Blindprobe. */
+      var kn = B.knopf({
         text: 'Fahren: ' + p.wort + ' · ' + B.welt.menge(p.fass),
-        zug: 'fuhre:plan:' + p.k, preis: p.netto,
+        zug: 'fuhre:plan:' + p.k, preis: p.kasse,
         klasse: 'fu-chip' + (lage && lage.art === p.k ? ' fu-rat' : ''),
         titel: p.satz + ' — ' + B.welt.menge(p.fass) + ' an ' + p.halte
-             + (p.halte === 1 ? ' Adresse' : ' Adressen') + ', Erlös '
-             + B.welt.geld(p.erloes) + ', Fuhrlohn ' + B.welt.geld(p.lohn)
-             + (p.probe ? ', davon ' + B.welt.menge(p.probe) + ' ohne Rechnung' : '')
-             + '. Der Wagen fährt, liefert und kommt zurück — damit ist die Woche vorbei.',
-        tu: function () { fahrePlan(p.k); }
-      }));
+             + (p.halte === 1 ? ' Adresse' : ' Adressen') + '. Erlös '
+             + B.welt.geld(p.erloes) + ', davon ' + B.welt.geld(p.bar) + ' bar'
+             + (p.steht ? ' und ' + B.welt.geld(p.steht) + ' angeschrieben bis Michaeli' : '')
+             + '; Fuhrlohn ' + B.welt.geld(p.lohn) + '. In die Lade kommen damit '
+             + B.welt.geld(p.kasse) + '.'
+             + (p.probe ? ' ' + B.welt.menge(p.probe) + ' gehen ohne Rechnung hinaus.' : '')
+             + ' Der Wagen fährt, liefert und kommt zurück — damit ist die Woche vorbei, '
+             + 'und die Woche kostet auch dann, wenn nichts verkauft wird.',
+        tu: function () { fahrePlan(p.k, p); }
+      });
+      if (!p.kasse) {
+        /* Ohne Betrag haengt B.knopf kein Schild an — ein Knopf ohne Schild
+           liest sich wie „umsonst". Null ist aber eine Auskunft. */
+        kn.appendChild(B.el('span', 'preis', '±' + B.welt.geld(0)));
+      }
+      if (p.steht > 0) {
+        var offen = B.el('span', 'fu-angeschrieben',
+          '+' + B.welt.geld(p.steht) + ' angeschrieben');
+        offen.title = 'Dieses Geld liegt nicht in der Lade. Der Wirt zahlt es zu Michaeli — '
+                    + 'oder er zahlt es nicht.';
+        kn.appendChild(offen);
+      }
+      reihe.appendChild(kn);
     });
 
     var kopf = B.el('div', 'fu-wochenkopf');
     kopf.appendChild(B.el('b', null, 'DIE WOCHE ' + B.welt.zeit.woche + '/' + B.uhr.WOCHEN_IM_JAHR));
+
+    /* WELLE 18 — WAS EINE WOCHE KOSTET, STEHT UEBER DEN KNOEPFEN.
+
+       Die Fahren-Knoepfe nennen seit dieser Welle, was von der Fuhre BAR in
+       die Lade kommt. Was sie nicht nennen koennen, ist der Sud: er faellt
+       an, weil die Woche zu Ende geht, nicht weil diese Fuhre fuhr — und
+       jede Fuhre beendet die Woche. In 1884 ist genau das der Unterschied
+       zwischen „+82 M am Knopf" und „−398 M in der Kasse", und acht blinde
+       Spieler haben ihn in allen vier Epochen als Luege des Knopfes gelesen.
+
+       Die Zahl kommt aus DER KLARHEIT, also aus dem gemessenen Mittel der
+       letzten Wochen — nicht aus einer zweiten Rechnung neben der des SUDS.
+       Steht noch kein Verlauf zur Verfuegung, steht hier nichts. */
+    if (B.klar && B.klar.wochenkosten) {
+      var wk = B.klar.wochenkosten();
+      if (wk) {
+        var wkz = B.el('span', 'fu-wochenkosten',
+          'die Woche kostet etwa ' + B.welt.geld(wk));
+        wkz.title = 'Sud, Lohn, Ungeld und Unterhalt zusammen, gemittelt über die letzten '
+                  + 'Wochen. Diese Kosten fallen an, sobald die Woche zu Ende geht — auch '
+                  + 'ohne Fuhre. Ein Fahren-Knopf lohnt sich, wenn er mehr in die Lade '
+                  + 'bringt als diese Zahl.';
+        kopf.appendChild(wkz);
+      }
+    }
     kopf.appendChild(B.el('span', 'fu-wochensatz' + (lage ? ' dringend' : ''),
       lage ? lage.satz
         : (!plaene.length

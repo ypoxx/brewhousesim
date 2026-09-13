@@ -1259,3 +1259,36 @@ html[data-hof-zu] #fach-blatt-fuhre { z-index: 200; }
   .knopf.fu-chip { padding: calc(var(--s) * 2) calc(var(--s) * 8); gap: calc(var(--s) * 5); }
   .fu-wochenkopf { gap: calc(var(--s) * 6); }
 }
+
+/* =========================================================================
+   WELLE 18 — WAS ANGESCHRIEBEN IST, SIEHT NICHT AUS WIE GELD.
+
+   Der Fahren-Knopf traegt seit Welle 18 zwei Zahlen: das Preisschild mit
+   dem, was BAR in die Lade kommt, und daneben das, was der Wirt bis
+   Michaeli anschreiben laesst. Die zweite Zahl darf nicht aussehen wie die
+   erste — sonst waere die Luecke, die acht blinde Spieler gemeldet haben,
+   nur verdoppelt statt geschlossen. Deshalb: kleiner, ohne Grund, in der
+   Tinte der Kerbe, und kursiv.
+   ========================================================================= */
+.knopf .fu-angeschrieben {
+  display: block;
+  margin-top: calc(var(--s) * 2);
+  font-family: var(--mono);
+  font-size: max(10px, calc(var(--s) * 15));
+  font-style: italic;
+  color: #7a6242;
+  letter-spacing: 0;
+  white-space: nowrap;
+}
+
+/* WELLE 18 — die gemessenen Wochenkosten im Kopf der Wochenkarte.
+   Sie steht neben „DIE WOCHE n/30", nicht darunter: die Zeile darunter
+   gehoert der Warnung, und zwei Zeilen Kopf haetten die Karte ueber die
+   Fahren-Knoepfe geschoben. */
+.fu-wochenkopf .fu-wochenkosten {
+  margin-left: calc(var(--s) * 10);
+  font-family: var(--mono);
+  font-size: max(10px, calc(var(--s) * 16));
+  color: #7a3c2a;
+  white-space: nowrap;
+}

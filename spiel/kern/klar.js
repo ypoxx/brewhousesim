@@ -59,6 +59,7 @@
     bilanz: null,         /* was die letzte Woche gekostet und gebracht hat  */
     wocheStart: 0,        /* Protokollstand am Anfang der laufenden Woche    */
     verlauf: [],          /* [{jahr, woche, kasse, rohstoff, faesser}]       */
+    kosten: [],           /* Aufwand der letzten Wochen, fuer den Mittelwert */
     letzteMarke: null     /* jahr/woche der letzten Verlaufsmarke            */
   };
 
@@ -334,8 +335,24 @@
       jahr: B.welt.zeit.jahr, woche: B.welt.zeit.woche,
       buchungen: buchungen, ein: ein, aus: aus, netto: ein - aus
     };
+    /* Was eine Woche kostet, OHNE was sie einbringt — Sud, Fuhrlohn, Ungeld,
+       Unterhalt. Das ist die Zahl, die der Fahren-Knopf nicht nennen kann
+       (sie faellt an, weil die Woche zu Ende geht, nicht weil diese Fuhre
+       fuhr) und die in 1884 den Unterschied zwischen „+82 M am Knopf" und
+       „−398 M in der Kasse" ausmacht. Gemerkt wird sie, nicht gerechnet. */
+    Z.kosten.push(aus);
+    if (Z.kosten.length > TREND_WOCHEN) Z.kosten.shift();
     Z.wocheStart = B.protokoll.length;
     merkeVerlauf();
+  }
+
+  /* Der mittlere Wochenaufwand der letzten Wochen. Der MITTLERE, nicht der
+     durchschnittliche: eine einzelne Michaeli-Woche mit einer Ablösung von
+     tausend Pfennig darf die Zahl nicht verbiegen. */
+  function wochenkosten() {
+    if (Z.kosten.length < 3) return null;
+    var l = Z.kosten.slice().sort(function (a, b) { return a - b; });
+    return Math.round(l[Math.floor(l.length / 2)]);
   }
 
   function merkeVerlauf() {
@@ -462,7 +479,12 @@
       });
     }
 
-    if (!saetze.length) return;
+    /* DIE STEHENDE ZEILE. Sie gilt auch, wenn nichts zu warnen ist: was
+       eine Woche kostet, ist die Zahl, gegen die jeder Ertrag zu lesen ist,
+       und sie stand bisher nirgends auf dem Bildschirm. */
+    var wk = wochenkosten();
+
+    if (!saetze.length && wk === null) return;
     saetze.sort(function (a, b) { return (b.dringend ? 1 : 0) - (a.dringend ? 1 : 0); });
     saetze = saetze.slice(0, 2);
 
@@ -477,6 +499,21 @@
       + 'border-bottom:1px solid rgba(90,66,38,.3);margin-bottom:calc(var(--s)*5);'
       + 'padding-bottom:calc(var(--s)*3);';
     k.appendChild(kopf);
+
+    if (wk !== null) {
+      var wz = B.el('div', 'klar-wochenkosten');
+      wz.style.cssText = 'display:flex;justify-content:space-between;gap:calc(var(--s)*12);'
+        + 'white-space:nowrap;font-size:max(11px,calc(var(--s)*18));'
+        + 'margin-bottom:calc(var(--s)*6);color:#3a2a16;';
+      wz.appendChild(B.el('span', null, 'Eine Woche kostet etwa'));
+      var wv = B.el('span', null, '−' + B.welt.geld(wk));
+      wv.style.cssText = 'font-family:var(--mono);font-variant-numeric:tabular-nums;color:#8a2f20;';
+      wz.appendChild(wv);
+      wz.title = 'Sud, Fuhrlohn, Ungeld und Unterhalt zusammen — der Mittelwert der '
+               + 'letzten Wochen. Diese Kosten fallen an, weil die Woche zu Ende geht, '
+               + 'auch wenn keine Fuhre hinausfährt. Jeder Ertrag ist gegen diese Zahl zu lesen.';
+      k.appendChild(wz);
+    }
 
     saetze.forEach(function (s) {
       var z = B.el('div', 'klar-satz' + (s.dringend ? ' dringend' : ''), s.text);
@@ -554,10 +591,50 @@
     var fach = B.ebene('kopf', 'kern-klar');
     B.leere(fach);
 
+    /* ueber der Wochenkarte, nicht auf ihr.
+
+       Die Spalte steht dort, wo unten links die Wochenkarte und die
+       Fahren-Knoepfe stehen — also genau da, wo entschieden wird, und genau
+       da, wo sie sie zudecken wuerde. Gemessen wird deshalb, wo der untere
+       Block wirklich anfaengt, und darueber gesetzt. Gemessen wird am Bild
+       DER VORIGEN Runde: DIE FUHRE zeichnet nach dem Rahmen, ihr Kasten
+       steht an derselben Stelle wie eben, und eine Runde spaeter sitzt die
+       Spalte ohnehin richtig. Findet sich nichts, gilt ein Anschlag, der in
+       allen vier Epochen frei ist. */
+    var unterkante = 15.6;
+    B.wage('klar.platz', function () {
+      var hoehe = B.buehne.masse().hoehe;
+      var oben = null;
+      var kandidaten = document.querySelectorAll(
+        '.fu-woche, [data-zug^="fuhre:plan:"], [data-zug="fuhre:sprung"]');
+      for (var i = 0; i < kandidaten.length; i++) {
+        var r = kandidaten[i].getBoundingClientRect();
+        if (!r.width || !r.height) continue;
+        if (r.left > B.buehne.masse().breite * 0.5) continue;   /* nur der linke Block */
+        if (oben === null || r.top < oben) oben = r.top;
+      }
+      if (oben !== null && hoehe) {
+        var anteil = 100 * (hoehe - oben) / hoehe + 1.2;
+        if (anteil > unterkante && anteil < 60) unterkante = anteil;
+      }
+    });
+
     var spalte = B.el('div', 'klar-spalte');
-    spalte.style.cssText = 'position:absolute;left:1.2%;bottom:12.6%;'
+    spalte.style.cssText = 'position:absolute;left:1.2%;bottom:' + B.rund(unterkante, 2) + '%;'
       + 'display:flex;flex-direction:column-reverse;align-items:flex-start;'
-      + 'gap:calc(var(--s)*6);width:24.5%;min-width:calc(var(--s)*250);';
+      + 'gap:calc(var(--s)*6);width:24.5%;min-width:calc(var(--s)*250);'
+      /* KEIN KLICK BLEIBT AN DIESEN KAESTEN HAENGEN.
+
+         Sie tragen nur Auskunft; nichts darin ist zu druecken. Ohne diese
+         Zeile waere ausgerechnet die Klarheit die naechste Ursache fuer
+         einen toten Knopf: die Spalte steht ueber der Wochenkarte, ihre
+         Lage wird am Bild der VORIGEN Runde bemessen, und in der einen
+         Runde, in der die Wochenkarte um eine Zeile waechst, lieferte sie
+         sonst genau den Befund, den sie beheben soll. Gemessen: ein
+         Fahren-Klick in Woche 28 von 1884, der „Nichts geschehen" quittierte.
+         `pointer-events:none` faellt auf die Kinder durch — der Klick geht
+         durch das Papier auf den Knopf darunter. */
+      + 'pointer-events:none;';
     fach.appendChild(spalte);
 
     B.wage('klar.quittung', function () { zeichneQuittung(spalte); });
@@ -599,7 +676,7 @@
   /* Ein neues Jahr und eine neue Epoche raeumen die Quittung ab: sie gehoert
      zu einem Zug, den es in dieser Lage nicht mehr gibt. */
   B.auf('jahr', function () { Z.quittung = null; });
-  B.auf('epoche', function () { Z.quittung = null; Z.bilanz = null; Z.verlauf = []; });
+  B.auf('epoche', function () { Z.quittung = null; Z.bilanz = null; Z.verlauf = []; Z.kosten = []; });
 
   /* ----------------------------------------------------------------------
      NACH AUSSEN — fuer die Probe und fuer andere Kerndateien.
@@ -609,6 +686,7 @@
     bilanz: function () { return Z.bilanz; },
     verlauf: function () { return Z.verlauf.slice(); },
     trend: trend,
+    wochenkosten: wochenkosten,
     reicht: reicht,
     abnehmer: abnehmer,
     wochenOhneLieferung: wochenOhneLieferung,
