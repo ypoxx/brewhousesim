@@ -14,6 +14,7 @@
   'use strict';
 
   var blattOffen = null;
+  var buchGesehen = 0;          /* Protokollstand beim letzten Aufschlagen */
   var neuFrage = false;          /* liegt die Rueckfrage "Neue Partie?" an? */
 
   /* ----------------------------------------------------------------------
@@ -47,18 +48,30 @@
     return k;
   }
 
-  function tafel(marke, wert) {
+  /* WELLE 18 — DIE KOPFZEILE ERKLAERT IHRE ZAHLEN.
+
+     „GRUT 40", „KELLER 4/12 Fass", „WOCHE 1/30": vier von acht blinden
+     Spielern haben gemeldet, dass die Kopfzeile als einzige Stelle des
+     Spiels gar keine Erklaerung traegt — kein Hover, kein Satz, nichts.
+     Dabei ist sie die Zeile, auf die jeder zuerst sieht. */
+  function tafel(marke, wert, titel) {
     var t = B.el('div', 'tafel');
+    if (titel) t.title = titel;
     t.appendChild(B.el('span', 'marke', marke));
     t.appendChild(B.el('span', 'wert', wert));
     return t;
   }
 
-  function tafelKnopf(marke, wert, zug, tu) {
+  function tafelKnopf(marke, wert, zug, tu, titel) {
     var t = document.createElement('button');
     t.type = 'button';
-    t.className = 'tafel knopf';
+    /* WELLE 18: Zwei der sieben Marken oeffnen etwas, fuenf zeigen nur eine
+       Zahl — und sie sahen alle gleich aus. Die Nachprobe hat die fuenf
+       darum unter „tote Knoepfe" gemeldet: „sehen wie Knoepfe aus, sind aber
+       nicht anklickbar". `tafel-auf` macht den Unterschied sichtbar. */
+    t.className = 'tafel knopf tafel-auf';
     t.setAttribute('data-zug', zug);
+    if (titel) t.title = titel;
     t.appendChild(B.el('span', 'marke', marke));
     t.appendChild(B.el('span', 'wert', wert));
     t.addEventListener('click', function (e) {
@@ -82,9 +95,15 @@
     var leiste = B.el('div', 'kopfleiste');
     B.orte.setze(leiste, 'kopfleiste', { anker: 'oben' });
 
-    leiste.appendChild(tafel(d.monat.toUpperCase(), d.jahr));
-    leiste.appendChild(tafel('Kasse', B.welt.geld(B.welt.haus.kasse)));
-    leiste.appendChild(tafel(e.rohstoff, B.zahl(B.welt.haus.rohstoff)));
+    leiste.appendChild(tafel(d.monat.toUpperCase(), d.jahr,
+      'Der laufende Monat. Das Braujahr geht von Michaeli (29. September) bis Georgi.'));
+    leiste.appendChild(tafel('Kasse', B.welt.geld(B.welt.haus.kasse),
+      'Bares Geld in der Lade. Was ein Wirt angeschrieben hat, steht NICHT hier — '
+      + 'das kommt erst zu Michaeli, wenn er zahlt.'));
+    leiste.appendChild(tafel(e.rohstoff, B.zahl(B.welt.haus.rohstoff),
+      e.rohstoff + ' in der Kammer. Jeder Sud verbraucht davon. Ist nichts mehr da, '
+      + 'wird nicht gebraut, und ohne Sud gibt es nichts auszufahren. '
+      + 'Nachgekauft wird auf dem Brett DAS SUDHAUS.'));
     /* GLAETTUNG WELLE 1: Die Kopfleiste hat den Vorrat in Fass gezaehlt,
        waehrend das Brett desselben Vorrats ihn ab 1872 in Hektoliter zeigt —
        "KELLER 140/400" oben, "DIE TANKS 210 von 600 hl" unten, dieselbe
@@ -92,14 +111,38 @@
        B.welt.menge(), dem einen Formatierer des Kerns, und der Name des
        Lagers wechselt mit der Epoche wie der Name des Rohstoffs daneben. */
     leiste.appendChild(tafel(e.lager || 'Keller',
-      B.welt.menge(B.welt.vorrat.faesser.length, true) + '/' + B.welt.menge(B.welt.vorrat.plaetze)));
-    leiste.appendChild(tafel('Woche', z.woche + '/' + B.uhr.WOCHEN_IM_JAHR));
+      B.welt.menge(B.welt.vorrat.faesser.length, true) + '/' + B.welt.menge(B.welt.vorrat.plaetze),
+      'Was im Lager liegt, und wie viel hineinpasst. Nur REIFES Bier lässt sich '
+      + 'ausfahren; zu lange liegt es auch nicht, dann verdirbt es. '
+      + 'Ein leeres Lager heißt: keine Fuhre, kein Geld.'));
+    leiste.appendChild(tafel('Woche', z.woche + '/' + B.uhr.WOCHEN_IM_JAHR,
+      'Die Woche im Braujahr. Nach der dreißigsten wird das Jahr geschlossen, '
+      + 'der Sommer läuft ohne Hand durch, und zu Michaeli wird abgerechnet.'));
     leiste.appendChild(tafelKnopf('Chronik', B.welt.chronik.length, 'kern:chronik', function () {
       zeigeBlatt(blattOffen === 'chronik' ? null : 'chronik');
-    }));
-    leiste.appendChild(tafelKnopf('Buch', B.protokoll.length, 'kern:protokoll', function () {
-      zeigeBlatt(blattOffen === 'protokoll' ? null : 'protokoll');
-    }));
+    }, 'Was diesem Haus widerfahren ist, Jahr für Jahr. Ein Klick schlägt sie auf.'));
+    /* WELLE 18 — DER BUCHZAEHLER WAR EIN PUNKTESTAND, DER KEINER IST.
+
+       Er zeigte die Zahl aller Buchungen und lief in einer langen Partie bis
+       ueber dreitausend. Die Nachprobe, woertlich: „die Marke BUCH stieg die
+       ganze Zeit weiter (1 → 453 → 3312), was wie Erfolg aussieht, ohne dass
+       irgendwo steht, was BUCH ist." Eine Zahl, die immer nur waechst und
+       nichts bedeutet, ist in einem Spiel mit einer Kasse die teuerste Sorte
+       Beiwerk: man haelt sie fuer den Punktestand.
+
+       Jetzt steht dort, was seit dem letzten Aufschlagen dazugekommen ist —
+       eine Zahl, die auch wieder auf null geht, und die einen Grund nennt,
+       das Buch zu oeffnen. */
+    var neuImBuch = B.protokoll.length - buchGesehen;
+    leiste.appendChild(tafelKnopf('Buch',
+      neuImBuch > 0 ? '+' + B.zahl(neuImBuch) : 'gelesen',
+      'kern:protokoll', function () {
+        zeigeBlatt(blattOffen === 'protokoll' ? null : 'protokoll');
+      },
+      'Jeder Pfennig, der hereinkam oder hinausging, mit Grund und Datum. Wer wissen '
+      + 'will, wohin das Geld läuft, findet es hier. '
+      + (neuImBuch > 0 ? neuImBuch + ' neue Zeilen seit dem letzten Aufschlagen. ' : '')
+      + 'Ein Klick schlägt es auf.'));
 
     fach.appendChild(leiste);
 
@@ -120,18 +163,48 @@
 
     zeichneStandzeile(fach);
 
-    /* WEITER — der eine Knopf, den es immer gibt. */
+    /* WEITER — der eine Knopf, den es immer gibt.
+
+       WELLE 18: ER HEISST, WAS ER TUT.  Drei Lagen, drei Aufschriften.
+       Bis hierher stand in allen dreien „WEITER", und die Blindprobe hat
+       alle drei als kaputte Knoepfe gemeldet:
+
+         · In Woche 1 faengt DER PREIS den Klick ab und legt die
+           Michaelitafel zurueck auf den Tisch (preis.haeltWeiter()). Acht
+           von acht Spielern hielten das fuer einen toten Knopf.
+         · In Woche 30 heisst derselbe Knopf „JAHR SCHLIESSEN" — das war
+           schon richtig, kam aber ohne Vorwarnung, und fuenf von acht
+           Laeufen blieben in Woche 30 stehen, weil sie „WEITER" suchten.
+           Deshalb kuendigt Woche 29 ihn an.
+         · Am Ende stand „ENDE" ohne jede Auskunft, was danach kommt. */
     var letzte = z.woche >= B.uhr.WOCHEN_IM_JAHR;
+    var vorletzte = z.woche === B.uhr.WOCHEN_IM_JAHR - 1;
+    var haelt = !z.ende && !letzte && B.preis && B.preis.haeltWeiter
+      && B.wageWert('kopf.haeltWeiter', function () { return B.preis.haeltWeiter(); }, false);
+
+    var aufschrift = z.ende ? 'ENDE'
+      : (letzte ? 'JAHR SCHLIESSEN'
+        : (haelt ? 'MICHAELITAFEL' : 'WEITER'));
+
     var weiter = B.knopf({
-      text: z.ende ? 'ENDE' : (letzte ? 'JAHR SCHLIESSEN' : 'WEITER'),
+      text: aufschrift,
       zug: 'weiter',
-      klasse: 'gross',
+      klasse: 'gross' + (haelt ? ' haelt' : ''),
       ort: 'weiter',
       anker: 'rechts',
       aus: !!z.ende,
-      titel: letzte
-        ? 'Georgi. Das Braujahr endet, der Sommer läuft ohne Hand durch.'
-        : 'Eine Woche weiter. Woche ' + z.woche + ' von ' + B.uhr.WOCHEN_IM_JAHR + '.',
+      titel: z.ende
+        ? 'Die Partie ist zu Ende. Was geschehen ist, steht auf dem Schlussblatt; '
+          + 'von vorn anfangen kann man dort.'
+        : (letzte
+          ? 'Georgi. Das Braujahr endet, der Sommer läuft ohne Hand durch, '
+            + 'und danach liegt die Michaelitafel des neuen Jahres auf dem Tisch.'
+          : (haelt
+            ? 'Heute ist Michaeli. Dieser Klick schaltet noch keine Woche weiter, '
+              + 'sondern legt die Tafel des Jahres zurück auf den Tisch — dort werden '
+              + 'Abgaben bezahlt und Anschaffungen gekauft. Erst danach läuft die Woche.'
+            : 'Eine Woche weiter. Woche ' + z.woche + ' von ' + B.uhr.WOCHEN_IM_JAHR + '. '
+              + 'Eine Woche kostet auch dann, wenn nichts verkauft wird.')),
       tu: function () {
         B.ton.spiele('uhr:woche');
         B.uhr.naechsteWoche();
@@ -139,16 +212,118 @@
     });
     fach.appendChild(weiter);
 
+    /* Die Ankuendigung: eine Zeile unter dem Knopf, eine Woche vorher. */
+    if (vorletzte && !z.ende) {
+      var vorwarnung = B.el('div', 'weiter-vorwarnung',
+        'nächste Woche schließt das Braujahr');
+      vorwarnung.style.cssText = 'position:absolute;left:93%;top:96.2%;'
+        + 'transform:translate(-100%,-50%);font-family:var(--mono);'
+        + 'font-size:max(11px,calc(var(--s)*16));color:#6b4a20;white-space:nowrap;'
+        + LICHTHOF;
+      fach.appendChild(vorwarnung);
+    }
+
     zeichneDeckung();
     zeichneZiel();
+    zeichneSchritt();
     /* Die Stuecke melden ihren naechsten Zug erst NACH diesem Horcher an.
-       Ein Bildaufbau spaeter steht die Zahl richtig da. */
+       Ein Bildaufbau spaeter steht die Zahl richtig da. Fuer den Schritt
+       der Woche gilt dasselbe aus einem anderen Grund: er sucht seine
+       Knoepfe im Bild, und die setzen DIE FUHRE und DER SUD erst nach dem
+       Rahmen. */
     if (typeof requestAnimationFrame === 'function') {
       requestAnimationFrame(function () {
         B.wage('kopf.deckung', zeichneDeckung);
         B.wage('kopf.ziel', zeichneZiel);
+        B.wage('kopf.schritt', zeichneSchritt);
       });
     }
+  }
+
+  /* -------------------------------------------------------------------
+     WAS JETZT ZU TUN IST — der Schritt der Woche, neben WEITER.
+
+     DER BEFUND DER BLINDPROBE, in einer Zahl: 47 sichtbare Knoepfe in
+     Woche 1, davon rund 20 verstanden. Die drei Bretter, auf denen die
+     Woche wirklich stattfindet (ANSCHLAGTAFEL, DER KELLER, OCHSENKARREN),
+     liegen zugeklappt unter Reitern, und der einzige Rat, den das Spiel
+     von sich aus gab, war die Zeile „naechster Zug" — die BRAUEN und
+     AUSFAHREN aus einem guten Grund nie nennen kann (kern/welt.js,
+     `meldeZug`: ein Zug ohne Preis gehoert nicht in den Nenner einer
+     Messlatte). Ein Spieler, der ihr folgte, gab Geld aus, ehe er ein
+     einziges Mal gebraut oder geliefert hatte.
+
+     Diese Zeile tritt NEBEN sie, nicht an ihre Stelle. Sie nennt keinen
+     Preis und keine Kennzahl, sondern den naechsten Handgriff — und sie
+     fuehrt ihn aus, weil sein Knopf in der Regel unter einem zugeklappten
+     Brett liegt. Welches Brett das ist, steht im `title`: wer zweimal
+     hinsieht, findet den Weg dorthin auch ohne diese Zeile, und das ist
+     der Sinn der Sache.
+
+     Gefunden wird der Schritt in kern/klar.js (`wochenSchritt`), weil dort
+     die Regel gilt, die hier gebraucht wird: nachsehen statt raten.
+     ------------------------------------------------------------------- */
+  function zeichneSchritt() {
+    var fach = B.ebene('kopf', 'kern');
+    var alt = fach.querySelector('.schrittzeile');
+    if (alt) alt.parentNode.removeChild(alt);
+
+    var z = B.welt.zeit;
+    if (!z || z.ende) return;
+    if (!B.klar || !B.klar.wochenSchritt) return;
+    /* SOLANGE DIE MICHAELITAFEL AUF DEM TISCH LIEGT, GIBT ES NUR SIE.
+
+       DER PREIS faengt den naechsten WEITER ab und legt die Tafel zurueck
+       (preis.haeltWeiter()); der Knopf rechts heisst dann auch so. „Jetzt:
+       Den Karren füllen" waere daneben zweierlei falsch — es ist nicht der
+       naechste Handgriff, und die Tafel deckt in 390 px genau diese Stelle
+       (gemessen: vier Ueberlappungen, in jeder Epoche eine). */
+    if (B.preis && B.preis.haeltWeiter
+        && B.wageWert('kopf.schritt.haelt', function () {
+          return B.preis.haeltWeiter();
+        }, false)) return;
+    var s = B.wageWert('kopf.wochenSchritt', function () {
+      return B.klar.wochenSchritt();
+    }, null);
+    if (!s) return;
+
+    var GRUND = 'position:absolute;left:47%;top:95.9%;transform:translateY(-50%);'
+      + 'font-family:var(--mono);font-size:max(12px,calc(var(--s)*19));color:#2b1d10;'
+      + 'white-space:nowrap;max-width:35%;overflow:hidden;text-overflow:ellipsis;'
+      + 'background:rgba(252,246,232,.34);border-radius:calc(var(--s)*4);'
+      + 'padding:calc(var(--s)*3) calc(var(--s)*9);' + LICHTHOF;
+
+    var titel = s.warum
+      + (s.brett ? ' Der Knopf steht auf ' + s.brett + '.' : '')
+      + (s.am ? ' Er heißt dort „' + s.am + '".' : '');
+
+    var w;
+    if (s.schluss) {
+      /* IST WEITER DER SCHRITT, KOMMT KEIN ZWEITER KNOPF DAZU.
+         Er steht eine Handbreit weiter rechts und heisst dort schon, was er
+         tut. Ein zweiter Knopf mit derselben Wirkung daneben waere genau
+         das Beiwerk, gegen das diese ganze Welle gebaut ist. */
+      w = B.el('div', 'schrittzeile');
+      w.style.cssText = GRUND;
+      w.textContent = 'Jetzt: ' + s.text.toLowerCase() + ' — der Knopf rechts';
+      w.title = titel;
+    } else {
+      w = B.knopf({
+        text: 'Jetzt: ' + s.text,
+        zug: 'kern:wochenschritt',
+        titel: titel + ' Ein Klick führt ihn aus — derselbe Knopf, der auch auf dem '
+             + 'Brett steht.',
+        tu: function () {
+          var el = document.querySelector('[data-zug="' + s.zug + '"]');
+          if (el && !el.disabled) el.click();
+        }
+      });
+      w.classList.add('schrittzeile');
+      w.style.cssText = GRUND
+        + 'border:0;box-shadow:none;font-weight:700;cursor:pointer;'
+        + 'text-decoration:underline;text-underline-offset:calc(var(--s)*5);';
+    }
+    fach.appendChild(w);
   }
 
   /* -------------------------------------------------------------------
@@ -266,9 +441,18 @@
        Bild laeuft (Auflage A13 des Kritikers gilt fuer jeden Kasten des
        Spiels, und der Rahmen faengt bei sich selbst an). Der ganze Satz
        steht im `title`. */
+    /* WELLE 18: ein leichter Grund unter der Zeile. Sie lag als einzige
+       Auskunft ueber das ZIEL DES SPIELS in heller Schmalschrift direkt auf
+       Daechern und Fluss; acht von acht blinden Spielern haben sie als kaum
+       lesbar gemeldet. Der Grund ist so schwach gehalten, dass er nach der
+       Regel des Haushalts kein Kasten ist (Alpha unter 0,35) und die Platte
+       darunter sichtbar bleibt — er nimmt der Schrift nur das wechselnde
+       Bild weg. */
     w.style.cssText = 'position:absolute;left:93%;top:86.6%;transform:translate(-100%,-50%);'
       + 'font-family:var(--mono);font-size:max(11px,calc(var(--s)*18));color:#3a2a16;'
-      + 'white-space:nowrap;max-width:53%;overflow:hidden;text-overflow:ellipsis;' + LICHTHOF;
+      + 'white-space:nowrap;max-width:53%;overflow:hidden;text-overflow:ellipsis;'
+      + 'background:rgba(252,246,232,.34);border-radius:calc(var(--s)*4);'
+      + 'padding:calc(var(--s)*2) calc(var(--s)*8);' + LICHTHOF;
     w.setAttribute('data-ziel', '1');
     w.title = ziel.satz;
     if (ziel.naehe !== null && ziel.naehe !== undefined) {
@@ -303,17 +487,95 @@
        Die ZAHL bleibt (sie ist die zweite Messlatte und gehoert auf den
        Bildschirm, nicht in den Quelltext) — das PAPIER geht. Der Lichthof
        traegt die Schrift, wie er die Hauszeile traegt. */
-    var w = B.el('div', 'deckung');
-    w.style.cssText = 'position:absolute;left:93%;top:90%;transform:translate(-100%,-50%);'
-      + 'font-family:var(--mono);font-size:max(12px,calc(var(--s)*19));color:#2b1d10;'
-      + 'font-weight:700;'
-      + 'text-shadow:0 0 calc(var(--s)*9) rgba(255,248,230,.98),'
-      + '0 0 calc(var(--s)*4) rgba(255,248,230,.98);white-space:nowrap;';
+    /* WELLE 18 — DIE BESTE ZEILE DES SPIELS WIRD EIN KNOPF.
+
+       Der blinde Kritiker nannte diese Zeile die beste des Spiels; die acht
+       blinden Spieler haben sie befolgt und sind daran zugrunde gegangen.
+       Beides stimmt. Was fehlte, waren zwei Dinge:
+
+         · WOZU.  „Zuvorkommen Klosterschenke Obernberg — 19 Pf" sagt den
+           Preis und nicht, was man dafuer bekommt. Zwei Spieler folgten der
+           Zeile zweimal und fielen von 79 auf 8 Pf, ohne je zu erfahren,
+           wogegen das Geld stand. Die Art des Zuges weiss der Kern; sie
+           reicht fuer einen Halbsatz, der nichts erfindet.
+         · DER WEG DORTHIN.  Die Zeile nannte einen Zug, dessen Knopf
+           anderswo auf dem Bild lag — in 1350 unter dem Kasten der
+           Michaelitafel, in 1970 unter der Reiterleiste. Zwoelf tote Klicks
+           der Blindprobe gehen auf dieses Konto. Die Zeile fuehrt den Zug
+           jetzt selbst aus: `besterZug()` hat den Schluessel ohnehin, und
+           `zugBedienbar()` hat schon geprueft, dass der Knopf da, frei und
+           sichtbar ist. Gedrueckt wird der echte Knopf — kein zweiter Weg
+           in die Mechanik, nur ein zweiter Griff an denselben. */
+    var zug = B.welt.naechsterZug;
+    var WOZU = {
+      umkaempft: 'hält eine Adresse, um die ein anderer wirbt',
+      bindung:   'bindet eine Adresse an das Haus',
+      adresse:   'holt eine Adresse zurück',
+      bau:       'steht danach für immer auf dem Hof',
+      lage:      'ändert, was das Haus je Woche schafft'
+    };
+    var wozu = WOZU[zug.art] || null;
+    /* Innerhalb von `umkaempft` stehen drei verschiedene Zuege. Unterschieden
+       wird am Verb, das DAS STUECK selbst geschrieben hat — der Rahmen
+       erfindet dabei nichts, er liest nur genauer. */
+    if (zug.art === 'umkaempft') {
+      if (/^Ablösung/.test(zug.was)) wozu = 'löst eine Adresse aus der Bindung des Gegners';
+      else if (/^Mitbieten/.test(zug.was)) wozu = 'bietet mit, ehe die Adresse versteigert ist';
+    }
+
+    /* Abgerundet, nie aufgerundet: „reicht 1,0×" bei einer Kasse, die nicht
+       reicht, war ein gemeldeter Befund der Blindprobe. */
+    var gerundet = Math.floor(deckung * 10) / 10;
+
+    var w;
+    var text = 'nächster Zug: ' + zug.was + ' — ' + B.welt.geld(zug.preis)
+      + '  (Kasse reicht ' + B.zahl(gerundet, 1) + '×)';
+
+    if (zug.zug) {
+      w = B.knopf({
+        text: text,
+        zug: 'kern:naechster-zug',
+        titel: 'Der günstigste Zug, der die Lage des Hauses ändert und den die Kasse '
+             + 'trägt. ' + (wozu ? 'Er ' + wozu + '. ' : '')
+             + 'Ein Klick führt ihn aus — derselbe Knopf, der auch auf dem Bild steht.',
+        tu: function () {
+          var el = document.querySelector('[data-zug="' + zug.zug + '"]');
+          if (el && !el.disabled) el.click();
+        }
+      });
+      w.classList.add('deckung');
+      w.style.cssText = 'position:absolute;left:93%;top:90%;transform:translate(-100%,-50%);'
+        + 'background:none;background-color:transparent;border:0;box-shadow:none;padding:0;'
+        + 'font-family:var(--mono);font-size:max(12px,calc(var(--s)*19));color:#2b1d10;'
+        + 'font-weight:700;cursor:pointer;'
+        + 'text-decoration:underline;text-underline-offset:calc(var(--s)*5);'
+        + 'background:rgba(252,246,232,.34);border-radius:calc(var(--s)*4);'
+        + 'padding:calc(var(--s)*2) calc(var(--s)*8);'
+        + 'text-shadow:0 0 calc(var(--s)*9) rgba(255,248,230,.98),'
+        + '0 0 calc(var(--s)*4) rgba(255,248,230,.98);white-space:nowrap;';
+    } else {
+      w = B.el('div', 'deckung');
+      w.style.cssText = 'position:absolute;left:93%;top:90%;transform:translate(-100%,-50%);'
+        + 'font-family:var(--mono);font-size:max(12px,calc(var(--s)*19));color:#2b1d10;'
+        + 'font-weight:700;'
+        + 'background:rgba(252,246,232,.34);border-radius:calc(var(--s)*4);'
+        + 'padding:calc(var(--s)*2) calc(var(--s)*8);'
+        + 'text-shadow:0 0 calc(var(--s)*9) rgba(255,248,230,.98),'
+        + '0 0 calc(var(--s)*4) rgba(255,248,230,.98);white-space:nowrap;';
+      w.textContent = text;
+    }
     w.setAttribute('data-deckung', B.rund(deckung, 2));
-    w.textContent = 'nächster Zug: ' + B.welt.naechsterZug.was + ' — '
-      + B.welt.geld(B.welt.naechsterZug.preis)
-      + '  (Kasse reicht ' + B.zahl(deckung, 1) + '×)';
     fach.appendChild(w);
+
+    /* Der Halbsatz darunter, in kleinerer Schrift: wofuer das Geld steht. */
+    if (wozu) {
+      var wz = B.el('div', 'deckung-wozu', wozu);
+      wz.style.cssText = 'position:absolute;left:93%;top:92.7%;transform:translate(-100%,-50%);'
+        + 'font-family:var(--mono);font-size:max(11px,calc(var(--s)*16));color:#5a4630;'
+        + 'white-space:nowrap;max-width:46%;overflow:hidden;text-overflow:ellipsis;'
+        + LICHTHOF;
+      fach.appendChild(wz);
+    }
   }
 
   /* ----------------------------------------------------------------------
@@ -321,6 +583,14 @@
      ---------------------------------------------------------------------- */
   function zeigeBlatt(welches) {
     blattOffen = welches;
+    if (welches === 'protokoll' && buchGesehen !== B.protokoll.length) {
+      buchGesehen = B.protokoll.length;
+      /* Die Kopfleiste traegt den Zaehler und wird hier NICHT mitgezeichnet —
+         ohne diese Zeile stuende „+17 neu" noch da, waehrend das Buch offen
+         vor einem liegt. Ein Zaehler, der nach dem Lesen nicht auf null geht,
+         ist wieder eine Zahl, die nichts bedeutet. */
+      B.wage('kopf.buchgelesen', zeichneKopf);
+    }
     var fach = B.ebene('blatt', 'kern');
     B.leere(fach);
     if (!welches) return;

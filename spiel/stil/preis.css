@@ -284,7 +284,7 @@
 }
 .pr-folge-marke {
   flex: 0 0 auto;
-  font-size: calc(var(--s) * 11);
+  font-size: max(11px, calc(var(--s) * 11));
   letter-spacing: calc(var(--s) * 2);
   text-transform: uppercase;
   color: var(--pr-rot);

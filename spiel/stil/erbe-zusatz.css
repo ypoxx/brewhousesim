@@ -1,1 +1,61 @@
 /* stil/erbe-zusatz.css — Stummel fuer "erbe" (Welle 2). Leer, vollstaendig ersetzbar. */
+
+/* ===========================================================================
+   WELLE 18 — DIE ERBE-LEISTE LAEUFT NICHT MEHR AUS DEM BILD.
+
+   Mit dem Schriftboden dieser Welle (nichts unter 11 px, vorher 6,5 px)
+   wurde die Leiste breiter als der Platz, den sie hat; ihr letzter Knopf
+   stand halb ausserhalb. Sie darf jetzt umbrechen, statt hinauszulaufen —
+   ein Knopf, der halb aus dem Bild haengt, ist nach der Randwache
+   (kern/haushalt.js) derselbe Fehler wie ein verdeckter.
+   =========================================================================== */
+.erb-leiste, .erb-band, .erb-knoepfe {
+  flex-wrap: wrap;
+  row-gap: calc(var(--s) * 4);
+}
+.erb-leiste { max-width: 62%; }
+/* `.erb-knoepfe` stand auf `flex: 0 0 auto` mit der ausdruecklichen
+   Begruendung „die Knopfreihe wird NIE gequetscht" (erbe.css). Die Regel
+   stammt aus der Zeit, als diese Knoepfe 7 px Schrift trugen. Mit dem
+   Schriftboden der Welle 18 (nichts unter 11 px, weil 261 Textstellen unter
+   12 px der meistgemeldete Lesbarkeitsbefund der Blindprobe waren) ist die
+   Reihe breiter als die Leiste; `overflow: hidden` an der Leiste schnitt sie
+   ab, und der letzte Knopf („Vertragsakte", „Ohne Abfindung") war weder zu
+   sehen noch zu druecken.
+
+   Gequetscht wird sie auch jetzt nicht — sie BRICHT UM. Ein Knopf in der
+   zweiten Zeile ist ganz da; ein weggeschnittener ist es nicht. */
+.erb-knoepfe { flex: 0 1 auto; max-width: 100%; }
+
+/* WARUM NICHT „untereinander": `flex-direction: column` ZUSAMMEN MIT
+   `flex-wrap: wrap` bricht in eine zweite SPALTE um, nicht in eine zweite
+   Zeile — die Leiste hat eine feste Hoehe (6,8 % der Buehne), das Band
+   fuellt sie, und die Knopfreihe landete daneben statt darunter. Gemessen:
+   Reihe bei x 1341..1942 in einer Buehne von 1366 px.
+
+   Die Leiste bleibt also eine ZEILE. Beide Kinder duerfen schrumpfen
+   (`min-width: 0`, sonst schrumpft ein Flexkind nie unter seinen Inhalt),
+   und die Knopfreihe bricht IN SICH um. Damit bleibt jeder Knopf ganz im
+   Bild, ohne dass die Leiste nach unten waechst — dort ist kein Platz: die
+   Messung in erbe.css (Runde 3) laesst ihr genau y 70,9–78,8 %, darunter
+   liegen die Knoepfe DER FUHRE. */
+.erb-leiste {
+  overflow: visible;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: flex-start;
+}
+.erb-band    { flex: 1 1 auto; min-width: 0; }
+.erb-knoepfe { flex: 0 1 auto; min-width: 0; flex-wrap: wrap; justify-content: flex-end; }
+
+/* WELLE 18 — auch die Erbe-Leiste bekommt einen Grund. Sie liegt mitten
+   auf der Stadtkarte, und mit dem Schriftboden dieser Welle ist sie nicht
+   mehr das 7-px-Band, das man uebersah, sondern eine Zeile, die man liest —
+   dann muss sie auch lesbar sein. Schwach gehalten (Alpha unter der
+   Kasten-Schwelle des Haushalts), damit die gemalte Platte durchscheint. */
+.erb-leiste {
+  background-color: rgba(252, 246, 232, 0.32);
+  border-radius: calc(var(--s) * 4);
+  padding: calc(var(--s) * 3) calc(var(--s) * 6);
+  box-sizing: border-box;
+}

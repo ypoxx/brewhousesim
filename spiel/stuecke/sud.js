@@ -1774,8 +1774,12 @@
     var wAlt = (kz && e.anstich.altKurz) || e.anstich.alt || 'Ältestes Fass anbrechen';
     var paar = B.el('div', 'sud-zpaar');
     paar.appendChild(knopf({
+      /* WELLE 18: „+14 wovon?" — woertlich aus zwei Protokollen der
+         Blindprobe. Die Zahl ist Hefeguete; sie stand ohne Einheit da, und
+         die Einheit steht seit jeher als `D.guete.kurz` in den Daten. */
       text: (ausBottich ? wFuehren : wJung)
           + ' · +' + (ausBottich ? (D.guete.fuehren || 8) : (D.guete.anstichJung || 14))
+          + ' ' + (D.guete.kurz || 'Zeug')
           + (ausBottich ? ' · ohne Fass' : ' · ' + einFass),
       zug: 'sud:zettel-anstich',
       klasse: 'sud-tat klein voll halb',
@@ -1787,7 +1791,7 @@
     paar.appendChild(knopf({
       text: (ausBottich ? wJung : wAlt)
           + ' · +' + (ausBottich ? (D.guete.anstichJung || 14) : (D.guete.anstichAlt || 6))
-          + ' · ' + einFass,
+          + ' ' + (D.guete.kurz || 'Zeug') + ' · ' + einFass,
       zug: 'sud:zettel-hefe-fass',
       klasse: 'sud-tat klein voll halb',
       fass: 1,

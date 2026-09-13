@@ -185,6 +185,646 @@
         m.title = o.name + ' — ' + (o.sagt || '');
         fach.appendChild(m);
       });
+    },
+
+    /* ====================================================================
+       DIE ENTFLECHTUNG — Kaertchen, die einander nicht mehr decken.
+       Welle 18.
+
+       DAS PROBLEM GEHOERT HIERHER.  Ein Ort ist ein Punkt, und mehrere
+       Stuecke setzen ihre Kaertchen auf denselben Punkt, ohne voneinander
+       zu wissen: DIE FUHRE haengt ihre Marke an `marktplatz`, DER GEGNER
+       seinen Wimpel, DIE STADT ihr Schild. `setze()` gibt jedem dieselben
+       Koordinaten, und keines der drei kann das Problem sehen — es entsteht
+       erst zwischen ihnen. Also loest es der, der die Orte vergibt.
+
+       Die Blindprobe hat den Schaden gezaehlt und er ist nicht kosmetisch:
+         · „Klage vor dem Stadtgericht" lag ueber „TOR · KON ablösen 56 Pf";
+           der Klick loeste die Klage aus statt der Abloesung.
+         · „FAE · HEI ablösen 126 fl" traf den Knopf „lieber zukaufen"
+           darunter: −29 statt −126 fl, eine andere Handlung fuer anderes
+           Geld.
+         · Insgesamt ueber dreissig tote oder fehlgeleitete Klicks, in allen
+           vier Epochen.
+
+       WIE.  Nach dem Zeichnen werden die Kaertchen von oben nach unten
+       durchgegangen; wer ein schon gesetztes ueberdeckt, rutscht so weit
+       nach unten, dass er es nicht mehr tut. Verschoben wird ueber
+       `margin-top` — `top` gehoert dem Stueck, `transform` gehoert dem
+       Anker in grund.css, und beide bleiben unangetastet. Zurueckgesetzt
+       wird vor jeder Messung, damit sich die Verschiebung nicht aufsummiert.
+
+       WAS SIE NICHT ANFASST.  Bretter, Blaetter und die Kopfleiste: die
+       sind gross, haben eine eigene Ordnung (DIE STADT klappt sie) und
+       wuerden beim Verschieben mehr zerschlagen als retten. Die Grenze ist
+       die Flaeche.
+       ==================================================================== */
+    entflechte: function () {
+      var buehne = document.getElementById('buehne');
+      if (!buehne) return 0;
+      var breite = buehne.clientWidth, hoehe = buehne.clientHeight;
+      if (!breite || !hoehe) return 0;
+
+      var HOECHSTFLAECHE = breite * hoehe * 0.035;   /* darueber ist es ein Brett */
+      var MINDESTFLAECHE = 120;                      /* darunter ist es ein Punkt */
+      /* Ab wann gilt ein Kaertchen als verdeckt. Gemessen an den
+         KNOPF-Huellen (siehe knopfHuelle), nicht an den Kaesten — deshalb
+         darf die Schwelle niedriger stehen, ohne dass Kaertchen einander
+         ausweichen, die sich nur am Rand beruehren. Gemessen ueber vier
+         Epochen: 0,22 laesst in 1350 „Klage vor dem Stadtgericht" auf
+         „TOR · KON ablösen" liegen (der Klick loeste die Klage aus statt
+         der Abloesung); 0,15 loest das, ohne anderswo etwas zu verschieben. */
+      var UEBERDECKUNG = 0.15;
+      var LUFT = Math.max(2, Math.round(hoehe * 0.004));
+      /* Wie weit ein Kaertchen von seinem Ort wegwandern darf. Gemessen:
+         bei 0,16 lief in 1350 das Paar mit „TOR · KON ablösen" genau in
+         diesen Anschlag (123 px) und blieb zu einem Viertel unter „Klage vor
+         dem Stadtgericht" liegen — der Klick loeste weiter die Klage aus.
+         0,22 traegt den Fall; weiter geht es nicht, sonst steht das Kaertchen
+         bei einem fremden Haus. */
+      var HOECHSTSCHUB = Math.round(hoehe * 0.22);
+      /* Quer darf weniger weit gegangen werden als senkrecht. Auf schmalen
+         Geraeten (390 px) waeren 9 % nur 35 px — weniger als ein Kaertchen
+         breit ist, also nutzlos; deshalb der Boden in echten Bildpunkten. */
+      var HOECHSTSCHUB_QUER = Math.max(72, Math.round(breite * 0.09));
+
+      var alle = buehne.querySelectorAll('.amort');
+      var l = [], i;
+
+      /* 1 — zuruecksetzen, damit gemessen wird, wo die Stuecke es wollten. */
+      for (i = 0; i < alle.length; i++) {
+        if (alle[i]._ortSchub) { alle[i].style.marginTop = ''; alle[i]._ortSchub = 0; }
+        if (alle[i]._ortQuer) { alle[i].style.marginLeft = ''; alle[i]._ortQuer = 0; }
+      }
+
+      function sichtbar(r) {
+        return r.width > 1 && r.height > 1
+          && r.bottom > 0 && r.top < hoehe && r.right > 0 && r.left < breite;
+      }
+
+      /* WEGGESCHNITTEN IST NICHT DA — UND VERERBT SICH.
+
+         DIE STADT klappt ein Brett zu, indem sie `clip-path: inset(50%)`
+         darauf legt: die Huelle bleibt, gemalt wird nichts. Ein Kaertchen
+         unter so einem Brett ist frei, und das Brett selbst ist kein
+         Hindernis. Wer das nicht prueft, misst Gespenster — dieselbe Falle,
+         in die kern/haushalt.js schon einmal gelaufen ist, und in die auch
+         die erste Messung dieser Welle lief: der Griff des Rufbandes schien
+         in allen vier Epochen unter einem Reiter zu liegen, war aber
+         laengst weggeschnitten. */
+      function weggeschnitten(el) {
+        var n = el;
+        while (n && n !== buehne) {
+          var c = getComputedStyle(n).clipPath;
+          if (c && c !== 'none' && /inset\(\s*50%/.test(c)) return true;
+          n = n.parentElement;
+        }
+        return false;
+      }
+
+      /* GEMESSEN WIRD, WORAN DER SCHADEN ENTSTEHT: die Huelle der KNOEPFE
+         eines Kaertchens, nicht die Huelle des Kaertchens.
+
+         In 1350 decken sich „Klage vor dem Stadtgericht" (124x97) und das
+         Paar mit „TOR · KON ablösen" (120x90) nur zu 15 % ihrer Kaesten —
+         ihre Knoepfe darin aber zu ueber 30 %, und genau dieser Klick loeste
+         die Klage aus statt der Abloesung. Die Schwelle einfach zu senken
+         waere der falsche Weg: dann weichen auch Kaertchen einander aus, die
+         sich nur am Rand beruehren, und in 1600 sind dabei drei Knoepfe auf
+         die Erbe-Leiste geschoben worden, die vorher frei standen (gemessen:
+         1 Ueberlappung vorher, 4 nachher). Ein Kaertchen ohne Knopf bleibt
+         mit seiner eigenen Huelle in der Rechnung — es kann verdecken, auch
+         wenn man es nicht drueckt. */
+      function knopfHuelle(el, aussen) {
+        var kn = el.querySelectorAll ? el.querySelectorAll('[data-zug]') : [];
+        var x0 = null, y0 = null, x1 = null, y1 = null;
+        for (var q = 0; q < kn.length; q++) {
+          var r = kn[q].getBoundingClientRect();
+          if (!r.width || !r.height) continue;
+          if (x0 === null || r.left < x0) x0 = r.left;
+          if (y0 === null || r.top < y0) y0 = r.top;
+          if (x1 === null || r.right > x1) x1 = r.right;
+          if (y1 === null || r.bottom > y1) y1 = r.bottom;
+        }
+        if (x0 === null) return aussen;
+        return { left: x0, top: y0, width: x1 - x0, height: y1 - y0 };
+      }
+
+      /* 2 — WAS SICH BEWEGEN DARF: die Kaertchen auf den Orten. */
+      for (i = 0; i < alle.length; i++) {
+        var el = alle[i];
+        if (el.getAttribute('data-ort-frei') === '1') continue;
+        var r = el.getBoundingClientRect();
+        var f = r.width * r.height;
+        if (!f || f < MINDESTFLAECHE || f > HOECHSTFLAECHE) continue;
+        if (!sichtbar(r)) continue;
+        if (weggeschnitten(el)) continue;
+        var h = knopfHuelle(el, r);
+        l.push({ el: el, x: h.left, y: h.top, w: h.width, h: h.height,
+                 f: h.width * h.height, schub: 0 });
+      }
+      if (!l.length && !buehne.querySelector('[data-zug]')) return 0;
+
+      function istInListe(el) {
+        for (var q = 0; q < l.length; q++) {
+          if (l[q].el === el || l[q].el.contains(el)) return true;
+        }
+        return false;
+      }
+
+      /* 2b — AUCH EIN FREI GESETZTER KNOPF DARF WEICHEN.
+
+         Nicht jedes Ding, das einen Knopf verdeckt, haengt an einem Ort.
+         Der Griff des Namensbandes („▾") liegt in allen vier Epochen unter
+         einem Reiter der Stadt, und beides ist Inventar: keines der beiden
+         wuerde nach Regel 2 weichen, und der Griff bliebe fuer immer
+         unerreichbar. Also darf jeder Knopf weichen, der klein genug ist
+         und SELBST frei im Bild steht (absolut oder fest gesetzt) — nicht
+         aber einer, der in einer Reihe oder einem Raster sitzt: dort gehoert
+         die Ordnung dem Stueck, und ein einzeln verschobener Reiter waere
+         schlimmer als ein verdeckter. */
+      var frei = buehne.querySelectorAll('[data-zug]');
+      for (i = 0; i < frei.length; i++) {
+        var fk = frei[i];
+        if (istInListe(fk)) continue;
+        var fst = getComputedStyle(fk);
+        if (fst.position !== 'absolute' && fst.position !== 'fixed') continue;
+        var fr = fk.getBoundingClientRect();
+        var ff = fr.width * fr.height;
+        if (!ff || ff < MINDESTFLAECHE || ff > HOECHSTFLAECHE) continue;
+        if (!sichtbar(fr)) continue;
+        if (weggeschnitten(fk)) continue;
+        if (fk._ortSchub || fk._ortQuer) {
+          fk.style.marginTop = ''; fk.style.marginLeft = '';
+          fk._ortSchub = 0; fk._ortQuer = 0;
+          fr = fk.getBoundingClientRect();
+        }
+        l.push({ el: fk, x: fr.left, y: fr.top, w: fr.width, h: fr.height, f: ff, schub: 0 });
+      }
+
+      /* 3 — WAS STEHENBLEIBT UND WOVOR GEWICHEN WIRD.
+
+         Die Kaertchen sind einander nicht allein im Weg. Der teuerste
+         gemessene Fall der Blindprobe ist ein Kaertchen unter FESTEM
+         Inventar: der Wimpel „wirbt · noch 4 Wo. zuvorkommen 19 Pf" lag zu
+         95 % unter dem Griff der Michaelitafel, und genau dieser Wimpel ist
+         der Zug, den das Spiel selbst als naechsten empfiehlt. Die Tafel
+         weicht nicht — sie ist Moebel; der Wimpel weicht.
+
+         Hindernis ist deshalb jeder sichtbare Knopf, der NICHT zu einem
+         beweglichen Kaertchen gehoert. Das ist zugleich genau die Groesse,
+         um die es geht: Knopf deckt Knopf. */
+
+
+      var hindernis = [];
+      var knoepfe = buehne.querySelectorAll('[data-zug]');
+      for (i = 0; i < knoepfe.length; i++) {
+        var kn = knoepfe[i];
+        var kr = kn.getBoundingClientRect();
+        if (!sichtbar(kr)) continue;
+        if (weggeschnitten(kn)) continue;
+        var kf = kr.width * kr.height;
+        if (!kf || kf > HOECHSTFLAECHE) continue;
+        if (istInListe(kn)) continue;
+        hindernis.push({ el: null, x: kr.left, y: kr.top, w: kr.width, h: kr.height, f: kf });
+      }
+      if (l.length < 2 && !hindernis.length) return 0;
+
+      /* 3 — von oben nach unten, bei Gleichstand von links nach rechts.
+         Die Reihenfolge entscheidet, wer liegen bleibt und wer weicht; sie
+         ist aus der Lage abgeleitet und damit bei gleicher Saat dieselbe. */
+      l.sort(function (a, b) { return (a.y - b.y) || (a.x - b.x) || (b.f - a.f); });
+
+      var gesetzt = hindernis.slice(), verschoben = 0;
+
+      /* WOGEGEN GEPRUEFT WIRD: auch gegen die, die noch drankommen.
+
+         Bis Welle 18 sah ein Kaertchen nur, was schon LIEGT — die festen
+         Knoepfe und die bereits gesetzten Kaertchen. Wer weiter unten in der
+         Liste stand, war fuer den Ausweichenden unsichtbar, und genau daran
+         ist in 1350 der letzte Fall gescheitert: „Klage vor dem
+         Stadtgericht" stand frei bei (540|338), wich einem festen Knopf um
+         46 nach rechts und 87 nach unten aus — und landete dabei mitten auf
+         dem Sudzettel, der erst danach an der Reihe war. Verschoben UND
+         verdeckt, dasselbe schlechteste Ergebnis, das die Regel weiter unten
+         schon einmal verhindert hat.
+
+         Geprueft wird deshalb gegen alles: was liegt, und was noch kommt.
+         Das ist bewusst streng: ein spaeteres Kaertchen KOENNTE zwar selbst
+         noch weichen, aber ein Schub, der vielleicht frei wird, ist
+         schlechter als gar keiner, wenn er sicher verdeckt. Gemessen ueber
+         zwanzig Lagen (vier Epochen, fuenf feste Saaten) bei 1366x768:
+         14 Ueberlappungen vorher, 12 nachher.
+
+         Halb zu zaehlen, was noch weichen kann, wurde versucht und wieder
+         verworfen: mit halbem Gewicht und einem zweiten, laxeren Durchgang
+         stieg dieselbe Messung auf 20 — der laxe Durchgang holt genau die
+         Schuebe zurueck, die der strenge verhindert hat. */
+      var pruefliste = gesetzt;
+
+      /* WAS AUS DEM BILD RAGT, IST SCHLIMMER ALS EIN VERDECKTER KNOPF.
+
+         In 1900 wurde „Freibier haelt ihn 3 Wochen" um 110 px nach oben
+         geschoben und stand danach bei y = −20: halb ueber dem oberen Rand,
+         und der Rest genau auf dem BUCH-Feld der Kopfleiste. Beide Male
+         rechnete das alte Mass dasselbe Ergebnis aus, weil es nur Knopf
+         gegen Knopf kannte — der Bildrand kam darin nicht vor.
+
+         Der Anteil, der draussen liegt, zaehlt jetzt doppelt: ein halb
+         herausgeschobenes Kaertchen wiegt schwerer als eine ganze
+         Ueberdeckung. Damit hoert die Suche von selbst am Rand auf, in
+         allen vier Richtungen, ohne eigene Grenze. */
+      function ausDemBild(c, dy, dx) {
+        var x0 = c.x + (dx || 0), y0 = c.y + (dy || 0);
+        var ix = Math.min(x0 + c.w, breite) - Math.max(x0, 0);
+        var iy = Math.min(y0 + c.h, hoehe) - Math.max(y0, 0);
+        if (ix < 0) ix = 0;
+        if (iy < 0) iy = 0;
+        if (!c.f) return 0;
+        return 1 - (ix * iy) / c.f;
+      }
+
+      /* Wie stark ein Kaertchen bei einer Verschiebung um `dy` noch verdeckt
+         wird — null heisst frei. Gemessen wird gegen alles, was schon liegt. */
+      function stoerung(c, dy, dx) {
+        dx = dx || 0;
+        var summe = ausDemBild(c, dy, dx) * 2;
+        for (var j = 0; j < pruefliste.length; j++) {
+          var g = pruefliste[j];
+          if (g === c) continue;
+          var bx = Math.min(c.x + dx + c.w, g.x + g.w) - Math.max(c.x + dx, g.x);
+          var by = Math.min(c.y + dy + c.h, g.y + g.h) - Math.max(c.y + dy, g.y);
+          if (bx <= 0 || by <= 0) continue;
+          var anteil = (bx * by) / Math.min(c.f, g.f);
+          if (anteil < UEBERDECKUNG) continue;
+          summe += anteil;
+        }
+        return summe;
+      }
+
+      /* Der kleinste Schub in eine Richtung, der alle Verdecker raeumt.
+         `richtung` ist +1 (nach unten) oder −1 (nach oben). Gesucht wird
+         schrittweise: jeder Durchgang raeumt den staerksten Verdecker, und
+         der naechste prueft, ob dabei ein neuer entstanden ist. */
+      function suche(c, richtung, quer) {
+        var d = 0, runde = 0;
+        var grenze = quer ? HOECHSTSCHUB_QUER : HOECHSTSCHUB;
+        while (runde++ < 24) {
+          var noetig = null;
+          for (var j = 0; j < pruefliste.length; j++) {
+            var g = pruefliste[j];
+            if (g === c) continue;
+            var links = c.x + (quer ? d : 0), rechts = links + c.w;
+            var oben = c.y + (quer ? 0 : d), unten = oben + c.h;
+            var bx = Math.min(rechts, g.x + g.w) - Math.max(links, g.x);
+            var by = Math.min(unten, g.y + g.h) - Math.max(oben, g.y);
+            if (bx <= 0 || by <= 0) continue;
+            if ((bx * by) / Math.min(c.f, g.f) < UEBERDECKUNG) continue;
+            var n = quer
+              ? (richtung > 0 ? (g.x + g.w + LUFT) - links : links - (g.x - c.w - LUFT))
+              : (richtung > 0 ? (g.y + g.h + LUFT) - oben  : oben  - (g.y - c.h - LUFT));
+            if (n > 0 && (noetig === null || n > noetig)) noetig = n;
+          }
+          if (noetig === null) {
+            /* Frei — aber nicht, wenn dafuer der Bildrand ueberschritten
+               wurde. Ein Kaertchen, das halb draussen steht, ist keinen
+               freien Knopf wert. */
+            var jetzt = quer ? ausDemBild(c, 0, d) : ausDemBild(c, d, 0);
+            if (jetzt > ausDemBild(c, 0, 0) + 0.001) return null;
+            return d;
+          }
+          d += richtung * noetig;
+          if (Math.abs(d) > grenze) return null;          /* zu weit */
+        }
+        return null;
+      }
+
+      /* DER ZWEITBESTE PLATZ — wenn es keinen freien gibt.
+
+         `suche` kennt nur zwei Antworten: hier ist frei, oder nirgends.
+         Zwischen beiden liegt der haeufigste Fall auf einer vollen Karte:
+         nirgends GANZ frei, aber ein Stueck weiter deutlich weniger
+         verdeckt. Ohne diese Stufe blieb in 1900 das Kaertchen „Freibier
+         haelt ihn 3 Wochen" unter dem BUCH-Feld der Kopfleiste liegen — und
+         ein Moebel, das ein Kaertchen verdeckt, ist der eine Fall, den die
+         Nachbesserung mit `elementFromPoint` NICHT einfaengt: sie fragt, ob
+         das Kaertchen erreichbar ist, nicht ob es etwas unerreichbar macht.
+
+         Abgesucht werden dieselben vier Richtungen wie oben, nur in festen
+         Schritten statt in Ausweich-Spruengen. Genommen wird der Platz mit
+         der kleinsten Restverdeckung; bei Gleichstand der naechste. Der
+         Aufruf steht hinter `suche`, laeuft also nur, wenn kein freier Platz
+         existiert — auf den gemessenen Lagen ist das ein- bis zweimal je
+         Zeichenrunde. */
+      /* WIE VIELE EIGENE KNOEPFE DEN KLICK BEKOMMEN.
+
+         Die Feinsuche rechnet mit Rechtecken und kennt nur, was einen Knopf
+         traegt. Die Michaelitafel traegt keinen: `pr-was` ist ein grosses
+         undurchsichtiges Brett ohne `data-zug`, faellt also durch jedes
+         Raster — und genau dorthin schob der zweitbeste Platz in 1350 drei
+         Kaertchen des Muehlwirts, die vorher den Klick bekamen. Gemessen
+         waren es 12 Ueberlappungen und 0 unerreichbare Knoepfe vor der
+         Feinsuche, 8 und 3 danach: vier huebschere Stellen, gegen drei
+         Knoepfe, die gar nicht mehr gehen. Ein schlechter Tausch.
+
+         Deshalb wird ihr Vorschlag einmal WIRKLICH ausprobiert und die
+         Frage dem Browser gestellt, der sie allein beantworten kann. */
+      function klickbar(el) {
+        var kn = el.querySelectorAll ? el.querySelectorAll('[data-zug]') : [];
+        var pruefe = kn.length ? kn : (el.hasAttribute('data-zug') ? [el] : []);
+        var zahl = 0;
+        for (var q = 0; q < pruefe.length; q++) {
+          var k = pruefe[q];
+          if (k.disabled) continue;
+          var r = k.getBoundingClientRect();
+          if (r.width < 2 || r.height < 2) continue;
+          var cx = Math.min(breite - 1, Math.max(1, r.left + r.width / 2));
+          var cy = Math.min(hoehe - 1, Math.max(1, r.top + r.height / 2));
+          var oben = document.elementFromPoint(cx, cy);
+          if (oben && (oben === k || k.contains(oben))) zahl++;
+        }
+        return zahl;
+      }
+
+      function feinsuche(c, vorher) {
+        var SCHRITT = Math.max(8, LUFT * 3);
+        var beste = null;
+        var richtungen = [
+          { quer: false, vz: 1,  rang: 0, grenze: HOECHSTSCHUB },
+          { quer: false, vz: -1, rang: 1, grenze: HOECHSTSCHUB },
+          { quer: true,  vz: 1,  rang: 2, grenze: HOECHSTSCHUB_QUER },
+          { quer: true,  vz: -1, rang: 3, grenze: HOECHSTSCHUB_QUER }
+        ];
+        for (var ri = 0; ri < richtungen.length; ri++) {
+          var rr = richtungen[ri];
+          for (var d = SCHRITT; d <= rr.grenze; d += SCHRITT) {
+            var weg = rr.vz * d;
+            var rest = rr.quer ? stoerung(c, 0, weg) : stoerung(c, weg, 0);
+            if (rest >= vorher) continue;
+            if (!beste || rest < beste.rest - 0.001
+                || (rest < beste.rest + 0.001
+                    && (d < Math.abs(beste.d) - 1
+                        || (d <= Math.abs(beste.d) + 1 && rr.rang < beste.rang)))) {
+              beste = { d: weg, quer: rr.quer, rang: rr.rang, rest: rest, fein: true };
+            }
+          }
+        }
+        return beste;
+      }
+
+      for (i = 0; i < l.length; i++) {
+        var c = l[i];
+        var schub = 0;
+        var quer = 0;
+        pruefliste = gesetzt.slice();
+        for (var oi = i + 1; oi < l.length; oi++) {
+          pruefliste.push({ x: l[oi].x, y: l[oi].y, w: l[oi].w,
+                            h: l[oi].h, f: l[oi].f, weicht: true });
+        }
+        var vorher = stoerung(c, 0, 0);
+        if (vorher > 0) {
+          /* Vier Auswege: unten, oben, rechts, links. Genommen wird der
+             KUERZESTE, der wirklich frei ist — die Leserichtung entscheidet
+             nur bei Gleichstand, und senkrecht vor waagerecht, weil ein
+             Kaertchen, das seitlich wandert, seinen Ort schneller sichtbar
+             verlaesst als eines, das nach unten rutscht. */
+          var wege = [
+            { d: suche(c, 1, false),  quer: false, rang: 0 },
+            { d: suche(c, -1, false), quer: false, rang: 1 },
+            { d: suche(c, 1, true),   quer: true,  rang: 2 },
+            { d: suche(c, -1, true),  quer: true,  rang: 3 }
+          ];
+          var beste = null;
+          for (var wi = 0; wi < wege.length; wi++) {
+            var wg = wege[wi];
+            if (wg.d === null || wg.d === 0) continue;
+            if (!beste || Math.abs(wg.d) < Math.abs(beste.d) - 1
+                || (Math.abs(wg.d) <= Math.abs(beste.d) + 1 && wg.rang < beste.rang)) {
+              beste = wg;
+            }
+          }
+          if (!beste) beste = feinsuche(c, vorher);
+          /* KEIN SCHUB, DER NICHTS BRINGT.  Ohne diese Pruefung wanderte in
+             1970 das Kartellamts-Kaertchen 164 px nach unten und lag danach
+             auf dem naechsten — verschoben UND verdeckt, also das schlechteste
+             von drei moeglichen Ergebnissen. Wer nirgends frei wird, bleibt an
+             seinem Ort: dort ist er wenigstens dort, wo er hingehoert. */
+          if (beste) {
+            var nachher = beste.quer ? stoerung(c, 0, beste.d) : stoerung(c, beste.d, 0);
+            if (nachher < vorher) {
+              if (beste.quer) quer = beste.d; else schub = beste.d;
+            }
+          }
+        }
+        if ((schub || quer) && beste && beste.fein) {
+          var warKlickbar = klickbar(c.el);
+          if (schub) c.el.style.marginTop = Math.round(schub) + 'px';
+          if (quer) c.el.style.marginLeft = Math.round(quer) + 'px';
+          if (klickbar(c.el) < warKlickbar) {
+            c.el.style.marginTop = '';
+            c.el.style.marginLeft = '';
+            schub = 0;
+            quer = 0;
+          }
+        }
+        if (schub) {
+          c.el.style.marginTop = Math.round(schub) + 'px';
+          c.el._ortSchub = schub;
+          c.y += schub;
+          verschoben++;
+        }
+        if (quer) {
+          c.el.style.marginLeft = Math.round(quer) + 'px';
+          c.el._ortQuer = quer;
+          c.x += quer;
+          verschoben++;
+        }
+        gesetzt.push(c);
+      }
+
+      /* DIE RANDWACHE.  Kein Kaertchen haengt aus dem Bild.
+
+         Die Schilder tragen seit Welle 18 volle Wirtsnamen und sind dadurch
+         breiter; am rechten Rand der Karte (Fluss, Bruecken, Bahnhof)
+         stiessen sie an die Kante, und was drueber hinausragt, ist nach der
+         Randwache des Haushalts derselbe Fehler wie ein verdeckter Knopf.
+         Zurueckgeholt wird nur waagerecht: senkrecht sitzen die Kaertchen
+         an ihren Haeusern, und ein Kaertchen, das am Ufer klebt, gehoert
+         ans Ufer. */
+      for (i = 0; i < l.length; i++) {
+        var rk = l[i].el.getBoundingClientRect();
+        var zurueck = 0;
+        if (rk.right > breite - 2) zurueck = -(rk.right - (breite - 2));
+        else if (rk.left < 2) zurueck = 2 - rk.left;
+        if (!zurueck) continue;
+        var neuQuer = (l[i].el._ortQuer || 0) + zurueck;
+        l[i].el.style.marginLeft = Math.round(neuQuer) + 'px';
+        l[i].el._ortQuer = neuQuer;
+        l[i].x += zurueck;
+        verschoben++;
+      }
+
+      return verschoben;
+    },
+
+    /* ======================================================================
+       DIE NACHBESSERUNG — gemessen an dem, worauf es ankommt.
+
+       `entflechte()` rechnet mit Rechtecken: schnell, und meistens richtig.
+       Die Frage, um die es geht, ist aber eine andere — BEKOMMT DER KNOPF
+       DEN KLICK? Die beantwortet nur der Browser selbst, mit
+       `elementFromPoint`.
+
+       Sie laeuft GETRENNT und SPAETER, und das hat einen gemessenen Grund:
+       nicht jeder Kasten steht schon, wenn die Stuecke mit dem Zeichnen
+       fertig sind. Der Griff der Michaelitafel in 1970 legt sich erst danach
+       ueber die obere rechte Ecke der Karte, und drei Kaertchen am Bahnhof
+       lagen darunter — sichtbar und nicht zu druecken. Zum Zeitpunkt der
+       Entflechtung war dort nichts, was haette stoeren koennen.
+
+       Angefasst wird nur, was WIRKLICH blockiert ist — in aller Regel kein
+       einziges Kaertchen. Damit bleibt das Zucken aus, gegen das die
+       Entflechtung selbst synchron laeuft: es gibt nichts zu verschieben.
+       ====================================================================== */
+    nachbessere: function () {
+      var buehne = document.getElementById('buehne');
+      if (!buehne) return 0;
+      var breite = buehne.clientWidth, hoehe = buehne.clientHeight;
+      if (!breite || !hoehe) return 0;
+      var HOECHSTFLAECHE = breite * hoehe * 0.035;
+      var MINDESTFLAECHE = 120;
+      var HOCH = Math.round(hoehe * 0.33);
+      var QUER = Math.max(110, Math.round(breite * 0.14));
+      var SCHRITT = Math.max(14, Math.round(hoehe * 0.03));
+
+      function blockiert(el) {
+        var kn = el.querySelectorAll ? el.querySelectorAll('[data-zug]') : [];
+        var pruefe = kn.length ? kn : (el.hasAttribute('data-zug') ? [el] : []);
+        for (var q = 0; q < pruefe.length; q++) {
+          var k = pruefe[q];
+          if (k.disabled) continue;
+          var r = k.getBoundingClientRect();
+          if (r.width < 2 || r.height < 2) continue;
+          var cx = Math.min(breite - 1, Math.max(1, r.left + r.width / 2));
+          var cy = Math.min(hoehe - 1, Math.max(1, r.top + r.height / 2));
+          var oben = document.elementFromPoint(cx, cy);
+          if (!oben || oben === k || k.contains(oben)) continue;
+          return true;
+        }
+        return false;
+      }
+
+      /* DIE GEGENFRAGE: verdeckt dieses Kaertchen jetzt jemand anderen?
+
+         `blockiert` fragt nur nach dem eigenen Knopf. Wer sich damit
+         begnuegt, tauscht die Not bloss aus: in 1970 rutschte das
+         Kartellamts-Kaertchen 46 nach rechts und 72 nach unten aus dem
+         eigenen Schatten heraus und legte sich dabei genau auf „Frisches
+         Fass · +14 Zeug" des Sudzettels — drei von fuenf Saaten, immer
+         dasselbe Paar. Ein Platz taugt nur, wenn BEIDE Knoepfe den Klick
+         bekommen.
+
+         Geprueft wird mit derselben Frage in die andere Richtung: liegt der
+         Mittelpunkt eines fremden Knopfes unter diesem Kaertchen? */
+      function verdecktAndere(el) {
+        var r = el.getBoundingClientRect();
+        var kn = buehne.querySelectorAll('[data-zug]');
+        for (var q = 0; q < kn.length; q++) {
+          var k = kn[q];
+          if (k === el || el.contains(k) || k.contains(el)) continue;
+          if (k.disabled) continue;
+          var kr = k.getBoundingClientRect();
+          if (kr.width < 2 || kr.height < 2) continue;
+          /* Gefragt wird nach der ueberdeckten FLAECHE, nicht nach dem
+             Mittelpunkt des fremden Knopfes. In 1970 lag der Sudknopf
+             „Frisches Fass" zu einem knappen Drittel unter dem
+             Kartellamts-Kaertchen — genug, um den Klick zu verlieren, aber
+             sein Mittelpunkt stand 30 px daneben im Freien, und die
+             Mittelpunktfrage sagte drei Saaten lang „alles gut". Getastet
+             wird deshalb in der Mitte der UEBERSCHNEIDUNG. */
+          var bx = Math.min(kr.right, r.right) - Math.max(kr.left, r.left);
+          var by = Math.min(kr.bottom, r.bottom) - Math.max(kr.top, r.top);
+          if (bx <= 0 || by <= 0) continue;
+          if ((bx * by) / (kr.width * kr.height) < 0.3) continue;
+          var cx = Math.min(breite - 1, Math.max(1, Math.max(kr.left, r.left) + bx / 2));
+          var cy = Math.min(hoehe - 1, Math.max(1, Math.max(kr.top, r.top) + by / 2));
+          var oben = document.elementFromPoint(cx, cy);
+          if (oben && (oben === el || el.contains(oben))) return true;
+        }
+        return false;
+      }
+
+      function weg(el) {
+        var n = el;
+        while (n && n !== buehne) {
+          var c = getComputedStyle(n);
+          if (c.clipPath && c.clipPath !== 'none' && /inset\(\s*50%/.test(c.clipPath)) return true;
+          if (c.visibility === 'hidden' || c.display === 'none' || c.opacity === '0') return true;
+          n = n.parentElement;
+        }
+        return false;
+      }
+
+      /* MEHRERE DURCHGAENGE, weil eine Abhilfe die naechste Not schaffen
+         kann: wer unter einem Kasten hervorrutscht, kann dabei auf einem
+         anderen Kaertchen landen. Gemessen in 1884 und 1970 nach dem ersten
+         Durchgang — je ein Knopf, der vorher frei war. Drei Durchgaenge
+         reichen; danach ist nichts mehr in Bewegung. */
+      var alle = buehne.querySelectorAll('.amort'), geholfen = 0;
+      for (var runde = 0; runde < 3; runde++) {
+      var inDieserRunde = 0;
+      for (var i = 0; i < alle.length; i++) {
+        var el = alle[i];
+        var r0 = el.getBoundingClientRect();
+        var f = r0.width * r0.height;
+        if (!f || f < MINDESTFLAECHE || f > HOECHSTFLAECHE) continue;
+        if (weg(el) || !blockiert(el)) continue;
+
+        var altOben = el._ortSchub || 0, altQuer = el._ortQuer || 0, frei = false;
+        /* Zwei Anlaeufe: erst ein Platz, an dem BEIDE Seiten frei sind;
+           findet sich keiner, dann wenigstens einer, an dem der eigene
+           Knopf den Klick bekommt. */
+        for (var anlauf = 0; anlauf < 2 && !frei; anlauf++) {
+        for (var v = 0; v <= 14 && !frei; v++) {
+          var d = v * SCHRITT;
+          /* DER ERSTE VERSUCH IST, DEN SCHUB ZURUECKZUNEHMEN.
+
+             Die Entflechtung rechnet, bevor alle Bretter stehen; die
+             Michaelitafel legt sich erst danach ueber die Karte. Ein
+             Kaertchen kann also durch eine Verschiebung erst unter ein
+             Brett geraten sein, das es beim Rechnen noch gar nicht gab —
+             gemessen an drei Kaertchen des Muehlwirts in 1350, die nach
+             dem zweitbesten Platz unter `pr-was` lagen. Der kuerzeste Weg
+             heraus ist dann kein weiterer Schub, sondern der Weg zurueck
+             an den eigenen Ort. */
+          var wege = v === 0 ? [[0, 0]] : [
+            [altQuer - d, altOben], [altQuer + d, altOben],
+            [altQuer, altOben + d], [altQuer, altOben - d]
+          ];
+          for (var w = 0; w < wege.length && !frei; w++) {
+            if (Math.abs(wege[w][0]) > QUER || Math.abs(wege[w][1]) > HOCH) continue;
+            el.style.marginLeft = wege[w][0] ? Math.round(wege[w][0]) + 'px' : '';
+            el.style.marginTop = wege[w][1] ? Math.round(wege[w][1]) + 'px' : '';
+            if (blockiert(el)) continue;
+            if (anlauf === 0 && verdecktAndere(el)) continue;
+            el._ortQuer = wege[w][0];
+            el._ortSchub = wege[w][1];
+            frei = true;
+            geholfen++;
+            inDieserRunde++;
+          }
+        }
+        }
+        if (!frei) {
+          /* Wer nirgends frei wird, bleibt, wo er war: verschoben UND
+             verdeckt waere das schlechteste der drei Ergebnisse. */
+          el.style.marginLeft = altQuer ? Math.round(altQuer) + 'px' : '';
+          el.style.marginTop = altOben ? Math.round(altOben) + 'px' : '';
+        }
+      }
+      if (!inDieserRunde) break;
+      }
+      return geholfen;
     }
   };
 

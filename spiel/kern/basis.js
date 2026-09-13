@@ -35,6 +35,18 @@ window.BRAUHAUS = BRAUHAUS;
     catch (e) { B.klage(wo, e); return false; }
   };
 
+  /* Dasselbe, aber fuer eine FRAGE statt einer Handlung: gibt zurueck, was fn
+     liefert, und im Fehlerfall `ersatz`. Gebraucht ueberall dort, wo eine
+     Kerndatei ein Stueck etwas fragt (Welle 18: der Rahmen fragt DEN PREIS,
+     ob der naechste WEITER abgefangen wird, um den Knopf richtig zu
+     beschriften). Ohne diese Form muesste jede solche Frage entweder
+     ungesichert laufen — ein Stueck, das wirft, reisst dann den Rahmen mit —
+     oder ihr Ergebnis ueber eine Hilfsvariable aus dem Abschluss schmuggeln. */
+  B.wageWert = function (wo, fn, ersatz) {
+    try { return fn(); }
+    catch (e) { B.klage(wo, e); return ersatz; }
+  };
+
   B.zeigeLage = function () {
     if (!B.arg || !B.arg.pruefe) return;
     var kasten = document.getElementById('kern-lage');

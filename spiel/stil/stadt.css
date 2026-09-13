@@ -168,7 +168,7 @@
    blind. Der Boden gehoert dorthin, wo er gebraucht wird. */
 .stadt-hausschild .gegr {
   margin-top: calc(var(--s) * 2);
-  font-size: calc(var(--s) * 11);
+  font-size: max(11px, calc(var(--s) * 11));
   letter-spacing: calc(var(--s) * 2);
   /* WAR `opacity: 0.8`. Eine Deckkraft unter 1 auf einem eigenen, deckenden
      Grund (der Schilderplatte, nicht der Platte des Spiels) ist kein

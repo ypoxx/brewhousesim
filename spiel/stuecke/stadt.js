@@ -836,7 +836,12 @@
           + '. Aufschlagen: es legt sich über die Stadt, bis man es wieder zuklappt.'
         : b.titel + kennzahl + '. Zuklappen — dann sieht man die Stadt wieder.';
       setzeAufschrift(k.querySelector('.wort'), b.titel);
-      setzeAufschrift(k.querySelector('.zahl'), b.unter || (b.zu ? 'zugeklappt' : 'liegt auf'));
+      /* WELLE 18 — KEINE WERKSTATTSPRACHE AUF DEM REITER.
+         „zugeklappt" stand in allen vier Epochen auf den Brettern und wurde
+         von der Blindprobe woertlich als Entwicklerwort gemeldet. Ein Reiter
+         sagt einem Spieler nicht, in welchem Zustand ein Kasten ist, sondern
+         was ein Klick tut. */
+      setzeAufschrift(k.querySelector('.zahl'), b.unter || (b.zu ? 'aufschlagen' : 'zuklappen'));
     });
 
     var mk = reiterKnopf['~marken'];
@@ -844,14 +849,21 @@
       var ruht = (ruhend || 0) > 0;
       mk.classList.toggle('auf', !ruht);
       mk.setAttribute('aria-expanded', ruht ? 'false' : 'true');
+      /* WELLE 18 — WAS EIN KLICK TUT, NICHT WO ETWAS LIEGT.
+
+         „ORTSMARKEN · 7 auf dem Pflock" stand in der Nachprobe unter den
+         unverstaendlichsten Zeilen des ersten Schirms; ein blinder Spieler
+         hat den Knopf sogar unter „tote Knoepfe" gefuehrt, weil er nichts
+         buchte. Ein Pflock ist ein Bild aus der Werkstatt, kein Wort, das
+         einem Spieler sagt, was geschieht. Der Reiter sagt es jetzt. */
       mk.title = ruht
-        ? markenZahl + ' Ortsmarken der anderen Stücke liegen auf ihren Pflöcken. '
-          + 'Ein Zeiger auf einen Pflock zeigt eine einzelne, dieser Knopf zeigt alle.'
-        : 'Legt alle Ortsmarken zurück auf ihre Pflöcke — dann steht nur noch '
-          + 'die Stadt im Bild.';
+        ? 'Die Schilder an den Wirtshäusern und am Hof sind eingeklappt — die Stadt '
+          + 'steht frei im Bild. Ein Klick zeigt alle ' + markenZahl + ' wieder.'
+        : 'Die ' + markenZahl + ' Schilder an den Wirtshäusern und am Hof stehen im Bild. '
+          + 'Ein Klick klappt sie ein, dann sieht man die Stadt darunter.';
       setzeAufschrift(mk.querySelector('.wort'), 'Ortsmarken');
       setzeAufschrift(mk.querySelector('.zahl'),
-        ruht ? markenZahl + ' auf dem Pflock' : markenZahl + ' im Bild');
+        ruht ? 'alle ' + markenZahl + ' zeigen' : markenZahl + ' einklappen');
     }
 
     /* AUFLAGE 5: "Stadt zeigen" wird nicht nur ausgeblendet, sondern auch
@@ -998,10 +1010,14 @@
         text: m.wort,
         zug: 'stadt:marke:' + m.schluessel.replace(/[^a-z0-9]+/gi, '-').toLowerCase(),
         klasse: 'stadt-pflock' + (m.ruht ? ' ruht' : ''),
+        /* WELLE 18: dieselbe Auskunft in Spielersprache. „Ortsmarke von
+           fuhre. Zeiger darauf zeigt sie, Klick heftet sie fest" nennt den
+           Namen eines STUECKS und eine Mechanik, die niemanden angeht; acht
+           von acht Spielern haben die Zeile als unverstaendlich gemeldet. */
         titel: m.ruht
-          ? m.wort + ' — Ortsmarke von ' + m.wer + '. Zeiger darauf zeigt sie, '
-            + 'Klick heftet sie fest.'
-          : m.wort + ' — Klick legt die Ortsmarke wieder auf ihren Pflock.',
+          ? m.wort + ' — liegt zur Seite. Mit dem Zeiger darüber sieht man, '
+            + 'was dort steht; ein Klick lässt es stehen.'
+          : m.wort + ' — steht im Bild. Ein Klick legt es wieder zur Seite.',
         tu: function () { markeSchalten(m.schluessel); }
       });
       p.setAttribute('aria-pressed', m.ruht ? 'false' : 'true');

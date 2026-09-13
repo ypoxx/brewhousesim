@@ -39,7 +39,7 @@
 .nm-nachschild {
   position: absolute;
   font-family: var(--mono);
-  font-size: calc(var(--s) * 16);
+  font-size: max(11px, calc(var(--s) * 16));
   letter-spacing: calc(var(--s) * 2);
   text-transform: uppercase;
   color: #fdf3dd;
@@ -69,7 +69,7 @@
   box-shadow: 0 calc(var(--s) * 8) calc(var(--s) * 18) rgba(0, 0, 0, 0.4);
   padding: calc(var(--s) * 10) calc(var(--s) * 12) calc(var(--s) * 12);
   color: var(--tinte);
-  font-size: calc(var(--s) * 19);
+  font-size: max(12px, calc(var(--s) * 19));
 }
 
 .nm-kopf {
@@ -82,13 +82,13 @@
 }
 
 .nm-titel {
-  font-size: calc(var(--s) * 21);
+  font-size: max(12px, calc(var(--s) * 21));
   letter-spacing: calc(var(--s) * 4);
   font-weight: 700;
 }
 
 .nm-medium {
-  font-size: calc(var(--s) * 15);
+  font-size: max(11px, calc(var(--s) * 15));
   color: #7a6a4e;
   flex: 1;
   min-width: 0;
@@ -109,12 +109,12 @@
   line-height: 1;
   font-family: var(--serif);
 }
-.nm-von { font-size: calc(var(--s) * 16); color: #7a6a4e; letter-spacing: calc(var(--s) * 1); }
+.nm-von { font-size: max(11px, calc(var(--s) * 16)); color: #7a6a4e; letter-spacing: calc(var(--s) * 1); }
 
 .nm-warn {
   margin-left: auto;
   font-family: var(--mono);
-  font-size: calc(var(--s) * 14);
+  font-size: max(11px, calc(var(--s) * 14));
   text-transform: uppercase;
   letter-spacing: calc(var(--s) * 2);
   color: #fdf3dd;
@@ -131,7 +131,7 @@
   align-items: center;
   gap: calc(var(--s) * 8);
   margin: calc(var(--s) * 4) 0;
-  font-size: calc(var(--s) * 16);
+  font-size: max(11px, calc(var(--s) * 16));
 }
 .nm-bname { width: 33%; color: #5c4d34; }
 .nm-bwert { width: 12%; text-align: right; font-family: var(--mono); }
@@ -165,7 +165,7 @@
 }
 .nm-satzkopf {
   display: block;
-  font-size: calc(var(--s) * 14);
+  font-size: max(11px, calc(var(--s) * 14));
   letter-spacing: calc(var(--s) * 3);
   text-transform: uppercase;
   color: #7a6a4e;
@@ -177,9 +177,9 @@
   flex-wrap: wrap;
   margin: calc(var(--s) * 3) 0;
 }
-.nm-ohne { font-family: var(--mono); font-size: calc(var(--s) * 17); color: #7a6a4e; }
-.nm-mit  { font-family: var(--mono); font-size: calc(var(--s) * 21); color: var(--gruen); font-weight: 700; }
-.nm-klein { display: block; font-size: calc(var(--s) * 14); color: #7a6a4e; }
+.nm-ohne { font-family: var(--mono); font-size: max(12px, calc(var(--s) * 17)); color: #7a6a4e; }
+.nm-mit  { font-family: var(--mono); font-size: max(12px, calc(var(--s) * 21)); color: var(--gruen); font-weight: 700; }
+.nm-klein { display: block; font-size: max(11px, calc(var(--s) * 14)); color: #7a6a4e; }
 
 /* DIE KLEMME: zwei Knoepfe, die einander ausschliessen. */
 .nm-klemme {
@@ -192,25 +192,25 @@
   flex-direction: column;
   gap: calc(var(--s) * 6);
 }
-.nm-klemmkopf { font-size: calc(var(--s) * 16); color: #7d2c1a; }
+.nm-klemmkopf { font-size: max(11px, calc(var(--s) * 16)); color: #7d2c1a; }
 
 .nm-meldung {
   margin-top: calc(var(--s) * 8);
-  font-size: calc(var(--s) * 16);
+  font-size: max(11px, calc(var(--s) * 16));
   color: #5c4d34;
   border-top: 1px dotted var(--linie);
   padding-top: calc(var(--s) * 6);
 }
 
 .nm-knopf {
-  font-size: calc(var(--s) * 18);
+  font-size: max(12px, calc(var(--s) * 18));
   min-height: calc(var(--s) * 36);
   padding: calc(var(--s) * 6) calc(var(--s) * 12);
   gap: calc(var(--s) * 8);
   white-space: normal;
   text-align: left;
 }
-.nm-knopf .preis { font-size: calc(var(--s) * 16); }
+.nm-knopf .preis { font-size: max(11px, calc(var(--s) * 16)); }
 .nm-knopf.nm-an {
   background: linear-gradient(180deg, #e6efd7 0%, #cbdcb0 100%);
   border-color: #3f5a2d;
@@ -258,22 +258,22 @@
    nie ueberdecken kann, sondern schrumpft. */
 .nm-bkopf-text { flex: 1; min-width: 0; }
 .nm-bkopf h2 { margin: 0; border: none; padding: 0; font-size: calc(var(--s) * 28); }
-.nm-unterzeile { font-family: var(--mono); font-size: calc(var(--s) * 16); color: #7a6a4e; }
+.nm-unterzeile { font-family: var(--mono); font-size: max(11px, calc(var(--s) * 16)); color: #7a6a4e; }
 
 .nm-reiter { display: flex; gap: calc(var(--s) * 6); flex: none; flex-wrap: wrap; justify-content: flex-end; }
-.nm-reiterknopf { font-size: calc(var(--s) * 15); letter-spacing: calc(var(--s) * 2); }
+.nm-reiterknopf { font-size: max(11px, calc(var(--s) * 15)); letter-spacing: calc(var(--s) * 2); }
 
 .nm-koerper { flex: 1; min-height: 0; overflow-y: auto; padding-right: calc(var(--s) * 6); }
 
 .nm-abschnitt { margin-bottom: calc(var(--s) * 14); }
 .nm-abschnitt h3 {
   margin: 0 0 calc(var(--s) * 5) 0;
-  font-size: calc(var(--s) * 21);
+  font-size: max(12px, calc(var(--s) * 21));
   letter-spacing: calc(var(--s) * 2);
   text-transform: uppercase;
   color: #5c4d34;
 }
-.nm-p { margin: 0 0 calc(var(--s) * 6) 0; font-size: calc(var(--s) * 18); line-height: 1.35; }
+.nm-p { margin: 0 0 calc(var(--s) * 6) 0; font-size: max(12px, calc(var(--s) * 18)); line-height: 1.35; }
 
 /* Die Traeger: Preisschilder nebeneinander, einander ausschliessend. */
 .nm-gitter {
@@ -297,7 +297,7 @@
 .nm-unter { display: flex; gap: calc(var(--s) * 5); flex-wrap: wrap; }
 .nm-marke {
   font-family: var(--mono);
-  font-size: calc(var(--s) * 13);
+  font-size: max(11px, calc(var(--s) * 13));
   letter-spacing: calc(var(--s) * 1);
   background: rgba(90, 70, 45, 0.16);
   border-radius: calc(var(--s) * 3);
@@ -306,11 +306,11 @@
 }
 .nm-marke.nm-fest { background: rgba(157, 53, 32, 0.2); color: #7d2c1a; }
 
-.nm-sagt { font-size: calc(var(--s) * 15); color: #5c4d34; line-height: 1.3; }
-.nm-warnt { font-size: calc(var(--s) * 15); color: #7d2c1a; line-height: 1.3; }
+.nm-sagt { font-size: max(11px, calc(var(--s) * 15)); color: #5c4d34; line-height: 1.3; }
+.nm-warnt { font-size: max(11px, calc(var(--s) * 15)); color: #7d2c1a; line-height: 1.3; }
 
 .nm-reihe { display: flex; flex-wrap: wrap; gap: calc(var(--s) * 6); }
-.nm-adresse { font-size: calc(var(--s) * 16); }
+.nm-adresse { font-size: max(11px, calc(var(--s) * 16)); }
 
 .nm-gegner {
   background: rgba(90, 70, 45, 0.1);
@@ -333,7 +333,7 @@
 .nm-wer {
   font-style: normal;
   font-family: var(--mono);
-  font-size: calc(var(--s) * 14);
+  font-size: max(11px, calc(var(--s) * 14));
   letter-spacing: calc(var(--s) * 1);
   text-transform: uppercase;
   color: #7a6a4e;
@@ -346,7 +346,7 @@
   text-decoration-thickness: calc(var(--s) * 2);
   text-decoration-color: rgba(157, 53, 32, 0.8);
 }
-.nm-knips { font-size: calc(var(--s) * 14); color: var(--rot); font-family: var(--mono); }
+.nm-knips { font-size: max(11px, calc(var(--s) * 14)); color: var(--rot); font-family: var(--mono); }
 
 /* --------------------------------------------------------------------------
    Enge Fenster: das Band bleibt lesbar, statt zu zerfallen.
@@ -389,14 +389,14 @@
 }
 .nm-geldpost i {
   font-style: normal;
-  font-size: calc(var(--s) * 13);
+  font-size: max(11px, calc(var(--s) * 13));
   color: #7a6a4e;
   text-transform: uppercase;
   letter-spacing: calc(var(--s) * 1);
 }
 .nm-geldpost b {
   font-family: var(--mono);
-  font-size: calc(var(--s) * 18);
+  font-size: max(12px, calc(var(--s) * 18));
   color: #6c6350;
   white-space: nowrap;
 }
@@ -413,7 +413,7 @@
 .nm-klein-knopf {
   margin-top: calc(var(--s) * 5);
   width: 100%;
-  font-size: calc(var(--s) * 15);
+  font-size: max(11px, calc(var(--s) * 15));
 }
 
 /* DER ETAT — die Knappheit, die nur 1970 hat. */
@@ -422,7 +422,7 @@
   padding: calc(var(--s) * 4) calc(var(--s) * 8);
   display: inline-block;
   font-family: var(--mono);
-  font-size: calc(var(--s) * 16);
+  font-size: max(11px, calc(var(--s) * 16));
   letter-spacing: calc(var(--s) * 1);
   color: #5d4a2c;
   background: rgba(196, 154, 60, 0.22);
@@ -453,14 +453,14 @@
 }
 .nm-summe i {
   font-style: normal;
-  font-size: calc(var(--s) * 14);
+  font-size: max(11px, calc(var(--s) * 14));
   color: #7a6a4e;
   text-transform: uppercase;
   letter-spacing: calc(var(--s) * 1);
 }
 .nm-summe b {
   font-family: var(--mono);
-  font-size: calc(var(--s) * 24);
+  font-size: max(12px, calc(var(--s) * 24));
   color: var(--gruen);
 }
 .nm-buch .zahl { color: var(--gruen); }
@@ -477,13 +477,13 @@
 .nm-bandgriff {
   margin-left: auto;
   padding: 0 calc(var(--s) * 6);
-  font-size: calc(var(--s) * 16);
+  font-size: max(11px, calc(var(--s) * 16));
   line-height: 1;
 }
 .nm-band.zu .nm-gross { margin-bottom: 0; }
 
 .nm-tabkopf {
-  font-size: calc(var(--s) * 14);
+  font-size: max(11px, calc(var(--s) * 14));
   text-transform: uppercase;
   letter-spacing: calc(var(--s) * 1);
   color: #7a6a4e;
@@ -503,7 +503,7 @@
    liest sich anders — Ware statt Geld. */
 .nm-fasspreis {
   font-family: var(--mono);
-  font-size: calc(var(--s) * 15);
+  font-size: max(11px, calc(var(--s) * 15));
   color: #6b4a20;
   background: rgba(196, 154, 60, 0.28);
   border: calc(var(--s) * 1) solid rgba(140, 102, 34, 0.6);
@@ -532,7 +532,7 @@
 }
 .nm-entzugkopf {
   font-family: var(--mono);
-  font-size: calc(var(--s) * 16);
+  font-size: max(11px, calc(var(--s) * 16));
   letter-spacing: calc(var(--s) * 2);
   color: #2b1d10;
   text-transform: uppercase;
@@ -548,7 +548,7 @@
   margin-top: calc(var(--s) * 5);
   padding: calc(var(--s) * 4) calc(var(--s) * 8);
   font-family: var(--mono);
-  font-size: calc(var(--s) * 16);
+  font-size: max(11px, calc(var(--s) * 16));
   letter-spacing: calc(var(--s) * 1);
   color: #7d2c1a;
   background: rgba(157, 53, 32, 0.14);
@@ -605,7 +605,7 @@
 
 .nm-anschlagkopf {
   font-family: var(--mono);
-  font-size: calc(var(--s) * 14);
+  font-size: max(11px, calc(var(--s) * 14));
   letter-spacing: calc(var(--s) * 1);
   text-transform: uppercase;
   color: #7a6a4e;
@@ -613,7 +613,7 @@
 
 .nm-anschlag .nm-knopf {
   width: 100%;
-  font-size: calc(var(--s) * 16);
+  font-size: max(11px, calc(var(--s) * 16));
   min-height: calc(var(--s) * 32);
   padding: calc(var(--s) * 5) calc(var(--s) * 8);
 }

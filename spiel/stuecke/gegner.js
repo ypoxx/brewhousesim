@@ -1982,7 +1982,32 @@
       if (!bester || p < bester.preis) bester = { was: 'Ablösung ' + a.name, preis: p, k: k };
     });
     Z.umkaempft = bester;
-    if (bester) B.welt.meldeZug(bester.was, bester.preis, 'umkaempft');
+    /* WELLE 18 — DIE MELDUNG NENNT IHREN KNOPF.
+
+       Bis hierher meldete dieses Stueck seinen Zug OHNE Schluessel. Die
+       Regel des Kerns (welt.zugBedienbar) laesst eine Meldung ohne
+       Schluessel durch, ohne zu pruefen — die Zeile „naechster Zug: …"
+       stand also in jeder Woche da, auch wenn der Knopf dazu gerade unter
+       dem Kasten der Michaelitafel oder unter der Reiterleiste lag. Die
+       Blindprobe hat daraus zwoelf tote Klicks gezaehlt, in allen vier
+       Epochen, jedes Mal an einem Zug DIESES Stuecks.
+
+       Mit Schluessel prueft der Kern, bevor er die Zeile schreibt: liegt
+       der Wimpel verdeckt oder ist er gesperrt, faellt diese Meldung durch
+       und die naechstbeste gewinnt. Seit Welle 18 fuehrt die Zeile den Zug
+       ausserdem selbst aus — und sie kann nur ausfuehren, was sie kennt.
+       Die drei Schluessel sind die der Wimpel auf der Karte
+       (`zeichneWimpel`), nicht die des Blattes: die Karte steht immer,
+       das Blatt nur, wenn es aufgeschlagen ist. */
+    if (bester) {
+      var schluessel = null;
+      if (bester.k) {
+        if (Z.bindung[bester.k]) schluessel = 'gegner:abloesen:' + bester.k;
+        else if (Z.gebot && Z.gebot.k === bester.k) schluessel = 'gegner:mitbieten:' + bester.k;
+        else schluessel = 'gegner:zuvorkommen:' + bester.k;
+      }
+      B.welt.meldeZug(bester.was, bester.preis, 'umkaempft', schluessel);
+    }
   }
 
   /* DIE ZAHL DER ZWEITEN MESSLATTE — sie steht jetzt an dem Giebel, um den
@@ -2462,10 +2487,18 @@
       + B.welt.waehrung().name + ' — dieses Fass kann auf den Karren oder zum Wirt, '
       + 'nicht beides. Einmal im Braujahr je Adresse.'
       + (ausKeller ? '' : ' Im ' + lager + ' liegen nur ' + B.welt.menge(fassImKeller()) + '.');
+    /* WELLE 18 — WAS DER KNOPF BEWIRKT, STEHT AUF DEM KNOPF.
+
+       Hier stand „Fass an den Wirt" / „1 Fass statt Geld". Der zweite Satz
+       nennt den PREIS, nicht die WIRKUNG, und die Nachprobe hat die Zeile in
+       allen vier Epochen unter den unverstaendlichsten gemeldet: „welche
+       Lade, wofuer statt Geld, was bekomme ich?" Die Wirkung steht in den
+       Daten (`hh.wochen`) und stand bisher nur im Titel. */
     var t = B.el('span', 'gg-fasstext');
     t.appendChild(B.el('b', null, hh.kurz));
-    t.appendChild(B.el('i', null, ausKeller ? B.welt.menge(n) + ' statt Geld'
-                                            : 'Vorrat reicht nicht'));
+    t.appendChild(B.el('i', null, ausKeller
+      ? 'hält ihn ' + (hh.wochen || 3) + ' Wochen · ' + B.welt.menge(n) + ' statt Geld'
+      : 'Vorrat reicht nicht'));
     b.appendChild(t);
     b.addEventListener('click', function () { hinhalten(k, false); });
     raus.push(b);
@@ -2487,7 +2520,8 @@
       + (mitGeld ? '' : ' In der Lade liegen ' + B.welt.geld(B.welt.haus.kasse) + '.');
     var gt = B.el('span', 'gg-fasstext');
     gt.appendChild(B.el('b', null, 'lieber zukaufen'));
-    gt.appendChild(B.el('i', null, B.welt.menge(n) + ' · ' + B.welt.geld(zu)));
+    gt.appendChild(B.el('i', null, 'hält ihn ' + (hh.wochen || 3) + ' Wochen · '
+      + B.welt.geld(zu)));
     g.appendChild(gt);
     g.addEventListener('click', function () { hinhalten(k, true); });
     raus.push(g);
@@ -2527,9 +2561,22 @@
             + 'ohne dass jemand fragt. ' + (ab.abwehrsatz || '')
             + ' Jetzt: ' + B.welt.geld(s.preis) + '.';
           zz.appendChild(svg(s.wer === 'konzern' ? STERN_SVG : ADLER_SVG, 'gg-wappen klein'));
+          /* WELLE 18 — DASSELBE WIE AM SCHILD: DER WIRT HEISST, WIE ER
+             HEISST, UND DAS VERB SAGT, WAS ES BEWIRKT.
+
+             Hier stand „wirbt · noch 4 Wo." / „zuvorkommen 19 Pf". Die
+             Nachprobe, woertlich: „Wer wirbt, um was, und was kommt mir
+             zuvor?" — und „'abloesen' und 'zuvorkommen' sind nirgends
+             erklaert". Beide Verben stehen vier- bis achtmal auf dem ersten
+             Schirm; sie sind das Vokabular, an dem Woche 1 haengt.
+
+             Oben also der Name des Wirts, unten, was in N Wochen geschieht
+             und was ein Klick dagegen kostet. Zwei Zeilen wie vorher. */
           var zt = B.el('span', 'gg-zieltext');
-          zt.appendChild(B.el('b', null, (ab.kurz || 'zielt') + ' · noch ' + rest + ' Wo.'));
-          zt.appendChild(B.el('i', null, 'zuvorkommen ' + B.welt.geld(s.preis)));
+          zt.appendChild(B.el('b', null, a.name));
+          zt.appendChild(B.el('i', null, nameVon(sh) + ' ' + (ab.kurz || 'zielt')
+            + ' · in ' + rest + (rest === 1 ? ' Woche' : ' Wochen') + ' weg · '
+            + 'jetzt halten ' + B.welt.geld(s.preis)));
           zz.appendChild(zt);
           if (!B.welt.kann(s.preis)) zz.classList.add('zuteuer');
           zz.addEventListener('click', function () { abwehren(k); });
@@ -2559,10 +2606,25 @@
             + (Z.hinhalt[k] === jahr()
                ? ' Bis Michaeli drückt er hier den Preis nicht — das Fass steht beim Wirt.' : '');
           sc.appendChild(svg(b.wer === 'konzern' ? STERN_SVG : ADLER_SVG, 'gg-wappen klein'));
+          /* WELLE 18 — DER WIRT HEISST, WIE ER HEISST.
+
+             Hier stand „TOR · KON": das Kuerzel der Adresse und das Kuerzel
+             des Bindemittels. ACHT VON ACHT blinden Spielern haben genau
+             diese Zeile unter „unverstaendlich" gemeldet, in allen vier
+             Epochen und mit allen Kuerzeln (TOR·KON, FAE·BAN, LIN·HYP,
+             MUE·DEP, BHF·LIS, BRU·EXK); keiner hat je herausgefunden, wofuer
+             sie stehen — es gab nirgends eine Aufloesung.
+
+             Jetzt steht der Name des Wirts da und darunter, WIE der Gegner
+             ihn haelt, im Klartext. Das Kuerzel bleibt auf der Ortsmarke,
+             wo es hingehoert: dort ist es eine Marke, hier war es ein Raetsel.
+             Laenger wird das Schild dadurch nicht — es sind dieselben zwei
+             Zeilen —, und was nicht hineinpasst, kuerzt das Stilblatt mit
+             „…"; der ganze Satz steht ohnehin im Titel. */
           var txt = B.el('span', 'gg-schildtext');
-          txt.appendChild(B.el('b', null, (D.kurz[k] || k.slice(0, 3).toUpperCase()) + ' · ' + m.kurz));
-          txt.appendChild(B.el('i', null, summe === null
-            ? 'nicht ablösbar' : 'ablösen ' + B.welt.geld(summe)));
+          txt.appendChild(B.el('b', null, a.name));
+          txt.appendChild(B.el('i', null, (m.name ? m.name + ' · ' : '')
+            + (summe === null ? 'nicht ablösbar' : 'ablösen ' + B.welt.geld(summe))));
           sc.appendChild(txt);
           if (summe !== null && !B.welt.kann(summe)) sc.classList.add('zuteuer');
           sc.addEventListener('click', function () { loeseAb(k); });
@@ -2584,8 +2646,10 @@
           + '. In ' + restw + ' Wochen ist die Bindung da, ohne dass du etwas tust. '
           + 'Jetzt zuvorkommen: ' + B.welt.geld(w.preis) + '.';
         var pt = B.el('span', 'gg-wimpeltext');
-        pt.appendChild(B.el('b', null, 'wirbt · noch ' + restw + ' Wo.'));
-        pt.appendChild(B.el('i', null, 'zuvorkommen ' + B.welt.geld(w.preis)));
+        pt.appendChild(B.el('b', null, a.name));
+        pt.appendChild(B.el('i', null, nameVon(haus(w.wer)) + ' wirbt · in ' + restw
+          + (restw === 1 ? ' Woche' : ' Wochen') + ' weg · jetzt halten '
+          + B.welt.geld(w.preis)));
         p.appendChild(pt);
         if (!B.welt.kann(w.preis)) p.classList.add('zuteuer');
         p.addEventListener('click', function () { zuvorkommen(k); });
