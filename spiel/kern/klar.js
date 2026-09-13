@@ -716,6 +716,7 @@
      in 120 Wochen von 1970, der ins Leere ging — dieselbe Sorte Fehler, die
      diese Welle beseitigt. */
   var angemeldet = false;
+  var nachLaeuft = false;
   B.auf('zeichne', function () {
     if (angemeldet) return;
     angemeldet = true;
@@ -723,6 +724,19 @@
       if (B.orte && B.orte.entflechte) {
         B.wage('orte.entflechte', function () { B.orte.entflechte(); });
       }
+      /* Die Nachbesserung erst im naechsten Bild: sie fragt den Browser, wer
+         den Klick wirklich bekommt, und dafuer muss ALLES stehen — auch die
+         Kaesten, die sich erst nach dem Zeichenlauf legen (der Griff der
+         Michaelitafel in 1970). Sie fasst nur an, was blockiert ist, in aller
+         Regel also nichts; es gibt damit auch nichts, was zucken koennte.
+         `requestAnimationFrame` haelt kern/runde.js innerhalb der Runde. */
+      if (nachLaeuft || typeof requestAnimationFrame !== 'function') return;
+      if (!B.orte || !B.orte.nachbessere) return;
+      nachLaeuft = true;
+      requestAnimationFrame(function () {
+        nachLaeuft = false;
+        B.wage('orte.nachbessere', function () { B.orte.nachbessere(); });
+      });
     });
   });
 

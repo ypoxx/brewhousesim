@@ -497,6 +497,111 @@
       }
 
       return verschoben;
+    },
+
+    /* ======================================================================
+       DIE NACHBESSERUNG — gemessen an dem, worauf es ankommt.
+
+       `entflechte()` rechnet mit Rechtecken: schnell, und meistens richtig.
+       Die Frage, um die es geht, ist aber eine andere — BEKOMMT DER KNOPF
+       DEN KLICK? Die beantwortet nur der Browser selbst, mit
+       `elementFromPoint`.
+
+       Sie laeuft GETRENNT und SPAETER, und das hat einen gemessenen Grund:
+       nicht jeder Kasten steht schon, wenn die Stuecke mit dem Zeichnen
+       fertig sind. Der Griff der Michaelitafel in 1970 legt sich erst danach
+       ueber die obere rechte Ecke der Karte, und drei Kaertchen am Bahnhof
+       lagen darunter — sichtbar und nicht zu druecken. Zum Zeitpunkt der
+       Entflechtung war dort nichts, was haette stoeren koennen.
+
+       Angefasst wird nur, was WIRKLICH blockiert ist — in aller Regel kein
+       einziges Kaertchen. Damit bleibt das Zucken aus, gegen das die
+       Entflechtung selbst synchron laeuft: es gibt nichts zu verschieben.
+       ====================================================================== */
+    nachbessere: function () {
+      var buehne = document.getElementById('buehne');
+      if (!buehne) return 0;
+      var breite = buehne.clientWidth, hoehe = buehne.clientHeight;
+      if (!breite || !hoehe) return 0;
+      var HOECHSTFLAECHE = breite * hoehe * 0.035;
+      var MINDESTFLAECHE = 120;
+      var HOCH = Math.round(hoehe * 0.33);
+      var QUER = Math.max(110, Math.round(breite * 0.14));
+      var SCHRITT = Math.max(14, Math.round(hoehe * 0.03));
+
+      function blockiert(el) {
+        var kn = el.querySelectorAll ? el.querySelectorAll('[data-zug]') : [];
+        var pruefe = kn.length ? kn : (el.hasAttribute('data-zug') ? [el] : []);
+        for (var q = 0; q < pruefe.length; q++) {
+          var k = pruefe[q];
+          if (k.disabled) continue;
+          var r = k.getBoundingClientRect();
+          if (r.width < 2 || r.height < 2) continue;
+          var cx = Math.min(breite - 1, Math.max(1, r.left + r.width / 2));
+          var cy = Math.min(hoehe - 1, Math.max(1, r.top + r.height / 2));
+          var oben = document.elementFromPoint(cx, cy);
+          if (!oben || oben === k || k.contains(oben)) continue;
+          return true;
+        }
+        return false;
+      }
+
+      function weg(el) {
+        var n = el;
+        while (n && n !== buehne) {
+          var c = getComputedStyle(n);
+          if (c.clipPath && c.clipPath !== 'none' && /inset\(\s*50%/.test(c.clipPath)) return true;
+          if (c.visibility === 'hidden' || c.display === 'none' || c.opacity === '0') return true;
+          n = n.parentElement;
+        }
+        return false;
+      }
+
+      /* MEHRERE DURCHGAENGE, weil eine Abhilfe die naechste Not schaffen
+         kann: wer unter einem Kasten hervorrutscht, kann dabei auf einem
+         anderen Kaertchen landen. Gemessen in 1884 und 1970 nach dem ersten
+         Durchgang — je ein Knopf, der vorher frei war. Drei Durchgaenge
+         reichen; danach ist nichts mehr in Bewegung. */
+      var alle = buehne.querySelectorAll('.amort'), geholfen = 0;
+      for (var runde = 0; runde < 3; runde++) {
+      var inDieserRunde = 0;
+      for (var i = 0; i < alle.length; i++) {
+        var el = alle[i];
+        var r0 = el.getBoundingClientRect();
+        var f = r0.width * r0.height;
+        if (!f || f < MINDESTFLAECHE || f > HOECHSTFLAECHE) continue;
+        if (weg(el) || !blockiert(el)) continue;
+
+        var altOben = el._ortSchub || 0, altQuer = el._ortQuer || 0, frei = false;
+        for (var v = 1; v <= 14 && !frei; v++) {
+          var d = v * SCHRITT;
+          var wege = [
+            [altQuer - d, altOben], [altQuer + d, altOben],
+            [altQuer, altOben + d], [altQuer, altOben - d]
+          ];
+          for (var w = 0; w < wege.length && !frei; w++) {
+            if (Math.abs(wege[w][0]) > QUER || Math.abs(wege[w][1]) > HOCH) continue;
+            el.style.marginLeft = wege[w][0] ? Math.round(wege[w][0]) + 'px' : '';
+            el.style.marginTop = wege[w][1] ? Math.round(wege[w][1]) + 'px' : '';
+            if (!blockiert(el)) {
+              el._ortQuer = wege[w][0];
+              el._ortSchub = wege[w][1];
+              frei = true;
+              geholfen++;
+              inDieserRunde++;
+            }
+          }
+        }
+        if (!frei) {
+          /* Wer nirgends frei wird, bleibt, wo er war: verschoben UND
+             verdeckt waere das schlechteste der drei Ergebnisse. */
+          el.style.marginLeft = altQuer ? Math.round(altQuer) + 'px' : '';
+          el.style.marginTop = altOben ? Math.round(altOben) + 'px' : '';
+        }
+      }
+      if (!inDieserRunde) break;
+      }
+      return geholfen;
     }
   };
 
