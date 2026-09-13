@@ -202,6 +202,20 @@
        Quittung rechnet. */
     var p = el ? el.getAttribute('data-preis') : null;
     Z.vorKlick.versprochen = (p === null || p === undefined || p === '') ? null : parseFloat(p);
+    /* Der Abdruck des Wochenlaufs VOR dem Klick — verglichen wird er erst
+       beim naechsten Zeichnen, wenn das Bild steht (siehe wochenSchritt). */
+    Z.vorKlick.abdruck = laufAbdruck();
+
+    /* GEMERKT WIRD DER KLICK, NICHT DIE QUITTUNG.
+
+       Der Schritt der Woche darf sich nicht darauf verlassen, dass es zu
+       jedem Klick eine Quittung gibt: das Anschlagen eines Brautags bewegt
+       weder Geld noch Vorrat, und `reinesOeffnen` unterdrueckt die Quittung
+       fuer solche Knoepfe mit gutem Grund — „Nichts geschehen" waere dort
+       eine Falschmeldung. Ohne diese Notiz riet die Zeile in 1900 elfmal
+       hintereinander zum Anschlagen, weil sie den eigenen Klick nie zu
+       sehen bekam. */
+    if (zug) Z.schrittKlick = { zug: zug, abdruck: Z.vorKlick.abdruck };
   }
 
   function werteAus() {
@@ -244,6 +258,7 @@
       buchungen: buchungen,
       wocheGelaufen: wocheGelaufen,
       nichts: nichts,
+      abdruck: v.abdruck || null,
       kasseNachher: jetzt.kasse
     };
     zeichneKlar();
@@ -464,6 +479,211 @@
       text: (el.textContent || '').replace(/\s+/g, ' ').trim().slice(0, 60),
       brett: woLiegt('fuhre:kauf:rohstoff')
     };
+  }
+
+  /* ----------------------------------------------------------------------
+     DER NAECHSTE SCHRITT DER WOCHE
+
+     DER BEFUND.  Die Zeile „naechster Zug" ist die beste des Spiels und
+     nennt trotzdem nie das, was ein Haus am Leben haelt. Der Grund steht in
+     kern/welt.js, erste Zeile von `meldeZug`: `if (!preis) return;`. Die
+     Zahl ist der NENNER einer Messlatte — der billigste Zug, der die Lage
+     aendert — und ein Zug ohne Preis hat darin nichts verloren. BRAUEN
+     kostet kein Geld, sondern Rohstoff. AUSFAHREN kostet gar nichts, es
+     BRINGT. Beide koennen dort also gar nicht auftauchen.
+
+     Die Folge, gemessen in Woche 1 von 1350: von 47 sichtbaren Knoepfen
+     empfahl das Spiel „Zuvorkommen Muehlschenke — 29 Pf". Das ist ein
+     richtiger Zug und der falsche erste: ein Spieler, der ihn befolgt, hat
+     Geld ausgegeben, ehe er ein einziges Mal gebraut oder geliefert hat.
+     Die drei Bretter, auf denen die Woche wirklich stattfindet —
+     ANSCHLAGTAFEL, DER KELLER, OCHSENKARREN — liegen zugeklappt unter
+     Reitern, und in 64 Wochen der Blindprobe hat sie niemand aufgeschlagen.
+
+     WAS HIER STEHT, IST KEINE ZWEITE MECHANIK.  Diese Datei kennt die
+     Regeln des Brauens nicht und will sie nicht kennen. Sie sucht den
+     ERSTEN Knopf des Wochenlaufs, der WIRKLICH DA und NICHT GESPERRT ist —
+     dieselbe Frage, die `zugBedienbar()` fuer die Kennzahl stellt. Ob
+     gebraut werden darf, entscheidet weiter DER SUD; ob der Karren faehrt,
+     DIE FUHRE. Steht keiner der vier Knoepfe frei, sagt sie nichts.
+
+     Die Reihenfolge ist die der Woche selbst, und sie ist so gewaehlt, dass
+     sie sich nicht im Kreis dreht: ABSCHICKEN steht vor FUELLEN, weil ein
+     beladener Karren erst fahren muss, ehe wieder geladen wird — sonst
+     hiesse es in jeder Woche „fuellen", und der Karren fuehre nie.
+     ---------------------------------------------------------------------- */
+  var WOCHENLAUF = [
+    { zug: 'fuhre:fuellen', einmal: true,
+      text: 'Den Karren füllen',
+      warum: 'Im Keller liegt reifes Bier, und die Häuser warten darauf. '
+           + 'Geladen wird nach dem Durst der Adressen.' },
+    { zug: 'fuhre:tafel-auf:', vorsilbe: true, einmal: true,
+      text: 'Einen Brautag anschlagen',
+      warum: 'Was heute angeschlagen wird, liegt in einigen Wochen als reifes Fass '
+           + 'im Keller. Ohne Anschlag bleibt der Kessel kalt.' },
+    /* DER VIERTE SCHRITT IST NICHT DIE WOCHE, SONDERN DIE STADT.
+
+       Zwei Braujahre nach der Zeile gespielt, in allen vier Epochen: das
+       Haus lebt, die Kasse haelt — und die Zahl der Adressen faellt von 10
+       auf 3 (in 1970 auf 0). Brauen und Ausfahren halten ein Haus am Leben,
+       aber nicht in der Stadt; wem niemand mehr abnimmt, dem hilft der
+       vollste Keller nichts.
+
+       Welche Adresse und welcher Preis — das rechnet der Kern laengst und
+       zeigt es in der Zeile „naechster Zug". Dieser Schritt erfindet dazu
+       nichts, er greift an denselben Knopf. Zwei Bedingungen halten ihn im
+       Zaum, und beide sind gemessen, nicht geraten:
+
+         · nur UMKAEMPFTE Zuege. Alles andere (bauen, verbessern) ist eine
+           Frage der Strategie, nicht des Ueberlebens.
+         · nur, wenn nach dem Zug noch ZWEI WOCHEN in der Lade bleiben.
+           Zwei der acht blinden Spieler sind der Zeile „naechster Zug"
+           gefolgt und fielen von 79 auf 8 Pf. Wer einem Rat blind folgt,
+           darf davon nicht arm werden. Gemessen wird gegen dieselbe Zahl,
+           die im Kasten „Wie es steht" schon steht — was eine Woche kostet;
+           eine feste Deckung von 3x war der erste Versuch und traf die
+           knappe Lade von 1350 fast nie. */
+    { zug: 'kern:naechster-zug', einmal: true,
+      text: 'Eine Adresse halten',
+      warum: 'Ein anderer wirbt um ein Haus, das dem Brauhaus abnimmt. Wer nichts tut, '
+           + 'verliert es — und mit jeder Adresse fällt, was sich überhaupt ausfahren lässt.',
+      pruefe: function () {
+        if (!B.welt.besterZug) return false;
+        var z = B.welt.besterZug();
+        if (!z || z.art !== 'umkaempft' || !z.preis) return false;
+        var rest = B.welt.haus.kasse - z.preis;
+        if (rest < 0) return false;
+        var wk = wochenkosten();
+        /* In der ersten Woche gibt es noch keine gemessene Wochenlast —
+           dann gilt ersatzweise die alte, grobe Regel: die Lade muss den
+           Zug dreifach tragen. Ohne diesen Ersatz ging in 1350 gleich in
+           Woche 1 ein Viertel der Anfangslade fuer einen Zug weg, dessen
+           Preis niemand gegen etwas halten konnte. */
+        if (wk === null || wk <= 0) return B.welt.haus.kasse >= z.preis * 3;
+        return rest >= wk * 2;
+      } },
+    /* ZULETZT, WEIL ES DIE WOCHE BEENDET.
+
+       Gemessen und zuerst falsch herum gebaut: das Abschicken der Fuhre
+       schaltet die Woche weiter (kern/klar.js sah den Wochenzaehler von
+       40501 auf 40502 springen, ohne dass WEITER gedrueckt wurde). Stand es
+       vorn in dieser Liste, war die Woche vorbei, ehe ein Brautag
+       angeschlagen oder eine Adresse gehalten war — in zwei Braujahren fiel
+       die Zahl der Adressen von 10 auf 3, in 1970 auf 0. Alles, was in
+       dieser Woche noch geschehen soll, steht deshalb DAVOR. */
+    { zug: 'fuhre:abschicken',
+      text: 'Die Fuhre abschicken',
+      warum: 'Der Karren ist beladen. Was darauf steht, bringt erst Geld, wenn er fährt '
+           + '— und mit der Fuhre geht die Woche zu Ende.' },
+    { zug: 'weiter', schluss: true,
+      text: 'Die Woche schließen',
+      warum: 'Diese Woche ist nichts mehr zu tun. Die nächste bringt neue Fässer '
+           + 'und neuen Durst.' }
+  ];
+
+  function schrittKnopf(s) {
+    if (typeof document === 'undefined') return null;
+    if (s.pruefe && !B.wageWert('klar.schrittPruefe', s.pruefe, false)) return null;
+    if (!s.vorsilbe) {
+      var el = document.querySelector('[data-zug="' + s.zug + '"]');
+      return (el && !el.disabled) ? el : null;
+    }
+    var alle = document.querySelectorAll('[data-zug^="' + s.zug + '"]');
+    for (var i = 0; i < alle.length; i++) {
+      if (!alle[i].disabled) return alle[i];
+    }
+    return null;
+  }
+
+  /* EIN FREIER KNOPF IST NOCH KEIN ZUG.
+
+     Gemessen an „Den Karren füllen" in 1884: der Knopf bleibt die ganze
+     Woche frei, auch wenn im Keller nichts Reifes mehr liegt. Zehn Klicks
+     hintereinander taten nichts, und die Zeile riet zehnmal dasselbe — der
+     Spieler kaeme nie zum Brauen und nie zur naechsten Woche.
+
+     Die Quittung hilft hier nur halb: FUELLEN bewegt weder Geld noch
+     Vorrat noch Keller, es raeumt Faesser auf den Karren. Sie meldet
+     deshalb auch bei einer gelungenen Ladung „Nichts geschehen". Was sich
+     dabei aendert, ist etwas anderes und im Bild ablesbar: DER KARREN IST
+     NUN BELADEN, also ist „Die Fuhre abschicken" nicht mehr gesperrt.
+
+     Gemerkt wird darum ein ABDRUCK des ganzen Wochenlaufs — welche seiner
+     vier Knoepfe frei sind und wie sie heissen. Aendert ein Klick daran
+     nichts und bucht er nichts, dann hat dieser Schritt in dieser Woche
+     nichts mehr zu geben, und die Zeile geht zum naechsten weiter. Mit der
+     Woche faengt die Liste von vorne an. */
+  function laufAbdruck() {
+    if (typeof document === 'undefined') return '';
+    var t = [];
+    for (var i = 0; i < WOCHENLAUF.length; i++) {
+      var el = schrittKnopf(WOCHENLAUF[i]);
+      t.push(el ? (el.textContent || '').replace(/\s+/g, ' ').trim() : '—');
+    }
+    return t.join('|');
+  }
+
+  function wochenMarke() {
+    if (!bereit()) return 0;
+    return B.welt.zeit.jahr * B.uhr.WOCHEN_IM_JAHR + B.welt.zeit.woche;
+  }
+
+  /* Gehoert dieser Zugschluessel zu diesem Schritt? */
+  function gehoert(s, zug) {
+    if (!zug) return false;
+    return s.vorsilbe ? zug.indexOf(s.zug) === 0 : zug === s.zug;
+  }
+
+  function wochenSchritt() {
+    if (!bereit() || B.welt.zeit.ende) return null;
+
+    var marke = wochenMarke();
+    if (!Z.schrittTot || Z.schrittTot.marke !== marke) {
+      /* Mit der Woche faengt die Liste von vorn an — und die Notiz ueber
+         den letzten Klick gehoert zur alten. Ohne dieses Loeschen war der
+         Schritt, mit dem eine Woche endete, in der naechsten schon
+         erledigt, ehe er ein einziges Mal angeboten worden war. */
+      Z.schrittTot = { marke: marke, stufen: {} };
+      Z.schrittKlick = null;
+    }
+
+    /* WANN EIN SCHRITT FUER DIESE WOCHE ERLEDIGT IST — zwei Gruende.
+
+       ERSTENS: er hat nichts mehr zu geben. Der letzte Klick galt ihm, hat
+       nichts gebucht und am Abdruck des Wochenlaufs nichts geaendert.
+       Geprueft wird das hier und nicht in der Auswertung, weil erst jetzt
+       feststeht, wie das Bild nach dem Klick aussieht.
+
+       ZWEITENS, und nur beim Anschlagen: er ist GETAN. „Noch einen Brautag"
+       ist keine Tatsache, sondern eine Strategie — mehr brauen heisst mehr
+       Rohstoff, mehr Aufwand und mehr Bier, das verderben kann. Diese Zeile
+       sagt, WO die Woche gemacht wird, und nicht, wie viel davon. Ohne
+       diese Regel riet sie in 1900 elfmal hintereinander zum Anschlagen,
+       bis der Vorrat an Brautagen aufgebraucht war. */
+    var kl = Z.schrittKlick;
+    if (kl && kl.zug) {
+      var abgelaufen = (kl.abdruck === laufAbdruck());
+      for (var qi = 0; qi < WOCHENLAUF.length; qi++) {
+        if (!gehoert(WOCHENLAUF[qi], kl.zug)) continue;
+        if (abgelaufen || WOCHENLAUF[qi].einmal) Z.schrittTot.stufen[qi] = true;
+      }
+    }
+
+    for (var i = 0; i < WOCHENLAUF.length; i++) {
+      if (Z.schrittTot.stufen[i]) continue;
+      var el = schrittKnopf(WOCHENLAUF[i]);
+      if (!el) continue;
+      var zug = el.getAttribute('data-zug');
+      return {
+        text: WOCHENLAUF[i].text,
+        warum: WOCHENLAUF[i].warum,
+        schluss: !!WOCHENLAUF[i].schluss,
+        zug: zug,
+        am: (el.textContent || '').replace(/\s+/g, ' ').trim().slice(0, 44),
+        brett: woLiegt(zug)
+      };
+    }
+    return null;
   }
 
   /* Die Adressen, die dem Haus noch abnehmen — der einzige Zaehler, an dem
@@ -896,7 +1116,7 @@
 
   /* Ein neues Jahr und eine neue Epoche raeumen die Quittung ab: sie gehoert
      zu einem Zug, den es in dieser Lage nicht mehr gibt. */
-  B.auf('jahr', function () { Z.quittung = null; });
+  B.auf('jahr', function () { Z.quittung = null; Z.schrittTot = null; });
   B.auf('epoche', function () {
     Z.quittung = null; Z.bilanz = null; Z.verlauf = []; Z.kosten = []; Z.ein = [];
   });
@@ -905,6 +1125,7 @@
      NACH AUSSEN — fuer die Probe und fuer andere Kerndateien.
      ---------------------------------------------------------------------- */
   B.klar = {
+    wochenSchritt: wochenSchritt,
     quittung: function () { return Z.quittung; },
     bilanz: function () { return Z.bilanz; },
     verlauf: function () { return Z.verlauf.slice(); },

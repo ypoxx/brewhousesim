@@ -225,14 +225,105 @@
 
     zeichneDeckung();
     zeichneZiel();
+    zeichneSchritt();
     /* Die Stuecke melden ihren naechsten Zug erst NACH diesem Horcher an.
-       Ein Bildaufbau spaeter steht die Zahl richtig da. */
+       Ein Bildaufbau spaeter steht die Zahl richtig da. Fuer den Schritt
+       der Woche gilt dasselbe aus einem anderen Grund: er sucht seine
+       Knoepfe im Bild, und die setzen DIE FUHRE und DER SUD erst nach dem
+       Rahmen. */
     if (typeof requestAnimationFrame === 'function') {
       requestAnimationFrame(function () {
         B.wage('kopf.deckung', zeichneDeckung);
         B.wage('kopf.ziel', zeichneZiel);
+        B.wage('kopf.schritt', zeichneSchritt);
       });
     }
+  }
+
+  /* -------------------------------------------------------------------
+     WAS JETZT ZU TUN IST — der Schritt der Woche, neben WEITER.
+
+     DER BEFUND DER BLINDPROBE, in einer Zahl: 47 sichtbare Knoepfe in
+     Woche 1, davon rund 20 verstanden. Die drei Bretter, auf denen die
+     Woche wirklich stattfindet (ANSCHLAGTAFEL, DER KELLER, OCHSENKARREN),
+     liegen zugeklappt unter Reitern, und der einzige Rat, den das Spiel
+     von sich aus gab, war die Zeile „naechster Zug" — die BRAUEN und
+     AUSFAHREN aus einem guten Grund nie nennen kann (kern/welt.js,
+     `meldeZug`: ein Zug ohne Preis gehoert nicht in den Nenner einer
+     Messlatte). Ein Spieler, der ihr folgte, gab Geld aus, ehe er ein
+     einziges Mal gebraut oder geliefert hatte.
+
+     Diese Zeile tritt NEBEN sie, nicht an ihre Stelle. Sie nennt keinen
+     Preis und keine Kennzahl, sondern den naechsten Handgriff — und sie
+     fuehrt ihn aus, weil sein Knopf in der Regel unter einem zugeklappten
+     Brett liegt. Welches Brett das ist, steht im `title`: wer zweimal
+     hinsieht, findet den Weg dorthin auch ohne diese Zeile, und das ist
+     der Sinn der Sache.
+
+     Gefunden wird der Schritt in kern/klar.js (`wochenSchritt`), weil dort
+     die Regel gilt, die hier gebraucht wird: nachsehen statt raten.
+     ------------------------------------------------------------------- */
+  function zeichneSchritt() {
+    var fach = B.ebene('kopf', 'kern');
+    var alt = fach.querySelector('.schrittzeile');
+    if (alt) alt.parentNode.removeChild(alt);
+
+    var z = B.welt.zeit;
+    if (!z || z.ende) return;
+    if (!B.klar || !B.klar.wochenSchritt) return;
+    /* SOLANGE DIE MICHAELITAFEL AUF DEM TISCH LIEGT, GIBT ES NUR SIE.
+
+       DER PREIS faengt den naechsten WEITER ab und legt die Tafel zurueck
+       (preis.haeltWeiter()); der Knopf rechts heisst dann auch so. „Jetzt:
+       Den Karren füllen" waere daneben zweierlei falsch — es ist nicht der
+       naechste Handgriff, und die Tafel deckt in 390 px genau diese Stelle
+       (gemessen: vier Ueberlappungen, in jeder Epoche eine). */
+    if (B.preis && B.preis.haeltWeiter
+        && B.wageWert('kopf.schritt.haelt', function () {
+          return B.preis.haeltWeiter();
+        }, false)) return;
+    var s = B.wageWert('kopf.wochenSchritt', function () {
+      return B.klar.wochenSchritt();
+    }, null);
+    if (!s) return;
+
+    var GRUND = 'position:absolute;left:47%;top:95.9%;transform:translateY(-50%);'
+      + 'font-family:var(--mono);font-size:max(12px,calc(var(--s)*19));color:#2b1d10;'
+      + 'white-space:nowrap;max-width:35%;overflow:hidden;text-overflow:ellipsis;'
+      + 'background:rgba(252,246,232,.34);border-radius:calc(var(--s)*4);'
+      + 'padding:calc(var(--s)*3) calc(var(--s)*9);' + LICHTHOF;
+
+    var titel = s.warum
+      + (s.brett ? ' Der Knopf steht auf ' + s.brett + '.' : '')
+      + (s.am ? ' Er heißt dort „' + s.am + '".' : '');
+
+    var w;
+    if (s.schluss) {
+      /* IST WEITER DER SCHRITT, KOMMT KEIN ZWEITER KNOPF DAZU.
+         Er steht eine Handbreit weiter rechts und heisst dort schon, was er
+         tut. Ein zweiter Knopf mit derselben Wirkung daneben waere genau
+         das Beiwerk, gegen das diese ganze Welle gebaut ist. */
+      w = B.el('div', 'schrittzeile');
+      w.style.cssText = GRUND;
+      w.textContent = 'Jetzt: ' + s.text.toLowerCase() + ' — der Knopf rechts';
+      w.title = titel;
+    } else {
+      w = B.knopf({
+        text: 'Jetzt: ' + s.text,
+        zug: 'kern:wochenschritt',
+        titel: titel + ' Ein Klick führt ihn aus — derselbe Knopf, der auch auf dem '
+             + 'Brett steht.',
+        tu: function () {
+          var el = document.querySelector('[data-zug="' + s.zug + '"]');
+          if (el && !el.disabled) el.click();
+        }
+      });
+      w.classList.add('schrittzeile');
+      w.style.cssText = GRUND
+        + 'border:0;box-shadow:none;font-weight:700;cursor:pointer;'
+        + 'text-decoration:underline;text-underline-offset:calc(var(--s)*5);';
+    }
+    fach.appendChild(w);
   }
 
   /* -------------------------------------------------------------------
