@@ -513,6 +513,23 @@
      hiesse es in jeder Woche „fuellen", und der Karren fuehre nie.
      ---------------------------------------------------------------------- */
   var WOCHENLAUF = [
+    /* ZUERST DAS GUTE ENDE, WEIL ES WIEDER ZUGEHT.
+
+       Der einzige Weg, dieses Spiel zu GEWINNEN, ist die Uebergabe an die
+       naechste Hand, und sie liegt nur wenige Wochen offen. Die Nachprobe
+       hat sie in 1350 nicht gefunden: „das Spiel endet auch nach 20
+       Braujahren nicht." Zwanzig Braujahre ohne Ende sind kein Spiel mehr,
+       sondern ein Laufband. Der Kasten „Wie es steht" sagt seit Teil 11,
+       DASS sie offen liegt; dieser Schritt fuehrt hin.
+
+       Aufgeschlagen wird nur das Blatt (`uebergabe-auf`), nicht uebergeben:
+       welcher Erbe und zu welchem Preis, das entscheidet der Spieler dort.
+       Ein Rat darf eine Partie nicht von sich aus beenden. */
+    { zug: 'fuhre:uebergabe-auf', einmal: true,
+      text: 'Die Übergabe ansehen',
+      warum: 'Das Haus ist alt genug für eine Übergabe, und sie ist der einzige Weg, '
+           + 'dieses Spiel zu gewinnen. Sie liegt nur wenige Wochen offen. Ein Klick '
+           + 'schlägt das Blatt auf — entschieden wird dort, nicht hier.' },
     { zug: 'fuhre:fuellen', einmal: true,
       text: 'Den Karren füllen',
       warum: 'Im Keller liegt reifes Bier, und die Häuser warten darauf. '
