@@ -243,6 +243,10 @@
          0,22 traegt den Fall; weiter geht es nicht, sonst steht das Kaertchen
          bei einem fremden Haus. */
       var HOECHSTSCHUB = Math.round(hoehe * 0.22);
+      /* Quer darf weniger weit gegangen werden als senkrecht. Auf schmalen
+         Geraeten (390 px) waeren 9 % nur 35 px — weniger als ein Kaertchen
+         breit ist, also nutzlos; deshalb der Boden in echten Bildpunkten. */
+      var HOECHSTSCHUB_QUER = Math.max(72, Math.round(breite * 0.09));
 
       var alle = buehne.querySelectorAll('.amort');
       var l = [], i;
@@ -250,6 +254,7 @@
       /* 1 — zuruecksetzen, damit gemessen wird, wo die Stuecke es wollten. */
       for (i = 0; i < alle.length; i++) {
         if (alle[i]._ortSchub) { alle[i].style.marginTop = ''; alle[i]._ortSchub = 0; }
+        if (alle[i]._ortQuer) { alle[i].style.marginLeft = ''; alle[i]._ortQuer = 0; }
       }
 
       function sichtbar(r) {
@@ -349,7 +354,11 @@
         if (!ff || ff < MINDESTFLAECHE || ff > HOECHSTFLAECHE) continue;
         if (!sichtbar(fr)) continue;
         if (weggeschnitten(fk)) continue;
-        if (fk._ortSchub) { fk.style.marginTop = ''; fk._ortSchub = 0; fr = fk.getBoundingClientRect(); }
+        if (fk._ortSchub || fk._ortQuer) {
+          fk.style.marginTop = ''; fk.style.marginLeft = '';
+          fk._ortSchub = 0; fk._ortQuer = 0;
+          fr = fk.getBoundingClientRect();
+        }
         l.push({ el: fk, x: fr.left, y: fr.top, w: fr.width, h: fr.height, f: ff, schub: 0 });
       }
 
@@ -390,11 +399,12 @@
 
       /* Wie stark ein Kaertchen bei einer Verschiebung um `dy` noch verdeckt
          wird — null heisst frei. Gemessen wird gegen alles, was schon liegt. */
-      function stoerung(c, dy) {
+      function stoerung(c, dy, dx) {
+        dx = dx || 0;
         var summe = 0;
         for (var j = 0; j < gesetzt.length; j++) {
           var g = gesetzt[j];
-          var bx = Math.min(c.x + c.w, g.x + g.w) - Math.max(c.x, g.x);
+          var bx = Math.min(c.x + dx + c.w, g.x + g.w) - Math.max(c.x + dx, g.x);
           var by = Math.min(c.y + dy + c.h, g.y + g.h) - Math.max(c.y + dy, g.y);
           if (bx <= 0 || by <= 0) continue;
           var anteil = (bx * by) / Math.min(c.f, g.f);
@@ -408,25 +418,27 @@
          `richtung` ist +1 (nach unten) oder −1 (nach oben). Gesucht wird
          schrittweise: jeder Durchgang raeumt den staerksten Verdecker, und
          der naechste prueft, ob dabei ein neuer entstanden ist. */
-      function suche(c, richtung) {
-        var dy = 0, runde = 0;
+      function suche(c, richtung, quer) {
+        var d = 0, runde = 0;
+        var grenze = quer ? HOECHSTSCHUB_QUER : HOECHSTSCHUB;
         while (runde++ < 24) {
           var noetig = null;
           for (var j = 0; j < gesetzt.length; j++) {
             var g = gesetzt[j];
-            var bx = Math.min(c.x + c.w, g.x + g.w) - Math.max(c.x, g.x);
-            var oben = c.y + dy, unten = oben + c.h;
+            var links = c.x + (quer ? d : 0), rechts = links + c.w;
+            var oben = c.y + (quer ? 0 : d), unten = oben + c.h;
+            var bx = Math.min(rechts, g.x + g.w) - Math.max(links, g.x);
             var by = Math.min(unten, g.y + g.h) - Math.max(oben, g.y);
             if (bx <= 0 || by <= 0) continue;
             if ((bx * by) / Math.min(c.f, g.f) < UEBERDECKUNG) continue;
-            var n = richtung > 0
-              ? (g.y + g.h + LUFT) - oben        /* unter das Hindernis */
-              : oben - (g.y - c.h - LUFT);       /* darueber */
+            var n = quer
+              ? (richtung > 0 ? (g.x + g.w + LUFT) - links : links - (g.x - c.w - LUFT))
+              : (richtung > 0 ? (g.y + g.h + LUFT) - oben  : oben  - (g.y - c.h - LUFT));
             if (n > 0 && (noetig === null || n > noetig)) noetig = n;
           }
-          if (noetig === null) return dy;                 /* frei */
-          dy += richtung * noetig;
-          if (Math.abs(dy) > HOECHSTSCHUB) return null;   /* zu weit */
+          if (noetig === null) return d;                  /* frei */
+          d += richtung * noetig;
+          if (Math.abs(d) > grenze) return null;          /* zu weit */
         }
         return null;
       }
@@ -434,22 +446,51 @@
       for (i = 0; i < l.length; i++) {
         var c = l[i];
         var schub = 0;
-        if (stoerung(c, 0) > 0) {
-          /* Erst nach unten — das ist die Leserichtung und laesst den Ort
-             ueber dem Kaertchen frei. Geht es dort nicht, nach oben. Geht es
-             nirgends, bleibt das Kaertchen, wo das Stueck es wollte: ein
-             Kaertchen mitten im Nirgendwo ist schlimmer als ein halb
-             verdecktes an seinem Haus. */
-          var runter = suche(c, 1);
-          var rauf = (runter === null) ? suche(c, -1) : null;
-          if (runter !== null) schub = runter;
-          else if (rauf !== null) schub = rauf;
-          else schub = 0;
+        var quer = 0;
+        var vorher = stoerung(c, 0, 0);
+        if (vorher > 0) {
+          /* Vier Auswege: unten, oben, rechts, links. Genommen wird der
+             KUERZESTE, der wirklich frei ist — die Leserichtung entscheidet
+             nur bei Gleichstand, und senkrecht vor waagerecht, weil ein
+             Kaertchen, das seitlich wandert, seinen Ort schneller sichtbar
+             verlaesst als eines, das nach unten rutscht. */
+          var wege = [
+            { d: suche(c, 1, false),  quer: false, rang: 0 },
+            { d: suche(c, -1, false), quer: false, rang: 1 },
+            { d: suche(c, 1, true),   quer: true,  rang: 2 },
+            { d: suche(c, -1, true),  quer: true,  rang: 3 }
+          ];
+          var beste = null;
+          for (var wi = 0; wi < wege.length; wi++) {
+            var wg = wege[wi];
+            if (wg.d === null || wg.d === 0) continue;
+            if (!beste || Math.abs(wg.d) < Math.abs(beste.d) - 1
+                || (Math.abs(wg.d) <= Math.abs(beste.d) + 1 && wg.rang < beste.rang)) {
+              beste = wg;
+            }
+          }
+          /* KEIN SCHUB, DER NICHTS BRINGT.  Ohne diese Pruefung wanderte in
+             1970 das Kartellamts-Kaertchen 164 px nach unten und lag danach
+             auf dem naechsten — verschoben UND verdeckt, also das schlechteste
+             von drei moeglichen Ergebnissen. Wer nirgends frei wird, bleibt an
+             seinem Ort: dort ist er wenigstens dort, wo er hingehoert. */
+          if (beste) {
+            var nachher = beste.quer ? stoerung(c, 0, beste.d) : stoerung(c, beste.d, 0);
+            if (nachher < vorher) {
+              if (beste.quer) quer = beste.d; else schub = beste.d;
+            }
+          }
         }
         if (schub) {
           c.el.style.marginTop = Math.round(schub) + 'px';
           c.el._ortSchub = schub;
           c.y += schub;
+          verschoben++;
+        }
+        if (quer) {
+          c.el.style.marginLeft = Math.round(quer) + 'px';
+          c.el._ortQuer = quer;
+          c.x += quer;
           verschoben++;
         }
         gesetzt.push(c);

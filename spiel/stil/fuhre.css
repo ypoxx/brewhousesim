@@ -429,9 +429,9 @@
    Latte 1 blind. Ihr Boden steht darum unten im Abschnitt
    „DER PLATZ UNTER DER ENTWURFSLEINWAND" hinter demselben Medienschalter,
    den grund.css fuer den Knopfboden benutzt. */
-.fu-fass em { font-family: var(--fu-zahlen); font-size: calc(var(--s) * 11); font-style: normal; opacity: 0.85; }
+.fu-fass em { font-family: var(--fu-zahlen); font-size: max(11px, calc(var(--s) * 11)); font-style: normal; opacity: 0.85; }
 .fu-fass.klein b { font-size: max(12px, calc(var(--s) * 13)); }
-.fu-fass.klein em { font-size: calc(var(--s) * 10); }
+.fu-fass.klein em { font-size: max(11px, calc(var(--s) * 10)); }
 
 /* Was noch nicht reif ist, belegt einen Platz und bringt nichts ein. */
 .fu-fass.fu-lagert {

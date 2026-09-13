@@ -93,10 +93,33 @@
        53 % Breite begrenzt (also nie weiter links als 40 %), der Anschlag auf
        36 % — damit koennen sie sich nicht mehr treffen, egal wie lang der
        Satz wird, den ein Stueck meldet. */
+    /* WELLE 18 — DER ANSCHLAG BEKOMMT PAPIER.
+
+       Er trug bisher nur einen Lichthof. Alle acht blinden Spieler haben ihn
+       als unlesbar gemeldet, woertlich: „liegt ohne Hintergrund direkt ueber
+       Haeusern und Gaensen — Zeilen ueber dem Dach kaum lesbar". Es ist der
+       einzige Text im Spiel, der sagt, WORUM ES GEHT und WORAN MAN
+       VERLIERT; drei der acht haben ihn nach eigener Angabe nie zu Ende
+       gelesen. Ein Lichthof traegt eine Zeile ueber wechselndem Bild, keine
+       zwoelf.
+
+       Das Papier ist durchscheinend (Alpha 0,88) und ohne Rand: die Platte
+       darunter bleibt zu sehen, die Schrift steht trotzdem. Der Lichthof
+       bleibt zusaetzlich — er faengt die Stellen, an denen das Papier auf
+       eine helle Bildstelle faellt. */
     var zettel = B.el('div', 'startzettel');
-    zettel.style.cssText = 'position:absolute;left:2.2%;top:69.5%;width:36%;'
+    /* WELLE 18: am UNTEREN Rand verankert statt am oberen. Mit dem Papier und
+       dem Schriftboden dieser Welle wuchs der Anschlag nach unten aus dem
+       Bild — der Knopf „Anfangen" stand in allen vier Epochen halb
+       ausserhalb. Von unten gemessen kann das nicht mehr geschehen, egal wie
+       lang die Saetze einer Epoche sind. Waagerecht bleibt alles, wie es
+       war: 36 % breit ab 2,2 %, also nie unter der Zielzeile rechts. */
+    zettel.style.cssText = 'position:absolute;left:2.2%;bottom:3.4%;width:36%;'
       + 'pointer-events:none;color:#1a0f05;font-family:var(--serif);font-weight:600;'
-      + 'font-size:max(12px,calc(var(--s)*22));line-height:1.4;' + LICHTHOF;
+      + 'font-size:max(12px,calc(var(--s)*22));line-height:1.4;'
+      + 'background:rgba(252,246,232,.88);border-radius:calc(var(--s)*5);'
+      + 'padding:calc(var(--s)*12) calc(var(--s)*16);'
+      + 'box-sizing:border-box;' + LICHTHOF;
 
     var kopf = B.el('div', null,
       B.welt.haus.name.toUpperCase() + ' · ' + z.jahr + ' · ' + e.name.toUpperCase());
@@ -142,7 +165,7 @@
       text: 'Anfangen',
       zug: 'kern:anfangen',
       titel: 'Legt diesen Anschlag beiseite. Er kommt nach dem ersten WEITER ohnehin nicht wieder.',
-      tu: function () { zettelWeg(); }
+      tu: function () { zettelSchliessen(); }
     });
     k.style.cssText = 'pointer-events:auto;'
       + 'background:none;background-color:transparent;border:0;box-shadow:none;'
@@ -157,10 +180,51 @@
     fach.appendChild(zettel);
   }
 
+  /* ----------------------------------------------------------------------
+     WELLE 18 — DER ANSCHLAG IST WIEDER ZU HABEN.
+
+     Er verschwand beim ersten Wochenwechsel und kam nie zurueck; „Anfangen"
+     war danach nicht mehr anklickbar, und mit ihm war die einzige Auskunft
+     weg, worum es in diesem Spiel geht. Ein blinder Spieler hat genau das
+     als toten Knopf gemeldet. Jetzt bleibt ein Griff stehen: klein, am
+     unteren Rand links, unter derselben Regel wie alles andere am Rand
+     (kein Kasten, Lichthof, echtes <button> mit stabilem data-zug).
+     ---------------------------------------------------------------------- */
+  var zettelOffen = true;
+
+  function zeigeGriff() {
+    var fach = B.ebene('kopf', 'kern-start-griff');
+    B.leere(fach);
+    if (zettelOffen) return;
+    if (B.welt && B.welt.zeit && B.welt.zeit.ende) return;
+    var g = B.knopf({
+      text: 'Worum geht es?',
+      zug: 'kern:worum',
+      titel: 'Schlägt den Anschlag wieder auf: was dieses Haus tut, was das Ziel ist '
+           + 'und woran es zu Ende geht.',
+      tu: function () { zettelOffen = true; zeigeZettel(); zeigeGriff(); }
+    });
+    g.style.cssText = 'position:absolute;left:2.2%;bottom:2.4%;'
+      + 'background:none;background-color:transparent;border:0;box-shadow:none;'
+      + 'padding:calc(var(--s)*5) calc(var(--s)*10) calc(var(--s)*5) 0;'
+      + 'min-height:max(24px,calc(var(--s)*38));'
+      + 'font-family:var(--serif);font-size:max(12px,calc(var(--s)*20));color:#2b1d10;'
+      + 'text-decoration:underline;text-underline-offset:calc(var(--s)*5);'
+      + 'cursor:pointer;white-space:nowrap;' + LICHTHOF;
+    fach.appendChild(g);
+  }
+
+  function zettelSchliessen() {
+    zettelOffen = false;
+    zettelWeg();
+    zeigeGriff();
+  }
+
   /* Der Anschlag geht weg, sobald die Zeit laeuft. Diese Horcher haengen an
      Ereignissen, nicht an einer Frist. */
-  B.auf('woche', zettelWeg);
-  B.auf('jahr', zettelWeg);
+  B.auf('woche', zettelSchliessen);
+  B.auf('jahr', zettelSchliessen);
+  B.auf('zeichne', function () { B.wage('start.griff', zeigeGriff); });
 
   function los() {
     if (B.arg.saat) B.wuerfel.setze(B.arg.saat);

@@ -47,18 +47,26 @@
     return k;
   }
 
-  function tafel(marke, wert) {
+  /* WELLE 18 — DIE KOPFZEILE ERKLAERT IHRE ZAHLEN.
+
+     „GRUT 40", „KELLER 4/12 Fass", „WOCHE 1/30": vier von acht blinden
+     Spielern haben gemeldet, dass die Kopfzeile als einzige Stelle des
+     Spiels gar keine Erklaerung traegt — kein Hover, kein Satz, nichts.
+     Dabei ist sie die Zeile, auf die jeder zuerst sieht. */
+  function tafel(marke, wert, titel) {
     var t = B.el('div', 'tafel');
+    if (titel) t.title = titel;
     t.appendChild(B.el('span', 'marke', marke));
     t.appendChild(B.el('span', 'wert', wert));
     return t;
   }
 
-  function tafelKnopf(marke, wert, zug, tu) {
+  function tafelKnopf(marke, wert, zug, tu, titel) {
     var t = document.createElement('button');
     t.type = 'button';
     t.className = 'tafel knopf';
     t.setAttribute('data-zug', zug);
+    if (titel) t.title = titel;
     t.appendChild(B.el('span', 'marke', marke));
     t.appendChild(B.el('span', 'wert', wert));
     t.addEventListener('click', function (e) {
@@ -82,9 +90,15 @@
     var leiste = B.el('div', 'kopfleiste');
     B.orte.setze(leiste, 'kopfleiste', { anker: 'oben' });
 
-    leiste.appendChild(tafel(d.monat.toUpperCase(), d.jahr));
-    leiste.appendChild(tafel('Kasse', B.welt.geld(B.welt.haus.kasse)));
-    leiste.appendChild(tafel(e.rohstoff, B.zahl(B.welt.haus.rohstoff)));
+    leiste.appendChild(tafel(d.monat.toUpperCase(), d.jahr,
+      'Der laufende Monat. Das Braujahr geht von Michaeli (29. September) bis Georgi.'));
+    leiste.appendChild(tafel('Kasse', B.welt.geld(B.welt.haus.kasse),
+      'Bares Geld in der Lade. Was ein Wirt angeschrieben hat, steht NICHT hier — '
+      + 'das kommt erst zu Michaeli, wenn er zahlt.'));
+    leiste.appendChild(tafel(e.rohstoff, B.zahl(B.welt.haus.rohstoff),
+      e.rohstoff + ' in der Kammer. Jeder Sud verbraucht davon. Ist nichts mehr da, '
+      + 'wird nicht gebraut, und ohne Sud gibt es nichts auszufahren. '
+      + 'Nachgekauft wird auf dem Brett DAS SUDHAUS.'));
     /* GLAETTUNG WELLE 1: Die Kopfleiste hat den Vorrat in Fass gezaehlt,
        waehrend das Brett desselben Vorrats ihn ab 1872 in Hektoliter zeigt —
        "KELLER 140/400" oben, "DIE TANKS 210 von 600 hl" unten, dieselbe
@@ -92,14 +106,20 @@
        B.welt.menge(), dem einen Formatierer des Kerns, und der Name des
        Lagers wechselt mit der Epoche wie der Name des Rohstoffs daneben. */
     leiste.appendChild(tafel(e.lager || 'Keller',
-      B.welt.menge(B.welt.vorrat.faesser.length, true) + '/' + B.welt.menge(B.welt.vorrat.plaetze)));
-    leiste.appendChild(tafel('Woche', z.woche + '/' + B.uhr.WOCHEN_IM_JAHR));
+      B.welt.menge(B.welt.vorrat.faesser.length, true) + '/' + B.welt.menge(B.welt.vorrat.plaetze),
+      'Was im Lager liegt, und wie viel hineinpasst. Nur REIFES Bier lässt sich '
+      + 'ausfahren; zu lange liegt es auch nicht, dann verdirbt es. '
+      + 'Ein leeres Lager heißt: keine Fuhre, kein Geld.'));
+    leiste.appendChild(tafel('Woche', z.woche + '/' + B.uhr.WOCHEN_IM_JAHR,
+      'Die Woche im Braujahr. Nach der dreißigsten wird das Jahr geschlossen, '
+      + 'der Sommer läuft ohne Hand durch, und zu Michaeli wird abgerechnet.'));
     leiste.appendChild(tafelKnopf('Chronik', B.welt.chronik.length, 'kern:chronik', function () {
       zeigeBlatt(blattOffen === 'chronik' ? null : 'chronik');
-    }));
+    }, 'Was diesem Haus widerfahren ist, Jahr für Jahr. Ein Klick schlägt sie auf.'));
     leiste.appendChild(tafelKnopf('Buch', B.protokoll.length, 'kern:protokoll', function () {
       zeigeBlatt(blattOffen === 'protokoll' ? null : 'protokoll');
-    }));
+    }, 'Jeder Pfennig, der hereinkam oder hinausging, mit Grund und Datum. '
+     + 'Wer wissen will, wohin das Geld läuft, findet es hier. Ein Klick schlägt es auf.'));
 
     fach.appendChild(leiste);
 
@@ -175,7 +195,7 @@
         'nächste Woche schließt das Braujahr');
       vorwarnung.style.cssText = 'position:absolute;left:93%;top:96.2%;'
         + 'transform:translate(-100%,-50%);font-family:var(--mono);'
-        + 'font-size:max(10px,calc(var(--s)*16));color:#6b4a20;white-space:nowrap;'
+        + 'font-size:max(11px,calc(var(--s)*16));color:#6b4a20;white-space:nowrap;'
         + LICHTHOF;
       fach.appendChild(vorwarnung);
     }
@@ -307,9 +327,18 @@
        Bild laeuft (Auflage A13 des Kritikers gilt fuer jeden Kasten des
        Spiels, und der Rahmen faengt bei sich selbst an). Der ganze Satz
        steht im `title`. */
+    /* WELLE 18: ein leichter Grund unter der Zeile. Sie lag als einzige
+       Auskunft ueber das ZIEL DES SPIELS in heller Schmalschrift direkt auf
+       Daechern und Fluss; acht von acht blinden Spielern haben sie als kaum
+       lesbar gemeldet. Der Grund ist so schwach gehalten, dass er nach der
+       Regel des Haushalts kein Kasten ist (Alpha unter 0,35) und die Platte
+       darunter sichtbar bleibt — er nimmt der Schrift nur das wechselnde
+       Bild weg. */
     w.style.cssText = 'position:absolute;left:93%;top:86.6%;transform:translate(-100%,-50%);'
       + 'font-family:var(--mono);font-size:max(11px,calc(var(--s)*18));color:#3a2a16;'
-      + 'white-space:nowrap;max-width:53%;overflow:hidden;text-overflow:ellipsis;' + LICHTHOF;
+      + 'white-space:nowrap;max-width:53%;overflow:hidden;text-overflow:ellipsis;'
+      + 'background:rgba(252,246,232,.34);border-radius:calc(var(--s)*4);'
+      + 'padding:calc(var(--s)*2) calc(var(--s)*8);' + LICHTHOF;
     w.setAttribute('data-ziel', '1');
     w.title = ziel.satz;
     if (ziel.naehe !== null && ziel.naehe !== undefined) {
@@ -406,6 +435,8 @@
         + 'font-family:var(--mono);font-size:max(12px,calc(var(--s)*19));color:#2b1d10;'
         + 'font-weight:700;cursor:pointer;'
         + 'text-decoration:underline;text-underline-offset:calc(var(--s)*5);'
+        + 'background:rgba(252,246,232,.34);border-radius:calc(var(--s)*4);'
+        + 'padding:calc(var(--s)*2) calc(var(--s)*8);'
         + 'text-shadow:0 0 calc(var(--s)*9) rgba(255,248,230,.98),'
         + '0 0 calc(var(--s)*4) rgba(255,248,230,.98);white-space:nowrap;';
     } else {
@@ -413,6 +444,8 @@
       w.style.cssText = 'position:absolute;left:93%;top:90%;transform:translate(-100%,-50%);'
         + 'font-family:var(--mono);font-size:max(12px,calc(var(--s)*19));color:#2b1d10;'
         + 'font-weight:700;'
+        + 'background:rgba(252,246,232,.34);border-radius:calc(var(--s)*4);'
+        + 'padding:calc(var(--s)*2) calc(var(--s)*8);'
         + 'text-shadow:0 0 calc(var(--s)*9) rgba(255,248,230,.98),'
         + '0 0 calc(var(--s)*4) rgba(255,248,230,.98);white-space:nowrap;';
       w.textContent = text;
@@ -424,7 +457,7 @@
     if (wozu) {
       var wz = B.el('div', 'deckung-wozu', wozu);
       wz.style.cssText = 'position:absolute;left:93%;top:92.7%;transform:translate(-100%,-50%);'
-        + 'font-family:var(--mono);font-size:max(10px,calc(var(--s)*16));color:#5a4630;'
+        + 'font-family:var(--mono);font-size:max(11px,calc(var(--s)*16));color:#5a4630;'
         + 'white-space:nowrap;max-width:46%;overflow:hidden;text-overflow:ellipsis;'
         + LICHTHOF;
       fach.appendChild(wz);

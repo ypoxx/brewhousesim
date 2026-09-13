@@ -346,7 +346,7 @@
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-  font-size: calc(var(--s) * 11);
+  font-size: max(11px, calc(var(--s) * 11));
   font-style: italic;
   color: var(--pr-schwach);
   padding-left: calc(var(--s) * 6);

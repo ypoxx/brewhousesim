@@ -334,7 +334,7 @@
 /* Der Satz ueber den drei Geboten im Blatt. */
 .gg-gsatz {
   font-family: var(--serif);
-  font-size: calc(var(--s) * 17);
+  font-size: max(12px, calc(var(--s) * 17));
   line-height: 1.35;
   margin-bottom: calc(var(--s) * 6);
 }
@@ -383,3 +383,28 @@
 .gg-kennzahl i { font-style: normal; white-space: nowrap; }
 .gg-kennzahl.knapp { color: #8c2f1c; }
 .gg-kennzahl.knapp i { color: #8c2f1c; font-weight: 700; }
+
+/* ===========================================================================
+   WELLE 18 — DIE ETIKETTEN AUF DER KARTE BEKOMMEN EIN PLAETTCHEN.
+
+   Aus allen acht Laeufen der Blindprobe, in allen vier Epochen derselbe
+   Satz: „Karten-Etiketten in dunkler Schrift ohne Kasten direkt auf
+   Daechern und Strassen", „weisse Monospace-Zeilen auf hellem Himmel kaum
+   lesbar", „'Kasse reicht 1,2x' verschwindet hinter dem Lastwagen". Es sind
+   die Etiketten, an denen der Gegner um die Wirte wirbt — also genau die
+   Zuege, auf die das Spiel selbst in der Zeile „naechster Zug" hinweist.
+
+   Das Plaettchen ist bewusst schwach (Alpha 0,30): es bleibt unter der
+   Schwelle, ab der kern/haushalt.js einen Kasten zaehlt, die gemalte Platte
+   scheint durch, und die Schrift bekommt trotzdem einen gleichmaessigen
+   Untergrund statt Ziegel, Wasser und Himmel im Wechsel. Der Schlagschatten
+   der Schrift bleibt, wo er war — er faengt die Stellen ab, an denen das
+   Plaettchen auf eine helle Bildstelle faellt.
+   =========================================================================== */
+.gg-paar, .gg-amt, .gg-karte-klein, .gg-wimpel, .gg-schild, .gg-fass {
+  background-color: rgba(252, 246, 232, 0.30);
+  border-radius: calc(var(--s) * 4);
+  padding-left: calc(var(--s) * 5);
+  padding-right: calc(var(--s) * 5);
+  backdrop-filter: saturate(0.7) brightness(1.06);
+}

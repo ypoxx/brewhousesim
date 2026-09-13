@@ -686,14 +686,31 @@
      von kern/runde.js INNERHALB der Runde gehalten — es entsteht keine
      Wanduhrfrist im Zeichenweg (spiel/LIESMICH.md). Denselben Weg geht
      kern/kopf.js fuer die Kennzahl. */
-  var entflechtungLaeuft = false;
+  /* Angemeldet wird der Horcher beim ERSTEN Zeichnen, nicht beim Laden.
+
+     `B.sende()` laeuft mit `for (i = 0; i < l.length; i++)` ueber die LEBENDE
+     Liste der Horcher (kern/uhr.js): wer sich waehrend einer Sendung
+     anmeldet, kommt in DERSELBEN Sendung noch dran — und zwar als letzter.
+     Genau das wird hier gebraucht: die Entflechtung muss laufen, wenn alle
+     acht Stuecke ihre Kaertchen gesetzt haben, und sie muss es IN DERSELBEN
+     RUNDE tun.
+
+     Der erste Versuch lief in `requestAnimationFrame`. Das ist im Rahmen
+     erlaubt (kern/runde.js faengt ihn ein) und war trotzdem falsch: zwischen
+     dem Zeichnen und dem naechsten Bild lag ein Augenblick, in dem die
+     Kaertchen noch an ihrer alten Stelle standen. Fuer ein Auge ist das ein
+     Zucken; fuer eine Hand, die in genau diesem Augenblick klickt, ist es
+     ein Knopf, der nicht mehr da ist, wo er war. Gemessen: ein Fahren-Klick
+     in 120 Wochen von 1970, der ins Leere ging — dieselbe Sorte Fehler, die
+     diese Welle beseitigt. */
+  var angemeldet = false;
   B.auf('zeichne', function () {
-    if (entflechtungLaeuft || typeof requestAnimationFrame !== 'function') return;
-    if (!B.orte || !B.orte.entflechte) return;
-    entflechtungLaeuft = true;
-    requestAnimationFrame(function () {
-      entflechtungLaeuft = false;
-      B.wage('orte.entflechte', function () { B.orte.entflechte(); });
+    if (angemeldet) return;
+    angemeldet = true;
+    B.auf('zeichne', function () {
+      if (B.orte && B.orte.entflechte) {
+        B.wage('orte.entflechte', function () { B.orte.entflechte(); });
+      }
     });
   });
 
