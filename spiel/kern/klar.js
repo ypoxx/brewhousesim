@@ -60,6 +60,7 @@
     wocheStart: 0,        /* Protokollstand am Anfang der laufenden Woche    */
     verlauf: [],          /* [{jahr, woche, kasse, rohstoff, faesser}]       */
     kosten: [],           /* Aufwand der letzten Wochen, fuer den Mittelwert */
+    ein: [],              /* und was sie eingebracht haben                  */
     letzteMarke: null     /* jahr/woche der letzten Verlaufsmarke            */
   };
 
@@ -352,6 +353,8 @@
        „−398 M in der Kasse" ausmacht. Gemerkt wird sie, nicht gerechnet. */
     Z.kosten.push(aus);
     if (Z.kosten.length > TREND_WOCHEN) Z.kosten.shift();
+    Z.ein.push(ein);
+    if (Z.ein.length > TREND_WOCHEN) Z.ein.shift();
     Z.wocheStart = B.protokoll.length;
     merkeVerlauf();
   }
@@ -359,11 +362,14 @@
   /* Der mittlere Wochenaufwand der letzten Wochen. Der MITTLERE, nicht der
      durchschnittliche: eine einzelne Michaeli-Woche mit einer Ablösung von
      tausend Pfennig darf die Zahl nicht verbiegen. */
-  function wochenkosten() {
-    if (Z.kosten.length < 2) return null;
-    var l = Z.kosten.slice().sort(function (a, b) { return a - b; });
+  function mitte(liste) {
+    if (liste.length < 2) return null;
+    var l = liste.slice().sort(function (a, b) { return a - b; });
     return Math.round(l[Math.floor(l.length / 2)]);
   }
+
+  function wochenkosten() { return mitte(Z.kosten); }
+  function wocheneinnahmen() { return mitte(Z.ein); }
 
   function merkeVerlauf() {
     if (!bereit()) return;
@@ -582,17 +588,27 @@
     k.appendChild(kopf);
 
     if (wk !== null) {
+      /* BEIDE SEITEN NEBENEINANDER.  „Kein Klick macht die Kasse groesser"
+         war der meistgenannte Eindruck der Nachprobe in 1350 — und er ist
+         falsch, nur sieht man es nicht: die Fuhren bringen etwas herein, es
+         geht bloss in derselben Woche wieder hinaus. Wer nur den Aufwand
+         sieht, haelt das Haus fuer ein Fass ohne Boden. Beide Zahlen sind
+         gemessen, nicht gerechnet: der Mittelwert der letzten Wochen. */
+      var we = wocheneinnahmen();
       var wz = B.el('div', 'klar-wochenkosten');
       wz.style.cssText = 'display:flex;justify-content:space-between;gap:calc(var(--s)*12);'
         + 'white-space:nowrap;font-size:max(11px,calc(var(--s)*18));'
         + 'margin-bottom:calc(var(--s)*6);color:#3a2a16;';
-      wz.appendChild(B.el('span', null, 'Eine Woche kostet etwa'));
-      var wv = B.el('span', null, '−' + B.welt.geld(wk));
-      wv.style.cssText = 'font-family:var(--mono);font-variant-numeric:tabular-nums;color:#8a2f20;';
+      wz.appendChild(B.el('span', null, 'Die Woche bringt / kostet'));
+      var wv = B.el('span', null,
+        (we === null ? '?' : '+' + B.welt.geld(we, true)) + ' / −' + B.welt.geld(wk));
+      wv.style.cssText = 'font-family:var(--mono);font-variant-numeric:tabular-nums;'
+        + 'color:' + ((we !== null && we >= wk) ? '#2f5d2a' : '#8a2f20') + ';';
       wz.appendChild(wv);
-      wz.title = 'Sud, Fuhrlohn, Ungeld und Unterhalt zusammen — der Mittelwert der '
-               + 'letzten Wochen. Diese Kosten fallen an, weil die Woche zu Ende geht, '
-               + 'auch wenn keine Fuhre hinausfährt. Jeder Ertrag ist gegen diese Zahl zu lesen.';
+      wz.title = 'Der Mittelwert der letzten Wochen, beide Seiten. LINKS was hereinkam '
+               + '(Lieferungen, Rückgaben, Einnahmen), RECHTS was hinausging (Sud, Fuhrlohn, '
+               + 'Ungeld, Unterhalt). Der Aufwand fällt an, weil die Woche zu Ende geht — '
+               + 'auch ohne Fuhre. Steht links die kleinere Zahl, zehrt das Haus von der Lade.';
       k.appendChild(wz);
     }
 
@@ -816,7 +832,9 @@
   /* Ein neues Jahr und eine neue Epoche raeumen die Quittung ab: sie gehoert
      zu einem Zug, den es in dieser Lage nicht mehr gibt. */
   B.auf('jahr', function () { Z.quittung = null; });
-  B.auf('epoche', function () { Z.quittung = null; Z.bilanz = null; Z.verlauf = []; Z.kosten = []; });
+  B.auf('epoche', function () {
+    Z.quittung = null; Z.bilanz = null; Z.verlauf = []; Z.kosten = []; Z.ein = [];
+  });
 
   /* ----------------------------------------------------------------------
      NACH AUSSEN — fuer die Probe und fuer andere Kerndateien.
@@ -827,6 +845,7 @@
     verlauf: function () { return Z.verlauf.slice(); },
     trend: trend,
     wochenkosten: wochenkosten,
+    wocheneinnahmen: wocheneinnahmen,
     reicht: reicht,
     abnehmer: abnehmer,
     wochenOhneLieferung: wochenOhneLieferung,

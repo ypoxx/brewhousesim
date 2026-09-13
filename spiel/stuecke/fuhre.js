@@ -4108,9 +4108,15 @@
        Steht noch kein Verlauf zur Verfuegung, steht hier nichts. */
     if (B.klar && B.klar.wochenkosten) {
       var wk = B.klar.wochenkosten();
+      var we = B.klar.wocheneinnahmen ? B.klar.wocheneinnahmen() : null;
       if (wk) {
+        /* Beide Seiten, damit die Zeile nicht nur droht: was die Woche
+           bringt, steht vor dem, was sie kostet. */
         var wkz = B.el('span', 'fu-wochenkosten',
-          'die Woche kostet etwa ' + B.welt.geld(wk));
+          we === null
+            ? 'die Woche kostet etwa ' + B.welt.geld(wk)
+            : 'die Woche bringt etwa ' + B.welt.geld(we, true)
+              + ' und kostet ' + B.welt.geld(wk));
         wkz.title = 'Sud, Lohn, Ungeld und Unterhalt zusammen, gemittelt über die letzten '
                   + 'Wochen. Diese Kosten fallen an, sobald die Woche zu Ende geht — auch '
                   + 'ohne Fuhre. Ein Fahren-Knopf lohnt sich, wenn er mehr in die Lade '
