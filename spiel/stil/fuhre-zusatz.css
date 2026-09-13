@@ -1292,3 +1292,28 @@ html[data-hof-zu] #fach-blatt-fuhre { z-index: 200; }
   color: #7a3c2a;
   white-space: nowrap;
 }
+
+/* ===========================================================================
+   WELLE 18 — DER WEG AUS DEM SCHLUSSBLATT BLEIBT SICHTBAR.
+
+   Das Schlussblatt rollt (max-height 80 %, overflow-y auto) und ist der
+   beste Text des Spiels: es sagt in drei Saetzen, WORAN das Haus gestorben
+   ist, mit den Zahlen des letzten Tages. Darunter stehen die Listen — wer
+   das Haus gefuehrt hat, wie das Auftragsbuch leer wurde —, und erst
+   dazwischen der einzige Knopf, der weiterfuehrt.
+
+   Er klebt jetzt am unteren Rand des Blattes: wer liest, sieht ihn die
+   ganze Zeit; wer nicht liest, findet ihn sofort. Die Listen laufen
+   darunter weiter, wie sie es sollen.
+   =========================================================================== */
+.fu-schlussblatt .fu-sommer-fuss {
+  position: sticky;
+  bottom: 0;
+  z-index: 2;
+  margin-top: auto;
+  padding: calc(var(--s) * 8) 0 calc(var(--s) * 4);
+  background: linear-gradient(180deg,
+    rgba(247, 238, 216, 0) 0%,
+    rgba(247, 238, 216, 0.94) 28%,
+    rgba(247, 238, 216, 0.98) 100%);
+}

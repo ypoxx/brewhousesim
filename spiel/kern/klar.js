@@ -598,6 +598,10 @@
     if (!bereit()) return;
     var fach = B.ebene('kopf', 'kern-klar');
     B.leere(fach);
+    /* Ist die Partie zu Ende, treten diese Kaesten ab. Dann gilt das
+       Schlussblatt, und das ist der beste Text des Spiels — es braucht
+       keine Quittung ueber den letzten Klick neben sich. */
+    if (B.welt.zeit.ende) return;
 
     /* ueber der Wochenkarte, nicht auf ihr.
 
