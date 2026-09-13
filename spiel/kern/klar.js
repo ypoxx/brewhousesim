@@ -495,6 +495,23 @@
 
     var saetze = [];
 
+    /* --- DAS GUTE ENDE, solange es auf dem Tisch liegt. ---
+
+       Der einzige Weg, dieses Spiel zu GEWINNEN, ist die Uebergabe an die
+       naechste Hand. Sie liegt eine begrenzte Zahl von Wochen offen, und die
+       Nachprobe hat sie in 1350 nicht gefunden: „das gute Ende stand nur in
+       der abgeschnittenen Ziel-Zeile am unteren Bildrand, hinter der offenen
+       Tafel — ein WEITER-Druecker findet es nie, und das Spiel endet auch
+       nach 20 Braujahren nicht." Zwanzig Braujahre ohne Ende sind kein
+       Spiel mehr, sondern ein Laufband.
+
+       Der Kasten liest den Knopf, den DIE FUHRE ohnehin auf die Wochenkarte
+       legt — er erfindet kein Ende und keine Frist, er sagt nur, dass es
+       gerade eines gibt. Steht der Knopf nicht da, steht hier nichts. */
+    var gut = (typeof document !== 'undefined')
+      ? document.querySelector('[data-zug="fuhre:uebergabe-auf"]') : null;
+    var gutText = gut ? (gut.textContent || '').replace(/\s+/g, ' ').trim() : '';
+
     /* --- Vorrat: wie lange reicht er? --- */
     var e = B.welt.epoche();
     var rW = reicht('rohstoff');
@@ -571,7 +588,7 @@
        und sie stand bisher nirgends auf dem Bildschirm. */
     var wk = wochenkosten();
 
-    if (!saetze.length && wk === null) return;
+    if (!saetze.length && wk === null && !gut) return;
     saetze.sort(function (a, b) { return (b.dringend ? 1 : 0) - (a.dringend ? 1 : 0); });
     saetze = saetze.slice(0, 2);
 
@@ -586,6 +603,18 @@
       + 'border-bottom:1px solid rgba(90,66,38,.3);margin-bottom:calc(var(--s)*5);'
       + 'padding-bottom:calc(var(--s)*3);';
     k.appendChild(kopf);
+
+    if (gut) {
+      var gz = B.el('div', 'klar-gut',
+        'DAS GUTE ENDE LIEGT AUF DEM TISCH — ' + gutText
+        + '. Wer jetzt übergibt, hat gewonnen; der Knopf steht auf der Wochenkarte.');
+      gz.style.cssText = 'white-space:normal;margin-bottom:calc(var(--s)*7);'
+        + 'font-size:max(11px,calc(var(--s)*18));line-height:1.35;font-weight:600;'
+        + 'padding:calc(var(--s)*5) calc(var(--s)*9);border-radius:calc(var(--s)*3);'
+        + 'color:#1f4a1c;background:rgba(120,170,95,.26);'
+        + 'border-left:calc(var(--s)*3) solid #2f5d2a;';
+      k.appendChild(gz);
+    }
 
     if (wk !== null) {
       /* BEIDE SEITEN NEBENEINANDER.  „Kein Klick macht die Kasse groesser"
@@ -825,9 +854,45 @@
       requestAnimationFrame(function () {
         nachLaeuft = false;
         B.wage('orte.nachbessere', function () { B.orte.nachbessere(); });
+        horcheAufBewegung();
       });
     });
   });
+
+  /* NOCH EIN BILD REICHT NICHT, WENN SICH ETWAS BEWEGT.
+
+     Die Michaelitafel faehrt ein. Im Bild direkt nach dem Zeichnen steht sie
+     noch nicht dort, wo sie gleich stehen wird — die Nachbesserung fragt den
+     Browser also zum falschen Zeitpunkt und bekommt „alles frei" zur
+     Antwort. Eine halbe Sekunde spaeter liegen drei Wimpel des Muehlwirts
+     darunter und sind nicht mehr zu druecken (gemessen in 1350, Saat 11:
+     drei unerreichbare Knoepfe, alle unter `pr-was`; ein Aufruf der
+     Nachbesserung von Hand raeumt alle drei ab).
+
+     Wann eine Bewegung zu Ende ist, weiss der Browser selbst und sagt es mit
+     `transitionend` und `animationend`. Beide steigen auf, ein Horcher auf
+     der Buehne genuegt. Gebuendelt wird ueber eine kurze Frist, damit aus
+     zwanzig Enden einer Tafel ein Durchgang wird und nicht zwanzig;
+     kern/runde.js haelt die Frist innerhalb der Runde. */
+  var horchtSchon = false;
+  var bewegungFrist = 0;
+  function horcheAufBewegung() {
+    if (horchtSchon) return;
+    var buehne = document.getElementById('buehne');
+    if (!buehne || typeof setTimeout !== 'function') return;
+    horchtSchon = true;
+    function spaeter() {
+      if (bewegungFrist) return;
+      bewegungFrist = setTimeout(function () {
+        bewegungFrist = 0;
+        if (B.orte && B.orte.nachbessere) {
+          B.wage('orte.nachbessere', function () { B.orte.nachbessere(); });
+        }
+      }, 120);
+    }
+    buehne.addEventListener('transitionend', spaeter, true);
+    buehne.addEventListener('animationend', spaeter, true);
+  }
 
   /* Ein neues Jahr und eine neue Epoche raeumen die Quittung ab: sie gehoert
      zu einem Zug, den es in dieser Lage nicht mehr gibt. */

@@ -689,3 +689,17 @@ button {
   /* Der Anschlag nimmt sonst das halbe Telefon ein. */
   .startzettel { width: 62% !important; }
 }
+
+/* WELLE 18 — WELCHE MARKE DER KOPFLEISTE SICH AUFSCHLAGEN LAESST.
+
+   Sieben Marken, zwei davon Knoepfe (CHRONIK und BUCH). Sie sahen alle
+   gleich aus, und die Nachprobe hat die fuenf anderen folgerichtig unter
+   „tote Knoepfe" gefuehrt. Ein unterstrichener Wert und ein Zeiger sagen,
+   welche sich anfassen laesst; die anderen bleiben, was sie sind: Anzeigen. */
+.kopfleiste .tafel.tafel-auf { cursor: pointer; }
+.kopfleiste .tafel.tafel-auf .wert {
+  text-decoration: underline;
+  text-underline-offset: calc(var(--s) * 3);
+  text-decoration-thickness: calc(var(--s) * 2);
+}
+.kopfleiste .tafel.tafel-auf:hover .marke { text-decoration: underline; }

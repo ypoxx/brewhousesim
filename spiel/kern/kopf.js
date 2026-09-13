@@ -14,6 +14,7 @@
   'use strict';
 
   var blattOffen = null;
+  var buchGesehen = 0;          /* Protokollstand beim letzten Aufschlagen */
   var neuFrage = false;          /* liegt die Rueckfrage "Neue Partie?" an? */
 
   /* ----------------------------------------------------------------------
@@ -64,7 +65,11 @@
   function tafelKnopf(marke, wert, zug, tu, titel) {
     var t = document.createElement('button');
     t.type = 'button';
-    t.className = 'tafel knopf';
+    /* WELLE 18: Zwei der sieben Marken oeffnen etwas, fuenf zeigen nur eine
+       Zahl — und sie sahen alle gleich aus. Die Nachprobe hat die fuenf
+       darum unter „tote Knoepfe" gemeldet: „sehen wie Knoepfe aus, sind aber
+       nicht anklickbar". `tafel-auf` macht den Unterschied sichtbar. */
+    t.className = 'tafel knopf tafel-auf';
     t.setAttribute('data-zug', zug);
     if (titel) t.title = titel;
     t.appendChild(B.el('span', 'marke', marke));
@@ -116,10 +121,28 @@
     leiste.appendChild(tafelKnopf('Chronik', B.welt.chronik.length, 'kern:chronik', function () {
       zeigeBlatt(blattOffen === 'chronik' ? null : 'chronik');
     }, 'Was diesem Haus widerfahren ist, Jahr für Jahr. Ein Klick schlägt sie auf.'));
-    leiste.appendChild(tafelKnopf('Buch', B.protokoll.length, 'kern:protokoll', function () {
-      zeigeBlatt(blattOffen === 'protokoll' ? null : 'protokoll');
-    }, 'Jeder Pfennig, der hereinkam oder hinausging, mit Grund und Datum. '
-     + 'Wer wissen will, wohin das Geld läuft, findet es hier. Ein Klick schlägt es auf.'));
+    /* WELLE 18 — DER BUCHZAEHLER WAR EIN PUNKTESTAND, DER KEINER IST.
+
+       Er zeigte die Zahl aller Buchungen und lief in einer langen Partie bis
+       ueber dreitausend. Die Nachprobe, woertlich: „die Marke BUCH stieg die
+       ganze Zeit weiter (1 → 453 → 3312), was wie Erfolg aussieht, ohne dass
+       irgendwo steht, was BUCH ist." Eine Zahl, die immer nur waechst und
+       nichts bedeutet, ist in einem Spiel mit einer Kasse die teuerste Sorte
+       Beiwerk: man haelt sie fuer den Punktestand.
+
+       Jetzt steht dort, was seit dem letzten Aufschlagen dazugekommen ist —
+       eine Zahl, die auch wieder auf null geht, und die einen Grund nennt,
+       das Buch zu oeffnen. */
+    var neuImBuch = B.protokoll.length - buchGesehen;
+    leiste.appendChild(tafelKnopf('Buch',
+      neuImBuch > 0 ? '+' + B.zahl(neuImBuch) : 'gelesen',
+      'kern:protokoll', function () {
+        zeigeBlatt(blattOffen === 'protokoll' ? null : 'protokoll');
+      },
+      'Jeder Pfennig, der hereinkam oder hinausging, mit Grund und Datum. Wer wissen '
+      + 'will, wohin das Geld läuft, findet es hier. '
+      + (neuImBuch > 0 ? neuImBuch + ' neue Zeilen seit dem letzten Aufschlagen. ' : '')
+      + 'Ein Klick schlägt es auf.'));
 
     fach.appendChild(leiste);
 
@@ -469,6 +492,14 @@
      ---------------------------------------------------------------------- */
   function zeigeBlatt(welches) {
     blattOffen = welches;
+    if (welches === 'protokoll' && buchGesehen !== B.protokoll.length) {
+      buchGesehen = B.protokoll.length;
+      /* Die Kopfleiste traegt den Zaehler und wird hier NICHT mitgezeichnet —
+         ohne diese Zeile stuende „+17 neu" noch da, waehrend das Buch offen
+         vor einem liegt. Ein Zaehler, der nach dem Lesen nicht auf null geht,
+         ist wieder eine Zahl, die nichts bedeutet. */
+      B.wage('kopf.buchgelesen', zeichneKopf);
+    }
     var fach = B.ebene('blatt', 'kern');
     B.leere(fach);
     if (!welches) return;

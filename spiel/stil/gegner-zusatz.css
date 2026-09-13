@@ -419,3 +419,22 @@
   white-space: nowrap;
   max-width: 100%;
 }
+
+/* Auch der Werbewimpel traegt jetzt zwei volle Zeilen. Gekuerzt wird mit
+   „…", der ganze Satz steht im Titel. */
+.gg-wimpeltext > b, .gg-wimpeltext > i {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 100%;
+}
+
+/* WELLE 18 — die Schilder tragen jetzt volle Wirtsnamen und sind dadurch
+   breiter geworden. Am rechten Rand der Karte (Fluss, Bruecken, Bahnhof)
+   stiessen sie an die Kante. Eine Obergrenze in Buehnenmass haelt sie im
+   Bild; was nicht hineinpasst, kuerzt mit „…" und steht ganz im Titel. */
+.gg-paar, .gg-ziel, .gg-schild, .gg-wimpel, .gg-amt, .gg-fass {
+  max-width: calc(var(--s) * 300);
+  box-sizing: border-box;
+}

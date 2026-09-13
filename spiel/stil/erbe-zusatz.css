@@ -47,3 +47,15 @@
 }
 .erb-band    { flex: 1 1 auto; min-width: 0; }
 .erb-knoepfe { flex: 0 1 auto; min-width: 0; flex-wrap: wrap; justify-content: flex-end; }
+
+/* WELLE 18 — auch die Erbe-Leiste bekommt einen Grund. Sie liegt mitten
+   auf der Stadtkarte, und mit dem Schriftboden dieser Welle ist sie nicht
+   mehr das 7-px-Band, das man uebersah, sondern eine Zeile, die man liest —
+   dann muss sie auch lesbar sein. Schwach gehalten (Alpha unter der
+   Kasten-Schwelle des Haushalts), damit die gemalte Platte durchscheint. */
+.erb-leiste {
+  background-color: rgba(252, 246, 232, 0.32);
+  border-radius: calc(var(--s) * 4);
+  padding: calc(var(--s) * 3) calc(var(--s) * 6);
+  box-sizing: border-box;
+}

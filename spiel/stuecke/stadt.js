@@ -849,14 +849,21 @@
       var ruht = (ruhend || 0) > 0;
       mk.classList.toggle('auf', !ruht);
       mk.setAttribute('aria-expanded', ruht ? 'false' : 'true');
+      /* WELLE 18 — WAS EIN KLICK TUT, NICHT WO ETWAS LIEGT.
+
+         „ORTSMARKEN · 7 auf dem Pflock" stand in der Nachprobe unter den
+         unverstaendlichsten Zeilen des ersten Schirms; ein blinder Spieler
+         hat den Knopf sogar unter „tote Knoepfe" gefuehrt, weil er nichts
+         buchte. Ein Pflock ist ein Bild aus der Werkstatt, kein Wort, das
+         einem Spieler sagt, was geschieht. Der Reiter sagt es jetzt. */
       mk.title = ruht
-        ? markenZahl + ' Ortsmarken der anderen Stücke liegen auf ihren Pflöcken. '
-          + 'Ein Zeiger auf einen Pflock zeigt eine einzelne, dieser Knopf zeigt alle.'
-        : 'Legt alle Ortsmarken zurück auf ihre Pflöcke — dann steht nur noch '
-          + 'die Stadt im Bild.';
+        ? 'Die Schilder an den Wirtshäusern und am Hof sind eingeklappt — die Stadt '
+          + 'steht frei im Bild. Ein Klick zeigt alle ' + markenZahl + ' wieder.'
+        : 'Die ' + markenZahl + ' Schilder an den Wirtshäusern und am Hof stehen im Bild. '
+          + 'Ein Klick klappt sie ein, dann sieht man die Stadt darunter.';
       setzeAufschrift(mk.querySelector('.wort'), 'Ortsmarken');
       setzeAufschrift(mk.querySelector('.zahl'),
-        ruht ? markenZahl + ' auf dem Pflock' : markenZahl + ' im Bild');
+        ruht ? 'alle ' + markenZahl + ' zeigen' : markenZahl + ' einklappen');
     }
 
     /* AUFLAGE 5: "Stadt zeigen" wird nicht nur ausgeblendet, sondern auch

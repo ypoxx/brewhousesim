@@ -2561,9 +2561,22 @@
             + 'ohne dass jemand fragt. ' + (ab.abwehrsatz || '')
             + ' Jetzt: ' + B.welt.geld(s.preis) + '.';
           zz.appendChild(svg(s.wer === 'konzern' ? STERN_SVG : ADLER_SVG, 'gg-wappen klein'));
+          /* WELLE 18 — DASSELBE WIE AM SCHILD: DER WIRT HEISST, WIE ER
+             HEISST, UND DAS VERB SAGT, WAS ES BEWIRKT.
+
+             Hier stand „wirbt · noch 4 Wo." / „zuvorkommen 19 Pf". Die
+             Nachprobe, woertlich: „Wer wirbt, um was, und was kommt mir
+             zuvor?" — und „'abloesen' und 'zuvorkommen' sind nirgends
+             erklaert". Beide Verben stehen vier- bis achtmal auf dem ersten
+             Schirm; sie sind das Vokabular, an dem Woche 1 haengt.
+
+             Oben also der Name des Wirts, unten, was in N Wochen geschieht
+             und was ein Klick dagegen kostet. Zwei Zeilen wie vorher. */
           var zt = B.el('span', 'gg-zieltext');
-          zt.appendChild(B.el('b', null, (ab.kurz || 'zielt') + ' · noch ' + rest + ' Wo.'));
-          zt.appendChild(B.el('i', null, 'zuvorkommen ' + B.welt.geld(s.preis)));
+          zt.appendChild(B.el('b', null, a.name));
+          zt.appendChild(B.el('i', null, nameVon(sh) + ' ' + (ab.kurz || 'zielt')
+            + ' · in ' + rest + (rest === 1 ? ' Woche' : ' Wochen') + ' weg · '
+            + 'jetzt halten ' + B.welt.geld(s.preis)));
           zz.appendChild(zt);
           if (!B.welt.kann(s.preis)) zz.classList.add('zuteuer');
           zz.addEventListener('click', function () { abwehren(k); });
@@ -2633,8 +2646,10 @@
           + '. In ' + restw + ' Wochen ist die Bindung da, ohne dass du etwas tust. '
           + 'Jetzt zuvorkommen: ' + B.welt.geld(w.preis) + '.';
         var pt = B.el('span', 'gg-wimpeltext');
-        pt.appendChild(B.el('b', null, 'wirbt · noch ' + restw + ' Wo.'));
-        pt.appendChild(B.el('i', null, 'zuvorkommen ' + B.welt.geld(w.preis)));
+        pt.appendChild(B.el('b', null, a.name));
+        pt.appendChild(B.el('i', null, nameVon(haus(w.wer)) + ' wirbt · in ' + restw
+          + (restw === 1 ? ' Woche' : ' Wochen') + ' weg · jetzt halten '
+          + B.welt.geld(w.preis)));
         p.appendChild(pt);
         if (!B.welt.kann(w.preis)) p.classList.add('zuteuer');
         p.addEventListener('click', function () { zuvorkommen(k); });
