@@ -1982,7 +1982,32 @@
       if (!bester || p < bester.preis) bester = { was: 'Ablösung ' + a.name, preis: p, k: k };
     });
     Z.umkaempft = bester;
-    if (bester) B.welt.meldeZug(bester.was, bester.preis, 'umkaempft');
+    /* WELLE 18 — DIE MELDUNG NENNT IHREN KNOPF.
+
+       Bis hierher meldete dieses Stueck seinen Zug OHNE Schluessel. Die
+       Regel des Kerns (welt.zugBedienbar) laesst eine Meldung ohne
+       Schluessel durch, ohne zu pruefen — die Zeile „naechster Zug: …"
+       stand also in jeder Woche da, auch wenn der Knopf dazu gerade unter
+       dem Kasten der Michaelitafel oder unter der Reiterleiste lag. Die
+       Blindprobe hat daraus zwoelf tote Klicks gezaehlt, in allen vier
+       Epochen, jedes Mal an einem Zug DIESES Stuecks.
+
+       Mit Schluessel prueft der Kern, bevor er die Zeile schreibt: liegt
+       der Wimpel verdeckt oder ist er gesperrt, faellt diese Meldung durch
+       und die naechstbeste gewinnt. Seit Welle 18 fuehrt die Zeile den Zug
+       ausserdem selbst aus — und sie kann nur ausfuehren, was sie kennt.
+       Die drei Schluessel sind die der Wimpel auf der Karte
+       (`zeichneWimpel`), nicht die des Blattes: die Karte steht immer,
+       das Blatt nur, wenn es aufgeschlagen ist. */
+    if (bester) {
+      var schluessel = null;
+      if (bester.k) {
+        if (Z.bindung[bester.k]) schluessel = 'gegner:abloesen:' + bester.k;
+        else if (Z.gebot && Z.gebot.k === bester.k) schluessel = 'gegner:mitbieten:' + bester.k;
+        else schluessel = 'gegner:zuvorkommen:' + bester.k;
+      }
+      B.welt.meldeZug(bester.was, bester.preis, 'umkaempft', schluessel);
+    }
   }
 
   /* DIE ZAHL DER ZWEITEN MESSLATTE — sie steht jetzt an dem Giebel, um den

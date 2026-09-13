@@ -344,17 +344,91 @@
        Die ZAHL bleibt (sie ist die zweite Messlatte und gehoert auf den
        Bildschirm, nicht in den Quelltext) — das PAPIER geht. Der Lichthof
        traegt die Schrift, wie er die Hauszeile traegt. */
-    var w = B.el('div', 'deckung');
-    w.style.cssText = 'position:absolute;left:93%;top:90%;transform:translate(-100%,-50%);'
-      + 'font-family:var(--mono);font-size:max(12px,calc(var(--s)*19));color:#2b1d10;'
-      + 'font-weight:700;'
-      + 'text-shadow:0 0 calc(var(--s)*9) rgba(255,248,230,.98),'
-      + '0 0 calc(var(--s)*4) rgba(255,248,230,.98);white-space:nowrap;';
+    /* WELLE 18 — DIE BESTE ZEILE DES SPIELS WIRD EIN KNOPF.
+
+       Der blinde Kritiker nannte diese Zeile die beste des Spiels; die acht
+       blinden Spieler haben sie befolgt und sind daran zugrunde gegangen.
+       Beides stimmt. Was fehlte, waren zwei Dinge:
+
+         · WOZU.  „Zuvorkommen Klosterschenke Obernberg — 19 Pf" sagt den
+           Preis und nicht, was man dafuer bekommt. Zwei Spieler folgten der
+           Zeile zweimal und fielen von 79 auf 8 Pf, ohne je zu erfahren,
+           wogegen das Geld stand. Die Art des Zuges weiss der Kern; sie
+           reicht fuer einen Halbsatz, der nichts erfindet.
+         · DER WEG DORTHIN.  Die Zeile nannte einen Zug, dessen Knopf
+           anderswo auf dem Bild lag — in 1350 unter dem Kasten der
+           Michaelitafel, in 1970 unter der Reiterleiste. Zwoelf tote Klicks
+           der Blindprobe gehen auf dieses Konto. Die Zeile fuehrt den Zug
+           jetzt selbst aus: `besterZug()` hat den Schluessel ohnehin, und
+           `zugBedienbar()` hat schon geprueft, dass der Knopf da, frei und
+           sichtbar ist. Gedrueckt wird der echte Knopf — kein zweiter Weg
+           in die Mechanik, nur ein zweiter Griff an denselben. */
+    var zug = B.welt.naechsterZug;
+    var WOZU = {
+      umkaempft: 'hält eine Adresse, um die ein anderer wirbt',
+      bindung:   'bindet eine Adresse an das Haus',
+      adresse:   'holt eine Adresse zurück',
+      bau:       'steht danach für immer auf dem Hof',
+      lage:      'ändert, was das Haus je Woche schafft'
+    };
+    var wozu = WOZU[zug.art] || null;
+    /* Innerhalb von `umkaempft` stehen drei verschiedene Zuege. Unterschieden
+       wird am Verb, das DAS STUECK selbst geschrieben hat — der Rahmen
+       erfindet dabei nichts, er liest nur genauer. */
+    if (zug.art === 'umkaempft') {
+      if (/^Ablösung/.test(zug.was)) wozu = 'löst eine Adresse aus der Bindung des Gegners';
+      else if (/^Mitbieten/.test(zug.was)) wozu = 'bietet mit, ehe die Adresse versteigert ist';
+    }
+
+    /* Abgerundet, nie aufgerundet: „reicht 1,0×" bei einer Kasse, die nicht
+       reicht, war ein gemeldeter Befund der Blindprobe. */
+    var gerundet = Math.floor(deckung * 10) / 10;
+
+    var w;
+    var text = 'nächster Zug: ' + zug.was + ' — ' + B.welt.geld(zug.preis)
+      + '  (Kasse reicht ' + B.zahl(gerundet, 1) + '×)';
+
+    if (zug.zug) {
+      w = B.knopf({
+        text: text,
+        zug: 'kern:naechster-zug',
+        titel: 'Der günstigste Zug, der die Lage des Hauses ändert und den die Kasse '
+             + 'trägt. ' + (wozu ? 'Er ' + wozu + '. ' : '')
+             + 'Ein Klick führt ihn aus — derselbe Knopf, der auch auf dem Bild steht.',
+        tu: function () {
+          var el = document.querySelector('[data-zug="' + zug.zug + '"]');
+          if (el && !el.disabled) el.click();
+        }
+      });
+      w.classList.add('deckung');
+      w.style.cssText = 'position:absolute;left:93%;top:90%;transform:translate(-100%,-50%);'
+        + 'background:none;background-color:transparent;border:0;box-shadow:none;padding:0;'
+        + 'font-family:var(--mono);font-size:max(12px,calc(var(--s)*19));color:#2b1d10;'
+        + 'font-weight:700;cursor:pointer;'
+        + 'text-decoration:underline;text-underline-offset:calc(var(--s)*5);'
+        + 'text-shadow:0 0 calc(var(--s)*9) rgba(255,248,230,.98),'
+        + '0 0 calc(var(--s)*4) rgba(255,248,230,.98);white-space:nowrap;';
+    } else {
+      w = B.el('div', 'deckung');
+      w.style.cssText = 'position:absolute;left:93%;top:90%;transform:translate(-100%,-50%);'
+        + 'font-family:var(--mono);font-size:max(12px,calc(var(--s)*19));color:#2b1d10;'
+        + 'font-weight:700;'
+        + 'text-shadow:0 0 calc(var(--s)*9) rgba(255,248,230,.98),'
+        + '0 0 calc(var(--s)*4) rgba(255,248,230,.98);white-space:nowrap;';
+      w.textContent = text;
+    }
     w.setAttribute('data-deckung', B.rund(deckung, 2));
-    w.textContent = 'nächster Zug: ' + B.welt.naechsterZug.was + ' — '
-      + B.welt.geld(B.welt.naechsterZug.preis)
-      + '  (Kasse reicht ' + B.zahl(deckung, 1) + '×)';
     fach.appendChild(w);
+
+    /* Der Halbsatz darunter, in kleinerer Schrift: wofuer das Geld steht. */
+    if (wozu) {
+      var wz = B.el('div', 'deckung-wozu', wozu);
+      wz.style.cssText = 'position:absolute;left:93%;top:92.7%;transform:translate(-100%,-50%);'
+        + 'font-family:var(--mono);font-size:max(10px,calc(var(--s)*16));color:#5a4630;'
+        + 'white-space:nowrap;max-width:46%;overflow:hidden;text-overflow:ellipsis;'
+        + LICHTHOF;
+      fach.appendChild(wz);
+    }
   }
 
   /* ----------------------------------------------------------------------

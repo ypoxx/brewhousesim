@@ -673,6 +673,30 @@
     B.wage('klar.zeichne', zeichneKlar);
   });
 
+  /* ----------------------------------------------------------------------
+     DIE ENTFLECHTUNG DER KAERTCHEN — hier eingehaengt, dort gebaut.
+
+     Der Algorithmus gehoert kern/orte.js: wer die Orte vergibt, verantwortet
+     auch, dass zwei Kaertchen auf demselben Ort einander nicht decken. Die
+     ANMELDUNG steht hier, weil orte.js als zweite Datei laedt — vor
+     kern/uhr.js, also bevor es `B.auf` ueberhaupt gibt. Diese Datei laedt
+     spaet genug und gehoert ohnehin zu derselben Welle.
+
+     `requestAnimationFrame` laeuft NACH dem Zeichnen aller Stuecke und wird
+     von kern/runde.js INNERHALB der Runde gehalten — es entsteht keine
+     Wanduhrfrist im Zeichenweg (spiel/LIESMICH.md). Denselben Weg geht
+     kern/kopf.js fuer die Kennzahl. */
+  var entflechtungLaeuft = false;
+  B.auf('zeichne', function () {
+    if (entflechtungLaeuft || typeof requestAnimationFrame !== 'function') return;
+    if (!B.orte || !B.orte.entflechte) return;
+    entflechtungLaeuft = true;
+    requestAnimationFrame(function () {
+      entflechtungLaeuft = false;
+      B.wage('orte.entflechte', function () { B.orte.entflechte(); });
+    });
+  });
+
   /* Ein neues Jahr und eine neue Epoche raeumen die Quittung ab: sie gehoert
      zu einem Zug, den es in dieser Lage nicht mehr gibt. */
   B.auf('jahr', function () { Z.quittung = null; });
